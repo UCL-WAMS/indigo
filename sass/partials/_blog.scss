@@ -1,0 +1,81 @@
+/* Blog comments + Blog specifics
+-------------------------------------------------------------- */
+
+ol.commentlist {list-style: none; margin: 0;}
+ol.commentlist li {list-style: none; margin-left: 0; }
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment {padding: 10px;}
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard { margin-bottom: 0;}
+ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
+ol.commentlist li.comment div.vcard cite.fn a.url {}
+ol.commentlist li.comment div.vcard img.avatar {width: auto; float:left; margin: 0 1em 1em 0;}
+ol.commentlist li.comment div.vcard img.avatar-32 {}
+ol.commentlist li.comment div.vcard img.photo {}
+ol.commentlist li.comment div.vcard span.says {}
+ol.commentlist li.comment div.commentmetadata {}
+ol.commentlist li.comment div.comment-meta {font-size: 12px;}
+ol.commentlist li.comment div.comment-meta a {color: #ccc;}
+ol.commentlist li.comment p { clear: left; }
+ol.commentlist li.comment ul {}
+ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply a {font-weight: bold;}
+ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-5 {}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even {background: #fff;}
+ol.commentlist li.odd {background: #f6f6f6;}
+ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.thread-alt {}
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+.posted {
+	color: #8c8279;
+	font-size: 0.8em;
+	margin: -0.4em 0 1em;
+}
+
+article.post + article.post {
+  border-top: 1px dotted #8c8279;
+  padding-bottom: 30px;
+  margin-bottom: 1.5em;
+}
+
+article > footer {
+	padding: 0;
+	margin-top: 1em;
+	background: none;
+}
+
+article > footer a {
+	color: #136CB2;
+	font-weight: normal;
+	font-size: 0.8em;
+}
+
+article > footer a:hover {
+	color: #136CB2;
+	text-decoration: underline;
+}
+
+.content-sidebar .entry-title {
+	font-size: 18px;
+	font-family: 'HelveticaNeueLTStd-Bd';
+}
+
+.author.vcard {
+	margin-bottom: 0;
+}

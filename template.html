@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset=utf-8 />
+<meta name="author" content="Mark Boulton Design" />
+<meta name="description" content="UCL Homepage" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0" />
+
+<title>UCL Design Language</title>
+
+<link href="../stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//use.typekit.net/nkk7vct.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/ucl.js"></script>
+
+<!--[if IE]><link href="./css/ie.css" rel="stylesheet" /><![endif]-->
+<!--[if lt IE 8]><link href="./css/ie-old.css" rel="stylesheet" /><![endif]-->
+
+<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
+
+<link rel="shortcut icon" href="./img/favicon.ico" />
+<!-- APPLE TOUCH ICONS -->
+<!-- <link rel="apple-touch-icon" href="./img/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="./img/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="./img/touch-icon-iphone4.png" /> -->
+
+</head>
+
+<body id="index">
+	
+	<nav id="global-masthead">
+	
+		<div class="wrapper clearfix">
+		
+			<div id="global-search">
+				<form action="#" method="get">	
+					<!--
+					<div class="search-type">				
+						<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
+						<label for="ucl-site" class="site">Site</label>
+						<input type="radio" id="ucl-search" name="operation" value="2">
+						<label for="ucl-search" class="staff">Directory</label>
+					</div>
+					-->
+					<div id="searchform">
+						<input type="search" placeholder="Search website" id="search" value="">
+					</div>
+					
+					<input type="submit" name="sumbit" value="Go" class="btn search" />
+				</form>
+				
+				
+			</div>
+			
+			<ul id="audiences" class="m-clear">
+				<li><a href="index.php">UCL Home</a></li>				
+				<li><a href="prospective-students.php">Prospective students</a></li>
+				<li><a href="current-students.php">Current students</a></li>
+				<li><a href="staff.php">Staff</a></li>		
+			</ul>
+		</div>
+		
+	</nav>
+		
+	<div id="site-content">
+	
+		<div class="photograph wrapper">
+	
+			<header id="ucl-masthead" role="header">
+				
+				<div id="branding">
+					<h1>Name of your site here</h1>
+					<img src="images/ucl-logo.svgz" alt="UCL logo" id="logo">
+				</div>
+				
+			</header> 
+			
+			<div class="site-brand">
+
+			
+			</div> 
+			
+		</div>
+		
+		<div class="wrapper clearfix">             
+	            
+	        <div id="main" class="clearfix">
+	
+				<div id="leftcol">                                            
+				
+					<nav class="leftnav">                
+						<ul>
+						 
+							<li><a href="index.html" class="home-link">Home</a></li>
+							
+							<li><a href="#">Main navigation items</a>
+							
+								<ul>
+									<li><a href="#">Lists can be nested</a></li>
+									
+									<li><a href="#">Lists can be nested</a></li>
+								</ul>
+							
+							</li>
+							
+							<li><a href="#">Main navigation items</a></li>
+						 
+						</ul>
+						
+					</nav>
+				
+				</div>  
+	    
+				<div id="content">
+				
+					<nav id="breadcrumb" class="clearfix">
+					
+						<ul>
+							<li><a href="#">Link to your homepage</a></li>
+							<li><a href="#">Path to the current page</a></li>
+							<li><a href="#">Last link shown should be previous page</a></li>
+						</ul>
+
+					</nav>
+					<!--End #breadcrumb--> 
+	
+					<!-- start main slot where silva content gets rendered--> 
+					
+					<div class="content-main">
+					
+						<article>
+					
+							<h1>Main page title</h1>
+							
+							<p>This is the main content column.</p>
+							
+							<h2>UCL banner</h2>
+							
+							<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
+							
+							<p>If you would instead like to use a photograph in the banner add the class '.photograph-on' to the '.photograph' div and assign your image to this class in the css</p>
+							
+													
+						</article>
+	
+						
+					</div>
+					
+					<div class="content-sidebar">
+					
+						<h1>Sidebar</h1>
+						
+						<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+						
+					
+					</div>
+	
+					<!-- end main slot where silva content gets rendered--> 
+					
+				</div>
+				
+				<!--End last modified info-->
+			</div>
+			
+			
+		</div>
+		
+		<footer class="wrapper clearfix">
+		
+				<article class="block-myucl">
+					<h2>Facilities</h2>
+					<ul>
+						<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+						<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+						<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+						<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+						<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+					</ul>
+				</article>
+				
+				<article class="block-finditfast1">
+					<h2>Locations</h2>
+					<ul>
+						<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+						<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
+						<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					</ul>
+				</article>
+				
+				<article class="block-finditfast2">
+					<h2>Connect with us</h2>
+					<ul>
+						<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+						<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+						<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+						<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+						<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
+					</ul>
+		
+				</article>
+		
+				<hr>
+				
+				<p>University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
+				
+				<p id="footer-links">Copyright © 2013 UCL <a href="#">Disclaimer</a> | <a href="#">Freedom of Information</a> | <a href="#">Accessibility</a> | <a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Contact Us</a></p>
+		
+		</footer>
+		
+	</div>
+	
+
+
+<script src="./js/gridset-overlay.js"></script>
+     
+</body>
+</html>

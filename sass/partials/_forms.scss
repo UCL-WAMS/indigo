@@ -1,0 +1,360 @@
+/* Forms
+-------------------------------------------------------------- */
+
+fieldset    { 
+	margin: 0 0 1em 0; 
+}
+
+legend { 
+	font-family: 'HelveticaNeueLTStd-Roman';
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+input {
+  padding: 0.5em 2%;
+  vertical-align: middle;
+  margin: 0;
+  -moz-box-sizing: border-box;
+}
+
+form > ul{ list-style: none; margin: 0;}
+
+input[type="checkbox"] + label, input[type="radio"] + label{
+	display: inline;
+	margin-left: 5px;
+	font-family: 'HelveticaNeueLTStd-Roman';
+}
+
+fieldset > div:first-of-type {
+  margin-top: 0;
+}
+
+label, fieldset.options legend {
+  display: block;
+  font-size: 0.9em;
+  color: #494949;
+  font-family: 'HelveticaNeueLTStd-Bd';
+
+}
+
+label span {
+	color: #990000;
+}
+
+fieldset abbr[title="Required"] {
+  border-bottom: 0 none;
+  color: #AF1616;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 0.1;
+}
+
+input.text, textarea {
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+select {
+	margin: 0.5em 0 0;
+	width: 100%;
+}
+
+.view-form-page {
+	margin-top: 1em;
+}
+
+form em {
+	font-size: 0.8em;
+	color: #848484;
+}
+
+fieldset.options {
+	margin: 1em 0;	
+}
+
+fieldset.options ul {
+	list-style: none;
+	margin: 0 0 0.5em;
+}
+
+
+/* Form fields
+-------------------------------------------------------------- */
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="tel"], input[type="number"], input.title,
+textarea, #search-form {
+  margin:0.5em 0;
+  border:1px solid #ccc;
+  -webkit-box-shadow: 0 1px 2px #e0e0e0 inset;
+  -moz-box-shadow: 0 1px 2px #e0e0e0 inset;
+  box-shadow: 0 1px 2px #e0e0e0 inset;
+  color: #333;
+  width: 96%;
+}
+
+#search-form {
+	width: 100%;
+}
+
+input.text:focus, input.title:focus,
+textarea:focus {
+	border:1px solid #666;
+}
+
+.inline label {
+	@include gs-span(dc, 1);
+	font-size: 14px;
+	text-align:right;
+	line-height: 38px;
+}
+
+.prepend span {
+	@include gs-span(dc, 1);
+	@include gs-pad(dc, pad);
+	margin-left: 1.51515%;
+	color: #848484;
+	font-size: 14px;
+	text-align:right;
+	line-height: 26px;
+	margin-top: 5px;
+	display:block;
+	background-color: #eee;
+}
+
+.inline input, .prepend input {
+	@include gs-span(dc, 2, 4);
+	padding-left: 0;
+	padding-right: 0;
+	@include gs-pad(dc, padin);
+}
+
+.inline em {
+	@include gs-span(dc, 2, 4);
+	clear: left;
+}
+
+.prepend em {
+	@include gs-span(dc, all);
+}
+
+
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+
+.warning, .success {
+	background-color: #FFFAFA;
+	background-image: url("../images/alert.png");
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	color: #DD6868;
+	display: block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	@include gs-pad(dl, padinfull);
+	margin-bottom: 1em;
+	border: 1px solid #DD6868;
+	font-weight: bold;
+}
+	
+.success {
+	background-color: #F7FFF2;
+	background-image: url("../images/success.png");
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	color: #7FB861;
+	border: 1px solid #7FB861;
+}
+	
+.message {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	clear: left;
+	color: #666666;
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+	@include gs-pad(dl, padinfull);
+	padding-bottom: 1em;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.message span { 
+	text-decoration: underline; 
+}
+
+input.error {
+	background-color: #FFFAFA;
+	border: 1px solid #DD6868;
+}
+
+.error {
+	color: #c60f13;
+}
+
+
+/* Buttons
+-------------------------------------------------------------- */
+
+[class*=btn] {
+	background-color: #666;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin: 0.5em 0;
+	text-decoration: none;
+	color: white;
+	padding: 12px 30px 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	font-family: 'HelveticaNeueLTStd-Bd', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.btn-small {
+	padding: 8px 20px 8px 20px;
+	font-size: 12px;
+}
+
+[class*=btn]:hover {
+	color: #fff;
+	text-decoration:none;
+}
+
+.btn-gradient.disabled {
+	@include gradient(#eee, #e0e0e0);
+	border-bottom:  1px solid rgba(0,0,0,0.21);
+	color: #999;
+	text-shadow: none;
+}
+
+#main a[class*=btn] {
+	color:#fff;
+}
+
+
+/* Gradient Button's Colors
+-------------------------------------------------------------- */
+
+.btn-gradient.darkgreen {
+	@include gradient($darkgreen-b, $darkgreen);
+}
+
+.btn-gradient.midgreen {
+	@include gradient($midgreen-b, $midgreen);
+}
+
+.btn-gradient.brightgreen {
+	@include gradient($brightgreen-b, $brightgreen);
+}
+
+.btn-gradient.lightgreen {
+	@include gradient($lightgreen-b, $lightgreen);
+}
+
+.btn-gradient.yellow {
+	@include gradient($yellow-b, $yellow);
+}
+
+.btn-gradient.darkred {
+	@include gradient($darkred-b, $darkred);
+}
+
+.btn-gradient.midred {
+	@include gradient($midred-b, $midred);
+}
+
+.btn-gradient.brightred {
+	@include gradient($brightred-b, $brightred);
+}
+
+.btn-gradient.lightred {
+	@include gradient($lightred-b, $lightred);
+}
+
+.btn-gradient.orange {
+	@include gradient($orange-b, $orange);
+}
+
+.btn-gradient.darkpurple {
+	@include gradient($darkpurple-b, $darkpurple);
+}
+
+.btn-gradient.midpurple {
+	@include gradient($midpurple-b, $midpurple);
+}
+
+.btn-gradient.brightpink {
+	@include gradient($brightpink-b, $brightpink);
+}
+
+.btn-gradient.lightpurple {
+	@include gradient($lightpurple-b, $lightpurple);
+}
+
+.btn-gradient.warmgrey {
+	@include gradient($warmgrey-b, $warmgrey);
+}
+
+.btn-gradient.darkblue {
+	@include gradient($darkblue-b, $darkblue);
+}
+
+.btn-gradient.midblue {
+	@include gradient($midblue-b, $midblue);
+}
+
+.btn-gradient.brightblue {
+	@include gradient($brightblue-b, $brightblue);
+}
+
+.btn-gradient.lightblue {
+	@include gradient($lightblue-b, $lightblue);
+}
+
+.btn-gradient.stone {
+	@include gradient($stone-b, $stone);
+}
+
+.btn-gradient.darkbrown {
+	@include gradient($darkbrown-b, $darkbrown);
+}
+
+
+/* Gradient button background color on click
+-------------------------------------------------------------- */
+
+.btn-gradient.darkgreen:active {background: $darkgreen;}
+.btn-gradient.midgreen:active {background: $midgreen;}
+.btn-gradient.brightgreen:active {background: $brightgreen;}
+.btn-gradient.lightgreen:active {background: $lightgreen;}
+.btn-gradient.yellow:active {background: $yellow;}
+.btn-gradient.darkred:active {background: $darkred;}
+.btn-gradient.midred:active {background: $midred;}
+.btn-gradient.brightred:active {background: $brightred;}
+.btn-gradient.lightred:active {background: $lightred;}
+.btn-gradient.orange:active {background: $orange;}
+.btn-gradient.darkpurple:active {background: $darkpurple;}
+.btn-gradient.midpurple:active {background: $midpurple;}
+.btn-gradient.brightpink:active {background: $brightpink;}
+.btn-gradient.lightpurple:active {background: $lightpurple;}
+.btn-gradient.warmgrey:active {background: $warmgrey;}
+.btn-gradient.darkblue:active {background:  $darkblue;}
+.btn-gradient.midblue:active {background: $midblue;}
+.btn-gradient.brightblue:active {background: $brightblue;}
+.btn-gradient.lightblue:active {background: $lightblue;}
+.btn-gradient.stone:active {background:  $stone;}
+.btn-gradient.darkbrown:active {background: $darkbrown;}
+
+
+
+
