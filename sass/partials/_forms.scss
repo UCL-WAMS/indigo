@@ -6,7 +6,6 @@ fieldset    {
 }
 
 legend { 
-	font-family: 'HelveticaNeueLTStd-Roman';
 	font-size: 1.25em;
 	margin-bottom: 0.5em;
 }
@@ -23,7 +22,6 @@ form > ul{ list-style: none; margin: 0;}
 input[type="checkbox"] + label, input[type="radio"] + label{
 	display: inline;
 	margin-left: 5px;
-	font-family: 'HelveticaNeueLTStd-Roman';
 }
 
 fieldset > div:first-of-type {
@@ -34,8 +32,7 @@ label, fieldset.options legend {
   display: block;
   font-size: 0.9em;
   color: #494949;
-  font-family: 'HelveticaNeueLTStd-Bd';
-
+  font-weight: 700;
 }
 
 label span {
@@ -216,7 +213,7 @@ input.error {
 	border-bottom: 4px solid rgba(0,0,0,0.21);
 	border-radius: 4px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
-	font-family: 'HelveticaNeueLTStd-Bd', Helvetica, Arial, sans-serif;
+	font-weight: bold;
 	font-size: 14px;
 }
 

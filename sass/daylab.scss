@@ -1,0 +1,42 @@
+/* Vendor Dependencies */
+@import "partials/gridset.scss";
+
+/* Authored Dependencies */
+@import "partials/reset";
+@import "partials/elements";
+@import "partials/colors";
+@import "partials/typography";
+
+/* Patterns */
+@import "partials/forms";
+@import "partials/blog";
+
+/* Sections */
+@import "partials/globalmasthead";
+@import "partials/layout";
+ 
+ 
+ 
+ /* Day Lab Unique Styles -------------------------------- */
+
+
+.photograph {
+	background-color: $orange;
+}
+
+@include gs-media(m, max) {
+	#header-mobile {
+		background-color: $orange;
+	}
+
+}
+
+.photograph-on {
+	background-image: url("../daylabs/images/cells.jpg");
+	background-position: 0 -460px;
+}
+
+.box {
+	 border-top: 5px solid $orange;
+}
+

@@ -1,51 +1,5 @@
-/* Webfonts
--------------------------------------------------------------- */
-
-/* @license
- * MyFonts Webfont Build ID 2593991, 2013-07-03T07:06:03-0400
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: Helvetica 75 Bold by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-75-bold/
- * 
- * Webfont: Helvetica 55 Roman by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-55-roman/
- * 
- * Webfont: Helvetica 35 Thin by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-35-thin/
- * 
- * Webfont: Helvetica 56 Italic by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-56-italic/
- * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2593991
- * Webfonts copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
- * 
- * Copyright 2013 MyFonts Inc
-*/
-
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/2794c7");
-
-  
-@font-face {font-family: 'HelveticaNeueLTStd-Bd';src: url('../fonts/2794C7_0_0.eot');src: url('../fonts/2794C7_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_0_0.woff') format('woff'),url('../webfonts/2794C7_0_0.ttf') format('truetype');}
-  
-@font-face {font-family: 'HelveticaNeueLTStd-Roman';src: url('../fonts/2794C7_2_0.eot');src: url('../fonts/2794C7_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_2_0.woff') format('woff'),url('../webfonts/2794C7_2_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNeueLTStd-Th';src: url('../fonts/2794C7_3_0.eot');src: url('../fonts/2794C7_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_3_0.woff') format('woff'),url('../webfonts/2794C7_3_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNeueLTStd-It';src: url('../fonts/2794C7_4_0.eot');src: url('../fonts/2794C7_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_4_0.woff') format('woff'),url('../webfonts/2794C7_4_0.ttf') format('truetype');}
-
-
 body {
-	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #333333;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -61,16 +15,12 @@ body {
 /* Headings
 -------------------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6, lh {
-	font-family: 'HelveticaNeueLTStd-Roman', Helvetica, Arial, sans-serif;
-}
-
 h1 {
-	font-family: 'HelveticaNeueLTStd-Th';
 	font-size: 36px;
 	font-weight: normal;
 	margin-bottom: 0.5em;
 	line-height: 1.25;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 @include gs-media(m, max) {
@@ -96,7 +46,7 @@ h2, lh {
 
 h3 { 
 	margin: 1em 0 0;
-	font-family: 'HelveticaNeueLTStd-Bd';
+	font-weight: 700;
 }
 
 h4 { 
@@ -112,7 +62,7 @@ h2 + h3 {
 
 
 h5 {
-	font-family: 'HelveticaNeueLTStd-It';
+	font-style: italic;
 	margin: 1em 0 0;
 }
 
@@ -172,7 +122,7 @@ blockquote  {
 [class*=pullquote] p.quote {
 	line-height: 1.5em;
 	font-size: 20px;
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: Garamond, Georgia, "Times New Roman", serif;
 	font-style: italic;
 	color: rgba(0, 0, 0, 0.7);
 }
@@ -507,6 +457,6 @@ ol.code li.tab1 {
 -------------------------------------------------------------- */
 
 .resource {
-	font-family: 'HelveticaNeueLTStd-It';
+	font-style: italic;
 }
 

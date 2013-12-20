@@ -2460,8 +2460,9 @@ header > div {
     top: 5px;
     padding: 0;
     z-index: 1000;
+    width: 50%;
   }
-  /* line 177, ../sass/partials/_layout.scss */
+  /* line 178, ../sass/partials/_layout.scss */
   #nav-wrap #nav-mobile-back img {
     vertical-align: middle;
     display: inline-block;
@@ -2470,12 +2471,12 @@ header > div {
     margin: -5px -3px 0 -8px;
   }
 
-  /* line 187, ../sass/partials/_layout.scss */
+  /* line 188, ../sass/partials/_layout.scss */
   .mobile-open #nav-wrap {
     left: 0;
   }
 
-  /* line 191, ../sass/partials/_layout.scss */
+  /* line 192, ../sass/partials/_layout.scss */
   #header-mobile {
     display: block;
     width: 100%;
@@ -2488,14 +2489,14 @@ header > div {
     left: -35px;
     background-color: #fff;
   }
-  /* line 202, ../sass/partials/_layout.scss */
+  /* line 203, ../sass/partials/_layout.scss */
   #header-mobile h1 {
     position: absolute;
     font-size: 12px;
     top: 1em;
     left: 1em;
   }
-  /* line 208, ../sass/partials/_layout.scss */
+  /* line 209, ../sass/partials/_layout.scss */
   #header-mobile #nav-mobile-menu {
     width: 20px;
     top: 35%;
@@ -2506,7 +2507,7 @@ header > div {
 }
 /* Main Content
 -------------------------------------------------------------- */
-/* line 222, ../sass/partials/_layout.scss */
+/* line 223, ../sass/partials/_layout.scss */
 #main {
   background-color: #fff;
   padding: 2em 35px 2em 35px;
@@ -2520,7 +2521,7 @@ header > div {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 232, ../sass/partials/_layout.scss */
+  /* line 233, ../sass/partials/_layout.scss */
   #main {
     clear: both;
     display: block;
@@ -2530,7 +2531,7 @@ header > div {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 238, ../sass/partials/_layout.scss */
+  /* line 239, ../sass/partials/_layout.scss */
   #main {
     clear: both;
     display: block;
@@ -2540,7 +2541,7 @@ header > div {
     padding-top: 1em;
   }
 }
-/* line 244, ../sass/partials/_layout.scss */
+/* line 245, ../sass/partials/_layout.scss */
 #content {
   display: block;
   float: left;
@@ -2550,7 +2551,7 @@ header > div {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 249, ../sass/partials/_layout.scss */
+  /* line 250, ../sass/partials/_layout.scss */
   #content {
     display: block;
     float: left;
@@ -2560,7 +2561,7 @@ header > div {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 255, ../sass/partials/_layout.scss */
+  /* line 256, ../sass/partials/_layout.scss */
   #content {
     clear: both;
     display: block;
@@ -2569,7 +2570,7 @@ header > div {
     width: 100%;
   }
 }
-/* line 261, ../sass/partials/_layout.scss */
+/* line 262, ../sass/partials/_layout.scss */
 .content-main {
   display: block;
   float: left;
@@ -2579,7 +2580,7 @@ header > div {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 266, ../sass/partials/_layout.scss */
+  /* line 267, ../sass/partials/_layout.scss */
   .content-main {
     clear: both;
     display: block;
@@ -2590,7 +2591,7 @@ header > div {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 273, ../sass/partials/_layout.scss */
+  /* line 274, ../sass/partials/_layout.scss */
   .content-main {
     clear: both;
     display: block;
@@ -2599,7 +2600,7 @@ header > div {
     width: 100%;
   }
 }
-/* line 279, ../sass/partials/_layout.scss */
+/* line 280, ../sass/partials/_layout.scss */
 .content-sidebar {
   display: block;
   float: left;
@@ -2609,7 +2610,7 @@ header > div {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 284, ../sass/partials/_layout.scss */
+  /* line 285, ../sass/partials/_layout.scss */
   .content-sidebar {
     clear: both;
     display: block;
@@ -2619,7 +2620,7 @@ header > div {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 290, ../sass/partials/_layout.scss */
+  /* line 291, ../sass/partials/_layout.scss */
   .content-sidebar {
     clear: both;
     display: block;
@@ -2630,68 +2631,68 @@ header > div {
 }
 /* Footer
 -------------------------------------------------------------- */
-/* line 299, ../sass/partials/_layout.scss */
+/* line 300, ../sass/partials/_layout.scss */
 footer {
   background: rgba(0, 0, 0, 0.7);
   padding: 40px 35px;
   color: #bbb;
   clear: left;
 }
-/* line 306, ../sass/partials/_layout.scss */
+/* line 307, ../sass/partials/_layout.scss */
 footer h2 {
   margin-bottom: 0.5em;
   font-size: 1em;
 }
-/* line 311, ../sass/partials/_layout.scss */
+/* line 312, ../sass/partials/_layout.scss */
 footer a {
   color: #eee;
   text-decoration: none;
 }
-/* line 316, ../sass/partials/_layout.scss */
+/* line 317, ../sass/partials/_layout.scss */
 footer a:hover {
   color: #fff;
 }
-/* line 321, ../sass/partials/_layout.scss */
+/* line 322, ../sass/partials/_layout.scss */
 footer article {
   margin-bottom: 1em;
 }
-/* line 324, ../sass/partials/_layout.scss */
+/* line 325, ../sass/partials/_layout.scss */
 footer article ul {
   list-style-type: none;
   margin-bottom: 1em;
 }
-/* line 328, ../sass/partials/_layout.scss */
+/* line 329, ../sass/partials/_layout.scss */
 footer article ul li {
   padding-bottom: 4px;
   padding-top: 4px;
   font-size: 14px;
   margin-bottom: 0;
 }
-/* line 335, ../sass/partials/_layout.scss */
+/* line 336, ../sass/partials/_layout.scss */
 footer article ul li:before {
   content: none;
 }
-/* line 341, ../sass/partials/_layout.scss */
+/* line 342, ../sass/partials/_layout.scss */
 footer hr {
   border-color: #ccc;
   clear: both;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 348, ../sass/partials/_layout.scss */
+  /* line 349, ../sass/partials/_layout.scss */
   footer {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
-/* line 354, ../sass/partials/_layout.scss */
+/* line 355, ../sass/partials/_layout.scss */
 #footer-links {
   font-size: 14px;
   margin-top: 0.5em;
 }
 
 @media screen and (max-width: 989px) {
-  /* line 361, ../sass/partials/_layout.scss */
+  /* line 362, ../sass/partials/_layout.scss */
   footer article li {
     padding-bottom: 2px;
     padding-top: 2px;
@@ -2699,12 +2700,12 @@ footer hr {
     margin-left: 0;
   }
 
-  /* line 368, ../sass/partials/_layout.scss */
+  /* line 369, ../sass/partials/_layout.scss */
   #footer-links {
     font-size: 12px;
   }
 }
-/* line 374, ../sass/partials/_layout.scss */
+/* line 375, ../sass/partials/_layout.scss */
 .block-myucl {
   display: block;
   float: left;
@@ -2714,7 +2715,7 @@ footer hr {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 378, ../sass/partials/_layout.scss */
+  /* line 379, ../sass/partials/_layout.scss */
   .block-myucl {
     display: block;
     float: left;
@@ -2724,7 +2725,7 @@ footer hr {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 383, ../sass/partials/_layout.scss */
+  /* line 384, ../sass/partials/_layout.scss */
   .block-myucl {
     display: block;
     float: left;
@@ -2733,7 +2734,7 @@ footer hr {
     width: 46.79688%;
   }
 }
-/* line 388, ../sass/partials/_layout.scss */
+/* line 389, ../sass/partials/_layout.scss */
 .block-finditfast1 {
   display: block;
   float: left;
@@ -2743,7 +2744,7 @@ footer hr {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 392, ../sass/partials/_layout.scss */
+  /* line 393, ../sass/partials/_layout.scss */
   .block-finditfast1 {
     display: block;
     float: left;
@@ -2753,7 +2754,7 @@ footer hr {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 397, ../sass/partials/_layout.scss */
+  /* line 398, ../sass/partials/_layout.scss */
   .block-finditfast1 {
     display: block;
     float: left;
@@ -2762,7 +2763,7 @@ footer hr {
     width: 46.79688%;
   }
 }
-/* line 402, ../sass/partials/_layout.scss */
+/* line 403, ../sass/partials/_layout.scss */
 .block-finditfast2 {
   display: block;
   float: left;
@@ -2772,7 +2773,7 @@ footer hr {
 }
 
 @media only screen and (max-width: 989px) {
-  /* line 406, ../sass/partials/_layout.scss */
+  /* line 407, ../sass/partials/_layout.scss */
   .block-finditfast2 {
     display: block;
     float: left;
@@ -2782,7 +2783,7 @@ footer hr {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 411, ../sass/partials/_layout.scss */
+  /* line 412, ../sass/partials/_layout.scss */
   .block-finditfast2 {
     display: block;
     float: left;

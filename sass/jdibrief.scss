@@ -1,0 +1,49 @@
+
+ /* Vendor Dependencies */
+ @import "partials/gridset.scss";
+ 
+ /* Authored Dependencies */
+ @import "partials/reset";
+ @import "partials/elements";
+ @import "partials/colors";
+ @import "partials/typography";
+ 
+ /* Patterns */
+ @import "partials/forms";
+ @import "partials/blog";
+ 
+ /* Sections */
+ @import "partials/globalmasthead";
+ @import "partials/layout";
+ 
+ 
+ 
+ /* JDiBrief Unique Styles -------------------------------- */
+ 
+ .photograph {
+ 	background-color: $lightblue;
+ }
+ 
+ @include gs-media(m, max) {
+ 	#header-mobile {
+ 		background-color: $lightblue;
+ 	}
+ 
+ }
+ 
+ .photograph-on {
+ 	background-image: url("images");
+ 	background-position-y: 0;
+ }
+ 
+ .box {
+ 	 border-top: 5px solid $lightblue;
+ }
+ 
+ a, a:hover {
+ 	color: $lightblue;
+ }
+ 
+ .tag, .more {
+ 	background-color: $lightblue;
+ }

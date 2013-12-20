@@ -54,7 +54,6 @@ table {
 
 thead, tbody, tfoot {
 	display: table-row-group;
-	width: 100%;
 }
 
 thead {
@@ -71,7 +70,6 @@ tfoot {
 
 tr {
 	display: table-row;
-	width: 100%;
 }
 
 th, td {
@@ -87,9 +85,10 @@ th, td {
 
 th { 
 	border-right: 1px solid #ddd; 
-	border-bottom-color: #CCCCCC; 
+	border-bottom-color: #ccc; 
 	color: #333333; 
 	font-weight: 700; 
+	background-color: #eee;
 }
 
 th,td,caption { 
@@ -114,6 +113,48 @@ caption {
 td, td img { 
 	vertical-align: top; 
 }
+
+
+/* Responsive Tables
+-------------------------------------------------------------- */
+
+
+.rt { 
+	width: 100%; 
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+.rt th, .rt td { 
+	margin: 0; 
+	vertical-align: top; 
+	border: 1px solid #e6e6e6;
+}
+
+.rt th { 
+	text-align: left;
+}
+
+
+@media only screen and (max-width: 989px) { 
+
+	#rt1 { display: block; position: relative; width: 100%; border-top: 0; }
+	#rt1 thead { display: block; float: left; }
+	#rt1 tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	#rt1 thead tr { display: block; }
+	#rt1 th { display: block; }
+	#rt1 tbody tr { display: inline-block; vertical-align: top; }
+	#rt1 td { display: block; min-height: 1.25em; }
+
+
+	/* sort out borders */
+
+	.rt th { border-bottom: 0; }
+	.rt td { border-left: 0; border-right: 0; border-bottom: 0; }
+	.rt tbody tr { border-right: 1px solid #eee; }
+
+}
+
 
 
 
@@ -141,7 +182,7 @@ article p + .tabbed {
 	h2 {
 		font-size: 16px;
 		margin-top: 0;
-		font-family: 'HelveticaNeueLTStd-Bd';
+		font-weight: 700;
 	}
 	
 	img {
@@ -298,10 +339,10 @@ pre,code,tt {
 -------------------------------------------------------------- */
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 90%;
-    position: relative;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 90%;
+  position: relative;
 }
 
 
@@ -337,7 +378,7 @@ pre,code,tt {
 
 .tabs li a {
 	font-size: 14px;
-	font-family: 'HelveticaNeueLTStd-Bd';
+	font-weight: bold;
 	color: #fff;
 }
 
@@ -487,5 +528,65 @@ audio {
 
 .addthis_toolbox {
 	margin-bottom: 2em;
+}
+
+
+/* Longform content
+-------------------------------------------------------------- */
+
+@media screen and (max-width: 766px) {
+
+.accordion-header {
+	cursor: pointer;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 8px;
+}
+
+.active-header {
+	background: url(../img/close.png);
+	background-repeat: no-repeat;
+	background-position: right 50%;
+	padding-right: 20px;
+	border-bottom: none;
+}
+
+.active-header:hover {
+	background: url(../img/close.png);
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.inactive-header {
+	background: url(../img/open.png);
+	background-repeat: no-repeat;
+	background-position: right 50%;
+	padding-right: 20px;
+}
+
+.inactive-header:hover {
+	background: url(../img/open.png);
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.accordion-content {
+	display: none;
+	border-top: 0;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+	/* ensure accordion nav is hidden and content is visible on desktop version */
+	.accordion-header {
+
+	}
+	
+	.accordion-content  {
+	    display:block !important;
+	  
+	}
+
 }
 
