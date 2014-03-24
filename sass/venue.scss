@@ -14,8 +14,11 @@
 /* Sections */
 @import "partials/globalmasthead";
 @import "partials/layout";
- 
- 
+
+/* Search */
+
+@import "partials/search";
+
  /* UCL Venue Unique Styles -------------------------------- */
 
 .photograph {
@@ -53,13 +56,13 @@
 }
 
 @include gs-media(t, max) {
-  #main {  
+  #main {
     background-position: -10% bottom;
   }
 }
 
 @include gs-media(m, max) {
-  #main {  
+  #main {
     background-image: none;
   }
 }
@@ -93,7 +96,7 @@ h1.large-title {
 
 
 /* Breadcrumb -------------------------------- */
- 
+
 
 #breadcrumb li.current a {
 	color: #fff;
@@ -104,7 +107,7 @@ h1.large-title {
 
 
 .leftnav {
-	left: -50px;	
+	left: -50px;
 	position: absolute;
 	background-color: #fff;
 	box-shadow: 15px 15px 0px $yellow;
@@ -159,7 +162,7 @@ h1.large-title {
 }
 
 @include gs-media(m, max) {
-  .whats-on .one, .whats-on .two {  
+  .whats-on .one, .whats-on .two {
     @include gs-span(m, all);
   }
 }
@@ -202,10 +205,10 @@ h1.large-title {
 }
 
 .accordion {
-   margin-bottom: 1em;   
+   margin-bottom: 1em;
    dt, dd {
       border: none;
-      border-bottom: 0; 
+      border-bottom: 0;
       margin-top:0;
       &:last-of-type {
         border-bottom: 0;

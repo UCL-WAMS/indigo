@@ -1,30 +1,33 @@
- 
+
  /* Vendor Dependencies */
  @import "partials/gridset.scss";
- 
+
  /* Authored Dependencies */
  @import "partials/reset";
  @import "partials/elements";
  @import "partials/colors";
  @import "partials/typography";
- 
+
  /* Patterns */
  @import "partials/forms";
  @import "partials/blog";
- 
+
  /* Sections */
  @import "partials/globalmasthead";
  @import "partials/layout";
- 
- 
+
+ /* Search */
+
+ @import "partials/search";
+
  /* Design Language Unique Styles -------------------------------- */
 
- 
+
  .photograph {
  	background-color: #622e78;
  }
- 
- 
+
+
  /* Colour Boxouts */
 
 .darkgreen {
