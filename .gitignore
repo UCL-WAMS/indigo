@@ -68,3 +68,10 @@ sass/.sass-cache/
 **/*/.DS_Store
 
 .DS_Store
+
+
+/sass/daylab.scss
+/sass/designlang.scss
+/sass/jdibrief.scss
+/sass/partials/search/_search.scss
+/sass/venue.scss
