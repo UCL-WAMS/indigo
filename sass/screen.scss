@@ -8,6 +8,9 @@
 /* Vendor Dependencies */
 @import "partials/gridset.scss";
 
+/* Mixins */
+@import "mixins/media-query.scss";
+
 /* Authored Dependencies */
 @import "partials/reset";
 @import "partials/elements";
