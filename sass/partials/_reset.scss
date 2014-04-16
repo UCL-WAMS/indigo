@@ -120,3 +120,11 @@ For modern browsers */
 .clearfix {
     zoom:1;
 }
+
+
+/* removes rounded corners and things on inputs for iOS */
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
