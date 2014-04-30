@@ -26,6 +26,9 @@ $lightblue: rgba(141,185,202,1);
 $stone: rgba(214,210,196,1);
 $darkbrown: rgba(78,54,41,1);
 
+// Search
+
+$search-blue: #4693EA;
 
 /* Colour Variant - for gradients
 -------------------------------------------------------------- */
@@ -64,5 +67,5 @@ $darkbrown-b: rgba(95,68,54,1);
 	background: -moz-linear-gradient($from 0%, $to 100%);
 	background: -o-linear-gradient($from 0%, $to 100%);
 	background: linear-gradient($from 0%, $to 100%);
-	
+
 }
