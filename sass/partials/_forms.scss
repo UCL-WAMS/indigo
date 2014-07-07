@@ -211,7 +211,7 @@ input.error {
 	position: relative;
 	border: 1px solid rgba(0,0,0,0.21);
 	border-bottom: 4px solid rgba(0,0,0,0.21);
-	border-radius: 4px;
+	@include border-radius(4px);
 	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 	font-weight: bold;
 	font-size: 14px;
@@ -236,6 +236,23 @@ input.error {
 
 #main a[class*=btn] {
 	color:#fff;
+}
+$buttonPadding: 0.7rem;
+button{
+	background: $button-bg-col;
+	cursor: pointer;
+	padding: $buttonPadding;
+	color: #fff;
+	border: 0;
+	@include border-radius(0.4em);
+	&:hover,:focus{
+		background-color: $hoverButton;
+		border: 0;
+	}
+	&:active{
+		background-color: $activeButton;
+		border: 0;
+	}
 }
 
 

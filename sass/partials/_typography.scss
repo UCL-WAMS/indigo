@@ -246,9 +246,7 @@ article ul {
 	content: "";
 	display: block;
 	background-color: #333;
-	-wekbit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
+	@include border-radius(50%);
 	height: 0.35em;
 	width: 0.35em;
 	position: absolute;

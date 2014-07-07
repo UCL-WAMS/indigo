@@ -1,54 +1,5 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Mixin */
 /* Vendor Dependencies */
-/* Mixins */
-/*
-
-    A simpler media query mixin
-
-    This mixin allows you to quickly create a media query in your project. With the ability to define the breakpoint in PX (which get's converted into EMs).
-    There's also the ability to define min/max and width/height (with defaults to min-width).
-
-    There's also an option to duplicate the content into a OldIE conditionally classed bit of CSS.
-
-    You would use it like this
-
-        body {
-            @include (280) {
-                background-color: blue;
-            }
-            @include mq(600, false) {
-                background-color: red;
-            }
-            @include mq(1200, true, max) {
-                font-size: 110%;
-            }
-        }
-
-    Which would give you this compiled CSS
-
-        @media (min-width: 17.5em) {
-            body {
-                background-color: blue;
-            }
-        }
-        @media (min-width: 37.5em) {
-            body {
-            background-color: red;
-            }
-        }
-        .lt-ie9 body {
-            font-size: 110%;
-        }
-        @media (max-width: 75em) {
-            body {
-                font-size: 110%;
-            }
-        }
-
-*/
 /* Authored Dependencies */
 /* Reset ---------------------------------------- */
 html, body, div, span, object, iframe,
@@ -2505,3 +2456,126 @@ footer hr {
   }
 }
 /* Search */
+/* Design Language Unique Styles -------------------------------- */
+.photograph {
+  background-color: #622e78;
+}
+
+/* Colour Boxouts */
+.darkgreen {
+  background-color: #555025;
+}
+
+.midgreen {
+  background-color: #8f993e;
+}
+
+.brightgreen {
+  background-color: #b5bd00;
+}
+
+.lightgreen {
+  background-color: #bbc592;
+}
+
+.yellow {
+  background-color: #f6be00;
+}
+
+.darkred {
+  background-color: #651d32;
+}
+
+.midred {
+  background-color: #93272c;
+}
+
+.brightred {
+  background-color: #d50000;
+}
+
+.lightred {
+  background-color: #e03c31;
+}
+
+.orange {
+  background-color: #ea7600;
+}
+
+.darkpurple {
+  background-color: #4b384c;
+}
+
+.midpurple {
+  background-color: #500778;
+}
+
+.brightpink {
+  background-color: #ac145a;
+}
+
+.lightpurple {
+  background-color: #c6b0bc;
+}
+
+.warmgrey {
+  background-color: #8c8279;
+}
+
+.darkblue {
+  background-color: #003d4c;
+}
+
+.midblue {
+  background-color: #002855;
+}
+
+.brightblue {
+  background-color: #0097a9;
+}
+
+.lightblue {
+  background-color: #8db9ca;
+}
+
+.stone {
+  background-color: #d6d2c4;
+}
+
+.darkbrown {
+  background-color: #4e3629;
+}
+
+.colours {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.colours > div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Type */
+.roman {
+  font-size: 1em;
+}
+
+.thin {
+  font-size: 1em;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 1em;
+}

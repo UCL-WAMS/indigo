@@ -10,6 +10,7 @@
 
 /* Mixins */
 @import "mixins/media-query.scss";
+@import "mixins/x-browser";
 
 /* Authored Dependencies */
 @import "partials/reset";

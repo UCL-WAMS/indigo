@@ -1,54 +1,5 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Mixin */
 /* Vendor Dependencies */
-/* Mixins */
-/*
-
-    A simpler media query mixin
-
-    This mixin allows you to quickly create a media query in your project. With the ability to define the breakpoint in PX (which get's converted into EMs).
-    There's also the ability to define min/max and width/height (with defaults to min-width).
-
-    There's also an option to duplicate the content into a OldIE conditionally classed bit of CSS.
-
-    You would use it like this
-
-        body {
-            @include (280) {
-                background-color: blue;
-            }
-            @include mq(600, false) {
-                background-color: red;
-            }
-            @include mq(1200, true, max) {
-                font-size: 110%;
-            }
-        }
-
-    Which would give you this compiled CSS
-
-        @media (min-width: 17.5em) {
-            body {
-                background-color: blue;
-            }
-        }
-        @media (min-width: 37.5em) {
-            body {
-            background-color: red;
-            }
-        }
-        .lt-ie9 body {
-            font-size: 110%;
-        }
-        @media (max-width: 75em) {
-            body {
-                font-size: 110%;
-            }
-        }
-
-*/
 /* Authored Dependencies */
 /* Reset ---------------------------------------- */
 html, body, div, span, object, iframe,
@@ -2505,3 +2456,200 @@ footer hr {
   }
 }
 /* Search */
+/* UCL Venue Unique Styles -------------------------------- */
+.photograph {
+  background-color: #f6be00;
+}
+
+@media only screen and (max-width: 767px) {
+  #header-mobile {
+    background-color: #f6be00;
+  }
+}
+#main {
+  background-color: #0e0f14;
+  color: #fff;
+}
+
+.bg-homepage, .bg-show, .bg-schedule {
+  background-image: url("http://farm9.staticflickr.com/8236/8464555745_8b82e2d87a_b.jpg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: 100% bottom;
+}
+
+.bg-show {
+  background-image: url("http://farm9.staticflickr.com/8509/8464554843_063974b42e.jpg");
+}
+
+.bg-schedule {
+  background-image: url("http://farm9.staticflickr.com/8231/8465653616_91bd3e756f.jpg");
+}
+
+@media only screen and (max-width: 989px) {
+  #main {
+    background-position: -10% bottom;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #main {
+    background-image: none;
+  }
+}
+#main a {
+  color: #f6be00;
+}
+
+#main article ul li:before {
+  background-color: #fff;
+}
+
+/* Headings -------------------------------- */
+h1.large-title {
+  font-size: 72px;
+  color: #fff;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  h1.large-title {
+    font-size: 48px;
+  }
+}
+/* Breadcrumb -------------------------------- */
+#breadcrumb li.current a {
+  color: #fff;
+}
+
+/* Left Navigation -------------------------------- */
+.leftnav {
+  left: -50px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 15px 15px 0px #f6be00;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  margin-top: 2em;
+  width: 100%;
+  padding-left: 8.03030303%;
+  padding-right: 8.03030303%;
+}
+
+@media only screen and (max-width: 989px) {
+  .leftnav {
+    left: 0;
+  }
+}
+#leftcol .leftnav a {
+  color: #333;
+  font-weight: 700;
+}
+
+[class*=btn] {
+  box-shadow: 5px 5px 0px #bd8800;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  margin-right: 8px;
+}
+
+#main a[class*=btn] {
+  color: #38300E;
+}
+
+/* What's on -------------------------------- */
+.whats-on .blurb {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+}
+
+.whats-on img {
+  box-shadow: 5px 5px 0px white;
+}
+
+.whats-on .one {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.42929%;
+}
+
+.whats-on .two {
+  display: block;
+  float: left;
+  margin-left: 51.4596%;
+  margin-right: -100%;
+  width: 48.42929%;
+}
+
+@media only screen and (max-width: 767px) {
+  .whats-on .one, .whats-on .two {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.date {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+[class*=pullquote] p.quote {
+  color: #fff;
+  line-height: 1.6em;
+  font-size: 24px;
+}
+
+.pullquote .meta {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.bqstart, .bqend {
+  color: #f6be00;
+}
+
+#main .tabs li {
+  background-color: #FFE076;
+  border-bottom: 5px solid #000;
+}
+
+#main .tabs li a {
+  color: #000;
+}
+
+#main .tabs li.active {
+  border-color: #f6be00;
+  background-color: #f6be00;
+}
+
+.tabbed > div {
+  border: 10px solid #f6be00;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+.accordion dt, .accordion dd {
+  border: none;
+  border-bottom: 0;
+  margin-top: 0;
+}
+.accordion dt:last-of-type, .accordion dd:last-of-type {
+  border-bottom: 0;
+}
+.accordion dd:last-of-type {
+  border-top: 0;
+}
+
+.rslides {
+  border: 1px solid #666;
+  box-shadow: 10px 10px 0px #fff;
+}
