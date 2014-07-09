@@ -1465,7 +1465,6 @@ input.error {
   display: inline-block;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.21);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -1473,6 +1472,12 @@ input.error {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
   font-weight: bold;
   font-size: 14px;
+}
+[class*=btn]:hover, [class*=btn] :focus {
+  background-color: #615957;
+}
+[class*=btn]:active {
+  background-color: #505050;
 }
 
 .btn-small {
@@ -1496,6 +1501,22 @@ input.error {
   color: #999;
   text-shadow: none;
 }
+.btn-gradient.disabled:hover, .btn-gradient.disabled :focus {
+  background: #eeeeee;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#eeeeee));
+  background: -webkit-linear-gradient(#ededed 0%, #eeeeee 100%);
+  background: -moz-linear-gradient(#ededed 0%, #eeeeee 100%);
+  background: -o-linear-gradient(#ededed 0%, #eeeeee 100%);
+  background: linear-gradient(#ededed 0%, #eeeeee 100%);
+}
+.btn-gradient.disabled:active {
+  background: #cccccc;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e4), to(#cccccc));
+  background: -webkit-linear-gradient(#e8e8e4 0%, #cccccc 100%);
+  background: -moz-linear-gradient(#e8e8e4 0%, #cccccc 100%);
+  background: -o-linear-gradient(#e8e8e4 0%, #cccccc 100%);
+  background: linear-gradient(#e8e8e4 0%, #cccccc 100%);
+}
 
 #main a[class*=btn] {
   color: #fff;
@@ -1517,7 +1538,7 @@ button:hover, button :focus {
   border: 0;
 }
 button:active {
-  background-color: black;
+  background-color: #505050;
   border: 0;
 }
 

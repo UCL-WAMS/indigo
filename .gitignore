@@ -58,6 +58,9 @@ mixture.json
 
 # gem
 *.gem
+gruntfile.js
+package.json
+config.rb
 
 
 config.codekit
