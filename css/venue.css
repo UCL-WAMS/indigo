@@ -1176,6 +1176,11 @@ ol.code li.tab1 {
 /* Patterns */
 /* Forms
 -------------------------------------------------------------- */
+form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 fieldset {
   margin: 0 0 1em 0;
 }
