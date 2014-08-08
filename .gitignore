@@ -36,6 +36,9 @@ tags
 # nodejs npm modules
 /node_modules
 
+#page speed test records
+/pagespeedTests
+
 # node-cluster
 /pids
 *.sock
@@ -78,3 +81,5 @@ sass/.sass-cache/
 /sass/jdibrief.scss
 /sass/partials/search/_search.scss
 /sass/venue.scss
+
+require.html

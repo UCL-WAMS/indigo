@@ -126,5 +126,5 @@ For modern browsers */
 
 input {
     -webkit-appearance: none;
-    @include border-radius(0);
+    border-radius: 0;
 }

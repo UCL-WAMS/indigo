@@ -10,7 +10,6 @@
 
 /* Mixins */
 @import "mixins/media-query.scss";
-@import "mixins/x-browser";
 
 /* Authored Dependencies */
 @import "partials/reset";
@@ -21,6 +20,7 @@
 /* Patterns */
 @import "partials/forms";
 @import "partials/blog";
+@import "partials/carousel";
 
 /* Sections */
 @import "partials/globalmasthead";
