@@ -1,6 +1,9 @@
 /* Forms
 -------------------------------------------------------------- */
-
+form{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
 fieldset    { 
 	margin: 0 0 1em 0; 
 }
@@ -210,13 +213,17 @@ input.error {
 	display: inline-block;
 	position: relative;
 	border: 1px solid rgba(0,0,0,0.21);
-	border-bottom: 4px solid rgba(0,0,0,0.21);
 	border-radius: 4px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 	font-weight: bold;
 	font-size: 14px;
+	&:hover,:focus{
+		background-color: $hoverButton;
+	}
+	&:active{
+		background-color: $activeButton;
+	}
 }
-
 .btn-small {
 	padding: 8px 20px 8px 20px;
 	font-size: 12px;
@@ -228,14 +235,37 @@ input.error {
 }
 
 .btn-gradient.disabled {
-	@include gradient(#eee, #e0e0e0);
+	@include gradient($disabled-btn-grad1,$disabled-btn-grad2);
 	border-bottom:  1px solid rgba(0,0,0,0.21);
 	color: #999;
 	text-shadow: none;
+	&:hover,:focus{
+		@include gradient($disabled-hvr-btn-grad1,$disabled-hvr-btn-grad2);
+	}
+	&:active{
+		@include gradient($disabled-act-btn-grad1,$disabled-act-btn-grad2);
+	}
 }
 
 #main a[class*=btn] {
 	color:#fff;
+}
+$buttonPadding: 0.7rem;
+button{
+	background: $button-bg-col;
+	cursor: pointer;
+	padding: $buttonPadding;
+	color: #fff;
+	border: 0;
+	border-radius: 0.4em;
+	&:hover,:focus{
+		background-color: $hoverButton;
+		border: 0;
+	}
+	&:active{
+		background-color: $activeButton;
+		border: 0;
+	}
 }
 
 

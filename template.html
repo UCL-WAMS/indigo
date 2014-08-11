@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset=utf-8 />
-<meta name="author" content="Mark Boulton Design" />
+<meta name="author" content="UCL" />
 <meta name="description" content="UCL Homepage" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<!-- social meta -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@uclnews">
+<meta name="twitter:title" content="UCL - London's Global University">
+<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+<meta name="twitter:creator" content="@UCLWAMS">
+<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png"/>
+<meta property="og:title" content="UCL - London's Global University"/>
+<meta property="og:url" content="http://www.ucl.ac.uk"/>
+<meta property="og:site_name" content="UCL"/>
+<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
+<meta property="og:type" content="website"/> 
+<meta property="og:profile_id" content="uclofficial"/>
+<!-- end social meta -->
 <title>UCL Design Language</title>
 
-<link href="./css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<!--[if IE]><link href="./css/ie.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="./css/ie-old.css" rel="stylesheet" /><![endif]-->
+<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
-<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
 
-<link rel="shortcut icon" href="./img/favicon.ico" />
+<link rel="shortcut icon" href="/images/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="favicon-144.png">
+
+<script src="/js/lib/modernizr-custom.js"></script>
+
+<script>
+	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+	Modernizr.load({
+		//cutting the mustard as used by the BBC
+		test : cuttingTheMustard
+		//if old browser load the shiv
+		,nope : [
+			'//static.ucl.ac.uk/js/html5.js'
+			,'/js/lib/respond.min.js'
+		]
+	});
+	//set conditional assets for main.js
+	var globalSiteSpecificVars = {
+		pathToJquery: 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min'
+		,googleAnalyticsIdsArray: ['UA-16583269-1']//specify site specific id's NOT UCL generic UA-943297-1
+	}
+	if(cuttingTheMustard){
+		globalSiteSpecificVars.pathToJquery = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min";
+	}
+</script>
+
+<script src="/js/lib/require.min.js"></script>
+<script src="/js/main.js"></script>
+<script>
+	require(["app/general"]);//load the default stuff
+</script>
 
 </head>
 
@@ -44,7 +86,7 @@
 						</div>
 						-->
 						<div id="searchform">
-							<input type="search" placeholder="Search website" id="search" value="">
+							<input type="search" placeholder="Search UCL websites" id="search" value="">
 						</div>
 
 						<input type="submit" name="sumbit" value="Go" class="btn search" />
@@ -70,7 +112,7 @@
 			<header id="ucl-masthead" role="header">
 
 				<div id="branding">
-					<h1>Applied Biomedical Engineering Group</h1>
+					<p>Applied Biomedical Engineering Group</p>
 					<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo">
 				</div>
 
@@ -116,7 +158,7 @@
 
 		<div id="site-content" class="wrapper">
 
-			<header id="header-mobile">
+			<header id="header-mobile" class="default-header">
 
 				<a id="nav-mobile-menu" href="#"><img src="./images/mob-nav.png" alt="Menu" /></a>
 
@@ -130,6 +172,7 @@
 
 						<ul>
 							<li><a href="index.html">Home</a></li>
+							<li><span>Require</span></li>
 						</ul>
 
 					</nav>
@@ -151,11 +194,9 @@
 
 								<p>If you would instead like to use a photograph in the banner add the class '.photograph-on' to the '.photograph' div and assign your image to this class in the css</p>
 
-
 							</article>
 
-						<p class="mod">Page last modified on <span
-						style="text-transform:capitalize;">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
+						<p class="mod">Page last modified on <span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
 						</p>
 
 					</div>
@@ -219,10 +260,6 @@
 				<p id="footer-links">Copyright © 2013 UCL <a href="#">Disclaimer</a> | <a href="#">Freedom of Information</a> | <a href="#">Accessibility</a> | <a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Contact Us</a></p>
 
 		</footer>
-
-<script src="./js/jquery.js"></script>
-<script src="./js/ucl.js"></script>
-<script src="./js/gridset-overlay.js"></script>
 
 </body>
 </html>

@@ -194,6 +194,9 @@ small {
 	font-size: 12px;
 	color:#ccc;
 	margin-top:2em;
+	.lastMod{
+		text-transform: capitalize;
+	}
 }
 
 ins {
@@ -246,8 +249,6 @@ article ul {
 	content: "";
 	display: block;
 	background-color: #333;
-	-wekbit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 	height: 0.35em;
 	width: 0.35em;
