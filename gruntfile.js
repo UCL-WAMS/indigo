@@ -105,7 +105,7 @@ grunt.config.init({
 	pagespeed: {
 		options: {
 		nokey: true,
-		url: 'http://1a8abceb.ngrok.com/require.html'
+		url: 'http://1a8abceb.ngrok.com/template.html'//example using ngrok web tunnel for local testing. update for your url
 		},
 		prod: {
 			options: {
