@@ -1,3 +1,4 @@
+
 /* Vendor Dependencies */
 @import "partials/gridset.scss";
 
@@ -132,8 +133,8 @@ h1.large-title {
 
 [class*=btn] {
 	box-shadow: 5px 5px 0px #bd8800;
-	border-radius: 0;
 	border: 0;
+	border-radius: 0;
 	margin-right: 8px;
 }
 

@@ -15,20 +15,17 @@
    left: -35px;
    width: 100%;
    max-width: 1470px;
-
-	
-	img {
-		display: block;
-	}
-	
-	 h1 {
-		position: absolute;
+   p{
+   		position: absolute;
 		left: 70px;
 		top: 25%;
 		color: #fff;
 		font-size: 14px;
 		text-transform: uppercase;
 		font-family: Arial, sans-serif;
+   }
+	img {
+		display: block;
 	}
 
 }
@@ -213,9 +210,16 @@ header > div {
 			position: absolute;
 			z-index: 1000;
 		}
+		&.no-svg{
+			background-image: url('../images/ucl-logo-cropped-white.png');
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			background-color: #000;
+			background-size: 90%;
+		}
 	}
-
 }
+
 
 /* Main Content
 -------------------------------------------------------------- */
@@ -298,6 +302,7 @@ header > div {
 -------------------------------------------------------------- */
 
 footer {
+	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.7);
 	padding: 40px 35px;
 	color: #bbb;

@@ -1,5 +1,4 @@
 // UCL JS
-
 $(document).ready(function(){
 
 	$('.tabbed div').hide();
@@ -18,17 +17,21 @@ $(document).ready(function(){
 
 	var allPanels = $('.accordion > dd').hide();
 
-  $('.accordion > dt > a').click(function() {
-    allPanels.slideUp();
-    $(this).parent().next().slideDown();
-    return false;
-  });
+ 	$('.accordion > dt > a').click(function() {
+		allPanels.slideUp();
+		$(this).parent().next().slideDown();
+		return false;
+	});
 
+	$('#nav-mobile-menu, #nav-mobile-back').click(function (e) {
+		var body = $('body');
+		if (body.hasClass('mobile-open')) body.removeClass('mobile-open');
+		else body.addClass('mobile-open');
+		e.preventDefault();
+	});
 
-if (document.documentElement.clientWidth < 767) {
-
-
-	//Add Inactive Class To All Accordion Headers
+	if (document.documentElement.clientWidth < 767) {
+		//Add Inactive Class To All Accordion Headers
 		$('.accordion-header').addClass('inactive-header');
 
 		//Set The Accordion Content Width
@@ -53,8 +56,5 @@ if (document.documentElement.clientWidth < 767) {
 				$(this).next().slideToggle().toggleClass('open-content');
 			}
 		});
-
-}
-
-
+	}
 });
