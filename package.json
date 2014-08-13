@@ -9,7 +9,7 @@
   "styleSrcDir": "sass",
   "styleDestDir": "css",
   "images": "images",
-  "staticDevServerLocation": "D://xammp/htdocs/static/",//useful for respond js when using cdn/x-domain setup
+  "staticDevServerLocation": "D://xammp/htdocs/static/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
