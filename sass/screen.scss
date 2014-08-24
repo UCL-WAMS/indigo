@@ -12,6 +12,8 @@
 /* Mixins */
 @import "mixins/media-query";
 @import "mixins/gradient";
+@import "mixins/no-js";
+@import "mixins/modernizr";
 
 /* Authored Dependencies */
 @import "partials/reset";
