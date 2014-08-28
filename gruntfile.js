@@ -91,42 +91,10 @@ grunt.config.init({
 			parseFiles: true,
 			matchCommunityTests: false
 		}
-	},
-	copy:{//usefuly for building a static server for testing respond js when using a CDN
-		main: {
-			files:[
-				{
-					src: ['<%= pkg.styleDestDir %>/*','<%= pkg.images %>/*','<%= pkg.jsDestDir %>/*','<%= pkg.jsDestDir %>/lib/*']
-					,dest: '<%= pkg.staticDevServerLocation %>'
-				}
-			]
-		}
-	},
-	pagespeed: {
-		options: {
-		nokey: true,
-		url: 'http://1a8abceb.ngrok.com/template.html'//example using ngrok web tunnel for local testing. update for your url
-		},
-		prod: {
-			options: {
-				locale: "en_GB",
-				strategy: "desktop",
-				threshold: 80
-			}
-		},
-		mobile: {
-			options: {
-				locale: "en_GB",
-				strategy: "mobile",
-				threshold: 80
-			}
-		},
 	}
 });
 
-grunt.loadNpmTasks('grunt-pagespeed')
 grunt.loadNpmTasks('grunt-autoprefixer');
-grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-compress');
@@ -136,5 +104,5 @@ grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks("grunt-modernizr");
 
-grunt.registerTask('default', ['concat','uglify','sass','autoprefixer','modernizr'/*,'copy'*/,'watch']);
+grunt.registerTask('default', ['concat','uglify','sass','autoprefixer','modernizr','watch']);
 };
