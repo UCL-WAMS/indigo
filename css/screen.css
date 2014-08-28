@@ -3,6 +3,52 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* Vendor Dependencies */
+/* Mixins */
+/*
+
+    A simpler media query mixin
+
+    This mixin allows you to quickly create a media query in your project. With the ability to define the breakpoint in PX (which get's converted into EMs).
+    There's also the ability to define min/max and width/height (with defaults to min-width).
+
+    There's also an option to duplicate the content into a OldIE conditionally classed bit of CSS.
+
+    You would use it like this
+
+        body {
+            @include (280) {
+                background-color: blue;
+            }
+            @include mq(600, false) {
+                background-color: red;
+            }
+            @include mq(1200, true, max) {
+                font-size: 110%;
+            }
+        }
+
+    Which would give you this compiled CSS
+
+        @media (min-width: 17.5em) {
+            body {
+                background-color: blue;
+            }
+        }
+        @media (min-width: 37.5em) {
+            body {
+            background-color: red;
+            }
+        }
+        .lt-ie9 body {
+            font-size: 110%;
+        }
+        @media (max-width: 75em) {
+            body {
+                font-size: 110%;
+            }
+        }
+
+*/
 /* Authored Dependencies */
 /* Reset ---------------------------------------- */
 html, body, div, span, object, iframe,
@@ -105,6 +151,11 @@ For modern browsers */
 /* For IE 6/7 (trigger hasLayout) */
 .clearfix {
   zoom: 1; }
+
+/* removes rounded corners and things on inputs for iOS */
+input {
+  -webkit-appearance: none;
+  border-radius: 0; }
 
 /* Images
 -------------------------------------------------------------- */
@@ -1199,11 +1250,11 @@ input.error {
 
 .btn-gradient.disabled {
   background: #e0e0e0;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#e0e0e0));
-  background: -webkit-linear-gradient(#eeeeee 0%, #e0e0e0 100%);
-  background: -moz-linear-gradient(#eeeeee 0%, #e0e0e0 100%);
-  background: -o-linear-gradient(#eeeeee 0%, #e0e0e0 100%);
-  background: linear-gradient(#eeeeee 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#e0e0e0));
+  background: -webkit-linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: -moz-linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: linear-gradient(#eee 0%, #e0e0e0 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   color: #999;
   text-shadow: none; }
@@ -1601,7 +1652,7 @@ article > footer a:hover {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #4693ea;
+    background: #4693EA;
     font-size: 12px;
     font-size: 1.2rem; }
   #global-search .search:hover {
