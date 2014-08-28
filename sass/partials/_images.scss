@@ -1,0 +1,36 @@
+/* Images
+-------------------------------------------------------------- */
+
+figcaption {
+  color: #666666;
+  font-size: 0.9em;
+}
+
+figcaption h4 {
+  margin-top: 0.2em;
+}
+
+figure img {
+  padding-top: 0.5em;
+}
+
+figure + figure, figure + p {
+  margin-top: 1em;
+}
+
+
+
+/* Floated Images
+-------------------------------------------------------------- */
+
+img.float-left {
+  @include gs-span(dc, 1, 2);
+  @include gs-float(dc, left);
+  margin-bottom: 1em;
+}
+
+img.float-right {
+  @include gs-span(dc, 3, 4);
+  @include gs-float(dc, right);
+  margin-bottom: 1em;
+}
