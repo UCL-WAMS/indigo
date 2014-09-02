@@ -4,18 +4,42 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /* Config */
-@import "partials/environment.scss";
+@import "partials/environment";
+
+/* Variables */
+@import "variables/variables";
 
 /* Vendor Dependencies */
-@import "partials/gridset.scss";
+@import "partials/gridset";
 
 /* Mixins */
-@import "mixins/media-query.scss";
+@import "mixins/media-query";
+@import "mixins/gradient";
+@import "mixins/no-js";
+@import "mixins/modernizr";
 
 /* Authored Dependencies */
 @import "partials/reset";
+@import "partials/helpers";
+
+@import "partials/accordion";
+@import "partials/article";
+@import "partials/audio";
+@import "partials/box";
+@import "partials/code";
+@import "partials/divider";
+@import "partials/images";
+@import "partials/links";
+@import "partials/map";
+@import "partials/slides";
+@import "partials/social";
+@import "partials/tabs";
+@import "partials/tables";
+@import "partials/wrapper";
+@import "partials/vcard";
+@import "partials/video";
+
 @import "partials/elements";
-@import "partials/colors";
 @import "partials/typography";
 
 /* Patterns */
