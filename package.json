@@ -1,0 +1,34 @@
+{
+  "name": "indigo-design-language",
+  "version": "0.0.0",
+  "description": "indigo design language",
+  "siteUrl": "indigo.design",
+  "jsSrcDir": "js",
+  "jsDestDir": "js",
+  "styleSrcDir": "sass",
+  "styleDestDir": "css",
+  "images": "images",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Bery",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-contrib-compass": "^0.9.0",
+    "grunt-contrib-compress": "^0.10.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-modernizr": "^0.5.2",
+    "load-grunt-tasks": "^0.6.0",
+    "ngrok": "^0.1.97"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  }
+}
