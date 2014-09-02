@@ -1,3 +1,6 @@
+/* Config */
+@import "partials/environment.scss";
+
 /* Vendor Dependencies */
 @import "partials/gridset.scss";
 
@@ -34,7 +37,7 @@
 }
 
 .photograph-on {
-	background-image: url("../daylabs/images/cells.jpg");
+	background-image: url("#{$staticUrl}/images/cells.jpg");
 	background-position: 0 -460px;
 }
 

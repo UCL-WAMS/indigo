@@ -22,6 +22,11 @@ figure + figure, figure + p {
 
 /* Floated Images
 -------------------------------------------------------------- */
+$smallImgMaxWidth: 200px;
+$mediumImgMaxWidth: 400px;
+$largeImgMaxWidth: 600px;
+$xlImgMaxWidth: 900px;
+$xxlImgMaxWidth: 1400px;
 
 img.float-left {
 	@include gs-span(dc, 1, 2);
@@ -34,8 +39,35 @@ img.float-right {
 	@include gs-float(dc, right);
 	margin-bottom: 1em;
 }
+.smallImg{
+	max-width: $smallImgMaxWidth;
+}
+.mediumImg{
+	max-width: $mediumImgMaxWidth;
+}
+.largeImg{
+	max-width: $largeImgMaxWidth;
+}
+.xlImg{
+	max-width: $xlImgMaxWidth;
+}
+.xxlImg{
+	max-width: $xxlImgMaxWidth;
+}
 
-
+@include gs-media(m, max) {
+	.largeImg,.xlImg,.xxlImg{
+		width: 100%;
+	}
+	img.float-left,img.float-right{
+		&,.largeImg,.xlImg,.xxlImg{
+			width: 100%;
+		}
+	}
+}
+.noRespond{
+	width: auto;
+}
 /* Tables
 -------------------------------------------------------------- */
 
@@ -543,7 +575,7 @@ audio {
 }
 
 .active-header {
-	background: url(../img/close.png);
+	background: url(#{$staticUrl}/images/close.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 	padding-right: 20px;
@@ -551,20 +583,20 @@ audio {
 }
 
 .active-header:hover {
-	background: url(../img/close.png);
+	background: url(#{$staticUrl}/images/close.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 }
 
 .inactive-header {
-	background: url(../img/open.png);
+	background: url(#{$staticUrl}/images/open.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 	padding-right: 20px;
 }
 
 .inactive-header:hover {
-	background: url(../img/open.png);
+	background: url(#{$staticUrl}/images/open.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 }
