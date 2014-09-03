@@ -11,7 +11,7 @@
 }
 
 .active-header {
-	background: url(../img/close.png);
+	background: url(#{$staticUrl}/images/close.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 	padding-right: 20px;
@@ -19,20 +19,20 @@
 }
 
 .active-header:hover {
-	background: url(../img/close.png);
+	background: url(#{$staticUrl}/images/close.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 }
 
 .inactive-header {
-	background: url(../img/open.png);
+	background: url(#{$staticUrl}/images/open.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 	padding-right: 20px;
 }
 
 .inactive-header:hover {
-	background: url(../img/open.png);
+	background: url(#{$staticUrl}/images/open.png);
 	background-repeat: no-repeat;
 	background-position: right 50%;
 }
