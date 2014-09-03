@@ -34,31 +34,3 @@ img.float-right {
   @include gs-float(dc, right);
   margin-bottom: 1em;
 }
-.smallImg{
-  max-width: $smallImgMaxWidth;
-}
-.mediumImg{
-  max-width: $mediumImgMaxWidth;
-}
-.largeImg{
-  max-width: $largeImgMaxWidth;
-}
-.xlImg{
-  max-width: $xlImgMaxWidth;
-}
-.xxlImg{
-  max-width: $xxlImgMaxWidth;
-}
-@include gs-media(m, max) {
-  .largeImg,.xlImg,.xxlImg{
-    width: 100%;
-  }
-  img.float-left,img.float-right{
-    &,.largeImg,.xlImg,.xxlImg{
-      width: 100%;
-    }
-  }
-}
-.noRespond{
-  width: auto;
-}

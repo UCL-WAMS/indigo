@@ -97,13 +97,16 @@ header > div {
 	left: 0;
 	width: 19.8653%;
 }
+
 .leftnav li {
 	margin-bottom: 0.5em;
+	
 	ul {
 		margin: 10px 5%;
 		font-size:14px;
 	}
 }
+
 #nav-mobile-back, #header-mobile {
 	display: none;
 }
@@ -189,7 +192,7 @@ header > div {
 		padding: 20% 35px 0;
 		background-size: auto 100%;
 		background-position: 106% bottom;
-		background-image: url('#{$staticUrl}/images/ucl-logo.svg');
+		background-image: url('../images/ucl-logo.svg');
 		background-repeat: repeat-x;
 		position: relative;
 		left: -35px;
@@ -208,7 +211,7 @@ header > div {
 			z-index: 1000;
 		}
 		&.no-svg{
-			background-image: url('#{$staticUrl}/images/ucl-logo-cropped-white.png');
+			background-image: url('../images/ucl-logo-cropped-white.png');
 			background-repeat: no-repeat;
 			background-position: right bottom;
 			background-color: #000;
@@ -222,11 +225,12 @@ header > div {
 -------------------------------------------------------------- */
 
 #main {
-	background-color: $content-bg-color;
+	background-color:#fff;
 	padding: 2em 35px 2em 35px;
 	left: -35px;
 	position: relative;
 	@include gs-span(dl, all);
+	
 }
 
 @include gs-media(t, max) {
@@ -413,85 +417,5 @@ footer {
 	.block-finditfast2 {
 		@include gs-span(m, 1);
 		clear: left;
-	}
-}
-@mixin nav-in-document-flow{
-	position: relative;
-	left: -35px;
-	padding: 0 35px;
-
-}
-/* horizontal navigation layouts
-----------------------------------------------------------------------------------*/
-.horizontal-nav{
-	#leftcol{
-		@include nav-in-document-flow;
-		width: 100%;
-		background-color: $content-bg-color;
-		margin-top: 0;
-		padding-top: 1em;
-	}
-	.leftnav{
-		ul{
-			overflow: hidden;
-			&:nth-child(n+2){
-				display: none;
-			}
-		}
-		li{
-			display: block;
-			float: left;
-			padding-right: 1em;
-			margin-right: 1em;
-			border-right: 1px solid $ruleColor;
-			a{
-				text-decoration: none;
-				cursor: pointer;
-				color: $horizontalNavColor;
-			}
-			&:last-child{
-				border-right: 0;
-			}
-		}
-	}
-	#main{
-		padding-top: 1em;
-	}
-	#content{
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	@include gs-media(m, max) {
-		#leftcol{
-			background-color: transparent;
-		}
-		.leftnav{
-			li{
-				border-right: 0;
-			}
-		}
-	}
-}
-.horizontal-nav--2col{
-	.content-main{
-		@include gs-span(dl, 1, 4, (1, 5));
-	}
-	.content-sidebar{
-		@include gs-span(dl, 5, 5, (1, 5));
-	}
-	@include gs-media(t, max) {
-		.content-main,.content-sidebar{  
-			@include gs-span(t, all, (1, 3));
-			margin-bottom: 2em;
-		}
-	}
-}
-.horizontal-nav--1col{
-	.content-main{
-		@include gs-span(dl, 1, 5, (1, 5));
-	}
-	.content-sidebar{
-		display: none;
 	}
 }
