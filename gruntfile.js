@@ -39,17 +39,25 @@ grunt.config.init({
 			}]
 		}
 	},
+	cssmin: {
+	  my_target: {
+		files: [{
+		 	expand: true,
+			cwd: '<%= pkg.styleDestDir %>',
+			src: ['*.css', '!*.min.css'],
+			dest: '<%= pkg.styleDestDir %>',
+			ext: '.min.css'
+		}]
+	  }
+	},
 	sass: {
 		dist: {
-			options: {
-				style: 'compressed'
-			},
 			files: [{
 				expand: true,
 				cwd: '<%= pkg.styleSrcDir %>',
 				src: ['*.scss'],
 				dest: '<%= pkg.styleDestDir %>',
-				ext: '.min.css'
+				ext: '.css'
 			}]
 		}
 	},
@@ -63,7 +71,7 @@ grunt.config.init({
 		},
 		sass:{
 			files: ['<%= pkg.styleSrcDir %>/*.scss'],
-			tasks: ['sass:dist','autoprefixer'/*,'copy'*/]
+			tasks: ['sass:dist','autoprefixer','cssmin']
 		}
 	},
 	modernizr: {
@@ -104,5 +112,5 @@ grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks("grunt-modernizr");
 
-grunt.registerTask('default', ['concat','uglify','sass','autoprefixer','modernizr','watch']);
+grunt.registerTask('default', ['concat','uglify','sass','autoprefixer','modernizr','cssmin','watch']);
 };
