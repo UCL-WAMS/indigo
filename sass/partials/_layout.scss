@@ -495,3 +495,8 @@ footer {
 		display: none;
 	}
 }
+.vertical-nav--1col{
+	.content-main{
+		@include gs-span(dl, 2, 5, (2, 5));
+	}
+}
