@@ -452,6 +452,9 @@ nav.topnav{
 .horizontal-nav{
 	#leftcol{
 		display: none;
+		.leftnav{
+			display: none;
+		}
 		@include gs-media(m, max){
 			display: block;
 		}
@@ -493,6 +496,13 @@ nav.topnav{
 		display: none;
 	}
 }
+.vertical-nav{
+	@include gs-media(m, max){
+		.leftnav{
+			display: none;
+		}
+	}
+}
 .vertical-nav--1col{
 	.content-main{
 		@include gs-span(dl, 2, 5, (2, 5));
@@ -507,5 +517,11 @@ nav.topnav{
 	}
 	#leftcol{
 		margin-top: 5em;
+	}
+}
+.mobilenav{
+	display: none;
+	@include gs-media(m, max){
+		display: block;
 	}
 }

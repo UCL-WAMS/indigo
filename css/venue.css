@@ -2137,6 +2137,8 @@ nav.topnav {
 
 .horizontal-nav #leftcol {
   display: none; }
+  .horizontal-nav #leftcol .leftnav {
+    display: none; }
   @media only screen and (max-width: 767px) {
     .horizontal-nav #leftcol {
       display: block; } }
@@ -2182,6 +2184,10 @@ nav.topnav {
 .horizontal-nav--1col .content-sidebar {
   display: none; }
 
+@media only screen and (max-width: 767px) {
+  .vertical-nav .leftnav {
+    display: none; } }
+
 .vertical-nav--1col .content-main {
   display: block;
   float: left;
@@ -2196,6 +2202,12 @@ nav.topnav {
       display: none; } }
 .vertical-nav--show-top-nav #leftcol {
   margin-top: 5em; }
+
+.mobilenav {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .mobilenav {
+      display: block; } }
 
 /* Search */
 /* UCL Venue Unique Styles -------------------------------- */
