@@ -2103,41 +2103,45 @@ footer {
     clear: left; } }
 /* horizontal navigation layouts
 ----------------------------------------------------------------------------------*/
-.horizontal-nav #leftcol {
+nav.topnav {
+  display: none;
   position: relative;
   left: -35px;
   padding: 0 35px;
   width: 100%;
   background-color: #fff;
   margin-top: 0;
-  padding-top: 1em; }
-.horizontal-nav .leftnav ul {
+  padding-top: 1em;
   overflow: hidden; }
-  .horizontal-nav .leftnav ul:nth-child(n+2) {
-    display: none; }
-.horizontal-nav .leftnav li {
-  display: block;
-  float: left;
-  padding-right: 1em;
-  margin-right: 1em;
-  border-right: 1px solid #ccc; }
-  .horizontal-nav .leftnav li a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #333333; }
-  .horizontal-nav .leftnav li:last-child {
-    border-right: 0; }
+  nav.topnav ul li {
+    display: block;
+    float: left;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 1px solid #ccc; }
+    nav.topnav ul li a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #333333; }
+    nav.topnav ul li:last-child {
+      border-right: 0; }
+
+.horizontal-nav #leftcol {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .horizontal-nav #leftcol {
+      display: block; } }
+.horizontal-nav .topnav {
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .horizontal-nav .topnav {
+      display: none; } }
 .horizontal-nav #main {
   padding-top: 1em; }
 .horizontal-nav #content {
   width: 100%;
   margin-left: 0;
   margin-right: 0; }
-@media only screen and (max-width: 767px) {
-  .horizontal-nav #leftcol {
-    background-color: transparent; }
-  .horizontal-nav .leftnav li {
-    border-right: 0; } }
 
 .horizontal-nav--2col .content-main {
   display: block;
@@ -2175,6 +2179,14 @@ footer {
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
+
+.vertical-nav--show-top-nav nav.topnav {
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .vertical-nav--show-top-nav nav.topnav {
+      display: none; } }
+.vertical-nav--show-top-nav #leftcol {
+  margin-top: 5em; }
 
 /* Search */
 /* Day Lab Unique Styles -------------------------------- */

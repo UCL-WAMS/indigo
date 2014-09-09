@@ -423,21 +423,15 @@ footer {
 }
 /* horizontal navigation layouts
 ----------------------------------------------------------------------------------*/
-.horizontal-nav{
-	#leftcol{
-		@include nav-in-document-flow;
-		width: 100%;
-		background-color: $content-bg-color;
-		margin-top: 0;
-		padding-top: 1em;
-	}
-	.leftnav{
-		ul{
-			overflow: hidden;
-			&:nth-child(n+2){
-				display: none;
-			}
-		}
+nav.topnav{
+	display: none;
+	@include nav-in-document-flow;
+	width: 100%;
+	background-color: $content-bg-color;
+	margin-top: 0;
+	padding-top: 1em;
+	overflow: hidden;
+	ul{
 		li{
 			display: block;
 			float: left;
@@ -454,6 +448,20 @@ footer {
 			}
 		}
 	}
+}
+.horizontal-nav{
+	#leftcol{
+		display: none;
+		@include gs-media(m, max){
+			display: block;
+		}
+	}
+	.topnav{
+		display: block;
+		@include gs-media(m, max){
+			display: none;
+		}
+	}
 	#main{
 		padding-top: 1em;
 	}
@@ -461,16 +469,6 @@ footer {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
-	}
-	@include gs-media(m, max) {
-		#leftcol{
-			background-color: transparent;
-		}
-		.leftnav{
-			li{
-				border-right: 0;
-			}
-		}
 	}
 }
 .horizontal-nav--2col{
@@ -498,5 +496,16 @@ footer {
 .vertical-nav--1col{
 	.content-main{
 		@include gs-span(dl, 2, 5, (2, 5));
+	}
+}
+.vertical-nav--show-top-nav{
+	nav.topnav{
+		display: block;
+		@include gs-media(m, max){
+			display: none;
+		}
+	}
+	#leftcol{
+		margin-top: 5em;
 	}
 }
