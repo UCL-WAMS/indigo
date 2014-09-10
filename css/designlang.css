@@ -302,6 +302,23 @@ article p + .tabbed {
   font-size: 13px;
   font-weight: bold; }
 
+.blurb date,
+.blurb-wide date {
+  display: block;
+  font-size: .8em;
+  margin-bottom: .3em; }
+
+.news-content {
+  padding: 1em 4%; }
+  @media (min-width: 640px) {
+    .news-content {
+      padding: 1em 0 0;
+      display: table; }
+      .news-content .blurb {
+        box-sizing: border-box;
+        display: table-cell;
+        padding: 0 1.5%; } }
+
 /* Audio
 -------------------------------------------------------------- */
 audio {
@@ -1015,7 +1032,7 @@ dd + dt {
   list-style: none;
   border-style: solid;
   border-width: 0 0 1px 0;
-  border-color: #ccc;
+  border-color: #cccccc;
   padding-bottom: 1em; }
   #breadcrumb ul {
     margin: 0; }
@@ -1304,17 +1321,17 @@ input.error {
 
 .btn-gradient.disabled {
   background: #e0e0e0;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#e0e0e0));
-  background: -webkit-linear-gradient(#eee 0%, #e0e0e0 100%);
-  background: linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#e0e0e0));
+  background: -webkit-linear-gradient(#eeeeee 0%, #e0e0e0 100%);
+  background: linear-gradient(#eeeeee 0%, #e0e0e0 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   color: #999;
   text-shadow: none; }
   .btn-gradient.disabled:hover, .btn-gradient.disabled :focus {
-    background: #eee;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#eee));
-    background: -webkit-linear-gradient(#ededed 0%, #eee 100%);
-    background: linear-gradient(#ededed 0%, #eee 100%); }
+    background: #eeeeee;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#eeeeee));
+    background: -webkit-linear-gradient(#ededed 0%, #eeeeee 100%);
+    background: linear-gradient(#ededed 0%, #eeeeee 100%); }
   .btn-gradient.disabled:active {
     background: #cccccc;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e4), to(#cccccc));
@@ -1900,7 +1917,7 @@ header > div {
 /* Main Content
 -------------------------------------------------------------- */
 #main {
-  background-color: #fff;
+  background-color: white;
   padding: 2em 35px 2em 35px;
   left: -35px;
   position: relative;
@@ -2109,7 +2126,7 @@ footer {
   left: -35px;
   padding: 0 35px;
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   margin-top: 0;
   padding-top: 1em; }
 .horizontal-nav .leftnav ul {
@@ -2121,7 +2138,7 @@ footer {
   float: left;
   padding-right: 1em;
   margin-right: 1em;
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #cccccc; }
   .horizontal-nav .leftnav li a {
     text-decoration: none;
     cursor: pointer;
