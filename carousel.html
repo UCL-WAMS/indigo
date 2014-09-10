@@ -2,35 +2,74 @@
 <html>
 <head>
 
-<meta charset=utf-8 />
-<meta name="author" content="Mark Boulton Design" />
-<meta name="description" content="UCL Homepage" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset=utf-8 />
+	<meta name="author" content="Mark Boulton Design" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>UCL Design Language</title>
+	<title>UCL Design Language</title>
 
-<link href="./css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="./css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<script src="./js/lib/jquery-1.7.1.min.js"></script>
-<script src="./js/src/all-site.js"></script>
-<script type="text/javascript" src="./js/ResponsiveSlides.js"></script>
-<script>
-	setTimeout(function() {
-   	 $(".rslides").responsiveSlides();
-  	}, 1000);
-</script>
+	<script src="./js/lib/jquery-2.1.1.min.js"></script>
+	<!-- <script src="./js/src/all-site.js"></script> -->
+	<script src="./js/carousel.js"></script>
+	<script>
+	$( document ).ready(function() {
+		$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			responsiveClass:true,
+			responsive:{
+				        0:{
+            items:1,
+            nav:true
+        },
+        500:{
+            items:2,
+            nav: false
+        },
+        700:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        },
+        1300:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    	}
+		})
+	});
+	</script>
 
-<!--[if IE]><link href="./css/ie.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="./css/ie-old.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lte IE 8]><script src="./js/src/html5shiv-printshiv.js"></script><![endif]-->
+
+	<!--[if IE]><link href="./css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="./css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 8]><script src="./js/src/html5shiv-printshiv.js"></script><![endif]-->
 
 </head>
 
-<body id="carousel-view"><ul class="rslides">
-	  <li><img alt="Example image" src="http://lorempixum.com/680/400/abstract/?r" /></li>
-	  <li><img alt="Example image" src="http://lorempixum.com/680/400/nature/?r" /></li>
-	  <li><img alt="Example image" src="http://lorempixum.com/680/400/cats/?r" /></li>
-	</ul>
+<body id="carousel-view">
+	<div class="owl-carousel">
+		<div class="item"><img src="http://lorempixum.com/680/400/cat/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/abstract/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/nature/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/cat/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/abstract/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/nature/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/cat/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/abstract/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/nature/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/cat/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/abstract/?r" alt=""></div>
+		<div class="item"><img src="http://lorempixum.com/680/400/nature/?r" alt=""></div>
+	</div>
 
 </body>
 
