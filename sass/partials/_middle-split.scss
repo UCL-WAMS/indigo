@@ -1,0 +1,16 @@
+.middle-split {
+  @media (min-width: 740px) {
+    article {
+      float: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      width: 47%;
+      &:nth-child(odd) {
+        margin-right: 1%;
+      }
+      &:nth-child(even) {
+        margin-left: 1%;
+      }
+    }
+  }
+}

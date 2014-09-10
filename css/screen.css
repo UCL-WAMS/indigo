@@ -466,6 +466,17 @@ p a:hover {
 .map {
   margin-top: 1em; }
 
+@media (min-width: 740px) {
+  .middle-split article {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 47%; }
+    .middle-split article:nth-child(odd) {
+      margin-right: 1%; }
+    .middle-split article:nth-child(even) {
+      margin-left: 1%; } }
+
 /* Slideshow
 -------------------------------------------------------------- */
 .rslides {
