@@ -53,6 +53,9 @@ img.float-right {
   .largeImg,.xlImg,.xxlImg{
     width: 100%;
   }
+  .decorative{
+    display: none;
+  }
   img.float-left,img.float-right{
     &,.largeImg,.xlImg,.xxlImg{
       width: 100%;

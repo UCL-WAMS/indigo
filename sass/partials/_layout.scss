@@ -292,7 +292,22 @@ header > div {
     @include gs-span(m, all);
   }
 }
-
+.middle-split {
+	@include gs-media(t, max) {
+	    section {
+	      float: left;
+	      margin-left: 2%;
+	      margin-right: 2%;
+	      width: 47%;
+	      &:nth-child(odd) {
+	        margin-right: 1%;
+	      }      
+	      &:nth-child(even) {
+	        margin-left: 1%;
+	      }
+	    }
+	}
+}
 
 /* Footer
 -------------------------------------------------------------- */

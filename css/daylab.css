@@ -215,8 +215,7 @@ input {
       color: black;
       font-weight: bold; }
   .accordion dd {
-    border-top: 0;
-    font-size: 12px; }
+    border-top: 0; }
     .accordion dd:last-of-type {
       border-top: 1px solid #fff;
       position: relative;
@@ -407,10 +406,10 @@ img.float-right {
   max-width: 400px; }
 
 .largeImg {
-  max-width: 600px; }
+  max-width: 767px; }
 
 .xlImg {
-  max-width: 900px; }
+  max-width: 989px; }
 
 .xxlImg {
   max-width: 1400px; }
@@ -418,6 +417,9 @@ img.float-right {
 @media only screen and (max-width: 767px) {
   .largeImg, .xlImg, .xxlImg {
     width: 100%; }
+
+  .decorative {
+    display: none; }
 
   img.float-left, img.float-left .largeImg, img.float-left .xlImg, img.float-left .xxlImg, img.float-right, img.float-right .largeImg, img.float-right .xlImg, img.float-right .xxlImg {
     width: 100%; } }
@@ -1988,6 +1990,17 @@ header > div {
     float: left;
     margin-left: 0;
     width: 100%; } }
+@media only screen and (max-width: 767px) {
+  .middle-split section {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 47%; }
+    .middle-split section:nth-child(odd) {
+      margin-right: 1%; }
+    .middle-split section:nth-child(even) {
+      margin-left: 1%; } }
+
 /* Footer
 -------------------------------------------------------------- */
 footer {
