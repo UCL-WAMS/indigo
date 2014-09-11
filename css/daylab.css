@@ -399,31 +399,31 @@ img.float-right {
   margin-left: 3.0303%;
   margin-bottom: 1em; }
 
-.smallImg {
+.small-image {
   max-width: 200px; }
 
-.mediumImg {
+.medium-image {
   max-width: 400px; }
 
-.largeImg {
+.large-image {
   max-width: 767px; }
 
-.xlImg {
+.xl-image {
   max-width: 989px; }
 
-.xxlImg {
+.xxl-image {
   max-width: 1400px; }
 
 @media only screen and (max-width: 767px) {
-  .largeImg, .xlImg, .xxlImg {
+  .large-image, .xl-image, .xxl-image {
     width: 100%; }
 
   .decorative {
     display: none; }
 
-  img.float-left, img.float-left .largeImg, img.float-left .xlImg, img.float-left .xxlImg, img.float-right, img.float-right .largeImg, img.float-right .xlImg, img.float-right .xxlImg {
+  img.float-left, img.float-left .large-image, img.float-left .xl-image, img.float-left .xxl-image, img.float-right, img.float-right .large-image, img.float-right .xl-image, img.float-right .xxl-image {
     width: 100%; } }
-.noRespond {
+.no-respond {
   width: auto; }
 
 /* Links
@@ -1724,6 +1724,9 @@ article > footer a:hover {
 #audiences {
   float: left;
   width: 55%; }
+  @media only screen and (max-width: 767px) {
+    #audiences {
+      border-bottom: 1px solid #fff; } }
 
 /* END: 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
 /* UCL Banner
@@ -1748,7 +1751,8 @@ article > footer a:hover {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    font-family: Arial, sans-serif; }
+    font-family: Arial, sans-serif;
+    padding-top: 0.5em; }
   #branding img {
     display: block; }
 
@@ -2211,7 +2215,9 @@ nav.topnav {
   display: none; }
   @media only screen and (max-width: 767px) {
     .mobilenav {
-      display: block; } }
+      display: block; }
+      .mobilenav ul:nth-child(n+2) {
+        padding-left: 1em; } }
 
 /* Search */
 /* Day Lab Unique Styles -------------------------------- */

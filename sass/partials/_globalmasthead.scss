@@ -153,6 +153,9 @@
 #audiences {
 	float: left;
 	width: 55%;
+	@include gs-media(m, max){
+		border-bottom: 1px solid #fff;
+	}
 }
 
 

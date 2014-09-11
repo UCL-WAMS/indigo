@@ -23,6 +23,7 @@
 		font-size: 14px;
 		text-transform: uppercase;
 		font-family: Arial, sans-serif;
+		padding-top: 0.5em;
    }
 	img {
 		display: block;
@@ -538,5 +539,10 @@ nav.topnav{
 	display: none;
 	@include gs-media(m, max){
 		display: block;
+		ul{
+			&:nth-child(n+2){
+				padding-left: 1em;
+			}
+		}
 	}
 }
