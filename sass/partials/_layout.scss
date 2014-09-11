@@ -293,7 +293,7 @@ header > div {
   }
 }
 .middle-split {
-	@include gs-media(t, max) {
+	@include gs-media(t, min) {
 	    section {
 	      float: left;
 	      margin-left: 2%;
