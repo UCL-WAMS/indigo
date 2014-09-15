@@ -6,20 +6,28 @@ $(document).ready(function(){
 	$('.tabbed ul li:first').addClass('active');
 
 	$('.tabbed ul li a').click(function(){
-	$('.tabbed ul li').removeClass('active');
-	$(this).parent().addClass('active');
-	var currentTab = $(this).attr('href');
-	$('.tabbed div').hide();
-	$(currentTab).show();
-	return false;
+		$('.tabbed ul li').removeClass('active');
+		$(this).parent().addClass('active');
+		var currentTab = $(this).attr('href');
+		$('.tabbed div').hide();
+		$(currentTab).show();
+		return false;
 	});
 
+	function removeCurrentClass(){
+		var allPanelsAnchor = $('.accordion a');
+		allPanelsAnchor.each(function(){
+			$(this).removeClass("currentAccordionAnchor");	
+		});
+	}
 
 	var allPanels = $('.accordion > dd').hide();
 
  	$('.accordion > dt > a').click(function() {
 		allPanels.slideUp();
+		removeCurrentClass();
 		$(this).parent().next().slideDown();
+		$(this).addClass("currentAccordionAnchor");
 		return false;
 	});
 

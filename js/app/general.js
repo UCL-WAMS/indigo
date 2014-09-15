@@ -3,11 +3,15 @@ define(["jquery","allsite"],function($,gen){
 	$(document).ready(function(){
 		/* Browser feature detection and fixes
 		-----------------------------------------------------------------*/
-		if(!Modernizr.svg) {//target browsers that don't support SVG
+		if(Modernizr.svg===false) {//target browsers that don't support SVG
 			//update all instances of SVG in img tag
 			var $svgImage = $('img[src*="svg"]');
-			$svgImage.attr('src', function() {
-				return $(this).attr('src').replace('.svg', '.png');
+			$svgImage.each(function(){
+				$(this).attr('src', function() {
+					var tempSrc = $(this).attr('src');
+					var newSrc = tempSrc.replace('.svg', '.png');
+					$(this).attr('src',newSrc);
+				});
 			});
 			//fix mobile header
 			var mobileHeaderObj = $('#header-mobile');

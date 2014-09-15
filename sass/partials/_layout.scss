@@ -294,6 +294,7 @@ header > div {
   }
 }
 .middle-split {
+	overflow: hidden;
 	@include gs-media(t, min) {
 	    section {
 	      float: left;

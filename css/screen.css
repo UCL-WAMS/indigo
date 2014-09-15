@@ -428,7 +428,7 @@ img.float-right {
   img.float-left, img.float-left .large-image, img.float-left .xl-image, img.float-left .xxl-image, img.float-right, img.float-right .large-image, img.float-right .xl-image, img.float-right .xxl-image {
     width: 100%; } }
 .no-respond {
-  width: auto; }
+  width: auto !important; }
 
 /* Links
 -------------------------------------------------------------- */
@@ -742,7 +742,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: #d9d9d1;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -ms-hyphens: none; }
 
 .content-sidebar {
   font-size: 14px; }
@@ -2026,16 +2027,18 @@ header > div {
     float: left;
     margin-left: 0;
     width: 100%; } }
-@media only screen and (min-width: 768px) {
-  .middle-split section {
-    float: left;
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 47%; }
-    .middle-split section:nth-child(odd) {
-      margin-right: 1%; }
-    .middle-split section:nth-child(even) {
-      margin-left: 1%; } }
+.middle-split {
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .middle-split section {
+      float: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      width: 47%; }
+      .middle-split section:nth-child(odd) {
+        margin-right: 1%; }
+      .middle-split section:nth-child(even) {
+        margin-left: 1%; } }
 
 /* Footer
 -------------------------------------------------------------- */
