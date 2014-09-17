@@ -241,7 +241,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-	function removeCurrentClass(){
+	function removeCurrentClassFromAll(){
 		var allPanelsAnchor = $('.accordion a');
 		allPanelsAnchor.each(function(){
 			$(this).removeClass("currentAccordionAnchor");	
@@ -252,9 +252,14 @@ $(document).ready(function(){
 
  	$('.accordion > dt > a').click(function() {
 		allPanels.slideUp();
-		removeCurrentClass();
-		$(this).parent().next().slideDown();
-		$(this).addClass("currentAccordionAnchor");
+		var selectedClass = $(this).attr("class");
+		if(typeof selectedClass !=='undefined' && selectedClass==='currentAccordionAnchor'){
+			removeCurrentClassFromAll();
+		}else{
+			removeCurrentClassFromAll();
+			$(this).parent().next().slideDown();
+			$(this).addClass("currentAccordionAnchor");
+		}
 		return false;
 	});
 

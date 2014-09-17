@@ -441,10 +441,10 @@ a:hover {
   text-decoration: underline; }
 
 p a {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 p a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 /* Map
 -------------------------------------------------------------- */
