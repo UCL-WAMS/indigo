@@ -711,25 +711,25 @@ td, td img {
     padding-bottom: 8px; }
 
   .active-header {
-    background: url(/images/close.png);
+    background: url(//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/close.png);
     background-repeat: no-repeat;
     background-position: right 50%;
     padding-right: 20px;
     border-bottom: none; }
 
   .active-header:hover {
-    background: url(/images/close.png);
+    background: url(//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/close.png);
     background-repeat: no-repeat;
     background-position: right 50%; }
 
   .inactive-header {
-    background: url(/images/open.png);
+    background: url(//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/open.png);
     background-repeat: no-repeat;
     background-position: right 50%;
     padding-right: 20px; }
 
   .inactive-header:hover {
-    background: url(/images/open.png);
+    background: url(//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/open.png);
     background-repeat: no-repeat;
     background-position: right 50%; }
 
@@ -1233,7 +1233,7 @@ textarea:focus {
 -------------------------------------------------------------- */
 .warning, .success {
   background-color: #FFFAFA;
-  background-image: url("/images/alert.png");
+  background-image: url("//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/alert.png");
   background-position: 10px center;
   background-repeat: no-repeat;
   text-decoration: none;
@@ -1250,7 +1250,7 @@ textarea:focus {
 
 .success {
   background-color: #F7FFF2;
-  background-image: url("/images/success.png");
+  background-image: url("//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/success.png");
   background-position: 10px center;
   background-repeat: no-repeat;
   color: #7FB861;
@@ -1890,7 +1890,7 @@ header > div {
     padding: 20% 35px 0;
     background-size: auto 100%;
     background-position: 106% bottom;
-    background-image: url("/images/ucl-logo.svg");
+    background-image: url("//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/ucl-logo.svg");
     background-repeat: repeat-x;
     position: relative;
     left: -35px;
@@ -1907,7 +1907,7 @@ header > div {
       position: absolute;
       z-index: 1000; }
     #header-mobile.no-svg {
-      background-image: url("/images/ucl-logo-cropped-white.png");
+      background-image: url("//cdn.ucl.ac.uk/silva/UCLIndigoSkin/images/ucl-logo-cropped-white.png");
       background-repeat: no-repeat;
       background-position: right bottom;
       background-color: #000;

@@ -19,6 +19,7 @@
    }
   dd {
      border-top: 0;
+     overflow: hidden;
      &:last-of-type {
        border-top: 1px solid #fff;
        position: relative;
