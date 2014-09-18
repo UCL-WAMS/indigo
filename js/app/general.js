@@ -53,6 +53,29 @@ define(["jquery","allsite"],function($,gen){
 				});
 			}
 		});
+		/* layout hacks
+		-----------------------------------------------------------------*/
+		var bodyClass = $('body').attr("class");
+
+		function equalizeVerticalCol(){
+			var mainColHeight = $('#main').height();
+			var verticalNavColHeight = $('#leftcol').height();
+
+			if(verticalNavColHeight > mainColHeight){
+				$('#main').height(verticalNavColHeight);
+			}
+		}
+		var verticalBodyClassPattern = /vertical-nav(.)*/i;
+		if(verticalBodyClassPattern.test(bodyClass)){
+			equalizeVerticalCol();
+			$(window).resize(function(){
+				if($(window).width() >= 768){
+					equalizeVerticalCol();
+				}else{
+					$('#leftcol').height("auto");
+				}
+			});
+		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
 	})
