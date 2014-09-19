@@ -205,7 +205,7 @@ For modern browsers */
 
 /* removes rounded corners and things on inputs for iOS */
 input {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; ----  this is hiding checkboxes and radio buttons*/
   border-radius: 0; }
 
 /* Accordion
