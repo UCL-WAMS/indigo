@@ -247,13 +247,24 @@ $(document).ready(function(){
 			$(this).removeClass("currentAccordionAnchor");	
 		});
 	}
+	/* accordion - start
+	---------------------------------------------------------------------*/
+	var allPanels = $('.accordion > dd');
+	allPanels.slideUp();
+	//open accordions that have this set in their class
+	$('.accordion dt a').each(function(){
+		var tmpAccordionClass = $(this).attr("class");
+		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+			$(this).parent().next().slideDown();
+		}
+	});
 
-	var allPanels = $('.accordion > dd').hide();
+	//var allPanels = $('.accordion > dd').hide();
 
  	$('.accordion > dt > a').click(function() {
 		allPanels.slideUp();
-		var selectedClass = $(this).attr("class");
-		if(typeof selectedClass !=='undefined' && selectedClass==='currentAccordionAnchor'){
+		var tmpAccordionClass = $(this).attr("class");
+		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
 			removeCurrentClassFromAll();
 		}else{
 			removeCurrentClassFromAll();
@@ -262,7 +273,8 @@ $(document).ready(function(){
 		}
 		return false;
 	});
-
+	/* accordion - end
+	---------------------------------------------------------------------*/
 	$('#nav-mobile-menu, #nav-mobile-back').click(function (e) {
 		var body = $('body');
 		if (body.hasClass('mobile-open')) body.removeClass('mobile-open');
