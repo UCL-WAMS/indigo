@@ -62,7 +62,7 @@ define(["jquery","allsite"],function($,gen){
 			var verticalNavColHeight = $('#leftcol').height();
 
 			if(verticalNavColHeight > mainColHeight){
-				$('#main').height(verticalNavColHeight);
+				$('#main').css('min-height',verticalNavColHeight);
 			}
 		}
 		var verticalBodyClassPattern = /vertical-nav(.)*/i;
