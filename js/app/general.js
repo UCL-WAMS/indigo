@@ -57,23 +57,44 @@ define(["jquery","allsite"],function($,gen){
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
 
-		function equalizeVerticalCol(){
-			var mainColHeight = $('#main').height();
-			var verticalNavColHeight = $('#leftcol').height();
+		function resetCols(){
+			$('#main,#leftcol').css({
+				'height':'auto'
+				,'min-height':'0'}
+			);
+		}
 
-			if(verticalNavColHeight > mainColHeight){
-				$('#main').css('min-height',verticalNavColHeight);
+		function equalizeVerticalCol(){
+			//start off by resetting the columns
+			resetCols();
+
+			if($(window).width() >= 768){
+				console.log('window should be greater than 768 px');
+				var mainColHeight = $('#main').height();
+				var verticalNavColHeight = $('#leftcol').height();
+				console.log('vertical nav height is ' + verticalNavColHeight);
+				if(verticalNavColHeight > mainColHeight){
+					$('#main').css('min-height',verticalNavColHeight);
+				}
+				else{
+					$('#main').css({
+						'height':'auto'
+						,'min-height':'0'}
+					);
+				}
+			}else{
+				console.log('window width is ' + $(window).width());
+				$('#main').css({
+					'height':'auto'
+					,'min-height':'0'}
+				);
 			}
 		}
 		var verticalBodyClassPattern = /vertical-nav(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
 			equalizeVerticalCol();
 			$(window).resize(function(){
-				if($(window).width() >= 768){
-					equalizeVerticalCol();
-				}else{
-					$('#leftcol').height("auto");
-				}
+				equalizeVerticalCol();
 			});
 		}
 		/* anything else that needs to appear on all pages
