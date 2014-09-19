@@ -82,3 +82,29 @@ article p + .tabbed {
   font-size: 13px;
   font-weight: bold;
 }
+
+
+// specific for news version of blurb
+
+
+.blurb date,
+.blurb-wide date {
+  display: block;
+  font-size: .8em;
+  margin-bottom: .3em;
+}
+
+.news-content {
+  padding: 1em 4%;
+  @media (min-width: 640px) {
+    padding: 1em 0 0;
+    display: table;
+    .blurb {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: table-cell;
+      padding: 0 1.5%;
+    }
+  }
+}
