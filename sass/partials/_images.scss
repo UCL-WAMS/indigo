@@ -23,13 +23,13 @@ figure + figure, figure + p {
 /* Floated Images
 -------------------------------------------------------------- */
 
-img.float-left {
+figure.float-left {
   @include gs-span(dc, 1, 2);
   @include gs-float(dc, left);
   margin-bottom: 1em;
 }
 
-img.float-right {
+figure.float-right {
   @include gs-span(dc, 3, 4);
   @include gs-float(dc, right);
   margin-bottom: 1em;
@@ -53,7 +53,7 @@ img.float-right {
   .largeImg,.xlImg,.xxlImg{
     width: 100%;
   }
-  img.float-left,img.float-right{
+  figure.float-left,figure.float-right {
     &,.largeImg,.xlImg,.xxlImg{
       width: 100%;
     }
