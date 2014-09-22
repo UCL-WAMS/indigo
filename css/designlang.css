@@ -806,7 +806,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 blockquote {
   margin: 1.5em;
   color: #666;
-  font-style: italic; }
+  font-style: italic;
+  overflow: hidden; }
 
 .quote-left {
   display: block;
@@ -1727,9 +1728,6 @@ article > footer a:hover {
 #audiences {
   float: left;
   width: 55%; }
-  @media only screen and (max-width: 767px) {
-    #audiences {
-      border-bottom: 1px solid #fff; } }
 
 /* END: 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
 /* UCL Banner
@@ -1818,8 +1816,11 @@ header > div {
   display: none; }
 
 @media only screen and (max-width: 767px) {
+  #leftcol {
+    margin-top: 2em; }
+
   #nav-wrap {
-    background-color: #444;
+    background-color: #5f5f5f;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1828,30 +1829,58 @@ header > div {
     left: -100%; }
     #nav-wrap a {
       color: #fff;
-      padding: 1em 0;
+      padding: 0.5em 0;
       display: block;
       clear: both;
-      font-size: 14px;
-      font-size: 1.4rem; }
+      font-size: 1.6rem; }
     #nav-wrap ul {
       margin: 0; }
     #nav-wrap li {
       margin-bottom: 0;
       display: block; }
     #nav-wrap #leftcol {
-      width: 100%; }
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative; }
     #nav-wrap #logo,
     #nav-wrap .site-brand {
       display: none; }
+    #nav-wrap .photograph {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2em 0 0em 0;
+      left: 0;
+      background-color: transparent; }
+    #nav-wrap .wrapper {
+      width: 100%; }
     #nav-wrap #global-masthead {
       height: auto;
-      margin-bottom: 1em; }
+      border-bottom: 1px solid #ccc; }
+      #nav-wrap #global-masthead ul#audiences {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-bottom: 1em; }
+      #nav-wrap #global-masthead .wrapper {
+        background-color: #444; }
     #nav-wrap #global-search {
       float: none;
       width: 100%;
       padding: 0;
       margin-top: 3.5em;
-      height: 4em; }
+      height: 4em;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+    #nav-wrap #branding {
+      position: static;
+      padding-left: 0; }
+      #nav-wrap #branding p {
+        left: 0;
+        top: 50%; }
     #nav-wrap #branding h1 {
       background-color: #222;
       padding: 0.5em 35px;
