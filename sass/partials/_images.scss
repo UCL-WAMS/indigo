@@ -54,7 +54,7 @@ img.float-right {
     width: 100%;
   }
   .decorative{
-    display: none;
+    display: none!important;
   }
   img.float-left,img.float-right{
     &.large-image,&.xl-image,&.xxl-image{
