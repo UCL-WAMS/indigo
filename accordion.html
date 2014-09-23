@@ -33,7 +33,7 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="favicon-144.png">
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
+<script src="//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
 <script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
@@ -43,22 +43,22 @@
 		test : cuttingTheMustard
 		//if old browser load the shiv
 		,nope : [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
-			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+			'//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
+			,'//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
+		pathToJquery: '//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
 		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 	}
 	if(cuttingTheMustard){
-		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
+		globalSiteSpecificVars.pathToJquery = "//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
 </script>
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
+<script src="//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+<script src="//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
 <script>
 	require(["app/general"]);//load the default stuff
 </script>
@@ -69,10 +69,10 @@
 
 	<dt><a href="#">Accordion title one</a></dt>
 	<dd>
-		<p>When Thomas Tillsye and Ursula Russell married in Leicester in February 1575, Thomas made his wedding vows in sign. Unknowingly, they were presented with a timeless wedding present – their marriage became the first recorded description of sign use.</p>
+		<p>When Thomas Tillsye and <a href="#">Ursula Russell</a> married in Leicester in February 1575, Thomas made his wedding vows in sign. Unknowingly, they were presented with a timeless wedding present – their marriage became the first recorded description of sign use.</p>
 	</dd>
 
-	<dt><a href="#">Accordion title two</a></dt>
+	<dt><a href="#" class="currentAccordionAnchor">Accordion title two</a></dt>
 	<dd>
 		<p>When Thomas Tillsye and Ursula Russell married in Leicester in February 1575, Thomas made his wedding vows in sign. Unknowingly, they were presented with a timeless wedding present – their marriage became the first recorded description of sign use.</p>
 	</dd>

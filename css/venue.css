@@ -220,9 +220,10 @@ input {
     .accordion dt:last-of-type, .accordion dd:last-of-type {
       border-bottom: 1px solid #ccc; }
     .accordion dt a, .accordion dd a {
-      display: block;
       color: black;
       font-weight: bold; }
+  .accordion dt {
+    display: block; }
   .accordion dd {
     border-top: 0;
     overflow: hidden; }

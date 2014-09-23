@@ -2,9 +2,9 @@
 -------------------------------------------------------------- */
 
 .accordion {
-   margin-top: 1em;
-   margin-bottom: 1em;
-   dt, dd {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  dt, dd {
       padding: 10px;
       border-top: 1px solid #ccc;
       margin-top:0;
@@ -12,11 +12,13 @@
         border-bottom: 1px solid #ccc;
       }
       a {
-        display: block;
         color: black;
         font-weight: bold;
       }
-   }
+  }
+  dt{
+    display: block;
+  }
   dd {
      border-top: 0;
      overflow: hidden;
