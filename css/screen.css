@@ -427,7 +427,7 @@ img.float-right {
   .decorative {
     display: none; }
 
-  img.float-left, img.float-left .large-image, img.float-left .xl-image, img.float-left .xxl-image, img.float-right, img.float-right .large-image, img.float-right .xl-image, img.float-right .xxl-image {
+  img.float-left.large-image, img.float-left.xl-image, img.float-left.xxl-image, img.float-right.large-image, img.float-right.xl-image, img.float-right.xxl-image {
     width: 100%; } }
 .no-respond {
   width: auto !important; }
