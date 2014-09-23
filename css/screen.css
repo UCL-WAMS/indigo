@@ -841,7 +841,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-[class*=pullquote] q.quote {
+[class*=pullquote] p.quote {
   line-height: 1.5em;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", serif;
