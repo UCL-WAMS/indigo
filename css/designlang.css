@@ -377,7 +377,7 @@ figure + figure, figure + p {
 
 /* Floated Images
 -------------------------------------------------------------- */
-img.float-left {
+figure.float-left {
   display: block;
   float: left;
   margin-left: 0%;
@@ -389,7 +389,7 @@ img.float-left {
   margin-right: 3.0303%;
   margin-bottom: 1em; }
 
-img.float-right {
+figure.float-right {
   display: block;
   float: left;
   margin-left: 51.4596%;
@@ -420,7 +420,7 @@ img.float-right {
   .largeImg, .xlImg, .xxlImg {
     width: 100%; }
 
-  img.float-left, img.float-left .largeImg, img.float-left .xlImg, img.float-left .xxlImg, img.float-right, img.float-right .largeImg, img.float-right .xlImg, img.float-right .xxlImg {
+  figure.float-left, figure.float-left .largeImg, figure.float-left .xlImg, figure.float-left .xxlImg, figure.float-right, figure.float-right .largeImg, figure.float-right .xlImg, figure.float-right .xxlImg {
     width: 100%; } }
 .noRespond {
   width: auto; }
@@ -802,7 +802,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 blockquote {
   margin: 1.5em;
   color: #666;
-  font-style: italic; }
+  font-style: italic;
+  overflow: hidden; }
 
 .quote-left {
   display: block;
@@ -837,7 +838,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-[class*=pullquote] q.quote {
+[class*=pullquote] p.quote {
   line-height: 1.5em;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", serif;
@@ -1102,6 +1103,9 @@ form > ul {
 input[type="checkbox"] + label, input[type="radio"] + label {
   display: inline;
   margin-left: 5px; }
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox; }
 
 fieldset > div:first-of-type {
   margin-top: 0; }
