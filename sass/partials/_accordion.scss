@@ -12,12 +12,14 @@
         border-bottom: 1px solid #ccc;
       }
       a {
-        color: black;
         font-weight: bold;
       }
   }
   dt{
-    display: block;
+    a{
+      color: black;
+      display: block;
+    }
   }
   dd {
      border-top: 0;
