@@ -56,6 +56,9 @@ define(["jquery","allsite"],function($,gen){
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
+		var topNavList = $('.topnav ul');
+		var mobilenav = $('.mobilenav');
+		var mobilenavList = $('.mobilenav ul');
 
 		function resetCols(){
 			$('#main,#leftcol').css({
@@ -69,10 +72,8 @@ define(["jquery","allsite"],function($,gen){
 			resetCols();
 
 			if($(window).width() >= 768){
-				console.log('window should be greater than 768 px');
 				var mainColHeight = $('#main').height();
 				var verticalNavColHeight = $('#leftcol').height();
-				console.log('vertical nav height is ' + verticalNavColHeight);
 				if(verticalNavColHeight > mainColHeight){
 					$('#main').css('min-height',verticalNavColHeight);
 				}
@@ -83,13 +84,20 @@ define(["jquery","allsite"],function($,gen){
 					);
 				}
 			}else{
-				console.log('window width is ' + $(window).width());
 				$('#main').css({
 					'height':'auto'
 					,'min-height':'0'}
 				);
 			}
 		}
+		function buildMobileNav(){
+			if(topNavList.length > 0 && mobilenavList.length < 1){
+				mobilenav.append("<ul>" + topNavList.html() + "</ul>");
+			}
+			return;
+		}
+		buildMobileNav();
+
 		var verticalBodyClassPattern = /vertical-nav(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
 			equalizeVerticalCol();

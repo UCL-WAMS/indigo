@@ -2276,6 +2276,9 @@ nav.topnav {
       display: none; } }
 .vertical-nav--show-top-nav #leftcol {
   margin-top: 5em; }
+  @media only screen and (max-width: 767px) {
+    .vertical-nav--show-top-nav #leftcol {
+      margin-top: 0; } }
 
 .mobilenav {
   display: none; }

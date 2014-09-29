@@ -567,6 +567,9 @@ nav.topnav{
 	}
 	#leftcol{
 		margin-top: 5em;
+		@include gs-media(m, max){
+			margin-top: 0;
+		}
 	}
 }
 .mobilenav{
