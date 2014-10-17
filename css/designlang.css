@@ -197,7 +197,7 @@ For modern browsers */
 
 /* removes rounded corners and things on inputs for iOS */
 input {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; ----  this is hiding checkboxes and radio buttons*/
   border-radius: 0; }
 
 /* Accordion
@@ -212,12 +212,13 @@ input {
     .accordion dt:last-of-type, .accordion dd:last-of-type {
       border-bottom: 1px solid #ccc; }
     .accordion dt a, .accordion dd a {
-      display: block;
-      color: black;
       font-weight: bold; }
+  .accordion dt a {
+    color: black;
+    display: block; }
   .accordion dd {
     border-top: 0;
-    font-size: 12px; }
+    overflow: hidden; }
     .accordion dd:last-of-type {
       border-top: 1px solid #fff;
       position: relative;
@@ -401,29 +402,32 @@ img.float-right {
   margin-left: 3.0303%;
   margin-bottom: 1em; }
 
-.smallImg {
+.small-image {
   max-width: 200px; }
 
-.mediumImg {
+.medium-image {
   max-width: 400px; }
 
-.largeImg {
-  max-width: 600px; }
+.large-image {
+  max-width: 767px; }
 
-.xlImg {
-  max-width: 900px; }
+.xl-image {
+  max-width: 989px; }
 
-.xxlImg {
+.xxl-image {
   max-width: 1400px; }
 
 @media only screen and (max-width: 767px) {
-  .largeImg, .xlImg, .xxlImg {
+  .large-image, .xl-image, .xxl-image {
     width: 100%; }
 
-  img.float-left, img.float-left .largeImg, img.float-left .xlImg, img.float-left .xxlImg, img.float-right, img.float-right .largeImg, img.float-right .xlImg, img.float-right .xxlImg {
+  .decorative {
+    display: none !important; }
+
+  img.float-left.large-image, img.float-left.xl-image, img.float-left.xxl-image, img.float-right.large-image, img.float-right.xl-image, img.float-right.xxl-image {
     width: 100%; } }
-.noRespond {
-  width: auto; }
+.no-respond {
+  width: auto !important; }
 
 /* Links
 -------------------------------------------------------------- */
@@ -436,10 +440,10 @@ a:hover {
   text-decoration: underline; }
 
 p a {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 p a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 /* Map
 -------------------------------------------------------------- */
@@ -737,7 +741,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: #d9d9d1;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -ms-hyphens: none; }
 
 .content-sidebar {
   font-size: 14px; }
@@ -802,7 +807,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 blockquote {
   margin: 1.5em;
   color: #666;
-  font-style: italic; }
+  font-style: italic;
+  overflow: hidden; }
 
 .quote-left {
   display: block;
@@ -1747,7 +1753,8 @@ article > footer a:hover {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    font-family: Arial, sans-serif; }
+    font-family: Arial, sans-serif;
+    padding-top: 0.5em; }
   #branding img {
     display: block; }
 
@@ -1810,8 +1817,11 @@ header > div {
   display: none; }
 
 @media only screen and (max-width: 767px) {
+  #leftcol {
+    margin-top: 2em; }
+
   #nav-wrap {
-    background-color: #444;
+    background-color: #5f5f5f;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1820,30 +1830,58 @@ header > div {
     left: -100%; }
     #nav-wrap a {
       color: #fff;
-      padding: 1em 0;
+      padding: 0.5em 0;
       display: block;
       clear: both;
-      font-size: 14px;
-      font-size: 1.4rem; }
+      font-size: 1.6rem; }
     #nav-wrap ul {
       margin: 0; }
     #nav-wrap li {
       margin-bottom: 0;
       display: block; }
     #nav-wrap #leftcol {
-      width: 100%; }
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative; }
     #nav-wrap #logo,
     #nav-wrap .site-brand {
       display: none; }
+    #nav-wrap .photograph {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2em 0 0em 0;
+      left: 0;
+      background-color: transparent; }
+    #nav-wrap .wrapper {
+      width: 100%; }
     #nav-wrap #global-masthead {
       height: auto;
-      margin-bottom: 1em; }
+      border-bottom: 1px solid #ccc; }
+      #nav-wrap #global-masthead ul#audiences {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-bottom: 1em; }
+      #nav-wrap #global-masthead .wrapper {
+        background-color: #444; }
     #nav-wrap #global-search {
       float: none;
       width: 100%;
       padding: 0;
       margin-top: 3.5em;
-      height: 4em; }
+      height: 4em;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+    #nav-wrap #branding {
+      position: static;
+      padding-left: 0; }
+      #nav-wrap #branding p {
+        left: 0;
+        top: 50%; }
     #nav-wrap #branding h1 {
       background-color: #222;
       padding: 0.5em 35px;
@@ -1989,6 +2027,19 @@ header > div {
     float: left;
     margin-left: 0;
     width: 100%; } }
+.middle-split {
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .middle-split section {
+      float: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      width: 47%; }
+      .middle-split section:nth-child(odd) {
+        margin-right: 1%; }
+      .middle-split section:nth-child(even) {
+        margin-left: 1%; } }
+
 /* Footer
 -------------------------------------------------------------- */
 footer {
@@ -2104,41 +2155,47 @@ footer {
     clear: left; } }
 /* horizontal navigation layouts
 ----------------------------------------------------------------------------------*/
-.horizontal-nav #leftcol {
+nav.topnav {
+  display: none;
   position: relative;
   left: -35px;
   padding: 0 35px;
   width: 100%;
   background-color: #fff;
   margin-top: 0;
-  padding-top: 1em; }
-.horizontal-nav .leftnav ul {
+  padding-top: 1em;
   overflow: hidden; }
-  .horizontal-nav .leftnav ul:nth-child(n+2) {
+  nav.topnav ul li {
+    display: block;
+    float: left;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 1px solid #ccc; }
+    nav.topnav ul li a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #333333; }
+    nav.topnav ul li:last-child {
+      border-right: 0; }
+
+.horizontal-nav #leftcol {
+  display: none; }
+  .horizontal-nav #leftcol .leftnav {
     display: none; }
-.horizontal-nav .leftnav li {
-  display: block;
-  float: left;
-  padding-right: 1em;
-  margin-right: 1em;
-  border-right: 1px solid #ccc; }
-  .horizontal-nav .leftnav li a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #333333; }
-  .horizontal-nav .leftnav li:last-child {
-    border-right: 0; }
+  @media only screen and (max-width: 767px) {
+    .horizontal-nav #leftcol {
+      display: block; } }
+.horizontal-nav .topnav {
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .horizontal-nav .topnav {
+      display: none; } }
 .horizontal-nav #main {
   padding-top: 1em; }
 .horizontal-nav #content {
   width: 100%;
   margin-left: 0;
   margin-right: 0; }
-@media only screen and (max-width: 767px) {
-  .horizontal-nav #leftcol {
-    background-color: transparent; }
-  .horizontal-nav .leftnav li {
-    border-right: 0; } }
 
 .horizontal-nav--2col .content-main {
   display: block;
@@ -2170,12 +2227,35 @@ footer {
 .horizontal-nav--1col .content-sidebar {
   display: none; }
 
+@media only screen and (max-width: 767px) {
+  .vertical-nav .leftnav {
+    display: none; } }
+
 .vertical-nav--1col .content-main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
+
+.vertical-nav--show-top-nav nav.topnav {
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .vertical-nav--show-top-nav nav.topnav {
+      display: none; } }
+.vertical-nav--show-top-nav #leftcol {
+  margin-top: 5em; }
+  @media only screen and (max-width: 767px) {
+    .vertical-nav--show-top-nav #leftcol {
+      margin-top: 0; } }
+
+.mobilenav {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .mobilenav {
+      display: block; }
+      .mobilenav ul:nth-child(n+2) {
+        padding-left: 1em; } }
 
 /* Search */
 /* Design Language Unique Styles -------------------------------- */
