@@ -1,0 +1,33 @@
+/* Accordion
+-------------------------------------------------------------- */
+
+.accordion {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  dt, dd {
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      margin-top:0;
+      &:last-of-type {
+        border-bottom: 1px solid #ccc;
+      }
+      a {
+        font-weight: bold;
+      }
+  }
+  dt{
+    a{
+      color: black;
+      display: block;
+    }
+  }
+  dd {
+     border-top: 0;
+     overflow: hidden;
+     &:last-of-type {
+       border-top: 1px solid #fff;
+       position: relative;
+       top: -1px;
+     }
+  }
+}

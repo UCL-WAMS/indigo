@@ -50,6 +50,12 @@ tags
 
 # css/
 
+#ignore BAK folder
+BAK/
+
+#css map files
+*.css.map
+
 # ignore sublime text 2 stuff
 
 /*.sublime-project
@@ -61,8 +67,6 @@ mixture.json
 
 # gem
 *.gem
-gruntfile.js
-package.json
 config.rb
 
 

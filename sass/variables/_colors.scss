@@ -54,6 +54,21 @@ $darkbrown-b: rgba(95,68,54,1);
 
 /* Colour by element
 -------------------------------------------------------------- */
+$content-bg-color: #fff;
+$horizontalNavColor: #333333;
+$ruleColor: #ccc;
+$catBlue: #027d9e;
+$catBlueHover: #4ca4ba;
+$catArrowBlue: #3096af;
+$catArrowBlueHover: #70b9c8;
+
+$alertRed: #d50133;
+$alertRedBg: #f5c7d2;
+$infoBlue: #2992af;
+$infoBlueBg: #d1eaee;
+$fixGreen: #767e31;
+$fixGreenBg: #e2e5d2;
+
 $activeButton: #505050;
 $hoverButton: #615957;
 $button-bg-col: #40403e;
@@ -64,17 +79,3 @@ $disabled-hvr-btn-grad1: #ededed;
 $disabled-hvr-btn-grad2: #eee;
 $disabled-act-btn-grad1: #e8e8e4;
 $disabled-act-btn-grad2: #cccccc;
-
-/* Gradient styles
--------------------------------------------------------------- */
-
-@mixin gradient($from, $to) {
-
-	background: $to;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from($from), to($to));
-	background: -webkit-linear-gradient($from 0%, $to 100%);
-	background: -moz-linear-gradient($from 0%, $to 100%);
-	background: -o-linear-gradient($from 0%, $to 100%);
-	background: linear-gradient($from 0%, $to 100%);
-	
-}

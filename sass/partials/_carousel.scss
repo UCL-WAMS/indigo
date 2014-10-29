@@ -12,11 +12,11 @@
 	}
 	.prev{
 		left: 0;
-		background: url(/images/arrow-left.png);
+		background: url(#{$staticUrl}/images/arrow-left.png);
 	}
 	.next{
 		right: 0;
-		background: url(/images/arrow-right.png);
+		background: url(#{$staticUrl}/images/arrow-right.png);
 	}
 }
 

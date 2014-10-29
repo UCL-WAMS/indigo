@@ -33,7 +33,7 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="favicon-144.png">
 
-<script src="/js/lib/modernizr-custom.js"></script>
+<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
 <script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
@@ -43,29 +43,29 @@
 		test : cuttingTheMustard
 		//if old browser load the shiv
 		,nope : [
-			'//static.ucl.ac.uk/js/html5.js'
-			,'/js/lib/respond.min.js'
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
+			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min'
-		,googleAnalyticsIdsArray: ['UA-16583269-1']//specify site specific id's NOT UCL generic UA-943297-1
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
+		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 	}
 	if(cuttingTheMustard){
-		globalSiteSpecificVars.pathToJquery = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min";
+		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
 </script>
 
-<script src="/js/lib/require.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
 <script>
 	require(["app/general"]);//load the default stuff
 </script>
 
 </head>
 
-<body id="index">
+<body id="index" class="vertical-nav vertical-nav--2col">
 
 	<div id="nav-wrap">
 
@@ -128,6 +128,25 @@
 
 		<div id="leftcol">
 
+			<nav class="mobilenav">
+				<ul>
+
+					<li><a href="index.html" class="home-link">Home</a></li>
+
+					<li><a href="#">Main navigation items</a>
+
+						<ul>
+							<li><a href="#">Lists can be nested</a></li>
+
+							<li><a href="#">Lists can be nested</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">Main navigation items</a></li>
+
+				</ul>
+ 			</nav>
+
 			<nav class="leftnav">
 				<ul>
 
@@ -152,6 +171,20 @@
 
 		</div> <!-- end #leftcol -->
 
+		<nav class="topnav">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Main navigation items</a>
+				</li>
+				<li>
+					<a href="#">Main navigation items</a>
+				</li>
+			</ul>
+		</nav>
+
 	</div> <!-- end .wrapper -->
 
 </div><!-- end #nav-wrap -->
@@ -172,7 +205,7 @@
 
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><span>Require</span></li>
+							<li><span>My Page</span></li>
 						</ul>
 
 					</nav>
