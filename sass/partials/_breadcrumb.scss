@@ -1,0 +1,44 @@
+/* Breadcrumbs
+-------------------------------------------------------------- */
+
+.breadcrumb {
+    margin-bottom: 2em;
+    display: block;
+    overflow: hidden;
+    margin-left: 0;
+    list-style: none;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: $ruleColor;
+    padding-bottom: 1em;
+}
+
+.breadcrumb__list {
+    margin: 0;
+}
+
+.breadcrumb__item {
+    margin: 0;
+    float: left;
+    font-size: 0.6875em;
+    text-transform: uppercase;
+    &:before {
+        content: "/";
+        color: #aaaaaa;
+        margin: 0 0.75em;
+        position: relative;
+        top: 1px;
+    }
+    &:first-child:before {
+        content: " ";
+        margin: 0;
+    }
+}
+
+.breadcrumb__item--current {
+    > a {
+        text-decoration: none;
+        cursor: default;
+        color: #333333;
+    }
+}
