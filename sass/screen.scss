@@ -1,57 +1,44 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 /* Config */
 @import "partials/environment";
 
 /* Variables */
 @import "variables/variables";
 
-/* Vendor Dependencies */
-@import "partials/gridset";
-
 /* Mixins */
 @import "mixins/media-query";
+@import "mixins/gridset";
 @import "mixins/gradient";
 @import "mixins/no-js";
 @import "mixins/modernizr";
 
-/* Authored Dependencies */
-@import "partials/reset";
-@import "partials/helpers";
+/* Helper classes */
+@import "utilities/helpers";
 
+/* Authored Dependencies */
+@import "base/reset";
+@import "base/layout";
+@import "base/typography";
+@import "base/links";
+@import "base/audio";
+@import "base/code";
+@import "base/forms";
+@import "base/tables";
+@import "base/images";
+
+/* Patterns */
 @import "partials/accordion";
 @import "partials/article";
-@import "partials/audio";
 @import "partials/box";
-@import "partials/code";
 @import "partials/divider";
-@import "partials/images";
-@import "partials/links";
 @import "partials/map";
 @import "partials/slides";
 @import "partials/social";
 @import "partials/tabs";
-@import "partials/tables";
+@import "partials/breadcrumb";
 @import "partials/wrapper";
 @import "partials/vcard";
 @import "partials/video";
-@import "partials/breadcrumb";
-
-@import "partials/elements";
-@import "partials/typography";
-
-/* Patterns */
-@import "partials/forms";
 @import "partials/blog";
-@import "partials/carousel";
-
-/* Sections */
-@import "partials/globalmasthead";
-@import "partials/layout";
-
-/* Search */
-
+@import "partials/elements";
 @import "partials/search";
+@import "partials/globalmasthead";
