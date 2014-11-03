@@ -5,31 +5,23 @@
 	background-color: #444;
 	font-size: 12px;
 	color: #fff;
-
-
 	a {
 		color: #fff;
 		text-decoration: none;
 	}
-	
 	ul {
 		font-size: 16px;
-		margin-top:8px;
+		margin-top: 8px;
 	}
-	
 	@media screen and (max-width: 940px) {
-	
 		ul {
 			font-size: 12px;
 			font-size: 1.2rem;
 			margin-top: 12px;
 			margin-top: 1.2rem;
 		}
-
 	}
-
 }
-
 
 #search {
 	background: none repeat scroll 0 0 transparent;
@@ -38,21 +30,16 @@
 	padding-left: 0;
 }
 
-
 #global-masthead {
-	height: 45px;	
-
+	height: 45px;
 	li {
 		display: inline;
 		margin-right: 1em;
 	}
-	
 	img {
 		width: auto;
 	}
-
 }
-
 
 /* Global Search
 -------------------------------------------------------------- */
@@ -67,15 +54,12 @@
 	box-sizing: border-box;
 	float: right;
 	width: 42%;
-	
 	input, label {
 		width: auto;
 	}
-	
 	label {
 		margin-top: 9px;
 	}
-	
 	.search {
 		position: absolute;
 		top: 0;
@@ -91,12 +75,10 @@
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-	
 	.search:hover {
 		background: #034da1;
 		border-color: #034da1;
 	}
-	
 	.search-type {
 		width: 40%;
 		margin-bottom: 0;
@@ -109,12 +91,10 @@
 		text-align: right;
 	}
 	@include gs-media(m, max) {
-	
 		.search {
 			left: 80%;
 			width: 20%;
 		}
-	
 	}
 }
 
@@ -131,7 +111,6 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-
 	input {
 		margin-right: 0;
 		padding-left: 10px;
@@ -140,24 +119,12 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	
 	@include gs-media(m, max) {
-	
 		width: 75%;
-	
 	}
-	
 }
-
 
 #audiences {
 	float: left;
 	width: 55%;
 }
-
-
-/* END: 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
-
-
-
-

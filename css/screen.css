@@ -201,11 +201,6 @@ input {
 
 /* UCL Banner
 -------------------------------------------------------------- */
-#ucl-masthead {
-  display: block;
-  width: 100%;
-  overflow: hidden; }
-
 #branding {
   position: absolute;
   z-index: 1;
@@ -2256,5 +2251,3 @@ article > footer a:hover {
 #audiences {
   float: left;
   width: 55%; }
-
-/* END: 01/10/2013: replacement CSS for rebuilt search form in masthead.*/

@@ -2,15 +2,17 @@
 -------------------------------------------------------------- */
 
 .vcard {
-  display: inline-block;
-  margin-bottom: 1em;
-  width: 100%;
-  }
-.vcard li {
-    margin-bottom: 0.5em;
-    display: block;
+	display: inline-block;
+	margin-bottom: 1em;
+	width: 100%;
 }
+
+.vcard li {
+	margin-bottom: 0.5em;
+	display: block;
+}
+
 .vcard .fn {
-    font-weight: bold;
-    font-size: 0.9375em;
+	font-weight: bold;
+	font-size: 0.9375em;
 }

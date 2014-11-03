@@ -2,66 +2,72 @@
 -------------------------------------------------------------- */
 
 figcaption {
-  color: #666666;
-  font-size: 0.9em;
+	color: #666666;
+	font-size: 0.9em;
 }
 
 figcaption h4 {
-  margin-top: 0.2em;
+	margin-top: 0.2em;
 }
 
 figure img {
-  padding-top: 0.5em;
+	padding-top: 0.5em;
 }
 
 figure + figure, figure + p {
-  margin-top: 1em;
+	margin-top: 1em;
 }
-
-
 
 /* Floated Images
 -------------------------------------------------------------- */
 
 img.float-left {
-  @include gs-span(dc, 1, 2);
-  @include gs-float(dc, left);
-  margin-bottom: 1em;
+	@include gs-span(dc, 1, 2);
+	@include gs-float(dc, left);
+	margin-bottom: 1em;
 }
 
 img.float-right {
-  @include gs-span(dc, 3, 4);
-  @include gs-float(dc, right);
-  margin-bottom: 1em;
+	@include gs-span(dc, 3, 4);
+	@include gs-float(dc, right);
+	margin-bottom: 1em;
 }
-.small-image{
-  max-width: $smallImageMaxWidth;
+
+.small-image {
+	max-width: $smallImageMaxWidth;
 }
-.medium-image{
-  max-width: $mediumImageMaxWidth;
+
+.medium-image {
+	max-width: $mediumImageMaxWidth;
 }
-.large-image{
-  max-width: $largeImageMaxWidth;
+
+.large-image {
+	max-width: $largeImageMaxWidth;
 }
-.xl-image{
-  max-width: $xlImageMaxWidth;
+
+.xl-image {
+	max-width: $xlImageMaxWidth;
 }
-.xxl-image{
-  max-width: $xxlImageMaxWidth;
+
+.xxl-image {
+	max-width: $xxlImageMaxWidth;
 }
+
 @include gs-media(m, max) {
-  .large-image,.xl-image,.xxl-image{
-    width: 100%;
-  }
-  .decorative{
-    display: none!important;
-  }
-  img.float-left,img.float-right{
-    &.large-image,&.xl-image,&.xxl-image{
-      width: 100%;
-    }
-  }
+	.large-image,.xl-image,.xxl-image {
+		width: 100%;
+	}
+	.decorative {
+		display: none !important;
+	}
+	img.float-left,img.float-right {
+		&.large-image,&.xl-image,&.xxl-image {
+			width: 100%;
+		}
+	}
 }
-.no-respond{
-  width: auto!important;
+
+
+.no-respond {
+	width: auto !important;
 }

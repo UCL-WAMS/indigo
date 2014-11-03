@@ -2,29 +2,29 @@
 -------------------------------------------------------------- */
 
 .box {
-  border-top:5px solid #000;
-  background: #fafafa;
-  overflow: hidden;
-  padding-top: 0.5em;
-  padding-bottom: 1em;
-  @include gs-pad(dc, padinfull);
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position:relative;
+	border-top: 5px solid #000;
+	background: #fafafa;
+	overflow: hidden;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+	@include gs-pad(dc, padinfull);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
 }
 
 .box.tagged {
-  padding-top:1.5em;
+	padding-top: 1.5em;
 }
 
 .tag {
-  position:absolute;
-  left: 0;
-  top: 0;
-  padding: 5px 15px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  background-color: #B5BD00;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 5px 15px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: #B5BD00;
 }

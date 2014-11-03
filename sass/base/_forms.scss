@@ -1,41 +1,45 @@
 /* Forms
 -------------------------------------------------------------- */
-form{
+form {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
-fieldset    { 
-	margin: 0 0 1em 0; 
+
+fieldset {
+	margin: 0 0 1em 0;
 }
 
-legend { 
+legend {
 	font-size: 1.25em;
 	margin-bottom: 0.5em;
 }
 
 input {
-  padding: 0.5em 2%;
-  vertical-align: middle;
-  margin: 0;
-  -moz-box-sizing: border-box;
+	padding: 0.5em 2%;
+	vertical-align: middle;
+	margin: 0;
+	-moz-box-sizing: border-box;
 }
 
-form > ul{ list-style: none; margin: 0;}
+form > ul {
+	list-style: none;
+	margin: 0;
+}
 
-input[type="checkbox"] + label, input[type="radio"] + label{
+input[type="checkbox"] + label, input[type="radio"] + label {
 	display: inline;
 	margin-left: 5px;
 }
 
 fieldset > div:first-of-type {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 label, fieldset.options legend {
-  display: block;
-  font-size: 0.9em;
-  color: #494949;
-  font-weight: 700;
+	display: block;
+	font-size: 0.9em;
+	color: #494949;
+	font-weight: 700;
 }
 
 label span {
@@ -43,17 +47,17 @@ label span {
 }
 
 fieldset abbr[title="Required"] {
-  border-bottom: 0 none;
-  color: #AF1616;
-  font-size: 1.25em;
-  font-weight: 400;
-  line-height: 0.1;
+	border-bottom: 0 none;
+	color: #AF1616;
+	font-size: 1.25em;
+	font-weight: 400;
+	line-height: 0.1;
 }
 
 input.text, textarea {
-  width: 96%;
-  padding-left: 2%;
-  padding-right: 2%;
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 select {
@@ -71,7 +75,7 @@ form em {
 }
 
 fieldset.options {
-	margin: 1em 0;	
+	margin: 1em 0;
 }
 
 fieldset.options ul {
@@ -79,19 +83,18 @@ fieldset.options ul {
 	margin: 0 0 0.5em;
 }
 
-
 /* Form fields
 -------------------------------------------------------------- */
 
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="tel"], input[type="number"], input.title,
 textarea, #search-form {
-  margin:0.5em 0;
-  border:1px solid #ccc;
-  -webkit-box-shadow: 0 1px 2px #e0e0e0 inset;
-  -moz-box-shadow: 0 1px 2px #e0e0e0 inset;
-  box-shadow: 0 1px 2px #e0e0e0 inset;
-  color: #333;
-  width: 96%;
+	margin: 0.5em 0;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 1px 2px #e0e0e0 inset;
+	-moz-box-shadow: 0 1px 2px #e0e0e0 inset;
+	box-shadow: 0 1px 2px #e0e0e0 inset;
+	color: #333;
+	width: 96%;
 }
 
 #search-form {
@@ -100,13 +103,13 @@ textarea, #search-form {
 
 input.text:focus, input.title:focus,
 textarea:focus {
-	border:1px solid #666;
+	border: 1px solid #666;
 }
 
 .inline label {
 	@include gs-span(dc, 1);
 	font-size: 14px;
-	text-align:right;
+	text-align: right;
 	line-height: 38px;
 }
 
@@ -116,10 +119,10 @@ textarea:focus {
 	margin-left: 1.51515%;
 	color: #848484;
 	font-size: 14px;
-	text-align:right;
+	text-align: right;
 	line-height: 26px;
 	margin-top: 5px;
-	display:block;
+	display: block;
 	background-color: #eee;
 }
 
@@ -139,8 +142,6 @@ textarea:focus {
 	@include gs-span(dc, all);
 }
 
-
-
 /* Success, notice and error boxes
 -------------------------------------------------------------- */
 
@@ -159,7 +160,7 @@ textarea:focus {
 	border: 1px solid #DD6868;
 	font-weight: bold;
 }
-	
+
 .success {
 	background-color: #F7FFF2;
 	background-image: url("#{$staticUrl}/images/success.png");
@@ -168,7 +169,7 @@ textarea:focus {
 	color: #7FB861;
 	border: 1px solid #7FB861;
 }
-	
+
 .message {
 	background: none repeat scroll 0 0 #FFFFFF;
 	border: 1px solid #DDDDDD;
@@ -184,8 +185,8 @@ textarea:focus {
 	margin-bottom: 10px;
 }
 
-.message span { 
-	text-decoration: underline; 
+.message span {
+	text-decoration: underline;
 }
 
 input.error {
@@ -196,7 +197,6 @@ input.error {
 .error {
 	color: #c60f13;
 }
-
 
 /* Buttons
 -------------------------------------------------------------- */
@@ -212,18 +212,19 @@ input.error {
 	padding: 12px 30px 10px 30px;
 	display: inline-block;
 	position: relative;
-	border: 1px solid rgba(0,0,0,0.21);
+	border: 1px solid rgba(0, 0, 0, 0.21);
 	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 	font-weight: bold;
 	font-size: 14px;
-	&:hover,:focus{
+	&:hover,:focus {
 		background-color: $hoverButton;
 	}
-	&:active{
+	&:active {
 		background-color: $activeButton;
 	}
 }
+
 .btn-small {
 	padding: 8px 20px 8px 20px;
 	font-size: 12px;
@@ -231,43 +232,44 @@ input.error {
 
 [class*=btn]:hover {
 	color: #fff;
-	text-decoration:none;
+	text-decoration: none;
 }
 
 .btn-gradient.disabled {
-	@include gradient($disabled-btn-grad1,$disabled-btn-grad2);
-	border-bottom:  1px solid rgba(0,0,0,0.21);
+	@include gradient($disabled-btn-grad1, $disabled-btn-grad2);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.21);
 	color: #999;
 	text-shadow: none;
-	&:hover,:focus{
-		@include gradient($disabled-hvr-btn-grad1,$disabled-hvr-btn-grad2);
+	&:hover,:focus {
+		@include gradient($disabled-hvr-btn-grad1, $disabled-hvr-btn-grad2);
 	}
-	&:active{
-		@include gradient($disabled-act-btn-grad1,$disabled-act-btn-grad2);
+	&:active {
+		@include gradient($disabled-act-btn-grad1, $disabled-act-btn-grad2);
 	}
 }
 
 #main a[class*=btn] {
-	color:#fff;
+	color: #fff;
 }
+
 $buttonPadding: 0.7rem;
-button{
+
+button {
 	background: $button-bg-col;
 	cursor: pointer;
 	padding: $buttonPadding;
 	color: #fff;
 	border: 0;
 	border-radius: 0.4em;
-	&:hover,:focus{
+	&:hover,:focus {
 		background-color: $hoverButton;
 		border: 0;
 	}
-	&:active{
+	&:active {
 		background-color: $activeButton;
 		border: 0;
 	}
 }
-
 
 /* Gradient Button's Colors
 -------------------------------------------------------------- */
@@ -356,32 +358,89 @@ button{
 	@include gradient($darkbrown-b, $darkbrown);
 }
 
-
 /* Gradient button background color on click
 -------------------------------------------------------------- */
 
-.btn-gradient.darkgreen:active {background: $darkgreen;}
-.btn-gradient.midgreen:active {background: $midgreen;}
-.btn-gradient.brightgreen:active {background: $brightgreen;}
-.btn-gradient.lightgreen:active {background: $lightgreen;}
-.btn-gradient.yellow:active {background: $yellow;}
-.btn-gradient.darkred:active {background: $darkred;}
-.btn-gradient.midred:active {background: $midred;}
-.btn-gradient.brightred:active {background: $brightred;}
-.btn-gradient.lightred:active {background: $lightred;}
-.btn-gradient.orange:active {background: $orange;}
-.btn-gradient.darkpurple:active {background: $darkpurple;}
-.btn-gradient.midpurple:active {background: $midpurple;}
-.btn-gradient.brightpink:active {background: $brightpink;}
-.btn-gradient.lightpurple:active {background: $lightpurple;}
-.btn-gradient.warmgrey:active {background: $warmgrey;}
-.btn-gradient.darkblue:active {background:  $darkblue;}
-.btn-gradient.midblue:active {background: $midblue;}
-.btn-gradient.brightblue:active {background: $brightblue;}
-.btn-gradient.lightblue:active {background: $lightblue;}
-.btn-gradient.stone:active {background:  $stone;}
-.btn-gradient.darkbrown:active {background: $darkbrown;}
+.btn-gradient.darkgreen:active {
+	background: $darkgreen;
+}
 
+.btn-gradient.midgreen:active {
+	background: $midgreen;
+}
 
+.btn-gradient.brightgreen:active {
+	background: $brightgreen;
+}
 
+.btn-gradient.lightgreen:active {
+	background: $lightgreen;
+}
 
+.btn-gradient.yellow:active {
+	background: $yellow;
+}
+
+.btn-gradient.darkred:active {
+	background: $darkred;
+}
+
+.btn-gradient.midred:active {
+	background: $midred;
+}
+
+.btn-gradient.brightred:active {
+	background: $brightred;
+}
+
+.btn-gradient.lightred:active {
+	background: $lightred;
+}
+
+.btn-gradient.orange:active {
+	background: $orange;
+}
+
+.btn-gradient.darkpurple:active {
+	background: $darkpurple;
+}
+
+.btn-gradient.midpurple:active {
+	background: $midpurple;
+}
+
+.btn-gradient.brightpink:active {
+	background: $brightpink;
+}
+
+.btn-gradient.lightpurple:active {
+	background: $lightpurple;
+}
+
+.btn-gradient.warmgrey:active {
+	background: $warmgrey;
+}
+
+.btn-gradient.darkblue:active {
+	background: $darkblue;
+}
+
+.btn-gradient.midblue:active {
+	background: $midblue;
+}
+
+.btn-gradient.brightblue:active {
+	background: $brightblue;
+}
+
+.btn-gradient.lightblue:active {
+	background: $lightblue;
+}
+
+.btn-gradient.stone:active {
+	background: $stone;
+}
+
+.btn-gradient.darkbrown:active {
+	background: $darkbrown;
+}

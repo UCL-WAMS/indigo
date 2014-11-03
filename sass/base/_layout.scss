@@ -1,22 +1,16 @@
 /* UCL Banner
 -------------------------------------------------------------- */
 
-#ucl-masthead {
-	display: block;
-	width:100%;
-	overflow:hidden;
-}
-
 #branding {
-   position:absolute;
-   z-index:1;
-   overflow: visible;
-   padding: 0 35px;
-   left: -35px;
-   width: 100%;
-   max-width: 1470px;
-   p{
-   		position: absolute;
+	position: absolute;
+	z-index: 1;
+	overflow: visible;
+	padding: 0 35px;
+	left: -35px;
+	width: 100%;
+	max-width: 1470px;
+	p {
+		position: absolute;
 		left: 70px;
 		top: 25%;
 		color: #fff;
@@ -24,17 +18,15 @@
 		text-transform: uppercase;
 		font-family: Arial, sans-serif;
 		padding-top: 0.5em;
-   }
+	}
 	img {
 		display: block;
 	}
-
 }
 
 header > div {
 	position: relative;
 }
-
 
 .photograph {
 	padding: 0 35px;
@@ -44,9 +36,7 @@ header > div {
 	width: 100%;
 	position: relative;
 	left: -35px;
-} 
-
-
+}
 
 /* Site Branding Structure
 -------------------------------------------------------------- */
@@ -74,19 +64,16 @@ header > div {
 	font-size: 12px;
 	font-style: italic;
 	color: #fff;
-	display:none;
+	display: none;
 }
 
 .photograph-on {
-
 	.site-brand {
-		padding-top: 30%;	
+		padding-top: 30%;
 	}
-	
 	.photograph-description {
-		display:block;
+		display: block;
 	}
-	
 }
 
 /* Left Column + Navigation
@@ -98,23 +85,27 @@ header > div {
 	left: 0;
 	width: 19.8653%;
 }
+
 .leftnav li {
 	margin-bottom: 0.5em;
 	ul {
 		margin: 10px 5%;
-		font-size:14px;
+		font-size: 14px;
 	}
 }
+
 #nav-mobile-back, #header-mobile {
 	display: none;
 }
-@mixin mobileNavListingLayoutFix{
+
+@mixin mobileNavListingLayoutFix {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 @include gs-media(m, max) {
-	#leftcol{
+	#leftcol {
 		margin-top: 2em;
 	}
 	#nav-wrap {
@@ -142,30 +133,29 @@ header > div {
 		#leftcol {
 			@include mobileNavListingLayoutFix;
 			position: relative;
-
 		}
-		#logo, 
+		#logo,
 		.site-brand {
 			display: none;
 		}
-		.photograph{
+		.photograph {
 			@include mobileNavListingLayoutFix;
 			padding: 2em 0 0em 0;
 			left: 0;
 			background-color: transparent;
 		}
-		.wrapper{
+		.wrapper {
 			width: 100%;
 		}
 		#global-masthead {
 			height: auto;
 			border-bottom: 1px solid #ccc;
-			ul#audiences{
+			ul#audiences {
 				@include mobileNavListingLayoutFix;
 				float: none;
 				margin-bottom: 1em;
 			}
-			.wrapper{
+			.wrapper {
 				background-color: #444;
 			}
 		}
@@ -173,14 +163,14 @@ header > div {
 			float: none;
 			width: 100%;
 			padding: 0;
-			margin-top: 3.5em; 
+			margin-top: 3.5em;
 			height: 4em;
 			@include mobileNavListingLayoutFix;
 		}
-		#branding{
+		#branding {
 			position: static;
 			padding-left: 0;
-			p{
+			p {
 				left: 0;
 				top: 50%;
 			}
@@ -215,14 +205,13 @@ header > div {
 	.mobile-open #nav-wrap {
 		left: 0;
 	}
-	
 	#header-mobile {
 		display: block;
 		width: 100%;
 		padding: 20% 35px 0;
 		background-size: auto 100%;
 		background-position: 106% bottom;
-		background-image: url('#{$staticUrl}/images/ucl-logo.svg');
+		background-image: url("#{$staticUrl}/images/ucl-logo.svg");
 		background-repeat: repeat-x;
 		position: relative;
 		left: -35px;
@@ -240,15 +229,14 @@ header > div {
 			position: absolute;
 			z-index: 1000;
 		}
-		&.no-svg{
-			background-image: url('#{$staticUrl}/images/ucl-logo-cropped-white.png');
+		&.no-svg {
+			background-image: url("#{$staticUrl}/images/ucl-logo-cropped-white.png");
 			background-repeat: no-repeat;
 			background-position: right bottom;
 			background-color: #000;
 			background-size: 90%;
 		}
 	}
-
 }
 
 
@@ -264,32 +252,35 @@ header > div {
 }
 
 @include gs-media(t, max) {
-  #main {  
-    @include gs-span(t, all);
-  }
+	#main {
+		@include gs-span(t, all);
+	}
 }
 
+
 @include gs-media(m, max) {
-  #main {  
-    @include gs-span(m, all);
-    padding-top: 1em;
-  }
+	#main {
+		@include gs-span(m, all);
+		padding-top: 1em;
+	}
 }
+
 
 #content {
 	@include gs-span(dl, 2, 5);
 }
 
 @include gs-media(t, max) {
-  #content {  
-    @include gs-span(t, 2, 3);
-  }
+	#content {
+		@include gs-span(t, 2, 3);
+	}
 }
 
+
 @include gs-media(m, max) {
-  #content {  
-    @include gs-span(m, all);
-  }
+	#content {
+		@include gs-span(m, all);
+	}
 }
 
 
@@ -298,16 +289,17 @@ header > div {
 }
 
 @include gs-media(t, max) {
-  .content-main {  
-    @include gs-span(t, all, (2, 3));
-    margin-bottom: 2em;
-  }
+	.content-main {
+		@include gs-span(t, all, (2, 3));
+		margin-bottom: 2em;
+	}
 }
 
+
 @include gs-media(m, max) {
-  .content-main {  
-    @include gs-span(m, all);
-  }
+	.content-main {
+		@include gs-span(m, all);
+	}
 }
 
 
@@ -316,31 +308,34 @@ header > div {
 }
 
 @include gs-media(t, max) {
-  .content-sidebar {  
-    @include gs-span(t, all, (2, 3));
-  }
+	.content-sidebar {
+		@include gs-span(t, all, (2, 3));
+	}
 }
 
+
 @include gs-media(m, max) {
-  .content-sidebar {  
-    @include gs-span(m, all);
-  }
+	.content-sidebar {
+		@include gs-span(m, all);
+	}
 }
+
+
 .middle-split {
 	overflow: hidden;
 	@include gs-media(t, min) {
-	    section {
-	      float: left;
-	      margin-left: 2%;
-	      margin-right: 2%;
-	      width: 47%;
-	      &:nth-child(odd) {
-	        margin-right: 1%;
-	      }      
-	      &:nth-child(even) {
-	        margin-left: 1%;
-	      }
-	    }
+		section {
+			float: left;
+			margin-left: 2%;
+			margin-right: 2%;
+			width: 47%;
+			&:nth-child(odd) {
+				margin-right: 1%;
+			}
+			&:nth-child(even) {
+				margin-left: 1%;
+			}
+		}
 	}
 }
 
@@ -353,55 +348,46 @@ footer {
 	padding: 40px 35px;
 	color: #bbb;
 	clear: left;
-
-
 	h2 {
 		margin-bottom: 0.5em;
-		font-size:1em;
+		font-size: 1em;
 	}
-	
 	a {
 		color: #eee;
 		text-decoration: none;
 	}
-	
 	a:hover {
 		color: #fff;
 	}
-	
-	
 	article {
 		margin-bottom: 1em;
-		
 		ul {
 			list-style-type: none;
 			margin-bottom: 1em;
-
 			li {
 				padding-bottom: 4px;
 				padding-top: 4px;
 				font-size: 14px;
 				margin-bottom: 0;
 			}
-			
 			li:before {
-			  content: none; 
+				content: none;
 			}
 		}
 	}
-	
 	hr {
 		border-color: #ccc;
-		clear:both;
+		clear: both;
 	}
-
 }
+
 @include gs-media(m, max) {
 	footer {
-			padding-left: 5%;
-			padding-right: 5%;
-		}
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 }
+
 
 #footer-links {
 	font-size: 14px;
@@ -409,71 +395,81 @@ footer {
 }
 
 @media screen and (max-width: 989px) {
-
 	footer article li {
 		padding-bottom: 2px;
 		padding-top: 2px;
 		font-size: 12px;
 		margin-left: 0;
 	}
-	
 	#footer-links {
 		font-size: 12px;
 	}
-
 }
 
 .block-myucl {
 	@include gs-span(dl, 1, 2);
 }
+
 @include gs-media(t, max) {
 	.block-myucl {
 		@include gs-span(t, 1);
 	}
 }
+
+
 @include gs-media(m, max) {
 	.block-myucl {
 		@include gs-span(m, 1);
 	}
 }
 
+
 .block-finditfast1 {
 	@include gs-span(dl, 3);
 }
+
 @include gs-media(t, max) {
 	.block-finditfast1 {
 		@include gs-span(t, 2);
 	}
 }
+
+
 @include gs-media(m, max) {
 	.block-finditfast1 {
 		@include gs-span(m, 2);
 	}
 }
 
+
 .block-finditfast2 {
 	@include gs-span(dl, 4, 5);
 }
+
 @include gs-media(t, max) {
 	.block-finditfast2 {
 		@include gs-span(t, 3);
 	}
 }
+
+
 @include gs-media(m, max) {
 	.block-finditfast2 {
 		@include gs-span(m, 1);
 		clear: left;
 	}
 }
-@mixin nav-in-document-flow{
+
+
+@mixin nav-in-document-flow {
 	position: relative;
 	left: -35px;
 	padding: 0 35px;
-
 }
+
 /* horizontal navigation layouts
 ----------------------------------------------------------------------------------*/
-nav.topnav{
+nav.topnav {
 	display: none;
 	@include nav-in-document-flow;
 	width: 100%;
@@ -481,103 +477,110 @@ nav.topnav{
 	margin-top: 0;
 	padding-top: 1em;
 	overflow: hidden;
-	ul{
-		li{
+	ul {
+		li {
 			display: block;
 			float: left;
 			padding-right: 1em;
 			margin-right: 1em;
 			border-right: 1px solid $ruleColor;
-			a{
+			a {
 				text-decoration: none;
 				cursor: pointer;
 				color: $horizontalNavColor;
 			}
-			&:last-child{
+			&:last-child {
 				border-right: 0;
 			}
 		}
 	}
 }
-.horizontal-nav{
-	#leftcol{
+
+.horizontal-nav {
+	#leftcol {
 		display: none;
-		.leftnav{
+		.leftnav {
 			display: none;
 		}
-		@include gs-media(m, max){
+		@include gs-media(m, max) {
 			display: block;
 		}
 	}
-	.topnav{
+	.topnav {
 		display: block;
-		@include gs-media(m, max){
+		@include gs-media(m, max) {
 			display: none;
 		}
 	}
-	#main{
+	#main {
 		padding-top: 1em;
 	}
-	#content{
+	#content {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
 }
-.horizontal-nav--2col{
-	.content-main{
+
+.horizontal-nav--2col {
+	.content-main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
-	.content-sidebar{
+	.content-sidebar {
 		@include gs-span(dl, 5, 5, (1, 5));
 	}
 	@include gs-media(t, max) {
-		.content-main,.content-sidebar{  
+		.content-main,.content-sidebar {
 			@include gs-span(t, all, (1, 3));
 			margin-bottom: 2em;
 		}
 	}
 }
-.horizontal-nav--1col{
-	.content-main{
+
+.horizontal-nav--1col {
+	.content-main {
 		@include gs-span(dl, 1, 5, (1, 5));
 	}
-	.content-sidebar{
+	.content-sidebar {
 		display: none;
 	}
 }
-.vertical-nav{
-	@include gs-media(m, max){
-		.leftnav{
+
+.vertical-nav {
+	@include gs-media(m, max) {
+		.leftnav {
 			display: none;
 		}
 	}
 }
-.vertical-nav--1col{
-	.content-main{
+
+.vertical-nav--1col {
+	.content-main {
 		@include gs-span(dl, 2, 5, (2, 5));
 	}
 }
-.vertical-nav--show-top-nav{
-	nav.topnav{
+
+.vertical-nav--show-top-nav {
+	nav.topnav {
 		display: block;
-		@include gs-media(m, max){
+		@include gs-media(m, max) {
 			display: none;
 		}
 	}
-	#leftcol{
+	#leftcol {
 		margin-top: 5em;
-		@include gs-media(m, max){
+		@include gs-media(m, max) {
 			margin-top: 0;
 		}
 	}
 }
-.mobilenav{
+
+.mobilenav {
 	display: none;
-	@include gs-media(m, max){
+	@include gs-media(m, max) {
 		display: block;
-		ul{
-			&:nth-child(n+2){
+		ul {
+			&:nth-child(n+2) {
 				padding-left: 1em;
 			}
 		}

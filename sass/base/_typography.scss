@@ -25,10 +25,11 @@ h1 {
 }
 
 @include gs-media(m, max) {
-  h1 {
-    font-size: 32px;
-  }
+	h1 {
+		font-size: 32px;
+	}
 }
+
 
 .content-sidebar h1 {
 	font-size: 26px;
@@ -43,7 +44,6 @@ h2, lh {
 	margin: 1em 0 0.3em;
 	font-weight: normal;
 }
-
 
 h3 {
 	margin: 1em 0 0;
@@ -60,7 +60,6 @@ h4 {
 h2 + h3 {
 	margin-top: 0;
 }
-
 
 h5 {
 	font-style: italic;
@@ -88,12 +87,10 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	margin-top: 0;
 }
 
-
 /* Quotes
 -------------------------------------------------------------- */
 
-
-blockquote  {
+blockquote {
 	margin: 1.5em;
 	color: #666;
 	font-style: italic;
@@ -111,10 +108,11 @@ blockquote  {
 }
 
 @include gs-media(m, max) {
-  .quote-left, .quote-right {
-    @include gs-span(m, all);
-  }
+	.quote-left, .quote-right {
+		@include gs-span(m, all);
+	}
 }
+
 
 [class*=pullquote] {
 	margin-top: 2em;
@@ -162,9 +160,6 @@ blockquote  {
 	font-style: normal;
 }
 
-
-
-
 /* Inline styles
 -------------------------------------------------------------- */
 
@@ -183,22 +178,22 @@ small {
 }
 
 .text-muted {
-  color: #999999;
+	color: #999999;
 }
 
 .text-success {
-  color: #468847;
+	color: #468847;
 }
 
 .text-error {
-  color: #b94a48;
+	color: #b94a48;
 }
 
 .mod {
 	font-size: 12px;
-	color:#ccc;
-	margin-top:2em;
-	.lastMod{
+	color: #ccc;
+	margin-top: 2em;
+	.lastMod {
 		text-transform: capitalize;
 	}
 }
@@ -215,51 +210,48 @@ mark {
 }
 
 del {
-	color:#666;
+	color: #666;
 }
 
 .standfirst {
-	font-size:20px;
+	font-size: 20px;
 }
 
 @include gs-media(m, max) {
 	.standfirst {
-		font-size:18px;
+		font-size: 18px;
 	}
 }
 
+
 .text-center {
-	text-align:center;
+	text-align: center;
 }
 
 .text-right {
-	text-align:right;
+	text-align: right;
 }
-
 
 /* Lists
 -------------------------------------------------------------- */
 
 article ul {
 	margin-bottom: 2em;
-
 	li {
-	list-style: none;
-	position: relative;
-	margin-bottom: 1em;
+		list-style: none;
+		position: relative;
+		margin-bottom: 1em;
 	}
-
 	li:before {
-	content: "";
-	display: block;
-	background-color: #333;
-	border-radius: 50%;
-	height: 0.35em;
-	width: 0.35em;
-	position: absolute;
-	left: -0.8em;
-	top: 0.6em;
-
+		content: "";
+		display: block;
+		background-color: #333;
+		border-radius: 50%;
+		height: 0.35em;
+		width: 0.35em;
+		position: absolute;
+		left: -0.8em;
+		top: 0.6em;
 	}
 }
 
@@ -268,6 +260,7 @@ article ul {
 		margin-left: 1em;
 	}
 }
+
 
 article ul li ul {
 	margin-top: 1em;
@@ -281,53 +274,42 @@ article ul li li {
 	margin-left: 1em;
 }
 
-
 /* Inline lists
 -------------------------------------------------------------- */
 
 #main article .horizontal {
-
 	li {
-		display:inline;
-		margin-right:0.5em;
+		display: inline;
+		margin-right: 0.5em;
 	}
-
 	li:before {
 		display: none;
 	}
-
 	lh {
-		float:left;
+		float: left;
 	}
-
 	dt, dd {
-	    float: left;
-	    margin: 0 0.5em 0 0;
+		float: left;
+		margin: 0 0.5em 0 0;
 	}
-
 	lh + dt, dd + dt, dd + dd {
-	    clear: left
+		clear: left;
 	}
-
 	dd + dd {
-	    float: none
+		float: none;
 	}
-
 	dt {
-	    font-weight: bold
+		font-weight: bold;
 	}
-
 }
 
 /* Unstyled lists
 -------------------------------------------------------------- */
 
 #main article .nostyle {
-
 	li:before {
 		display: none;
 	}
-
 }
 
 /* Ordered lists
@@ -344,6 +326,7 @@ ol li {
 	}
 }
 
+
 ol li ol {
 	margin-top: 1em;
 }
@@ -352,11 +335,8 @@ ol li li {
 	margin-left: 1.5em;
 }
 
-
-
 /* Definition lists
 -------------------------------------------------------------- */
-
 
 dt {
 	font-weight: 700;
@@ -365,7 +345,6 @@ dt {
 dd + dt {
 	margin-top: 10px;
 }
-
 
 /* Code lists (blocked)
 -------------------------------------------------------------- */
@@ -383,9 +362,8 @@ ol.code li {
 }
 
 ol.code li.tab1 {
-  padding-left: 4ex;
+	padding-left: 4ex;
 }
-
 
 /* Pagination
 -------------------------------------------------------------- */
@@ -408,7 +386,6 @@ ol.code li.tab1 {
 .pagination li:before {
 	display: none;
 }
-
 
 /* Resources
 -------------------------------------------------------------- */

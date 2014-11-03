@@ -2,19 +2,19 @@
 -------------------------------------------------------------- */
 
 [class*=divider] {
-  border-color: #ddd;
+	border-color: #ddd;
 }
 
 [class*=divider][class*=top] {
-  margin-top: 21px;
-  padding-top: 21px;
-  border-top-width: 1px;
-  border-top-style: solid;
+	margin-top: 21px;
+	padding-top: 21px;
+	border-top-width: 1px;
+	border-top-style: solid;
 }
 
 [class*=divider][class*=bottom] {
-  margin-bottom: 21px;
-  padding-bottom: 21px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+	margin-bottom: 21px;
+	padding-bottom: 21px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
