@@ -1,0 +1,64 @@
+/* Footer
+-------------------------------------------------------------- */
+
+.footer {
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	padding: 40px 35px;
+	color: #bbb;
+	clear: left;
+	@include gs-media(m, max) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	h2 {
+		margin-bottom: 0.5em;
+		font-size: 1em;
+	}
+	a {
+		color: #eee;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #fff;
+	}
+	article {
+		margin-bottom: 1em;
+		ul {
+			list-style-type: none;
+			margin-bottom: 1em;
+			li {
+				padding-bottom: 4px;
+				padding-top: 4px;
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+			li:before {
+				content: none;
+			}
+		}
+	}
+	hr {
+		border-color: #ccc;
+		clear: both;
+	}
+}
+
+
+#footer-links {
+	font-size: 14px;
+	margin-top: 0.5em;
+}
+
+@media screen and (max-width: 989px) {
+	footer article li {
+		padding-bottom: 2px;
+		padding-top: 2px;
+		font-size: 12px;
+		margin-left: 0;
+	}
+	#footer-links {
+		font-size: 12px;
+	}
+}

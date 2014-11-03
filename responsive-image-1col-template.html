@@ -67,15 +67,13 @@
 
 <body id="index" class="horizontal-nav horizontal-nav--1col">
 
-	<div id="nav-wrap">
+	<header class="header-wrap">
 
 		<a id="nav-mobile-back" href="#"><img src="../images/close.png" alt="X" /> Close</a>
 
-		<nav id="global-masthead">
-
+		<div class="masthead">
 			<div class="wrapper clearfix">
-
-				<div id="global-search">
+				<div class="masthead__search">
 					<form action="#" method="get">
 						<!--
 						<div class="search-type">
@@ -91,187 +89,185 @@
 
 						<input type="submit" name="sumbit" value="Go" class="btn search" />
 					</form>
+				</div>
+				<nav class="masthead__nav m-clear">
+					<ul>
+						<li><a href="index.php">UCL Home</a></li>
+						<li><a href="prospective-students.php">Prospective students</a></li>
+						<li><a href="current-students.php">Current students</a></li>
+						<li><a href="staff.php">Staff</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div><!-- end .masthead -->
 
+		<div class="wrapper">
+
+			<div class="photograph">
+
+				<header id="ucl-masthead" role="header">
+
+					<div id="branding">
+						<p>Applied Biomedical Engineering Group</p>
+						<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo">
+					</div>
+
+				</header>
+
+				<div class="site-brand">
+
+					<p class="photograph-description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
 
 				</div>
 
-				<ul id="audiences" class="m-clear">
-					<li><a href="index.php">UCL Home</a></li>
-					<li><a href="prospective-students.php">Prospective students</a></li>
-					<li><a href="current-students.php">Current students</a></li>
-					<li><a href="staff.php">Staff</a></li>
-				</ul>
-			</div>
+			</div><!-- end .photograph -->
 
-		</nav><!-- end #global-masthead -->
+			<div id="leftcol">
 
-	<div class="wrapper">
+				<nav class="leftnav">
 
-		<div class="photograph">
+					<ul>
 
-			<header id="ucl-masthead" role="header">
+						<li><a href="index.html" class="home-link">Home</a></li>
 
-				<div id="branding">
-					<p>Applied Biomedical Engineering Group</p>
-					<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo">
-				</div>
+						<li><a href="#">Main navigation items</a>
 
-			</header>
+							<ul>
+								<li><a href="#">Lists can be nested</a></li>
 
-			<div class="site-brand">
+								<li><a href="#">Lists can be nested</a></li>
+							</ul>
 
-				<p class="photograph-description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+						</li>
 
-			</div>
+						<li><a href="#">Main navigation items</a></li>
 
-		</div><!-- end .photograph -->
+					</ul>
 
-		<div id="leftcol">
+				</nav>
 
-			<nav class="leftnav">
+			</div> <!-- end #leftcol -->
 
+			<nav class="topnav">
 				<ul>
-
-					<li><a href="index.html" class="home-link">Home</a></li>
-
-					<li><a href="#">Main navigation items</a>
-
-						<ul>
-							<li><a href="#">Lists can be nested</a></li>
-
-							<li><a href="#">Lists can be nested</a></li>
-						</ul>
-
+					<li>
+						<a href="#">Home</a>
 					</li>
-
-					<li><a href="#">Main navigation items</a></li>
-
+					<li>
+						<a href="#">Main navigation items</a>
+					</li>
+					<li>
+						<a href="#">Main navigation items</a>
+					</li>
 				</ul>
-
 			</nav>
 
-		</div> <!-- end #leftcol -->
+		</div> <!-- end .wrapper -->
 
-		<nav class="topnav">
-			<ul>
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">Main navigation items</a>
-				</li>
-				<li>
-					<a href="#">Main navigation items</a>
-				</li>
-			</ul>
-		</nav>
+	</header><!-- end .header-wrap -->
 
-	</div> <!-- end .wrapper -->
+	<div id="site-content" class="wrapper">
 
-</div><!-- end #nav-wrap -->
+		<header id="header-mobile" class="default-header">
 
-		<div id="site-content" class="wrapper">
+			<a id="nav-mobile-menu" href="#"><img src="./images/mob-nav.png" alt="Menu" /></a>
 
-			<header id="header-mobile" class="default-header">
+		</header>
 
-				<a id="nav-mobile-menu" href="#"><img src="./images/mob-nav.png" alt="Menu" /></a>
+	  <div id="main" class="clearfix">
 
-			</header>
+			<div id="content">
+				<nav class="breadcrumb clearfix">
+					<ul class="breaedcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html">Home</a></li>
+						<li class="breadcrumb__item breadcrumb__item--current"><a href="news.html">News</a></li>
+					</ul>
+				</nav>
+				<!--End #breadcrumb-->
 
-		  <div id="main" class="clearfix">
+				<!-- start main slot where silva content gets rendered-->
 
-				<div id="content">
-					<nav class="breadcrumb clearfix">
-						<ul class="breaedcrumb__list">
-							<li class="breadcrumb__item"><a href="index.html">Home</a></li>
-							<li class="breadcrumb__item breadcrumb__item--current"><a href="news.html">News</a></li>
-						</ul>
-					</nav>
-					<!--End #breadcrumb-->
+				<div class="content-main">
+				<img class="xxl-image" src="http://lorempixel.com/1400/200" />
+					<img class="large-image" src="http://lorempixel.com/600/200" />
+							<h1>Main page title</h1>
 
-					<!-- start main slot where silva content gets rendered-->
+							<p>
+								<img class="float-right medium-image" src="http://lorempixel.com/400/200" />
+								<img class="float-right large-image" src="http://lorempixel.com/600/200" />
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel cursus ipsum. Nulla vehicula justo eu convallis consectetur. Mauris viverra sem augue, at aliquam felis maximus non. Nulla facilisi. Vestibulum maximus, sapien quis ornare dignissim, nibh risus placerat sapien, vitae rutrum nunc nulla eget libero. Curabitur dapibus, orci quis varius pharetra, ligula tellus tincidunt ligula, vel aliquet turpis tortor non purus. Aliquam sollicitudin ultrices lectus, eu suscipit odio bibendum nec. Phasellus id lobortis odio. Proin eleifend nibh et neque vulputate, quis malesuada velit ultricies.
+								<img class="float-left small-image" src="http://lorempixel.com/200/200" />
+								Sed sed scelerisque purus. Pellentesque pharetra pellentesque dolor vitae sollicitudin. Phasellus lacinia risus erat, sed sollicitudin tortor pulvinar quis. Donec malesuada, lorem eu tristique pulvinar, enim orci ornare urna, at egestas nibh augue id metus. Phasellus et luctus quam, et laoreet tellus. Nullam a sapien mauris. Maecenas placerat bibendum nibh eu imperdiet. Fusce efficitur eros et urna iaculis, quis tristique est condimentum. Curabitur viverra ex sem, sit amet egestas mi lacinia in. Fusce a tincidunt magna. Quisque arcu nunc, congue non est in, luctus facilisis metus. Phasellus dictum dui viverra, consequat massa varius, efficitur nisl. Ut eu lectus sed nulla eleifend ullamcorper.
+							</p>
+							<p>Testing an icon like on software database<img class="no-respond" src="http://swdb-dev.ucl.ac.uk/images/tick-circle.png"></p>
 
-					<div class="content-main">
-					<img class="xxl-image" src="http://lorempixel.com/1400/200" />
-						<img class="large-image" src="http://lorempixel.com/600/200" />
-								<h1>Main page title</h1>
-
-								<p>
-									<img class="float-right medium-image" src="http://lorempixel.com/400/200" />
-									<img class="float-right large-image" src="http://lorempixel.com/600/200" />
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel cursus ipsum. Nulla vehicula justo eu convallis consectetur. Mauris viverra sem augue, at aliquam felis maximus non. Nulla facilisi. Vestibulum maximus, sapien quis ornare dignissim, nibh risus placerat sapien, vitae rutrum nunc nulla eget libero. Curabitur dapibus, orci quis varius pharetra, ligula tellus tincidunt ligula, vel aliquet turpis tortor non purus. Aliquam sollicitudin ultrices lectus, eu suscipit odio bibendum nec. Phasellus id lobortis odio. Proin eleifend nibh et neque vulputate, quis malesuada velit ultricies.
-									<img class="float-left small-image" src="http://lorempixel.com/200/200" />
-									Sed sed scelerisque purus. Pellentesque pharetra pellentesque dolor vitae sollicitudin. Phasellus lacinia risus erat, sed sollicitudin tortor pulvinar quis. Donec malesuada, lorem eu tristique pulvinar, enim orci ornare urna, at egestas nibh augue id metus. Phasellus et luctus quam, et laoreet tellus. Nullam a sapien mauris. Maecenas placerat bibendum nibh eu imperdiet. Fusce efficitur eros et urna iaculis, quis tristique est condimentum. Curabitur viverra ex sem, sit amet egestas mi lacinia in. Fusce a tincidunt magna. Quisque arcu nunc, congue non est in, luctus facilisis metus. Phasellus dictum dui viverra, consequat massa varius, efficitur nisl. Ut eu lectus sed nulla eleifend ullamcorper.
-								</p>
-								<p>Testing an icon like on software database<img class="no-respond" src="http://swdb-dev.ucl.ac.uk/images/tick-circle.png"></p>
-
-						<p class="mod">Page last modified on <span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
-						</p>
-
-					</div>
-
-					<div class="content-sidebar">
-
-						<h1>Sidebar</h1>
-
-						<p>Supporting content, patterns or related links can be placed in the sidebar</p>
-
-						<img class="medium-image" src="http://lorempixel.com/400/200" />
-						<img class="small-image" src="http://lorempixel.com/200/200" />
-
-					</div>
-
-					<!-- end main slot where silva content gets rendered-->
+					<p class="mod">Page last modified on <span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
+					</p>
 
 				</div>
 
-				<!--End last modified info-->
+				<div class="content-sidebar">
+
+					<h1>Sidebar</h1>
+
+					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+
+					<img class="medium-image" src="http://lorempixel.com/400/200" />
+					<img class="small-image" src="http://lorempixel.com/200/200" />
+
+				</div>
+
+				<!-- end main slot where silva content gets rendered-->
+
 			</div>
 
+			<!--End last modified info-->
+		</div>
 
-		</div><!-- end #site-content -->
 
-		<footer class="wrapper clearfix">
+	</div><!-- end #site-content -->
 
-				<article class="block-myucl">
-					<h2>Facilities</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
-						<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
-						<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
-						<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
-						<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
-					</ul>
-				</article>
+	<footer class="footer wrapper clearfix">
 
-				<article class="block-finditfast1">
-					<h2>Locations</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
-						<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
-						<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
-					</ul>
-				</article>
+			<article class="block-myucl">
+				<h2>Facilities</h2>
+				<ul>
+					<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+			</article>
 
-				<article class="block-finditfast2">
-					<h2>Connect with us</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
-						<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
-						<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
-						<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
-						<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
-					</ul>
+			<article class="block-finditfast1">
+				<h2>Locations</h2>
+				<ul>
+					<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
+					<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+				</ul>
+			</article>
 
-				</article>
+			<article class="block-finditfast2">
+				<h2>Connect with us</h2>
+				<ul>
+					<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
+				</ul>
 
-				<hr>
+			</article>
 
-				<p>University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
+			<hr>
 
-				<p id="footer-links">Copyright © 2013 UCL <a href="#">Disclaimer</a> | <a href="#">Freedom of Information</a> | <a href="#">Accessibility</a> | <a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Contact Us</a></p>
+			<p>University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
 
-		</footer>
+			<p id="footer-links">Copyright © 2013 UCL <a href="#">Disclaimer</a> | <a href="#">Freedom of Information</a> | <a href="#">Accessibility</a> | <a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Contact Us</a></p>
+
+	</footer>
 
 </body>
 </html>
