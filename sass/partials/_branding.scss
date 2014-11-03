@@ -1,0 +1,31 @@
+/* 
+* Partial name: Branding
+* Use: 
+* Note:
+* Author: 
+-------------------------------------------------------------- */
+
+.branding {
+	position: absolute;
+	z-index: 1;
+	overflow: visible;
+	padding: 0 35px;
+	left: -35px;
+	width: 100%;
+	max-width: 1470px;
+	.branding__heading {
+		position: absolute;
+		left: 70px;
+		top: 25%;
+		color: #fff;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-family: Arial, sans-serif;
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+	img {
+		display: block;
+		margin-bottom: 0;
+	}
+}
