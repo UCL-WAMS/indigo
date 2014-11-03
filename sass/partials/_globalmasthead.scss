@@ -1,10 +1,18 @@
 /* Global Masthead
 -------------------------------------------------------------- */
 
-#global-masthead {
+.masthead {
 	background-color: #444;
 	font-size: 12px;
 	color: #fff;
+	height: 45px;
+	li {
+		display: inline;
+		margin-right: 1em;
+	}
+	img {
+		width: auto;
+	}
 	a {
 		color: #fff;
 		text-decoration: none;
@@ -30,23 +38,12 @@
 	padding-left: 0;
 }
 
-#global-masthead {
-	height: 45px;
-	li {
-		display: inline;
-		margin-right: 1em;
-	}
-	img {
-		width: auto;
-	}
-}
-
 /* Global Search
 -------------------------------------------------------------- */
 
 /* 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
 
-#global-search {
+.masthead__search {
 	position: relative;
 	padding: 6px 0 3px 0;
 	-moz-box-sizing: border-box;
