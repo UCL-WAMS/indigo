@@ -1,36 +1,32 @@
 /* Config */
 @import "../screen";
 
-/* Search */
+/* JDiBrief Unique Styles -------------------------------- */
 
-// @import "partials/search/_search";
+.photograph {
+    background-color: $lightblue;
+}
 
- /* JDiBrief Unique Styles -------------------------------- */
+@include gs-media(m, max) {
+    #header-mobile {
+        background-color: $lightblue;
+    }
+}
 
- .photograph {
- 	background-color: $lightblue;
- }
 
- @include gs-media(m, max) {
- 	#header-mobile {
- 		background-color: $lightblue;
- 	}
+.photograph-on {
+    background-image: url("images");
+    background-position-y: 0;
+}
 
- }
+.box {
+    border-top: 5px solid $lightblue;
+}
 
- .photograph-on {
- 	background-image: url("images");
- 	background-position-y: 0;
- }
+a, a:hover {
+    color: $lightblue;
+}
 
- .box {
- 	 border-top: 5px solid $lightblue;
- }
-
- a, a:hover {
- 	color: $lightblue;
- }
-
- .tag, .more {
- 	background-color: $lightblue;
- }
+.tag, .more {
+    background-color: $lightblue;
+}

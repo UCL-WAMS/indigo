@@ -1,131 +1,125 @@
 /* Config */
 @import "screen";
- /* Search */
 
-// @import "partials/search/_search";
+/* Design Language Unique Styles -------------------------------- */
 
- /* Design Language Unique Styles -------------------------------- */
+.photograph {
+    background-color: #622e78;
+}
 
-
- .photograph {
- 	background-color: #622e78;
- }
-
-
- /* Colour Boxouts */
+/* Colour Boxouts */
 
 .darkgreen {
-	background-color: $darkgreen;
+    background-color: $darkgreen;
 }
 
 .midgreen {
-	background-color: $midgreen;
+    background-color: $midgreen;
 }
 
 .brightgreen {
-	background-color: $brightgreen;
+    background-color: $brightgreen;
 }
 
 .lightgreen {
-	background-color: $lightgreen;
+    background-color: $lightgreen;
 }
 
 .yellow {
-	background-color: $yellow;
+    background-color: $yellow;
 }
 
 .darkred {
-	background-color: $darkred;
+    background-color: $darkred;
 }
 
 .midred {
-	background-color: $midred;
+    background-color: $midred;
 }
 
 .brightred {
-	background-color: $brightred;
+    background-color: $brightred;
 }
 
 .lightred {
-	background-color: $lightred;
+    background-color: $lightred;
 }
 
 .orange {
-	background-color: $orange;
+    background-color: $orange;
 }
 
 .darkpurple {
-	background-color: $darkpurple;
+    background-color: $darkpurple;
 }
 
 .midpurple {
-	background-color: $midpurple;
+    background-color: $midpurple;
 }
 
 .brightpink {
-	background-color: $brightpink;
+    background-color: $brightpink;
 }
 
 .lightpurple {
-	background-color: $lightpurple;
+    background-color: $lightpurple;
 }
 
 .warmgrey {
-	background-color: $warmgrey;
+    background-color: $warmgrey;
 }
 
 .darkblue {
-	background-color: $darkblue;
+    background-color: $darkblue;
 }
 
 .midblue {
-	background-color: $midblue;
+    background-color: $midblue;
 }
 
 .brightblue {
-	background-color: $brightblue;
+    background-color: $brightblue;
 }
 
 .lightblue {
-	background-color: $lightblue;
+    background-color: $lightblue;
 }
 
 .stone {
-	background-color: $stone;
+    background-color: $stone;
 }
 
 .darkbrown {
-	background-color: $darkbrown;
+    background-color: $darkbrown;
 }
 
-
 .colours {
-	color: #fff;
-	margin-bottom: 1em;
+    color: #fff;
+    margin-bottom: 1em;
 }
 
 .colours > div {
-	@include gs-pad(dl, padinfull);
-	padding-top: 10px;
-	padding-bottom: 10px;
+    @include gs-pad(dl, padinfull);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
- /* Type */
+/* Type */
 
 .roman {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 .thin {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 .bold {
-	font-weight: 700;
-	font-size: 1em;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 .italic {
-	font-style: italic;
-	font-size: 1em;
+    font-style: italic;
+    font-size: 1em;
 }
