@@ -41,7 +41,7 @@ header > div {
 /* Site Branding Structure
 -------------------------------------------------------------- */
 
-.header-wrap {
+.header {
 	position: relative;
 	z-index: 100;
 }
@@ -108,7 +108,7 @@ header > div {
 	#leftcol {
 		margin-top: 2em;
 	}
-	.header-wrap {
+	.header {
 		background-color: #5f5f5f;
 		position: absolute;
 		width: 100%;
@@ -202,7 +202,7 @@ header > div {
 			}
 		}
 	}
-	.mobile-open .header-wrap {
+	.mobile-open .header {
 		left: 0;
 	}
 	#header-mobile {
