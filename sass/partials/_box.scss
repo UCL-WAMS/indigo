@@ -8,8 +8,6 @@
 	padding-top: 0.5em;
 	padding-bottom: 1em;
 	@include gs-pad(dc, padinfull);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	position: relative;
 }

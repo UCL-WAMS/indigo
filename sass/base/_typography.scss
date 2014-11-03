@@ -235,6 +235,34 @@ del {
 /* Lists
 -------------------------------------------------------------- */
 
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled, %list-unstyled {
+	padding-left: 0;
+	margin-left: 0;
+	list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline, %list-inline {
+	@extend %list-unstyled;
+	display: inline;
+	> li {
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 15px;
+		&:after {
+			content: "|";
+			position: absolute;
+			margin-left: 10px;
+		}
+		&:last-child {
+			&:after {
+				content: "";
+			}
+		}
+	}
+}
+
 article ul {
 	margin-bottom: 2em;
 	li {

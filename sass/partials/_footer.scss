@@ -46,9 +46,12 @@
 }
 
 
-#footer-links {
+.footer__links {
 	font-size: 14px;
 	margin-top: 0.5em;
+	@media screen and (max-width: 989px) {
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 989px) {
@@ -57,8 +60,5 @@
 		padding-top: 2px;
 		font-size: 12px;
 		margin-left: 0;
-	}
-	#footer-links {
-		font-size: 12px;
 	}
 }
