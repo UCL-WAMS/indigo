@@ -242,29 +242,6 @@ input {
 
 /* UCL Banner
 -------------------------------------------------------------- */
-#branding {
-  position: absolute;
-  z-index: 1;
-  overflow: visible;
-  padding: 0 35px;
-  left: -35px;
-  width: 100%;
-  max-width: 1470px; }
-  #branding p {
-    position: absolute;
-    left: 70px;
-    top: 25%;
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    padding-top: 0.5em; }
-  #branding img {
-    display: block; }
-
-header > div {
-  position: relative; }
-
 .photograph {
   padding: 0 35px;
   background-color: #fff;
@@ -1968,6 +1945,34 @@ article p + .tabbed {
   border-bottom-style: solid; }
 
 /* 
+* Partial name: Branding
+* Use: 
+* Note:
+* Author: 
+-------------------------------------------------------------- */
+.branding {
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  padding: 0 35px;
+  left: -35px;
+  width: 100%;
+  max-width: 1470px; }
+  .branding .branding__heading {
+    position: absolute;
+    left: 70px;
+    top: 25%;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0;
+    font-weight: bold; }
+  .branding img {
+    display: block;
+    margin-bottom: 0; }
+
+/* 
 * Partial name: Map
 * Partial use:
 * Note: N/A
@@ -2084,8 +2089,7 @@ article p + .tabbed {
   border-style: solid;
   border-width: 0 0 1px 0;
   border-color: #ccc;
-  margin-bottom: .5em;
-  padding-bottom: 1em; }
+  margin-bottom: 1.5em; }
 
 .breadcrumb__list {
   margin-bottom: 0;
