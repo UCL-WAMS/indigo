@@ -1,48 +1,5 @@
 /* Config */
-@import "partials/environment";
-
-/* Variables */
-@import "variables/variables";
-
-/* Mixins */
-@import "mixins/media-query";
-@import "mixins/gridset";
-@import "mixins/gradient";
-@import "mixins/no-js";
-@import "mixins/modernizr";
-
-/* Helper classes */
-@import "utilities/helpers";
-
-/* Authored Dependencies */
-@import "base/reset";
-@import "base/layout";
-@import "base/typography";
-@import "base/links";
-@import "base/audio";
-@import "base/code";
-@import "base/forms";
-@import "base/tables";
-@import "base/images";
-
-/* Patterns */
-@import "partials/accordion";
-@import "partials/article";
-@import "partials/box";
-@import "partials/divider";
-@import "partials/map";
-@import "partials/slides";
-@import "partials/social";
-@import "partials/tabs";
-@import "partials/breadcrumb";
-@import "partials/wrapper";
-@import "partials/vcard";
-@import "partials/video";
-@import "partials/blog";
-@import "partials/elements";
-@import "partials/search";
-@import "partials/globalmasthead";
-
+@import "screen";
  /* Search */
 
 // @import "partials/search/_search";

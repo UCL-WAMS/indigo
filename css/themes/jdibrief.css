@@ -357,6 +357,8 @@ header > div {
       position: relative;
       left: 0;
       width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
     #nav-wrap #nav-mobile-back {
       display: block;
@@ -1145,6 +1147,8 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 textarea, #search-form {
   margin: 0.5em 0;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 0 1px 2px #e0e0e0 inset;
+  -moz-box-shadow: 0 1px 2px #e0e0e0 inset;
   box-shadow: 0 1px 2px #e0e0e0 inset;
   color: #333;
   width: 96%; }
@@ -1193,6 +1197,8 @@ textarea:focus {
   width: 63.85859%;
   padding-left: 0;
   padding-right: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 1.51515%;
   padding-right: 1.51515%; }
@@ -1224,6 +1230,8 @@ textarea:focus {
   display: block;
   padding-bottom: 10px;
   padding-top: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
@@ -1248,6 +1256,8 @@ textarea:focus {
   font-size: 16px;
   font-weight: 700;
   width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
@@ -1300,6 +1310,8 @@ input.error {
   background: #e0e0e0;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#e0e0e0));
   background: -webkit-linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: -moz-linear-gradient(#eee 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(#eee 0%, #e0e0e0 100%);
   background: linear-gradient(#eee 0%, #e0e0e0 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   color: #999;
@@ -1308,11 +1320,15 @@ input.error {
     background: #eee;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#eee));
     background: -webkit-linear-gradient(#ededed 0%, #eee 100%);
+    background: -moz-linear-gradient(#ededed 0%, #eee 100%);
+    background: -o-linear-gradient(#ededed 0%, #eee 100%);
     background: linear-gradient(#ededed 0%, #eee 100%); }
   .btn-gradient.disabled:active {
     background: #cccccc;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e4), to(#cccccc));
     background: -webkit-linear-gradient(#e8e8e4 0%, #cccccc 100%);
+    background: -moz-linear-gradient(#e8e8e4 0%, #cccccc 100%);
+    background: -o-linear-gradient(#e8e8e4 0%, #cccccc 100%);
     background: linear-gradient(#e8e8e4 0%, #cccccc 100%); }
 
 #main a[class*=btn] {
@@ -1338,126 +1354,168 @@ button {
   background: #555025;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#4d4820), to(#555025));
   background: -webkit-linear-gradient(#4d4820 0%, #555025 100%);
+  background: -moz-linear-gradient(#4d4820 0%, #555025 100%);
+  background: -o-linear-gradient(#4d4820 0%, #555025 100%);
   background: linear-gradient(#4d4820 0%, #555025 100%); }
 
 .btn-gradient.midgreen {
   background: #8f993e;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#9ca35f), to(#8f993e));
   background: -webkit-linear-gradient(#9ca35f 0%, #8f993e 100%);
+  background: -moz-linear-gradient(#9ca35f 0%, #8f993e 100%);
+  background: -o-linear-gradient(#9ca35f 0%, #8f993e 100%);
   background: linear-gradient(#9ca35f 0%, #8f993e 100%); }
 
 .btn-gradient.brightgreen {
   background: #b5bd00;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c9d10f), to(#b5bd00));
   background: -webkit-linear-gradient(#c9d10f 0%, #b5bd00 100%);
+  background: -moz-linear-gradient(#c9d10f 0%, #b5bd00 100%);
+  background: -o-linear-gradient(#c9d10f 0%, #b5bd00 100%);
   background: linear-gradient(#c9d10f 0%, #b5bd00 100%); }
 
 .btn-gradient.lightgreen {
   background: #bbc592;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c9d3a1), to(#bbc592));
   background: -webkit-linear-gradient(#c9d3a1 0%, #bbc592 100%);
+  background: -moz-linear-gradient(#c9d3a1 0%, #bbc592 100%);
+  background: -o-linear-gradient(#c9d3a1 0%, #bbc592 100%);
   background: linear-gradient(#c9d3a1 0%, #bbc592 100%); }
 
 .btn-gradient.yellow {
   background: #f6be00;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd030), to(#f6be00));
   background: -webkit-linear-gradient(#ffd030 0%, #f6be00 100%);
+  background: -moz-linear-gradient(#ffd030 0%, #f6be00 100%);
+  background: -o-linear-gradient(#ffd030 0%, #f6be00 100%);
   background: linear-gradient(#ffd030 0%, #f6be00 100%); }
 
 .btn-gradient.darkred {
   background: #651d32;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#792f44), to(#651d32));
   background: -webkit-linear-gradient(#792f44 0%, #651d32 100%);
+  background: -moz-linear-gradient(#792f44 0%, #651d32 100%);
+  background: -o-linear-gradient(#792f44 0%, #651d32 100%);
   background: linear-gradient(#792f44 0%, #651d32 100%); }
 
 .btn-gradient.midred {
   background: #93272c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#a3383d), to(#93272c));
   background: -webkit-linear-gradient(#a3383d 0%, #93272c 100%);
+  background: -moz-linear-gradient(#a3383d 0%, #93272c 100%);
+  background: -o-linear-gradient(#a3383d 0%, #93272c 100%);
   background: linear-gradient(#a3383d 0%, #93272c 100%); }
 
 .btn-gradient.brightred {
   background: #d50000;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#e21111), to(#d50000));
   background: -webkit-linear-gradient(#e21111 0%, #d50000 100%);
+  background: -moz-linear-gradient(#e21111 0%, #d50000 100%);
+  background: -o-linear-gradient(#e21111 0%, #d50000 100%);
   background: linear-gradient(#e21111 0%, #d50000 100%); }
 
 .btn-gradient.lightred {
   background: #e03c31;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ec6258), to(#e03c31));
   background: -webkit-linear-gradient(#ec6258 0%, #e03c31 100%);
+  background: -moz-linear-gradient(#ec6258 0%, #e03c31 100%);
+  background: -o-linear-gradient(#ec6258 0%, #e03c31 100%);
   background: linear-gradient(#ec6258 0%, #e03c31 100%); }
 
 .btn-gradient.orange {
   background: #ea7600;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9120), to(#ea7600));
   background: -webkit-linear-gradient(#ff9120 0%, #ea7600 100%);
+  background: -moz-linear-gradient(#ff9120 0%, #ea7600 100%);
+  background: -o-linear-gradient(#ff9120 0%, #ea7600 100%);
   background: linear-gradient(#ff9120 0%, #ea7600 100%); }
 
 .btn-gradient.darkpurple {
   background: #4b384c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#543e55), to(#4b384c));
   background: -webkit-linear-gradient(#543e55 0%, #4b384c 100%);
+  background: -moz-linear-gradient(#543e55 0%, #4b384c 100%);
+  background: -o-linear-gradient(#543e55 0%, #4b384c 100%);
   background: linear-gradient(#543e55 0%, #4b384c 100%); }
 
 .btn-gradient.midpurple {
   background: #500778;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#641391), to(#500778));
   background: -webkit-linear-gradient(#641391 0%, #500778 100%);
+  background: -moz-linear-gradient(#641391 0%, #500778 100%);
+  background: -o-linear-gradient(#641391 0%, #500778 100%);
   background: linear-gradient(#641391 0%, #500778 100%); }
 
 .btn-gradient.brightpink {
   background: #ac145a;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c01d68), to(#ac145a));
   background: -webkit-linear-gradient(#c01d68 0%, #ac145a 100%);
+  background: -moz-linear-gradient(#c01d68 0%, #ac145a 100%);
+  background: -o-linear-gradient(#c01d68 0%, #ac145a 100%);
   background: linear-gradient(#c01d68 0%, #ac145a 100%); }
 
 .btn-gradient.lightpurple {
   background: #c6b0bc;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#dbc0cf), to(#c6b0bc));
   background: -webkit-linear-gradient(#dbc0cf 0%, #c6b0bc 100%);
+  background: -moz-linear-gradient(#dbc0cf 0%, #c6b0bc 100%);
+  background: -o-linear-gradient(#dbc0cf 0%, #c6b0bc 100%);
   background: linear-gradient(#dbc0cf 0%, #c6b0bc 100%); }
 
 .btn-gradient.warmgrey {
   background: #8c8279;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#9c9188), to(#8c8279));
   background: -webkit-linear-gradient(#9c9188 0%, #8c8279 100%);
+  background: -moz-linear-gradient(#9c9188 0%, #8c8279 100%);
+  background: -o-linear-gradient(#9c9188 0%, #8c8279 100%);
   background: linear-gradient(#9c9188 0%, #8c8279 100%); }
 
 .btn-gradient.darkblue {
   background: #003d4c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#074453), to(#003d4c));
   background: -webkit-linear-gradient(#074453 0%, #003d4c 100%);
+  background: -moz-linear-gradient(#074453 0%, #003d4c 100%);
+  background: -o-linear-gradient(#074453 0%, #003d4c 100%);
   background: linear-gradient(#074453 0%, #003d4c 100%); }
 
 .btn-gradient.midblue {
   background: #002855;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#0f427a), to(#002855));
   background: -webkit-linear-gradient(#0f427a 0%, #002855 100%);
+  background: -moz-linear-gradient(#0f427a 0%, #002855 100%);
+  background: -o-linear-gradient(#0f427a 0%, #002855 100%);
   background: linear-gradient(#0f427a 0%, #002855 100%); }
 
 .btn-gradient.brightblue {
   background: #0097a9;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#0cadc0), to(#0097a9));
   background: -webkit-linear-gradient(#0cadc0 0%, #0097a9 100%);
+  background: -moz-linear-gradient(#0cadc0 0%, #0097a9 100%);
+  background: -o-linear-gradient(#0cadc0 0%, #0097a9 100%);
   background: linear-gradient(#0cadc0 0%, #0097a9 100%); }
 
 .btn-gradient.lightblue {
   background: #8db9ca;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#a5cddd), to(#8db9ca));
   background: -webkit-linear-gradient(#a5cddd 0%, #8db9ca 100%);
+  background: -moz-linear-gradient(#a5cddd 0%, #8db9ca 100%);
+  background: -o-linear-gradient(#a5cddd 0%, #8db9ca 100%);
   background: linear-gradient(#a5cddd 0%, #8db9ca 100%); }
 
 .btn-gradient.stone {
   background: #d6d2c4;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#e0ddd1), to(#d6d2c4));
   background: -webkit-linear-gradient(#e0ddd1 0%, #d6d2c4 100%);
+  background: -moz-linear-gradient(#e0ddd1 0%, #d6d2c4 100%);
+  background: -o-linear-gradient(#e0ddd1 0%, #d6d2c4 100%);
   background: linear-gradient(#e0ddd1 0%, #d6d2c4 100%); }
 
 .btn-gradient.darkbrown {
   background: #4e3629;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#5f4436), to(#4e3629));
   background: -webkit-linear-gradient(#5f4436 0%, #4e3629 100%);
+  background: -moz-linear-gradient(#5f4436 0%, #4e3629 100%);
+  background: -o-linear-gradient(#5f4436 0%, #4e3629 100%);
   background: linear-gradient(#5f4436 0%, #4e3629 100%); }
 
 /* Gradient button background color on click
@@ -1829,9 +1887,13 @@ article p + .tabbed {
   overflow: hidden;
   padding-top: 0.5em;
   padding-bottom: 1em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative; }
 
@@ -1947,6 +2009,8 @@ article p + .tabbed {
 
 .tabbed > div {
   border: 10px solid #444;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
@@ -2200,6 +2264,8 @@ article > footer a:hover {
 #global-search {
   position: relative;
   padding: 6px 0 3px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
   width: 42%; }
@@ -2215,6 +2281,8 @@ article > footer a:hover {
     line-height: 1;
     margin: 5px 0 0 0;
     padding: 0.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #4693ea;
     font-size: 12px;
@@ -2228,6 +2296,8 @@ article > footer a:hover {
     padding: 0 20px 0 0;
     margin: 0;
     float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: right; }
   @media only screen and (max-width: 767px) {
@@ -2244,11 +2314,15 @@ article > footer a:hover {
   top: 0;
   left: 0;
   width: 85%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   #searchform input {
     margin-right: 0;
     padding-left: 10px;
     width: 85%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   @media only screen and (max-width: 767px) {
     #searchform {
@@ -2260,96 +2334,24 @@ article > footer a:hover {
 
 /* END: 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
 /* Search */
-/* Design Language Unique Styles -------------------------------- */
+/* JDiBrief Unique Styles -------------------------------- */
 .photograph {
-  background-color: #622e78; }
-
-/* Colour Boxouts */
-.darkgreen {
-  background-color: #555025; }
-
-.midgreen {
-  background-color: #8f993e; }
-
-.brightgreen {
-  background-color: #b5bd00; }
-
-.lightgreen {
-  background-color: #bbc592; }
-
-.yellow {
-  background-color: #f6be00; }
-
-.darkred {
-  background-color: #651d32; }
-
-.midred {
-  background-color: #93272c; }
-
-.brightred {
-  background-color: #d50000; }
-
-.lightred {
-  background-color: #e03c31; }
-
-.orange {
-  background-color: #ea7600; }
-
-.darkpurple {
-  background-color: #4b384c; }
-
-.midpurple {
-  background-color: #500778; }
-
-.brightpink {
-  background-color: #ac145a; }
-
-.lightpurple {
-  background-color: #c6b0bc; }
-
-.warmgrey {
-  background-color: #8c8279; }
-
-.darkblue {
-  background-color: #003d4c; }
-
-.midblue {
-  background-color: #002855; }
-
-.brightblue {
-  background-color: #0097a9; }
-
-.lightblue {
   background-color: #8db9ca; }
 
-.stone {
-  background-color: #d6d2c4; }
+@media only screen and (max-width: 767px) {
+  #header-mobile {
+    background-color: #8db9ca; } }
+.photograph-on {
+  background-image: url("images");
+  background-position-y: 0; }
 
-.darkbrown {
-  background-color: #4e3629; }
+.box {
+  border-top: 5px solid #8db9ca; }
 
-.colours {
-  color: #fff;
-  margin-bottom: 1em; }
+a, a:hover {
+  color: #8db9ca; }
 
-.colours > div {
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+.tag, .more {
+  background-color: #8db9ca; }
 
-/* Type */
-.roman {
-  font-size: 1em; }
-
-.thin {
-  font-size: 1em; }
-
-.bold {
-  font-weight: 700;
-  font-size: 1em; }
-
-.italic {
-  font-style: italic;
-  font-size: 1em; }
+/*# sourceMappingURL=jdibrief.css.map */
