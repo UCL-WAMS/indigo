@@ -91,14 +91,14 @@
 
 */
 /* Helper classes */
-.unset-list {
+.breadcrumb__list, .unset-list {
   margin-left: 0;
   padding-left: 0;
   list-style: none; }
-  .unset-list li {
+  .breadcrumb__list li, .unset-list li {
     margin-left: 0;
     list-style-type: none; }
-    .unset-list li:before {
+    .breadcrumb__list li:before, .unset-list li:before {
       background-color: transparent !important; }
 
 .zero {
@@ -711,6 +711,12 @@ nav.topnav {
       .mobilenav ul:nth-child(n+2) {
         padding-left: 1em; } }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 90%;
+  position: relative; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333333;
@@ -928,11 +934,11 @@ del {
   .list-inline > li {
     display: inline-block;
     vertical-align: middle;
-    padding-right: 20px; }
+    padding-right: 10px; }
     .list-inline > li:after {
       content: "|";
       position: absolute;
-      margin-left: 10px; }
+      margin-left: 5px; }
     .list-inline > li:last-child:after {
       content: ""; }
 
@@ -942,16 +948,16 @@ article ul {
     list-style: none;
     position: relative;
     margin-bottom: 1em; }
-  article ul li:before {
-    content: "";
-    display: block;
-    background-color: #333;
-    border-radius: 50%;
-    height: 0.35em;
-    width: 0.35em;
-    position: absolute;
-    left: -0.8em;
-    top: 0.6em; }
+    article ul li:before {
+      content: "";
+      display: block;
+      background-color: #333;
+      border-radius: 50%;
+      height: 0.35em;
+      width: 0.35em;
+      position: absolute;
+      left: -0.8em;
+      top: 0.6em; }
 
 @media only screen and (max-width: 767px) {
   article ul li {
@@ -994,10 +1000,10 @@ article ul li li {
 ol li {
   list-style-type: decimal;
   margin-bottom: 1em; }
+  @media only screen and (max-width: 767px) {
+    ol li {
+      margin-left: 1.5em; } }
 
-@media only screen and (max-width: 767px) {
-  ol li {
-    margin-left: 1.5em; } }
 ol li ol {
   margin-top: 1em; }
 
@@ -1150,6 +1156,62 @@ fieldset.options ul {
 
 /* Form fields
 -------------------------------------------------------------- */
+input, textarea {
+  font-size: 14px;
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  box-sizing: border-box;
+  color: #333; }
+
+input[type=submit] {
+  cursor: pointer; }
+
+input, select {
+  outline: 0; }
+  input:focus, select:focus {
+    outline: 0; }
+
+input:disabled {
+  cursor: not-allowed; }
+
+input[type=text],
+input[type=search] {
+  padding-top: 0.53571em;
+  padding-bottom: 0.53571em;
+  font-size: 14px;
+  line-height: 1;
+  color: #333;
+  border: 1px solid #aba690;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  input[type=text]:focus,
+  input[type=search]:focus {
+    outline: none; }
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: baseline;
+  background: none;
+  border: none; }
+
+input[type=checkbox] {
+  border-radius: 4px; }
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=reset],
+input[type=search],
+input[type=submit] {
+  -webkit-appearance: none; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="tel"], input[type="number"], input.title,
 textarea, #search-form {
   margin: 0.5em 0;
@@ -1276,7 +1338,7 @@ input.error {
 
 /* Buttons
 -------------------------------------------------------------- */
-[class*=btn] {
+.btn {
   background-color: #666;
   color: #fff;
   text-align: center;
@@ -1290,20 +1352,17 @@ input.error {
   border: 1px solid rgba(0, 0, 0, 0.21);
   border-radius: 4px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  font-weight: bold;
   font-size: 14px; }
-  [class*=btn]:hover, [class*=btn] :focus {
-    background-color: #615957; }
-  [class*=btn]:active {
+  .btn:hover, .btn:focus {
+    background-color: #615957;
+    color: #fff;
+    text-decoration: none; }
+  .btn:active {
     background-color: #505050; }
 
 .btn-small {
   padding: 8px 20px 8px 20px;
   font-size: 12px; }
-
-[class*=btn]:hover {
-  color: #fff;
-  text-decoration: none; }
 
 .btn-gradient.disabled {
   background: #e0e0e0;
@@ -1323,9 +1382,6 @@ input.error {
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e4), to(#cccccc));
     background: -webkit-linear-gradient(#e8e8e4 0%, #cccccc 100%);
     background: linear-gradient(#e8e8e4 0%, #cccccc 100%); }
-
-#main a[class*=btn] {
-  color: #fff; }
 
 button {
   background: #40403e;
@@ -1727,7 +1783,11 @@ img.float-right {
   width: auto !important; }
 
 /* Patterns */
-/* Accordion
+/* 
+* Partial name: Accordion
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .accordion {
   margin-top: 1em;
@@ -1764,7 +1824,11 @@ img.float-right {
   /* ensure accordion nav is hidden and content is visible on desktop version */
   .accordion-content {
     display: block !important; } }
-/* Articles
+/* 
+* Partial name: Article
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 article {
   margin-bottom: 1em; }
@@ -1802,7 +1866,11 @@ article p + .tabbed {
   font-size: 13px;
   font-weight: bold; }
 
-/* Box/Container
+/* 
+* Partial name: Box
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .box {
   border-top: 5px solid #000;
@@ -1829,6 +1897,12 @@ article p + .tabbed {
   font-size: 14px;
   background-color: #B5BD00; }
 
+/* 
+* Partial name: Blurb
+* Partial use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 .blurb {
   position: relative;
   padding-bottom: 1em;
@@ -1871,7 +1945,11 @@ article p + .tabbed {
       margin-left: 0;
       width: 100%; } }
 
-/* Divider
+/* 
+* Partial name: Divider
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 [class*=divider] {
   border-color: #ddd; }
@@ -1888,12 +1966,20 @@ article p + .tabbed {
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
-/* Map
+/* 
+* Partial name: Map
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .map {
   margin-top: 1em; }
 
-/* Slideshow
+/* 
+* Partial name: Slides
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .rslides {
   position: relative;
@@ -1928,12 +2014,20 @@ article p + .tabbed {
 .rslides li:before {
   display: none; }
 
-/* Social
+/* 
+* Partial name: Social
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .addthis_toolbox {
   margin-bottom: 2em; }
 
-/* Tabs
+/* 
+* Partial name: Tabs
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .tabbed__content {
   box-sizing: border-box;
@@ -1972,34 +2066,42 @@ article p + .tabbed {
     text-decoration: none;
     color: #fff; }
 
-/* Breadcrumbs
+/* 
+* Partial name: Breadcrumbs
+* Use: For highlighting where a user is within the site. Doubles up as a navigation
+* Note: Only mobile the user will only ever see the last 3 items in the breadcrumb trail
+* Author: 
 -------------------------------------------------------------- */
 .breadcrumb {
-  margin-bottom: 2em;
   display: block;
   overflow: hidden;
-  margin-left: 0;
+  margin-bottom: 0;
   list-style: none;
+  border: 0;
+  padding-bottom: 0;
+  background: white;
   border-style: solid;
   border-width: 0 0 1px 0;
   border-color: #ccc;
+  margin-bottom: .5em;
   padding-bottom: 1em; }
 
 .breadcrumb__list {
-  margin: 0; }
+  margin-bottom: 0;
+  display: inline-block; }
 
 .breadcrumb__item {
   margin: 0;
   float: left;
-  font-size: 0.6875em;
-  text-transform: uppercase; }
-  .breadcrumb__item:before {
+  font-size: 0.9em;
+  text-transform: none; }
+  .breadcrumb__item:after {
     content: "/";
     color: #aaaaaa;
     margin: 0 0.75em;
     position: relative;
     top: 1px; }
-  .breadcrumb__item:first-child:before {
+  .breadcrumb__item:last-child:after {
     content: " ";
     margin: 0; }
 
@@ -2008,15 +2110,11 @@ article p + .tabbed {
   cursor: default;
   color: #333333; }
 
-/* Wrapper
--------------------------------------------------------------- */
-.wrapper {
-  margin: 0 auto;
-  max-width: 1400px;
-  width: 90%;
-  position: relative; }
-
-/* vCard
+/* 
+* Partial name: Vcard
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .vcard {
   display: inline-block;
@@ -2031,7 +2129,11 @@ article p + .tabbed {
   font-weight: bold;
   font-size: 0.9375em; }
 
-/* Responsive video
+/* 
+* Partial name: Video
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .responsive-container {
   position: relative;
@@ -2047,7 +2149,11 @@ article p + .tabbed {
   width: 100%;
   height: 100%; }
 
-/* Blog comments + Blog specifics
+/* 
+* Partial name: Blog
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 ol.commentlist {
   list-style: none;
@@ -2167,7 +2273,17 @@ article > footer a:hover {
     background: url(/images/open.png);
     background-repeat: no-repeat;
     background-position: right 50%; } }
-/* Global Masthead
+/* 
+* Partial name: Search
+* Partial use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+/* 
+* Partial name: Masthead
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .masthead {
   background-color: #444;
@@ -2214,15 +2330,18 @@ article > footer a:hover {
   .masthead__search .search {
     position: absolute;
     top: 0;
-    left: 88%;
-    width: 12%;
+    left: 92%;
+    width: 8%;
     line-height: 1;
-    margin: 5px 0 0 0;
-    padding: 0.75em;
+    margin: 7px 0 3px;
+    padding: 0;
     box-sizing: border-box;
     background: #4693ea;
-    font-size: 12px;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    font-size: 1.2em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    height: 30px; }
   .masthead__search .search:hover {
     background: #034da1;
     border-color: #034da1; }
@@ -2240,20 +2359,22 @@ article > footer a:hover {
       width: 20%; } }
 
 #searchform {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
   padding: 0;
   background-color: #fff;
   margin-top: 7px;
   margin-bottom: 7px;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 85%;
+  left: 40%;
+  width: 50%;
   box-sizing: border-box; }
   #searchform input {
     margin-right: 0;
     padding-left: 10px;
     width: 85%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    height: 30px; }
   @media only screen and (max-width: 767px) {
     #searchform {
       width: 75%; } }
@@ -2262,7 +2383,11 @@ article > footer a:hover {
   float: left;
   width: 55%; }
 
-/* Footer
+/* 
+* Partial name: Footer
+* Partial use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .footer {
   background: black;

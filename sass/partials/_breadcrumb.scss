@@ -1,41 +1,48 @@
 /* 
-* Partial name: 
-* Partial use:
-* Note: N/A
+* Partial name: Breadcrumbs
+* Use: For highlighting where a user is within the site. Doubles up as a navigation
+* Note: Only mobile the user will only ever see the last 3 items in the breadcrumb trail
 * Author: 
 -------------------------------------------------------------- */
 
 .breadcrumb {
-	margin-bottom: 2em;
 	display: block;
 	overflow: hidden;
-	margin-left: 0;
+	margin-bottom: 0;
 	list-style: none;
+	border:0;
+	padding-bottom: 0;
+	background: white;
 	border-style: solid;
 	border-width: 0 0 1px 0;
-	border-color: $ruleColor;
+	border-color: #ccc;
+	margin-bottom: .5em;
 	padding-bottom: 1em;
 }
 
 .breadcrumb__list {
-	margin: 0;
-}
+	@extend %unset-list;
+	margin-bottom: 0;
+	display: inline-block;
+}	
 
 .breadcrumb__item {
 	margin: 0;
 	float: left;
-	font-size: 0.6875em;
-	text-transform: uppercase;
-	&:before {
+	font-size: 0.9em;
+	text-transform: none;
+
+	&:after {
 		content: "/";
 		color: #aaaaaa;
 		margin: 0 0.75em;
 		position: relative;
-		top: 1px;
+		top: 1px; 
 	}
-	&:first-child:before {
+
+	&:last-child:after {
 		content: " ";
-		margin: 0;
+		margin: 0; 
 	}
 }
 

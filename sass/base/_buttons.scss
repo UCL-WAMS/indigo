@@ -1,7 +1,7 @@
 /* Buttons
 -------------------------------------------------------------- */
 
-[class*=btn] {
+.btn {
 	background-color: #666;
 	color: #fff;
 	text-align: center;
@@ -16,8 +16,10 @@
 	border-radius: 4px;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 	font-size: 14px;
-	&:hover,:focus {
+	&:hover, &:focus {
 		background-color: $hoverButton;
+		color: #fff;
+		text-decoration: none;
 	}
 	&:active {
 		background-color: $activeButton;
@@ -27,11 +29,6 @@
 .btn-small {
 	padding: 8px 20px 8px 20px;
 	font-size: 12px;
-}
-
-[class*=btn]:hover {
-	color: #fff;
-	text-decoration: none;
 }
 
 .btn-gradient.disabled {
@@ -46,12 +43,6 @@
 		@include gradient($disabled-act-btn-grad1, $disabled-act-btn-grad2);
 	}
 }
-
-#main a[class*=btn] {
-	color: #fff;
-}
-
-$buttonPadding: 0.7rem;
 
 button {
 	background: $button-bg-col;
