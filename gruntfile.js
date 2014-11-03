@@ -55,7 +55,7 @@ grunt.config.init({
 			files: [{
 				expand: true,
 				cwd: '<%= pkg.styleSrcDir %>',
-				src: ['*.scss'],
+				src: '**/*.scss',
 				dest: '<%= pkg.styleDestDir %>',
 				ext: '.css'
 			}]
@@ -70,7 +70,7 @@ grunt.config.init({
 			},
 		},
 		sass:{
-			files: ['<%= pkg.styleSrcDir %>/*.scss'],
+			files: ['<%= pkg.styleSrcDir %>/**/*.scss'],
 			tasks: ['sass:dist','autoprefixer','cssmin']
 		}
 	},
