@@ -13,44 +13,6 @@ article p + .tabbed {
 	margin-top: 2em;
 }
 
-[class*=blurb] {
-	position: relative;
-	padding-bottom: 1em;
-	overflow: hidden;
-	h2 {
-		font-size: 16px;
-		margin-top: 0;
-		font-weight: 700;
-	}
-	img {
-		margin-bottom: 0.5em;
-	}
-}
-
-[class*=blurb-wide] img {
-	@include gs-span(dc, 1);
-}
-
-@include gs-media(m, max) {
-	[class*=blurb-wide] img {
-		@include gs-span(m, all);
-	}
-}
-
-
-[class*=blurb-wide] div {
-	@include gs-span(dc, 2, 4);
-	top: -4px;
-	position: relative;
-}
-
-@include gs-media(m, max) {
-	[class*=blurb-wide] div {
-		@include gs-span(m, all);
-	}
-}
-
-
 .flag, .more {
 	padding: 5px;
 	color: #fff;
