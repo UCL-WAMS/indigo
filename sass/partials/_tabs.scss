@@ -1,11 +1,20 @@
 /* Tabs
 -------------------------------------------------------------- */
 
-.tabs {
+.tabbed {}
+
+.tabbed__content {
+	@include gs-pad(dc, padinfull);
+	border: 10px solid #444;
+	padding-top: 10px;
+	padding-bottom: 2em;
+}
+
+.tabbed__list {
 	margin-bottom: 0;
 }
 
-.tabs li {
+.tabbed__item {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -17,33 +26,21 @@
 	padding: 10px 15px;
 	margin-right: 5px;
 	border-bottom: 5px solid #fff;
+	&:before {
+		display: none;
+	}
+	&.active {
+		border-bottom: 5px solid #444;
+	}
 }
 
-.tabs li a {
+.tabbed__link {
+	display: block;
 	font-size: 14px;
 	font-weight: bold;
 	color: #fff;
-}
-
-.tabs li a:hover {
-	text-decoration: none;
-}
-
-.tabs li.active {
-	border-bottom: 5px solid #444;
-}
-
-.tabs li:before {
-	display: none;
-}
-
-.tabs li a {
-	display: block;
-}
-
-.tabbed > div {
-	border: 10px solid #444;
-	@include gs-pad(dc, padinfull);
-	padding-top: 10px;
-	padding-bottom: 2em;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
 }
