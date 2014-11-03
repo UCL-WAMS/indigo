@@ -3,10 +3,13 @@ body {
 	color: #333333;
 	font-size: 16px;
 	font-size: 1.6rem;
-	line-height: 1.5;
 	background-color: #d9d9d1;
 	overflow-x: hidden;
+	line-height: 1.7;
+	hyphens: auto;
 	-ms-hyphens: none;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: none;
 }
 
 .content-sidebar {
@@ -16,60 +19,69 @@ body {
 /* Headings
 -------------------------------------------------------------- */
 
-h1 {
-	font-size: 36px;
-	font-weight: normal;
-	margin-bottom: 0.5em;
-	line-height: 1.25;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+    margin-bottom: 1.5em;
+    line-height: 1.5; 
 }
 
-@include gs-media(m, max) {
-	h1 {
-		font-size: 32px;
-	}
+h1, h2, h3, h4, h5, h6 { 
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+h1, .as-h1, %as-h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    line-height: 1.5;
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.75em;
+    // }
 }
 
 
-.content-sidebar h1 {
-	font-size: 26px;
+h2, .as-h2, %as-h2 {    
+    font-size: 2em; 
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.5em;
+    // }
 }
 
-p + h1, figure + h1 {
-	margin-top: 1em;
+
+h3, .as-h3, %as-h3 { 
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.4em;
+    // }
 }
 
-h2, lh {
-	font-size: 1.3em;
-	margin: 1em 0 0.3em;
-	font-weight: normal;
+h4, .as-h4, %as-h4 { 
+    font-size: 1.2em; 
+    text-transform: none;
+    letter-spacing: 0;
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1em;
+    // }
 }
 
-h3 {
-	margin: 1em 0 0;
-	font-weight: 700;
+
+h5, .as-h5, %as-h5  {
+    font-style: normal;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
-h4 {
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	font-size: 0.85em;
-	margin: 1em 0 0;
+h6, .as-h6, %as-h6 {
+    color: #999;
+    margin: 1em 0 0;
 }
 
-h2 + h3 {
-	margin-top: 0;
-}
-
-h5 {
-	font-style: italic;
-	margin: 1em 0 0;
-}
-
-h6 {
-	color: #999;
-	margin: 1em 0 0;
-}
 
 h3 + ul, h3 + ol, h3 + dl {
 	margin-top: 0.5em;
@@ -86,6 +98,11 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .box h2 {
 	margin-top: 0;
 }
+
+.content-sidebar h1 {
+	font-size: 26px;
+}
+
 
 /* Quotes
 -------------------------------------------------------------- */
@@ -249,7 +266,7 @@ del {
 	> li {
 		display: inline-block;
 		vertical-align: middle;
-		padding-right: 15px;
+		padding-right: 20px;
 		&:after {
 			content: "|";
 			position: absolute;
