@@ -7,12 +7,12 @@
 	width: 100%;
 }
 
-.vcard li {
+.vcard__item {
 	margin-bottom: 0.5em;
 	display: block;
 }
 
-.vcard .fn {
+.vcard__item--fn {
 	font-weight: bold;
 	font-size: 0.9375em;
 }
