@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 	<meta charset=utf-8 />
@@ -27,7 +28,8 @@
 
 	<header class="header">
 
-		<a id="nav-mobile-back" href="#"><img src="../images/close.png" alt="X" /> Close</a>
+		<a id="nav-mobile-back" href="#">
+			<img src="../images/close.png" alt="X" />Close</a>
 
 		<div class="masthead">
 
@@ -35,7 +37,7 @@
 
 				<div class="masthead__search">
 					<form action="#" method="get">
-							<!--
+						<!--
 							<div class="search-type">
 								<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
 								<label for="ucl-site" class="site">Site</label>
@@ -53,10 +55,14 @@
 
 				<nav class="masthead__nav m-clear">
 					<ul>
-						<li><a href="index.php">UCL Home</a></li>
-						<li><a href="prospective-students.php">Prospective students</a></li>
-						<li><a href="current-students.php">Current students</a></li>
-						<li><a href="staff.php">Staff</a></li>
+						<li><a href="index.php">UCL Home</a>
+						</li>
+						<li><a href="prospective-students.php">Prospective students</a>
+						</li>
+						<li><a href="current-students.php">Current students</a>
+						</li>
+						<li><a href="staff.php">Staff</a>
+						</li>
 					</ul>
 				</nav>
 
@@ -81,274 +87,324 @@
 
 				</div>
 
-			</div><!-- end .photograph -->
+			</div>
+			<!-- end .photograph -->
 
 			<div id="leftcol">
 
 				<nav class="nav--left">
 					<ul>
 
-						<li><a href="index.html" class="home-link">Home</a></li>
+						<li><a href="index.html" class="home-link">Home</a>
+						</li>
 
 						<li><a href="#">Main navigation items</a>
 
 							<ul>
-								<li><a href="#">Lists can be nested</a></li>
+								<li><a href="#">Lists can be nested</a>
+								</li>
 
-								<li><a href="#">Lists can be nested</a></li>
+								<li><a href="#">Lists can be nested</a>
+								</li>
 							</ul>
 
 						</li>
 
-						<li><a href="#">Main navigation items</a></li>
+						<li><a href="#">Main navigation items</a>
+						</li>
 
 					</ul>
 
 
 				</nav>
 
-			</div> <!-- end #leftcol -->
-
-		</div> <!-- end .wrapper -->
-
-	</header><!-- end .header -->
-
-<div class="site-content wrapper">
-
-	<header id="header-mobile">
-
-		<a id="nav-mobile-menu" href="#"><img src="./images/mob-nav.png" alt="Menu" /></a>
-
-	</header>
-
-	<div class="site-content__body clearfix">
-
-		<div id="content">
-
-			<nav class="breadcrumb clearfix">
-
-				<ul class="breadcrumb__list">
-					<li class="breadcrumb__item"><a href="index.html">Home</a></li>
-				</ul>
-
-			</nav>
-			<!--End #breadcrumb-->
-
-			<!-- start main slot where silva content gets rendered-->
-
-			<div class="content-main">
-
-				<form action="#">
-					<fieldset>
-
-						<div class="message"><p>Message box</p></div>
-
-						<div class="message message--warning"><p>Warning message box</p></div>
-
-						<div class="message message--success"><p>Success message box</p></div>
-
-						<fieldset>
-							<label for="text">Text Input <abbr title="Required">*</abbr></label>
-							<input type="text" class="text" id="text">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="text">Text Input Error States <abbr title="Required">*</abbr></label>
-							<input type="text" class="text error" id="text">
-							<em class="error">Password is incorrect</em>
-						</fieldset>
-						<fieldset class="inline">
-							<label for="text">Inline Text Input <abbr title="Required">*</abbr></label>
-							<input type="text" class="text" id="text">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset class="prepend">
-							<label for="text">Text Input with prepended label <abbr title="Required">*</abbr></label>
-							<span>Prepended label</span><input type="text" class="text" id="text">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="password">Password</label>
-							<input type="password" class="text" id="password">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="url">Web Address</label>
-							<input type="url" class="text" id="url" placeholder="http://">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<legend>Personal Information:</legend>
-							<label for="email">Email Address</label>
-							<input type="email" class="text" id="email" placeholder="bob.smith@ucl.ac.uk">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="birthday">Birthday</label>
-							<input type="date" name="bday" id="birthday" >
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="phone">Telephone Number</label>
-							<input type="tel" class="text" id="phone" placeholder="+44">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="phone">Quantity</label>
-							<input type="number" name="quantity" min="1" max="5">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="phone">Range</label>
-							<input type="range" name="points" min="1" max="5">
-							<em>Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="textarea">Textarea</label>
-							<textarea cols="48" rows="8" id="textarea"></textarea>
-							<em class="clear">Note about this field</em>
-						</fieldset>
-						<fieldset>
-							<label for="search">Search</label>
-							<input type="search" class="text" id="search-form"><input type="submit" id="submit" value="Search" class="btn">
-						</fieldset>
-						<fieldset>
-							<label for="select">Select</label>
-							<select id="select">
-								<optgroup label="Option Group 1">
-									<option>Option One</option>
-									<option>Option Two</option>
-									<option>Option Three</option>
-								</optgroup>
-								<optgroup label="Option Group 2">
-									<option>Option One</option>
-									<option>Option Two</option>
-									<option>Option Three</option>
-								</optgroup>
-							</select>
-							<em>Note about this selection</em>
-						</fieldset>
-						<fieldset>
-							<label for="checkbox">Single Checkbox</label>
-							<input type="checkbox" class="checkbox" id="checkbox">
-							<label class="check" for="checkbox">Label</label>
-						</fieldset>
-						<fieldset class="options">
-							<legend>Checkbox <abbr title="Required">*</abbr></legend>
-							<ul>
-								<li>
-									<input type="checkbox" checked="checked" name="checkbox" id="checkbox1">
-									<label for="checkbox1">Choice A</label>
-								</li>
-								<li>
-									<input type="checkbox" name="checkbox" id="checkbox2">
-									<label for="checkbox2">Choice B</label>
-								</li>
-								<li>
-									<input type="checkbox" name="checkbox" id="checkbox3">
-									<label for="checkbox3">Choice C</label>
-								</li>
-							</ul>
-						</fieldset>
-						<fieldset class="options">
-							<legend>Radio</legend>
-							<ul>
-								<li>
-									<input type="radio" checked="checked" class="radio" name="radio" id="radio1">
-									<label for="radio1">Option 1</label>
-								</li>
-								<li>
-									<input type="radio" class="radio" name="radio" id="radio2">
-									<label for="radio2">Option 2</label>
-								</li>
-							</ul>
-						</fieldset>
-						<fieldset>
-							<label for="file">Upload a file</label>
-							<input type="file" name="file" id="file">
-						</fieldset>
-
-						<div class="submit">
-							<input type="button" value="Default" class="btn btn--gradient">
-							<input type="button" value="Disabled" disabled="disabled" class="btn btn--gradient disabled">
-							<a class="cancel" href="#">Cancel</a>
-						</div>
-					</fieldset>
-
-				</form>
-
 			</div>
-
-			<div class="content-sidebar">
-
-				<h1>Sidebar</h1>
-
-				<p>Supporting content, patterns or related links can be placed in the sidebar</p>
-
-			</div>
-
-			<!-- end main slot where silva content gets rendered-->
+			<!-- end #leftcol -->
 
 		</div>
+		<!-- end .wrapper -->
 
-		<!--End last modified info-->
+	</header>
+	<!-- end .header -->
+
+	<div class="site-content wrapper">
+
+		<header id="header-mobile">
+
+			<a id="nav-mobile-menu" href="#">
+				<img src="./images/mob-nav.png" alt="Menu" />
+			</a>
+
+		</header>
+
+		<div class="site-content__body clearfix">
+
+			<div id="content">
+
+				<nav class="breadcrumb clearfix">
+
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html">Home</a>
+						</li>
+					</ul>
+
+				</nav>
+				<!--End #breadcrumb-->
+
+				<!-- start main slot where silva content gets rendered-->
+
+				<div class="content-main">
+
+					<form action="#">
+						<fieldset>
+
+							<div class="message">
+								<p>Message box</p>
+							</div>
+
+							<div class="message message--warning">
+								<p>Warning message box</p>
+							</div>
+
+							<div class="message message--success">
+								<p>Success message box</p>
+							</div>
+
+							<fieldset>
+								<label for="text">Text Input
+									<abbr title="Required">*</abbr>
+								</label>
+								<input type="text" class="text" id="text">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="text">Text Input Error States
+									<abbr title="Required">*</abbr>
+								</label>
+								<input type="text" class="text error" id="text">
+								<em class="error">Password is incorrect</em>
+							</fieldset>
+							<fieldset class="inline">
+								<label for="text">Inline Text Input
+									<abbr title="Required">*</abbr>
+								</label>
+								<input type="text" class="text" id="text">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset class="prepend">
+								<label for="text">Text Input with prepended label
+									<abbr title="Required">*</abbr>
+								</label>
+								<span>Prepended label</span>
+								<input type="text" class="text" id="text">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="password">Password</label>
+								<input type="password" class="text" id="password">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="url">Web Address</label>
+								<input type="url" class="text" id="url" placeholder="http://">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<legend>Personal Information:</legend>
+								<label for="email">Email Address</label>
+								<input type="email" class="text" id="email" placeholder="bob.smith@ucl.ac.uk">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="birthday">Birthday</label>
+								<input type="date" name="bday" id="birthday">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="phone">Telephone Number</label>
+								<input type="tel" class="text" id="phone" placeholder="+44">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="phone">Quantity</label>
+								<input type="number" name="quantity" min="1" max="5">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="phone">Range</label>
+								<input type="range" name="points" min="1" max="5">
+								<em>Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="textarea">Textarea</label>
+								<textarea cols="48" rows="8" id="textarea"></textarea>
+								<em class="clear">Note about this field</em>
+							</fieldset>
+							<fieldset>
+								<label for="search">Search</label>
+								<input type="search" class="text" id="search-form">
+								<input type="submit" id="submit" value="Search" class="btn">
+							</fieldset>
+							<fieldset>
+								<label for="select">Select</label>
+								<select id="select">
+									<optgroup label="Option Group 1">
+										<option>Option One</option>
+										<option>Option Two</option>
+										<option>Option Three</option>
+									</optgroup>
+									<optgroup label="Option Group 2">
+										<option>Option One</option>
+										<option>Option Two</option>
+										<option>Option Three</option>
+									</optgroup>
+								</select>
+								<em>Note about this selection</em>
+							</fieldset>
+							<fieldset>
+								<label for="checkbox">Single Checkbox</label>
+								<input type="checkbox" class="checkbox" id="checkbox">
+								<label class="check" for="checkbox">Label</label>
+							</fieldset>
+							<fieldset class="options">
+								<legend>Checkbox
+									<abbr title="Required">*</abbr>
+								</legend>
+								<ul>
+									<li>
+										<input type="checkbox" checked="checked" name="checkbox" id="checkbox1">
+										<label for="checkbox1">Choice A</label>
+									</li>
+									<li>
+										<input type="checkbox" name="checkbox" id="checkbox2">
+										<label for="checkbox2">Choice B</label>
+									</li>
+									<li>
+										<input type="checkbox" name="checkbox" id="checkbox3">
+										<label for="checkbox3">Choice C</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="options">
+								<legend>Radio</legend>
+								<ul>
+									<li>
+										<input type="radio" checked="checked" class="radio" name="radio" id="radio1">
+										<label for="radio1">Option 1</label>
+									</li>
+									<li>
+										<input type="radio" class="radio" name="radio" id="radio2">
+										<label for="radio2">Option 2</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset>
+								<label for="file">Upload a file</label>
+								<input type="file" name="file" id="file">
+							</fieldset>
+
+							<div class="submit">
+								<input type="button" value="Default" class="btn btn--gradient">
+								<input type="button" value="Disabled" disabled="disabled" class="btn btn--gradient disabled">
+								<a class="cancel" href="#">Cancel</a>
+							</div>
+						</fieldset>
+
+					</form>
+
+				</div>
+
+				<div class="content-sidebar">
+
+					<h1>Sidebar</h1>
+
+					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+
+				</div>
+
+				<!-- end main slot where silva content gets rendered-->
+
+			</div>
+
+			<!--End last modified info-->
+		</div>
+
+
 	</div>
+	<!-- end .site-content -->
 
+	<footer class="footer wrapper clearfix">
 
-</div><!-- end .site-content -->
+		<article class="block-myucl">
+			<h2 class="as-h5">Facilities</h2>
+			<ul>
+				<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/library/">Library</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a>
+				</li>
+				<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a>
+				</li>
+			</ul>
+		</article>
 
-<footer class="footer wrapper clearfix">
+		<article class="block-finditfast1">
+			<h2 class="as-h5">Locations</h2>
+			<ul>
+				<li><a href="http://www.ucl.ac.uk/london">UCL and London</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a>
+				</li>
+			</ul>
+		</article>
 
-	<article class="block-myucl">
-		<h2 class="as-h5">Facilities</h2>
-		<ul>
-			<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
-			<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
-			<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
-			<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
-			<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+		<article class="block-finditfast2">
+			<h2 class="as-h5">Connect with us</h2>
+			<ul>
+				<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/media">Media Relations</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a>
+				</li>
+			</ul>
+
+		</article>
+
+		<hr>
+
+		<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
+
+		<ul class="footer__links list-unstyled list-inline">
+			<li>Copyright © 2013 UCL</li>
+			<li><a href="#">Disclaimer</a>
+			</li>
+			<li><a href="#">Freedom of Information</a>
+			</li>
+			<li><a href="#">Accessibility</a>
+			</li>
+			<li><a href="#">Privacy</a>
+			</li>
+			<li><a href="#">Cookies</a>
+			</li>
+			<li><a href="#">Contact Us</a>
+			</li>
 		</ul>
-	</article>
 
-	<article class="block-finditfast1">
-		<h2 class="as-h5">Locations</h2>
-		<ul>
-			<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
-			<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
-			<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
-		</ul>
-	</article>
+	</footer>
 
-	<article class="block-finditfast2">
-		<h2 class="as-h5">Connect with us</h2>
-		<ul>
-			<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
-			<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
-			<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
-			<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
-			<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
-		</ul>
-
-	</article>
-
-	<hr>
-
-	<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
-
-	<ul class="footer__links list-unstyled list-inline">
-		<li>Copyright © 2013 UCL</li>
-		<li><a href="#">Disclaimer</a></li>
-		<li><a href="#">Freedom of Information</a></li>
-		<li><a href="#">Accessibility</a></li>
-		<li><a href="#">Privacy</a></li>
-		<li><a href="#">Cookies</a></li>
-		<li><a href="#">Contact Us</a></li>
-	</ul>
-
-</footer>
-
-<script src="./js/lib/jquery-1.7.1.min.js"></script>
-<script src="./js/src/all-site.js"></script>
+	<script src="./js/lib/jquery-1.7.1.min.js"></script>
+	<script src="./js/src/all-site.js"></script>
 
 </body>
+
 </html>

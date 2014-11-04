@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset=utf-8 />
-<meta name="author" content="UCL" />
-<meta name="description" content="UCL Homepage" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- social meta -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@uclnews">
-<meta name="twitter:title" content="UCL - London's Global University">
-<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
-<meta name="twitter:creator" content="@UCLWAMS">
-<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
-<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png"/>
-<meta property="og:title" content="UCL - London's Global University"/>
-<meta property="og:url" content="http://www.ucl.ac.uk"/>
-<meta property="og:site_name" content="UCL"/>
-<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
-<meta property="og:type" content="website"/> 
-<meta property="og:profile_id" content="uclofficial"/>
-<!-- end social meta -->
-<title>Template for Long vertical nav  - UCL Design Language</title>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>Template for Long vertical nav - UCL Design Language</title>
 
-<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="favicon-144.png">
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
-<script>
+	<script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
 	Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard
-		//if old browser load the shiv
-		,nope : [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
-			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+		nope: [
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
-		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
 	}
-	if(cuttingTheMustard){
+	if (cuttingTheMustard) {
 		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
-</script>
+	</script>
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
-<script>
-	require(["app/general"]);//load the default stuff
-</script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
+	<script>
+	require(["app/general"]); //load the default stuff
+	</script>
 
 </head>
 
 <body id="index" class="nav--vertical nav--vertical--2col">
 	<header class="header">
 
-		<a id="nav-mobile-back" href="#"><img src="../images/close.png" alt="X" /> Close</a>
+		<a id="nav-mobile-back" href="#">
+			<img src="../images/close.png" alt="X" />Close</a>
 
 		<div class="masthead">
 
@@ -94,234 +96,292 @@
 
 				</div>
 
-				
-			<nav class="masthead__nav m-clear">
-				<ul>
-					<li><a href="index.php">UCL Home</a></li>
-					<li><a href="prospective-students.php">Prospective students</a></li>
-					<li><a href="current-students.php">Current students</a></li>
-					<li><a href="staff.php">Staff</a></li>
-				</ul>
-			</nav>
+
+				<nav class="masthead__nav m-clear">
+					<ul>
+						<li><a href="index.php">UCL Home</a>
+						</li>
+						<li><a href="prospective-students.php">Prospective students</a>
+						</li>
+						<li><a href="current-students.php">Current students</a>
+						</li>
+						<li><a href="staff.php">Staff</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 
-		</div><!-- end .masthead -->
+		</div>
+		<!-- end .masthead -->
 
-	<div class="wrapper">
+		<div class="wrapper">
 
-		<div class="photograph">
-			<header id="ucl-masthead" role="header">
-			<div class="brand">
-					<h2 class="brand__heading">UCL Design Language</h2>
-					<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
-				</div>
-			</header>
+			<div class="photograph">
+				<header id="ucl-masthead" role="header">
+					<div class="brand">
+						<h2 class="brand__heading">UCL Design Language</h2>
+						<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
+					</div>
+				</header>
 
-			<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
-		</div><!-- end .photograph -->
+				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+			</div>
+			<!-- end .photograph -->
 
-		<div id="leftcol">
+			<div id="leftcol">
 
-			<nav class="nav--mobile">
+				<nav class="nav--mobile">
+					<ul>
+
+						<li><a href="index.html" class="home-link">Home</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+
+							<ul>
+								<li><a href="#">Lists can be nested</a>
+								</li>
+
+								<li><a href="#">Lists can be nested</a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+					</ul>
+				</nav>
+
+				<nav class="nav--left">
+					<ul>
+
+						<li><a href="index.html" class="home-link">Home</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+
+							<ul>
+								<li><a href="#">Lists can be nested</a>
+								</li>
+
+								<li><a href="#">Lists can be nested</a>
+								</li>
+							</ul>
+
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+					</ul>
+
+
+				</nav>
+
+			</div>
+			<!-- end #leftcol -->
+
+			<nav class="nav--top">
 				<ul>
-
-					<li><a href="index.html" class="home-link">Home</a></li>
-
-					<li><a href="#">Main navigation items</a>
-
-						<ul>
-							<li><a href="#">Lists can be nested</a></li>
-
-							<li><a href="#">Lists can be nested</a></li>
-						</ul>
+					<li>
+						<a href="#">Home</a>
 					</li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-				</ul>
- 			</nav>
-
-			<nav class="nav--left">
-				<ul>
-
-					<li><a href="index.html" class="home-link">Home</a></li>
-
-					<li><a href="#">Main navigation items</a>
-
-						<ul>
-							<li><a href="#">Lists can be nested</a></li>
-
-							<li><a href="#">Lists can be nested</a></li>
-						</ul>
-
+					<li>
+						<a href="#">Main navigation items</a>
 					</li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
-					<li><a href="#">Main navigation items</a></li>
-
+					<li>
+						<a href="#">Main navigation items</a>
+					</li>
 				</ul>
-
-
 			</nav>
 
-		</div> <!-- end #leftcol -->
+		</div>
+		<!-- end .wrapper -->
 
-		<nav class="nav--top">
+	</header>
+	<!-- end .header -->
+
+	<div class="site-content wrapper">
+
+		<header id="header-mobile" class="default-header">
+
+			<a id="nav-mobile-menu" href="#">
+				<img src="./images/mob-nav.png" alt="Menu" />
+			</a>
+
+		</header>
+
+		<div class="site-content__body clearfix">
+
+			<div id="content">
+				<nav class="breadcrumb clearfix">
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html">Home</a>
+						</li>
+						<li class="breadcrumb__item breadcrumb__item--current"><a href="news.html">News</a>
+						</li>
+					</ul>
+				</nav>
+				<!--End #breadcrumb-->
+
+				<!-- start main slot where silva content gets rendered-->
+
+				<div class="content-main">
+
+					<article>
+
+						<h1>Main page title</h1>
+
+						<p>This is the main content column.</p>
+
+						<h2>UCL banner</h2>
+
+						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
+
+						<p>If you would instead like to use a photograph in the banner add the class '.photograph--on' to the '.photograph' div and assign your image to this class in the css</p>
+
+					</article>
+
+					<p class="mod">Page last modified on
+						<span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
+					</p>
+
+				</div>
+
+				<div class="content-sidebar">
+
+					<h1>Sidebar</h1>
+
+					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+
+				</div>
+
+				<!-- end main slot where silva content gets rendered-->
+
+			</div>
+
+			<!--End last modified info-->
+		</div>
+
+
+	</div>
+	<!-- end .site-content -->
+
+	<footer class="footer wrapper clearfix">
+
+		<article class="block-myucl">
+			<h2 class="as-h5">Facilities</h2>
 			<ul>
-				<li>
-					<a href="#">Home</a>
+				<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a>
 				</li>
-				<li>
-					<a href="#">Main navigation items</a>
+				<li><a href="http://www.ucl.ac.uk/library/">Library</a>
 				</li>
-				<li>
-					<a href="#">Main navigation items</a>
+				<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a>
+				</li>
+				<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a>
 				</li>
 			</ul>
-		</nav>
+		</article>
 
-	</div> <!-- end .wrapper -->
+		<article class="block-finditfast1">
+			<h2 class="as-h5">Locations</h2>
+			<ul>
+				<li><a href="http://www.ucl.ac.uk/london">UCL and London</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a>
+				</li>
+			</ul>
+		</article>
 
-</header><!-- end .header -->
+		<article class="block-finditfast2">
+			<h2 class="as-h5">Connect with us</h2>
+			<ul>
+				<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/media">Media Relations</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a>
+				</li>
+				<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a>
+				</li>
+			</ul>
 
-		<div class="site-content wrapper">
+		</article>
 
-			<header id="header-mobile" class="default-header">
+		<hr>
 
-				<a id="nav-mobile-menu" href="#"><img src="./images/mob-nav.png" alt="Menu" /></a>
+		<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
 
-			</header>
+		<ul class="footer__links list-unstyled list-inline">
+			<li>Copyright © 2013 UCL</li>
+			<li><a href="#">Disclaimer</a>
+			</li>
+			<li><a href="#">Freedom of Information</a>
+			</li>
+			<li><a href="#">Accessibility</a>
+			</li>
+			<li><a href="#">Privacy</a>
+			</li>
+			<li><a href="#">Cookies</a>
+			</li>
+			<li><a href="#">Contact Us</a>
+			</li>
+		</ul>
 
-		  <div class="site-content__body clearfix">
-
-				<div id="content">
-					<nav class="breadcrumb clearfix">
-						<ul class="breadcrumb__list">
-							<li class="breadcrumb__item"><a href="index.html">Home</a></li>
-							<li class="breadcrumb__item breadcrumb__item--current"><a href="news.html">News</a></li>
-						</ul>
-					</nav>
-					<!--End #breadcrumb-->
-
-					<!-- start main slot where silva content gets rendered-->
-
-					<div class="content-main">
-
-						<article>
-
-								<h1>Main page title</h1>
-
-								<p>This is the main content column.</p>
-
-								<h2>UCL banner</h2>
-
-								<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
-
-								<p>If you would instead like to use a photograph in the banner add the class '.photograph--on' to the '.photograph' div and assign your image to this class in the css</p>
-
-							</article>
-
-						<p class="mod">Page last modified on <span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
-						</p>
-
-					</div>
-
-					<div class="content-sidebar">
-
-						<h1>Sidebar</h1>
-
-						<p>Supporting content, patterns or related links can be placed in the sidebar</p>
-
-					</div>
-
-					<!-- end main slot where silva content gets rendered-->
-
-				</div>
-
-				<!--End last modified info-->
-			</div>
-
-
-		</div><!-- end .site-content -->
-
-		<footer class="footer wrapper clearfix">
-
-				<article class="block-myucl">
-					<h2 class="as-h5">Facilities</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
-						<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
-						<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
-						<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
-						<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
-					</ul>
-				</article>
-
-				<article class="block-finditfast1">
-					<h2 class="as-h5">Locations</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
-						<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
-						<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
-					</ul>
-				</article>
-
-				<article class="block-finditfast2">
-					<h2 class="as-h5">Connect with us</h2>
-					<ul>
-						<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
-						<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
-						<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
-						<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
-						<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
-					</ul>
-
-				</article>
-
-				<hr>
-
-				<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
-
-				<ul class="footer__links list-unstyled list-inline">
-					<li>Copyright © 2013 UCL</li>
-					<li><a href="#">Disclaimer</a></li>
-					<li><a href="#">Freedom of Information</a></li>
-					<li><a href="#">Accessibility</a></li>
-					<li><a href="#">Privacy</a></li>
-					<li><a href="#">Cookies</a></li>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
-
-		</footer>
+	</footer>
 
 </body>
+
 </html>
