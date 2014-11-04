@@ -65,7 +65,7 @@
 		position: absolute;
 		top: 0;
 		left: 92%;
-		width: 8%;
+		width: 3.5em;
 		line-height: 1;
 		margin: 7px 0 3px;
 		padding: 0;
@@ -77,10 +77,14 @@
 		-webkit-appearance: none;
 		border-radius: 0;
 		height: 30px;
-	}
-	.search:hover {
-		background: #034da1;
-		border-color: #034da1;
+		@include gs-media(m, max) {
+			left: 80%;
+			width: 20%;
+		}
+		&::hover {
+			background: #034da1;
+			border-color: #034da1;
+		}
 	}
 	.search-type {
 		width: 40%;
@@ -92,12 +96,6 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		text-align: right;
-	}
-	@include gs-media(m, max) {
-		.search {
-			left: 80%;
-			width: 20%;
-		}
 	}
 }
 
