@@ -322,7 +322,7 @@ article ul li li {
 /* Inline lists
 -------------------------------------------------------------- */
 
-#main article .horizontal {
+.site-content__body article .horizontal {
 	li {
 		display: inline;
 		margin-right: 0.5em;
@@ -351,7 +351,7 @@ article ul li li {
 /* Unstyled lists
 -------------------------------------------------------------- */
 
-#main article .nostyle {
+.site-content__body article .nostyle {
 	li:before {
 		display: none;
 	}

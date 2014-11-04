@@ -61,7 +61,7 @@ define(["jquery","allsite"],function($,gen){
 		var mobilenavList = $('.mobilenav ul');
 
 		function resetCols(){
-			$('#main,#leftcol').css({
+			$('.site-content__body,#leftcol').css({
 				'height':'auto'
 				,'min-height':'0'}
 			);
@@ -72,19 +72,19 @@ define(["jquery","allsite"],function($,gen){
 			resetCols();
 
 			if($(window).width() >= 768){
-				var mainColHeight = $('#main').height();
+				var mainColHeight = $('.site-content__body').height();
 				var verticalNavColHeight = $('#leftcol').height();
 				if(verticalNavColHeight > mainColHeight){
-					$('#main').css('min-height',verticalNavColHeight);
+					$('.site-content__body').css('min-height',verticalNavColHeight);
 				}
 				else{
-					$('#main').css({
+					$('.site-content__body').css({
 						'height':'auto'
 						,'min-height':'0'}
 					);
 				}
 			}else{
-				$('#main').css({
+				$('.site-content__body').css({
 					'height':'auto'
 					,'min-height':'0'}
 				);

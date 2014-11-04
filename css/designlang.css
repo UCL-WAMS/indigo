@@ -275,43 +275,10 @@ input {
 -------------------------------------------------------------- */
 /* UCL Banner
 -------------------------------------------------------------- */
-.photograph {
-  padding: 0 35px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: relative;
-  left: -35px; }
-
 /* Site Branding Structure
 -------------------------------------------------------------- */
-.header {
-  position: relative;
-  z-index: 100; }
-
-#site-content {
-  position: relative;
-  z-index: 1; }
-
 .site-brand {
   padding-top: 12%; }
-
-.photograph-description {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: 5%;
-  right: 35px;
-  padding: 10px;
-  font-size: 12px;
-  font-style: italic;
-  color: #fff;
-  display: none; }
-
-.photograph-on .site-brand {
-  padding-top: 30%; }
-.photograph-on .photograph-description {
-  display: block; }
 
 /* Left Column + Navigation
 -------------------------------------------------------------- */
@@ -333,93 +300,6 @@ input {
 @media only screen and (max-width: 767px) {
   #leftcol {
     margin-top: 2em; }
-
-  .header {
-    background-color: #5f5f5f;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    overflow-x: hidden;
-    left: -100%; }
-    .header a {
-      color: #fff;
-      padding: 0.5em 0;
-      display: block;
-      clear: both;
-      font-size: 1.6rem; }
-    .header ul {
-      margin: 0; }
-    .header li {
-      margin-bottom: 0;
-      display: block; }
-    .header #leftcol {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative; }
-    .header #logo,
-    .header .site-brand {
-      display: none; }
-    .header .photograph {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 2em 0 0em 0;
-      left: 0;
-      background-color: transparent; }
-    .header .wrapper {
-      width: 100%; }
-    .header #global-masthead {
-      height: auto;
-      border-bottom: 1px solid #ccc; }
-      .header #global-masthead ul#audiences {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-        margin-bottom: 1em; }
-      .header #global-masthead .wrapper {
-        background-color: #444; }
-    .header #global-search {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin-top: 3.5em;
-      height: 4em;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto; }
-    .header #branding {
-      position: static;
-      padding-left: 0; }
-      .header #branding p {
-        left: 0;
-        top: 50%; }
-    .header #branding h1 {
-      background-color: #222;
-      padding: 0.5em 35px;
-      position: relative;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box; }
-    .header #nav-mobile-back {
-      display: block;
-      position: absolute;
-      left: 5%;
-      top: 5px;
-      padding: 0;
-      z-index: 1000;
-      width: 50%; }
-      .header #nav-mobile-back img {
-        vertical-align: middle;
-        display: inline-block;
-        width: 30px;
-        position: relative;
-        margin: -5px -3px 0 -8px; }
-
-  .mobile-open .header {
-    left: 0; }
 
   #header-mobile {
     display: block;
@@ -451,32 +331,6 @@ input {
       background-size: 90%; } }
 /* Main Content
 -------------------------------------------------------------- */
-#main {
-  background-color: #fff;
-  padding: 2em 35px 2em 35px;
-  left: -35px;
-  position: relative;
-  clear: both;
-  display: block;
-  float: left;
-  margin-left: 0;
-  width: 100%; }
-
-@media only screen and (max-width: 989px) {
-  #main {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
-@media only screen and (max-width: 767px) {
-  #main {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%;
-    padding-top: 1em; } }
 #content {
   display: block;
   float: left;
@@ -655,7 +509,7 @@ nav.topnav {
   @media only screen and (max-width: 767px) {
     .horizontal-nav .topnav {
       display: none; } }
-.horizontal-nav #main {
+.horizontal-nav .site-content__body {
   padding-top: 1em; }
 .horizontal-nav #content {
   width: 100%;
@@ -986,26 +840,26 @@ article ul li li {
 
 /* Inline lists
 -------------------------------------------------------------- */
-#main article .horizontal li {
+.site-content__body article .horizontal li {
   display: inline;
   margin-right: 0.5em; }
-#main article .horizontal li:before {
+.site-content__body article .horizontal li:before {
   display: none; }
-#main article .horizontal lh {
+.site-content__body article .horizontal lh {
   float: left; }
-#main article .horizontal dt, #main article .horizontal dd {
+.site-content__body article .horizontal dt, .site-content__body article .horizontal dd {
   float: left;
   margin: 0 0.5em 0 0; }
-#main article .horizontal lh + dt, #main article .horizontal dd + dt, #main article .horizontal dd + dd {
+.site-content__body article .horizontal lh + dt, .site-content__body article .horizontal dd + dt, .site-content__body article .horizontal dd + dd {
   clear: left; }
-#main article .horizontal dd + dd {
+.site-content__body article .horizontal dd + dd {
   float: none; }
-#main article .horizontal dt {
+.site-content__body article .horizontal dt {
   font-weight: bold; }
 
 /* Unstyled lists
 -------------------------------------------------------------- */
-#main article .nostyle li:before {
+.site-content__body article .nostyle li:before {
   display: none; }
 
 /* Ordered lists
@@ -1914,14 +1768,13 @@ img.float-right {
   position: absolute;
   z-index: 1;
   overflow: visible;
-  padding: 0 35px;
-  left: -35px;
   width: 100%;
-  max-width: 1470px; }
+  max-width: 1470px;
+  left: 0; }
 
 .brand__heading {
   position: absolute;
-  left: 70px;
+  left: 35px;
   top: 25%;
   color: #fff;
   font-size: 14px;
@@ -2035,6 +1888,37 @@ img.float-right {
   .tabbed__link:hover {
     text-decoration: none;
     color: #fff; }
+
+/* 
+* Partial name: Photograph banner
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.photograph {
+  padding: 0 35px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  left: -35px; }
+
+.photograph__description {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 5%;
+  right: 35px;
+  padding: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: #fff;
+  display: none; }
+
+.photograph--on .site-brand {
+  padding-top: 30%; }
+.photograph--on .photograph__description {
+  display: block; }
 
 /* 
 * Partial name: Pagination
@@ -2400,6 +2284,96 @@ article > footer a:hover {
   float: left;
   width: 55%; }
 
+.header {
+  position: relative;
+  z-index: 100; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      background-color: #5f5f5f;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      overflow-x: hidden;
+      left: -100%; }
+      .mobile-open .header {
+        left: 0; }
+      .header a {
+        color: #fff;
+        padding: 0.5em 0;
+        display: block;
+        clear: both;
+        font-size: 1.6rem; }
+      .header ul {
+        margin: 0; }
+      .header li {
+        margin-bottom: 0;
+        display: block; }
+      .header #leftcol {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative; }
+      .header #logo,
+      .header .site-brand {
+        display: none; }
+      .header .photograph {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em 0 0em 0;
+        left: 0;
+        background-color: transparent; }
+      .header .wrapper {
+        width: 100%; }
+      .header #global-masthead {
+        height: auto;
+        border-bottom: 1px solid #ccc; }
+        .header #global-masthead ul#audiences {
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          float: none;
+          margin-bottom: 1em; }
+        .header #global-masthead .wrapper {
+          background-color: #444; }
+      .header #global-search {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-top: 3.5em;
+        height: 4em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+      .header #branding {
+        position: static;
+        padding-left: 0; }
+        .header #branding p {
+          left: 0;
+          top: 50%; }
+      .header #branding h1 {
+        background-color: #222;
+        padding: 0.5em 35px;
+        position: relative;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box; }
+      .header #nav-mobile-back {
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 5px;
+        padding: 0;
+        z-index: 1000;
+        width: 50%; }
+        .header #nav-mobile-back img {
+          vertical-align: middle;
+          display: inline-block;
+          width: 30px;
+          position: relative;
+          margin: -5px -3px 0 -8px; } }
+
 /* 
 * Partial name: Footer
 * Use:
@@ -2513,6 +2487,36 @@ article > footer a:hover {
   color: #7FB861;
   border: 1px solid #7FB861; }
 
+.site-content {
+  position: relative;
+  z-index: 1; }
+
+.site-content__body {
+  background-color: #fff;
+  padding: 2em 35px 2em 35px;
+  left: -35px;
+  position: relative;
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%; }
+
+@media only screen and (max-width: 989px) {
+  .site-content__body {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+@media only screen and (max-width: 767px) {
+  .site-content__body {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    padding-top: 1em; } }
 /* Design Language Unique Styles -------------------------------- */
 .photograph {
   background-color: #622e78; }

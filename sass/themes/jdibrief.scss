@@ -4,29 +4,29 @@
 /* JDiBrief Unique Styles -------------------------------- */
 
 .photograph {
-    background-color: $lightblue;
+	background-color: $lightblue;
 }
 
 @include gs-media(m, max) {
-    #header-mobile {
-        background-color: $lightblue;
-    }
+	#header-mobile {
+		background-color: $lightblue;
+	}
 }
 
 
-.photograph-on {
-    background-image: url("images");
-    background-position-y: 0;
+.photograph--on {
+	background-image: url("images");
+	background-position-y: 0;
 }
 
 .box {
-    border-top: 5px solid $lightblue;
+	border-top: 5px solid $lightblue;
 }
 
 a, a:hover {
-    color: $lightblue;
+	color: $lightblue;
 }
 
 .tag, .more {
-    background-color: $lightblue;
+	background-color: $lightblue;
 }

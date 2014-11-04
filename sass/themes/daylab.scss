@@ -4,21 +4,21 @@
 /* Day Lab Unique Styles -------------------------------- */
 
 .photograph {
-    background-color: $orange;
+	background-color: $orange;
 }
 
 @include gs-media(m, max) {
-    #header-mobile {
-        background-color: $orange;
-    }
+	#header-mobile {
+		background-color: $orange;
+	}
 }
 
 
-.photograph-on {
-    background-image: url("#{$staticUrl}/images/cells.jpg");
-    background-position: 0 -460px;
+.photograph--on {
+	background-image: url("#{$staticUrl}/images/cells.jpg");
+	background-position: 0 -460px;
 }
 
 .box {
-    border-top: 5px solid $orange;
+	border-top: 5px solid $orange;
 }

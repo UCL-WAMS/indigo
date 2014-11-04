@@ -14,7 +14,7 @@
 }
 
 
-#main {
+.site-content__body {
     background-color: #0e0f14;
     color: #fff;
 }
@@ -37,24 +37,24 @@
 }
 
 @include gs-media(t, max) {
-    #main {
+    .site-content__body {
         background-position: -10% bottom;
     }
 }
 
 
 @include gs-media(m, max) {
-    #main {
+    .site-content__body {
         background-image: none;
     }
 }
 
 
-#main a {
+.site-content__body a {
     color: $yellow;
 }
 
-#main article ul {
+.site-content__body article ul {
     li:before {
         background-color: #fff;
     }
@@ -115,7 +115,7 @@ h1.large-title {
     margin-right: 8px;
 }
 
-#main a[class*=btn] {
+.site-content__body a[class*=btn] {
     color: #38300E;
 }
 
@@ -163,16 +163,16 @@ h1.large-title {
     color: $yellow;
 }
 
-#main .tabs li {
+.site-content__body .tabs li {
     background-color: #FFE076;
     border-bottom: 5px solid #000;
 }
 
-#main .tabs li a {
+.site-content__body .tabs li a {
     color: #000;
 }
 
-#main .tabs li.active {
+.site-content__body .tabs li.active {
     border-color: $yellow;
     background-color: $yellow;
 }
