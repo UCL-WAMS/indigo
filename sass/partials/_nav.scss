@@ -1,0 +1,137 @@
+.leftnav li {
+	margin-bottom: 0.5em;
+	ul {
+		margin: 10px 5%;
+		font-size: 14px;
+	}
+}
+
+@mixin mobileNavListingLayoutFix {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin nav-in-document-flow {
+	position: relative;
+	left: -35px;
+	padding: 0 35px;
+}
+
+nav.topnav {
+	display: none;
+	@include nav-in-document-flow;
+	width: 100%;
+	background-color: $content-bg-color;
+	margin-top: 0;
+	padding-top: 1em;
+	overflow: hidden;
+	ul {
+		li {
+			display: block;
+			float: left;
+			padding-right: 1em;
+			margin-right: 1em;
+			border-right: 1px solid $ruleColor;
+			a {
+				text-decoration: none;
+				cursor: pointer;
+				color: $horizontalNavColor;
+			}
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+}
+
+.horizontal-nav {
+	#leftcol {
+		display: none;
+		.leftnav {
+			display: none;
+		}
+		@include gs-media(m, max) {
+			display: block;
+		}
+	}
+	.topnav {
+		display: block;
+		@include gs-media(m, max) {
+			display: none;
+		}
+	}
+	.site-content__body {
+		padding-top: 1em;
+	}
+	#content {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.horizontal-nav--2col {
+	.content-main {
+		@include gs-span(dl, 1, 4, (1, 5));
+	}
+	.content-sidebar {
+		@include gs-span(dl, 5, 5, (1, 5));
+	}
+	@include gs-media(t, max) {
+		.content-main,.content-sidebar {
+			@include gs-span(t, all, (1, 3));
+			margin-bottom: 2em;
+		}
+	}
+}
+
+.horizontal-nav--1col {
+	.content-main {
+		@include gs-span(dl, 1, 5, (1, 5));
+	}
+	.content-sidebar {
+		display: none;
+	}
+}
+
+.vertical-nav {
+	@include gs-media(m, max) {
+		.leftnav {
+			display: none;
+		}
+	}
+}
+
+.vertical-nav--1col {
+	.content-main {
+		@include gs-span(dl, 2, 5, (2, 5));
+	}
+}
+
+.vertical-nav--show-top-nav {
+	nav.topnav {
+		display: block;
+		@include gs-media(m, max) {
+			display: none;
+		}
+	}
+	#leftcol {
+		margin-top: 5em;
+		@include gs-media(m, max) {
+			margin-top: 0;
+		}
+	}
+}
+
+.mobilenav {
+	display: none;
+	@include gs-media(m, max) {
+		display: block;
+		ul {
+			&:nth-child(n+2) {
+				padding-left: 1em;
+			}
+		}
+	}
+}
