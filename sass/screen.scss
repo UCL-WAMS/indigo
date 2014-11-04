@@ -12,6 +12,7 @@
 @import "mixins/modernizr";
 @import "mixins/list";
 @import "mixins/on-interaction";
+@import "mixins/guttering";
 
 /* Helper classes */
 @import "utilities/helpers";
@@ -49,3 +50,4 @@
 @import "partials/globalmasthead";
 @import "partials/footer";
 @import "partials/tag";
+@import "partials/message";
