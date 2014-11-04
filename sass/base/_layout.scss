@@ -20,6 +20,9 @@
 	margin-top: 3em;
 	left: 0;
 	width: 19.8653%;
+	@include gs-media(m, max) {
+		margin-top: 2em;
+	}
 }
 
 
@@ -27,11 +30,7 @@
 	display: none;
 }
 
-
 @include gs-media(m, max) {
-	#leftcol {
-		margin-top: 2em;
-	}
 	#header-mobile {
 		display: block;
 		width: 100%;
@@ -71,62 +70,40 @@
 -------------------------------------------------------------- */
 
 
-
-
 #content {
 	@include gs-span(dl, 2, 5);
-}
 
-@include gs-media(t, max) {
-	#content {
+	@include gs-media(t, max) {
 		@include gs-span(t, 2, 3);
 	}
-}
 
-
-@include gs-media(m, max) {
-	#content {
+	@include gs-media(m, max) {
 		@include gs-span(m, all);
 	}
 }
-
 
 .content-main {
 	@include gs-span(dl, 2, 3, (2, 5));
-}
-
-@include gs-media(t, max) {
-	.content-main {
+	@include gs-media(t, max) {
 		@include gs-span(t, all, (2, 3));
 		margin-bottom: 2em;
 	}
-}
-
-
-@include gs-media(m, max) {
-	.content-main {
+	@include gs-media(m, max) {
 		@include gs-span(m, all);
 	}
 }
-
 
 .content-sidebar {
 	@include gs-span(dl, 5, 5, (2, 5));
-}
 
-@include gs-media(t, max) {
-	.content-sidebar {
+	@include gs-media(t, max) {
 		@include gs-span(t, all, (2, 3));
 	}
-}
 
-
-@include gs-media(m, max) {
-	.content-sidebar {
+	@include gs-media(m, max) {
 		@include gs-span(m, all);
 	}
 }
-
 
 .middle-split {
 	overflow: hidden;
@@ -148,53 +125,32 @@
 
 .block-myucl {
 	@include gs-span(dl, 1, 2);
-}
 
-@include gs-media(t, max) {
-	.block-myucl {
+	@include gs-media(t, max) {
 		@include gs-span(t, 1);
 	}
-}
 
-
-@include gs-media(m, max) {
-	.block-myucl {
+	@include gs-media(m, max) {
 		@include gs-span(m, 1);
 	}
 }
 
-
 .block-finditfast1 {
 	@include gs-span(dl, 3);
-}
-
-@include gs-media(t, max) {
-	.block-finditfast1 {
+	@include gs-media(t, max) {
 		@include gs-span(t, 2);
 	}
-}
-
-
-@include gs-media(m, max) {
-	.block-finditfast1 {
+	@include gs-media(m, max) {
 		@include gs-span(m, 2);
 	}
 }
 
-
 .block-finditfast2 {
 	@include gs-span(dl, 4, 5);
-}
-
-@include gs-media(t, max) {
-	.block-finditfast2 {
+	@include gs-media(t, max) {
 		@include gs-span(t, 3);
 	}
-}
-
-
-@include gs-media(m, max) {
-	.block-finditfast2 {
+	@include gs-media(m, max) {
 		@include gs-span(m, 1);
 		clear: left;
 	}

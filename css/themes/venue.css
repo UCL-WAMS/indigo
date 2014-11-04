@@ -1,5 +1,4 @@
 /* Config */
-/* Config */
 /* Variables */
 /* Variables
 -------------------------------------------------------------- */
@@ -296,14 +295,14 @@ input {
   margin-top: 3em;
   left: 0;
   width: 19.8653%; }
+  @media only screen and (max-width: 767px) {
+    #leftcol {
+      margin-top: 2em; } }
 
 #nav-mobile-back, #header-mobile {
   display: none; }
 
 @media only screen and (max-width: 767px) {
-  #leftcol {
-    margin-top: 2em; }
-
   #header-mobile {
     display: block;
     width: 100%;
@@ -340,64 +339,64 @@ input {
   margin-left: 22.89562%;
   margin-right: -100%;
   width: 77.03704%; }
+  @media only screen and (max-width: 989px) {
+    #content {
+      display: block;
+      float: left;
+      margin-left: 34.20139%;
+      margin-right: -100%;
+      width: 65.79861%; } }
+  @media only screen and (max-width: 767px) {
+    #content {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
 
-@media only screen and (max-width: 989px) {
-  #content {
-    display: block;
-    float: left;
-    margin-left: 34.20139%;
-    margin-right: -100%;
-    width: 65.79861%; } }
-@media only screen and (max-width: 767px) {
-  #content {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
 .content-main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 55.46605%; }
+  @media only screen and (max-width: 989px) {
+    .content-main {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 2em; } }
+  @media only screen and (max-width: 767px) {
+    .content-main {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
 
-@media only screen and (max-width: 989px) {
-  .content-main {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 2em; } }
-@media only screen and (max-width: 767px) {
-  .content-main {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
 .content-sidebar {
   display: block;
   float: left;
   margin-left: 66.80507%;
   margin-right: -100%;
   width: 33.19493%; }
+  @media only screen and (max-width: 989px) {
+    .content-sidebar {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .content-sidebar {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
 
-@media only screen and (max-width: 989px) {
-  .content-sidebar {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
-@media only screen and (max-width: 767px) {
-  .content-sidebar {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
 .middle-split {
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
@@ -417,64 +416,64 @@ input {
   margin-left: 0%;
   margin-right: -100%;
   width: 31.30645%; }
+  @media only screen and (max-width: 989px) {
+    .block-myucl {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 31.59722%; } }
+  @media only screen and (max-width: 767px) {
+    .block-myucl {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 46.79688%; } }
 
-@media only screen and (max-width: 989px) {
-  .block-myucl {
-    display: block;
-    float: left;
-    margin-left: 0%;
-    margin-right: -100%;
-    width: 31.59722%; } }
-@media only screen and (max-width: 767px) {
-  .block-myucl {
-    display: block;
-    float: left;
-    margin-left: 0%;
-    margin-right: -100%;
-    width: 46.79688%; } }
 .block-finditfast1 {
   display: block;
   float: left;
   margin-left: 34.33675%;
   margin-right: -100%;
   width: 31.28827%; }
+  @media only screen and (max-width: 989px) {
+    .block-finditfast1 {
+      display: block;
+      float: left;
+      margin-left: 34.20139%;
+      margin-right: -100%;
+      width: 31.59722%; } }
+  @media only screen and (max-width: 767px) {
+    .block-finditfast1 {
+      display: block;
+      float: left;
+      margin-left: 53.04688%;
+      margin-right: -100%;
+      width: 46.79688%; } }
 
-@media only screen and (max-width: 989px) {
-  .block-finditfast1 {
-    display: block;
-    float: left;
-    margin-left: 34.20139%;
-    margin-right: -100%;
-    width: 31.59722%; } }
-@media only screen and (max-width: 767px) {
-  .block-finditfast1 {
-    display: block;
-    float: left;
-    margin-left: 53.04688%;
-    margin-right: -100%;
-    width: 46.79688%; } }
 .block-finditfast2 {
   display: block;
   float: left;
   margin-left: 68.65532%;
   margin-right: -100%;
   width: 31.27734%; }
+  @media only screen and (max-width: 989px) {
+    .block-finditfast2 {
+      display: block;
+      float: left;
+      margin-left: 68.40278%;
+      margin-right: -100%;
+      width: 31.59722%; } }
+  @media only screen and (max-width: 767px) {
+    .block-finditfast2 {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 46.79688%;
+      clear: left; } }
 
-@media only screen and (max-width: 989px) {
-  .block-finditfast2 {
-    display: block;
-    float: left;
-    margin-left: 68.40278%;
-    margin-right: -100%;
-    width: 31.59722%; } }
-@media only screen and (max-width: 767px) {
-  .block-finditfast2 {
-    display: block;
-    float: left;
-    margin-left: 0%;
-    margin-right: -100%;
-    width: 46.79688%;
-    clear: left; } }
 /* 
 * Base name: Typography
 * Use:
