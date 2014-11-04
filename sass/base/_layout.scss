@@ -7,53 +7,15 @@
 
 /* UCL Banner
 -------------------------------------------------------------- */
-.photograph {
-	padding: 0 35px;
-	background-color: #fff;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	position: relative;
-	left: -35px;
-}
+
 
 /* Site Branding Structure
 -------------------------------------------------------------- */
-
-.header {
-	position: relative;
-	z-index: 100;
-}
-
-#site-content {
-	position: relative;
-	z-index: 1;
-}
 
 .site-brand {
 	padding-top: 12%;
 }
 
-.photograph-description {
-	background-color: rgba(0, 0, 0, 0.7);
-	position: absolute;
-	bottom: 5%;
-	right: 35px;
-	padding: 10px;
-	font-size: 12px;
-	font-style: italic;
-	color: #fff;
-	display: none;
-}
-
-.photograph-on {
-	.site-brand {
-		padding-top: 30%;
-	}
-	.photograph-description {
-		display: block;
-	}
-}
 
 /* Left Column + Navigation
 -------------------------------------------------------------- */
@@ -86,103 +48,6 @@
 @include gs-media(m, max) {
 	#leftcol {
 		margin-top: 2em;
-	}
-	.header {
-		background-color: #5f5f5f;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		overflow-x: hidden;
-		left: -100%;
-		a {
-			color: #fff;
-			padding: 0.5em 0;
-			display: block;
-			clear: both;
-			font-size: 1.6rem;
-		}
-		ul {
-			margin: 0;
-		}
-		li {
-			margin-bottom: 0;
-			display: block;
-		}
-		#leftcol {
-			@include mobileNavListingLayoutFix;
-			position: relative;
-		}
-		#logo,
-		.site-brand {
-			display: none;
-		}
-		.photograph {
-			@include mobileNavListingLayoutFix;
-			padding: 2em 0 0em 0;
-			left: 0;
-			background-color: transparent;
-		}
-		.wrapper {
-			width: 100%;
-		}
-		#global-masthead {
-			height: auto;
-			border-bottom: 1px solid #ccc;
-			ul#audiences {
-				@include mobileNavListingLayoutFix;
-				float: none;
-				margin-bottom: 1em;
-			}
-			.wrapper {
-				background-color: #444;
-			}
-		}
-		#global-search {
-			float: none;
-			width: 100%;
-			padding: 0;
-			margin-top: 3.5em;
-			height: 4em;
-			@include mobileNavListingLayoutFix;
-		}
-		#branding {
-			position: static;
-			padding-left: 0;
-			p {
-				left: 0;
-				top: 50%;
-			}
-		}
-		#branding h1 {
-			background-color: #222;
-			padding: 0.5em 35px;
-			position: relative;
-			left: 0;
-			width: 100%;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		#nav-mobile-back {
-			display: block;
-			position: absolute;
-			left: 5%;
-			top: 5px;
-			padding: 0;
-			z-index: 1000;
-			width: 50%;
-			img {
-				vertical-align: middle;
-				display: inline-block;
-				width: 30px;
-				position: relative;
-				margin: -5px -3px 0 -8px;
-			}
-		}
-	}
-	.mobile-open .header {
-		left: 0;
 	}
 	#header-mobile {
 		display: block;
@@ -222,27 +87,7 @@
 /* Main Content
 -------------------------------------------------------------- */
 
-#main {
-	background-color: $content-bg-color;
-	padding: 2em 35px 2em 35px;
-	left: -35px;
-	position: relative;
-	@include gs-span(dl, all);
-}
 
-@include gs-media(t, max) {
-	#main {
-		@include gs-span(t, all);
-	}
-}
-
-
-@include gs-media(m, max) {
-	#main {
-		@include gs-span(m, all);
-		padding-top: 1em;
-	}
-}
 
 
 #content {
@@ -424,7 +269,7 @@ nav.topnav {
 			display: none;
 		}
 	}
-	#main {
+	.site-content__body {
 		padding-top: 1em;
 	}
 	#content {

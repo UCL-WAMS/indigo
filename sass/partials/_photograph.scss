@@ -1,0 +1,37 @@
+/* 
+* Partial name: Photograph banner
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.photograph {
+	padding: 0 35px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	left: -35px;
+}
+
+.photograph__description {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	bottom: 5%;
+	right: 35px;
+	padding: 10px;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+	display: none;
+}
+
+.photograph--on {
+	.site-brand {
+		padding-top: 30%;
+	}
+	.photograph__description {
+		display: block;
+	}
+}
