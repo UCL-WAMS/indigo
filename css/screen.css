@@ -2003,6 +2003,8 @@ img.float-right {
   border: 10px solid #444;
   padding-top: 10px;
   padding-bottom: 2em; }
+  .tabbed__content > *:last-child, .tabbed__content > *:last-child > *:last-child, .tabbed__content > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
 
 .tabbed__list {
   margin-bottom: 0; }
