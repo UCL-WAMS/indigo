@@ -9,6 +9,8 @@
 -------------------------------------------------------------- */
 /* Colour by element
 -------------------------------------------------------------- */
+/* UCL Colours
+-------------------------------------------------------------- */
 /* Mixins */
 /*
 
@@ -715,29 +717,26 @@ body {
 
 /* Headings
 -------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, .as-h1 {
   font-size: 2.5em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height: 1.5; }
+  font-weight: 300; }
 
 h2, .as-h2 {
   font-size: 2em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-weight: 300; }
 
 h3, .as-h3 {
   font-size: 1.5em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-weight: 300; }
 
 h4, .as-h4 {
   font-size: 1.2em;
@@ -748,7 +747,6 @@ h5, .as-h5 {
   font-style: normal;
   font-size: .8em;
   text-transform: uppercase;
-  font-family: Arial, sans-serif;
   font-weight: bold; }
 
 h6, .as-h6 {
@@ -813,7 +811,7 @@ blockquote {
 [class*=pullquote] q.quote {
   line-height: 1.5em;
   font-size: 20px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-style: italic;
   color: rgba(0, 0, 0, 0.7); }
 
@@ -999,7 +997,7 @@ dd + dt {
 /* Code lists (blocked)
 -------------------------------------------------------------- */
 ol.code {
-  font: 400 1em/1.5 source-code-pro,monospace;
+  font: 400 1em/1.5 "source-code-pro", monospace;
   margin: 1em 0 1.5em 2.5em; }
 
 ol.code li {
@@ -1061,7 +1059,7 @@ pre {
   white-space: pre; }
 
 pre, code, tt {
-  font: 1em 'consolas', 'andale mono', 'lucida console', monospace; }
+  font: 1em "consolas", "andale mono", "lucida console", monospace; }
 
 /* Forms
 -------------------------------------------------------------- */
