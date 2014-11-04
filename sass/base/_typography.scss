@@ -5,7 +5,6 @@
 * Author: 
 -------------------------------------------------------------- */
 
-
 body {
 	font-family: $font-san-serif;
 	color: #333333;
@@ -28,64 +27,60 @@ body {
 -------------------------------------------------------------- */
 
 hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
-    margin-bottom: 1.5em;
-    line-height: 1.5; 
+	margin-bottom: 1.5em;
+	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-family: $font-san-serif;
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-family: $font-san-serif;
 }
 
 h1, .as-h1, %as-h1 {
-    font-size: 2.5em;
-    font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.75em;
-    // }
+	font-size: 2.5em;
+	font-weight: 300;
+	// @include respond-max($bp__mobile--max) {
+	//     font-size: 1.75em;
+	// }
 }
 
-
-h2, .as-h2, %as-h2 {    
-    font-size: 2em; 
-    font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.5em;
-    // }
+h2, .as-h2, %as-h2 {
+	font-size: 2em;
+	font-weight: 300;
+	// @include respond-max($bp__mobile--max) {
+	//     font-size: 1.5em;
+	// }
 }
 
-
-h3, .as-h3, %as-h3 { 
-    font-size: 1.5em;
-    font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.4em;
-    // }
+h3, .as-h3, %as-h3 {
+	font-size: 1.5em;
+	font-weight: 300;
+	// @include respond-max($bp__mobile--max) {
+	//     font-size: 1.4em;
+	// }
 }
 
-h4, .as-h4, %as-h4 { 
-    font-size: 1.2em; 
-    text-transform: none;
-    letter-spacing: 0;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1em;
-    // }
+h4, .as-h4, %as-h4 {
+	font-size: 1.2em;
+	text-transform: none;
+	letter-spacing: 0;
+	// @include respond-max($bp__mobile--max) {
+	//     font-size: 1em;
+	// }
 }
 
-
-h5, .as-h5, %as-h5  {
-    font-style: normal;
-    font-size: .8em;
-    text-transform: uppercase;
-    font-weight: bold;
+h5, .as-h5, %as-h5 {
+	font-style: normal;
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 h6, .as-h6, %as-h6 {
-    color: #999;
-    margin: 1em 0 0;
+	color: #999;
+	margin: 1em 0 0;
 }
-
 
 h3 + ul, h3 + ol, h3 + dl {
 	margin-top: 0.5em;
@@ -106,7 +101,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .content-sidebar h1 {
 	font-size: 26px;
 }
-
 
 /* Quotes
 -------------------------------------------------------------- */
@@ -395,7 +389,7 @@ dd + dt {
 -------------------------------------------------------------- */
 
 ol.code {
-	font: 400 1em/1.5 $font-line-numbers;
+	font: 400 1em / 1.5 $font-line-numbers;
 	margin: 1em 0 1.5em 2.5em;
 }
 
@@ -409,7 +403,6 @@ ol.code li {
 ol.code li.tab1 {
 	padding-left: 4ex;
 }
-
 
 /* Resources
 -------------------------------------------------------------- */

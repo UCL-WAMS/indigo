@@ -1,5 +1,7 @@
 /* Config */
 /* Variables */
+/* Variables
+-------------------------------------------------------------- */
 /* UCL Colours
 -------------------------------------------------------------- */
 /* Standard
@@ -8,7 +10,15 @@
 -------------------------------------------------------------- */
 /* Colour by element
 -------------------------------------------------------------- */
-/* UCL Colours
+/* Image sizing
+-------------------------------------------------------------- */
+/* Z index values
+-------------------------------------------------------------- */
+/* Module spacing
+-------------------------------------------------------------- */
+/* Font stacks
+-------------------------------------------------------------- */
+/* Breakpoints
 -------------------------------------------------------------- */
 /* Mixins */
 /*
@@ -92,6 +102,16 @@
       }
 
 */
+/* 
+* Name: Guttering
+* Use: Controlling the spacing at the bottom of a module
+* Notes: http://css-tricks.com/spacing-the-bottom-of-modules/
+-------------------------------------------------------------- */
+/* 
+* Name: SASS-IE
+* Use: Media query handling
+* Notes: See http://jakearchibald.github.io/sass-ie/
+-------------------------------------------------------------- */
 /* Helper classes */
 .breadcrumb__list, .unset-list {
   margin-left: 0;
@@ -1164,8 +1184,8 @@ input:disabled {
 
 input[type=text],
 input[type=search] {
-  padding-top: 0.53571em;
-  padding-bottom: 0.53571em;
+  padding-top: 7.5/14em;
+  padding-bottom: 7.5/14em;
   font-size: 14px;
   line-height: 1;
   color: #333;
@@ -1272,52 +1292,6 @@ textarea:focus {
   margin-left: 0;
   width: 100%; }
 
-/* Success, notice and error boxes
--------------------------------------------------------------- */
-.warning, .success {
-  background-color: #FFFAFA;
-  background-image: url("/images/alert.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: #DD6868;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  margin-bottom: 1em;
-  border: 1px solid #DD6868;
-  font-weight: bold; }
-
-.success {
-  background-color: #F7FFF2;
-  background-image: url("/images/success.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  color: #7FB861;
-  border: 1px solid #7FB861; }
-
-.message {
-  background: none repeat scroll 0 0 #FFFFFF;
-  border: 1px solid #DDDDDD;
-  clear: left;
-  color: #666666;
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  padding-bottom: 1em;
-  padding-top: 10px;
-  margin-bottom: 10px; }
-
-.message span {
-  text-decoration: underline; }
-
 input.error {
   background-color: #FFFAFA;
   border: 1px solid #DD6868; }
@@ -1353,11 +1327,11 @@ input.error {
   .btn:active {
     background-color: #505050; }
 
-.btn-small {
+.btn--small {
   padding: 8px 20px 8px 20px;
   font-size: 12px; }
 
-.btn-gradient.disabled {
+.btn--gradient.disabled {
   background: #e0e0e0;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#e0e0e0));
   background: -webkit-linear-gradient(#eee 0%, #e0e0e0 100%);
@@ -1365,12 +1339,12 @@ input.error {
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   color: #999;
   text-shadow: none; }
-  .btn-gradient.disabled:hover, .btn-gradient.disabled :focus {
+  .btn--gradient.disabled:hover, .btn--gradient.disabled :focus {
     background: #eee;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#eee));
     background: -webkit-linear-gradient(#ededed 0%, #eee 100%);
     background: linear-gradient(#ededed 0%, #eee 100%); }
-  .btn-gradient.disabled:active {
+  .btn--gradient.disabled:active {
     background: #cccccc;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e4), to(#cccccc));
     background: -webkit-linear-gradient(#e8e8e4 0%, #cccccc 100%);
@@ -1392,127 +1366,127 @@ button {
 
 /* Gradient Button's Colors
 -------------------------------------------------------------- */
-.btn-gradient.darkgreen {
+.btn--gradient.darkgreen {
   background: #555025;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#4d4820), to(#555025));
   background: -webkit-linear-gradient(#4d4820 0%, #555025 100%);
   background: linear-gradient(#4d4820 0%, #555025 100%); }
 
-.btn-gradient.midgreen {
+.btn--gradient.midgreen {
   background: #8f993e;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#9ca35f), to(#8f993e));
   background: -webkit-linear-gradient(#9ca35f 0%, #8f993e 100%);
   background: linear-gradient(#9ca35f 0%, #8f993e 100%); }
 
-.btn-gradient.brightgreen {
+.btn--gradient.brightgreen {
   background: #b5bd00;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c9d10f), to(#b5bd00));
   background: -webkit-linear-gradient(#c9d10f 0%, #b5bd00 100%);
   background: linear-gradient(#c9d10f 0%, #b5bd00 100%); }
 
-.btn-gradient.lightgreen {
+.btn--gradient.lightgreen {
   background: #bbc592;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c9d3a1), to(#bbc592));
   background: -webkit-linear-gradient(#c9d3a1 0%, #bbc592 100%);
   background: linear-gradient(#c9d3a1 0%, #bbc592 100%); }
 
-.btn-gradient.yellow {
+.btn--gradient.yellow {
   background: #f6be00;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd030), to(#f6be00));
   background: -webkit-linear-gradient(#ffd030 0%, #f6be00 100%);
   background: linear-gradient(#ffd030 0%, #f6be00 100%); }
 
-.btn-gradient.darkred {
+.btn--gradient.darkred {
   background: #651d32;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#792f44), to(#651d32));
   background: -webkit-linear-gradient(#792f44 0%, #651d32 100%);
   background: linear-gradient(#792f44 0%, #651d32 100%); }
 
-.btn-gradient.midred {
+.btn--gradient.midred {
   background: #93272c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#a3383d), to(#93272c));
   background: -webkit-linear-gradient(#a3383d 0%, #93272c 100%);
   background: linear-gradient(#a3383d 0%, #93272c 100%); }
 
-.btn-gradient.brightred {
+.btn--gradient.brightred {
   background: #d50000;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#e21111), to(#d50000));
   background: -webkit-linear-gradient(#e21111 0%, #d50000 100%);
   background: linear-gradient(#e21111 0%, #d50000 100%); }
 
-.btn-gradient.lightred {
+.btn--gradient.lightred {
   background: #e03c31;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ec6258), to(#e03c31));
   background: -webkit-linear-gradient(#ec6258 0%, #e03c31 100%);
   background: linear-gradient(#ec6258 0%, #e03c31 100%); }
 
-.btn-gradient.orange {
+.btn--gradient.orange {
   background: #ea7600;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9120), to(#ea7600));
   background: -webkit-linear-gradient(#ff9120 0%, #ea7600 100%);
   background: linear-gradient(#ff9120 0%, #ea7600 100%); }
 
-.btn-gradient.darkpurple {
+.btn--gradient.darkpurple {
   background: #4b384c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#543e55), to(#4b384c));
   background: -webkit-linear-gradient(#543e55 0%, #4b384c 100%);
   background: linear-gradient(#543e55 0%, #4b384c 100%); }
 
-.btn-gradient.midpurple {
+.btn--gradient.midpurple {
   background: #500778;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#641391), to(#500778));
   background: -webkit-linear-gradient(#641391 0%, #500778 100%);
   background: linear-gradient(#641391 0%, #500778 100%); }
 
-.btn-gradient.brightpink {
+.btn--gradient.brightpink {
   background: #ac145a;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c01d68), to(#ac145a));
   background: -webkit-linear-gradient(#c01d68 0%, #ac145a 100%);
   background: linear-gradient(#c01d68 0%, #ac145a 100%); }
 
-.btn-gradient.lightpurple {
+.btn--gradient.lightpurple {
   background: #c6b0bc;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#dbc0cf), to(#c6b0bc));
   background: -webkit-linear-gradient(#dbc0cf 0%, #c6b0bc 100%);
   background: linear-gradient(#dbc0cf 0%, #c6b0bc 100%); }
 
-.btn-gradient.warmgrey {
+.btn--gradient.warmgrey {
   background: #8c8279;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#9c9188), to(#8c8279));
   background: -webkit-linear-gradient(#9c9188 0%, #8c8279 100%);
   background: linear-gradient(#9c9188 0%, #8c8279 100%); }
 
-.btn-gradient.darkblue {
+.btn--gradient.darkblue {
   background: #003d4c;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#074453), to(#003d4c));
   background: -webkit-linear-gradient(#074453 0%, #003d4c 100%);
   background: linear-gradient(#074453 0%, #003d4c 100%); }
 
-.btn-gradient.midblue {
+.btn--gradient.midblue {
   background: #002855;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#0f427a), to(#002855));
   background: -webkit-linear-gradient(#0f427a 0%, #002855 100%);
   background: linear-gradient(#0f427a 0%, #002855 100%); }
 
-.btn-gradient.brightblue {
+.btn--gradient.brightblue {
   background: #0097a9;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#0cadc0), to(#0097a9));
   background: -webkit-linear-gradient(#0cadc0 0%, #0097a9 100%);
   background: linear-gradient(#0cadc0 0%, #0097a9 100%); }
 
-.btn-gradient.lightblue {
+.btn--gradient.lightblue {
   background: #8db9ca;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#a5cddd), to(#8db9ca));
   background: -webkit-linear-gradient(#a5cddd 0%, #8db9ca 100%);
   background: linear-gradient(#a5cddd 0%, #8db9ca 100%); }
 
-.btn-gradient.stone {
+.btn--gradient.stone {
   background: #d6d2c4;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#e0ddd1), to(#d6d2c4));
   background: -webkit-linear-gradient(#e0ddd1 0%, #d6d2c4 100%);
   background: linear-gradient(#e0ddd1 0%, #d6d2c4 100%); }
 
-.btn-gradient.darkbrown {
+.btn--gradient.darkbrown {
   background: #4e3629;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#5f4436), to(#4e3629));
   background: -webkit-linear-gradient(#5f4436 0%, #4e3629 100%);
@@ -1520,67 +1494,67 @@ button {
 
 /* Gradient button background color on click
 -------------------------------------------------------------- */
-.btn-gradient.darkgreen:active {
+.btn--gradient.darkgreen:active {
   background: #555025; }
 
-.btn-gradient.midgreen:active {
+.btn--gradient.midgreen:active {
   background: #8f993e; }
 
-.btn-gradient.brightgreen:active {
+.btn--gradient.brightgreen:active {
   background: #b5bd00; }
 
-.btn-gradient.lightgreen:active {
+.btn--gradient.lightgreen:active {
   background: #bbc592; }
 
-.btn-gradient.yellow:active {
+.btn--gradient.yellow:active {
   background: #f6be00; }
 
-.btn-gradient.darkred:active {
+.btn--gradient.darkred:active {
   background: #651d32; }
 
-.btn-gradient.midred:active {
+.btn--gradient.midred:active {
   background: #93272c; }
 
-.btn-gradient.brightred:active {
+.btn--gradient.brightred:active {
   background: #d50000; }
 
-.btn-gradient.lightred:active {
+.btn--gradient.lightred:active {
   background: #e03c31; }
 
-.btn-gradient.orange:active {
+.btn--gradient.orange:active {
   background: #ea7600; }
 
-.btn-gradient.darkpurple:active {
+.btn--gradient.darkpurple:active {
   background: #4b384c; }
 
-.btn-gradient.midpurple:active {
+.btn--gradient.midpurple:active {
   background: #500778; }
 
-.btn-gradient.brightpink:active {
+.btn--gradient.brightpink:active {
   background: #ac145a; }
 
-.btn-gradient.lightpurple:active {
+.btn--gradient.lightpurple:active {
   background: #c6b0bc; }
 
-.btn-gradient.warmgrey:active {
+.btn--gradient.warmgrey:active {
   background: #8c8279; }
 
-.btn-gradient.darkblue:active {
+.btn--gradient.darkblue:active {
   background: #003d4c; }
 
-.btn-gradient.midblue:active {
+.btn--gradient.midblue:active {
   background: #002855; }
 
-.btn-gradient.brightblue:active {
+.btn--gradient.brightblue:active {
   background: #0097a9; }
 
-.btn-gradient.lightblue:active {
+.btn--gradient.lightblue:active {
   background: #8db9ca; }
 
-.btn-gradient.stone:active {
+.btn--gradient.stone:active {
   background: #d6d2c4; }
 
-.btn-gradient.darkbrown:active {
+.btn--gradient.darkbrown:active {
   background: #4e3629; }
 
 /* 
@@ -1892,8 +1866,8 @@ article p + .tabbed {
   padding-top: 2em; }
 
 .box--small {
-  margin-bottom: 2.28571em;
-  padding: 1.42857em;
+  margin-bottom: 32/14em;
+  padding: 20/14em;
   font-size: 14px; }
 
 .box--rounded {
@@ -1972,12 +1946,12 @@ article p + .tabbed {
   border-bottom-style: solid; }
 
 /* 
-* Partial name: Branding
+* Partial name: Brand
 * Use: 
 * Note:
 * Author: 
 -------------------------------------------------------------- */
-.branding {
+.brand {
   position: absolute;
   z-index: 1;
   overflow: visible;
@@ -1985,19 +1959,21 @@ article p + .tabbed {
   left: -35px;
   width: 100%;
   max-width: 1470px; }
-  .branding .branding__heading {
-    position: absolute;
-    left: 70px;
-    top: 25%;
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    margin-bottom: 0;
-    font-weight: bold; }
-  .branding img {
-    display: block;
-    margin-bottom: 0; }
+
+.brand__heading {
+  position: absolute;
+  left: 70px;
+  top: 25%;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+  font-weight: bold; }
+
+.brand__logo {
+  display: block;
+  margin-bottom: 0; }
 
 /* 
 * Partial name: Map
@@ -2503,3 +2479,48 @@ article > footer a:hover {
   text-decoration: none;
   font-size: 14px;
   background-color: #B5BD00; }
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+.message {
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #DDDDDD;
+  clear: left;
+  color: #666666;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 1em;
+  padding-top: 10px;
+  margin-bottom: 10px; }
+  .message > *:last-child, .message > *:last-child > *:last-child, .message > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
+
+.message--warning, .message--success {
+  background-color: #FFFAFA;
+  background-image: url("/images/alert.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #DD6868;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+  margin-bottom: 1em;
+  border: 1px solid #DD6868;
+  font-weight: bold; }
+
+.message--success {
+  background-color: #F7FFF2;
+  background-image: url("/images/success.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  color: #7FB861;
+  border: 1px solid #7FB861; }

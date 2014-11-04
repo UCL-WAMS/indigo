@@ -16,7 +16,7 @@
 	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
 	position: relative;
 	*:last-child {
-	    margin-bottom: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -25,13 +25,13 @@
 }
 
 .box--small {
-    margin-bottom: #{(32/14) + 'em'};
-    padding: #{(20/14) + 'em'};
-    font-size: 14px;
+	margin-bottom: #{32 / 14 + "em"};
+	padding: #{20 / 14 + "em"};
+	font-size: 14px;
 }
 
 .box--rounded {
-    border-radius: 4px;
+	border-radius: 4px;
 }
 
 .box--blank {
