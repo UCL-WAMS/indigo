@@ -27,3 +27,35 @@
 		background-position: right 50%;
 	}
 }
+
+.flag, .more {
+	padding: 5px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: #B5BD00;
+}
+
+.flag:hover {
+	color: #fff;
+	background: #8f993e;
+	text-decoration: none;
+}
+
+.meta, .blurb .meta {
+	font-size: 1.2rem;
+	font-size: 12px;
+	color: #999;
+	margin-bottom: 0.5em;
+}
+
+.meta.photo {
+	position: absolute;
+	left: 0;
+	top: 3px;
+}
+
+.event-date {
+	font-size: 13px;
+	font-weight: bold;
+}
