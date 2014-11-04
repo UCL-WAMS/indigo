@@ -9,15 +9,14 @@
 	position: absolute;
 	z-index: 1;
 	overflow: visible;
-	padding: 0 35px;
-	left: -35px;
 	width: 100%;
 	max-width: 1470px;
+	left: 0;
 }
 
 .brand__heading {
 	position: absolute;
-	left: 70px;
+	left: 35px;
 	top: 25%;
 	color: #fff;
 	font-size: 14px;
