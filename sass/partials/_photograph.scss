@@ -13,6 +13,7 @@
 	width: 100%;
 	position: relative;
 	left: -35px;
+	padding-bottom: 12%;
 }
 
 .photograph__description {
@@ -28,9 +29,7 @@
 }
 
 .photograph--on {
-	.site-brand {
-		padding-top: 30%;
-	}
+	padding-bottom: 30%;
 	.photograph__description {
 		display: block;
 	}

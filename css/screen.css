@@ -272,13 +272,6 @@ input {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-/* UCL Banner
--------------------------------------------------------------- */
-/* Site Branding Structure
--------------------------------------------------------------- */
-.site-brand {
-  padding-top: 12%; }
-
 /* Left Column + Navigation
 -------------------------------------------------------------- */
 #leftcol {
@@ -1901,7 +1894,8 @@ img.float-right {
   background-size: cover;
   width: 100%;
   position: relative;
-  left: -35px; }
+  left: -35px;
+  padding-bottom: 12%; }
 
 .photograph__description {
   background-color: rgba(0, 0, 0, 0.7);
@@ -1914,10 +1908,10 @@ img.float-right {
   color: #fff;
   display: none; }
 
-.photograph--on .site-brand {
-  padding-top: 30%; }
-.photograph--on .photograph__description {
-  display: block; }
+.photograph--on {
+  padding-bottom: 30%; }
+  .photograph--on .photograph__description {
+    display: block; }
 
 /* 
 * Partial name: Pagination
