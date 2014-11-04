@@ -28,6 +28,7 @@
 }
 
 .blurb__body {
+	@include guttering;
 	.blurb--wide & {
 		@include gs-span(dc, 2, 4);
 		top: -4px;

@@ -1608,6 +1608,8 @@ img.float-right {
         margin-left: 0;
         width: 100%; } }
 
+.blurb__body > *:last-child, .blurb__body > *:last-child > *:last-child, .blurb__body > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0; }
 .blurb--wide .blurb__body {
   display: block;
   float: left;
