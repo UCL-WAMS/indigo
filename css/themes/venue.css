@@ -9,6 +9,8 @@
 -------------------------------------------------------------- */
 /* Colour by element
 -------------------------------------------------------------- */
+/* UCL Colours
+-------------------------------------------------------------- */
 /* Mixins */
 /*
 
@@ -715,29 +717,26 @@ body {
 
 /* Headings
 -------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, .as-h1 {
   font-size: 2.5em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height: 1.5; }
+  font-weight: 300; }
 
 h2, .as-h2 {
   font-size: 2em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-weight: 300; }
 
 h3, .as-h3 {
   font-size: 1.5em;
-  font-weight: 300;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-weight: 300; }
 
 h4, .as-h4 {
   font-size: 1.2em;
@@ -748,7 +747,6 @@ h5, .as-h5 {
   font-style: normal;
   font-size: .8em;
   text-transform: uppercase;
-  font-family: Arial, sans-serif;
   font-weight: bold; }
 
 h6, .as-h6 {
@@ -813,7 +811,7 @@ blockquote {
 [class*=pullquote] q.quote {
   line-height: 1.5em;
   font-size: 20px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-style: italic;
   color: rgba(0, 0, 0, 0.7); }
 
@@ -999,7 +997,7 @@ dd + dt {
 /* Code lists (blocked)
 -------------------------------------------------------------- */
 ol.code {
-  font: 400 1em/1.5 source-code-pro,monospace;
+  font: 400 1em/1.5 "source-code-pro", monospace;
   margin: 1em 0 1.5em 2.5em; }
 
 ol.code li {
@@ -1010,23 +1008,6 @@ ol.code li {
 
 ol.code li.tab1 {
   padding-left: 4ex; }
-
-/* Pagination
--------------------------------------------------------------- */
-.pagination {
-  margin-top: 1em;
-  list-style: none; }
-
-.pagination a {
-  text-decoration: none; }
-
-.pagination li {
-  display: inline;
-  padding: 0.4em;
-  list-style: none; }
-
-.pagination li:before {
-  display: none; }
 
 /* Resources
 -------------------------------------------------------------- */
@@ -1061,7 +1042,7 @@ pre {
   white-space: pre; }
 
 pre, code, tt {
-  font: 1em 'consolas', 'andale mono', 'lucida console', monospace; }
+  font: 1em "consolas", "andale mono", "lucida console", monospace; }
 
 /* Forms
 -------------------------------------------------------------- */
@@ -1819,7 +1800,7 @@ img.float-right {
 /* Patterns */
 /* 
 * Partial name: Accordion
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -1860,7 +1841,7 @@ img.float-right {
     display: block !important; } }
 /* 
 * Partial name: Article
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -1902,7 +1883,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Box
-* Partial use:
+* Use: For sectioning off content within copy
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -1918,24 +1899,28 @@ article p + .tabbed {
   padding-left: 3.0303%;
   padding-right: 3.0303%;
   box-sizing: border-box;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   position: relative; }
+  .box *:last-child {
+    margin-bottom: 0; }
 
-.box.tagged {
-  padding-top: 1.5em; }
+.box--tagged {
+  padding-top: 2em; }
 
-.tag {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 5px 15px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  background-color: #B5BD00; }
+.box--small {
+  margin-bottom: 2.28571em;
+  padding: 1.42857em;
+  font-size: 14px; }
+
+.box--rounded {
+  border-radius: 4px; }
+
+.box--blank {
+  border-top: none; }
 
 /* 
 * Partial name: Blurb
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -1983,7 +1968,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Divider
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2032,7 +2017,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Map
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2041,7 +2026,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Slides
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2080,7 +2065,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Social
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2089,7 +2074,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Tabs
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2131,6 +2116,21 @@ article p + .tabbed {
   .tabbed__link:hover {
     text-decoration: none;
     color: #fff; }
+
+.pagination {
+  margin-top: 1em;
+  list-style: none; }
+
+.pagination a {
+  text-decoration: none; }
+
+.pagination li {
+  display: inline;
+  padding: 0.4em;
+  list-style: none; }
+
+.pagination li:before {
+  display: none; }
 
 /* 
 * Partial name: Breadcrumbs
@@ -2177,7 +2177,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Vcard
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2196,7 +2196,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Video
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2216,7 +2216,7 @@ article p + .tabbed {
 
 /* 
 * Partial name: Blog
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2340,13 +2340,13 @@ article > footer a:hover {
     background-position: right 50%; } }
 /* 
 * Partial name: Search
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 /* 
 * Partial name: Masthead
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2459,7 +2459,7 @@ article > footer a:hover {
 
 /* 
 * Partial name: Footer
-* Partial use:
+* Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2509,6 +2509,22 @@ article > footer a:hover {
     padding-top: 2px;
     font-size: 12px;
     margin-left: 0; } }
+/* 
+* Partial name: Tag
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #B5BD00; }
+
 /* UCL Venue Unique Styles -------------------------------- */
 .photograph {
   background-color: #f6be00; }
