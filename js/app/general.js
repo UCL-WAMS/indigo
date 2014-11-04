@@ -98,7 +98,7 @@ define(["jquery","allsite"],function($,gen){
 		}
 		buildnavMobile();
 
-		var verticalBodyClassPattern = /vertical-nav(.)*/i;
+		var verticalBodyClassPattern = /nav--vertical(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
 			equalizeVerticalCol();
 			$(window).resize(function(){
