@@ -214,53 +214,6 @@ textarea:focus {
 	@include gs-span(dc, all);
 }
 
-/* Success, notice and error boxes
--------------------------------------------------------------- */
-
-.warning, .success {
-	background-color: #FFFAFA;
-	background-image: url("#{$staticUrl}/images/alert.png");
-	background-position: 10px center;
-	background-repeat: no-repeat;
-	text-decoration: none;
-	color: #DD6868;
-	display: block;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	@include gs-pad(dl, padinfull);
-	margin-bottom: 1em;
-	border: 1px solid #DD6868;
-	font-weight: bold;
-}
-
-.success {
-	background-color: #F7FFF2;
-	background-image: url("#{$staticUrl}/images/success.png");
-	background-position: 10px center;
-	background-repeat: no-repeat;
-	color: #7FB861;
-	border: 1px solid #7FB861;
-}
-
-.message {
-	background: none repeat scroll 0 0 #FFFFFF;
-	border: 1px solid #DDDDDD;
-	clear: left;
-	color: #666666;
-	display: block;
-	font-size: 16px;
-	font-weight: 700;
-	width: 100%;
-	@include gs-pad(dl, padinfull);
-	padding-bottom: 1em;
-	padding-top: 10px;
-	margin-bottom: 10px;
-}
-
-.message span {
-	text-decoration: underline;
-}
-
 input.error {
 	background-color: #FFFAFA;
 	border: 1px solid #DD6868;
