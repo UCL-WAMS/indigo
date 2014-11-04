@@ -135,7 +135,12 @@
   padding-right: 0; }
 
 /* Base dependencies */
-/* Reset ---------------------------------------- */
+/* 
+* Base name: Reset
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -242,6 +247,12 @@ input {
   /* -webkit-appearance: none; ----  this is hiding checkboxes and radio buttons*/
   border-radius: 0; }
 
+/* 
+* Base name: Layout
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 /* UCL Banner
 -------------------------------------------------------------- */
 .photograph {
@@ -699,6 +710,12 @@ nav.topnav {
   width: 90%;
   position: relative; }
 
+/* 
+* Base name: Typography
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333333;
@@ -1014,28 +1031,38 @@ ol.code li.tab1 {
 .resource {
   font-style: italic; }
 
-/* Links
+/* 
+* Base name: Links
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 a {
   color: #034da1;
   text-decoration: none; }
-
-a:hover {
-  color: #034da1;
-  text-decoration: underline; }
+  a:hover {
+    color: #034da1;
+    text-decoration: underline; }
 
 p a {
   text-decoration: none; }
+  p a:hover {
+    text-decoration: underline; }
 
-p a:hover {
-  text-decoration: underline; }
-
-/* Audio
+/* 
+* Base name: Audio
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 audio {
   width: 100%; }
 
-/* Code
+/* 
+* Base name: Code
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 pre {
   margin: 1.5em 0;
@@ -1044,7 +1071,11 @@ pre {
 pre, code, tt {
   font: 1em "consolas", "andale mono", "lucida console", monospace; }
 
-/* Forms
+/* 
+* Base name: Forms
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 form {
   margin-top: 2em;
@@ -1303,7 +1334,11 @@ input.error {
 .error {
   color: #c60f13; }
 
-/* Buttons
+/* 
+* Base name: Buttons
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .btn {
   background-color: #666;
@@ -1605,7 +1640,11 @@ button {
 .btn-gradient.darkbrown:active {
   background: #4e3629; }
 
-/* Tables
+/* 
+* Base name: Tables
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 table {
   display: table;
@@ -1729,7 +1768,11 @@ td, td img {
 
   .rt tbody tr {
     border-right: 1px solid #eee; } }
-/* Images
+/* 
+* Base name: Images
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 figcaption {
   color: #666666;
@@ -2117,6 +2160,12 @@ article p + .tabbed {
     text-decoration: none;
     color: #fff; }
 
+/* 
+* Partial name: Pagination
+* Use: For highlighting where a user is within a sequence of related pages
+* Note:
+* Author: 
+-------------------------------------------------------------- */
 .pagination {
   margin-top: 1em;
   list-style: none; }

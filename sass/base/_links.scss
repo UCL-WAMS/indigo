@@ -1,20 +1,24 @@
-/* Links
+/* 
+* Base name: Links
+* Use:
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
+
 
 a {
 	color: #034da1;
 	text-decoration: none;
+	&:hover {
+		color: #034da1;
+		text-decoration: underline;
+	}
 }
 
-a:hover {
-	color: #034da1;
-	text-decoration: underline;
-}
 
 p a {
 	text-decoration: none;
-}
-
-p a:hover {
-	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
 }
