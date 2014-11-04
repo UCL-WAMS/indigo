@@ -114,16 +114,26 @@
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
 /* Helper classes */
-.breadcrumb__list, .unset-list {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none; }
-  .breadcrumb__list li, .unset-list li {
-    margin-left: 0;
-    list-style-type: none; }
-    .breadcrumb__list li:before, .unset-list li:before {
-      background-color: transparent !important; }
+/* Hide
+-------------------------------------------------------------- */
+/* Clearfix
+-------------------------------------------------------------- */
+/* Add margin
+-------------------------------------------------------------- */
+.push-left {
+  margin-left: 1.5em; }
 
+.push-right {
+  margin-right: 1.5em; }
+
+.push-bottom {
+  margin-bottom: 1.5em; }
+
+.push-top {
+  margin-top: 1.5em; }
+
+/* Remove margin/padding
+-------------------------------------------------------------- */
 .zero {
   margin: 0; }
 
@@ -1845,8 +1855,16 @@ img.float-right {
   margin-bottom: 1.5em; }
 
 .breadcrumb__list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
   margin-bottom: 0;
   display: inline-block; }
+  .breadcrumb__list li {
+    margin-left: 0;
+    list-style-type: none; }
+    .breadcrumb__list li:before {
+      background-color: transparent !important; }
 
 .breadcrumb__item {
   margin: 0;

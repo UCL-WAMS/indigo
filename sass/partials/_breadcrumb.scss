@@ -20,7 +20,7 @@
 }
 
 .breadcrumb__list {
-	@extend %unset-list;
+	@include unset-list;
 	margin-bottom: 0;
 	display: inline-block;
 }	

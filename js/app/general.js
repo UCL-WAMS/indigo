@@ -57,13 +57,13 @@ define(["jquery","allsite"],function($,gen){
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
 		var topNavList = $('.nav--top ul');
-		var navMobile = $('.nav--mobile');
-		var navMobileList = $('.nav--mobile ul');
+		var mobileNav = $('.nav--mobile');
+		var mobileNavList = $('.nav--mobile ul');
 
 		function resetCols(){
 			$('.site-content__body,#leftcol').css({
-				'height':'auto',
-				'min-height':'0'}
+				'height':'auto'
+				,'min-height':'0'}
 			);
 		}
 
@@ -79,24 +79,25 @@ define(["jquery","allsite"],function($,gen){
 				}
 				else{
 					$('.site-content__body').css({
-						'height':'auto',
-						'min-height':'0'}
+						'height':'auto'
+						,'min-height':'0'}
 					);
 				}
 			}else{
 				$('.site-content__body').css({
-					'height':'auto',
-					'min-height':'0'}
+					'height':'auto'
+					,'min-height':'0'}
 				);
 			}
 		}
-		function buildnavMobile(){
-			if(topNavList.length > 0 && navMobileList.length < 1){
-				navMobile.append("<ul>" + topNavList.html() + "</ul>");
+
+		function buildmobileNav(){
+			if(topNavList.length > 0 && mobileNavList.length < 1){
+				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
 			}
 			return;
 		}
-		buildnavMobile();
+		buildmobileNav();
 
 		var verticalBodyClassPattern = /nav--vertical(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
@@ -107,5 +108,5 @@ define(["jquery","allsite"],function($,gen){
 		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
-	})
+	});
 });
