@@ -754,7 +754,7 @@ body {
 
 /* Headings
 -------------------------------------------------------------- */
-hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .article {
+hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 

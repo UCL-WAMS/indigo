@@ -26,12 +26,12 @@ body {
 /* Headings
 -------------------------------------------------------------- */
 
-hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .article {
+hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
 	margin-bottom: 1.5em;
-	line-height: 1.5;
+	line-height: 1.5; 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 { 
 	margin-top: 0;
 	margin-bottom: .5em;
 	font-family: $font-san-serif;
@@ -40,25 +40,27 @@ h1, h2, h3, h4, h5, h6 {
 h1, .as-h1, %as-h1 {
 	font-size: 2.5em;
 	font-weight: 300;
-	// @include respond-max($bp__mobile--max) {
-	//     font-size: 1.75em;
-	// }
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.75em;
+    // }
 }
 
-h2, .as-h2, %as-h2 {
-	font-size: 2em;
+
+h2, .as-h2, %as-h2 {    
+	font-size: 2em; 
 	font-weight: 300;
-	// @include respond-max($bp__mobile--max) {
-	//     font-size: 1.5em;
-	// }
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.5em;
+    // }
 }
 
-h3, .as-h3, %as-h3 {
+
+h3, .as-h3, %as-h3 { 
 	font-size: 1.5em;
 	font-weight: 300;
-	// @include respond-max($bp__mobile--max) {
-	//     font-size: 1.4em;
-	// }
+    // @include respond-max($bp__mobile--max) {
+    //     font-size: 1.4em;
+    // }
 }
 
 h4, .as-h4, %as-h4 {
