@@ -330,35 +330,35 @@ input {
       background-size: 90%; } }
 /* Main Content
 -------------------------------------------------------------- */
-#content {
+.content {
   display: block;
   float: left;
   margin-left: 22.89562%;
   margin-right: -100%;
   width: 77.03704%; }
   @media only screen and (max-width: 989px) {
-    #content {
+    .content {
       display: block;
       float: left;
       margin-left: 34.20139%;
       margin-right: -100%;
       width: 65.79861%; } }
   @media only screen and (max-width: 767px) {
-    #content {
+    .content {
       clear: both;
       display: block;
       float: left;
       margin-left: 0;
       width: 100%; } }
 
-.content-main {
+.content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 55.46605%; }
   @media only screen and (max-width: 989px) {
-    .content-main {
+    .content__main {
       clear: both;
       display: block;
       float: left;
@@ -366,28 +366,29 @@ input {
       width: 100%;
       margin-bottom: 2em; } }
   @media only screen and (max-width: 767px) {
-    .content-main {
+    .content__main {
       clear: both;
       display: block;
       float: left;
       margin-left: 0;
       width: 100%; } }
 
-.content-sidebar {
+.content__sidebar {
+  font-size: 14px;
   display: block;
   float: left;
   margin-left: 66.80507%;
   margin-right: -100%;
   width: 33.19493%; }
   @media only screen and (max-width: 989px) {
-    .content-sidebar {
+    .content__sidebar {
       clear: both;
       display: block;
       float: left;
       margin-left: 0;
       width: 100%; } }
   @media only screen and (max-width: 767px) {
-    .content-sidebar {
+    .content__sidebar {
       clear: both;
       display: block;
       float: left;
@@ -492,9 +493,6 @@ body {
   word-wrap: break-word;
   -webkit-text-size-adjust: none; }
 
-.content-sidebar {
-  font-size: 14px; }
-
 /* Headings
 -------------------------------------------------------------- */
 hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
@@ -544,7 +542,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .box h2 {
   margin-top: 0; }
 
-.content-sidebar h1 {
+.content__sidebar h1 {
   font-size: 26px; }
 
 /* Quotes
@@ -1949,20 +1947,20 @@ nav.nav--top {
   margin-left: 0;
   margin-right: 0; }
 
-.nav--horizontal--2col .content-main {
+.nav--horizontal--2col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 71.37803%; }
-.nav--horizontal--2col .content-sidebar {
+.nav--horizontal--2col .content__sidebar {
   display: block;
   float: left;
   margin-left: 74.41038%;
   margin-right: -100%;
   width: 25.58962%; }
 @media only screen and (max-width: 989px) {
-  .nav--horizontal--2col .content-main, .nav--horizontal--2col .content-sidebar {
+  .nav--horizontal--2col .content__main, .nav--horizontal--2col .content__sidebar {
     clear: both;
     display: block;
     float: left;
@@ -1970,20 +1968,20 @@ nav.nav--top {
     width: 100%;
     margin-bottom: 2em; } }
 
-.nav--horizontal--1col .content-main {
+.nav--horizontal--1col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
-.nav--horizontal--1col .content-sidebar {
+.nav--horizontal--1col .content__sidebar {
   display: none; }
 
 @media only screen and (max-width: 767px) {
   .nav--vertical .nav--left {
     display: none; } }
 
-.nav--vertical--1col .content-main {
+.nav--vertical--1col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
@@ -2121,7 +2119,7 @@ article > footer a:hover {
   color: #136CB2;
   text-decoration: underline; }
 
-.content-sidebar .entry-title {
+.content__sidebar .entry-title {
   font-size: 18px;
   font-weight: 700; }
 

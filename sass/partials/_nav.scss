@@ -74,14 +74,14 @@ nav.nav--top {
 }
 
 .nav--horizontal--2col {
-	.content-main {
+	.content__main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
-	.content-sidebar {
+	.content__sidebar {
 		@include gs-span(dl, 5, 5, (1, 5));
 	}
 	@include gs-media(t, max) {
-		.content-main,.content-sidebar {
+		.content__main,.content__sidebar {
 			@include gs-span(t, all, (1, 3));
 			margin-bottom: 2em;
 		}
@@ -89,10 +89,10 @@ nav.nav--top {
 }
 
 .nav--horizontal--1col {
-	.content-main {
+	.content__main {
 		@include gs-span(dl, 1, 5, (1, 5));
 	}
-	.content-sidebar {
+	.content__sidebar {
 		display: none;
 	}
 }
@@ -106,7 +106,7 @@ nav.nav--top {
 }
 
 .nav--vertical--1col {
-	.content-main {
+	.content__main {
 		@include gs-span(dl, 2, 5, (2, 5));
 	}
 }
