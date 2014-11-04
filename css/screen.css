@@ -1529,18 +1529,21 @@ img.float-right {
       top: -1px; }
 
 @media screen and (max-width: 766px) {
-  .accordion-header {
+  .accordion__header {
     cursor: pointer;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 8px; }
+    padding-bottom: 8px; } }
 
-  .accordion-content {
-    display: none;
-    border-top: 0; } }
-@media screen and (min-width: 768px) {
-  /* ensure accordion nav is hidden and content is visible on desktop version */
-  .accordion-content {
-    display: block !important; } }
+.accordion__content {
+  /* ensure accordion nav is hidden and content is visible on desktop version */ }
+  @media screen and (max-width: 766px) {
+    .accordion__content {
+      display: none;
+      border-top: 0; } }
+  @media screen and (min-width: 768px) {
+    .accordion__content {
+      display: block !important; } }
+
 /* 
 * Partial name: Box
 * Use: For sectioning off content within copy
