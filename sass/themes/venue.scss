@@ -4,201 +4,201 @@
 /* UCL Venue Unique Styles -------------------------------- */
 
 .photograph {
-    background-color: $yellow;
+	background-color: $yellow;
 }
 
 @include gs-media(m, max) {
-    #header-mobile {
-        background-color: $yellow;
-    }
+	#header-mobile {
+		background-color: $yellow;
+	}
 }
 
 
 .site-content__body {
-    background-color: #0e0f14;
-    color: #fff;
+	background-color: #0e0f14;
+	color: #fff;
 }
 
 .bg-homepage {
-    background-image: url("http://farm9.staticflickr.com/8236/8464555745_8b82e2d87a_b.jpg");
-    background-repeat: no-repeat;
-    background-size: 45%;
-    background-position: 100% bottom;
+	background-image: url("http://farm9.staticflickr.com/8236/8464555745_8b82e2d87a_b.jpg");
+	background-repeat: no-repeat;
+	background-size: 45%;
+	background-position: 100% bottom;
 }
 
 .bg-show {
-    @extend .bg-homepage;
-    background-image: url("http://farm9.staticflickr.com/8509/8464554843_063974b42e.jpg");
+	@extend .bg-homepage;
+	background-image: url("http://farm9.staticflickr.com/8509/8464554843_063974b42e.jpg");
 }
 
 .bg-schedule {
-    @extend .bg-homepage;
-    background-image: url("http://farm9.staticflickr.com/8231/8465653616_91bd3e756f.jpg");
+	@extend .bg-homepage;
+	background-image: url("http://farm9.staticflickr.com/8231/8465653616_91bd3e756f.jpg");
 }
 
 @include gs-media(t, max) {
-    .site-content__body {
-        background-position: -10% bottom;
-    }
+	.site-content__body {
+		background-position: -10% bottom;
+	}
 }
 
 
 @include gs-media(m, max) {
-    .site-content__body {
-        background-image: none;
-    }
+	.site-content__body {
+		background-image: none;
+	}
 }
 
 
 .site-content__body a {
-    color: $yellow;
+	color: $yellow;
 }
 
 .site-content__body article ul {
-    li:before {
-        background-color: #fff;
-    }
+	li:before {
+		background-color: #fff;
+	}
 }
 
 /* Headings -------------------------------- */
 
 h1.large-title {
-    font-size: 72px;
-    color: #fff;
-    line-height: 1;
+	font-size: 72px;
+	color: #fff;
+	line-height: 1;
 }
 
 @include gs-media(m, max) {
-    h1.large-title {
-        font-size: 48px;
-    }
+	h1.large-title {
+		font-size: 48px;
+	}
 }
 
 
 /* Breadcrumb -------------------------------- */
 
 #breadcrumb li.current a {
-    color: #fff;
+	color: #fff;
 }
 
 /* Left Navigation -------------------------------- */
 
-.leftnav {
-    left: -50px;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 15px 15px 0px $yellow;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    margin-top: 2em;
-    width: 100%;
-    padding-left: 8.03030303%;
-    padding-right: 8.03030303%;
+.nav--left {
+	left: -50px;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 15px 15px 0px $yellow;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	margin-top: 2em;
+	width: 100%;
+	padding-left: 8.03030303%;
+	padding-right: 8.03030303%;
 }
 
 @include gs-media(t, max) {
-    .leftnav {
-        left: 0;
-    }
+	.nav--left {
+		left: 0;
+	}
 }
 
 
-#leftcol .leftnav a {
-    color: #333;
-    font-weight: 700;
+#leftcol .nav--left a {
+	color: #333;
+	font-weight: 700;
 }
 
 [class*=btn] {
-    box-shadow: 5px 5px 0px #bd8800;
-    border: 0;
-    border-radius: 0;
-    margin-right: 8px;
+	box-shadow: 5px 5px 0px #bd8800;
+	border: 0;
+	border-radius: 0;
+	margin-right: 8px;
 }
 
 .site-content__body a[class*=btn] {
-    color: #38300E;
+	color: #38300E;
 }
 
 /* What's on -------------------------------- */
 
 .whats-on .blurb {
-    @include gs-pad(dc, padinfull);
+	@include gs-pad(dc, padinfull);
 }
 
 .whats-on img {
-    box-shadow: 5px 5px 0px rgba(255, 255, 255, 1);
+	box-shadow: 5px 5px 0px rgba(255, 255, 255, 1);
 }
 
 .whats-on .one {
-    @include gs-span(dc, 1, 2);
+	@include gs-span(dc, 1, 2);
 }
 
 .whats-on .two {
-    @include gs-span(dc, 3, 4);
+	@include gs-span(dc, 3, 4);
 }
 
 @include gs-media(m, max) {
-    .whats-on .one, .whats-on .two {
-        @include gs-span(m, all);
-    }
+	.whats-on .one, .whats-on .two {
+		@include gs-span(m, all);
+	}
 }
 
 
 .date {
-    font-size: 18px;
-    font-weight: bold;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 [class*=pullquote] p.quote {
-    color: #fff;
-    line-height: 1.6em;
-    font-size: 24px;
+	color: #fff;
+	line-height: 1.6em;
+	font-size: 24px;
 }
 
 .pullquote .meta {
-    border-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
 }
 
 .bqstart, .bqend {
-    color: $yellow;
+	color: $yellow;
 }
 
 .site-content__body .tabs li {
-    background-color: #FFE076;
-    border-bottom: 5px solid #000;
+	background-color: #FFE076;
+	border-bottom: 5px solid #000;
 }
 
 .site-content__body .tabs li a {
-    color: #000;
+	color: #000;
 }
 
 .site-content__body .tabs li.active {
-    border-color: $yellow;
-    background-color: $yellow;
+	border-color: $yellow;
+	background-color: $yellow;
 }
 
 .tabbed > div {
-    border: 10px solid $yellow;
+	border: 10px solid $yellow;
 }
 
 .accordion {
-    margin-bottom: 1em;
-    dt, dd {
-        border: none;
-        border-bottom: 0;
-        margin-top: 0;
-        &:last-of-type {
-            border-bottom: 0;
-        }
-    }
-    dd {
-        &:last-of-type {
-            border-top: 0;
-        }
-    }
+	margin-bottom: 1em;
+	dt, dd {
+		border: none;
+		border-bottom: 0;
+		margin-top: 0;
+		&:last-of-type {
+			border-bottom: 0;
+		}
+	}
+	dd {
+		&:last-of-type {
+			border-top: 0;
+		}
+	}
 }
 
 .rslides {
-    border: 1px solid #666;
-    box-shadow: 10px 10px 0px #fff;
+	border: 1px solid #666;
+	box-shadow: 10px 10px 0px #fff;
 }

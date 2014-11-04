@@ -1,4 +1,6 @@
-.leftnav li {
+.nav {}
+
+.nav--left li {
 	margin-bottom: 0.5em;
 	ul {
 		margin: 10px 5%;
@@ -6,21 +8,21 @@
 	}
 }
 
-@mixin mobileNavListingLayoutFix {
+@mixin navMobileListingLayoutFix {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@mixin nav-in-document-flow {
+@mixin navInDocumentFlow {
 	position: relative;
 	left: -35px;
 	padding: 0 35px;
 }
 
-nav.topnav {
+nav.nav--top {
 	display: none;
-	@include nav-in-document-flow;
+	@include navInDocumentFlow;
 	width: 100%;
 	background-color: $content-bg-color;
 	margin-top: 0;
@@ -45,17 +47,17 @@ nav.topnav {
 	}
 }
 
-.horizontal-nav {
+.nav--horizontal {
 	#leftcol {
 		display: none;
-		.leftnav {
+		.nav--left {
 			display: none;
 		}
 		@include gs-media(m, max) {
 			display: block;
 		}
 	}
-	.topnav {
+	.nav--top {
 		display: block;
 		@include gs-media(m, max) {
 			display: none;
@@ -71,7 +73,7 @@ nav.topnav {
 	}
 }
 
-.horizontal-nav--2col {
+.nav--horizontal--2col {
 	.content-main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
@@ -86,7 +88,7 @@ nav.topnav {
 	}
 }
 
-.horizontal-nav--1col {
+.nav--horizontal--1col {
 	.content-main {
 		@include gs-span(dl, 1, 5, (1, 5));
 	}
@@ -95,22 +97,22 @@ nav.topnav {
 	}
 }
 
-.vertical-nav {
+.nav--vertical {
 	@include gs-media(m, max) {
-		.leftnav {
+		.nav--left {
 			display: none;
 		}
 	}
 }
 
-.vertical-nav--1col {
+.nav--vertical--1col {
 	.content-main {
 		@include gs-span(dl, 2, 5, (2, 5));
 	}
 }
 
-.vertical-nav--show-top-nav {
-	nav.topnav {
+.nav--vertical--show-top-nav {
+	nav.nav--top {
 		display: block;
 		@include gs-media(m, max) {
 			display: none;
@@ -124,7 +126,7 @@ nav.topnav {
 	}
 }
 
-.mobilenav {
+.nav--mobile {
 	display: none;
 	@include gs-media(m, max) {
 		display: block;

@@ -242,7 +242,7 @@ $(document).ready(function(){
 	});
 
 	function removeCurrentClassFromAll(){
-		var allPanelsAnchor = $('.accordion a');
+		var allPanelsAnchor =grunt $('.accordion a');
 		allPanelsAnchor.each(function(){
 			$(this).removeClass("currentAccordionAnchor");	
 		});

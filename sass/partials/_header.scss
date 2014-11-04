@@ -30,7 +30,7 @@
 			display: block;
 		}
 		#leftcol {
-			@include mobileNavListingLayoutFix;
+			@include navMobileListingLayoutFix;
 			position: relative;
 		}
 		#logo,
@@ -38,7 +38,7 @@
 			display: none;
 		}
 		.photograph {
-			@include mobileNavListingLayoutFix;
+			@include navMobileListingLayoutFix;
 			padding: 2em 0 0em 0;
 			left: 0;
 			background-color: transparent;
@@ -50,7 +50,7 @@
 			height: auto;
 			border-bottom: 1px solid #ccc;
 			ul#audiences {
-				@include mobileNavListingLayoutFix;
+				@include navMobileListingLayoutFix;
 				float: none;
 				margin-bottom: 1em;
 			}
@@ -64,7 +64,7 @@
 			padding: 0;
 			margin-top: 3.5em;
 			height: 4em;
-			@include mobileNavListingLayoutFix;
+			@include navMobileListingLayoutFix;
 		}
 		#branding {
 			position: static;

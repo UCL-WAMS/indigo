@@ -56,14 +56,14 @@ define(["jquery","allsite"],function($,gen){
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
-		var topNavList = $('.topnav ul');
-		var mobilenav = $('.mobilenav');
-		var mobilenavList = $('.mobilenav ul');
+		var topNavList = $('.nav--top ul');
+		var navMobile = $('.nav--mobile');
+		var navMobileList = $('.nav--mobile ul');
 
 		function resetCols(){
 			$('.site-content__body,#leftcol').css({
-				'height':'auto'
-				,'min-height':'0'}
+				'height':'auto',
+				'min-height':'0'}
 			);
 		}
 
@@ -79,24 +79,24 @@ define(["jquery","allsite"],function($,gen){
 				}
 				else{
 					$('.site-content__body').css({
-						'height':'auto'
-						,'min-height':'0'}
+						'height':'auto',
+						'min-height':'0'}
 					);
 				}
 			}else{
 				$('.site-content__body').css({
-					'height':'auto'
-					,'min-height':'0'}
+					'height':'auto',
+					'min-height':'0'}
 				);
 			}
 		}
-		function buildMobileNav(){
-			if(topNavList.length > 0 && mobilenavList.length < 1){
-				mobilenav.append("<ul>" + topNavList.html() + "</ul>");
+		function buildnavMobile(){
+			if(topNavList.length > 0 && navMobileList.length < 1){
+				navMobile.append("<ul>" + topNavList.html() + "</ul>");
 			}
 			return;
 		}
-		buildMobileNav();
+		buildnavMobile();
 
 		var verticalBodyClassPattern = /vertical-nav(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
