@@ -87,6 +87,15 @@ h3 + ul, h3 + ol, h3 + dl {
 	margin-top: 0.5em;
 }
 
+a {
+	color: #034da1;
+	text-decoration: none;
+	&:hover {
+		color: #034da1;
+		text-decoration: underline;
+	}
+}
+
 // Small heading segments
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {

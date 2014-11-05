@@ -26,12 +26,6 @@
 	display: none;
 }
 
-.hidden-on-mobile {
-	@include respond-max($bp__mobile--max) {
-		display: none;
-	}
-}
-
 .is-disabled {
 	opacity: .8;
 	text-decoration: line-through;
