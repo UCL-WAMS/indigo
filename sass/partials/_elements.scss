@@ -2,27 +2,27 @@
 /* Longform content
 -------------------------------------------------------------- */
 
-@media screen and (max-width: 766px) {
+@include respond-max($screen-md) {
 	.active-header {
-		background: url(#{$staticUrl}/images/close.png);
+		background: url(#{$static-url}/images/close.png);
 		background-repeat: no-repeat;
 		background-position: right 50%;
 		padding-right: 20px;
 		border-bottom: none;
 	}
 	.active-header:hover {
-		background: url(#{$staticUrl}/images/close.png);
+		background: url(#{$static-url}/images/close.png);
 		background-repeat: no-repeat;
 		background-position: right 50%;
 	}
 	.inactive-header {
-		background: url(#{$staticUrl}/images/open.png);
+		background: url(#{$static-url}/images/open.png);
 		background-repeat: no-repeat;
 		background-position: right 50%;
 		padding-right: 20px;
 	}
 	.inactive-header:hover {
-		background: url(#{$staticUrl}/images/open.png);
+		background: url(#{$static-url}/images/open.png);
 		background-repeat: no-repeat;
 		background-position: right 50%;
 	}

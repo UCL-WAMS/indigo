@@ -5,6 +5,10 @@
 * Author: 
 -------------------------------------------------------------- */
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	font-family: $font-san-serif;
 	@include font-size($font-size-base);
@@ -21,9 +25,13 @@ body {
 /* Headings
 -------------------------------------------------------------- */
 
-hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
 	margin-bottom: 1.5em;
 	line-height: 1.5; 
+}
+
+h1, h2, h3 {
+	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -33,48 +41,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .as-h1, %as-h1 {
-	font-size: 2.5em;
-	font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.75em;
-    // }
+	@include font-size($font-size-h1);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h2);
+	}
 }
-
 
 h2, .as-h2, %as-h2 {    
-	font-size: 2em; 
-	font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.5em;
-    // }
+	@include font-size($font-size-h2);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h3);
+	}
 }
 
-
 h3, .as-h3, %as-h3 { 
-	font-size: 1.5em;
-	font-weight: 300;
-    // @include respond-max($bp__mobile--max) {
-    //     font-size: 1.4em;
-    // }
+	@include font-size($font-size-h3);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h4);
+	}
 }
 
 h4, .as-h4, %as-h4 {
-	font-size: 1.2em;
+	@include font-size($font-size-h4);
 	text-transform: none;
 	letter-spacing: 0;
-	// @include respond-max($bp__mobile--max) {
-	//     font-size: 1em;
-	// }
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h5);
+	}
 }
 
 h5, .as-h5, %as-h5 {
+	@include font-size($font-size-h5);
 	font-style: normal;
-	font-size: .8em;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 h6, .as-h6, %as-h6 {
+	@include font-size($font-size-h6);
 	color: #999;
 	margin: 1em 0 0;
 }

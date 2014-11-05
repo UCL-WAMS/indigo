@@ -42,14 +42,14 @@
 	padding: 20% 35px 0;
 	background-size: auto 100%;
 	background-position: 106% bottom;
-	background-image: url("#{$staticUrl}/images/ucl-logo.svg");
+	background-image: url("#{$static-url}/images/ucl-logo.svg");
 	background-repeat: repeat-x;
 	position: relative;
 	left: -35px;
 	background-color: #fff;
 
 	&.no-svg {
-		background-image: url("#{$staticUrl}/images/ucl-logo-cropped-white.png");
+		background-image: url("#{$static-url}/images/ucl-logo-cropped-white.png");
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-color: #000;

@@ -35,7 +35,7 @@
 .footer__links {
 	@include font-size($font-size-sm);
 	margin-top: 0.5em;
-	@media screen and (max-width: 989px) {
+	@include respond-max($screen-lg) {
 		@include font-size($font-size-xs);
 	}
 }

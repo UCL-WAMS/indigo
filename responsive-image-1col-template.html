@@ -60,7 +60,7 @@
 
     <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
     <!-- <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script> -->
-	<script src="/js/main.js"></script>
+    <script src="/js/main.js"></script>
     <script>
     require(["app/general"]); //load the default stuff
     </script>
@@ -79,13 +79,13 @@
                 <div class="masthead__search">
                     <form action="#" method="get">
                         <!--
-						<div class="search-type">
-							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
-							<label for="ucl-site" class="site">Site</label>
-							<input type="radio" id="ucl-search" name="operation" value="2">
-							<label for="ucl-search" class="staff">Directory</label>
-						</div>
-						-->
+                        <div class="search-type">
+                            <input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
+                            <label for="ucl-site" class="site">Site</label>
+                            <input type="radio" id="ucl-search" name="operation" value="2">
+                            <label for="ucl-search" class="staff">Directory</label>
+                        </div>
+                        -->
                         <div class="search-form">
                             <input type="search" placeholder="Search UCL websites" class="search-form__input search-form__input--search" value="">
                         </div>
@@ -99,7 +99,8 @@
                         </li>
                         <li class="masthead__item"><a href="prospective-students.php">Prospective students</a>
                         </li>
-                        <li class="masthead__item"><a href="current-students.php">Current students</a></li>
+                        <li class="masthead__item"><a href="current-students.php">Current students</a>
+                        </li>
                         </li>
                         <li class="masthead__item"><a href="staff.php">Staff</a>
                         </li>
@@ -241,8 +242,8 @@
     </div>
     <!-- end .site-content -->
 
-    <div class="wrapper"> 
-        <footer class="footer clearfix">
+    <footer class="footer wrapper">
+        <div class="footer__inner">
             <article class="block block--col-1">
                 <h2 class="as-h5">Facilities</h2>
                 <ul class="footer__list list-unstyled">
@@ -288,6 +289,7 @@
             <p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
             <ul class="footer__links list-inline footer__list list-unstyled">
                 <li>Copyright © 2013 UCL</li>
+
                 <li><a href="#">Disclaimer</a>
                 </li>
                 <li><a href="#">Freedom of Information</a>
@@ -301,8 +303,9 @@
                 <li><a href="#">Contact Us</a>
                 </li>
             </ul>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
 
 </body>
 

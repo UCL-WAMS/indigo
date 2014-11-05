@@ -19,7 +19,7 @@
 
 .message--warning, .message--success {
 	background-color: #FFFAFA;
-	background-image: url("#{$staticUrl}/images/alert.png");
+	background-image: url("#{$static-url}/images/alert.png");
 	background-position: 10px center;
 	background-repeat: no-repeat;
 	text-decoration: none;
@@ -35,7 +35,7 @@
 
 .message--success {
 	background-color: #F7FFF2;
-	background-image: url("#{$staticUrl}/images/success.png");
+	background-image: url("#{$static-url}/images/success.png");
 	background-position: 10px center;
 	background-repeat: no-repeat;
 	color: #7FB861;

@@ -37,7 +37,7 @@
 }
 
 .accordion__header {
-	@media screen and (max-width: 766px) {
+	@include respond-max($screen-md - 1px) {
 		cursor: pointer;
 		border-bottom: 1px solid #ccc;
 		padding-bottom: 8px;
@@ -45,12 +45,12 @@
 }
 
 .accordion__content {
-	@media screen and (max-width: 766px) {
+	@include respond-max($screen-md - 1px) {
 		display: none;
 		border-top: 0;
 	}
 	/* ensure accordion nav is hidden and content is visible on desktop version */
-	@media screen and (min-width: 768px) {
+	@include respond-min($screen-md) {
 		display: block !important;
 	}
 }

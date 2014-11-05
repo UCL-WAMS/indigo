@@ -108,7 +108,7 @@
 -------------------------------------------------------------- */
 /* 
 * Name: SASS-IE
-* Use: Media query handling
+* Use: Media query handling outside of Gridset
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
 /* Helper classes */
@@ -488,6 +488,9 @@ input {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -505,9 +508,12 @@ body {
 
 /* Headings
 -------------------------------------------------------------- */
-hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
   margin-bottom: 1.5em;
   line-height: 1.5; }
+
+h1, h2, h3 {
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -515,29 +521,49 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, .as-h1 {
-  font-size: 2.5em;
-  font-weight: 300; }
+  font-size: 36px;
+  font-size: 3.6rem; }
+  @media (max-width: 779px) {
+    h1, .as-h1 {
+      font-size: 30px;
+      font-size: 3rem; } }
 
 h2, .as-h2 {
-  font-size: 2em;
-  font-weight: 300; }
+  font-size: 30px;
+  font-size: 3rem; }
+  @media (max-width: 779px) {
+    h2, .as-h2 {
+      font-size: 24px;
+      font-size: 2.4rem; } }
 
 h3, .as-h3 {
-  font-size: 1.5em;
-  font-weight: 300; }
+  font-size: 24px;
+  font-size: 2.4rem; }
+  @media (max-width: 779px) {
+    h3, .as-h3 {
+      font-size: 18px;
+      font-size: 1.8rem; } }
 
 h4, .as-h4 {
-  font-size: 1.2em;
+  font-size: 18px;
+  font-size: 1.8rem;
   text-transform: none;
   letter-spacing: 0; }
+  @media (max-width: 779px) {
+    h4, .as-h4 {
+      font-size: 14px;
+      font-size: 1.4rem; } }
 
 h5, .as-h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
   font-style: normal;
-  font-size: .8em;
   text-transform: uppercase;
   font-weight: bold; }
 
 h6, .as-h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
   color: #999;
   margin: 1em 0 0; }
 
@@ -1520,7 +1546,7 @@ img.float-right {
       position: relative;
       top: -1px; }
 
-@media screen and (max-width: 766px) {
+@media (max-width: 778px) {
   .accordion__header {
     cursor: pointer;
     border-bottom: 1px solid #ccc;
@@ -1528,11 +1554,11 @@ img.float-right {
 
 .accordion__content {
   /* ensure accordion nav is hidden and content is visible on desktop version */ }
-  @media screen and (max-width: 766px) {
+  @media (max-width: 778px) {
     .accordion__content {
       display: none;
       border-top: 0; } }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 780px) {
     .accordion__content {
       display: block !important; } }
 
@@ -2157,7 +2183,7 @@ article > footer a:hover {
 
 /* Longform content
 -------------------------------------------------------------- */
-@media screen and (max-width: 766px) {
+@media (max-width: 779px) {
   .active-header {
     background: url(/images/close.png);
     background-repeat: no-repeat;
@@ -2391,7 +2417,7 @@ article > footer a:hover {
   font-size: 14px;
   font-size: 1.4rem;
   margin-top: 0.5em; }
-  @media screen and (max-width: 989px) {
+  @media (max-width: 989px) {
     .footer__links {
       font-size: 12px;
       font-size: 1.2rem; } }
@@ -2403,8 +2429,8 @@ article > footer a:hover {
 * Author: 
 -------------------------------------------------------------- */
 .tag {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   position: absolute;
   left: 0;
   top: 0;
