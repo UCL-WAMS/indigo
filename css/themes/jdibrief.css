@@ -329,40 +329,12 @@ input {
   width: 19.8653%; }
   @media only screen and (max-width: 767px) {
     #leftcol {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
       margin-top: 2em; } }
 
-#nav-mobile-back, #header-mobile {
-  display: none; }
-
-@media only screen and (max-width: 767px) {
-  #header-mobile {
-    display: block;
-    width: 100%;
-    padding: 20% 35px 0;
-    background-size: auto 100%;
-    background-position: 106% bottom;
-    background-image: url("/images/ucl-logo.svg");
-    background-repeat: repeat-x;
-    position: relative;
-    left: -35px;
-    background-color: #fff; }
-    #header-mobile h1 {
-      position: absolute;
-      font-size: 12px;
-      top: 1em;
-      left: 1em; }
-    #header-mobile #nav-mobile-menu {
-      width: 20px;
-      top: 35%;
-      left: 35px;
-      position: absolute;
-      z-index: 1000; }
-    #header-mobile.no-svg {
-      background-image: url("/images/ucl-logo-cropped-white.png");
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-color: #000;
-      background-size: 90%; } }
 /* Main Content
 -------------------------------------------------------------- */
 .content {
@@ -1743,6 +1715,13 @@ img.float-right {
   width: 100%;
   max-width: 1470px;
   left: 0; }
+  @media only screen and (max-width: 767px) {
+    .brand {
+      position: static;
+      padding-left: 0; }
+      .brand p {
+        left: 0;
+        top: 50%; } }
 
 .brand__heading {
   position: absolute;
@@ -1753,10 +1732,19 @@ img.float-right {
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: bold; }
+  @media only screen and (max-width: 767px) {
+    .brand__heading {
+      position: relative;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box; } }
 
 .brand__logo {
   display: block;
   margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .brand__logo {
+      display: none; } }
 
 /* 
 * Partial name: Map
@@ -1877,6 +1865,14 @@ img.float-right {
   position: relative;
   left: -35px;
   padding-bottom: 12%; }
+  @media only screen and (max-width: 767px) {
+    .photograph {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2em 0 0em 0;
+      left: 0;
+      background-color: transparent; } }
 
 .photograph__description {
   background-color: rgba(0, 0, 0, 0.7);
@@ -1893,6 +1889,9 @@ img.float-right {
   padding-bottom: 30%; }
   .photograph--on .photograph__description {
     display: block; }
+    @media only screen and (max-width: 767px) {
+      .photograph--on .photograph__description {
+        display: none; } }
 
 /* 
 * Partial name: Pagination
@@ -2092,6 +2091,24 @@ nav.nav--top {
       display: block; }
       .nav--mobile ul:nth-child(n+2) {
         padding-left: 1em; } }
+
+#nav-mobile-back {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    #nav-mobile-back {
+      display: block;
+      position: absolute;
+      left: 5%;
+      top: 5px;
+      padding: 0;
+      z-index: 1000;
+      width: 50%; }
+      #nav-mobile-back img {
+        vertical-align: middle;
+        display: inline-block;
+        width: 30px;
+        position: relative;
+        margin: -5px -3px 0 -8px; } }
 
 /* 
 * Partial name: Video
@@ -2298,6 +2315,18 @@ article > footer a:hover {
       font-size: 1.2rem;
       margin-top: 12px;
       margin-top: 1.2rem; } }
+  @media only screen and (max-width: 767px) {
+    .masthead {
+      height: auto;
+      border-bottom: 1px solid #ccc; }
+      .masthead ul#audiences {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-bottom: 1em; }
+      .masthead .wrapper {
+        background-color: #444; } }
 
 #search {
   background: none repeat scroll 0 0 transparent;
@@ -2316,6 +2345,16 @@ article > footer a:hover {
   box-sizing: border-box;
   float: right;
   width: 42%; }
+  @media only screen and (max-width: 767px) {
+    .masthead__search {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-top: 3.5em;
+      height: 4em;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; } }
   .masthead__search input, .masthead__search label {
     width: auto; }
   .masthead__search label {
@@ -2402,78 +2441,39 @@ article > footer a:hover {
         padding: 0.5em 0;
         display: block;
         clear: both;
-        font-size: 1.6rem; }
-      .header ul {
-        margin: 0; }
-      .header li {
-        margin-bottom: 0;
-        display: block; }
-      .header #leftcol {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative; }
-      .header #logo,
-      .header .site-brand {
-        display: none; }
-      .header .photograph {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2em 0 0em 0;
-        left: 0;
-        background-color: transparent; }
-      .header .wrapper {
-        width: 100%; }
-      .header #global-masthead {
-        height: auto;
-        border-bottom: 1px solid #ccc; }
-        .header #global-masthead ul#audiences {
-          width: 90%;
-          margin-left: auto;
-          margin-right: auto;
-          float: none;
-          margin-bottom: 1em; }
-        .header #global-masthead .wrapper {
-          background-color: #444; }
-      .header #global-search {
-        float: none;
-        width: 100%;
-        padding: 0;
-        margin-top: 3.5em;
-        height: 4em;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto; }
-      .header #branding {
-        position: static;
-        padding-left: 0; }
-        .header #branding p {
-          left: 0;
-          top: 50%; }
-      .header #branding h1 {
-        background-color: #222;
-        padding: 0.5em 35px;
-        position: relative;
-        left: 0;
-        width: 100%;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box; }
-      .header #nav-mobile-back {
-        display: block;
+        font-size: 1.6rem; } }
+
+#header-mobile {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    #header-mobile {
+      display: block;
+      width: 100%;
+      padding: 20% 35px 0;
+      background-size: auto 100%;
+      background-position: 106% bottom;
+      background-image: url("/images/ucl-logo.svg");
+      background-repeat: repeat-x;
+      position: relative;
+      left: -35px;
+      background-color: #fff; }
+      #header-mobile h1 {
         position: absolute;
-        left: 5%;
-        top: 5px;
-        padding: 0;
-        z-index: 1000;
-        width: 50%; }
-        .header #nav-mobile-back img {
-          vertical-align: middle;
-          display: inline-block;
-          width: 30px;
-          position: relative;
-          margin: -5px -3px 0 -8px; } }
+        font-size: 12px;
+        top: 1em;
+        left: 1em; }
+      #header-mobile #nav-mobile-menu {
+        width: 20px;
+        top: 35%;
+        left: 35px;
+        position: absolute;
+        z-index: 1000; }
+      #header-mobile.no-svg {
+        background-image: url("/images/ucl-logo-cropped-white.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-color: #000;
+        background-size: 90%; } }
 
 /* 
 * Partial name: Footer

@@ -33,6 +33,18 @@
 			margin-top: 1.2rem;
 		}
 	}
+	@include gs-media(m, max) {
+		height: auto;
+		border-bottom: 1px solid #ccc;
+		ul#audiences {
+			@include navMobileListingLayoutFix;
+			float: none;
+			margin-bottom: 1em;
+		}
+		.wrapper {
+			background-color: #444;
+		}
+	}
 }
 
 #search {
@@ -55,6 +67,14 @@
 	box-sizing: border-box;
 	float: right;
 	width: 42%;
+	@include gs-media(m, max) {
+		float: none;
+		width: 100%;
+		padding: 0;
+		margin-top: 3.5em;
+		height: 4em;
+		@include navMobileListingLayoutFix;
+	}
 	input, label {
 		width: auto;
 	}

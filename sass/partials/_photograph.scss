@@ -14,6 +14,12 @@
 	position: relative;
 	left: -35px;
 	padding-bottom: 12%;
+	@include gs-media(m, max) {
+		@include navMobileListingLayoutFix;
+		padding: 2em 0 0em 0;
+		left: 0;
+		background-color: transparent;
+	}
 }
 
 .photograph__description {
@@ -32,5 +38,8 @@
 	padding-bottom: 30%;
 	.photograph__description {
 		display: block;
+		@include gs-media(m, max) {
+			display: none;
+		}
 	}
 }
