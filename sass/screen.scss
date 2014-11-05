@@ -2,16 +2,7 @@
 @import "variables/variables";
 
 /* Mixins */
-@import "mixins/media-query";
-@import "mixins/gridset";
-@import "mixins/gradient";
-@import "mixins/no-js";
-@import "mixins/modernizr";
-@import "mixins/list";
-@import "mixins/on-interaction";
-@import "mixins/guttering";
-@import "mixins/sass-ie";
-@import "mixins/alignment";
+@import "mixins/mixins";
 
 /* Helper classes */
 @import "utilities/helpers";
