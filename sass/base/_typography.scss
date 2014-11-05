@@ -210,9 +210,6 @@ cite, .cite, em, dfn {
 	font-size: 12px;
 	color: #ccc;
 	margin-top: 2em;
-	.lastMod {
-		text-transform: capitalize;
-	}
 }
 
 ins {
@@ -228,6 +225,10 @@ mark {
 
 del {
 	color: #666;
+}
+
+time {
+	@extend %text-capitalize;
 }
 
 .standfirst {
