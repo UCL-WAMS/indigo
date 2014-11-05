@@ -163,6 +163,37 @@
 .zero-pad-right {
   padding-right: 0; }
 
+/* Alignment
+-------------------------------------------------------------- */
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+/* Transforms
+-------------------------------------------------------------- */
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.text-emphasise {
+  font-style: italic; }
+
 /* Base dependencies */
 /* 
 * Base name: Reset
@@ -776,15 +807,13 @@ dd + dt {
 .code {
   font: 400 1em/1.5 "source-code-pro", monospace;
   margin: 1em 0 1.5em 2.5em; }
-
-.code li {
-  background: none repeat scroll 0 0 #F6F6F6;
-  border-top: 1px solid #FFFFFF;
-  list-style: decimal-leading-zero outside none;
-  padding: 0 0.5em; }
-
-.code li.tab1 {
-  padding-left: 4ex; }
+  .code li {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-top: 1px solid #FFFFFF;
+    list-style: decimal-leading-zero outside none;
+    padding: 0 0.5em; }
+    .code li .tab1 {
+      padding-left: 4ex; }
 
 /* Resources
 -------------------------------------------------------------- */
