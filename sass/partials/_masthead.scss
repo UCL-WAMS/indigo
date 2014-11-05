@@ -39,7 +39,8 @@
 		padding: 0;
 		margin-top: 3.5em;
 		height: 4em;
-		@include navMobileListingLayoutFix;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	label {
@@ -63,7 +64,9 @@
 	font-size: 16px;
 	display: block;
 	@include gs-media(m, max) {
-		@include navMobileListingLayoutFix;
+			width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 		float: none;
 		margin-bottom: 1em;
 	}
@@ -85,5 +88,9 @@
 	.lt-ie9 & {
 		display: block;
 		margin-top: 8px;
+	}
+	@include gs-media(m, max) {
+		display: block;
+		text-align: left;
 	}
 }

@@ -10,7 +10,7 @@
 
 nav.nav--top {
 	display: none;
-	@include navInDocumentFlow;
+	@include alignment;
 	width: 100%;
 	background-color: $content-bg-color;
 	margin-top: 0;

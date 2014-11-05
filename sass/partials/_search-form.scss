@@ -9,6 +9,10 @@
 	left: 15%;
 	width: 75%;
 	box-sizing: border-box;
+	@include gs-media(m, max) {
+		left: 0;
+		width: 100%;
+	}
 }
 
 .search-form__input {
@@ -17,6 +21,9 @@
 	width: 85%;
 	box-sizing: border-box;
 	height: 30px;
+	@include gs-media(m, max) {
+		width: 80%;
+	}
 }
 
 .search-form__input--search {
@@ -30,7 +37,6 @@
 	top: 0;
 	left: 92%;
 	width: 3.5em;
-	line-height: 1;
 	margin: 7px 0 3px;
 	padding: 0;
 	box-sizing: border-box;
