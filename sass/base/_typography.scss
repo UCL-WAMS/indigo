@@ -243,12 +243,7 @@ del {
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled, %list-unstyled {
-	padding-left: 0;
-	margin-left: 0;
-	list-style: none;
-	> li:before {
-		content: none;
-	}
+	@include unset-list;
 }
 
 // Inline turns list items into inline-block

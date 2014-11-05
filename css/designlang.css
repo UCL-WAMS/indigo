@@ -711,11 +711,14 @@ del {
 /* Lists
 -------------------------------------------------------------- */
 .list-unstyled, .list-inline {
-  padding-left: 0;
   margin-left: 0;
+  padding-left: 0;
   list-style: none; }
-  .list-unstyled > li:before, .list-inline > li:before {
-    content: none; }
+  .list-unstyled li, .list-inline li {
+    margin-left: 0;
+    list-style-type: none; }
+    .list-unstyled li:before, .list-inline li:before {
+      background-color: transparent !important; }
 
 .list-inline {
   display: inline; }
@@ -2417,12 +2420,10 @@ article > footer a:hover {
   background: black;
   background: rgba(0, 0, 0, 0.7);
   padding: 40px 35px;
+  margin-left: -35px;
+  margin-right: -35px;
   color: #bbb;
   clear: left; }
-  @media only screen and (max-width: 767px) {
-    .footer {
-      margin-left: -35px;
-      margin-right: -35px; } }
   .footer a {
     color: #eee; }
     .footer a:hover {
@@ -2433,11 +2434,6 @@ article > footer a:hover {
   padding-top: 4px;
   font-size: 14px;
   margin-bottom: 0; }
-  @media screen and (max-width: 989px) {
-    .footer__list li {
-      padding-bottom: 2px;
-      padding-top: 2px;
-      font-size: 12px; } }
 
 .footer__links {
   font-size: 14px;

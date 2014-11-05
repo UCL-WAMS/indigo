@@ -9,12 +9,10 @@
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.7);
 	padding: 40px 35px;
+	margin-left: -35px;
+	margin-right: -35px;
 	color: #bbb;
 	clear: left;
-	@include gs-media(m, max) {
-		margin-left: -35px;
-		margin-right: -35px;
-	}
 	a {
 		color: #eee;
 		&:hover {
@@ -29,11 +27,6 @@
 		padding-top: 4px;
 		font-size: 14px;
 		margin-bottom: 0;
-		@media screen and (max-width: 989px) {
-			padding-bottom: 2px;
-			padding-top: 2px;
-			font-size: 12px;
-		}
 	}
 }
 
