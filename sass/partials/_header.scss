@@ -44,6 +44,7 @@
 		background-color: #000;
 		background-size: 90%;
 	}
+	
 	@include gs-media(m, max) {
 		display: block;
 	}
