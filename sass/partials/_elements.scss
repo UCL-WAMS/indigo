@@ -2,47 +2,20 @@
 /* Longform content
 -------------------------------------------------------------- */
 
-@include respond-max($screen-md) {
-	.active-header {
-		background: url(#{$static-url}/images/close.png);
-		background-repeat: no-repeat;
-		background-position: right 50%;
-		padding-right: 20px;
-		border-bottom: none;
-	}
-	.active-header:hover {
-		background: url(#{$static-url}/images/close.png);
-		background-repeat: no-repeat;
-		background-position: right 50%;
-	}
-	.inactive-header {
-		background: url(#{$static-url}/images/open.png);
-		background-repeat: no-repeat;
-		background-position: right 50%;
-		padding-right: 20px;
-	}
-	.inactive-header:hover {
-		background: url(#{$static-url}/images/open.png);
-		background-repeat: no-repeat;
-		background-position: right 50%;
-	}
-}
-
 .flag, .more {
 	padding: 5px;
 	color: #fff;
 	text-decoration: none;
 	@include font-size($font-size-sm);
 	background-color: #B5BD00;
+	&:hover {
+		color: #fff;
+		background: #8f993e;
+		text-decoration: none;
+	}
 }
 
-.flag:hover {
-	color: #fff;
-	background: #8f993e;
-	text-decoration: none;
-}
-
-.meta, .blurb .meta {
+.meta {
 	font-size: 1.2rem;
 	@include font-size($font-size-xs);
 	color: #999;

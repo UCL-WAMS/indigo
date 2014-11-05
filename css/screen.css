@@ -1562,6 +1562,29 @@ img.float-right {
     .accordion__content {
       display: block !important; } }
 
+@media (max-width: 779px) {
+  .accordion__header--active {
+    background: url(/images/close.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    padding-right: 20px;
+    border-bottom: none; }
+    .accordion__header--active:hover {
+      background: url(/images/close.png);
+      background-repeat: no-repeat;
+      background-position: right 50%; } }
+
+@media (max-width: 779px) {
+  .accordion__header--inactive {
+    background: url(/images/open.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    padding-right: 20px; }
+    .accordion__header--inactive:hover {
+      background: url(/images/open.png);
+      background-repeat: no-repeat;
+      background-position: right 50%; } }
+
 /* 
 * Partial name: Box
 * Use: For sectioning off content within copy
@@ -2183,29 +2206,6 @@ article > footer a:hover {
 
 /* Longform content
 -------------------------------------------------------------- */
-@media (max-width: 779px) {
-  .active-header {
-    background: url(/images/close.png);
-    background-repeat: no-repeat;
-    background-position: right 50%;
-    padding-right: 20px;
-    border-bottom: none; }
-
-  .active-header:hover {
-    background: url(/images/close.png);
-    background-repeat: no-repeat;
-    background-position: right 50%; }
-
-  .inactive-header {
-    background: url(/images/open.png);
-    background-repeat: no-repeat;
-    background-position: right 50%;
-    padding-right: 20px; }
-
-  .inactive-header:hover {
-    background: url(/images/open.png);
-    background-repeat: no-repeat;
-    background-position: right 50%; } }
 .flag, .more {
   padding: 5px;
   color: #fff;
@@ -2213,13 +2213,12 @@ article > footer a:hover {
   font-size: 14px;
   font-size: 1.4rem;
   background-color: #B5BD00; }
+  .flag:hover, .more:hover {
+    color: #fff;
+    background: #8f993e;
+    text-decoration: none; }
 
-.flag:hover {
-  color: #fff;
-  background: #8f993e;
-  text-decoration: none; }
-
-.meta, .blurb .meta {
+.meta {
   font-size: 1.2rem;
   font-size: 12px;
   font-size: 1.2rem;
@@ -2303,11 +2302,10 @@ article > footer a:hover {
       margin-right: auto;
       float: none;
       margin-bottom: 1em; } }
-  @media screen and (max-width: 940px) {
+  @media (max-width: 989px) {
     .masthead__list {
-      font-size: 12px;
-      font-size: 1.2rem;
-      font-size: 1.2rem; }
+      font-size: 14px;
+      font-size: 1.4rem; }
       .lt-ie9 .masthead__list {
         margin-top: 12px; } }
 
