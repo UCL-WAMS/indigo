@@ -6,12 +6,12 @@
 -------------------------------------------------------------- */
 
 .box {
+	@include gs-pad(dc, padinfull);
 	border-top: 5px solid #000;
 	background: #fafafa;
 	overflow: hidden;
 	padding-top: 0.5em;
 	padding-bottom: 1em;
-	@include gs-pad(dc, padinfull);
 	box-sizing: border-box;
 	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
 	position: relative;

@@ -1620,16 +1620,16 @@ img.float-right {
 * Author: 
 -------------------------------------------------------------- */
 .box {
-  border-top: 5px solid #000;
-  background: #fafafa;
-  overflow: hidden;
-  padding-top: 0.5em;
-  padding-bottom: 1em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
+  border-top: 5px solid #000;
+  background: #fafafa;
+  overflow: hidden;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
   box-sizing: border-box;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   position: relative; }
@@ -1722,7 +1722,7 @@ img.float-right {
   border-bottom-style: solid; }
 
 /* 
-* Partial name: Brand
+* Partial name: Branding
 * Use: 
 * Note:
 * Author: 
@@ -1742,7 +1742,6 @@ img.float-right {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: Arial, sans-serif;
   margin-bottom: 0;
   font-weight: bold; }
 
