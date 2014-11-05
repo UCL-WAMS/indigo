@@ -1,4 +1,4 @@
 /*MastHead
  ---------------------------------------------------------------------------------------*/
-#searchform input[type="text"] {
+.search-form input[type="text"] {
   padding: 0.15em 0.5em; }

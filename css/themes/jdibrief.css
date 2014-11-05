@@ -851,7 +851,7 @@ input {
   padding: 0.5em 2%;
   vertical-align: middle;
   margin: 0;
-  -moz-box-sizing: border-box; }
+  box-sizing: border-box; }
 
 form > ul {
   list-style: none;
@@ -908,8 +908,6 @@ fieldset.options ul {
 input, textarea {
   font-size: 14px;
   font-family: "Helvetica Neue",Arial,sans-serif;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #333; }
 
@@ -926,18 +924,9 @@ input:disabled {
 
 input[type=text],
 input[type=search] {
-  padding-top: 7.5/14em;
-  padding-bottom: 7.5/14em;
   font-size: 14px;
   line-height: 1;
-  color: #333;
-  border: 1px solid #aba690;
-  border-radius: 4px;
-  box-shadow: none;
   box-sizing: border-box; }
-  input[type=text]:focus,
-  input[type=search]:focus {
-    outline: none; }
 
 input[type=checkbox],
 input[type=radio] {
@@ -2298,29 +2287,11 @@ article > footer a:hover {
   font-size: 12px;
   color: #fff;
   height: 45px; }
-  .masthead li {
-    padding-right: 1em;
-    height: 45px;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
-    .lt-ie9 .masthead li {
-      display: block;
-      margin-top: 8px; }
   .masthead img {
     width: auto; }
   .masthead a {
     color: #fff;
     text-decoration: none; }
-  .masthead ul {
-    font-size: 16px;
-    display: block; }
-  @media screen and (max-width: 940px) {
-    .masthead ul {
-      font-size: 12px;
-      font-size: 1.2rem;
-      margin-top: 12px;
-      margin-top: 1.2rem; } }
   @media only screen and (max-width: 767px) {
     .masthead {
       height: auto;
@@ -2328,20 +2299,9 @@ article > footer a:hover {
       .masthead .wrapper {
         background-color: #444; } }
 
-#search {
-  background: none repeat scroll 0 0 transparent;
-  border: medium none;
-  color: #666;
-  padding-left: 0; }
-
-/* Global Search
--------------------------------------------------------------- */
-/* 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
 .masthead__search {
   position: relative;
   padding: 6px 0 3px 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
   width: 42%; }
@@ -2355,72 +2315,22 @@ article > footer a:hover {
       width: 90%;
       margin-left: auto;
       margin-right: auto; } }
-  .masthead__search input, .masthead__search label {
-    width: auto; }
   .masthead__search label {
     margin-top: 9px; }
-  .masthead__search .search {
-    position: absolute;
-    top: 0;
-    left: 92%;
-    width: 3.5em;
-    line-height: 1;
-    margin: 7px 0 3px;
-    padding: 0;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: #4693ea;
-    font-size: 1.2rem;
-    font-size: 1.2em;
-    -webkit-appearance: none;
-    border-radius: 0;
-    height: 30px; }
-    @media only screen and (max-width: 767px) {
-      .masthead__search .search {
-        left: 80%;
-        width: 20%; } }
-    .masthead__search .search::hover {
-      background: #034da1;
-      border-color: #034da1; }
   .masthead__search .search-type {
     width: 40%;
     margin-bottom: 0;
     padding: 0 20px 0 0;
     margin: 0;
     float: left;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: right; }
 
-#searchform {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
-  padding: 0;
-  background-color: #fff;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  position: absolute;
-  top: 0;
-  left: 40%;
-  width: 50%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  #searchform input {
-    margin-right: 0;
-    padding-left: 10px;
-    width: 85%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 30px; }
-  @media only screen and (max-width: 767px) {
-    #searchform {
-      width: 75%; } }
-
 .masthead__list {
   float: left;
-  width: 55%; }
+  width: 55%;
+  font-size: 16px;
+  display: block; }
   @media only screen and (max-width: 767px) {
     .masthead__list {
       width: 90%;
@@ -2428,6 +2338,22 @@ article > footer a:hover {
       margin-right: auto;
       float: none;
       margin-bottom: 1em; } }
+  @media screen and (max-width: 940px) {
+    .masthead__list {
+      font-size: 12px;
+      font-size: 1.2rem; }
+      .lt-ie9 .masthead__list {
+        margin-top: 12px; } }
+
+.masthead__item {
+  padding-right: 1em;
+  height: 45px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+  .lt-ie9 .masthead__item {
+    display: block;
+    margin-top: 8px; }
 
 .header {
   position: relative;
@@ -2607,6 +2533,57 @@ article > footer a:hover {
       margin-left: 0;
       width: 100%;
       padding-top: 1em; } }
+
+.search-form {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
+  padding: 0;
+  background-color: #fff;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 75%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 767px) {
+    .search-form {
+      width: 75%; } }
+
+.search-form__input {
+  margin-right: 0;
+  padding-left: 10px;
+  width: 85%;
+  box-sizing: border-box;
+  height: 30px; }
+
+.search-form__input--search {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  color: #666; }
+
+.search-form__input--submit {
+  position: absolute;
+  top: 0;
+  left: 92%;
+  width: 3.5em;
+  line-height: 1;
+  margin: 7px 0 3px;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #4693ea;
+  font-size: 1.2rem;
+  font-size: 1.2em;
+  -webkit-appearance: none;
+  border-radius: 0;
+  height: 30px; }
+  @media only screen and (max-width: 767px) {
+    .search-form__input--submit {
+      left: 80%;
+      width: 20%; } }
+  .search-form__input--submit::hover {
+    background: #034da1;
+    border-color: #034da1; }
 
 /* JDiBrief Unique Styles -------------------------------- */
 .photograph {

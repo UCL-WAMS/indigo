@@ -23,7 +23,7 @@ input {
 	padding: 0.5em 2%;
 	vertical-align: middle;
 	margin: 0;
-	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 form > ul {
@@ -94,8 +94,6 @@ fieldset.options ul {
 input, textarea {
 	font-size: 14px;
 	font-family: "Helvetica Neue",Arial,sans-serif;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	color: #333;
 }
@@ -117,18 +115,9 @@ input:disabled {
 
 input[type=text],
 input[type=search] {
-	padding-top: #{7.5 / 14 + "em"};
-	padding-bottom: #{7.5 / 14 + "em"};
 	font-size: 14px;
 	line-height: 1;
-	color: #333;
-	border: 1px solid #aba690;
-	border-radius: 4px;
-	box-shadow: none;
 	box-sizing: border-box;
-	&:focus {
-		outline: none;
-	}
 }
 
 input[type=checkbox],

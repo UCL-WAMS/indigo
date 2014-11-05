@@ -10,35 +10,13 @@
 	font-size: 12px;
 	color: #fff;
 	height: 45px;
-	li {
-		padding-right: 1em;
-		height: 45px;
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-		.lt-ie9 & {
-			display: block;
-			margin-top: 8px;
-		}
-	}
+
 	img {
 		width: auto;
 	}
 	a {
 		color: #fff;
 		text-decoration: none;
-	}
-	ul {
-		font-size: 16px;
-		display: block;
-	}
-	@media screen and (max-width: 940px) {
-		ul {
-			font-size: 12px;
-			font-size: 1.2rem;
-			margin-top: 12px;
-			margin-top: 1.2rem;
-		}
 	}
 	@include gs-media(m, max) {
 		height: auto;
@@ -49,23 +27,9 @@
 	}
 }
 
-#search {
-	background: none repeat scroll 0 0 transparent;
-	border: medium none;
-	color: #666;
-	padding-left: 0;
-}
-
-/* Global Search
--------------------------------------------------------------- */
-
-/* 01/10/2013: replacement CSS for rebuilt search form in masthead.*/
-
 .masthead__search {
 	position: relative;
 	padding: 6px 0 3px 0;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	float: right;
 	width: 42%;
@@ -77,84 +41,49 @@
 		height: 4em;
 		@include navMobileListingLayoutFix;
 	}
-	input, label {
-		width: auto;
-	}
+
 	label {
 		margin-top: 9px;
 	}
-	.search {
-		position: absolute;
-		top: 0;
-		left: 92%;
-		width: 3.5em;
-		line-height: 1;
-		margin: 7px 0 3px;
-		padding: 0;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		background: #4693ea;
-		font-size: 1.2rem;
-		font-size: 1.2em;
-		-webkit-appearance: none;
-		border-radius: 0;
-		height: 30px;
-		@include gs-media(m, max) {
-			left: 80%;
-			width: 20%;
-		}
-		&::hover {
-			background: #034da1;
-			border-color: #034da1;
-		}
-	}
+
 	.search-type {
 		width: 40%;
 		margin-bottom: 0;
 		padding: 0 20px 0 0;
 		margin: 0;
 		float: left;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		text-align: right;
 	}
 }
 
-#searchform {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
-	padding: 0;
-	background-color: #fff;
-	margin-top: 7px;
-	margin-bottom: 7px;
-	position: absolute;
-	top: 0;
-	left: 40%;
-	width: 50%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	input {
-		margin-right: 0;
-		padding-left: 10px;
-		width: 85%;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		height: 30px;
-	}
-	@include gs-media(m, max) {
-		width: 75%;
-	}
-}
-
-
 .masthead__list {
 	float: left;
 	width: 55%;
+	font-size: 16px;
+	display: block;
 	@include gs-media(m, max) {
 		@include navMobileListingLayoutFix;
 		float: none;
 		margin-bottom: 1em;
+	}
+	@media screen and (max-width: 940px) {
+		font-size: 12px;
+		font-size: 1.2rem;
+		.lt-ie9 & {
+			margin-top: 12px;
+		}
+	}
+}
+
+.masthead__item {
+	padding-right: 1em;
+	height: 45px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	.lt-ie9 & {
+		display: block;
+		margin-top: 8px;
 	}
 }
