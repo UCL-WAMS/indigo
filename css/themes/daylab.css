@@ -2032,20 +2032,20 @@ nav.nav--top {
   margin-left: 0;
   margin-right: 0; }
 
-.nav--horizontal--2col .content__main {
+.nav--horizontal-2col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 71.37803%; }
-.nav--horizontal--2col .content__sidebar {
+.nav--horizontal-2col .content__sidebar {
   display: block;
   float: left;
   margin-left: 74.41038%;
   margin-right: -100%;
   width: 25.58962%; }
 @media only screen and (max-width: 989px) {
-  .nav--horizontal--2col .content__main, .nav--horizontal--2col .content__sidebar {
+  .nav--horizontal-2col .content__main, .nav--horizontal-2col .content__sidebar {
     clear: both;
     display: block;
     float: left;
@@ -2053,35 +2053,35 @@ nav.nav--top {
     width: 100%;
     margin-bottom: 2em; } }
 
-.nav--horizontal--1col .content__main {
+.nav--horizontal-1col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
-.nav--horizontal--1col .content__sidebar {
+.nav--horizontal-1col .content__sidebar {
   display: none; }
 
 @media only screen and (max-width: 767px) {
   .nav--vertical .nav--left {
     display: none; } }
 
-.nav--vertical--1col .content__main {
+.nav--vertical-1col .content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
 
-.nav--vertical--show-top-nav nav.nav--top {
+.nav--vertical-show-top-nav nav.nav--top {
   display: block; }
   @media only screen and (max-width: 767px) {
-    .nav--vertical--show-top-nav nav.nav--top {
+    .nav--vertical-show-top-nav nav.nav--top {
       display: none; } }
-.nav--vertical--show-top-nav #leftcol {
+.nav--vertical-show-top-nav #leftcol {
   margin-top: 5em; }
   @media only screen and (max-width: 767px) {
-    .nav--vertical--show-top-nav #leftcol {
+    .nav--vertical-show-top-nav #leftcol {
       margin-top: 0; } }
 
 .nav--mobile {
@@ -2092,10 +2092,10 @@ nav.nav--top {
       .nav--mobile ul:nth-child(n+2) {
         padding-left: 1em; } }
 
-#nav-mobile-back {
+.nav-mobile-back {
   display: none; }
   @media only screen and (max-width: 767px) {
-    #nav-mobile-back {
+    .nav-mobile-back {
       display: block;
       position: absolute;
       left: 5%;
@@ -2103,7 +2103,7 @@ nav.nav--top {
       padding: 0;
       z-index: 1000;
       width: 50%; }
-      #nav-mobile-back img {
+      .nav-mobile-back img {
         vertical-align: middle;
         display: inline-block;
         width: 30px;
@@ -2443,37 +2443,34 @@ article > footer a:hover {
         clear: both;
         font-size: 1.6rem; } }
 
-#header-mobile {
-  display: none; }
+.header-mobile {
+  display: none;
+  width: 100%;
+  padding: 20% 35px 0;
+  background-size: auto 100%;
+  background-position: 106% bottom;
+  background-image: url("/images/ucl-logo.svg");
+  background-repeat: repeat-x;
+  position: relative;
+  left: -35px;
+  background-color: #fff; }
+  .header-mobile.no-svg {
+    background-image: url("/images/ucl-logo-cropped-white.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #000;
+    background-size: 90%; }
   @media only screen and (max-width: 767px) {
-    #header-mobile {
-      display: block;
-      width: 100%;
-      padding: 20% 35px 0;
-      background-size: auto 100%;
-      background-position: 106% bottom;
-      background-image: url("/images/ucl-logo.svg");
-      background-repeat: repeat-x;
-      position: relative;
-      left: -35px;
-      background-color: #fff; }
-      #header-mobile h1 {
-        position: absolute;
-        font-size: 12px;
-        top: 1em;
-        left: 1em; }
-      #header-mobile #nav-mobile-menu {
-        width: 20px;
-        top: 35%;
-        left: 35px;
-        position: absolute;
-        z-index: 1000; }
-      #header-mobile.no-svg {
-        background-image: url("/images/ucl-logo-cropped-white.png");
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-color: #000;
-        background-size: 90%; } }
+    .header-mobile {
+      display: block; } }
+
+@media only screen and (max-width: 767px) {
+  .header-mobile__menu {
+    width: 20px;
+    top: 35%;
+    left: 35px;
+    position: absolute;
+    z-index: 1000; } }
 
 /* 
 * Partial name: Footer
@@ -2607,7 +2604,7 @@ article > footer a:hover {
   background-color: #ea7600; }
 
 @media only screen and (max-width: 767px) {
-  #header-mobile {
+  .header-mobile {
     background-color: #ea7600; } }
 .photograph--on {
   background-image: url("/images/cells.jpg");

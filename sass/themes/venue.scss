@@ -8,7 +8,7 @@
 }
 
 @include gs-media(m, max) {
-	#header-mobile {
+	.header-mobile {
 		background-color: $yellow;
 	}
 }

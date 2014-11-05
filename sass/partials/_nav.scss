@@ -61,7 +61,7 @@ nav.nav--top {
 	}
 }
 
-.nav--horizontal--2col {
+.nav--horizontal-2col {
 	.content__main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
@@ -76,7 +76,7 @@ nav.nav--top {
 	}
 }
 
-.nav--horizontal--1col {
+.nav--horizontal-1col {
 	.content__main {
 		@include gs-span(dl, 1, 5, (1, 5));
 	}
@@ -93,13 +93,13 @@ nav.nav--top {
 	}
 }
 
-.nav--vertical--1col {
+.nav--vertical-1col {
 	.content__main {
 		@include gs-span(dl, 2, 5, (2, 5));
 	}
 }
 
-.nav--vertical--show-top-nav {
+.nav--vertical-show-top-nav {
 	nav.nav--top {
 		display: block;
 		@include gs-media(m, max) {
@@ -126,7 +126,7 @@ nav.nav--top {
 	}
 }
 
-#nav-mobile-back {
+.nav-mobile-back {
 	display: none;
 	@include gs-media(m, max) {
 		display: block;

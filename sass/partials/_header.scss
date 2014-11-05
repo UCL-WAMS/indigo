@@ -14,7 +14,7 @@
 		.mobile-open & {
 			left: 0;
 		}
-		
+
 		a {
 			color: #fff;
 			padding: 0.5em 0;
@@ -25,39 +25,37 @@
 	}
 }
 
-#header-mobile {
+.header-mobile {
 	display: none;
+	width: 100%;
+	padding: 20% 35px 0;
+	background-size: auto 100%;
+	background-position: 106% bottom;
+	background-image: url("#{$staticUrl}/images/ucl-logo.svg");
+	background-repeat: repeat-x;
+	position: relative;
+	left: -35px;
+	background-color: #fff;
+
+	&.no-svg {
+		background-image: url("#{$staticUrl}/images/ucl-logo-cropped-white.png");
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-color: #000;
+		background-size: 90%;
+	}
 	@include gs-media(m, max) {
 		display: block;
-		width: 100%;
-		padding: 20% 35px 0;
-		background-size: auto 100%;
-		background-position: 106% bottom;
-		background-image: url("#{$staticUrl}/images/ucl-logo.svg");
-		background-repeat: repeat-x;
-		position: relative;
-		left: -35px;
-		background-color: #fff;
-		h1 {
-			position: absolute;
-			font-size: 12px;
-			top: 1em;
-			left: 1em;
-		}
-		#nav-mobile-menu {
-			width: 20px;
-			top: 35%;
-			left: 35px;
-			position: absolute;
-			z-index: 1000;
-		}
-		&.no-svg {
-			background-image: url("#{$staticUrl}/images/ucl-logo-cropped-white.png");
-			background-repeat: no-repeat;
-			background-position: right bottom;
-			background-color: #000;
-			background-size: 90%;
-		}
 	}
+}
 
+
+.header-mobile__menu {
+	@include gs-media(m, max) {
+		width: 20px;
+		top: 35%;
+		left: 35px;
+		position: absolute;
+		z-index: 1000;
+	}
 }
