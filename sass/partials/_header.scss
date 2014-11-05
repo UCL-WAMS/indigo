@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	z-index: 100;
+	z-index: $zindex-header;
 
 	@include gs-media(m, max) {
 		background-color: #5f5f5f;
@@ -56,6 +56,6 @@
 		top: 35%;
 		left: 35px;
 		position: absolute;
-		z-index: 1000;
+		z-index: $zindex-mobile-menu;
 	}
 }

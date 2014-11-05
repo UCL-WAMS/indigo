@@ -134,7 +134,7 @@ nav.nav--top {
 		left: 5%;
 		top: 5px;
 		padding: 0;
-		z-index: 1000;
+		z-index: $zindex-mobile-menu-back;
 		width: 50%;
 		img {
 			vertical-align: middle;
