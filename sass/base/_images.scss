@@ -37,24 +37,24 @@ img.float-right {
 	margin-bottom: 1em;
 }
 
-.small-image {
-	max-width: $smallImageMaxWidth;
+.image-sm {
+	max-width: $image-max-width-sm;
 }
 
-.medium-image {
-	max-width: $mediumImageMaxWidth;
+.image-md {
+	max-width: $image-max-width-md;
 }
 
-.large-image {
-	max-width: $largeImageMaxWidth;
+.image-lg {
+	max-width: $image-max-width-lg;
 }
 
-.xl-image {
-	max-width: $xlImageMaxWidth;
+.image-xl {
+	max-width: $image-max-width-xl;
 }
 
-.xxl-image {
-	max-width: $xxlImageMaxWidth;
+.image-xxl {
+	max-width: $image-max-width-xxl;
 }
 
 @include gs-media(m, max) {

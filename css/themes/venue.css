@@ -1513,19 +1513,19 @@ img.float-right {
   margin-left: 3.0303%;
   margin-bottom: 1em; }
 
-.small-image {
+.image-sm {
   max-width: 200px; }
 
-.medium-image {
+.image-md {
   max-width: 400px; }
 
-.large-image {
+.image-lg {
   max-width: 767px; }
 
-.xl-image {
+.image-xl {
   max-width: 989px; }
 
-.xxl-image {
+.image-xxl {
   max-width: 1400px; }
 
 @media only screen and (max-width: 767px) {
