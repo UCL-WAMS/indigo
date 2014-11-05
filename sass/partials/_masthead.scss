@@ -11,8 +11,15 @@
 	color: #fff;
 	height: 45px;
 	li {
-		display: inline;
-		margin-right: 1em;
+		padding-right: 1em;
+		height: 45px;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		.lt-ie9 & {
+			display: block;
+			margin-top: 8px;
+		}
 	}
 	img {
 		width: auto;
@@ -23,7 +30,7 @@
 	}
 	ul {
 		font-size: 16px;
-		margin-top: 8px;
+		display: block;
 	}
 	@media screen and (max-width: 940px) {
 		ul {
@@ -36,11 +43,6 @@
 	@include gs-media(m, max) {
 		height: auto;
 		border-bottom: 1px solid #ccc;
-		ul#audiences {
-			@include navMobileListingLayoutFix;
-			float: none;
-			margin-bottom: 1em;
-		}
 		.wrapper {
 			background-color: #444;
 		}
@@ -146,7 +148,13 @@
 	}
 }
 
-#audiences {
+
+.masthead__list {
 	float: left;
 	width: 55%;
+	@include gs-media(m, max) {
+		@include navMobileListingLayoutFix;
+		float: none;
+		margin-bottom: 1em;
+	}
 }

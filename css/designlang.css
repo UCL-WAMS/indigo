@@ -2245,8 +2245,14 @@ article > footer a:hover {
   color: #fff;
   height: 45px; }
   .masthead li {
-    display: inline;
-    margin-right: 1em; }
+    padding-right: 1em;
+    height: 45px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+    .lt-ie9 .masthead li {
+      display: block;
+      margin-top: 8px; }
   .masthead img {
     width: auto; }
   .masthead a {
@@ -2254,7 +2260,7 @@ article > footer a:hover {
     text-decoration: none; }
   .masthead ul {
     font-size: 16px;
-    margin-top: 8px; }
+    display: block; }
   @media screen and (max-width: 940px) {
     .masthead ul {
       font-size: 12px;
@@ -2265,12 +2271,6 @@ article > footer a:hover {
     .masthead {
       height: auto;
       border-bottom: 1px solid #ccc; }
-      .masthead ul#audiences {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-        margin-bottom: 1em; }
       .masthead .wrapper {
         background-color: #444; } }
 
@@ -2355,9 +2355,16 @@ article > footer a:hover {
     #searchform {
       width: 75%; } }
 
-#audiences {
+.masthead__list {
   float: left;
   width: 55%; }
+  @media only screen and (max-width: 767px) {
+    .masthead__list {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+      margin-bottom: 1em; } }
 
 .header {
   position: relative;
