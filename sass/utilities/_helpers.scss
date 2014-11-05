@@ -105,3 +105,45 @@
 %zero-pad-right, .zero-pad-right {
     padding-right: 0;
 }
+
+/* Alignment
+-------------------------------------------------------------- */
+
+%text-left, .text-left {
+    text-align: left;
+}
+
+%text-right, .text-right {
+    text-align: right;
+}
+
+%text-center, .text-center {
+    text-align: center;
+}
+
+%text-justify, .text-justify {
+    text-align: justify;
+}
+
+%text-nowrap, .text-nowrap {
+    white-space: nowrap;
+}
+
+/* Transforms
+-------------------------------------------------------------- */
+
+%text-lowercase, .text-lowercase {
+    text-transform: lowercase;
+}
+
+%text-uppercase, .text-uppercase {
+    text-transform: uppercase;
+}
+
+%text-capitalize, .text-capitalize {
+    text-transform: capitalize;
+}
+
+%text-emphasise, .text-emphasise {
+	font-style: italic;
+}
