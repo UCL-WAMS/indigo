@@ -2575,7 +2575,7 @@ article > footer a:hover {
 
 .site-content__body {
   background-color: #fff;
-  padding: 2em 35px 2em 35px;
+  padding: 2em 35px;
   left: -35px;
   position: relative;
   clear: both;
@@ -2583,6 +2583,8 @@ article > footer a:hover {
   float: left;
   margin-left: 0;
   width: 100%; }
+  .site-content__body > *:last-child, .site-content__body > *:last-child > *:last-child, .site-content__body > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
   @media only screen and (max-width: 989px) {
     .site-content__body {
       clear: both;
