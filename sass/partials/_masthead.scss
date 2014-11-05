@@ -69,9 +69,8 @@
 		margin-bottom: 1em;
 	}
 
-	@media screen and (max-width: 940px) {
-		@include font-size($font-size-xs);
-		font-size: 1.2rem;
+	@include respond-max($screen-lg) {
+		@include font-size($font-size-sm);
 		.lt-ie9 & {
 			margin-top: 12px;
 		}
