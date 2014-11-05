@@ -86,7 +86,7 @@
 	margin-bottom: 1em;
 }
 
-.block-myucl {
+.block--col-1 {
 	@include gs-span(dl, 1, 2);
 	@include gs-media(t, max) {
 		@include gs-span(t, 1);
@@ -97,7 +97,7 @@
 	}
 }
 
-.block-finditfast1 {
+.block--col-2 {
 	@include gs-span(dl, 3);
 	@include gs-media(t, max) {
 		@include gs-span(t, 2);
@@ -108,7 +108,7 @@
 	}
 }
 
-.block-finditfast2 {
+.block--col-3 {
 	@include gs-span(dl, 4, 5);
 	@include gs-media(t, max) {
 		@include gs-span(t, 3);

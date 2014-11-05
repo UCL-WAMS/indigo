@@ -418,63 +418,63 @@ input {
 .block {
   margin-bottom: 1em; }
 
-.block-myucl {
+.block--col-1 {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 31.30645%; }
   @media only screen and (max-width: 989px) {
-    .block-myucl {
+    .block--col-1 {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
-    .block-myucl {
+    .block--col-1 {
       display: block;
       float: left;
       margin-left: 0%;
       margin-right: -100%;
       width: 46.79688%; } }
 
-.block-finditfast1 {
+.block--col-2 {
   display: block;
   float: left;
   margin-left: 34.33675%;
   margin-right: -100%;
   width: 31.28827%; }
   @media only screen and (max-width: 989px) {
-    .block-finditfast1 {
+    .block--col-2 {
       display: block;
       float: left;
       margin-left: 34.20139%;
       margin-right: -100%;
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
-    .block-finditfast1 {
+    .block--col-2 {
       display: block;
       float: left;
       margin-left: 53.04688%;
       margin-right: -100%;
       width: 46.79688%; } }
 
-.block-finditfast2 {
+.block--col-3 {
   display: block;
   float: left;
   margin-left: 68.65532%;
   margin-right: -100%;
   width: 31.27734%; }
   @media only screen and (max-width: 989px) {
-    .block-finditfast2 {
+    .block--col-3 {
       display: block;
       float: left;
       margin-left: 68.40278%;
       margin-right: -100%;
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
-    .block-finditfast2 {
+    .block--col-3 {
       display: block;
       float: left;
       margin-left: 0%;
