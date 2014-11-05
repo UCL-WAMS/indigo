@@ -2359,7 +2359,7 @@ article > footer a:hover {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-.footer {
+.footer__inner {
   background: black;
   background: rgba(0, 0, 0, 0.7);
   padding: 40px 35px;
@@ -2367,9 +2367,9 @@ article > footer a:hover {
   margin-right: -35px;
   color: #bbb;
   clear: left; }
-  .footer a {
+  .footer__inner a {
     color: #eee; }
-    .footer a:hover {
+    .footer__inner a:hover {
       color: #fff; }
 
 .footer__list li {
@@ -2489,9 +2489,6 @@ article > footer a:hover {
   left: 15%;
   width: 75%;
   box-sizing: border-box; }
-  @media only screen and (max-width: 767px) {
-    .search-form {
-      width: 75%; } }
 
 .search-form__input {
   margin-right: 0;
@@ -2502,7 +2499,7 @@ article > footer a:hover {
 
 .search-form__input--search {
   background: none repeat scroll 0 0 transparent;
-  border: medium none;
+  border: none;
   color: #666; }
 
 .search-form__input--submit {

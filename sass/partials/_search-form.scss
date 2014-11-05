@@ -21,7 +21,7 @@
 
 .search-form__input--search {
 	background: none repeat scroll 0 0 transparent;
-	border: medium none;
+	border: none;
 	color: #666;
 }
 
@@ -33,7 +33,6 @@
 	line-height: 1;
 	margin: 7px 0 3px;
 	padding: 0;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	background: #4693ea;
 	font-size: 1.2rem;
