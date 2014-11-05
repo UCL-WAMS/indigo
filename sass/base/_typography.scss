@@ -246,6 +246,9 @@ del {
 	padding-left: 0;
 	margin-left: 0;
 	list-style: none;
+	> li:before {
+		content: none;
+	}
 }
 
 // Inline turns list items into inline-block
@@ -270,7 +273,6 @@ del {
 }
 
 article ul {
-	margin-bottom: 2em;
 	li {
 		list-style: none;
 		position: relative;

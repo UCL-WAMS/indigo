@@ -118,6 +118,10 @@
 	}
 }
 
+.block {
+	margin-bottom: 1em;
+}
+
 .block-myucl {
 	@include gs-span(dl, 1, 2);
 	@include gs-media(t, max) {

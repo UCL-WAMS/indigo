@@ -116,6 +116,9 @@
 -------------------------------------------------------------- */
 /* Clearfix
 -------------------------------------------------------------- */
+.clear {
+  clear: both; }
+
 /* Add margin
 -------------------------------------------------------------- */
 .push-left {
@@ -439,6 +442,9 @@ input {
       .middle-split section:nth-child(even) {
         margin-left: 1%; } }
 
+.block {
+  margin-bottom: 1em; }
+
 .block-myucl {
   display: block;
   float: left;
@@ -707,6 +713,8 @@ del {
   padding-left: 0;
   margin-left: 0;
   list-style: none; }
+  .list-unstyled > li:before, .list-inline > li:before {
+    content: none; }
 
 .list-inline {
   display: inline; }
@@ -721,25 +729,23 @@ del {
       content: "";
       display: none; }
 
-article ul {
-  margin-bottom: 2em; }
-  article ul li {
-    list-style: none;
-    position: relative;
-    margin-bottom: 1em; }
-    @media only screen and (max-width: 767px) {
-      article ul li {
-        margin-left: 1em; } }
-    article ul li:before {
-      content: "";
-      display: block;
-      background-color: #333;
-      border-radius: 50%;
-      height: 0.35em;
-      width: 0.35em;
-      position: absolute;
-      left: -0.8em;
-      top: 0.6em; }
+article ul li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 1em; }
+  @media only screen and (max-width: 767px) {
+    article ul li {
+      margin-left: 1em; } }
+  article ul li:before {
+    content: "";
+    display: block;
+    background-color: #333;
+    border-radius: 50%;
+    height: 0.35em;
+    width: 0.35em;
+    position: absolute;
+    left: -0.8em;
+    top: 0.6em; }
 
 article ul li ul {
   margin-top: 1em; }
@@ -2414,30 +2420,23 @@ article > footer a:hover {
   clear: left; }
   @media only screen and (max-width: 767px) {
     .footer {
-      padding-left: 5%;
-      padding-right: 5%; } }
-  .footer h2 {
-    margin-bottom: 0.5em; }
+      margin-left: -35px;
+      margin-right: -35px; } }
   .footer a {
-    color: #eee;
-    text-decoration: none; }
-  .footer a:hover {
-    color: #fff; }
-  .footer article {
-    margin-bottom: 1em; }
-    .footer article ul {
-      list-style-type: none;
-      margin-bottom: 1em; }
-      .footer article ul li {
-        padding-bottom: 4px;
-        padding-top: 4px;
-        font-size: 14px;
-        margin-bottom: 0; }
-      .footer article ul li:before {
-        content: none; }
-  .footer hr {
-    border-color: #ccc;
-    clear: both; }
+    color: #eee; }
+    .footer a:hover {
+      color: #fff; }
+
+.footer__list li {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 14px;
+  margin-bottom: 0; }
+  @media screen and (max-width: 989px) {
+    .footer__list li {
+      padding-bottom: 2px;
+      padding-top: 2px;
+      font-size: 12px; } }
 
 .footer__links {
   font-size: 14px;
@@ -2446,12 +2445,6 @@ article > footer a:hover {
     .footer__links {
       font-size: 12px; } }
 
-@media screen and (max-width: 989px) {
-  footer article li {
-    padding-bottom: 2px;
-    padding-top: 2px;
-    font-size: 12px;
-    margin-left: 0; } }
 /* 
 * Partial name: Tag
 * Use:
