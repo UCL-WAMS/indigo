@@ -632,6 +632,17 @@ blockquote {
   margin-top: 1em;
   width: 100%; }
 
+small,
+.small {
+  font-size: 0.9em; }
+
+strong,
+.strong {
+  font-weight: 500; }
+
+cite, .cite, em, dfn {
+  font-style: italic; }
+
 .bqstart {
   color: #c2c2ba;
   float: left;
@@ -655,17 +666,6 @@ blockquote {
 
 /* Inline styles
 -------------------------------------------------------------- */
-strong {
-  font-weight: bold; }
-
-em, dfn {
-  font-style: italic; }
-
-small {
-  color: rgba(68, 68, 68, 0.9);
-  display: inline-block;
-  font-size: 0.9em; }
-
 .text-muted {
   color: #999999; }
 
@@ -696,15 +696,9 @@ del {
 
 .standfirst {
   font-size: 20px; }
-
-@media only screen and (max-width: 767px) {
-  .standfirst {
-    font-size: 18px; } }
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
+  @media only screen and (max-width: 767px) {
+    .standfirst {
+      font-size: 18px; } }
 
 /* Lists
 -------------------------------------------------------------- */
@@ -814,11 +808,6 @@ dd + dt {
     padding: 0 0.5em; }
     .code li .tab1 {
       padding-left: 4ex; }
-
-/* Resources
--------------------------------------------------------------- */
-.resource {
-  font-style: italic; }
 
 /* 
 * Base name: Links

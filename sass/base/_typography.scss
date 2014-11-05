@@ -150,6 +150,24 @@ blockquote {
 	width: 100%;
 }
 
+// Emphasis & misc
+// -------------------------
+
+small,
+.small {
+    font-size: 0.9em;
+}
+
+strong,
+.strong {
+    font-weight: 500;
+}
+
+cite, .cite, em, dfn { 
+    font-style: italic;
+}
+
+
 .bqstart {
 	color: #c2c2ba;
 	float: left;
@@ -175,20 +193,6 @@ blockquote {
 
 /* Inline styles
 -------------------------------------------------------------- */
-
-strong {
-	font-weight: bold;
-}
-
-em, dfn {
-	font-style: italic;
-}
-
-small {
-	color: rgba(68, 68, 68, 0.9);
-	display: inline-block;
-	font-size: 0.9em;
-}
 
 .text-muted {
 	color: #999999;
@@ -228,22 +232,11 @@ del {
 
 .standfirst {
 	font-size: 20px;
-}
-
-@include gs-media(m, max) {
-	.standfirst {
+	@include gs-media(m, max) {
 		font-size: 18px;
 	}
 }
 
-
-.text-center {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
-}
 
 /* Lists
 -------------------------------------------------------------- */
@@ -395,11 +388,4 @@ dd + dt {
 			padding-left: 4ex;
 		}
 	}
-}
-
-/* Resources
--------------------------------------------------------------- */
-
-.resource {
-	font-style: italic;
 }
