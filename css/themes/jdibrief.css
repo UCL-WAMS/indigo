@@ -701,6 +701,9 @@ article ul {
     list-style: none;
     position: relative;
     margin-bottom: 1em; }
+    @media only screen and (max-width: 767px) {
+      article ul li {
+        margin-left: 1em; } }
     article ul li:before {
       content: "";
       display: block;
@@ -712,9 +715,6 @@ article ul {
       left: -0.8em;
       top: 0.6em; }
 
-@media only screen and (max-width: 767px) {
-  article ul li {
-    margin-left: 1em; } }
 article ul li ul {
   margin-top: 1em; }
 
@@ -773,17 +773,17 @@ dd + dt {
 
 /* Code lists (blocked)
 -------------------------------------------------------------- */
-ol.code {
+.code {
   font: 400 1em/1.5 "source-code-pro", monospace;
   margin: 1em 0 1.5em 2.5em; }
 
-ol.code li {
+.code li {
   background: none repeat scroll 0 0 #F6F6F6;
   border-top: 1px solid #FFFFFF;
   list-style: decimal-leading-zero outside none;
   padding: 0 0.5em; }
 
-ol.code li.tab1 {
+.code li.tab1 {
   padding-left: 4ex; }
 
 /* Resources
