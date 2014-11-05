@@ -54,7 +54,7 @@ ol.commentlist li.comment div.vcard span.says {}
 ol.commentlist li.comment div.commentmetadata {}
 
 ol.commentlist li.comment div.comment-meta {
-	font-size: 12px;
+	@include font-size($font-size-xs);
 }
 
 ol.commentlist li.comment div.comment-meta a {

@@ -27,7 +27,7 @@
 	left: 35px;
 	top: 25%;
 	color: #fff;
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	text-transform: uppercase;
 	margin-bottom: 0;
 	font-weight: bold;

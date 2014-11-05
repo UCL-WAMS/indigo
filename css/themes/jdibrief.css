@@ -191,7 +191,7 @@
 .text-uppercase {
   text-transform: uppercase; }
 
-.text-capitalize {
+time, .text-capitalize {
   text-transform: capitalize; }
 
 .text-emphasise {
@@ -329,11 +329,11 @@ input {
   width: 19.8653%; }
   @media only screen and (max-width: 767px) {
     #leftcol {
-      width: 90%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       position: relative;
-      margin-top: 2em; } }
+      margin-top: 0; } }
 
 /* Main Content
 -------------------------------------------------------------- */
@@ -382,6 +382,7 @@ input {
 
 .content__sidebar {
   font-size: 14px;
+  font-size: 1.4rem;
   display: block;
   float: left;
   margin-left: 66.80507%;
@@ -490,9 +491,9 @@ input {
 -------------------------------------------------------------- */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #333333;
   font-size: 16px;
   font-size: 1.6rem;
+  color: #333333;
   background-color: #d9d9d1;
   overflow-x: hidden;
   line-height: 1.7;
@@ -607,6 +608,7 @@ blockquote {
   border-color: rgba(0, 0, 0, 0.2);
   float: left;
   font-size: 12px;
+  font-size: 1.2rem;
   margin-top: 1em;
   width: 100%; }
 
@@ -655,10 +657,9 @@ cite, .cite, em, dfn {
 
 .mod {
   font-size: 12px;
+  font-size: 1.2rem;
   color: #ccc;
   margin-top: 2em; }
-  .mod .lastMod {
-    text-transform: capitalize; }
 
 ins {
   background-color: #F0F0F0;
@@ -803,11 +804,6 @@ a {
     color: #034da1;
     text-decoration: underline; }
 
-p a {
-  text-decoration: none; }
-  p a:hover {
-    text-decoration: underline; }
-
 /* 
 * Base name: Audio
 * Use:
@@ -907,6 +903,7 @@ fieldset.options ul {
 -------------------------------------------------------------- */
 input, textarea {
   font-size: 14px;
+  font-size: 1.4rem;
   font-family: "Helvetica Neue",Arial,sans-serif;
   box-sizing: border-box;
   color: #333; }
@@ -925,6 +922,7 @@ input:disabled {
 input[type=text],
 input[type=search] {
   font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1;
   box-sizing: border-box; }
 
@@ -974,6 +972,7 @@ textarea:focus {
   margin-right: -100%;
   width: 33%;
   font-size: 14px;
+  font-size: 1.4rem;
   text-align: right;
   line-height: 38px; }
 
@@ -990,6 +989,7 @@ textarea:focus {
   margin-left: 1.51515%;
   color: #848484;
   font-size: 14px;
+  font-size: 1.4rem;
   text-align: right;
   line-height: 26px;
   margin-top: 5px;
@@ -1052,7 +1052,8 @@ input.error {
   border: 1px solid rgba(0, 0, 0, 0.21);
   border-radius: 4px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  font-size: 14px; }
+  font-size: 14px;
+  font-size: 1.4rem; }
   .btn:hover, .btn:focus {
     background-color: #615957;
     color: #fff;
@@ -1612,7 +1613,8 @@ img.float-right {
 .box--small {
   margin-bottom: 32/14em;
   padding: 20/14em;
-  font-size: 14px; }
+  font-size: 14px;
+  font-size: 1.4rem; }
 
 .box--rounded {
   border-radius: 4px; }
@@ -1718,6 +1720,7 @@ img.float-right {
   top: 25%;
   color: #fff;
   font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: bold; }
@@ -1815,6 +1818,7 @@ img.float-right {
 .tabbed__link {
   display: block;
   font-size: 14px;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #fff; }
   .tabbed__link:hover {
@@ -1838,7 +1842,7 @@ img.float-right {
   padding-bottom: 12%; }
   @media only screen and (max-width: 767px) {
     .photograph {
-      width: 90%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       padding: 2em 0 0em 0;
@@ -1852,6 +1856,7 @@ img.float-right {
   right: 35px;
   padding: 10px;
   font-size: 12px;
+  font-size: 1.2rem;
   font-style: italic;
   color: #fff;
   display: none; }
@@ -1959,7 +1964,8 @@ img.float-right {
   margin-bottom: 0.5em; }
   .nav--left li ul {
     margin: 10px 5%;
-    font-size: 14px; }
+    font-size: 14px;
+    font-size: 1.4rem; }
 
 nav.nav--top {
   display: none;
@@ -2130,7 +2136,8 @@ ol.commentlist li.comment div.vcard img.avatar {
   margin: 0 1em 1em 0; }
 
 ol.commentlist li.comment div.comment-meta {
-  font-size: 12px; }
+  font-size: 12px;
+  font-size: 1.2rem; }
 
 ol.commentlist li.comment div.comment-meta a {
   color: #ccc; }
@@ -2230,6 +2237,7 @@ article > footer a:hover {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  font-size: 1.4rem;
   background-color: #B5BD00; }
 
 .flag:hover {
@@ -2240,6 +2248,7 @@ article > footer a:hover {
 .meta, .blurb .meta {
   font-size: 1.2rem;
   font-size: 12px;
+  font-size: 1.2rem;
   color: #999;
   margin-bottom: 0.5em; }
 
@@ -2267,6 +2276,7 @@ article > footer a:hover {
 .masthead {
   background-color: #444;
   font-size: 12px;
+  font-size: 1.2rem;
   color: #fff;
   height: 45px; }
   .masthead img {
@@ -2294,7 +2304,6 @@ article > footer a:hover {
       padding: 0;
       margin-top: 3.5em;
       height: 4em;
-      width: 90%;
       margin-left: auto;
       margin-right: auto; } }
   .masthead__search label {
@@ -2315,7 +2324,7 @@ article > footer a:hover {
   display: block; }
   @media only screen and (max-width: 767px) {
     .masthead__list {
-      width: 90%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       float: none;
@@ -2323,6 +2332,7 @@ article > footer a:hover {
   @media screen and (max-width: 940px) {
     .masthead__list {
       font-size: 12px;
+      font-size: 1.2rem;
       font-size: 1.2rem; }
       .lt-ie9 .masthead__list {
         margin-top: 12px; } }
@@ -2336,6 +2346,10 @@ article > footer a:hover {
   .lt-ie9 .masthead__item {
     display: block;
     margin-top: 8px; }
+  @media only screen and (max-width: 767px) {
+    .masthead__item {
+      display: block;
+      text-align: left; } }
 
 .header {
   position: relative;
@@ -2348,9 +2362,15 @@ article > footer a:hover {
       height: 100%;
       overflow: auto;
       overflow-x: hidden;
-      left: -100%; }
+      transition: all, .5s;
+      transform: translateX(-100%); }
+      .no-csstransforms .header {
+        left: -100%; }
       .mobile-open .header {
-        left: 0; }
+        transition: all, .5s;
+        transform: translateX(0); }
+        .no-csstransforms .mobile-open .header {
+          left: 0; }
       .header a {
         color: #fff;
         padding: 0.5em 0;
@@ -2410,14 +2430,17 @@ article > footer a:hover {
   padding-bottom: 4px;
   padding-top: 4px;
   font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 0; }
 
 .footer__links {
   font-size: 14px;
+  font-size: 1.4rem;
   margin-top: 0.5em; }
   @media screen and (max-width: 989px) {
     .footer__links {
-      font-size: 12px; } }
+      font-size: 12px;
+      font-size: 1.2rem; } }
 
 /* 
 * Partial name: Tag
@@ -2426,13 +2449,14 @@ article > footer a:hover {
 * Author: 
 -------------------------------------------------------------- */
 .tag {
+  font-size: 14px;
+  font-size: 1.4rem;
   position: absolute;
   left: 0;
   top: 0;
   padding: 5px 15px;
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
   background-color: #B5BD00; }
 
 /* Success, notice and error boxes
@@ -2527,6 +2551,10 @@ article > footer a:hover {
   left: 15%;
   width: 75%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 767px) {
+    .search-form {
+      left: 0;
+      width: 100%; } }
 
 .search-form__input {
   margin-right: 0;
@@ -2534,6 +2562,9 @@ article > footer a:hover {
   width: 85%;
   box-sizing: border-box;
   height: 30px; }
+  @media only screen and (max-width: 767px) {
+    .search-form__input {
+      width: 80%; } }
 
 .search-form__input--search {
   background: none repeat scroll 0 0 transparent;
@@ -2545,7 +2576,6 @@ article > footer a:hover {
   top: 0;
   left: 92%;
   width: 3.5em;
-  line-height: 1;
   margin: 7px 0 3px;
   padding: 0;
   box-sizing: border-box;

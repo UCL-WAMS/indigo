@@ -6,14 +6,15 @@ $font-san-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 $font-code: "consolas", "andale mono", "lucida console", monospace;
 $font-line-numbers: "source-code-pro", monospace;
 
-$font-size-base: 16px;
-$font-size-lg: ceil($font-size-base * 1.15);
-$font-size-sm: ceil($font-size-base * 0.85);
-$font-size-xs: ceil($font-size-base * 0.75);
+$font-size-base: 1.6;
 
-$font-size-h1: 1em * 2;
-$font-size-h2: 1em * 1.75;
-$font-size-h3: 1em * 1.5;
-$font-size-h4: 1em * 1.35;
-$font-size-h5: 1em * 1.15;
-$font-size-h6: 1em;
+$font-size-lg: 1.8;
+$font-size-sm: 1.4;
+$font-size-xs: 1.2;
+
+$font-size-h1: $font-size-base * 2;
+$font-size-h2: $font-size-base * 1.75;
+$font-size-h3: $font-size-base * 1.5;
+$font-size-h4: $font-size-base * 1.35;
+$font-size-h5: $font-size-base * 1.15;
+$font-size-h6: $font-size-base;

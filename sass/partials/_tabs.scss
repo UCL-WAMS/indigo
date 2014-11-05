@@ -41,7 +41,7 @@
 
 .tabbed__link {
 	display: block;
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	font-weight: bold;
 	color: #fff;
 	&:hover {

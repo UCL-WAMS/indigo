@@ -20,7 +20,7 @@
 	border: 1px solid rgba(0, 0, 0, 0.21);
 	border-radius: 4px;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	&:hover, &:focus {
 		background-color: $hoverButton;
 		color: #fff;
@@ -33,7 +33,7 @@
 
 .btn--small {
 	padding: 8px 20px 8px 20px;
-	font-size: 12px;
+	@include font-size($font-size-xs);
 }
 
 .btn--gradient.disabled {

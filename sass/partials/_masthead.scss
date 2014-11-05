@@ -7,7 +7,7 @@
 
 .masthead {
 	background-color: #444;
-	font-size: 12px;
+	@include font-size($font-size-xs);
 	color: #fff;
 	height: 45px;
 	img {
@@ -70,7 +70,7 @@
 	}
 
 	@media screen and (max-width: 940px) {
-		font-size: 12px;
+		@include font-size($font-size-xs);
 		font-size: 1.2rem;
 		.lt-ie9 & {
 			margin-top: 12px;

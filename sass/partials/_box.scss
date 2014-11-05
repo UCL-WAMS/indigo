@@ -27,7 +27,7 @@
 .box--small {
 	margin-bottom: #{32 / 14 + "em"};
 	padding: #{20 / 14 + "em"};
-	font-size: 14px;
+	@include font-size($font-size-sm);
 }
 
 .box--rounded {

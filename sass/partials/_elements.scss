@@ -32,7 +32,7 @@
 	padding: 5px;
 	color: #fff;
 	text-decoration: none;
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	background-color: #B5BD00;
 }
 
@@ -44,7 +44,7 @@
 
 .meta, .blurb .meta {
 	font-size: 1.2rem;
-	font-size: 12px;
+	@include font-size($font-size-xs);
 	color: #999;
 	margin-bottom: 0.5em;
 }

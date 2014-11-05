@@ -92,7 +92,7 @@ fieldset.options ul {
 -------------------------------------------------------------- */
 
 input, textarea {
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	font-family: "Helvetica Neue",Arial,sans-serif;
 	box-sizing: border-box;
 	color: #333;
@@ -115,7 +115,7 @@ input:disabled {
 
 input[type=text],
 input[type=search] {
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	line-height: 1;
 	box-sizing: border-box;
 }
@@ -168,7 +168,7 @@ textarea:focus {
 
 .inline label {
 	@include gs-span(dc, 1);
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	text-align: right;
 	line-height: 38px;
 }
@@ -178,7 +178,7 @@ textarea:focus {
 	@include gs-pad(dc, pad);
 	margin-left: 1.51515%;
 	color: #848484;
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	text-align: right;
 	line-height: 26px;
 	margin-top: 5px;

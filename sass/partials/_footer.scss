@@ -27,15 +27,15 @@
 	li {
 		padding-bottom: 4px;
 		padding-top: 4px;
-		font-size: 14px;
+		@include font-size($font-size-sm);
 		margin-bottom: 0;
 	}
 }
 
 .footer__links {
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	margin-top: 0.5em;
 	@media screen and (max-width: 989px) {
-		font-size: 12px;
+		@include font-size($font-size-xs);
 	}
 }
