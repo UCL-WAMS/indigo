@@ -21,14 +21,6 @@
 		max-width: em(64);
 	}
 
-	.layout__sidebar & {
-		max-width: #{(48/14) + 'em'};
-		margin-right: #{(16/14) + 'em'};
-
-		@include respond-min($screen-md) {
-			margin-right: #{(24/14) + 'em'};
-		}
-	}
 	@include respond-max($screen-md) {
 		display: none;
 	}
@@ -43,13 +35,10 @@ img.media__aside {
 .media__body {
 	overflow: hidden;
 	max-width: 40em;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
+	margin: 0;
 
 	@include respond-max($screen-md) {
-		font-size: 14px;
+		@include font-size($font-size-sm);
 	}
 }
 

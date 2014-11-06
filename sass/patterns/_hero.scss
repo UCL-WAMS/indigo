@@ -155,7 +155,7 @@
 .hero__dropdown__detail {
 	display: inline;
 	float: left;
-	font-size: 14px;
+	@include font-size($font-size-sm);
 	padding: 6px 10px 6px 0;
 }
 	

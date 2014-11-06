@@ -2455,6 +2455,7 @@ article > footer a:hover {
   display: inline;
   float: left;
   font-size: 14px;
+  font-size: 1.4rem;
   padding: 6px 10px 6px 0; }
 
 .hero__sidebar {
@@ -2492,12 +2493,6 @@ article > footer a:hover {
     .media__aside {
       margin-right: 1.5em;
       max-width: em(64); } }
-  .layout__sidebar .media__aside {
-    max-width: 3.42857em;
-    margin-right: 1.14286em; }
-    @media (min-width: 780px) {
-      .layout__sidebar .media__aside {
-        margin-right: 1.71429em; } }
   @media (max-width: 779px) {
     .media__aside {
       display: none; } }
@@ -2509,12 +2504,12 @@ img.media__aside {
 
 .media__body, .media__body--wide {
   overflow: hidden;
-  max-width: 40em; }
-  .media__body:last-child, .media__body--wide:last-child {
-    margin-bottom: 0; }
+  max-width: 40em;
+  margin: 0; }
   @media (max-width: 779px) {
     .media__body, .media__body--wide {
-      font-size: 14px; } }
+      font-size: 14px;
+      font-size: 1.4rem; } }
 
 .media__body--wide {
   max-width: 60em; }
