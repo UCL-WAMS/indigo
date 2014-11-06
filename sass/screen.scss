@@ -11,9 +11,6 @@
 @import "base/reset";
 @import "base/layout";
 @import "base/typography";
-@import "base/links";
-@import "base/audio";
-@import "base/code";
 @import "base/forms";
 @import "base/buttons";
 @import "base/tables";
@@ -21,25 +18,25 @@
 
 /* Patterns */
 @import "partials/accordion";
+@import "partials/article";
 @import "partials/box";
 @import "partials/blurb";
-@import "partials/divider";
 @import "partials/brand";
-@import "partials/slides";
+@import "partials/blog";
+@import "partials/breadcrumb";
+@import "partials/divider";
+@import "partials/elements";
+@import "partials/footer";
 @import "partials/tabs";
 @import "partials/photograph";
 @import "partials/pagination";
-@import "partials/breadcrumb";
-@import "partials/vcard";
 @import "partials/nav";
-@import "partials/video";
-@import "partials/blog";
-@import "partials/elements";
-@import "partials/search";
 @import "partials/masthead";
 @import "partials/header";
-@import "partials/footer";
 @import "partials/tag";
 @import "partials/message";
+@import "partials/search";
 @import "partials/site-content";
 @import "partials/search-form";
+@import "partials/vcard";
+@import "partials/video";
