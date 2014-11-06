@@ -666,27 +666,6 @@ strong,
 cite, .cite, em, dfn {
   font-style: italic; }
 
-.bqstart {
-  color: #c2c2ba;
-  float: left;
-  font-size: 400%;
-  height: 45px;
-  margin-bottom: -42px;
-  margin-top: 0;
-  padding-top: 22px;
-  padding-right: 10px;
-  font-style: normal; }
-
-.bqend {
-  color: #c2c2ba;
-  float: right;
-  font-size: 400%;
-  height: 25px;
-  margin-top: 0;
-  padding-top: 60px;
-  padding-left: 10px;
-  font-style: normal; }
-
 /* Inline styles
 -------------------------------------------------------------- */
 .text-muted {
@@ -2915,14 +2894,15 @@ img.media__aside {
 .pull-quote {
   margin-top: 2em;
   margin-bottom: 2em; }
-  .pull-quote q.quote {
-    line-height: 1.5em;
-    font-size: 20px;
-    font-family: "Georgia", "Times New Roman", serif;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.7); }
 
-.pull-quote .meta, .quote-meta {
+.pull-quote__wrap {
+  line-height: 1.5em;
+  font-size: 20px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7); }
+
+.pull-quote__meta {
   border-top: 1px dotted;
   padding-top: 1em;
   border-color: rgba(0, 0, 0, 0.2);
@@ -2931,6 +2911,14 @@ img.media__aside {
   font-size: 1.2rem;
   margin-top: 1em;
   width: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .pull-quote--left, .pull-quote--right {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
 
 .pull-quote--left {
   display: block;
@@ -2954,13 +2942,26 @@ img.media__aside {
   margin-right: 0;
   margin-left: 3.0303%; }
 
-@media only screen and (max-width: 767px) {
-  .pull-quote--left, .pull-quote--right {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
+.pull-quote__start {
+  color: #c2c2ba;
+  float: left;
+  font-size: 400%;
+  height: 45px;
+  margin-bottom: -42px;
+  margin-top: 0;
+  padding-top: 22px;
+  padding-right: 10px;
+  font-style: normal; }
+
+.pull-quote__end {
+  color: #c2c2ba;
+  float: right;
+  font-size: 400%;
+  height: 25px;
+  margin-top: 0;
+  padding-top: 60px;
+  padding-left: 10px;
+  font-style: normal; }
 
 /* 
 * Partial name: Pill
