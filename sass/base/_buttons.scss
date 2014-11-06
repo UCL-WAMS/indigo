@@ -8,12 +8,12 @@
 
 .btn {
 	background-color: #666;
-	color: #fff;
+	color: $white;
 	text-align: center;
 	cursor: pointer;
 	margin: 0.5em 0;
 	text-decoration: none;
-	color: white;
+	color: $white;
 	padding: 12px 30px 10px 30px;
 	display: inline-block;
 	position: relative;
@@ -23,7 +23,7 @@
 	@include font-size($font-size-sm);
 	&:hover, &:focus {
 		background-color: $hover-button;
-		color: #fff;
+		color: $white;
 		text-decoration: none;
 	}
 	&:active {
@@ -53,7 +53,7 @@ button {
 	background: $button-bg-col;
 	cursor: pointer;
 	padding: $button-padding;
-	color: #fff;
+	color: $white;
 	border: 0;
 	border-radius: 0.4em;
 	&:hover,:focus {

@@ -23,7 +23,7 @@
 
 .site-content__body {
 	background-color: #0e0f14;
-	color: #fff;
+	color: $white;
 }
 
 .bg-homepage {
@@ -63,7 +63,7 @@
 
 .site-content__body article ul {
 	li:before {
-		background-color: #fff;
+		background-color: $white;
 	}
 }
 
@@ -71,7 +71,7 @@
 
 h1.large-title {
 	font-size: 72px;
-	color: #fff;
+	color: $white;
 	line-height: 1;
 }
 
@@ -85,7 +85,7 @@ h1.large-title {
 /* Breadcrumb -------------------------------- */
 
 #breadcrumb li.current a {
-	color: #fff;
+	color: $white;
 }
 
 /* Left Navigation -------------------------------- */
@@ -93,7 +93,7 @@ h1.large-title {
 .nav--left {
 	left: -50px;
 	position: absolute;
-	background-color: #fff;
+	background-color: $white;
 	box-shadow: 15px 15px 0px $yellow;
 	padding-top: 25px;
 	padding-bottom: 20px;
@@ -157,7 +157,7 @@ h1.large-title {
 }
 
 [class*=pullquote] p.quote {
-	color: #fff;
+	color: $white;
 	line-height: 1.6em;
 	font-size: 24px;
 }
@@ -176,7 +176,7 @@ h1.large-title {
 }
 
 .site-content__body .tabs li a {
-	color: #000;
+	color: $black;
 }
 
 .site-content__body .tabs li.active {

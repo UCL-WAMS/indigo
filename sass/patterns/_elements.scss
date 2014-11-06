@@ -4,12 +4,12 @@
 
 .flag, .more {
 	padding: 5px;
-	color: #fff;
+	color: $white;
 	text-decoration: none;
 	@include font-size($font-size-sm);
 	background-color: #B5BD00;
 	&:hover {
-		color: #fff;
+		color: $white;
 		background: #8f993e;
 		text-decoration: none;
 	}

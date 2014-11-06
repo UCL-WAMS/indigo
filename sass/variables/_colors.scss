@@ -1,7 +1,8 @@
 /* UCL Colours
 -------------------------------------------------------------- */
 
-/* Standard
+
+/* Indigo colour palette
 -------------------------------------------------------------- */
 
 $darkgreen: rgba(85,80,37,1);
@@ -52,9 +53,19 @@ $lightblue-b: rgba(165,205,221,1);
 $stone-b: rgba(224,221,209,1);
 $darkbrown-b: rgba(95,68,54,1);
 
+
+/* Generic grayscale
+-------------------------------------------------------------- */
+$darkgrey: #444;
+$grey: #bbb
+$lightgrey: #ccc;
+$black: #000000;
+$white: #ffffff;
+
+
 /* Colour by element
 -------------------------------------------------------------- */
-$content-bg-color: #fff;
+$content-bg-color: $white;
 $nav-horizontal-color: #333333;
 $rule-color: #ccc;
 $cat-blue: #027d9e;

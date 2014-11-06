@@ -43,9 +43,9 @@
 	display: block;
 	@include font-size($font-size-sm);
 	font-weight: bold;
-	color: #fff;
+	color: $white;
 	&:hover {
 		text-decoration: none;
-		color: #fff;
+		color: $white;
 	}
 }

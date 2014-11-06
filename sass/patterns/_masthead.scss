@@ -8,13 +8,13 @@
 .masthead {
 	background-color: #444;
 	@include font-size($font-size-xs);
-	color: #fff;
+	color: $white;
 	height: 45px;
 	img {
 		width: auto;
 	}
 	a {
-		color: #fff;
+		color: $white;
 		text-decoration: none;
 	}
 	@include gs-media(m, max) {
