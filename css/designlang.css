@@ -2480,7 +2480,7 @@ article > footer a:hover {
       display: none; } }
 .nav--horizontal .site-content__body {
   padding-top: 1em; }
-.nav--horizontal #content {
+.nav--horizontal .content {
   width: 100%;
   margin-left: 0;
   margin-right: 0; }
