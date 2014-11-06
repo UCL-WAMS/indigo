@@ -1,5 +1,5 @@
 /* Variables */
-/* Variables
+/* Variable imports
 -------------------------------------------------------------- */
 /* UCL Colours
 -------------------------------------------------------------- */
@@ -18,6 +18,8 @@
 /* Font stacks
 -------------------------------------------------------------- */
 /* Breakpoints
+-------------------------------------------------------------- */
+/* Development/Production environments
 -------------------------------------------------------------- */
 /* Mixins */
 /*
@@ -1484,6 +1486,238 @@ figure + figure, figure + p {
 
   img.float-left.large-image, img.float-left.xl-image, img.float-left.xxl-image, img.float-right.large-image, img.float-right.xl-image, img.float-right.xxl-image {
     width: 100%; } }
+/* 
+* Base name: Grid
+* Use: Applying Indigo grid to custom breakpoints
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+@media (max-width: 619px) {
+  .m-clear {
+    clear: both; } }
+
+@media (max-width: 619px) {
+  .m-all {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+
+@media (max-width: 619px) {
+  .m1 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 46.79688%; } }
+
+@media (max-width: 619px) {
+  .m2 {
+    display: block;
+    float: left;
+    margin-left: 53.04688%;
+    margin-right: -100%;
+    width: 46.79688%; } }
+
+@media (min-width: 780px) {
+  .t-all {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+
+@media (min-width: 780px) {
+  .t1 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 31.59722%; } }
+
+@media (min-width: 780px) {
+  .t2 {
+    display: block;
+    float: left;
+    margin-left: 34.20139%;
+    margin-right: -100%;
+    width: 31.59722%; } }
+
+@media (min-width: 780px) {
+  .t1-t2 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 65.79861%; } }
+
+@media (min-width: 780px) {
+  .t2-t3 {
+    display: block;
+    float: left;
+    margin-left: 34.20139%;
+    margin-right: -100%;
+    width: 65.79861%; } }
+
+@media (min-width: 780px) {
+  .t3 {
+    display: block;
+    float: left;
+    margin-left: 68.40278%;
+    margin-right: -100%;
+    width: 31.59722%; } }
+
+@media (min-width: 1050px) {
+  .dl-all {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+
+@media (min-width: 1050px) {
+  .dl1 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 19.86532%; } }
+
+@media (min-width: 1050px) {
+  .dl1-dl2 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 31.30645%; } }
+
+@media (min-width: 1050px) {
+  .dl1-dl3 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 65.62502%; } }
+
+@media (min-width: 1050px) {
+  .dl2-dl3 {
+    display: block;
+    float: left;
+    margin-left: 22.89562%;
+    margin-right: -100%;
+    width: 42.7294%; } }
+
+@media (min-width: 1050px) {
+  .dl2-dl4 {
+    display: block;
+    float: left;
+    margin-left: 22.89562%;
+    margin-right: -100%;
+    width: 48.43434%; } }
+
+@media (min-width: 1050px) {
+  .dl2-dl5 {
+    display: block;
+    float: left;
+    margin-left: 22.89562%;
+    margin-right: -100%;
+    width: 77.03704%; } }
+
+@media (min-width: 1050px) {
+  .dl3 {
+    display: block;
+    float: left;
+    margin-left: 34.33675%;
+    margin-right: -100%;
+    width: 31.28827%; } }
+
+@media (min-width: 1050px) {
+  .dl3-dl4 {
+    display: block;
+    float: left;
+    margin-left: 34.33675%;
+    margin-right: -100%;
+    width: 36.99322%; } }
+
+@media (min-width: 1050px) {
+  .dl3-dl5 {
+    display: block;
+    float: left;
+    margin-left: 34.33675%;
+    margin-right: -100%;
+    width: 65.59591%; } }
+
+@media (min-width: 1050px) {
+  .dl4-dl5 {
+    display: block;
+    float: left;
+    margin-left: 68.65532%;
+    margin-right: -100%;
+    width: 31.27734%; } }
+
+@media (min-width: 1050px) {
+  .dl5 {
+    display: block;
+    float: left;
+    margin-left: 74.36027%;
+    margin-right: -100%;
+    width: 25.57239%; } }
+
+@media (min-width: 990px) {
+  .dc1-dc2 {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.42929%; } }
+
+@media (min-width: 990px) {
+  .dc3-dc4 {
+    display: block;
+    float: left;
+    margin-left: 51.4596%;
+    margin-right: -100%;
+    width: 48.42929%; } }
+
+@media (max-width: 779px) {
+  .fl {
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 6.25%; } }
+@media (min-width: 780px) and (max-width: 989px) {
+  .fl {
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 2.60417%; } }
+@media (min-width: 990px) {
+  .fl {
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 3.0303%; } }
+
+@media (min-width: 990px) {
+  .dc-fl {
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 3.0303%; } }
+
+@media (max-width: 779px) {
+  .m-last {
+    margin-right: 0; } }
+
+@media (min-width: 780px) and (max-width: 989px) {
+  .t-last {
+    margin-right: 0; } }
+
+@media (min-width: 990px) {
+  .dl-last {
+    margin-right: 0; } }
+
 /* Patterns */
 /* 
 * Partial name: Accordion

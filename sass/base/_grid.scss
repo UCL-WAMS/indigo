@@ -1,0 +1,192 @@
+/* 
+* Base name: Grid
+* Use: Applying Indigo grid to custom breakpoints
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+// Mobile grid
+
+.m-clear {
+	@include respond-max($screen-sm) {
+	   clear: both; 
+	}
+}
+
+.m-all {
+	@include respond-max($screen-sm) {
+		@include gs-span(m, all);
+	}
+}
+
+.m1 {
+	@include respond-max($screen-sm) {
+		@include gs-span(m, 1);
+	}
+}
+
+.m2 {
+	@include respond-max($screen-sm) {
+		@include gs-span(m, 2);
+	}
+}
+
+// Tablet grid
+
+.t-all {
+	@include respond-min($screen-md) {
+		@include gs-span(t, all);
+	}
+}
+
+.t1 {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 1);
+	}
+}
+
+.t2 {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 2);
+	}
+}
+
+.t1-t2 {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 1, 2);
+	}
+}
+
+.t2-t3 {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 2, 3);
+	}
+}
+
+.t3 {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 3);
+	}
+}
+
+// Desktop grid
+
+.dl-all {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, all);
+	}
+}
+
+.dl1 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 1);
+	}
+}
+
+.dl1-dl2 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 1, 2);
+	}
+}
+
+.dl1-dl3 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 1, 3);
+	}
+}
+
+.dl2-dl3 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 2, 3);
+	}
+}
+
+.dl2-dl4 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 2, 4);
+	}
+}
+
+.dl2-dl5 {
+  @include respond-min($screen-xl) {
+	@include gs-span(dl, 2, 5);
+  }
+}
+
+.dl3 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 3);
+	}
+}
+
+.dl3-dl4 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 3, 4);
+	}
+}
+
+.dl3-dl5 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 3, 5);
+	}
+}
+
+.dl4-dl5 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 4, 5);
+	}
+}
+
+.dl5 {
+	@include respond-min($screen-xl) {
+		@include gs-span(dl, 5);
+	}
+}
+
+.dc1-dc2 {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 1, 2);
+	}
+}
+	
+.dc3-dc4 {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 3, 4);
+	}
+}
+
+.fl {
+	@include respond-max($screen-md) {
+		@include gs-float(m, left);
+	}
+	@include respond-min-max($screen-md, $screen-lg) {
+		@include gs-float(t, left);
+	}
+	@include respond-min($screen-lg) {
+		@include gs-float(dl, left);
+	}
+}
+
+.dc-fl {
+	@include respond-min($screen-lg) {
+		@include gs-float(dl, left);
+	}
+}
+
+.m-last {
+	@include respond-max($screen-md) {
+		margin-right: 0;
+	}
+}
+
+.t-last {
+	@include respond-min-max($screen-md, $screen-lg) {
+		margin-right: 0;
+	}
+}
+
+.dl-last {
+	@include respond-min($screen-lg) {
+		margin-right: 0;
+	}
+}
