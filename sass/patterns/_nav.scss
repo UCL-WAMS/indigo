@@ -22,11 +22,11 @@
 			float: left;
 			padding-right: 1em;
 			margin-right: 1em;
-			border-right: 1px solid $ruleColor;
+			border-right: 1px solid $rule-color;
 			a {
 				text-decoration: none;
 				cursor: pointer;
-				color: $navHorizontalColor;
+				color: $nav-horizontal-color;
 			}
 			&:last-child {
 				border-right: 0;

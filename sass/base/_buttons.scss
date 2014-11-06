@@ -22,12 +22,12 @@
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 	@include font-size($font-size-sm);
 	&:hover, &:focus {
-		background-color: $hoverButton;
+		background-color: $hover-button;
 		color: #fff;
 		text-decoration: none;
 	}
 	&:active {
-		background-color: $activeButton;
+		background-color: $active-button;
 	}
 }
 
@@ -57,11 +57,11 @@ button {
 	border: 0;
 	border-radius: 0.4em;
 	&:hover,:focus {
-		background-color: $hoverButton;
+		background-color: $hover-button;
 		border: 0;
 	}
 	&:active {
-		background-color: $activeButton;
+		background-color: $active-button;
 		border: 0;
 	}
 }

@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	margin-bottom: .5em;
 	font-family: $font-san-serif;
+	small {
+		font-size: 80%;
+		color: #6f6f6f;
+		line-height: 0;
+	}
 }
 
 h1, .as-h1, %as-h1 {
@@ -83,10 +88,6 @@ h6, .as-h6, %as-h6 {
 	margin: 1em 0 0;
 }
 
-h3 + ul, h3 + ol, h3 + dl {
-	margin-top: 0.5em;
-}
-
 a {
 	color: #034da1;
 	text-decoration: none;
@@ -94,14 +95,6 @@ a {
 		color: #034da1;
 		text-decoration: underline;
 	}
-}
-
-// Small heading segments
-
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	font-size: 80%;
-	color: #6f6f6f;
-	line-height: 0;
 }
 
 .box h2 {
@@ -120,46 +113,6 @@ blockquote {
 	color: #666;
 	font-style: italic;
 	overflow: hidden;
-}
-
-.quote-left {
-	@include gs-span(dc, 1, 2);
-	@include gs-float(dc, left);
-}
-
-.quote-right {
-	@include gs-span(dc, 3, 4);
-	@include gs-float(dc, right);
-}
-
-@include gs-media(m, max) {
-	.quote-left, .quote-right {
-		@include gs-span(m, all);
-	}
-}
-
-
-[class*=pullquote] {
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-
-[class*=pullquote] q.quote {
-	line-height: 1.5em;
-	font-size: 20px;
-	font-family: $font-serif;
-	font-style: italic;
-	color: rgba(0, 0, 0, 0.7);
-}
-
-.pullquote .meta, .quote-meta {
-	border-top: 1px dotted;
-	padding-top: 1em;
-	border-color: rgba(0, 0, 0, 0.2);
-	float: left;
-	@include font-size($font-size-xs);
-	margin-top: 1em;
-	width: 100%;
 }
 
 // Emphasis & misc
@@ -292,44 +245,6 @@ ul li li {
 	margin-left: 1em;
 }
 
-/* Inline lists
--------------------------------------------------------------- */
-
-.site-content__body .horizontal {
-	li {
-		display: inline;
-		margin-right: 0.5em;
-	}
-	li:before {
-		display: none;
-	}
-	lh {
-		float: left;
-	}
-	dt, dd {
-		float: left;
-		margin: 0 0.5em 0 0;
-	}
-	lh + dt, dd + dt, dd + dd {
-		clear: left;
-	}
-	dd + dd {
-		float: none;
-	}
-	dt {
-		font-weight: bold;
-	}
-}
-
-/* Unstyled lists
--------------------------------------------------------------- */
-
-.site-content__body article .nostyle {
-	li:before {
-		display: none;
-	}
-}
-
 /* Ordered lists
 -------------------------------------------------------------- */
 
@@ -359,6 +274,26 @@ dt {
 dd + dt {
 	margin-top: 10px;
 }
+
+.dl-inline {
+	lh {
+		float: left;
+	}
+	dt, dd {
+		float: left;
+		margin: 0 0.5em 0 0;
+	}
+	lh + dt, dd + dt, dd + dd {
+		clear: left;
+	}
+	dd + dd {
+		float: none;
+	}
+	dt {
+		font-weight: bold;
+	}
+}
+
 
 /* Code styling
 -------------------------------------------------------------- */

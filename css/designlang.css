@@ -1,5 +1,6 @@
 /* Config */
-/* Variables */
+/* Variables
+-------------------------------------------------------------- */
 /* Variable imports
 -------------------------------------------------------------- */
 /* UCL Colours
@@ -22,7 +23,8 @@
 -------------------------------------------------------------- */
 /* Development/Production environments
 -------------------------------------------------------------- */
-/* Mixins */
+/* Mixins
+-------------------------------------------------------------- */
 /*
 
     A simpler media query mixin
@@ -114,7 +116,8 @@
 * Use: Media query handling outside of Gridset
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
-/* Helper classes */
+/* Helper classes
+-------------------------------------------------------------- */
 /* 
 * Utility name: Helpers
 * Generic use:
@@ -239,7 +242,8 @@ time, .text-capitalize {
   text-decoration: line-through;
   cursor: not-allowed; }
 
-/* Base dependencies */
+/* Base dependencies 
+-------------------------------------------------------------- */
 /* 
 * Base name: Reset
 * Use:
@@ -565,6 +569,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5em;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 80%;
+    color: #6f6f6f;
+    line-height: 0; }
 
 h1, .as-h1 {
   font-size: 36px;
@@ -613,20 +621,12 @@ h6, .as-h6 {
   color: #999;
   margin: 1em 0 0; }
 
-h3 + ul, h3 + ol, h3 + dl {
-  margin-top: 0.5em; }
-
 a {
   color: #034da1;
   text-decoration: none; }
   a:hover {
     color: #034da1;
     text-decoration: underline; }
-
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-size: 80%;
-  color: #6f6f6f;
-  line-height: 0; }
 
 .box h2 {
   margin-top: 0; }
@@ -641,56 +641,6 @@ blockquote {
   color: #666;
   font-style: italic;
   overflow: hidden; }
-
-.quote-left {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 48.42929%;
-  clear: none;
-  float: left;
-  margin-left: 0;
-  margin-right: 3.0303%; }
-
-.quote-right {
-  display: block;
-  float: left;
-  margin-left: 51.4596%;
-  margin-right: -100%;
-  width: 48.42929%;
-  clear: none;
-  float: right;
-  margin-right: 0;
-  margin-left: 3.0303%; }
-
-@media only screen and (max-width: 767px) {
-  .quote-left, .quote-right {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
-[class*=pullquote] {
-  margin-top: 2em;
-  margin-bottom: 2em; }
-
-[class*=pullquote] q.quote {
-  line-height: 1.5em;
-  font-size: 20px;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.7); }
-
-.pullquote .meta, .quote-meta {
-  border-top: 1px dotted;
-  padding-top: 1em;
-  border-color: rgba(0, 0, 0, 0.2);
-  float: left;
-  font-size: 12px;
-  font-size: 1.2rem;
-  margin-top: 1em;
-  width: 100%; }
 
 small,
 .small {
@@ -793,30 +743,6 @@ ul li li {
 .tabbed > div ul li, .box ul li {
   margin-left: 1em; }
 
-/* Inline lists
--------------------------------------------------------------- */
-.site-content__body .horizontal li {
-  display: inline;
-  margin-right: 0.5em; }
-.site-content__body .horizontal li:before {
-  display: none; }
-.site-content__body .horizontal lh {
-  float: left; }
-.site-content__body .horizontal dt, .site-content__body .horizontal dd {
-  float: left;
-  margin: 0 0.5em 0 0; }
-.site-content__body .horizontal lh + dt, .site-content__body .horizontal dd + dt, .site-content__body .horizontal dd + dd {
-  clear: left; }
-.site-content__body .horizontal dd + dd {
-  float: none; }
-.site-content__body .horizontal dt {
-  font-weight: bold; }
-
-/* Unstyled lists
--------------------------------------------------------------- */
-.site-content__body article .nostyle li:before {
-  display: none; }
-
 /* Ordered lists
 -------------------------------------------------------------- */
 ol li {
@@ -839,6 +765,18 @@ dt {
 
 dd + dt {
   margin-top: 10px; }
+
+.dl-inline lh {
+  float: left; }
+.dl-inline dt, .dl-inline dd {
+  float: left;
+  margin: 0 0.5em 0 0; }
+.dl-inline lh + dt, .dl-inline dd + dt, .dl-inline dd + dd {
+  clear: left; }
+.dl-inline dd + dd {
+  float: none; }
+.dl-inline dt {
+  font-weight: bold; }
 
 /* Code styling
 -------------------------------------------------------------- */
@@ -1514,7 +1452,7 @@ figure + figure, figure + p {
 /* 
 * Base name: Grid
 * Use: Applying Indigo grid to custom breakpoints
-* Note: N/A
+* Note: See - http://www.ucl.ac.uk/indigo/grid.php
 * Author: 
 -------------------------------------------------------------- */
 @media (max-width: 619px) {
@@ -1811,7 +1749,8 @@ figure + figure, figure + p {
   .col--lg-last {
     margin-right: 0; } }
 
-/* Patterns */
+/* Patterns
+-------------------------------------------------------------- */
 /* 
 * Partial name: Accordion
 * Use:
@@ -2288,116 +2227,195 @@ article > footer a:hover {
       font-size: 12px;
       font-size: 1.2rem; } }
 
-/* 
-* Partial name: Tabs
-* Use:
-* Note: N/A
-* Author: 
+.header {
+  position: relative;
+  z-index: 10; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      background-color: #5f5f5f;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      overflow-x: hidden;
+      -webkit-transition: all, .5s;
+              transition: all, .5s;
+      -webkit-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+              transform: translateX(-100%); }
+      .no-csstransforms .header {
+        left: -100%; }
+      .mobile-open .header {
+        -webkit-transition: all, .5s;
+                transition: all, .5s;
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0); }
+        .no-csstransforms .mobile-open .header {
+          left: 0; }
+      .header a {
+        color: #fff;
+        padding: 0.5em 0;
+        display: block;
+        clear: both;
+        font-size: 1.6rem; } }
+
+.header-mobile {
+  display: none;
+  width: 100%;
+  padding: 20% 35px 0;
+  background-size: auto 100%;
+  background-position: 106% bottom;
+  background-image: url("/images/ucl-logo.svg");
+  background-repeat: repeat-x;
+  position: relative;
+  left: -35px;
+  background-color: #fff; }
+  .header-mobile.no-svg {
+    background-image: url("/images/ucl-logo-cropped-white.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #000;
+    background-size: 90%; }
+  @media only screen and (max-width: 767px) {
+    .header-mobile {
+      display: block; } }
+
+@media only screen and (max-width: 767px) {
+  .header-mobile__menu {
+    width: 20px;
+    top: 35%;
+    left: 35px;
+    position: absolute;
+    z-index: 100; } }
+
+/* Success, notice and error boxes
 -------------------------------------------------------------- */
-.tabbed__content {
+.message {
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%;
-  border: 10px solid #444;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #DDDDDD;
+  clear: left;
+  color: #666666;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 1em;
   padding-top: 10px;
-  padding-bottom: 2em; }
-  .tabbed__content > *:last-child, .tabbed__content > *:last-child > *:last-child, .tabbed__content > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 10px; }
+  .message > *:last-child, .message > *:last-child > *:last-child, .message > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
 
-.tabbed__list {
-  margin-bottom: 0; }
-
-.tabbed__item {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  float: left;
-  background-color: #444;
-  line-height: normal;
-  margin-bottom: 0;
-  padding: 10px 15px;
-  margin-right: 5px;
-  border-bottom: 5px solid #fff; }
-  .tabbed__item:before {
-    display: none; }
-  .tabbed__item.active {
-    border-bottom: 5px solid #444; }
-
-.tabbed__link {
+.message--warning, .message--success {
+  background-color: #FFFAFA;
+  background-image: url("/images/alert.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #DD6868;
   display: block;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #fff; }
-  .tabbed__link:hover {
-    text-decoration: none;
-    color: #fff; }
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+  margin-bottom: 1em;
+  border: 1px solid #DD6868;
+  font-weight: bold; }
+
+.message--success {
+  background-color: #F7FFF2;
+  background-image: url("/images/success.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  color: #7FB861;
+  border: 1px solid #7FB861; }
 
 /* 
-* Partial name: Photograph banner
+* Partial name: Masthead
 * Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-.photograph {
-  padding: 0 35px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: relative;
-  left: -35px;
-  padding-bottom: 12%; }
+.masthead {
+  background-color: #444;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  height: 45px; }
+  .masthead img {
+    width: auto; }
+  .masthead a {
+    color: #fff;
+    text-decoration: none; }
   @media only screen and (max-width: 767px) {
-    .photograph {
+    .masthead {
+      height: auto;
+      border-bottom: 1px solid #ccc; }
+      .masthead .wrapper {
+        background-color: #444; } }
+
+.masthead__search {
+  position: relative;
+  padding: 6px 0 3px 0;
+  box-sizing: border-box;
+  float: right;
+  width: 42%; }
+  @media only screen and (max-width: 767px) {
+    .masthead__search {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-top: 3.5em;
+      height: 4em;
+      margin-left: auto;
+      margin-right: auto; } }
+  .masthead__search label {
+    margin-top: 9px; }
+  .masthead__search .search-type {
+    width: 40%;
+    margin-bottom: 0;
+    padding: 0 20px 0 0;
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+    text-align: right; }
+
+.masthead__list {
+  float: left;
+  width: 55%;
+  font-size: 16px;
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .masthead__list {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
-      padding: 2em 0 0em 0;
-      left: 0;
-      background-color: transparent; } }
+      float: none;
+      margin-bottom: 1em; } }
+  @media (max-width: 989px) {
+    .masthead__list {
+      font-size: 14px;
+      font-size: 1.4rem; }
+      .lt-ie9 .masthead__list {
+        margin-top: 12px; } }
 
-.photograph__description {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: 5%;
-  right: 35px;
-  padding: 10px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #fff;
-  display: none; }
-
-.photograph--on {
-  padding-bottom: 30%; }
-  .photograph--on .photograph__description {
-    display: block; }
-    @media only screen and (max-width: 767px) {
-      .photograph--on .photograph__description {
-        display: none; } }
-
-/* 
-* Partial name: Pagination
-* Use: For highlighting where a user is within a sequence of related pages
-* Note:
-* Author: 
--------------------------------------------------------------- */
-.pagination {
-  margin-top: 1em;
-  list-style: none; }
-
-.pagination a {
-  text-decoration: none; }
-
-.pagination li {
-  display: inline;
-  padding: 0.4em;
-  list-style: none; }
-
-.pagination li:before {
-  display: none; }
+.masthead__item {
+  padding-right: 1em;
+  height: 45px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+  .lt-ie9 .masthead__item {
+    display: block;
+    margin-top: 8px; }
+  @media only screen and (max-width: 767px) {
+    .masthead__item {
+      display: block;
+      text-align: left; } }
 
 .nav--left li {
   margin-bottom: 0.5em; }
@@ -2526,212 +2544,120 @@ article > footer a:hover {
         position: relative;
         margin: -5px -3px 0 -8px; } }
 
+.pull-quote {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .pull-quote q.quote {
+    line-height: 1.5em;
+    font-size: 20px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7); }
+
+.pull-quote .meta, .quote-meta {
+  border-top: 1px dotted;
+  padding-top: 1em;
+  border-color: rgba(0, 0, 0, 0.2);
+  float: left;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-top: 1em;
+  width: 100%; }
+
+.pull-quote--left {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.42929%;
+  clear: none;
+  float: left;
+  margin-left: 0;
+  margin-right: 3.0303%; }
+
+.pull-quote--right {
+  display: block;
+  float: left;
+  margin-left: 51.4596%;
+  margin-right: -100%;
+  width: 48.42929%;
+  clear: none;
+  float: right;
+  margin-right: 0;
+  margin-left: 3.0303%; }
+
+@media only screen and (max-width: 767px) {
+  .pull-quote--left, .pull-quote--right {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+
 /* 
-* Partial name: Masthead
+* Partial name: Photograph banner
 * Use:
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-.masthead {
-  background-color: #444;
-  font-size: 12px;
-  font-size: 1.2rem;
-  color: #fff;
-  height: 45px; }
-  .masthead img {
-    width: auto; }
-  .masthead a {
-    color: #fff;
-    text-decoration: none; }
-  @media only screen and (max-width: 767px) {
-    .masthead {
-      height: auto;
-      border-bottom: 1px solid #ccc; }
-      .masthead .wrapper {
-        background-color: #444; } }
-
-.masthead__search {
+.photograph {
+  padding: 0 35px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   position: relative;
-  padding: 6px 0 3px 0;
-  box-sizing: border-box;
-  float: right;
-  width: 42%; }
+  left: -35px;
+  padding-bottom: 12%; }
   @media only screen and (max-width: 767px) {
-    .masthead__search {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin-top: 3.5em;
-      height: 4em;
-      margin-left: auto;
-      margin-right: auto; } }
-  .masthead__search label {
-    margin-top: 9px; }
-  .masthead__search .search-type {
-    width: 40%;
-    margin-bottom: 0;
-    padding: 0 20px 0 0;
-    margin: 0;
-    float: left;
-    box-sizing: border-box;
-    text-align: right; }
-
-.masthead__list {
-  float: left;
-  width: 55%;
-  font-size: 16px;
-  display: block; }
-  @media only screen and (max-width: 767px) {
-    .masthead__list {
+    .photograph {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
-      float: none;
-      margin-bottom: 1em; } }
-  @media (max-width: 989px) {
-    .masthead__list {
-      font-size: 14px;
-      font-size: 1.4rem; }
-      .lt-ie9 .masthead__list {
-        margin-top: 12px; } }
+      padding: 2em 0 0em 0;
+      left: 0;
+      background-color: transparent; } }
 
-.masthead__item {
-  padding-right: 1em;
-  height: 45px;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
-  .lt-ie9 .masthead__item {
-    display: block;
-    margin-top: 8px; }
-  @media only screen and (max-width: 767px) {
-    .masthead__item {
-      display: block;
-      text-align: left; } }
-
-.header {
-  position: relative;
-  z-index: 10; }
-  @media only screen and (max-width: 767px) {
-    .header {
-      background-color: #5f5f5f;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      overflow-x: hidden;
-      -webkit-transition: all, .5s;
-              transition: all, .5s;
-      -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-              transform: translateX(-100%); }
-      .no-csstransforms .header {
-        left: -100%; }
-      .mobile-open .header {
-        -webkit-transition: all, .5s;
-                transition: all, .5s;
-        -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-                transform: translateX(0); }
-        .no-csstransforms .mobile-open .header {
-          left: 0; }
-      .header a {
-        color: #fff;
-        padding: 0.5em 0;
-        display: block;
-        clear: both;
-        font-size: 1.6rem; } }
-
-.header-mobile {
-  display: none;
-  width: 100%;
-  padding: 20% 35px 0;
-  background-size: auto 100%;
-  background-position: 106% bottom;
-  background-image: url("/images/ucl-logo.svg");
-  background-repeat: repeat-x;
-  position: relative;
-  left: -35px;
-  background-color: #fff; }
-  .header-mobile.no-svg {
-    background-image: url("/images/ucl-logo-cropped-white.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-color: #000;
-    background-size: 90%; }
-  @media only screen and (max-width: 767px) {
-    .header-mobile {
-      display: block; } }
-
-@media only screen and (max-width: 767px) {
-  .header-mobile__menu {
-    width: 20px;
-    top: 35%;
-    left: 35px;
-    position: absolute;
-    z-index: 100; } }
-
-/* 
-* Partial name: Tag
-* Use:
-* Note: N/A
-* Author: 
--------------------------------------------------------------- */
-.tag {
+.photograph__description {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 5%;
+  right: 35px;
+  padding: 10px;
   font-size: 12px;
   font-size: 1.2rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 5px 15px;
+  font-style: italic;
   color: #fff;
-  text-decoration: none;
-  background-color: #B5BD00; }
+  display: none; }
 
-/* Success, notice and error boxes
+.photograph--on {
+  padding-bottom: 30%; }
+  .photograph--on .photograph__description {
+    display: block; }
+    @media only screen and (max-width: 767px) {
+      .photograph--on .photograph__description {
+        display: none; } }
+
+/* 
+* Partial name: Pagination
+* Use: For highlighting where a user is within a sequence of related pages
+* Note:
+* Author: 
 -------------------------------------------------------------- */
-.message {
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  background: none repeat scroll 0 0 #FFFFFF;
-  border: 1px solid #DDDDDD;
-  clear: left;
-  color: #666666;
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-  padding-bottom: 1em;
-  padding-top: 10px;
-  margin-bottom: 10px; }
-  .message > *:last-child, .message > *:last-child > *:last-child, .message > *:last-child > *:last-child > *:last-child {
-    margin-bottom: 0; }
+.pagination {
+  margin-top: 1em;
+  list-style: none; }
 
-.message--warning, .message--success {
-  background-color: #FFFAFA;
-  background-image: url("/images/alert.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: #DD6868;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  margin-bottom: 1em;
-  border: 1px solid #DD6868;
-  font-weight: bold; }
+.pagination a {
+  text-decoration: none; }
 
-.message--success {
-  background-color: #F7FFF2;
-  background-image: url("/images/success.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  color: #7FB861;
-  border: 1px solid #7FB861; }
+.pagination li {
+  display: inline;
+  padding: 0.4em;
+  list-style: none; }
+
+.pagination li:before {
+  display: none; }
 
 /* 
 * Partial name: Search
@@ -2823,6 +2749,69 @@ article > footer a:hover {
   .search-form__input--submit::hover {
     background: #034da1;
     border-color: #034da1; }
+
+/* 
+* Partial name: Tabs
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.tabbed__content {
+  box-sizing: border-box;
+  padding-left: 3.0303%;
+  padding-right: 3.0303%;
+  border: 10px solid #444;
+  padding-top: 10px;
+  padding-bottom: 2em; }
+  .tabbed__content > *:last-child, .tabbed__content > *:last-child > *:last-child, .tabbed__content > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
+
+.tabbed__list {
+  margin-bottom: 0; }
+
+.tabbed__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: left;
+  background-color: #444;
+  line-height: normal;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  margin-right: 5px;
+  border-bottom: 5px solid #fff; }
+  .tabbed__item:before {
+    display: none; }
+  .tabbed__item.active {
+    border-bottom: 5px solid #444; }
+
+.tabbed__link {
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff; }
+  .tabbed__link:hover {
+    text-decoration: none;
+    color: #fff; }
+
+/* 
+* Partial name: Tag
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.tag {
+  font-size: 12px;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #B5BD00; }
 
 /* 
 * Partial name: Vcard

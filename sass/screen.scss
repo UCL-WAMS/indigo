@@ -1,14 +1,18 @@
-/* Variables */
+/* Variables
+-------------------------------------------------------------- */
 @import "variables/variables";
 
-/* Mixins */
+/* Mixins
+-------------------------------------------------------------- */
 @import "mixins/mixins";
 
-/* Helper classes */
+/* Helper classes
+-------------------------------------------------------------- */
 @import "utilities/helpers";
 @import "utilities/states";
 
-/* Base dependencies */
+/* Base dependencies 
+-------------------------------------------------------------- */
 @import "base/reset";
 @import "base/layout";
 @import "base/typography";
@@ -18,7 +22,8 @@
 @import "base/images";
 @import "base/grid";
 
-/* Patterns */
+/* Patterns
+-------------------------------------------------------------- */
 @import "patterns/accordion";
 @import "patterns/article";
 @import "patterns/box";
@@ -30,16 +35,17 @@
 @import "patterns/divider";
 @import "patterns/elements";
 @import "patterns/footer";
-@import "patterns/tabs";
+@import "patterns/header";
+@import "patterns/message";
+@import "patterns/masthead";
+@import "patterns/nav";
+@import "patterns/pull-quote";
 @import "patterns/photograph";
 @import "patterns/pagination";
-@import "patterns/nav";
-@import "patterns/masthead";
-@import "patterns/header";
-@import "patterns/tag";
-@import "patterns/message";
 @import "patterns/search";
 @import "patterns/site-content";
 @import "patterns/search-form";
+@import "patterns/tabs";
+@import "patterns/tag";
 @import "patterns/vcard";
 @import "patterns/video";

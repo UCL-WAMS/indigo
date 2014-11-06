@@ -1,0 +1,37 @@
+.pull-quote {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	q.quote {
+		line-height: 1.5em;
+		font-size: 20px;
+		font-family: $font-serif;
+		font-style: italic;
+		color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+.pull-quote .meta, .quote-meta {
+	border-top: 1px dotted;
+	padding-top: 1em;
+	border-color: rgba(0, 0, 0, 0.2);
+	float: left;
+	@include font-size($font-size-xs);
+	margin-top: 1em;
+	width: 100%;
+}
+
+.pull-quote--left {
+	@include gs-span(dc, 1, 2);
+	@include gs-float(dc, left);
+}
+
+.pull-quote--right {
+	@include gs-span(dc, 3, 4);
+	@include gs-float(dc, right);
+}
+
+.pull-quote--left, .pull-quote--right {
+	@include gs-media(m, max) {
+		@include gs-span(m, all);
+	}
+}
