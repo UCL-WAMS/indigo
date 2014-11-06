@@ -37,32 +37,32 @@
 	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
 	<script>
-	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
-	Modernizr.load({
-		//cutting the mustard as used by the BBC
-		test: cuttingTheMustard
-			//if old browser load the shiv
-			,
-		nope: [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
-		]
-	});
-	//set conditional assets for main.js
-	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
-		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
-	}
-	if (cuttingTheMustard) {
-		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
-	}
+		Modernizr.load({
+			//cutting the mustard as used by the BBC
+			test: cuttingTheMustard
+				//if old browser load the shiv
+				,
+			nope: [
+				'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+			]
+		});
+		//set conditional assets for main.js
+		var globalSiteSpecificVars = {
+			pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+			googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+		}
+		if (cuttingTheMustard) {
+			globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
+		}
 	</script>
 
 	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
 	<!-- <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script> -->
 	<script src="/js/main.js"></script>
 	<script>
-	require(["app/general"]); //load the default stuff
+		require(["app/general"]); //load the default stuff
 	</script>
 
 </head>
@@ -102,7 +102,8 @@
 					</li>
 					<li class="masthead__item"><a href="prospective-students.php">Prospective students</a>
 					</li>
-					<li class="masthead__item"><a href="current-students.php">Current students</a></li>
+					<li class="masthead__item"><a href="current-students.php">Current students</a>
+					</li>
 					</li>
 					<li class="masthead__item"><a href="staff.php">Staff</a>
 					</li>
@@ -122,7 +123,7 @@
 						<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo">
 					</div>
 				</header>
-					<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
 
 			</div>
 			<!-- end .photograph -->
@@ -196,7 +197,7 @@
 					<span class="did-you-mean">Did you mean:
 						<a href="search.html?query=engineers&amp;collection=ucl-public-meta">
 							<span class="funnelback-highlight">engineers</span>
-						</a>?
+					</a>?
 					</span>
 				</p>
 				<!-- #fb-matching -->
@@ -214,7 +215,7 @@
 				<div class="fb-best-bet">
 					<h3>
 						<a href="/search/click.cgi?&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2F&amp;auth=p83eE%2Fy2ou40PpXCCXCp2A&amp;type=FP&amp;profile=_default">
-							<strong>President</strong>and Provost</a>
+							<strong>President</strong> and Provost</a>
 					</h3>
 					<p>UCL President &Provost. UCL President & Provost Professor Michael Arthur is internationally renowned for his contribution to education and to medical research.</p>
 					<p>
@@ -436,73 +437,67 @@
 	<!-- </div>end .site-content -->
 
 
-	<footer class="footer wrapper clearfix">
-
-		<article class="block--col-1">
-			<h2 class="as-h5">Facilities</h2>
-			<ul>
-				<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a>
+	<footer class="footer wrapper">
+		<div class="footer__inner">
+			<article class="block block--col-1">
+				<h2 class="as-h5">Facilities</h2>
+				<ul class="footer__list list-unstyled">
+					<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/library/">Library</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a>
+					</li>
+					<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a>
+					</li>
+				</ul>
+			</article>
+			<article class="block block--col-2">
+				<h2 class="as-h5">Locations</h2>
+				<ul class="footer__list list-unstyled">
+					<li><a href="http://www.ucl.ac.uk/london">UCL and London</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a>
+					</li>
+				</ul>
+			</article>
+			<article class="block block--col-3">
+				<h2 class="as-h5">Connect with us</h2>
+				<ul class="footer__list list-unstyled">
+					<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/media">Media Relations</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a>
+					</li>
+					<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a>
+					</li>
+				</ul>
+			</article>
+			<hr class="clear">
+			<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
+			<ul class="footer__links list-inline footer__list list-unstyled">
+				<li>Copyright © 2013 UCL</li>
+				<li><a href="#">Disclaimer</a>
 				</li>
-				<li><a href="http://www.ucl.ac.uk/library/">Library</a>
+				<li><a href="#">Freedom of Information</a>
 				</li>
-				<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a>
+				<li><a href="#">Accessibility</a>
 				</li>
-				<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a>
+				<li><a href="#">Privacy</a>
 				</li>
-				<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a>
+				<li><a href="#">Cookies</a>
+				</li>
+				<li><a href="#">Contact Us</a>
 				</li>
 			</ul>
-		</article>
-
-		<article class="block--col-2">
-			<h2 class="as-h5">Locations</h2>
-			<ul>
-				<li><a href="http://www.ucl.ac.uk/london">UCL and London</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a>
-				</li>
-			</ul>
-		</article>
-
-		<article class="block--col-3">
-			<h2 class="as-h5">Connect with us</h2>
-			<ul>
-				<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/media">Media Relations</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a>
-				</li>
-				<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a>
-				</li>
-			</ul>
-
-		</article>
-
-		<hr>
-
-		<p class="zero-bottom">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
-
-		<ul class="footer__links list-inline list-unstyled">
-			<li>Copyright © 2013 UCL</li>
-			<li><a href="#">Disclaimer</a>
-			</li>
-			<li><a href="#">Freedom of Information</a>
-			</li>
-			<li><a href="#">Accessibility</a>
-			</li>
-			<li><a href="#">Privacy</a>
-			</li>
-			<li><a href="#">Cookies</a>
-			</li>
-			<li><a href="#">Contact Us</a>
-			</li>
-		</ul>
-
+		</div>
 	</footer>
 </body>
 
