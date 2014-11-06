@@ -2969,14 +2969,14 @@ img.media__aside {
 * Author: 
 -------------------------------------------------------------- */
 .photograph {
-  padding: 0 35px;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   position: relative;
   left: -35px;
-  padding-bottom: 12%; }
+  padding: 0 35px;
+  padding-bottom: 10.5%; }
   @media only screen and (max-width: 767px) {
     .photograph {
       width: 100%;

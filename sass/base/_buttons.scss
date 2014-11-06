@@ -17,9 +17,9 @@
 	padding: 12px 30px 10px 30px;
 	display: inline-block;
 	position: relative;
-	border: 1px solid rgba(0, 0, 0, 0.21);
+	border: 1px solid rgba($black, 0.21);
 	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 0 rgba($black, 0.15);
 	line-height: 1;
 	@include font-size($font-size-sm);
 	&:hover, &:focus {
@@ -39,7 +39,7 @@
 
 .btn--gradient.disabled {
 	@include gradient($disabled-btn-grad1, $disabled-btn-grad2);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+	border-bottom: 1px solid rgba($black, 0.21);
 	color: #999;
 	text-shadow: none;
 	&:hover,:focus {
