@@ -722,6 +722,12 @@ del {
 
 /* Lists
 -------------------------------------------------------------- */
+ol, ul {
+  margin-top: 0;
+  margin-left: 1.5em; }
+  ol ul, ul ul {
+    margin-left: 1em; }
+
 .list-unstyled, .list-inline, .pills {
   margin-left: 0;
   padding-left: 0;
@@ -733,7 +739,8 @@ del {
       background-color: transparent !important; }
 
 .list-inline, .pills {
-  display: inline; }
+  display: inline;
+  margin-left: 0; }
   .list-inline > li, .pills > li {
     display: inline-block;
     vertical-align: middle;
@@ -744,12 +751,6 @@ del {
     .list-inline > li:last-child:after, .pills > li:last-child:after {
       content: "";
       display: none; }
-
-ul li ul {
-  margin-top: 1em; }
-
-ul li li {
-  margin-left: 1em; }
 
 .tabbed > div ul li, .box ul li {
   margin-left: 1em; }
@@ -2055,15 +2056,15 @@ figure + figure, figure + p {
         top: 50%; } }
 
 .brand__heading {
+  font-size: 14px;
+  font-size: 1.4rem;
   position: absolute;
   left: 35px;
   top: 25%;
   color: #ffffff;
-  font-size: 14px;
-  font-size: 1.4rem;
   text-transform: uppercase;
   margin-bottom: 0;
-  font-weight: bold; }
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     .brand__heading {
       position: relative;
@@ -2713,7 +2714,8 @@ img.media__aside {
   float: left;
   width: 55%;
   font-size: 16px;
-  display: block; }
+  display: block;
+  margin-left: 0; }
   @media only screen and (max-width: 767px) {
     .masthead__list {
       width: 100%;
@@ -2742,6 +2744,8 @@ img.media__aside {
       display: block;
       text-align: left; } }
 
+.nav--left ul {
+  margin-left: 0; }
 .nav--left li {
   margin-bottom: 0.5em; }
   .nav--left li ul {
@@ -2833,10 +2837,10 @@ img.media__aside {
   margin-right: -100%;
   width: 100%; }
 
-.nav--vertical-show-top-nav nav.nav--top {
+.nav--vertical-show-top-nav .nav--top {
   display: block; }
   @media only screen and (max-width: 767px) {
-    .nav--vertical-show-top-nav nav.nav--top {
+    .nav--vertical-show-top-nav .nav--top {
       display: none; } }
 .nav--vertical-show-top-nav #leftcol {
   margin-top: 5em; }

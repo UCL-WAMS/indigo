@@ -23,14 +23,14 @@
 }
 
 .brand__heading {
+	@include font-size($font-size-sm);
 	position: absolute;
 	left: 35px;
 	top: 25%;
 	color: $white;
-	@include font-size($font-size-sm);
 	text-transform: uppercase;
 	margin-bottom: 0;
-	font-weight: bold;
+	font-weight: 400;
 	@include gs-media(m, max) {
 		position: relative;
 		left: 0;

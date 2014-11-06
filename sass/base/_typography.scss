@@ -210,6 +210,14 @@ time {
 /* Lists
 -------------------------------------------------------------- */
 
+ol, ul {
+	margin-top: 0;
+	margin-left: 1.5em;
+	ul {
+		margin-left: 1em;
+	}
+}
+
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled, %list-unstyled {
 	@include unset-list;
@@ -219,6 +227,7 @@ time {
 .list-inline, %list-inline {
 	@extend %list-unstyled;
 	display: inline;
+	margin-left: 0;
 	> li {
 		display: inline-block;
 		vertical-align: middle;
@@ -234,14 +243,6 @@ time {
 			}
 		}
 	}
-}
-
-ul li ul {
-	margin-top: 1em;
-}
-
-ul li li {
-	margin-left: 1em;
 }
 
 .tabbed > div ul li, .box ul li {

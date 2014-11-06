@@ -1,10 +1,13 @@
 .nav {}
 
-.nav--left li {
-	margin-bottom: 0.5em;
-	ul {
-		margin: 10px 5%;
-		@include font-size($font-size-sm);
+.nav--left {
+	ul { margin-left: 0; }
+	li {
+		margin-bottom: 0.5em;
+		ul {
+			margin: 10px 5%;
+			@include font-size($font-size-sm);
+		}
 	}
 }
 
@@ -100,7 +103,7 @@
 }
 
 .nav--vertical-show-top-nav {
-	nav.nav--top {
+	.nav--top {
 		display: block;
 		@include gs-media(m, max) {
 			display: none;
