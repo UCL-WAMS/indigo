@@ -5,187 +5,243 @@
 * Author: 
 -------------------------------------------------------------- */
 
-// Mobile grid
-
-.m-clear {
+.col {
 	@include respond-max($screen-sm) {
-	   clear: both; 
+		clear: both;
 	}
 }
 
-.m-all {
+/* Mobile content grid (2 columns)
+-------------------------------------------------------------- */
+
+.col--1-2-sm {
 	@include respond-max($screen-sm) {
 		@include gs-span(m, all);
 	}
 }
 
-.m1 {
+.col--1-sm {
 	@include respond-max($screen-sm) {
 		@include gs-span(m, 1);
 	}
 }
 
-.m2 {
+.col--2-sm {
 	@include respond-max($screen-sm) {
 		@include gs-span(m, 2);
 	}
 }
 
-// Tablet grid
+/* Tablet grid (3 columns)
+-------------------------------------------------------------- */
 
-.t-all {
-	@include respond-min($screen-md) {
-		@include gs-span(t, all);
-	}
-}
-
-.t1 {
+.col--1-md {
 	@include respond-min($screen-md) {
 		@include gs-span(t, 1);
 	}
 }
 
-.t2 {
+.col--2-md {
 	@include respond-min($screen-md) {
 		@include gs-span(t, 2);
 	}
 }
 
-.t1-t2 {
-	@include respond-min($screen-md) {
-		@include gs-span(t, 1, 2);
-	}
-}
-
-.t2-t3 {
-	@include respond-min($screen-md) {
-		@include gs-span(t, 2, 3);
-	}
-}
-
-.t3 {
+.col--3-md {
 	@include respond-min($screen-md) {
 		@include gs-span(t, 3);
 	}
 }
 
-// Desktop grid
-
-.dl-all {
-	@include respond-min($screen-xl) {
-		@include gs-span(dl, all);
+.col--1-2-md {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 1, 2);
 	}
 }
 
-.dl1 {
-	@include respond-min($screen-xl) {
+.col--2-3-md {
+	@include respond-min($screen-md) {
+		@include gs-span(t, 2, 3);
+	}
+}
+
+.col--1-3-md {
+	@include respond-min($screen-md) {
+		@include gs-span(t, all);
+	}
+}
+
+/* Desktop layout grid (5 columns)
+-------------------------------------------------------------- */
+
+.col--1-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 1);
 	}
 }
 
-.dl1-dl2 {
-	@include respond-min($screen-xl) {
+.col--1-2-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 1, 2);
 	}
 }
 
-.dl1-dl3 {
-	@include respond-min($screen-xl) {
+.col--1-3-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 1, 3);
 	}
 }
 
-.dl2-dl3 {
-	@include respond-min($screen-xl) {
+.col--2-3-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 2, 3);
 	}
 }
 
-.dl2-dl4 {
-	@include respond-min($screen-xl) {
+.col--2-4-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 2, 4);
 	}
 }
 
-.dl2-dl5 {
-  @include respond-min($screen-xl) {
-	@include gs-span(dl, 2, 5);
-  }
+.col--2-5-lg-layout {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, 2, 5);
+	}
 }
 
-.dl3 {
-	@include respond-min($screen-xl) {
+.col--3-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 3);
 	}
 }
 
-.dl3-dl4 {
-	@include respond-min($screen-xl) {
+.col--3-4-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 3, 4);
 	}
 }
 
-.dl3-dl5 {
-	@include respond-min($screen-xl) {
+.col--3-5-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 3, 5);
 	}
 }
 
-.dl4-dl5 {
-	@include respond-min($screen-xl) {
+.col--4-5-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 4, 5);
 	}
 }
 
-.dl5 {
-	@include respond-min($screen-xl) {
+.col--5-lg-layout {
+	@include respond-min($screen-lg) {
 		@include gs-span(dl, 5);
 	}
 }
 
-.dc1-dc2 {
+.col--1-5-layout {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, all);
+	}
+}
+
+/* Desktop content grid (4 columns)
+-------------------------------------------------------------- */
+
+.col--1-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 1);
+	}
+}
+
+.col--2-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 2);
+	}
+}
+
+.col--3-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 3);
+	}
+}
+
+.col--4-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 4);
+	}
+}
+
+.col--1-2-lg-content {
 	@include respond-min($screen-lg) {
 		@include gs-span(dc, 1, 2);
 	}
 }
-	
-.dc3-dc4 {
+
+.col--2-3-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 2, 3);
+	}
+}
+
+.col--2-4-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dc, 2, 4);
+	}
+}
+
+.col--3-4-lg-content {
 	@include respond-min($screen-lg) {
 		@include gs-span(dc, 3, 4);
 	}
 }
 
-.fl {
+.col--1-4-lg-content {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, all);
+	}
+}
+
+/* Column floats
+-------------------------------------------------------------- */
+
+.col--float {
 	@include respond-max($screen-md) {
 		@include gs-float(m, left);
 	}
+
 	@include respond-min-max($screen-md, $screen-lg) {
 		@include gs-float(t, left);
 	}
+
 	@include respond-min($screen-lg) {
 		@include gs-float(dl, left);
 	}
 }
 
-.dc-fl {
+.col--float-content {
 	@include respond-min($screen-lg) {
 		@include gs-float(dl, left);
 	}
 }
 
-.m-last {
-	@include respond-max($screen-md) {
+/* Column last child
+-------------------------------------------------------------- */
+
+.col--sm-last {
+	@include respond-max($screen-sm) {
 		margin-right: 0;
 	}
 }
 
-.t-last {
+.col--md-last {
 	@include respond-min-max($screen-md, $screen-lg) {
 		margin-right: 0;
 	}
 }
 
-.dl-last {
+.col--lg-last {
 	@include respond-min($screen-lg) {
 		margin-right: 0;
 	}
