@@ -25,16 +25,18 @@ figure + figure, figure + p {
 /* Floated Images
 -------------------------------------------------------------- */
 
-img.float-left {
+.img-pull-left {
 	@include gs-span(dc, 1, 2);
 	@include gs-float(dc, left);
 	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
-img.float-right {
+.img-pull-right {
 	@include gs-span(dc, 3, 4);
 	@include gs-float(dc, right);
 	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 .image-sm {
@@ -69,8 +71,4 @@ img.float-right {
 			width: 100%;
 		}
 	}
-}
-
-.no-respond {
-	width: auto !important;
 }

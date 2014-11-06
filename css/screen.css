@@ -196,6 +196,11 @@ time, .text-capitalize {
 .text-emphasise {
   font-style: italic; }
 
+/* Responsiveness
+-------------------------------------------------------------- */
+.no-respond {
+  width: auto; }
+
 /* Base dependencies */
 /* 
 * Base name: Reset
@@ -1430,7 +1435,7 @@ figure + figure, figure + p {
 
 /* Floated Images
 -------------------------------------------------------------- */
-img.float-left {
+.img-pull-left {
   display: block;
   float: left;
   margin-left: 0%;
@@ -1440,9 +1445,10 @@ img.float-left {
   float: left;
   margin-left: 0;
   margin-right: 3.0303%;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
-img.float-right {
+.img-pull-right {
   display: block;
   float: left;
   margin-left: 51.4596%;
@@ -1452,7 +1458,8 @@ img.float-right {
   float: right;
   margin-right: 0;
   margin-left: 3.0303%;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 .image-sm {
   max-width: 200px; }
@@ -1478,9 +1485,6 @@ img.float-right {
 
   img.float-left.large-image, img.float-left.xl-image, img.float-left.xxl-image, img.float-right.large-image, img.float-right.xl-image, img.float-right.xxl-image {
     width: 100%; } }
-.no-respond {
-  width: auto !important; }
-
 /* Patterns */
 /* 
 * Partial name: Accordion
