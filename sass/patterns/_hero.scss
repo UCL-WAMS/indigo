@@ -5,6 +5,7 @@
 -------------------------------------------------------------- */
 
 .hero {
+	@include alignment;
 	@extend .clearfix;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -75,8 +76,8 @@
 }
 
 .hero__body {   
-	@extend .dl1-dl3;
-	@extend .t1-t2;
+	@include gs-span(dl, 1, 3);
+	@include gs-span(t, 1, 2);
 	box-sizing: border-box;
 	@include respond-max($screen-xxl) {
 		width: 85%;
@@ -159,9 +160,8 @@
 }
 	
 .hero__sidebar {
-	@extend .m-all;
-	@extend .t3;    
-	@extend .dl5;
+	@include gs-span(t, 3);   
+	@include gs-span(dl, 5);   
 	margin-bottom: 2em;
 }
 

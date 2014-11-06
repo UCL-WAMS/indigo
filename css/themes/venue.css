@@ -350,16 +350,18 @@ input, select {
 /* More info: http://nicolasgallagher.com/micro-clearfix-hack/
 
 For modern browsers */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .hero:before, .media:before,
+.clearfix:after,
+.hero:after,
+.media:after {
   content: "";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .hero:after, .media:after {
   clear: both; }
 
 /* For IE 6/7 (trigger hasLayout) */
-.clearfix {
+.clearfix, .hero, .media {
   zoom: 1; }
 
 /* removes rounded corners and things on inputs for iOS */
@@ -583,11 +585,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #6f6f6f;
     line-height: 0; }
 
-h1, .as-h1 {
+h1, .as-h1, .hero__title--large {
   font-size: 36px;
   font-size: 3.6rem; }
   @media (max-width: 779px) {
-    h1, .as-h1 {
+    h1, .as-h1, .hero__title--large {
       font-size: 30px;
       font-size: 3rem; } }
 
@@ -2354,6 +2356,215 @@ article > footer a:hover {
     position: absolute;
     z-index: 100; } }
 
+/* 
+* Object name: Hero
+* Object use: Lead content above copy
+* Note: N/A
+-------------------------------------------------------------- */
+.hero {
+  position: relative;
+  left: -35px;
+  padding: 0 35px;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: white;
+  background-size: cover;
+  background-position: right center;
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
+  @media (max-width: 989px) {
+    .hero {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+      background-position: -9999px;
+      background-repeat: no-repeat; } }
+  @media (max-width: 479px) {
+    .hero {
+      padding-top: 1em;
+      padding-bottom: 1em; } }
+  @media (max-width: 989px) {
+    .hero .hero__body--background {
+      padding: 0; } }
+
+.hero--home {
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-left: -35px;
+  margin-right: -35px;
+  padding-bottom: 10em;
+  border: 0;
+  background-image: url("/assets/images/hero-image-taught-desktop.jpg");
+  background-position: 90% center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 1179px) {
+    .hero--home {
+      background-position: 80% center; } }
+  @media (max-width: 779px) {
+    .hero--home {
+      background-image: none; } }
+  @media (min-width: 780px) and (max-width: 1179px) {
+    .hero--home {
+      padding-bottom: 14em; } }
+  @media (max-width: 779px) {
+    .hero--home {
+      padding-bottom: 1.5em; } }
+  @media (min-width: 780px) and (max-width: 989px) {
+    .hero--home .hero__body--background {
+      padding: 1.5em; } }
+
+.hero__content {
+  width: 75%; }
+  @media (max-width: 1499) {
+    .hero__content {
+      width: 85%;
+      float: left;
+      margin: auto; } }
+  @media (max-width: 1179px) {
+    .hero__content {
+      width: 100%;
+      float: none; } }
+
+.hero__body {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 65.62502%;
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 65.79861%;
+  box-sizing: border-box; }
+  @media (max-width: 1179px) {
+    .hero__body {
+      width: 85%; } }
+  @media (max-width: 989px) {
+    .hero__body {
+      width: 100%; } }
+  .hero__body > *:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 780px) {
+  .hero__body--background {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.6); } }
+@media (max-width: 779px) {
+  .hero__body--background {
+    padding: 0; } }
+
+.hero__title {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  @media (max-width: 779px) {
+    .hero__title {
+      font-size: 1.5em; } }
+
+@media (max-width: 1179px) {
+  .hero__title--large {
+    font-size: 2.25em; } }
+@media (max-width: 989px) {
+  .hero__title--large {
+    font-size: 2em; } }
+@media (max-width: 779px) {
+  .hero__title--large {
+    font-size: 1.5em; } }
+
+.hero__blurb {
+  margin-top: 1em; }
+  @media (max-width: 989px) {
+    .hero__blurb {
+      display: none; } }
+
+.hero__detail {
+  margin-top: .5em; }
+  @media (max-width: 779px) {
+    .hero__detail {
+      font-size: 1.25em; } }
+
+@media (max-width: 779px) {
+  .hero__sub {
+    display: none; } }
+
+.hero__tags {
+  margin-top: 1em; }
+
+.hero__dropdown {
+  margin-bottom: 2em; }
+  .hero__dropdown h2 {
+    margin-bottom: 16px; }
+
+.hero__dropdown__detail {
+  display: inline;
+  float: left;
+  font-size: 14px;
+  padding: 6px 10px 6px 0; }
+
+.hero__sidebar {
+  display: block;
+  float: left;
+  margin-left: 68.40278%;
+  margin-right: -100%;
+  width: 31.59722%;
+  display: block;
+  float: left;
+  margin-left: 74.36027%;
+  margin-right: -100%;
+  width: 25.57239%;
+  margin-bottom: 2em; }
+
+@media (min-width: 1050px) {
+  .hero__sidebar--small {
+    width: 20%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0; } }
+
+/* 
+* Partial name: Media
+* Use: For a content block aligned to an image
+* Note: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+* Author: 
+-------------------------------------------------------------- */
+.media__aside {
+  float: left;
+  margin-right: 1em;
+  max-width: em(48);
+  min-height: 1px; }
+  @media (min-width: 780px) {
+    .media__aside {
+      margin-right: 1.5em;
+      max-width: em(64); } }
+  .layout__sidebar .media__aside {
+    max-width: 3.42857em;
+    margin-right: 1.14286em; }
+    @media (min-width: 780px) {
+      .layout__sidebar .media__aside {
+        margin-right: 1.71429em; } }
+  @media (max-width: 779px) {
+    .media__aside {
+      display: none; } }
+
+.media__aside img,
+img.media__aside {
+  width: auto !important;
+  height: auto !important; }
+
+.media__body, .media__body--wide {
+  overflow: hidden;
+  max-width: 40em; }
+  .media__body:last-child, .media__body--wide:last-child {
+    margin-bottom: 0; }
+  @media (max-width: 779px) {
+    .media__body, .media__body--wide {
+      font-size: 14px; } }
+
+.media__body--wide {
+  max-width: 60em; }
+
 /* Success, notice and error boxes
 -------------------------------------------------------------- */
 .message {
@@ -2498,6 +2709,7 @@ article > footer a:hover {
   position: relative;
   left: -35px;
   padding: 0 35px;
+  width: 100%;
   width: 100%;
   background-color: #ffffff;
   margin-top: 0;

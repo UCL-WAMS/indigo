@@ -42,7 +42,7 @@ img.media__aside {
 
 .media__body {
 	overflow: hidden;
-	@extend .ll;
+	max-width: 40em;
 
 	&:last-child {
 		margin-bottom: 0;
