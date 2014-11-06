@@ -19,16 +19,24 @@
 	margin-bottom: 1.5em;
 }
 
+.breadcrumb--nav {
+	@include alignment;
+	.breadcrumb__list {
+		line-height: 4;
+	}
+}
+
 .breadcrumb__list {
 	@include unset-list;
-	margin-bottom: 0;
-	display: inline-block;
+	@include inline-block;
+	margin-bottom: 0;	
+	vertical-align: top;
 }	
 
 .breadcrumb__item {
 	margin: 0;
 	float: left;
-	font-size: 0.9em;
+	@include font-size($font-size-sm);
 	text-transform: none;
 
 	&:after {
