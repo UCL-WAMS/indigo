@@ -5,9 +5,22 @@
 * Author: 
 -------------------------------------------------------------- */
 
-form {
-	margin-top: 2em;
-	margin-bottom: 2em;
+/*
+* Common form controls
+* 
+* Shared size and type resets for form controls. Apply `.form__control` to any
+* of the following form controls:
+* 
+* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
+* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
+* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
+-------------------------------------------------------------- */
+.form-control {
+	margin: 0.5em 0;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px #e0e0e0 inset;
+	color: #333;
+	width: 100%;
 }
 
 fieldset {
@@ -36,6 +49,19 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 	margin-left: 5px;
 }
 
+// Set the height of file controls to match text inputs
+input[type="file"] {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
 fieldset > div:first-of-type {
 	margin-top: 0;
 }
@@ -60,7 +86,6 @@ fieldset abbr[title="Required"] {
 }
 
 input.text, textarea {
-	width: 96%;
 	padding-left: 2%;
 	padding-right: 2%;
 }
@@ -68,10 +93,6 @@ input.text, textarea {
 select {
 	margin: 0.5em 0 0;
 	width: 100%;
-}
-
-.view-form-page {
-	margin-top: 1em;
 }
 
 form em {
@@ -127,10 +148,6 @@ input[type=radio] {
 	border: none;
 }
 
-input[type=checkbox] {
-	border-radius: 4px;
-}
-
 input[type=text],
 input[type=email],
 input[type=url],
@@ -146,19 +163,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
 	display: none;
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="tel"], input[type="number"], input.title,
-textarea, #search-form {
-	margin: 0.5em 0;
-	border: 1px solid #ccc;
-	box-shadow: 0 1px 2px #e0e0e0 inset;
-	color: #333;
-	width: 96%;
-}
-
-#search-form {
-	width: 100%;
 }
 
 input.text:focus, input.title:focus,
@@ -203,7 +207,7 @@ textarea:focus {
 }
 
 input.error {
-	background-color: $whiteAFA;
+	background-color: $white;
 	border: 1px solid #DD6868;
 }
 

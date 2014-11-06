@@ -11,9 +11,11 @@
 -------------------------------------------------------------- */
 /* UCL Colours
 -------------------------------------------------------------- */
-/* Standard
+/* Indigo colour palette
 -------------------------------------------------------------- */
 /* Colour Variant - for gradients
+-------------------------------------------------------------- */
+/* Generic grayscale
 -------------------------------------------------------------- */
 /* Colour by element
 -------------------------------------------------------------- */
@@ -302,12 +304,12 @@ a {
 
 ins {
   background-color: #ff9;
-  color: #000;
+  color: #000000;
   text-decoration: none; }
 
 mark {
   background-color: #ff9;
-  color: #000;
+  color: #000000;
   font-style: italic;
   font-weight: bold; }
 
@@ -695,7 +697,7 @@ cite, .cite, em, dfn {
 
 ins {
   background-color: #F0F0F0;
-  color: #000;
+  color: #000000;
   text-decoration: none;
   padding: 0 0.125em; }
 
@@ -795,9 +797,22 @@ pre, code, tt {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-form {
-  margin-top: 2em;
-  margin-bottom: 2em; }
+/*
+* Common form controls
+* 
+* Shared size and type resets for form controls. Apply `.form__control` to any
+* of the following form controls:
+* 
+* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
+* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
+* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
+-------------------------------------------------------------- */
+.form-control {
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px #e0e0e0 inset;
+  color: #333;
+  width: 100%; }
 
 fieldset {
   margin: 0 0 1em 0; }
@@ -820,6 +835,15 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   display: inline;
   margin-left: 5px; }
 
+input[type="file"] {
+  display: block;
+  padding-left: 0;
+  padding-right: 0; }
+
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
 fieldset > div:first-of-type {
   margin-top: 0; }
 
@@ -840,16 +864,12 @@ fieldset abbr[title="Required"] {
   line-height: 0.1; }
 
 input.text, textarea {
-  width: 96%;
   padding-left: 2%;
   padding-right: 2%; }
 
 select {
   margin: 0.5em 0 0;
   width: 100%; }
-
-.view-form-page {
-  margin-top: 1em; }
 
 form em {
   font-size: 0.8em;
@@ -895,9 +915,6 @@ input[type=radio] {
   background: none;
   border: none; }
 
-input[type=checkbox] {
-  border-radius: 4px; }
-
 input[type=text],
 input[type=email],
 input[type=url],
@@ -912,17 +929,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none; }
-
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="tel"], input[type="number"], input.title,
-textarea, #search-form {
-  margin: 0.5em 0;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 2px #e0e0e0 inset;
-  color: #333;
-  width: 96%; }
-
-#search-form {
-  width: 100%; }
 
 input.text:focus, input.title:focus,
 textarea:focus {
@@ -989,7 +995,7 @@ textarea:focus {
   width: 100%; }
 
 input.error {
-  background-color: #FFFAFA;
+  background-color: #ffffff;
   border: 1px solid #DD6868; }
 
 .error {
@@ -1003,12 +1009,12 @@ input.error {
 -------------------------------------------------------------- */
 .btn {
   background-color: #666;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   cursor: pointer;
   margin: 0.5em 0;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   padding: 12px 30px 10px 30px;
   display: inline-block;
   position: relative;
@@ -1019,7 +1025,7 @@ input.error {
   font-size: 1.4rem; }
   .btn:hover, .btn:focus {
     background-color: #615957;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none; }
   .btn:active {
     background-color: #505050; }
@@ -1058,7 +1064,7 @@ button {
   background: #40403e;
   cursor: pointer;
   padding: 0.7rem;
-  color: #fff;
+  color: #ffffff;
   border: 0;
   border-radius: 0.4em; }
   button:hover, button :focus {
@@ -1821,7 +1827,7 @@ figure + figure, figure + p {
     .accordion dt a, .accordion dd a {
       font-weight: bold; }
   .accordion dt a {
-    color: black;
+    color: #000000;
     display: block; }
   .accordion dd {
     border-top: 0;
@@ -2007,7 +2013,7 @@ figure + figure, figure + p {
   position: absolute;
   left: 35px;
   top: 25%;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -2220,13 +2226,13 @@ article > footer a:hover {
 -------------------------------------------------------------- */
 .flag, .more {
   padding: 5px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   font-size: 1.4rem;
   background-color: #B5BD00; }
   .flag:hover, .more:hover {
-    color: #fff;
+    color: #ffffff;
     background: #8f993e;
     text-decoration: none; }
 
@@ -2263,7 +2269,7 @@ article > footer a:hover {
   .footer__inner a {
     color: #eee; }
     .footer__inner a:hover {
-      color: #fff; }
+      color: #ffffff; }
 
 .footer__list li {
   padding-bottom: 4px;
@@ -2302,7 +2308,7 @@ article > footer a:hover {
         .no-csstransforms .mobile-open .header {
           left: 0; }
       .header a {
-        color: #fff;
+        color: #ffffff;
         padding: 0.5em 0;
         display: block;
         clear: both;
@@ -2318,12 +2324,12 @@ article > footer a:hover {
   background-repeat: repeat-x;
   position: relative;
   left: -35px;
-  background-color: #fff; }
+  background-color: #ffffff; }
   .header-mobile.no-svg {
     background-image: url("/images/ucl-logo-cropped-white.png");
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-color: #000;
+    background-color: #000000;
     background-size: 90%; }
   @media only screen and (max-width: 767px) {
     .header-mobile {
@@ -2360,7 +2366,7 @@ article > footer a:hover {
     margin-bottom: 0; }
 
 .message--warning, .message--success {
-  background-color: #FFFAFA;
+  background-color: #ffffff;
   background-image: url("/images/alert.png");
   background-position: 10px center;
   background-repeat: no-repeat;
@@ -2396,12 +2402,12 @@ article > footer a:hover {
   background-color: #444;
   font-size: 12px;
   font-size: 1.2rem;
-  color: #fff;
+  color: #ffffff;
   height: 45px; }
   .masthead img {
     width: auto; }
   .masthead a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none; }
   @media only screen and (max-width: 767px) {
     .masthead {
@@ -2482,7 +2488,7 @@ article > footer a:hover {
   left: -35px;
   padding: 0 35px;
   width: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 0;
   padding-top: 1em;
   overflow: hidden; }
@@ -2654,7 +2660,7 @@ article > footer a:hover {
 -------------------------------------------------------------- */
 .photograph {
   padding: 0 35px;
-  background-color: #fff;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -2679,7 +2685,7 @@ article > footer a:hover {
   font-size: 12px;
   font-size: 1.2rem;
   font-style: italic;
-  color: #fff;
+  color: #ffffff;
   display: none; }
 
 .photograph--on {
@@ -2722,7 +2728,7 @@ article > footer a:hover {
   z-index: 1; }
 
 .site-content__body {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 2em 35px;
   left: -35px;
   position: relative;
@@ -2752,7 +2758,7 @@ article > footer a:hover {
 .search-form {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
   padding: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 7px;
   margin-bottom: 7px;
   position: absolute;
@@ -2845,10 +2851,10 @@ article > footer a:hover {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #fff; }
+  color: #ffffff; }
   .tabbed__link:hover {
     text-decoration: none;
-    color: #fff; }
+    color: #ffffff; }
 
 /* 
 * Partial name: Tag
@@ -2863,7 +2869,7 @@ article > footer a:hover {
   left: 0;
   top: 0;
   padding: 5px 15px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   background-color: #B5BD00; }
 
@@ -2915,7 +2921,7 @@ article > footer a:hover {
     background-color: #f6be00; } }
 .site-content__body {
   background-color: #0e0f14;
-  color: #fff; }
+  color: #ffffff; }
 
 .bg-homepage, .bg-show, .bg-schedule {
   background-image: url("http://farm9.staticflickr.com/8236/8464555745_8b82e2d87a_b.jpg");
@@ -2939,12 +2945,12 @@ article > footer a:hover {
   color: #f6be00; }
 
 .site-content__body article ul li:before {
-  background-color: #fff; }
+  background-color: #ffffff; }
 
 /* Headings -------------------------------- */
 h1.large-title {
   font-size: 72px;
-  color: #fff;
+  color: #ffffff;
   line-height: 1; }
 
 @media only screen and (max-width: 767px) {
@@ -2952,13 +2958,13 @@ h1.large-title {
     font-size: 48px; } }
 /* Breadcrumb -------------------------------- */
 #breadcrumb li.current a {
-  color: #fff; }
+  color: #ffffff; }
 
 /* Left Navigation -------------------------------- */
 .nav--left {
   left: -50px;
   position: absolute;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 15px 15px 0px #f6be00;
   padding-top: 25px;
   padding-bottom: 20px;
@@ -3020,7 +3026,7 @@ h1.large-title {
   font-weight: bold; }
 
 [class*=pullquote] p.quote {
-  color: #fff;
+  color: #ffffff;
   line-height: 1.6em;
   font-size: 24px; }
 
@@ -3035,7 +3041,7 @@ h1.large-title {
   border-bottom: 5px solid #000; }
 
 .site-content__body .tabs li a {
-  color: #000; }
+  color: #000000; }
 
 .site-content__body .tabs li.active {
   border-color: #f6be00;
