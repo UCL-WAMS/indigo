@@ -724,26 +724,26 @@ del {
 
 /* Lists
 -------------------------------------------------------------- */
-.list-unstyled, .list-inline {
+.list-unstyled, .list-inline, .pills {
   margin-left: 0;
   padding-left: 0;
   list-style: none; }
-  .list-unstyled li, .list-inline li {
+  .list-unstyled li, .list-inline li, .pills li {
     margin-left: 0;
     list-style-type: none; }
-    .list-unstyled li:before, .list-inline li:before {
+    .list-unstyled li:before, .list-inline li:before, .pills li:before {
       background-color: transparent !important; }
 
-.list-inline {
+.list-inline, .pills {
   display: inline; }
-  .list-inline > li {
+  .list-inline > li, .pills > li {
     display: inline-block;
     vertical-align: middle;
     padding-right: 5px; }
-    .list-inline > li:after {
+    .list-inline > li:after, .pills > li:after {
       content: "|";
       margin-left: 2.5px; }
-    .list-inline > li:last-child:after {
+    .list-inline > li:last-child:after, .pills > li:last-child:after {
       content: "";
       display: none; }
 
@@ -1892,9 +1892,10 @@ figure + figure, figure + p {
       background-position: right 50%; } }
 
 /* 
-* Object name: Item block
-* Object use: For blocks of related content used primarly in a sidebar or for supporting material
-* Note: 
+* Partial name: Advert
+* Use: Supporting material/advert
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .advert {
   position: relative;
@@ -2952,6 +2953,52 @@ img.media__aside {
     float: left;
     margin-left: 0;
     width: 100%; } }
+
+/* 
+* Partial name: Pill
+* Use: For rounded inline label/tags
+* Note:
+* Author: 
+-------------------------------------------------------------- */
+.pills {
+  margin-bottom: 1em;
+  margin-left: 0; }
+  .pills:last-child {
+    margin-bottom: 0; }
+
+.pills__item {
+  float: left;
+  padding: 0 1.5em;
+  background: #b5bd00;
+  color: white;
+  line-height: 2.5;
+  border-radius: 2em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-right: .5em; }
+  .pills__item .icon {
+    margin-left: -24px;
+    font-size: 16px;
+    line-height: 1; }
+  .pills__item a {
+    color: white;
+    font-weight: bolder; }
+  @media (max-width: 779px) {
+    .pills__item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 20em;
+      margin-right: 0; } }
+  @media (max-width: 479px) {
+    .pills__item {
+      margin-bottom: .5em; } }
+
+.pills__icon {
+  display: inline-block;
+  padding-left: 1em; }
 
 /* 
 * Partial name: Photograph banner

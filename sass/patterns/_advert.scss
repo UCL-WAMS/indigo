@@ -1,8 +1,10 @@
 /* 
-* Object name: Item block
-* Object use: For blocks of related content used primarly in a sidebar or for supporting material
-* Note: 
+* Partial name: Advert
+* Use: Supporting material/advert
+* Note: N/A
+* Author: 
 -------------------------------------------------------------- */
+
 
 .advert {
 	position: relative;
@@ -52,7 +54,7 @@
 .advert__overlay {
 	position: absolute;
 	display: block;
-	background: rgba(black, .25);
+	background: rgba(black, 0.25);
 	z-index: 9999;
 	top: 0;
 	right: 0;
@@ -65,14 +67,13 @@
 	padding: 1.5em;
 	color: white;
 	min-height: 5em;
-	text-shadow: 0 1px 1px rgba(black, .2);
+	text-shadow: 0 1px 1px rgba(black, 0.2);
 	background: $brightgreen;
-	background: rgba($brightgreen, .8);
+	background: rgba($brightgreen, 0.8);
 	a {
 		color: white;
 	}
 }
-
 
 .advert__header-overlay {
 	margin-bottom: 0;
@@ -81,6 +82,6 @@
 	left: .5em;
 	top: .25em;
 	position: absolute;
-	text-shadow: 0 1px 1px rgba(black, .6);
+	text-shadow: 0 1px 1px rgba(black, 0.6);
 	z-index: 1;
 }
