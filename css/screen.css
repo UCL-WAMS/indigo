@@ -564,12 +564,14 @@ body {
   word-wrap: break-word;
   -webkit-text-size-adjust: none; }
 
-/* Headings
+/* Vertical rhythym
 -------------------------------------------------------------- */
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
+/* Headings
+-------------------------------------------------------------- */
 h1, h2, h3 {
   font-weight: 300; }
 
@@ -1837,6 +1839,87 @@ figure + figure, figure + p {
       background: url(/images/open.png);
       background-repeat: no-repeat;
       background-position: right 50%; } }
+
+/* 
+* Object name: Item block
+* Object use: For blocks of related content used primarly in a sidebar or for supporting material
+* Note: 
+-------------------------------------------------------------- */
+.advert {
+  position: relative;
+  box-sizing: border-box; }
+
+@media (max-width: 779px) {
+  .advert--restrict {
+    max-width: 25em; } }
+
+.advert-divide {
+  clear: both;
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-weight: 400; }
+
+.advert__content {
+  padding: 1.5em;
+  position: relative;
+  background: white;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
+  .advert__content > *:last-child, .advert__content > *:last-child > *:last-child, .advert__content > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
+
+.advert__content--push {
+  padding-top: 5em; }
+
+.advert__list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  color: #999; }
+  .advert__list li {
+    margin-left: 0;
+    list-style-type: none; }
+    .advert__list li:before {
+      background-color: transparent !important; }
+
+.advert__img {
+  min-height: 10em;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  @media (max-width: 779px) {
+    .advert__img {
+      min-height: 12em; } }
+
+.advert__overlay {
+  position: absolute;
+  display: block;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; }
+
+.advert__header {
+  margin-bottom: 0;
+  padding: 1.5em;
+  color: white;
+  min-height: 5em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #b5bd00;
+  background: rgba(181, 189, 0, 0.8); }
+  .advert__header a {
+    color: white; }
+
+.advert__header-overlay {
+  margin-bottom: 0;
+  font-size: 2.5em;
+  color: white;
+  left: .5em;
+  top: .25em;
+  position: absolute;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  z-index: 1; }
 
 /* 
 * Partial name: Article

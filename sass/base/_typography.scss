@@ -22,13 +22,16 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-/* Headings
+/* Vertical rhythym
 -------------------------------------------------------------- */
 
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert {
 	margin-bottom: 1.5em;
 	line-height: 1.5; 
 }
+
+/* Headings
+-------------------------------------------------------------- */
 
 h1, h2, h3 {
 	font-weight: 300;
