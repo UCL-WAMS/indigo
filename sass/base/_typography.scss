@@ -167,16 +167,16 @@ blockquote {
 
 small,
 .small {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 strong,
 .strong {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 cite, .cite, em, dfn { 
-    font-style: italic;
+	font-style: italic;
 }
 
 
@@ -280,34 +280,11 @@ time {
 	}
 }
 
-article ul {
-	li {
-		list-style: none;
-		position: relative;
-		margin-bottom: 1em;
-		@include gs-media(m, max) {
-			margin-left: 1em;
-		}
-		&:before {
-			content: "";
-			display: block;
-			background-color: #333;
-			border-radius: 50%;
-			height: 0.35em;
-			width: 0.35em;
-			position: absolute;
-			left: -0.8em;
-			top: 0.6em;
-		}
-	}
-}
-
-
-article ul li ul {
+ul li ul {
 	margin-top: 1em;
 }
 
-article ul li li {
+ul li li {
 	margin-left: 1em;
 }
 
@@ -318,7 +295,7 @@ article ul li li {
 /* Inline lists
 -------------------------------------------------------------- */
 
-.site-content__body article .horizontal {
+.site-content__body .horizontal {
 	li {
 		display: inline;
 		margin-right: 0.5em;
@@ -383,8 +360,17 @@ dd + dt {
 	margin-top: 10px;
 }
 
-/* Code lists (blocked)
+/* Code styling
 -------------------------------------------------------------- */
+
+pre {
+	margin: 1.5em 0;
+	white-space: pre;
+}
+
+pre,code,tt {
+	font: 1em $font-code;
+}
 
 .code {
 	font: 400 1em / 1.5 $font-line-numbers;
