@@ -46,7 +46,7 @@
 							</div>
 						-->
 						<div class="search-form">
-							<input class="form-control" type="search" placeholder="Search UCL websites, people, and more" class="search-form__input search-form__input--search" value="">
+							<input type="search" placeholder="Search UCL websites, people, and more" class="search-form__input search-form__input--search" value="">
 						</div>
 
 						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
@@ -151,8 +151,8 @@
 
 				<div class="content__main">
 
-					<form action="#">
-						<fieldset>
+					<form action="#" class="form">
+						<fieldset class="form__group">
 
 							<div class="message">
 								<p>Message box</p>
@@ -166,82 +166,82 @@
 								<p>Success message box</p>
 							</div>
 
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="text">Text Input
 									<abbr title="Required">*</abbr>
 								</label>
-								<input class="form-control" type="text" class="text" id="text">
+								<input class="form__control" type="text" class="text" id="text">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="text">Text Input Error States
 									<abbr title="Required">*</abbr>
 								</label>
-								<input class="form-control" type="text" class="text error" id="text">
+								<input class="form__control" type="text" class="text error" id="text">
 								<em class="error">Password is incorrect</em>
 							</fieldset>
-							<fieldset class="inline">
+							<fieldset class="form__group form__group--inline">
 								<label for="text">Inline Text Input
 									<abbr title="Required">*</abbr>
 								</label>
-								<input class="form-control" type="text" class="text" id="text">
+								<input class="form__control" type="text" class="text" id="text">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset class="prepend">
+							<fieldset class="form__group form__group--prepend">
 								<label for="text">Text Input with prepended label
 									<abbr title="Required">*</abbr>
 								</label>
 								<span>Prepended label</span>
-								<input class="form-control" type="text" class="text" id="text">
+								<input class="form__control" type="text" class="text" id="text">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="password">Password</label>
-								<input class="form-control" type="password" class="text" id="password">
+								<input class="form__control" type="password" class="text" id="password">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="url">Web Address</label>
-								<input class="form-control" type="url" class="text" id="url" placeholder="http://">
+								<input class="form__control" type="url" class="text" id="url" placeholder="http://">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<legend>Personal Information:</legend>
 								<label for="email">Email Address</label>
-								<input class="form-control" type="email" class="text" id="email" placeholder="bob.smith@ucl.ac.uk">
+								<input class="form__control" type="email" class="text" id="email" placeholder="bob.smith@ucl.ac.uk">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="birthday">Birthday</label>
-								<input class="form-control" type="date" name="bday" id="birthday">
+								<input class="form__control" type="date" name="bday" id="birthday">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="phone">Telephone Number</label>
-								<input class="form-control" type="tel" class="text" id="phone" placeholder="+44">
+								<input class="form__control" type="tel" class="text" id="phone" placeholder="+44">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="phone">Quantity</label>
-								<input class="form-control" type="number" name="quantity" min="1" max="5">
+								<input class="form__control" type="number" name="quantity" min="1" max="5">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="phone">Range</label>
 								<input type="range" name="points" min="1" max="5">
 								<em>Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="textarea">Textarea</label>
-								<textarea class="form-control" cols="48" rows="8" id="textarea"></textarea>
+								<textarea class="form__control" cols="48" rows="8" id="textarea"></textarea>
 								<em class="clear">Note about this field</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="search">Search</label>
-								<input class="form-control" type="search" class="text" id="search-form">
+								<input class="form__control" type="search" class="text" id="search-form">
 								<input type="submit" id="submit" value="Search" class="btn">
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group form__group--options">
 								<label for="select">Select</label>
 								<select id="select">
 									<optgroup label="Option Group 1">
@@ -257,16 +257,16 @@
 								</select>
 								<em>Note about this selection</em>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group form__group--options">
 								<label for="checkbox">Single Checkbox</label>
 								<input type="checkbox" class="checkbox" id="checkbox">
 								<label class="check" for="checkbox">Label</label>
 							</fieldset>
-							<fieldset class="options">
+							<fieldset class="form__group form__group--options">
 								<legend>Checkbox
 									<abbr title="Required">*</abbr>
 								</legend>
-								<ul>
+								<ul class="list-unstyled">
 									<li>
 										<input type="checkbox" checked="checked" name="checkbox" id="checkbox1">
 										<label for="checkbox1">Choice A</label>
@@ -281,9 +281,9 @@
 									</li>
 								</ul>
 							</fieldset>
-							<fieldset class="options">
+							<fieldset class="form__group form__group--options">
 								<legend>Radio</legend>
-								<ul>
+								<ul class="list-unstyled">
 									<li>
 										<input type="radio" checked="checked" class="radio" name="radio" id="radio1">
 										<label for="radio1">Option 1</label>
@@ -294,7 +294,7 @@
 									</li>
 								</ul>
 							</fieldset>
-							<fieldset>
+							<fieldset class="form__group">
 								<label for="file">Upload a file</label>
 								<input type="file" name="file" id="file">
 							</fieldset>

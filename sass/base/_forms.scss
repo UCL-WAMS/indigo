@@ -5,26 +5,29 @@
 * Author: 
 -------------------------------------------------------------- */
 
-/*
-* Common form controls
-* 
-* Shared size and type resets for form controls. Apply `.form__control` to any
-* of the following form controls:
-* 
-* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
-* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
-* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
--------------------------------------------------------------- */
-.form-control {
-	margin: 0.5em 0;
-	border: 1px solid #ccc;
-	box-shadow: 0 1px 2px #e0e0e0 inset;
-	color: #333;
-	width: 100%;
+// Reset fonts for relevant elements
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
 fieldset {
-	margin: 0 0 1em 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    // See https://github.com/twbs/bootstrap/issues/12359.
+    min-width: 0;
 }
 
 legend {
@@ -32,91 +35,21 @@ legend {
 	margin-bottom: 0.5em;
 }
 
+label {
+    @include inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+    margin-bottom: .5em;
+    @include font-size($font-size-sm);
+    .lt-ie8 & {
+        vertical-align: auto;
+    }
+}
+
 input {
-	padding: 0.5em 2%;
-	vertical-align: middle;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-form > ul {
-	list-style: none;
-	margin: 0;
-}
-
-input[type="checkbox"] + label, input[type="radio"] + label {
-	display: inline;
-	margin-left: 5px;
-}
-
-// Set the height of file controls to match text inputs
-input[type="file"] {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-// Make range inputs behave like textual form controls
-input[type="range"] {
-    display: block;
-    width: 100%;
-}
-
-fieldset > div:first-of-type {
-	margin-top: 0;
-}
-
-label, fieldset.options legend {
-	display: block;
-	font-size: 0.9em;
-	color: #494949;
-	font-weight: 700;
-}
-
-label span {
-	color: #990000;
-}
-
-fieldset abbr[title="Required"] {
-	border-bottom: 0 none;
-	color: #AF1616;
-	font-size: 1.25em;
-	font-weight: 400;
-	line-height: 0.1;
-}
-
-input.text, textarea {
-	padding-left: 2%;
-	padding-right: 2%;
-}
-
-select {
-	margin: 0.5em 0 0;
-	width: 100%;
-}
-
-form em {
-	font-size: 0.8em;
-	color: #848484;
-}
-
-fieldset.options {
-	margin: 1em 0;
-}
-
-fieldset.options ul {
-	list-style: none;
-	margin: 0 0 0.5em;
-}
-
-/* Form fields
--------------------------------------------------------------- */
-
-input, textarea {
 	@include font-size($font-size-sm);
-	font-family: "Helvetica Neue",Arial,sans-serif;
 	box-sizing: border-box;
-	color: #333;
 }
 
 input[type=submit] {
@@ -134,13 +67,6 @@ input:disabled {
 	cursor: not-allowed;
 }
 
-input[type=text],
-input[type=search] {
-	@include font-size($font-size-sm);
-	line-height: 1;
-	box-sizing: border-box;
-}
-
 input[type=checkbox],
 input[type=radio] {
 	vertical-align: baseline;
@@ -148,14 +74,15 @@ input[type=radio] {
 	border: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=tel],
-input[type=reset],
-input[type=search],
-input[type=submit] {
-	-webkit-appearance: none;
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form__control` class can properly style them. Note that this cannot simply
+// be added to `.form__control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"], textarea {
+    -webkit-appearance: none;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -165,45 +92,147 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
-input.text:focus, input.title:focus,
-textarea:focus {
-	border: 1px solid #666;
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display: inline;
+	margin-left: 5px;
 }
 
-.inline label {
-	@include gs-span(dc, 1);
-	@include font-size($font-size-sm);
-	text-align: right;
-	line-height: 38px;
+// Set the height of file controls to match text inputs
+input[type="file"] {
+    display: block;
+    padding: 0;
 }
 
-.prepend span {
-	@include gs-span(dc, 1);
-	@include gs-pad(dc, pad);
-	margin-left: 1.51515%;
-	color: #848484;
-	@include font-size($font-size-sm);
-	text-align: right;
-	line-height: 26px;
-	margin-top: 5px;
+// Make range inputs behave like textual form controls
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+label {
 	display: block;
-	background-color: #eee;
+	font-size: 0.9em;
+	color: #494949;
+	font-weight: 500;
 }
 
-.inline input, .prepend input {
-	@include gs-span(dc, 2, 4);
-	padding-left: 0;
-	padding-right: 0;
-	@include gs-pad(dc, padin);
+label span {
+	color: #990000;
 }
 
-.inline em {
-	@include gs-span(dc, 2, 4);
-	clear: left;
+fieldset abbr[title="Required"] {
+	border-bottom: 0 none;
+	color: #AF1616;
+	font-size: 1.25em;
+	font-weight: 400;
+	line-height: 0.1;
 }
 
-.prepend em {
-	@include gs-span(dc, all);
+textarea {
+	padding-left: 2%;
+	padding-right: 2%;
+	resize: vertical;
+}
+
+select {
+	width: 100%;
+}
+
+form em {
+	font-size: 0.8em;
+	color: #848484;
+}
+
+
+/* Form fields
+-------------------------------------------------------------- */
+
+.form {}
+
+/*
+* Common form controls
+* 
+* Shared size and type resets for form controls. Apply `.form__control` to any
+* of the following form controls:
+* 
+* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
+* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
+* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
+-------------------------------------------------------------- */
+.form__control {
+	padding: 0.5em 2%;
+	vertical-align: middle;
+	margin: 0;
+	margin-bottom: .5em;
+	border: 1px solid #ccc;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	transition: border, .25s;
+	&:focus {
+		transition: border, .25s;
+		border: 1px solid #666;
+	}
+}
+
+/* 
+* Form groups
+* Designed to help with the organization and spacing of vertical forms.
+-------------------------------------------------------------- */
+
+.form__group {
+	@include guttering;
+	margin-bottom: $baseline;
+}
+
+.form__group--inline, .form__group--prepend { 
+	input {
+		@include gs-span(dc, 2, 4);
+		padding-left: 0;
+		padding-right: 0;
+		@include gs-pad(dc, padin);
+	}
+}
+
+.form__group--inline {
+	label {
+		@include gs-span(dc, 1);
+		@include font-size($font-size-sm);
+		text-align: right;
+		line-height: 38px;
+	}
+	em {
+		@include gs-span(dc, 2, 4);
+		clear: left;
+	}
+}
+
+.form__group--prepend {
+	em {
+		@include gs-span(dc, all);
+	}
+	span {
+		@include gs-span(dc, 1);
+		@include gs-pad(dc, pad);
+		margin-left: 1.51515%;
+		color: #848484;
+		@include font-size($font-size-sm);
+		text-align: right;
+		line-height: 26px;
+		margin-top: 5px;
+		display: block;
+		background-color: #eee;
+	}
+}
+
+.form__group--options {
+	legend {
+		display: block;
+		font-size: 0.9em;
+		color: #494949;
+		font-weight: 500;
+	}
 }
 
 input.error {

@@ -124,6 +124,11 @@
 * Use: Media query handling outside of Gridset
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
+/* 
+* Name: Inline block
+* Use: Bullet proof inline block control
+* Notes: N/A
+-------------------------------------------------------------- */
 /* Helper classes
 -------------------------------------------------------------- */
 /* 
@@ -797,99 +802,42 @@ pre, code, tt {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-/*
-* Common form controls
-* 
-* Shared size and type resets for form controls. Apply `.form__control` to any
-* of the following form controls:
-* 
-* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
-* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
-* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
--------------------------------------------------------------- */
-.form-control {
-  margin: 0.5em 0;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 2px #e0e0e0 inset;
-  color: #333;
-  width: 100%; }
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
 
 fieldset {
-  margin: 0 0 1em 0; }
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0; }
 
 legend {
   font-size: 1.25em;
   margin-bottom: 0.5em; }
 
-input {
-  padding: 0.5em 2%;
+label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   vertical-align: middle;
-  margin: 0;
-  box-sizing: border-box; }
+  max-width: 100%;
+  margin-bottom: .5em;
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .lt-ie8 label {
+    vertical-align: auto; }
 
-form > ul {
-  list-style: none;
-  margin: 0; }
-
-input[type="checkbox"] + label, input[type="radio"] + label {
-  display: inline;
-  margin-left: 5px; }
-
-input[type="file"] {
-  display: block;
-  padding-left: 0;
-  padding-right: 0; }
-
-input[type="range"] {
-  display: block;
-  width: 100%; }
-
-fieldset > div:first-of-type {
-  margin-top: 0; }
-
-label, fieldset.options legend {
-  display: block;
-  font-size: 0.9em;
-  color: #494949;
-  font-weight: 700; }
-
-label span {
-  color: #990000; }
-
-fieldset abbr[title="Required"] {
-  border-bottom: 0 none;
-  color: #AF1616;
-  font-size: 1.25em;
-  font-weight: 400;
-  line-height: 0.1; }
-
-input.text, textarea {
-  padding-left: 2%;
-  padding-right: 2%; }
-
-select {
-  margin: 0.5em 0 0;
-  width: 100%; }
-
-form em {
-  font-size: 0.8em;
-  color: #848484; }
-
-fieldset.options {
-  margin: 1em 0; }
-
-fieldset.options ul {
-  list-style: none;
-  margin: 0 0 0.5em; }
-
-/* Form fields
--------------------------------------------------------------- */
-input, textarea {
+input {
   font-size: 14px;
   font-size: 1.4rem;
-  font-family: "Helvetica Neue",Arial,sans-serif;
-  box-sizing: border-box;
-  color: #333; }
+  box-sizing: border-box; }
 
 input[type=submit] {
   cursor: pointer; }
@@ -902,26 +850,13 @@ input, select {
 input:disabled {
   cursor: not-allowed; }
 
-input[type=text],
-input[type=search] {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 1;
-  box-sizing: border-box; }
-
 input[type=checkbox],
 input[type=radio] {
   vertical-align: baseline;
   background: none;
   border: none; }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=tel],
-input[type=reset],
-input[type=search],
-input[type=submit] {
+input[type="search"], textarea {
   -webkit-appearance: none; }
 
 input[type="search"]::-webkit-search-decoration,
@@ -930,11 +865,96 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
-input.text:focus, input.title:focus,
-textarea:focus {
-  border: 1px solid #666; }
+input[type="checkbox"] + label, input[type="radio"] + label {
+  display: inline;
+  margin-left: 5px; }
 
-.inline label {
+input[type="file"] {
+  display: block;
+  padding: 0; }
+
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
+label {
+  display: block;
+  font-size: 0.9em;
+  color: #494949;
+  font-weight: 500; }
+
+label span {
+  color: #990000; }
+
+fieldset abbr[title="Required"] {
+  border-bottom: 0 none;
+  color: #AF1616;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 0.1; }
+
+textarea {
+  padding-left: 2%;
+  padding-right: 2%;
+  resize: vertical; }
+
+select {
+  width: 100%; }
+
+form em {
+  font-size: 0.8em;
+  color: #848484; }
+
+/* Form fields
+-------------------------------------------------------------- */
+/*
+* Common form controls
+* 
+* Shared size and type resets for form controls. Apply `.form__control` to any
+* of the following form controls:
+* 
+* select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
+* input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
+* input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
+-------------------------------------------------------------- */
+.form__control {
+  padding: 0.5em 2%;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: .5em;
+  border: 1px solid #ccc;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border, .25s; }
+  .form__control:focus {
+    transition: border, .25s;
+    border: 1px solid #666; }
+
+/* 
+* Form groups
+* Designed to help with the organization and spacing of vertical forms.
+-------------------------------------------------------------- */
+.form__group {
+  margin-bottom: 1.5em; }
+  .form__group > *:last-child, .form__group > *:last-child > *:last-child, .form__group > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
+
+.form__group--inline input, .form__group--prepend input {
+  display: block;
+  float: left;
+  margin-left: 36.0303%;
+  margin-right: -100%;
+  width: 63.85859%;
+  padding-left: 0;
+  padding-right: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1.51515%;
+  padding-right: 1.51515%; }
+
+.form__group--inline label {
   display: block;
   float: left;
   margin-left: 0%;
@@ -944,8 +964,21 @@ textarea:focus {
   font-size: 1.4rem;
   text-align: right;
   line-height: 38px; }
+.form__group--inline em {
+  display: block;
+  float: left;
+  margin-left: 36.0303%;
+  margin-right: -100%;
+  width: 63.85859%;
+  clear: left; }
 
-.prepend span {
+.form__group--prepend em {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%; }
+.form__group--prepend span {
   display: block;
   float: left;
   margin-left: 0%;
@@ -965,34 +998,11 @@ textarea:focus {
   display: block;
   background-color: #eee; }
 
-.inline input, .prepend input {
+.form__group--options legend {
   display: block;
-  float: left;
-  margin-left: 36.0303%;
-  margin-right: -100%;
-  width: 63.85859%;
-  padding-left: 0;
-  padding-right: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 1.51515%;
-  padding-right: 1.51515%; }
-
-.inline em {
-  display: block;
-  float: left;
-  margin-left: 36.0303%;
-  margin-right: -100%;
-  width: 63.85859%;
-  clear: left; }
-
-.prepend em {
-  clear: both;
-  display: block;
-  float: left;
-  margin-left: 0;
-  width: 100%; }
+  font-size: 0.9em;
+  color: #494949;
+  font-weight: 500; }
 
 input.error {
   background-color: #ffffff;
@@ -1021,6 +1031,7 @@ input.error {
   border: 1px solid rgba(0, 0, 0, 0.21);
   border-radius: 4px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  line-height: 1;
   font-size: 14px;
   font-size: 1.4rem; }
   .btn:hover, .btn:focus {
