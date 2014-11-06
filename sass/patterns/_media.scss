@@ -13,12 +13,10 @@
 .media__aside {
 	float: left;
 	margin-right: 1em;
-	max-width: em(48);
 	min-height: 1px; // http://css-tricks.com/make-sure-columns-dont-collapse-horizontally/
 
 	@include respond-min($screen-md) {
 		margin-right: 1.5em;
-		max-width: em(64);
 	}
 
 	@include respond-max($screen-md) {
