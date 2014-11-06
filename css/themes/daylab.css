@@ -1,3 +1,9 @@
+/* 
+* Theme name:
+* Website: 
+* Note:
+* Author:
+-------------------------------------------------------------- */
 /* Config */
 /* Variables */
 /* Variable imports
@@ -2915,13 +2921,13 @@ article > footer a:hover {
 .photograph {
   background-color: #ea7600; }
 
-@media only screen and (max-width: 767px) {
-  .header-mobile {
-    background-color: #ea7600; } }
 .photograph--on {
   background-image: url("/images/cells.jpg");
   background-position: 0 -460px; }
 
+@media only screen and (max-width: 767px) {
+  .header-mobile {
+    background-color: #ea7600; } }
 .box {
   border-top: 5px solid #ea7600; }
 

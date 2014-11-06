@@ -1,3 +1,10 @@
+/* 
+* Theme name:
+* Website: 
+* Note:
+* Author:
+-------------------------------------------------------------- */
+
 /* Config */
 @import "../screen";
 
@@ -7,16 +14,15 @@
 	background-color: $orange;
 }
 
+.photograph--on {
+	background-image: url("#{$static-url}/images/cells.jpg");
+	background-position: 0 -460px;
+}
+
 @include gs-media(m, max) {
 	.header-mobile {
 		background-color: $orange;
 	}
-}
-
-
-.photograph--on {
-	background-image: url("#{$static-url}/images/cells.jpg");
-	background-position: 0 -460px;
 }
 
 .box {
