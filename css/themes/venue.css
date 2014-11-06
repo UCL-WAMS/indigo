@@ -115,6 +115,11 @@
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
 /* Helper classes */
+/* 
+* Utility name: Helpers
+* Generic use:
+* Note:
+-------------------------------------------------------------- */
 /* Hide
 -------------------------------------------------------------- */
 /* Clearfix
@@ -203,6 +208,34 @@ time, .text-capitalize {
 -------------------------------------------------------------- */
 .no-respond {
   width: auto; }
+
+/* 
+* Utility name: States
+* Generic use: Classes to be used only in JS 
+* Note: It is a best practise to seperate classes used in JS and classes that style elements
+-------------------------------------------------------------- */
+.is-active {
+  display: block; }
+
+.is-open {
+  max-height: 40em;
+  overflow: visible;
+  opacity: 1;
+  transition: all .5s; }
+
+.is-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .5s; }
+
+.is-hidden {
+  display: none; }
+
+.is-disabled {
+  opacity: .8;
+  text-decoration: line-through;
+  cursor: not-allowed; }
 
 /* Base dependencies */
 /* 
@@ -811,17 +844,6 @@ pre {
 
 pre, code, tt {
   font: 1em "consolas", "andale mono", "lucida console", monospace; }
-
-.code {
-  font: 400 1em/1.5 "source-code-pro", monospace;
-  margin: 1em 0 1.5em 2.5em; }
-  .code li {
-    background: none repeat scroll 0 0 #F6F6F6;
-    border-top: 1px solid #FFFFFF;
-    list-style: decimal-leading-zero outside none;
-    padding: 0 0.5em; }
-    .code li .tab1 {
-      padding-left: 4ex; }
 
 /* 
 * Base name: Forms
@@ -2210,6 +2232,23 @@ article > footer a:hover {
   text-decoration: none;
   cursor: default;
   color: #333333; }
+
+/* 
+* Base name: Code
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.code {
+  font: 400 1em/1.5 "source-code-pro", monospace;
+  margin: 1em 0 1.5em 2.5em; }
+  .code li {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-top: 1px solid #FFFFFF;
+    list-style: decimal-leading-zero outside none;
+    padding: 0 0.5em; }
+    .code li .tab1 {
+      padding-left: 4ex; }
 
 /* 
 * Partial name: Divider
