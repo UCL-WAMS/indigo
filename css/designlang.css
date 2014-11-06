@@ -1302,7 +1302,6 @@ table {
   clear: left;
   float: left;
   border-spacing: 0;
-  margin: 1.5em 0;
   font-size: 0.8em; }
 
 thead, tbody, tfoot {
@@ -1359,61 +1358,61 @@ td, td img {
 
 /* Responsive Tables
 -------------------------------------------------------------- */
-.rt {
+.table-responsive {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0; }
 
-.rt th, .rt td {
+.table-responsive th, .table-responsive td {
   margin: 0;
   vertical-align: top;
   border: 1px solid #e6e6e6; }
 
-.rt th {
+.table-responsive th {
   text-align: left; }
 
-@media only screen and (max-width: 989px) {
-  #rt1 {
+@media (max-width: 989px) {
+  .table-responsive {
     display: block;
     position: relative;
     width: 100%;
     border-top: 0; }
 
-  #rt1 thead {
+  .table-responsive thead {
     display: block;
     float: left; }
 
-  #rt1 tbody {
+  .table-responsive tbody {
     display: block;
     width: auto;
     position: relative;
     overflow-x: auto;
     white-space: nowrap; }
 
-  #rt1 thead tr {
+  .table-responsive thead tr {
     display: block; }
 
-  #rt1 th {
+  .table-responsive th {
     display: block; }
 
-  #rt1 tbody tr {
+  .table-responsive tbody tr {
     display: inline-block;
     vertical-align: top; }
 
-  #rt1 td {
+  .table-responsive td {
     display: block;
     min-height: 1.25em; }
 
   /* sort out borders */
-  .rt th {
+  .table-responsive th {
     border-bottom: 0; }
 
-  .rt td {
+  .table-responsive td {
     border-left: 0;
     border-right: 0;
     border-bottom: 0; }
 
-  .rt tbody tr {
+  .table-responsive tbody tr {
     border-right: 1px solid #eee; } }
 /* 
 * Base name: Images
