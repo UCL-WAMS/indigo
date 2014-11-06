@@ -1,0 +1,51 @@
+/* 
+* Partial name: Tabs
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.tabbed {}
+
+.tabbed__content {
+	@include gs-pad(dc, padinfull);
+	border: 10px solid #444;
+	padding-top: 10px;
+	padding-bottom: 2em;
+	@include guttering;
+}
+
+.tabbed__list {
+	margin-bottom: 0;
+}
+
+.tabbed__item {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	float: left;
+	background-color: #444;
+	line-height: normal;
+	margin-bottom: 0;
+	padding: 10px 15px;
+	margin-right: 5px;
+	border-bottom: 5px solid #fff;
+	&:before {
+		display: none;
+	}
+	&.active {
+		border-bottom: 5px solid #444;
+	}
+}
+
+.tabbed__link {
+	display: block;
+	@include font-size($font-size-sm);
+	font-weight: bold;
+	color: $white;
+	&:hover {
+		text-decoration: none;
+		color: $white;
+	}
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
+
+	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+
+
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
+
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
+
+	<script>
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+		Modernizr.load({
+		//cutting the mustard as used by the BBC
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+			nope: [
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+			]
+		});
+	//set conditional assets for main.js
+	var globalSiteSpecificVars = {
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+	}
+	if (cuttingTheMustard) {
+		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
+	}
+</script>
+
+<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+<!-- <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script> -->
+<script src="/js/main.js"></script>
+<script>
+	require(["app/general"]); //load the default stuff
+</script>
+
+</head>
+
+<body id="hero-view" class="nav--vertical nav--vertical-2col">
+
+	<header class="header">
+
+		<a class="nav-mobile-back" href="#">
+			<img src="./images/close.png" alt="X" />Close</a>
+
+			<div class="masthead">
+
+				<div class="wrapper clearfix">
+
+					<div class="masthead__search">
+						<form action="#" method="get">
+						<!--
+							<div class="search-type">
+								<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
+								<label for="ucl-site" class="site">Site</label>
+								<input type="radio" id="ucl-search" name="operation" value="2">
+								<label for="ucl-search" class="staff">Directory</label>
+							</div>
+						-->
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites" class="search-form__input search-form__input--search" value="">
+						</div>
+
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+
+				</div>
+
+				<ul class="masthead__list m-clear">
+					<li class="masthead__item"><a href="/">UCL Home</a>
+					</li>
+					<li class="masthead__item"><a href="/prospective-students/">Prospective students</a>
+					</li>
+					<li class="masthead__item"><a href="/current-students/">Current students</a>
+					</li>
+					<li class="masthead__item"><a href="/staff/">Staff</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- end .masthead -->
+
+		<div class="wrapper">
+
+			<div class="photograph">
+				<header id="ucl-masthead" role="header">
+					<div class="brand">
+						<h2 class="brand__heading">UCL Design Language</h2>
+						<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
+					</div>
+				</header>
+
+				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+			</div>
+			<!-- end .photograph -->
+
+		</div>
+		<!-- end .wrapper -->
+
+	</header>
+	<!-- end .header -->
+
+	<div class="site-content wrapper">
+
+		<header class="header-mobile">
+
+			<a class="header-mobile__menu" href="#">
+				<img src="./images/mob-nav.png" alt="Menu" />
+			</a>
+
+		</header>
+		<div class="hero" style="background-image: url('http://lorempixel.com/1400/200')">
+			<div class="hero__content">
+				<div class="hero__body hero__body--background">
+					<h2 class="as-h5 hero__sub"><a href="">Page section</a></h1>
+					<h1 class="hero__title">Page title</h1>
+					<p class="hero__blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quasi quos saepe, illum vero cumque. Voluptatem, nihil similique consectetur, ad possimus provident praesentium labore nemo soluta voluptas a.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -226,13 +226,13 @@ gs = {
 
 gs.init();
 // UCL JS
-$(document).ready(function(){
+$(document).ready(function() {
 
 	$('.tabbed div').hide();
 	$('.tabbed div:first').show();
 	$('.tabbed ul li:first').addClass('active');
 
-	$('.tabbed ul li a').click(function(){
+	$('.tabbed ul li a').click(function() {
 		$('.tabbed ul li').removeClass('active');
 		$(this).parent().addClass('active');
 		var currentTab = $(this).attr('href');
@@ -241,10 +241,10 @@ $(document).ready(function(){
 		return false;
 	});
 
-	function removeCurrentClassFromAll(){
+	function removeCurrentClassFromAll() {
 		var allPanelsAnchor = $('.accordion a');
-		allPanelsAnchor.each(function(){
-			$(this).removeClass("currentAccordionAnchor");	
+		allPanelsAnchor.each(function() {
+			$(this).removeClass("currentAccordionAnchor");
 		});
 	}
 	/* accordion - start
@@ -252,21 +252,21 @@ $(document).ready(function(){
 	var allPanels = $('.accordion > dd');
 	allPanels.slideUp();
 	//open accordions that have this set in their class
-	$('.accordion dt a').each(function(){
+	$('.accordion dt a').each(function() {
 		var tmpAccordionClass = $(this).attr("class");
-		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
 			$(this).parent().next().slideDown();
 		}
 	});
 
 	//var allPanels = $('.accordion > dd').hide();
 
- 	$('.accordion > dt > a').click(function() {
+	$('.accordion > dt > a').click(function() {
 		allPanels.slideUp();
 		var tmpAccordionClass = $(this).attr("class");
-		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
 			removeCurrentClassFromAll();
-		}else{
+		} else {
 			removeCurrentClassFromAll();
 			$(this).parent().next().slideDown();
 			$(this).addClass("currentAccordionAnchor");
@@ -275,7 +275,7 @@ $(document).ready(function(){
 	});
 	/* accordion - end
 	---------------------------------------------------------------------*/
-	$('#nav-mobile-menu, #nav-mobile-back').click(function (e) {
+	$('.header-mobile__menu, .nav-mobile-back').click(function(e) {
 		var body = $('body');
 		if (body.hasClass('mobile-open')) body.removeClass('mobile-open');
 		else body.addClass('mobile-open');
@@ -284,27 +284,25 @@ $(document).ready(function(){
 
 	if (document.documentElement.clientWidth < 767) {
 		//Add Inactive Class To All Accordion Headers
-		$('.accordion-header').addClass('inactive-header');
+		$('.accordion__header').addClass('accordion__header--inactive');
 
 		//Set The Accordion Content Width
-		//var contentwidth = $('.accordion-header').width();
-		//$('.accordion-content').css({'width' : contentwidth });
+		//var contentwidth = $('.accordion__header').width();
+		//$('.accordion__content').css({'width' : contentwidth });
 
 		//Open The First Accordion Section When Page Loads
-//		$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-//		$('.accordion-content').first().slideDown().toggleClass('open-content');
+		//		$('.accordion__header').first().toggleClass('accordion__header--active').toggleClass('accordion__header--inactive');
+		//		$('.accordion__content').first().slideDown().toggleClass('open-content');
 
 		// The Accordion Effect
-		$('.accordion-header').click(function () {
-			if($(this).is('.inactive-header')) {
-//				$('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-//				$(this).toggleClass('active-header').toggleClass('inactive-header');
-				$(this).removeClass('inactive-header').addClass('active-header');
+		$('.accordion__header').click(function() {
+			if ($(this).is('.accordion__header--inactive')) {
+				//				$('.accordion__header--active').toggleClass('accordion__header--active').toggleClass('accordion__header--inactive').next().slideToggle().toggleClass('open-content');
+				//				$(this).toggleClass('accordion__header--active').toggleClass('accordion__header--inactive');
+				$(this).removeClass('accordion__header--inactive').addClass('accordion__header--active');
 				$(this).next().slideToggle().toggleClass('open-content');
-			}
-
-			else {
-				$(this).removeClass('active-header').addClass('inactive-header');
+			} else {
+				$(this).removeClass('accordion__header--active').addClass('accordion__header--inactive');
 				$(this).next().slideToggle().toggleClass('open-content');
 			}
 		});

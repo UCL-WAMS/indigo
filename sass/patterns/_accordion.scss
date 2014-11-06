@@ -1,0 +1,85 @@
+/* 
+* Partial name: Accordion
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.accordion {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	dt, dd {
+		padding: 10px;
+		border-top: 1px solid #ccc;
+		margin-top: 0;
+		&:last-of-type {
+			border-bottom: 1px solid #ccc;
+		}
+		a {
+			font-weight: bold;
+		}
+	}
+	dt {
+		a {
+			color: $black;
+			display: block;
+		}
+	}
+	dd {
+		border-top: 0;
+		overflow: hidden;
+		&:last-of-type {
+			border-top: 1px solid #fff;
+			position: relative;
+			top: -1px;
+		}
+	}
+}
+
+.accordion__header {
+	@include respond-max($screen-md - 1px) {
+		cursor: pointer;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 8px;
+	}
+}
+
+.accordion__content {
+	@include respond-max($screen-md - 1px) {
+		display: none;
+		border-top: 0;
+	}
+	/* ensure accordion nav is hidden and content is visible on desktop version */
+	@include respond-min($screen-md) {
+		display: block !important;
+	}
+}
+
+.accordion__header--active {
+	@include respond-max($screen-md) {
+		background: url(#{$static-url}/images/close.png);
+		background-repeat: no-repeat;
+		background-position: right 50%;
+		padding-right: 20px;
+		border-bottom: none;
+		&:hover {
+			background: url(#{$static-url}/images/close.png);
+			background-repeat: no-repeat;
+			background-position: right 50%;
+		}
+	}
+}
+
+.accordion__header--inactive { 
+	@include respond-max($screen-md) {
+		background: url(#{$static-url}/images/open.png);
+		background-repeat: no-repeat;
+		background-position: right 50%;
+		padding-right: 20px;
+		&:hover {
+			background: url(#{$static-url}/images/open.png);
+			background-repeat: no-repeat;
+			background-position: right 50%;
+		}
+	}
+}

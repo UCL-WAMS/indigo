@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset=utf-8 />
-<meta name="author" content="UCL" />
-<meta name="description" content="UCL Homepage" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- social meta -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@uclnews">
-<meta name="twitter:title" content="UCL - London's Global University">
-<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
-<meta name="twitter:creator" content="@UCLWAMS">
-<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
-<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png"/>
-<meta property="og:title" content="UCL - London's Global University"/>
-<meta property="og:url" content="http://www.ucl.ac.uk"/>
-<meta property="og:site_name" content="UCL"/>
-<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
-<meta property="og:type" content="website"/> 
-<meta property="og:profile_id" content="uclofficial"/>
-<!-- end social meta -->
-<title>UCL Design Language</title>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
 
-<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="favicon-144.png">
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
-<script>
+	<script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
 	Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard
-		//if old browser load the shiv
-		,nope : [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
-			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+		nope: [
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
-		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
 	}
-	if(cuttingTheMustard){
+	if (cuttingTheMustard) {
 		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
-</script>
+	</script>
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
-<script>
-	require(["app/general"]);//load the default stuff
-</script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+	<!-- <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script> -->
+	<script src="/js/main.js"></script>
+	<script>
+	require(["app/general"]); //load the default stuff
+	</script>
 
 </head>
 
-<body id="blurb-wide-view" class="vertical-nav vertical-nav--2col">
-	<article class="blurb-wide">
-		<p class="meta photo"><a href="#" class="flag uclnews">UCL News</a></p>
-		<img alt="Example image" src="http://lorempixum.com/680/400/abstract/?r">
-		<div>
-			<h2><a href="article.html">Bentham’s personal correspondence to be digitised for first time</a></h2>
+<body id="blurb-wide-view" class="nav--vertical nav--vertical-2col">
+	<article class="blurb blurb--wide">
+		<p class="meta photo"><a href="#" class="flag uclnews">UCL News</a>
+		</p>
+		<img alt="Example image" src="http://lorempixum.com/680/400/abstract/?r" class="blurb__img">
+		<div class="blurb__body">
+			<h2 class="blurb__title"><a href="article.html">Bentham’s personal correspondence to be digitised for first time</a>
+			</h2>
 			<p>Thousands of letters revealing a far more personal side of the British philosopher Jeremy Bentham and his family are set to be digitised as part of the UCL Transcribe Bentham project, uniting the entire collection of Bentham’s manuscripts for the first time since his death.</p>
 		</div>
 	</article>
 </body>
+
 </html>

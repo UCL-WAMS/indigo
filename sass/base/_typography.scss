@@ -1,0 +1,312 @@
+/* 
+* Base name: Typography
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-san-serif;
+	@include font-size($font-size-base);
+	color: #333333;
+	background-color: #d9d9d1;
+	overflow-x: hidden;
+	line-height: 1.7;
+	hyphens: auto;
+	-ms-hyphens: none;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: none;
+}
+
+/* Vertical rhythym
+-------------------------------------------------------------- */
+
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert {
+	margin-bottom: 1.5em;
+	line-height: 1.5; 
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1, h2, h3 {
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-family: $font-san-serif;
+	small {
+		font-size: 80%;
+		color: #6f6f6f;
+		line-height: 0;
+	}
+}
+
+h1, .as-h1, %as-h1 {
+	@include font-size($font-size-h1);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h2);
+	}
+}
+
+h2, .as-h2, %as-h2 {    
+	@include font-size($font-size-h2);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h3);
+	}
+}
+
+h3, .as-h3, %as-h3 { 
+	@include font-size($font-size-h3);
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h4);
+	}
+}
+
+h4, .as-h4, %as-h4 {
+	@include font-size($font-size-h4);
+	text-transform: none;
+	letter-spacing: 0;
+	@include respond-max($screen-md) {
+		@include font-size($font-size-h5);
+	}
+}
+
+h5, .as-h5, %as-h5 {
+	@include font-size($font-size-h5);
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h6, .as-h6, %as-h6 {
+	@include font-size($font-size-h6);
+	color: #999;
+	margin: 1em 0 0;
+}
+
+a {
+	color: #034da1;
+	text-decoration: none;
+	&:hover {
+		color: #034da1;
+		text-decoration: underline;
+	}
+}
+
+.box h2 {
+	margin-top: 0;
+}
+
+.content__sidebar h1 {
+	font-size: 26px;
+}
+
+/* Quotes
+-------------------------------------------------------------- */
+
+blockquote {
+	margin: 1.5em;
+	color: #666;
+	font-style: italic;
+	overflow: hidden;
+}
+
+// Emphasis & misc
+// -------------------------
+
+small,
+.small {
+	font-size: 0.9em;
+}
+
+strong,
+.strong {
+	font-weight: 500;
+}
+
+cite, .cite, em, dfn { 
+	font-style: italic;
+}
+
+
+.bqstart {
+	color: #c2c2ba;
+	float: left;
+	font-size: 400%;
+	height: 45px;
+	margin-bottom: -42px;
+	margin-top: 0;
+	padding-top: 22px;
+	padding-right: 10px;
+	font-style: normal;
+}
+
+.bqend {
+	color: #c2c2ba;
+	float: right;
+	font-size: 400%;
+	height: 25px;
+	margin-top: 0;
+	padding-top: 60px;
+	padding-left: 10px;
+	font-style: normal;
+}
+
+/* Inline styles
+-------------------------------------------------------------- */
+
+.text-muted {
+	color: #999999;
+}
+
+.text-success {
+	color: #468847;
+}
+
+.text-error {
+	color: #b94a48;
+}
+
+.mod {
+	@include font-size($font-size-xs);
+	color: #ccc;
+	margin-top: 2em;
+}
+
+ins {
+	background-color: #F0F0F0;
+	color: $black;
+	text-decoration: none;
+	padding: 0 0.125em;
+}
+
+mark {
+	padding: 0 0.125em;
+}
+
+del {
+	color: #666;
+}
+
+time {
+	@extend %text-capitalize;
+}
+
+.standfirst {
+	font-size: 20px;
+	@include gs-media(m, max) {
+		font-size: 18px;
+	}
+}
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+ol, ul {
+	margin-top: 0;
+	margin-left: 1.5em;
+	ul {
+		margin-left: 1em;
+	}
+}
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled, %list-unstyled {
+	@include unset-list;
+}
+
+// Inline turns list items into inline-block
+.list-inline, %list-inline {
+	@extend %list-unstyled;
+	display: inline;
+	margin-left: 0;
+	> li {
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 5px;
+		&:after {
+			content: "|";
+			margin-left: 2.5px;
+		}
+		&:last-child {
+			&:after {
+				content: "";
+				display: none;
+			}
+		}
+	}
+}
+
+.tabbed > div ul li, .box ul li {
+	margin-left: 1em;
+}
+
+/* Ordered lists
+-------------------------------------------------------------- */
+
+ol li {
+	list-style-type: decimal;
+	margin-bottom: 1em;
+	@include gs-media(m, max) {
+		margin-left: 1.5em;
+	}
+}
+
+ol li ol {
+	margin-top: 1em;
+}
+
+ol li li {
+	margin-left: 1.5em;
+}
+
+/* Definition lists
+-------------------------------------------------------------- */
+
+dt {
+	font-weight: 700;
+}
+
+dd + dt {
+	margin-top: 10px;
+}
+
+.dl-inline {
+	lh {
+		float: left;
+	}
+	dt, dd {
+		float: left;
+		margin: 0 0.5em 0 0;
+	}
+	lh + dt, dd + dt, dd + dd {
+		clear: left;
+	}
+	dd + dd {
+		float: none;
+	}
+	dt {
+		font-weight: bold;
+	}
+}
+
+
+/* Code styling
+-------------------------------------------------------------- */
+
+pre {
+	margin: 1.5em 0;
+	white-space: pre;
+}
+
+pre,code,tt {
+	font: 1em $font-code;
+}

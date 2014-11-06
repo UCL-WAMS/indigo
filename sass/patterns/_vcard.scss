@@ -1,0 +1,22 @@
+/* 
+* Partial name: Vcard
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.vcard {
+	display: inline-block;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.vcard__item {
+	margin-bottom: 0.5em;
+	display: block;
+}
+
+.vcard__item--fn {
+	font-weight: bold;
+	font-size: 0.9375em;
+}

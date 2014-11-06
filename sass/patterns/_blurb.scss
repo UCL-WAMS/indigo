@@ -1,0 +1,40 @@
+/* 
+* Partial name: Blurb
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.blurb {
+	position: relative;
+	padding-bottom: 1em;
+	overflow: hidden;
+}
+
+.blurb__title {
+	font-size: 16px;
+	margin-top: 0;
+	font-weight: 700;
+}
+
+.blurb__img {
+	margin-bottom: 0.5em;
+	.blurb--wide & {
+		@include gs-span(dc, 1);
+		@include gs-media(m, max) {
+			@include gs-span(m, all);
+		}
+	}
+}
+
+.blurb__body {
+	@include guttering;
+	.blurb--wide & {
+		@include gs-span(dc, 2, 4);
+		top: -4px;
+		position: relative;
+		@include gs-media(m, max) {
+			@include gs-span(m, all);
+		}
+	}
+}

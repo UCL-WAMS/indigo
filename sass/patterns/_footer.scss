@@ -1,0 +1,41 @@
+/* 
+* Partial name: Footer
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.footer {}
+
+.footer__inner {
+	background: rgb(0, 0, 0);
+	background: rgba($black, 0.7);
+	padding: 40px 35px;
+	margin-left: -35px;
+	margin-right: -35px;
+	color: #bbb;
+	clear: left;
+	a {
+		color: #eee;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.footer__list {
+	li {
+		padding-bottom: 4px;
+		padding-top: 4px;
+		@include font-size($font-size-sm);
+		margin-bottom: 0;
+	}
+}
+
+.footer__links {
+	@include font-size($font-size-sm);
+	margin-top: 0.5em;
+	@include respond-max($screen-lg) {
+		@include font-size($font-size-xs);
+	}
+}
