@@ -2622,6 +2622,9 @@ img.media__aside {
   padding-left: 3.0303%;
   padding-right: 3.0303%;
   background: none repeat scroll 0 0 #FFFFFF;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-decoration: none;
   border: 1px solid #DDDDDD;
   clear: left;
   color: #666666;
@@ -2629,36 +2632,23 @@ img.media__aside {
   font-size: 16px;
   font-weight: 700;
   width: 100%;
-  padding-bottom: 1em;
-  padding-top: 10px;
-  margin-bottom: 10px; }
-  .message > *:last-child, .message > *:last-child > *:last-child, .message > *:last-child > *:last-child > *:last-child {
-    margin-bottom: 0; }
-
-.message--warning, .message--success {
-  background-color: #ffffff;
-  background-image: url("/images/alert.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: #DD6868;
-  display: block;
   padding-bottom: 10px;
   padding-top: 10px;
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%;
-  margin-bottom: 1em;
-  border: 1px solid #DD6868;
-  font-weight: bold; }
+  margin-bottom: 1em; }
+  .message > *:last-child, .message > *:last-child > *:last-child, .message > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
 
 .message--success {
   background-color: #F7FFF2;
   background-image: url("/images/success.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
   color: #7FB861;
   border: 1px solid #7FB861; }
+
+.message--warning {
+  background-image: url("/images/alert.png");
+  color: #DD6868;
+  border: 1px solid #DD6868;
+  font-weight: bold; }
 
 /* 
 * Partial name: Masthead
@@ -3209,23 +3199,22 @@ img.media__aside {
 
 /* 
 * Partial name: Video
-* Use:
+* Use: Repsonsive video that maintains aspect ratio on browser resize
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-.responsive-container {
+.video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
   overflow: hidden; }
-
-.responsive-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /* Shame
 -------------------------------------------------------------- */
