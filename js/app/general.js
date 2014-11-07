@@ -61,7 +61,7 @@ define(["jquery","allsite"],function($,gen){
 		var mobileNavList = $('.nav--mobile ul');
 
 		function resetCols(){
-			$('.site-content__body,#leftcol').css({
+			$('.site-content__body,.sidebar').css({
 				'height':'auto'
 				,'min-height':'0'}
 			);
@@ -73,7 +73,7 @@ define(["jquery","allsite"],function($,gen){
 
 			if($(window).width() >= 768){
 				var mainColHeight = $('.site-content__body').height();
-				var verticalNavColHeight = $('#leftcol').height();
+				var verticalNavColHeight = $('.sidebar').height();
 				if(verticalNavColHeight > mainColHeight){
 					$('.site-content__body').css('min-height',verticalNavColHeight);
 				}
@@ -99,7 +99,7 @@ define(["jquery","allsite"],function($,gen){
 		}
 		buildmobileNav();
 
-		var verticalBodyClassPattern = /nav--vertical(.)*/i;
+		var verticalBodyClassPattern = /layout-vertical(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
 			equalizeVerticalCol();
 			$(window).resize(function(){
