@@ -132,7 +132,28 @@
 -------------------------------------------------------------- */
 /* Hide
 -------------------------------------------------------------- */
-/* Clearfix
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* Clear
 -------------------------------------------------------------- */
 .clear {
   clear: both; }
@@ -2105,6 +2126,14 @@ figure + figure, figure + p {
       .brand p {
         left: 0;
         top: 50%; } }
+
+.brand__link {
+  position: absolute;
+  height: 50%;
+  width: 18%;
+  right: 0;
+  display: block;
+  bottom: 0; }
 
 .brand__heading {
   font-size: 14px;

@@ -22,6 +22,15 @@
 	}
 }
 
+.brand__link {
+	position: absolute;
+	height: 50%;
+	width: 18%;
+	right: 0;
+	display: block;
+	bottom: 0;
+}
+
 .brand__heading {
 	@include font-size($font-size-sm);
 	position: absolute;

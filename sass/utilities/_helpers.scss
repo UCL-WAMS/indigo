@@ -7,12 +7,12 @@
 /* Hide
 -------------------------------------------------------------- */
 
-%hidden {
+%hidden, .hidden {
 	display: none !important;
 	visibility: hidden;
 }
 
-%visually-hidden {
+%visually-hidden, .visually-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -32,19 +32,8 @@
 	}
 }
 
-/* Clearfix
+/* Clear
 -------------------------------------------------------------- */
-
-%cf {
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
-}
 
 %clear, .clear {
 	clear: both;
