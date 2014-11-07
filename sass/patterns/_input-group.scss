@@ -1,0 +1,32 @@
+/* 
+* Pattern name: Input group
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
+.input-group {
+	display: table;
+	width: 100%;
+}
+
+.input-group__item {
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+}
+
+.input-group__input {
+	height: 3.8rem;
+	vertical-align: top;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.input-group__input--btn {
+	white-space: nowrap;
+	box-sizing: border-box;
+	line-height: normal;
+	vertical-align: top;
+}

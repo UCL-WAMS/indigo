@@ -190,6 +190,16 @@
 	}
 }
 
+.layout-vertical--nav-2col
+ {
+	.content__main {
+		@include gs-span(dl, 1, 4, (1, 5));
+	}
+	.content__sidebar {
+		@include gs-span(dl, 5, 5, (1, 5));
+	}
+}
+
 .layout-vertical--nav-show-top-nav {
 	.nav--top {
 		display: block;

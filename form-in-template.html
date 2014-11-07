@@ -74,7 +74,7 @@
 
 			<div class="photograph">
 
-				<header id="ucl-masthead" role="header">
+				<header  role="header">
 					<div class="brand">
 						<h2 class="brand__heading">UCL Design Language</h2>
 						<img src="./images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
@@ -145,7 +145,7 @@
 					</ul>
 
 				</nav>
-				<!--End #breadcrumb-->
+				<!--End .breadcrumb-->
 
 				<!-- start main slot where silva content gets rendered-->
 
@@ -238,8 +238,14 @@
 							</fieldset>
 							<fieldset class="form__group">
 								<label for="search">Search</label>
-								<input class="form__control" type="search" class="text" id="search-form">
-								<input type="submit" id="submit" value="Search" class="btn">
+								<div class="input-group">
+								    <div class="input-group__item">
+								        <input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" name="query" id="query"  accesskey="q" type="text" class="form__control input-group__input ui-autocomplete-input" placeholder="Search">
+								    </div>
+								    <div class="input-group__item">
+								        <input class="btn input-group__input input-group__input--btn" type="submit">
+								    </div>
+								</div>
 							</fieldset>
 							<fieldset class="form__group form__group--options">
 								<label for="select">Select</label>

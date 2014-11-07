@@ -136,6 +136,7 @@ textarea {
 
 select {
 	width: 100%;
+	margin-bottom: .5em;
 }
 
 form em {
@@ -231,6 +232,9 @@ form em {
 		font-size: 0.9em;
 		color: #494949;
 		font-weight: 500;
+	}
+	ul {
+		@include unset-list;
 	}
 }
 

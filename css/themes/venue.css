@@ -609,6 +609,19 @@ audio {
   margin-right: -100%;
   width: 100%; }
 
+.layout-vertical--nav-2col .content__main {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 71.37803%; }
+.layout-vertical--nav-2col .content__sidebar {
+  display: block;
+  float: left;
+  margin-left: 74.41038%;
+  margin-right: -100%;
+  width: 25.58962%; }
+
 .layout-vertical--nav-show-top-nav .nav--top {
   display: block; }
   @media only screen and (max-width: 767px) {
@@ -644,7 +657,7 @@ body {
 
 /* Vertical rhythym
 -------------------------------------------------------------- */
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
@@ -961,7 +974,8 @@ textarea {
   resize: vertical; }
 
 select {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: .5em; }
 
 form em {
   font-size: 0.8em;
@@ -1065,6 +1079,15 @@ form em {
   font-size: 0.9em;
   color: #494949;
   font-weight: 500; }
+.form__group--options ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .form__group--options ul li {
+    margin-left: 0;
+    list-style-type: none; }
+    .form__group--options ul li:before {
+      background-color: transparent !important; }
 
 input.error {
   background-color: #ffffff;
@@ -1084,16 +1107,15 @@ input.error {
   color: #ffffff;
   text-align: center;
   cursor: pointer;
-  margin: 0.5em 0;
   text-decoration: none;
   color: #ffffff;
-  padding: 12px 30px 10px 30px;
+  padding: .75em 1.5em;
   display: inline-block;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.21);
-  border-radius: 4px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
   line-height: 1;
+  appearance: none;
   font-size: 14px;
   font-size: 1.4rem; }
   .btn:hover, .btn:active, .btn:focus {
@@ -2535,9 +2557,10 @@ article > footer a:hover {
     z-index: 100; } }
 
 /* 
-* Object name: Hero
-* Object use: Lead content above copy
+* Pattern name: Hero
+* Use:
 * Note: N/A
+* Author: 
 -------------------------------------------------------------- */
 .hero {
   position: relative;
@@ -2701,6 +2724,34 @@ article > footer a:hover {
     float: right;
     margin-left: 0;
     margin-right: 0; } }
+
+/* 
+* Pattern name: Input group
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+.input-group {
+  display: table;
+  width: 100%; }
+
+.input-group__item {
+  display: table-cell;
+  width: 100%;
+  vertical-align: top; }
+
+.input-group__input {
+  height: 3.8rem;
+  vertical-align: top;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+.input-group__input--btn {
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: normal;
+  vertical-align: top; }
 
 /* 
 * Pattern name: Media
@@ -3243,19 +3294,15 @@ img.media__aside {
   margin: 7px 0 3px;
   padding: 0;
   box-sizing: border-box;
-  background: #4693ea;
+  background-color: #4693ea;
   font-size: 1.2rem;
-  font-size: 1.2em;
-  -webkit-appearance: none;
-  border-radius: 0;
-  height: 30px; }
+  font-size: 1.2em; }
   @media only screen and (max-width: 767px) {
     .search-form__input--submit {
       left: 80%;
       width: 20%; } }
-  .search-form__input--submit::hover {
-    background: #034da1;
-    border-color: #034da1; }
+  .search-form__input--submit:hover {
+    background: #2f86e7; }
 
 /* 
 * Pattern name: Tabs
