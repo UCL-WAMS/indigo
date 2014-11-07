@@ -25,7 +25,7 @@ body {
 /* Vertical rhythym
 -------------------------------------------------------------- */
 
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block {
 	margin-bottom: 1.5em;
 	line-height: 1.5; 
 }
@@ -124,11 +124,12 @@ blockquote {
 small,
 .small {
 	font-size: 0.9em;
+	font-weight: 400;
 }
 
 strong,
 .strong {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 cite, .cite, em, dfn { 

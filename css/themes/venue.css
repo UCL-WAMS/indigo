@@ -569,7 +569,7 @@ body {
 
 /* Vertical rhythym
 -------------------------------------------------------------- */
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
@@ -657,11 +657,12 @@ blockquote {
 
 small,
 .small {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  font-weight: 400; }
 
 strong,
 .strong {
-  font-weight: 500; }
+  font-weight: 600; }
 
 cite, .cite, em, dfn {
   font-style: italic; }
@@ -1805,7 +1806,7 @@ figure + figure, figure + p {
 /* Patterns
 -------------------------------------------------------------- */
 /* 
-* Partial name: Accordion
+* Pattern name: Accordion
 * Use:
 * Note: N/A
 * Author: 
@@ -1872,7 +1873,7 @@ figure + figure, figure + p {
       background-position: right 50%; } }
 
 /* 
-* Partial name: Advert
+* Pattern name: Advert
 * Use: Supporting material/advert
 * Note: N/A
 * Author: 
@@ -1954,7 +1955,7 @@ figure + figure, figure + p {
   z-index: 1; }
 
 /* 
-* Partial name: Article
+* Pattern name: Article
 * Use:
 * Note: 
 * Author: 
@@ -1978,7 +1979,7 @@ figure + figure, figure + p {
     top: 0.6em; }
 
 /* 
-* Partial name: Box
+* Pattern name: Box
 * Use: For sectioning off content within copy
 * Note: N/A
 * Author: 
@@ -2016,7 +2017,7 @@ figure + figure, figure + p {
   border-top: none; }
 
 /* 
-* Partial name: Blurb
+* Pattern name: Blurb
 * Use:
 * Note: N/A
 * Author: 
@@ -2066,7 +2067,7 @@ figure + figure, figure + p {
       width: 100%; } }
 
 /* 
-* Partial name: Branding
+* Pattern name: Branding
 * Use: 
 * Note:
 * Author: 
@@ -2111,7 +2112,7 @@ figure + figure, figure + p {
       display: none; } }
 
 /* 
-* Partial name: Blog
+* Pattern name: Blog
 * Use:
 * Note: N/A
 * Author: 
@@ -2211,7 +2212,7 @@ article > footer a:hover {
   margin-bottom: 0; }
 
 /* 
-* Partial name: Breadcrumbs
+* Pattern name: Breadcrumbs
 * Use: For highlighting where a user is within the site. Doubles up as a navigation
 * Note: Only mobile the user will only ever see the last 3 items in the breadcrumb trail
 * Author: 
@@ -2293,7 +2294,7 @@ article > footer a:hover {
       padding-left: 4ex; }
 
 /* 
-* Partial name: Divider
+* Pattern name: Divider
 * Use:
 * Note: N/A
 * Author: 
@@ -2314,7 +2315,7 @@ article > footer a:hover {
   border-bottom-style: solid; }
 
 /* 
-* Partial name: Footer
+* Pattern name: Footer
 * Use:
 * Note: N/A
 * Author: 
@@ -2349,7 +2350,7 @@ article > footer a:hover {
       font-size: 1.2rem; } }
 
 /* 
-* Partial name: Flag
+* Pattern name: Flag
 * Use: Displaying content next to an image with the content vertically aligned to the middle of the image
 * Note: http://csswizardry.com/2013/05/the-flag-object/
 * Author: 
@@ -2607,7 +2608,7 @@ article > footer a:hover {
     margin-right: 0; } }
 
 /* 
-* Partial name: Media
+* Pattern name: Media
 * Use: For a content block aligned to an image
 * Note: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 * Author: 
@@ -2639,6 +2640,72 @@ img.media__aside {
 
 .media__body--wide {
   max-width: 60em; }
+
+/* 
+* Pattern name: Menu Block
+* Use: For stacked list items with the possibility of being collapsible
+* Note:
+* Author: 
+-------------------------------------------------------------- */
+.menu-block {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #dfdfdf; }
+  .menu-block li {
+    margin-left: 0;
+    list-style-type: none; }
+    .menu-block li:before {
+      background-color: transparent !important; }
+  @media (max-width: 989px) {
+    .menu-block {
+      margin-bottom: .5em; } }
+
+.menu-block--no-keyline {
+  border: 0; }
+
+.menu-block__list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0; }
+  .menu-block__list li {
+    margin-left: 0;
+    list-style-type: none; }
+    .menu-block__list li:before {
+      background-color: transparent !important; }
+  .menu-block__list .is-active {
+    border-left: .4em solid #333;
+    font-weight: bold; }
+
+.menu-block__item {
+  position: relative;
+  padding: 0;
+  background-color: #EEE;
+  margin-bottom: 0;
+  line-height: 3;
+  border-bottom: 1px solid #dfdfdf; }
+  .menu-block__item:last-child {
+    border-bottom: 0; }
+
+.menu-block__link {
+  padding-left: 1em;
+  display: block;
+  color: #333333;
+  transition: all .5s;
+  padding-right: 2.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .menu-block__link:hover, .menu-block__link:active, .menu-block__link:focus {
+    background-color: #dfdfdf;
+    transition: all .5s;
+    color: #333333; }
+  .menu-block__link.is-current {
+    margin-bottom: -1px;
+    background-color: black;
+    color: white; }
 
 /* Success, notice and error boxes
 -------------------------------------------------------------- */
@@ -2678,7 +2745,7 @@ img.media__aside {
   font-weight: bold; }
 
 /* 
-* Partial name: Masthead
+* Pattern name: Masthead
 * Use:
 * Note: N/A
 * Author: 
@@ -2892,7 +2959,7 @@ img.media__aside {
         margin: -5px -3px 0 -8px; } }
 
 /* 
-* Partial name: Pull quote
+* Pattern name: Pull quote
 * Use:
 * Note: N/A
 * Author: 
@@ -2970,7 +3037,7 @@ img.media__aside {
   font-style: normal; }
 
 /* 
-* Partial name: Pill
+* Pattern name: Pill
 * Use: For rounded inline label/tags
 * Note:
 * Author: 
@@ -3016,7 +3083,7 @@ img.media__aside {
   padding-left: 1em; }
 
 /* 
-* Partial name: Photograph banner
+* Pattern name: Photograph banner
 * Use:
 * Note: N/A
 * Author: 
@@ -3060,7 +3127,7 @@ img.media__aside {
         display: none; } }
 
 /* 
-* Partial name: Pagination
+* Pattern name: Pagination
 * Use: For highlighting where a user is within a sequence of related pages
 * Note:
 * Author: 
@@ -3166,7 +3233,7 @@ img.media__aside {
     border-color: #034da1; }
 
 /* 
-* Partial name: Tabs
+* Pattern name: Tabs
 * Use:
 * Note: N/A
 * Author: 
@@ -3214,7 +3281,7 @@ img.media__aside {
     color: #ffffff; }
 
 /* 
-* Partial name: Tag
+* Pattern name: Tag
 * Use:
 * Note: N/A
 * Author: 
@@ -3231,7 +3298,7 @@ img.media__aside {
   background-color: #B5BD00; }
 
 /* 
-* Partial name: Vcard
+* Pattern name: Vcard
 * Use:
 * Note: N/A
 * Author: 
@@ -3250,7 +3317,7 @@ img.media__aside {
   font-size: 0.9375em; }
 
 /* 
-* Partial name: Video
+* Pattern name: Video
 * Use: Repsonsive video that maintains aspect ratio on browser resize
 * Note: N/A
 * Author: 
