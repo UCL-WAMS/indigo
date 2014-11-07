@@ -1,7 +1,16 @@
+/* 
+* Pattern name: Header
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+
 .header {
 	position: relative;
 	z-index: $zindex-header;
+}
 
+.header--desktop {
 	@include gs-media(m, max) {
 		background-color: #5f5f5f;
 		position: absolute;
@@ -36,7 +45,7 @@
 	}
 }
 
-.header-mobile {
+.header--mobile {
 	display: none;
 	width: 100%;
 	padding: 20% 35px 0;
@@ -62,7 +71,7 @@
 }
 
 
-.header-mobile__menu {
+.header--mobile__menu {
 	@include gs-media(m, max) {
 		width: 20px;
 		top: 35%;

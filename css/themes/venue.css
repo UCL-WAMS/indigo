@@ -2420,16 +2420,16 @@ article > footer a:hover {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-[class*=divider] {
+.divider {
   border-color: #ddd; }
 
-[class*=divider][class*=top] {
+.divider--top {
   margin-top: 21px;
   padding-top: 21px;
   border-top-width: 1px;
   border-top-style: solid; }
 
-[class*=divider][class*=bottom] {
+.divider--bottom {
   margin-bottom: 21px;
   padding-bottom: 21px;
   border-bottom-width: 1px;
@@ -2504,34 +2504,41 @@ article > footer a:hover {
   .flag__body > *:last-child, .flag__body > *:last-child > *:last-child, .flag__body > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
 
+/* 
+* Pattern name: Header
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 .header {
   position: relative;
   z-index: 10; }
-  @media only screen and (max-width: 767px) {
-    .header {
-      background-color: #5f5f5f;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      overflow-x: hidden;
-      transition: all, .5s;
-      transform: translateX(-100%); }
-      .no-csstransforms .header {
-        left: -100%; }
-      .mobile-open .header {
-        transition: all, .5s;
-        transform: translateX(0); }
-        .no-csstransforms .mobile-open .header {
-          left: 0; }
-      .header a {
-        color: #ffffff;
-        padding: 0.5em 0;
-        display: block;
-        clear: both;
-        font-size: 1.6rem; } }
 
-.header-mobile {
+@media only screen and (max-width: 767px) {
+  .header--desktop {
+    background-color: #5f5f5f;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: all, .5s;
+    transform: translateX(-100%); }
+    .no-csstransforms .header--desktop {
+      left: -100%; }
+    .mobile-open .header--desktop {
+      transition: all, .5s;
+      transform: translateX(0); }
+      .no-csstransforms .mobile-open .header--desktop {
+        left: 0; }
+    .header--desktop a {
+      color: #ffffff;
+      padding: 0.5em 0;
+      display: block;
+      clear: both;
+      font-size: 1.6rem; } }
+
+.header--mobile {
   display: none;
   width: 100%;
   padding: 20% 35px 0;
@@ -2542,18 +2549,18 @@ article > footer a:hover {
   position: relative;
   left: -35px;
   background-color: #ffffff; }
-  .header-mobile.no-svg {
+  .header--mobile.no-svg {
     background-image: url("/images/ucl-logo-cropped-white.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-color: #000000;
     background-size: 90%; }
   @media only screen and (max-width: 767px) {
-    .header-mobile {
+    .header--mobile {
       display: block; } }
 
 @media only screen and (max-width: 767px) {
-  .header-mobile__menu {
+  .header--mobile__menu {
     width: 20px;
     top: 35%;
     left: 35px;
@@ -2933,16 +2940,6 @@ img.media__aside {
       height: 4em;
       margin-left: auto;
       margin-right: auto; } }
-  .masthead__search label {
-    margin-top: 9px; }
-  .masthead__search .search-type {
-    width: 40%;
-    margin-bottom: 0;
-    padding: 0 20px 0 0;
-    margin: 0;
-    float: left;
-    box-sizing: border-box;
-    text-align: right; }
 
 .masthead__list {
   float: left;
@@ -3452,7 +3449,7 @@ img.media__aside {
   background-color: #f6be00; }
 
 @media only screen and (max-width: 767px) {
-  .header-mobile {
+  .header--mobile {
     background-color: #f6be00; } }
 .site-content__body {
   background-color: #0e0f14;

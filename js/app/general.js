@@ -14,7 +14,7 @@ define(["jquery","allsite"],function($,gen){
 				});
 			});
 			//fix mobile header
-			var mobileHeaderObj = $('.header-mobile');
+			var mobileHeaderObj = $('.header--mobile');
 			mobileHeaderObj.removeClass("default-header");
 			mobileHeaderObj.addClass("no-svg");
 		}
