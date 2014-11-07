@@ -22,10 +22,10 @@ $(document).ready(function() {
 	}
 	/* accordion - start
 	---------------------------------------------------------------------*/
-	var allPanels = $('.accordion > dd');
+	var allPanels = $('.accordion__description');
 	allPanels.slideUp();
 	//open accordions that have this set in their class
-	$('.accordion dt a').each(function() {
+	$('.accordion__title a').each(function() {
 		var tmpAccordionClass = $(this).attr("class");
 		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
 			$(this).parent().next().slideDown();
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 	//var allPanels = $('.accordion > dd').hide();
 
-	$('.accordion > dt > a').click(function() {
+	$('.accordion__title a').click(function() {
 		allPanels.slideUp();
 		var tmpAccordionClass = $(this).attr("class");
 		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
