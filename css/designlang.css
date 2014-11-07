@@ -1965,6 +1965,24 @@ figure + figure, figure + p {
   border-top: none; }
 
 /* 
+* Pattern name: Blocked link
+* Use:
+* Note:
+* Author: 
+-------------------------------------------------------------- */
+.blocked-link {
+  padding: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-size: 1.4rem;
+  background-color: #B5BD00; }
+  .blocked-link:hover {
+    color: #ffffff;
+    background: #8f993e;
+    text-decoration: none; }
+
+/* 
 * Pattern name: Blurb
 * Use:
 * Note: N/A
@@ -3286,8 +3304,6 @@ img.media__aside {
     width: 100%;
     height: 100%; }
 
-/* Shame
--------------------------------------------------------------- */
 /* Design Language Unique Styles -------------------------------- */
 .photograph {
   background-color: #622e78; }
