@@ -14,11 +14,10 @@
 
 .nav--top {
 	display: none;
-	@include alignment;
 	width: 100%;
 	background-color: $content-bg-color;
-	margin-top: 0;
-	padding-top: 1em;
+	@include alignment;
+	padding-bottom: $baseline;
 	overflow: hidden;
 	ul {
 		li {
@@ -38,7 +37,6 @@
 		}
 	}
 }
-
 
 .nav--mobile {
 	display: none;

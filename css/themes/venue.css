@@ -2989,14 +2989,13 @@ img.media__aside {
 
 .nav--top {
   display: none;
+  width: 100%;
+  background-color: #ffffff;
   position: relative;
   left: -35px;
   padding: 0 35px;
   width: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  margin-top: 0;
-  padding-top: 1em;
+  padding-bottom: 1.5em;
   overflow: hidden; }
   .nav--top ul li {
     display: block;
