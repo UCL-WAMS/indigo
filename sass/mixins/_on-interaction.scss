@@ -1,0 +1,7 @@
+@mixin on-interaction {
+	&:hover,
+	&:active,
+	&:focus {
+		@content;
+	}
+}

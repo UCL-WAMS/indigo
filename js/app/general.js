@@ -14,7 +14,7 @@ define(["jquery","allsite"],function($,gen){
 				});
 			});
 			//fix mobile header
-			var mobileHeaderObj = $('#header-mobile');
+			var mobileHeaderObj = $('.header-mobile');
 			mobileHeaderObj.removeClass("default-header");
 			mobileHeaderObj.addClass("no-svg");
 		}
@@ -56,12 +56,12 @@ define(["jquery","allsite"],function($,gen){
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
-		var topNavList = $('.topnav ul');
-		var mobilenav = $('.mobilenav');
-		var mobilenavList = $('.mobilenav ul');
+		var topNavList = $('.nav--top ul');
+		var mobileNav = $('.nav--mobile');
+		var mobileNavList = $('.nav--mobile ul');
 
 		function resetCols(){
-			$('#main,#leftcol').css({
+			$('.site-content__body,.sidebar').css({
 				'height':'auto'
 				,'min-height':'0'}
 			);
@@ -72,33 +72,34 @@ define(["jquery","allsite"],function($,gen){
 			resetCols();
 
 			if($(window).width() >= 768){
-				var mainColHeight = $('#main').height();
-				var verticalNavColHeight = $('#leftcol').height();
+				var mainColHeight = $('.site-content__body').height();
+				var verticalNavColHeight = $('.sidebar').height();
 				if(verticalNavColHeight > mainColHeight){
-					$('#main').css('min-height',verticalNavColHeight);
+					$('.site-content__body').css('min-height',verticalNavColHeight);
 				}
 				else{
-					$('#main').css({
+					$('.site-content__body').css({
 						'height':'auto'
 						,'min-height':'0'}
 					);
 				}
 			}else{
-				$('#main').css({
+				$('.site-content__body').css({
 					'height':'auto'
 					,'min-height':'0'}
 				);
 			}
 		}
-		function buildMobileNav(){
-			if(topNavList.length > 0 && mobilenavList.length < 1){
-				mobilenav.append("<ul>" + topNavList.html() + "</ul>");
+
+		function buildmobileNav(){
+			if(topNavList.length > 0 && mobileNavList.length < 1){
+				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
 			}
 			return;
 		}
-		buildMobileNav();
+		buildmobileNav();
 
-		var verticalBodyClassPattern = /vertical-nav(.)*/i;
+		var verticalBodyClassPattern = /layout-vertical(.)*/i;
 		if(verticalBodyClassPattern.test(bodyClass)){
 			equalizeVerticalCol();
 			$(window).resize(function(){
@@ -107,5 +108,5 @@ define(["jquery","allsite"],function($,gen){
 		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
-	})
+	});
 });

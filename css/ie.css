@@ -1,9 +1,4 @@
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
 /*MastHead
----------------------------------------------------------------------------------------*/
-#searchform input[type="text"] {
+ ---------------------------------------------------------------------------------------*/
+.search-form input[type="text"] {
   padding: 0.15em 0.5em; }

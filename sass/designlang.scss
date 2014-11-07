@@ -1,66 +1,13 @@
 /* Config */
-@import "partials/environment";
+@import "screen";
 
- /* Vendor Dependencies */
- @import "partials/gridset";
+/* Design Language Unique Styles -------------------------------- */
 
-/* Variables */
-@import "variables/variables";
+.photograph {
+	background-color: #622e78;
+}
 
-/* Vendor Dependencies */
-@import "partials/gridset";
-
-/* Mixins */
-@import "mixins/media-query";
-@import "mixins/gradient";
-@import "mixins/no-js";
-@import "mixins/modernizr";
-
-/* Authored Dependencies */
-@import "partials/reset";
-@import "partials/helpers";
-
-@import "partials/accordion";
-@import "partials/article";
-@import "partials/audio";
-@import "partials/box";
-@import "partials/code";
-@import "partials/divider";
-@import "partials/images";
-@import "partials/links";
-@import "partials/map";
-@import "partials/slides";
-@import "partials/social";
-@import "partials/tabs";
-@import "partials/tables";
-@import "partials/wrapper";
-@import "partials/vcard";
-@import "partials/video";
-
-@import "partials/elements";
-@import "partials/typography";
-
- /* Patterns */
- @import "partials/forms";
- @import "partials/blog";
-
- /* Sections */
- @import "partials/globalmasthead";
- @import "partials/layout";
-
- /* Search */
-
-// @import "partials/search/_search";
-
- /* Design Language Unique Styles -------------------------------- */
-
-
- .photograph {
- 	background-color: #622e78;
- }
-
-
- /* Colour Boxouts */
+/* Colour Boxouts */
 
 .darkgreen {
 	background-color: $darkgreen;
@@ -146,9 +93,8 @@
 	background-color: $darkbrown;
 }
 
-
 .colours {
-	color: #fff;
+	color: $white;
 	margin-bottom: 1em;
 }
 
@@ -158,7 +104,7 @@
 	padding-bottom: 10px;
 }
 
- /* Type */
+/* Type */
 
 .roman {
 	font-size: 1em;

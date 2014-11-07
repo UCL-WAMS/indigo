@@ -1,0 +1,12 @@
+@mixin unset-list {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	li {
+		margin-left: 0;
+		list-style-type: none;
+		&:before {
+			background-color: transparent !important;
+		} 
+	}
+}

@@ -1,0 +1,30 @@
+/* 
+* Theme name:
+* Website: 
+* Note:
+* Author:
+-------------------------------------------------------------- */
+
+/* Config */
+@import "../screen";
+
+/* Day Lab Unique Styles -------------------------------- */
+
+.photograph {
+	background-color: $orange;
+}
+
+.photograph--on {
+	background-image: url("#{$static-url}/images/cells.jpg");
+	background-position: 0 -460px;
+}
+
+@include gs-media(m, max) {
+	.header-mobile {
+		background-color: $orange;
+	}
+}
+
+.box {
+	border-top: 5px solid $orange;
+}

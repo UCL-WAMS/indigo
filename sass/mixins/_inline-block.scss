@@ -1,0 +1,13 @@
+/* 
+* Name: Inline block
+* Use: Bullet proof inline block control
+* Notes: N/A
+-------------------------------------------------------------- */
+
+@mixin inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+}
