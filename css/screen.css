@@ -221,7 +221,7 @@ time, .text-capitalize {
 /* 
 * Utility name: States
 * Generic use: Classes to be used only in JS 
-* Note: It is a best practise to seperate classes used in JS and classes that style elements
+* Note: It is a best practise to try to seperate classes used in JS and classes that style elements
 -------------------------------------------------------------- */
 .is-active {
   display: block; }
@@ -634,7 +634,7 @@ h6, .as-h6 {
 a {
   color: #034da1;
   text-decoration: none; }
-  a:hover {
+  a:hover, a:active, a:focus {
     color: #034da1;
     text-decoration: underline; }
 
@@ -1016,7 +1016,7 @@ input.error {
   line-height: 1;
   font-size: 14px;
   font-size: 1.4rem; }
-  .btn:hover, .btn:focus {
+  .btn:hover, .btn:active, .btn:focus {
     background-color: #615957;
     color: #ffffff;
     text-decoration: none; }
@@ -1805,7 +1805,7 @@ figure + figure, figure + p {
     background-position: right 50%;
     padding-right: 20px;
     border-bottom: none; }
-    .accordion__header--active:hover {
+    .accordion__header--active:hover, .accordion__header--active:active, .accordion__header--active:focus {
       background: url(/images/close.png);
       background-repeat: no-repeat;
       background-position: right 50%; } }
@@ -1816,7 +1816,7 @@ figure + figure, figure + p {
     background-repeat: no-repeat;
     background-position: right 50%;
     padding-right: 20px; }
-    .accordion__header--inactive:hover {
+    .accordion__header--inactive:hover, .accordion__header--inactive:active, .accordion__header--inactive:focus {
       background: url(/images/open.png);
       background-repeat: no-repeat;
       background-position: right 50%; } }
@@ -1976,7 +1976,7 @@ figure + figure, figure + p {
   font-size: 14px;
   font-size: 1.4rem;
   background-color: #B5BD00; }
-  .blocked-link:hover {
+  .blocked-link:hover, .blocked-link:active, .blocked-link:focus {
     color: #ffffff;
     background: #8f993e;
     text-decoration: none; }
@@ -2295,7 +2295,7 @@ article > footer a:hover {
   clear: left; }
   .footer__inner a {
     color: #eee; }
-    .footer__inner a:hover {
+    .footer__inner a:hover, .footer__inner a:active, .footer__inner a:focus {
       color: #ffffff; }
 
 .footer__list li {
@@ -3219,6 +3219,7 @@ img.media__aside {
     margin-bottom: 0; }
 
 .tabbed__list {
+  margin-left: 0;
   margin-bottom: 0; }
 
 .tabbed__item {
@@ -3235,7 +3236,7 @@ img.media__aside {
   border-bottom: 5px solid #fff; }
   .tabbed__item:before {
     display: none; }
-  .tabbed__item.active {
+  .tabbed__item.is-active {
     border-bottom: 5px solid #444; }
 
 .tabbed__link {
@@ -3244,7 +3245,7 @@ img.media__aside {
   font-size: 1.4rem;
   font-weight: bold;
   color: #ffffff; }
-  .tabbed__link:hover {
+  .tabbed__link:hover, .tabbed__link:active, .tabbed__link:focus {
     text-decoration: none;
     color: #ffffff; }
 

@@ -230,11 +230,11 @@ $(document).ready(function() {
 
 	$('.tabbed div').hide();
 	$('.tabbed div:first').show();
-	$('.tabbed ul li:first').addClass('active');
+	$('.tabbed ul li:first').addClass('is-active');
 
 	$('.tabbed ul li a').click(function() {
-		$('.tabbed ul li').removeClass('active');
-		$(this).parent().addClass('active');
+		$('.tabbed ul li').removeClass('is-active');
+		$(this).parent().addClass('is-active');
 		var currentTab = $(this).attr('href');
 		$('.tabbed div').hide();
 		$(currentTab).show();

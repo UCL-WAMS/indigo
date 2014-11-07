@@ -62,7 +62,7 @@
 		background-position: right 50%;
 		padding-right: 20px;
 		border-bottom: none;
-		&:hover {
+		@include on-interaction {
 			background: url(#{$static-url}/images/close.png);
 			background-repeat: no-repeat;
 			background-position: right 50%;
@@ -76,7 +76,7 @@
 		background-repeat: no-repeat;
 		background-position: right 50%;
 		padding-right: 20px;
-		&:hover {
+		@include on-interaction {
 			background: url(#{$static-url}/images/open.png);
 			background-repeat: no-repeat;
 			background-position: right 50%;

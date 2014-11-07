@@ -17,7 +17,7 @@
 	clear: left;
 	a {
 		color: #eee;
-		&:hover {
+		@include on-interaction {
 			color: $white;
 		}
 	}

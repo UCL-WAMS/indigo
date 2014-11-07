@@ -16,6 +16,7 @@
 }
 
 .tabbed__list {
+	margin-left: 0;
 	margin-bottom: 0;
 }
 
@@ -34,7 +35,7 @@
 	&:before {
 		display: none;
 	}
-	&.active {
+	&.is-active {
 		border-bottom: 5px solid #444;
 	}
 }
@@ -44,7 +45,7 @@
 	@include font-size($font-size-sm);
 	font-weight: bold;
 	color: $white;
-	&:hover {
+	@include on-interaction {
 		text-decoration: none;
 		color: $white;
 	}
