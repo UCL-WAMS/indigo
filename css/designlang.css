@@ -3266,6 +3266,11 @@ img.media__aside {
   text-decoration: none;
   background-color: #B5BD00; }
 
+.tag__heading {
+  color: white; }
+  .tag__heading a, .tag__heading a:hover {
+    color: white; }
+
 /* 
 * Pattern name: Vcard
 * Use:
