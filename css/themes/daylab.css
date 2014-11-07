@@ -3005,8 +3005,7 @@ img.media__aside {
     border-right: 1px solid #ccc; }
     .nav--top ul li a {
       text-decoration: none;
-      cursor: pointer;
-      color: #333333; }
+      cursor: pointer; }
     .nav--top ul li:last-child {
       border-right: 0; }
 
