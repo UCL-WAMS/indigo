@@ -655,7 +655,7 @@ body {
 
 /* Vertical rhythym
 -------------------------------------------------------------- */
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion {
   margin-bottom: 1.5em;
   line-height: 1.5; }
 
@@ -1860,27 +1860,25 @@ figure + figure, figure + p {
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
-.accordion {
-  margin-top: 1em;
-  margin-bottom: 1em; }
-  .accordion dt, .accordion dd {
-    padding: 10px;
-    border-top: 1px solid #ccc;
-    margin-top: 0; }
-    .accordion dt:last-of-type, .accordion dd:last-of-type {
-      border-bottom: 1px solid #ccc; }
-    .accordion dt a, .accordion dd a {
-      font-weight: bold; }
-  .accordion dt a {
-    color: #000000;
-    display: block; }
-  .accordion dd {
-    border-top: 0;
-    overflow: hidden; }
-    .accordion dd:last-of-type {
-      border-top: 1px solid #fff;
-      position: relative;
-      top: -1px; }
+.accordion__title, .accordion__description {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 0; }
+  .accordion__title:last-of-type, .accordion__description:last-of-type {
+    border-bottom: 1px solid #ccc; }
+  .accordion__title a, .accordion__description a {
+    font-weight: bold; }
+
+.accordion__title a {
+  color: #000000;
+  display: block; }
+
+.accordion__description {
+  border-top: 0;
+  overflow: hidden; }
+  .accordion__description:last-of-type {
+    position: relative;
+    top: -1px; }
 
 /* 
 * Pattern name: Advert

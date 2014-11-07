@@ -5,33 +5,32 @@
 * Author: 
 -------------------------------------------------------------- */
 
-.accordion {
-	margin-top: 1em;
-	margin-bottom: 1em;
-	dt, dd {
-		padding: 10px;
-		border-top: 1px solid #ccc;
-		margin-top: 0;
-		&:last-of-type {
-			border-bottom: 1px solid #ccc;
-		}
-		a {
-			font-weight: bold;
-		}
+.accordion {}
+
+.accordion__title, .accordion__description {
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	margin-top: 0;
+	&:last-of-type {
+		border-bottom: 1px solid #ccc;
 	}
-	dt {
-		a {
-			color: $black;
-			display: block;
-		}
+	a {
+		font-weight: bold;
 	}
-	dd {
-		border-top: 0;
-		overflow: hidden;
-		&:last-of-type {
-			border-top: 1px solid #fff;
-			position: relative;
-			top: -1px;
-		}
+}
+
+.accordion__title {
+	a {
+		color: $black;
+		display: block;
+	}
+}
+
+.accordion__description {
+	border-top: 0;
+	overflow: hidden;
+	&:last-of-type {
+		position: relative;
+		top: -1px;
 	}
 }
