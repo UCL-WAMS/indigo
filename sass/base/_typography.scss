@@ -192,6 +192,7 @@ ol, ul {
 	margin-top: 0;
 	margin-left: 1.5em;
 	ul {
+		margin-top: 1em;
 		margin-left: 1em;
 	}
 }
@@ -210,6 +211,11 @@ ol, ul {
 		display: inline-block;
 		vertical-align: middle;
 		padding-right: 5px;
+	}
+}
+
+.list-inline--divided {
+	li {
 		&:after {
 			content: "|";
 			margin-left: 2.5px;
@@ -219,7 +225,7 @@ ol, ul {
 				content: "";
 				display: none;
 			}
-		}
+		}	
 	}
 }
 

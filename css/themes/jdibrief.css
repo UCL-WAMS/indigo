@@ -708,6 +708,7 @@ ol, ul {
   margin-top: 0;
   margin-left: 1.5em; }
   ol ul, ul ul {
+    margin-top: 1em;
     margin-left: 1em; }
 
 .list-unstyled, .list-inline, .pills {
@@ -727,12 +728,13 @@ ol, ul {
     display: inline-block;
     vertical-align: middle;
     padding-right: 5px; }
-    .list-inline > li:after, .pills > li:after {
-      content: "|";
-      margin-left: 2.5px; }
-    .list-inline > li:last-child:after, .pills > li:last-child:after {
-      content: "";
-      display: none; }
+
+.list-inline--divided li:after {
+  content: "|";
+  margin-left: 2.5px; }
+.list-inline--divided li:last-child:after {
+  content: "";
+  display: none; }
 
 .tabbed > div ul li, .box ul li {
   margin-left: 1em; }
