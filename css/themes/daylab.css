@@ -1,17 +1,60 @@
 /*
-Error: File to import not found or unreadable: patterns/search.
-       Load path: /private/var/application/UCLIndigo
-        on line 49 of sass/screen.scss
+Error: Undefined variable: "$bp__tablet--max".
+        on line 14 of sass/patterns/_menu-block.scss, in `respond-max'
+        from line 14 of sass/patterns/_menu-block.scss
+        from line 42 of sass/screen.scss
         from line 9 of sass/themes/daylab.scss
 
+9: @import "../screen";
+10: 
+11: /* Day Lab Unique Styles -------------------------------- *\/
+12: 
+13: .photograph {
+14: 	background-color: $orange;
+15: }
+16: 
+17: .photograph--on {
+18: 	background-image: url("#{$static-url}/images/cells.jpg");
+19: 	background-position: 0 -460px;
+
 Backtrace:
-sass/screen.scss:49
+sass/patterns/_menu-block.scss:14:in `respond-max'
+sass/patterns/_menu-block.scss:14
+sass/screen.scss:42
 sass/themes/daylab.scss:9
-/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/import_node.rb:45:in `import'
-/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:344:in `block (2 levels) in visit_mixin'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:344:in `map'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:344:in `block in visit_mixin'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `with_mixin'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:88:in `block in with_import'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:88:in `with_import'
+/Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
 /Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Users/joshjohnson/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
@@ -59,4 +102,4 @@ sass/themes/daylab.scss:9
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: patterns/search.\A        Load path: /private/var/application/UCLIndigo\A         on line 49 of sass/screen.scss\A         from line 9 of sass/themes/daylab.scss"; }
+  content: "Error: Undefined variable: \"$bp__tablet--max\".\A         on line 14 of sass/patterns/_menu-block.scss, in `respond-max'\A         from line 14 of sass/patterns/_menu-block.scss\A         from line 42 of sass/screen.scss\A         from line 9 of sass/themes/daylab.scss\A \A 9: @import \"../screen\";\A 10: \A 11: /* Day Lab Unique Styles -------------------------------- */\A 12: \A 13: .photograph {\A 14: 	background-color: $orange;\A 15: }\A 16: \A 17: .photograph--on {\A 18: 	background-image: url(\"#{$static-url}/images/cells.jpg\");\A 19: 	background-position: 0 -460px;"; }

@@ -2891,6 +2891,12 @@ img.media__aside {
         position: relative;
         margin: -5px -3px 0 -8px; } }
 
+/* 
+* Partial name: Pull quote
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 .pull-quote {
   margin-top: 2em;
   margin-bottom: 2em; }
@@ -3074,12 +3080,6 @@ img.media__aside {
 .pagination li:before {
   display: none; }
 
-/* 
-* Partial name: Search
-* Use:
-* Note: N/A
-* Author: 
--------------------------------------------------------------- */
 .site-content {
   position: relative;
   z-index: 1; }
