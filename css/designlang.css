@@ -1882,45 +1882,6 @@ figure + figure, figure + p {
       position: relative;
       top: -1px; }
 
-@media (max-width: 778px) {
-  .accordion__header {
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px; } }
-
-.accordion__content {
-  /* ensure accordion nav is hidden and content is visible on desktop version */ }
-  @media (max-width: 778px) {
-    .accordion__content {
-      display: none;
-      border-top: 0; } }
-  @media (min-width: 780px) {
-    .accordion__content {
-      display: block !important; } }
-
-@media (max-width: 779px) {
-  .accordion__header--active {
-    background: url(/images/close.png);
-    background-repeat: no-repeat;
-    background-position: right 50%;
-    padding-right: 20px;
-    border-bottom: none; }
-    .accordion__header--active:hover, .accordion__header--active:active, .accordion__header--active:focus {
-      background: url(/images/close.png);
-      background-repeat: no-repeat;
-      background-position: right 50%; } }
-
-@media (max-width: 779px) {
-  .accordion__header--inactive {
-    background: url(/images/open.png);
-    background-repeat: no-repeat;
-    background-position: right 50%;
-    padding-right: 20px; }
-    .accordion__header--inactive:hover, .accordion__header--inactive:active, .accordion__header--inactive:focus {
-      background: url(/images/open.png);
-      background-repeat: no-repeat;
-      background-position: right 50%; } }
-
 /* 
 * Pattern name: Advert
 * Use: Supporting material/advert
@@ -2357,6 +2318,51 @@ article > footer a:hover {
     padding: 0 0.5em; }
     .code li .tab1 {
       padding-left: 4ex; }
+
+/* 
+* Pattern name: Collapse
+* Use:
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
+@media (max-width: 778px) {
+  .collapse__header {
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px; } }
+
+.collapse__content {
+  /* ensure accordion nav is hidden and content is visible on desktop version */ }
+  @media (max-width: 778px) {
+    .collapse__content {
+      display: none;
+      border-top: 0; } }
+  @media (min-width: 780px) {
+    .collapse__content {
+      display: block !important; } }
+
+@media (max-width: 779px) {
+  .collapse__header--active {
+    background: url(/images/close.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    padding-right: 20px;
+    border-bottom: none; }
+    .collapse__header--active:hover, .collapse__header--active:active, .collapse__header--active:focus {
+      background: url(/images/close.png);
+      background-repeat: no-repeat;
+      background-position: right 50%; } }
+
+@media (max-width: 779px) {
+  .collapse__header--inactive {
+    background: url(/images/open.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    padding-right: 20px; }
+    .collapse__header--inactive:hover, .collapse__header--inactive:active, .collapse__header--inactive:focus {
+      background: url(/images/open.png);
+      background-repeat: no-repeat;
+      background-position: right 50%; } }
 
 /* 
 * Pattern name: Divider

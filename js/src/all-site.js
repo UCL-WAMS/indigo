@@ -284,25 +284,25 @@ $(document).ready(function() {
 
 	if (document.documentElement.clientWidth < 767) {
 		//Add Inactive Class To All Accordion Headers
-		$('.accordion__header').addClass('accordion__header--inactive');
+		$('.collapse__header').addClass('collapse__header--inactive');
 
 		//Set The Accordion Content Width
-		//var contentwidth = $('.accordion__header').width();
-		//$('.accordion__content').css({'width' : contentwidth });
+		//var contentwidth = $('.collapse__header').width();
+		//$('.collapse__content').css({'width' : contentwidth });
 
 		//Open The First Accordion Section When Page Loads
-		//		$('.accordion__header').first().toggleClass('accordion__header--active').toggleClass('accordion__header--inactive');
-		//		$('.accordion__content').first().slideDown().toggleClass('open-content');
+		//		$('.collapse__header').first().toggleClass('collapse__header--active').toggleClass('collapse__header--inactive');
+		//		$('.collapse__content').first().slideDown().toggleClass('open-content');
 
 		// The Accordion Effect
-		$('.accordion__header').click(function() {
-			if ($(this).is('.accordion__header--inactive')) {
-				//				$('.accordion__header--active').toggleClass('accordion__header--active').toggleClass('accordion__header--inactive').next().slideToggle().toggleClass('open-content');
-				//				$(this).toggleClass('accordion__header--active').toggleClass('accordion__header--inactive');
-				$(this).removeClass('accordion__header--inactive').addClass('accordion__header--active');
+		$('.collapse__header').click(function() {
+			if ($(this).is('.collapse__header--inactive')) {
+				//				$('.collapse__header--active').toggleClass('collapse__header--active').toggleClass('collapse__header--inactive').next().slideToggle().toggleClass('open-content');
+				//				$(this).toggleClass('collapse__header--active').toggleClass('collapse__header--inactive');
+				$(this).removeClass('collapse__header--inactive').addClass('collapse__header--active');
 				$(this).next().slideToggle().toggleClass('open-content');
 			} else {
-				$(this).removeClass('accordion__header--active').addClass('accordion__header--inactive');
+				$(this).removeClass('collapse__header--active').addClass('collapse__header--inactive');
 				$(this).next().slideToggle().toggleClass('open-content');
 			}
 		});
