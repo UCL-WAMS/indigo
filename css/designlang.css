@@ -2453,7 +2453,7 @@ article > footer a:hover {
     margin-bottom: 0; }
 
 /* 
-* Pattern name: Header
+* Pattern name: Blurb
 * Use:
 * Note: N/A
 * Author: 
@@ -2894,6 +2894,8 @@ img.media__aside {
       height: 4em;
       margin-left: auto;
       margin-right: auto; } }
+  .masthead__search label {
+    margin-top: 9px; }
 
 .masthead__list {
   float: left;
