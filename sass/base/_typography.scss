@@ -239,17 +239,13 @@ ol, ul {
 ol li {
 	list-style-type: decimal;
 	margin-bottom: 1em;
-	@include gs-media(m, max) {
+	ol {
+		margin-top: 1em;
+	}
+	li {
 		margin-left: 1.5em;
 	}
-}
 
-ol li ol {
-	margin-top: 1em;
-}
-
-ol li li {
-	margin-left: 1.5em;
 }
 
 /* Definition lists

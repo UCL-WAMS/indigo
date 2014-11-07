@@ -71,12 +71,32 @@
 }
 
 
-.header--mobile__menu {
+.header__open {
 	@include gs-media(m, max) {
 		width: 20px;
 		top: 35%;
 		left: 35px;
 		position: absolute;
 		z-index: $zindex-mobile-menu;
+	}
+}
+
+.header__close {
+	display: none;
+	@include gs-media(m, max) {
+		display: block;
+		position: absolute;
+		left: 5%;
+		top: 5px;
+		padding: 0;
+		z-index: $zindex-mobile-menu-back;
+		width: 50%;
+		img {
+			vertical-align: middle;
+			display: inline-block;
+			width: 30px;
+			position: relative;
+			margin: -5px -3px 0 -8px;
+		}
 	}
 }

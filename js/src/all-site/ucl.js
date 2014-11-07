@@ -48,7 +48,7 @@ $(document).ready(function() {
 	});
 	/* accordion - end
 	---------------------------------------------------------------------*/
-	$('.header--mobile__menu, .nav-mobile-back').click(function(e) {
+	$('.header__open, .header__close').click(function(e) {
 		var body = $('body');
 		if (body.hasClass('mobile-open')) body.removeClass('mobile-open');
 		else body.addClass('mobile-open');
