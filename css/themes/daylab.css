@@ -454,6 +454,9 @@ audio {
       .content--split section:nth-child(even) {
         margin-left: 1%; } }
 
+.content__main > *:last-child, .content__main > *:last-child > *:last-child, .content__main > *:last-child > *:last-child > *:last-child, .content__sidebar > *:last-child, .content__sidebar > *:last-child > *:last-child, .content__sidebar > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0; }
+
 .content__main {
   display: block;
   float: left;
@@ -642,6 +645,14 @@ audio {
   margin-left: 74.41038%;
   margin-right: -100%;
   width: 25.58962%; }
+@media only screen and (max-width: 989px) {
+  .layout-vertical--nav-2col .content__main, .layout-vertical--nav-2col .content__sidebar {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 2em; } }
 
 .layout-vertical--nav-show-top-nav .nav--top {
   display: block; }
