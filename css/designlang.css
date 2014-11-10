@@ -2439,9 +2439,20 @@ article > footer a:hover {
     .footer__inner a:hover, .footer__inner a:active, .footer__inner a:focus {
       color: #ffffff; }
 
-.footer__list li {
+.footer__list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  .footer__list li {
+    margin-left: 0;
+    list-style-type: none; }
+    .footer__list li:before {
+      background-color: transparent !important; }
+
+.footer__item {
   padding-bottom: 4px;
   padding-top: 4px;
+  display: block;
   font-size: 14px;
   font-size: 1.4rem;
   margin-bottom: 0; }

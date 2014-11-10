@@ -23,13 +23,17 @@
 	}
 }
 
-.footer__list {
-	li {
-		padding-bottom: 4px;
-		padding-top: 4px;
-		@include rem(font-size, $font-size-sm);
-		margin-bottom: 0;
-	}
+.footer__list {	
+	@include unset-list;
+}
+
+
+.footer__item {
+	padding-bottom: 4px;
+	padding-top: 4px;
+	display: block;
+	@include rem(font-size, $font-size-sm);
+	margin-bottom: 0;
 }
 
 .footer__links {
