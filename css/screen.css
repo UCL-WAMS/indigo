@@ -413,90 +413,6 @@ audio {
       position: relative;
       margin-top: 0; } }
 
-/* Main Content
--------------------------------------------------------------- */
-.content {
-  display: block;
-  float: left;
-  margin-left: 22.89562%;
-  margin-right: -100%;
-  width: 77.03704%; }
-  @media only screen and (max-width: 989px) {
-    .content {
-      display: block;
-      float: left;
-      margin-left: 34.20139%;
-      margin-right: -100%;
-      width: 65.79861%; } }
-  @media only screen and (max-width: 767px) {
-    .content {
-      clear: both;
-      display: block;
-      float: left;
-      margin-left: 0;
-      width: 100%; } }
-
-.content--split {
-  overflow: hidden; }
-  @media only screen and (min-width: 768px) {
-    .content--split section {
-      float: left;
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 47%; }
-      .content--split section:nth-child(odd) {
-        margin-right: 1%; }
-      .content--split section:nth-child(even) {
-        margin-left: 1%; } }
-
-.content__main > *:last-child, .content__main > *:last-child > *:last-child, .content__main > *:last-child > *:last-child > *:last-child, .content__sidebar > *:last-child, .content__sidebar > *:last-child > *:last-child, .content__sidebar > *:last-child > *:last-child > *:last-child {
-  margin-bottom: 0; }
-
-.content__main {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 55.46605%; }
-  @media only screen and (max-width: 989px) {
-    .content__main {
-      clear: both;
-      display: block;
-      float: left;
-      margin-left: 0;
-      width: 100%;
-      margin-bottom: 2em; } }
-  @media only screen and (max-width: 767px) {
-    .content__main {
-      clear: both;
-      display: block;
-      float: left;
-      margin-left: 0;
-      width: 100%; } }
-
-.content__sidebar {
-  font-size: 14px;
-  font-size: 1.4rem;
-  display: block;
-  float: left;
-  margin-left: 66.80507%;
-  margin-right: -100%;
-  width: 33.19493%; }
-  @media only screen and (max-width: 989px) {
-    .content__sidebar {
-      clear: both;
-      display: block;
-      float: left;
-      margin-left: 0;
-      width: 100%; } }
-  @media only screen and (max-width: 767px) {
-    .content__sidebar {
-      clear: both;
-      display: block;
-      float: left;
-      margin-left: 0;
-      width: 100%; } }
-
 /* Block columns
 -------------------------------------------------------------- */
 .block {
@@ -580,27 +496,27 @@ audio {
   @media only screen and (max-width: 767px) {
     .layout-horizontal .nav--top {
       display: none; } }
-.layout-horizontal .site-content__body {
+.layout-horizontal .site-content__inner {
   padding-top: 1em; }
-.layout-horizontal .content {
+.layout-horizontal .site-content__body {
   width: 100%;
   margin-left: 0;
   margin-right: 0; }
 
-.layout-horizontal--nav-2col .content__main {
+.layout-horizontal--nav-2col .site-content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 71.37803%; }
-.layout-horizontal--nav-2col .content__sidebar {
+.layout-horizontal--nav-2col .site-content__sidebar {
   display: block;
   float: left;
   margin-left: 74.41038%;
   margin-right: -100%;
   width: 25.58962%; }
 @media only screen and (max-width: 989px) {
-  .layout-horizontal--nav-2col .content__main, .layout-horizontal--nav-2col .content__sidebar {
+  .layout-horizontal--nav-2col .site-content__main, .layout-horizontal--nav-2col .site-content__sidebar {
     clear: both;
     display: block;
     float: left;
@@ -608,40 +524,40 @@ audio {
     width: 100%;
     margin-bottom: 2em; } }
 
-.layout-horizontal--nav-1col .content__main {
+.layout-horizontal--nav-1col .site-content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
-.layout-horizontal--nav-1col .content__sidebar {
+.layout-horizontal--nav-1col .site-content__sidebar {
   display: none; }
 
 @media only screen and (max-width: 767px) {
   .layout-vertical .nav--left {
     display: none; } }
 
-.layout-vertical--nav-1col .content__main {
+.layout-vertical--nav-1col .site-content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 100%; }
 
-.layout-vertical--nav-2col .content__main {
+.layout-vertical--nav-2col .site-content__main {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 71.37803%; }
-.layout-vertical--nav-2col .content__sidebar {
+.layout-vertical--nav-2col .site-content__sidebar {
   display: block;
   float: left;
   margin-left: 74.41038%;
   margin-right: -100%;
   width: 25.58962%; }
 @media only screen and (max-width: 989px) {
-  .layout-vertical--nav-2col .content__main, .layout-vertical--nav-2col .content__sidebar {
+  .layout-vertical--nav-2col .site-content__main, .layout-vertical--nav-2col .site-content__sidebar {
     clear: both;
     display: block;
     float: left;
@@ -761,7 +677,7 @@ a {
 .box h2 {
   margin-top: 0; }
 
-.content__sidebar h1 {
+.site-content__sidebar h1 {
   font-size: 26px; }
 
 /* Quotes
@@ -1922,7 +1838,7 @@ figure + figure, figure + p {
 
 /* 
 * Pattern name: Advert
-* Use: Supporting material/advert
+* Use: Supporting material or advertisement signpost
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2003,32 +1919,8 @@ figure + figure, figure + p {
   z-index: 1; }
 
 /* 
-* Pattern name: Article
-* Use:
-* Note: 
-* Author: 
--------------------------------------------------------------- */
-.article ul li {
-  list-style: none;
-  position: relative;
-  margin-bottom: 1em; }
-  @media only screen and (max-width: 767px) {
-    .article ul li {
-      margin-left: 1em; } }
-  .article ul li:before {
-    content: "";
-    display: block;
-    background-color: #333;
-    border-radius: 50%;
-    height: 0.35em;
-    width: 0.35em;
-    position: absolute;
-    left: -0.8em;
-    top: 0.6em; }
-
-/* 
 * Pattern name: Box
-* Use: For sectioning off content within copy
+* Use: Highlighted text area
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2064,7 +1956,7 @@ figure + figure, figure + p {
 
 /* 
 * Pattern name: Blocked link
-* Use:
+* Use: Highlighting links with a background colour and padding
 * Note:
 * Author: 
 -------------------------------------------------------------- */
@@ -2082,7 +1974,7 @@ figure + figure, figure + p {
 
 /* 
 * Pattern name: Blurb
-* Use:
+* Use: Blocked media (image and text)
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2131,9 +2023,9 @@ figure + figure, figure + p {
       width: 100%; } }
 
 /* 
-* Pattern name: Branding
-* Use: 
-* Note:
+* Pattern name: Brand
+* Use: The UCL banner area
+* Note: The UCL logo is made clickable via using an absolutely positioned link. (see .brand__link)
 * Author: 
 -------------------------------------------------------------- */
 .brand {
@@ -2278,7 +2170,7 @@ article > footer a:hover {
   color: #136CB2;
   text-decoration: underline; }
 
-.content__sidebar .entry-title {
+.site-content__sidebar .entry-title {
   font-size: 18px;
   font-weight: 700; }
 
@@ -2288,7 +2180,7 @@ article > footer a:hover {
 /* 
 * Pattern name: Breadcrumbs
 * Use: For highlighting where a user is within the site. Doubles up as a navigation
-* Note: Only mobile the user will only ever see the last 3 items in the breadcrumb trail
+* Note: On mobile the user will only ever see the last 3 items in the breadcrumb trail
 * Author: 
 -------------------------------------------------------------- */
 .breadcrumb {
@@ -2352,7 +2244,7 @@ article > footer a:hover {
 
 /* 
 * Base name: Code
-* Use:
+* Use: Displaying markup and code
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2369,8 +2261,8 @@ article > footer a:hover {
 
 /* 
 * Pattern name: Collapse
-* Use:
-* Note: N/A
+* Use: Collapsing and revealing mechanism for long form content
+* Note: Only applicable for smaller viewports - triggered via JavaScript
 * Author: 
 -------------------------------------------------------------- */
 @media (max-width: 778px) {
@@ -2412,28 +2304,28 @@ article > footer a:hover {
 
 /* 
 * Pattern name: Divider
-* Use:
-* Note: N/A
+* Use: Displaying a bordered keyline either above or below an element
+* Note: Top and bottom modifiers alter margin
 * Author: 
 -------------------------------------------------------------- */
 .divider {
   border-color: #ddd; }
 
 .divider--top {
-  margin-top: 21px;
-  padding-top: 21px;
+  margin-top: 1.5em;
+  padding-top: 1.5em;
   border-top-width: 1px;
   border-top-style: solid; }
 
 .divider--bottom {
-  margin-bottom: 21px;
-  padding-bottom: 21px;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
 /* 
 * Pattern name: Footer
-* Use:
+* Use: Handling links, credits and footnotes
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2512,9 +2404,9 @@ article > footer a:hover {
     margin-bottom: 0; }
 
 /* 
-* Pattern name: Blurb
-* Use:
-* Note: N/A
+* Pattern name: Header
+* Use: Wrapping masthead and branding areas
+* Note: Desktop and mobile headers are seperated due to how the UCL menu is moved off convas on mobile
 * Author: 
 -------------------------------------------------------------- */
 .header {
@@ -2605,7 +2497,7 @@ article > footer a:hover {
 
 /* 
 * Pattern name: Hero
-* Use:
+* Use: Intro copy overlaying a feature image
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2776,7 +2668,7 @@ article > footer a:hover {
 
 /* 
 * Pattern name: Input group
-* Use:
+* Use: Conjoin an input and a button form element
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -2839,8 +2731,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Menu Block
-* Use: For stacked list items with the possibility of being collapsible
-* Note:
+* Use: Stacked navigation menu with basic styling
+* Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 .menu-block {
@@ -2909,7 +2801,11 @@ img.media__aside {
     background-color: black;
     color: white; }
 
-/* Success, notice and error boxes
+/* 
+* Pattern name: Menu Block
+* Use: Success, notice and error boxes
+* Note: Modifiers alter border and text colours to indicate the current state
+* Author: 
 -------------------------------------------------------------- */
 .message {
   box-sizing: border-box;
@@ -2946,7 +2842,7 @@ img.media__aside {
 
 /* 
 * Pattern name: Masthead
-* Use:
+* Use: Container of global navigation items and site search
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -3022,6 +2918,12 @@ img.media__aside {
       display: block;
       text-align: left; } }
 
+/* 
+* Pattern name: Nav
+* Use: 
+* Note: 
+* Author: 
+-------------------------------------------------------------- */
 .nav ul {
   margin-left: 0; }
 
@@ -3064,8 +2966,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Pull quote
-* Use:
-* Note: N/A
+* Use: Stylised blockquote with increased spacing and speech marks
+* Note: Modifiers allow for floating left/right within the grid
 * Author: 
 -------------------------------------------------------------- */
 .pull-quote {
@@ -3143,7 +3045,7 @@ img.media__aside {
 /* 
 * Pattern name: Pill
 * Use: For rounded inline label/tags
-* Note:
+* Note: Has scope for inline icons within a pill
 * Author: 
 -------------------------------------------------------------- */
 .pills {
@@ -3191,8 +3093,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Photograph banner
-* Use:
-* Note: N/A
+* Use: Background photo/colour to be displayed behind UCL banner
+* Note: Modifier gives .photograph more space as well as making the optional photography description visible.
 * Author: 
 -------------------------------------------------------------- */
 .photograph {
@@ -3225,18 +3127,18 @@ img.media__aside {
   color: #ffffff;
   display: none; }
 
-.photograph--on {
+.photograph--show {
   padding-bottom: 30%; }
-  .photograph--on .photograph__description {
+  .photograph--show .photograph__description {
     display: block; }
     @media only screen and (max-width: 767px) {
-      .photograph--on .photograph__description {
+      .photograph--show .photograph__description {
         display: none; } }
 
 /* 
 * Pattern name: Pagination
 * Use: For highlighting where a user is within a sequence of related pages
-* Note:
+* Note: Modifiers indicate states (current = current page, active = clickable link, disabled = disabled link)
 * Author: 
 -------------------------------------------------------------- */
 .pagination {
@@ -3289,11 +3191,30 @@ img.media__aside {
     .pagination__item--disabled {
       display: none !important; } }
 
+/* 
+* Pattern name: Site content
+* Use: Stylised blockquote with increased spacing and speech marks
+* Note: Modifiers allow for floating left/right within the grid
+* Author: 
+-------------------------------------------------------------- */
 .site-content {
   position: relative;
   z-index: 1; }
 
-.site-content__body {
+.site-content--split {
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .site-content--split section {
+      float: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      width: 47%; }
+      .site-content--split section:nth-child(odd) {
+        margin-right: 1%; }
+      .site-content--split section:nth-child(even) {
+        margin-left: 1%; } }
+
+.site-content__inner {
   background-color: #ffffff;
   padding: 2em 35px;
   left: -35px;
@@ -3303,17 +3224,17 @@ img.media__aside {
   float: left;
   margin-left: 0;
   width: 100%; }
-  .site-content__body > *:last-child, .site-content__body > *:last-child > *:last-child, .site-content__body > *:last-child > *:last-child > *:last-child {
+  .site-content__inner > *:last-child, .site-content__inner > *:last-child > *:last-child, .site-content__inner > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 989px) {
-    .site-content__body {
+    .site-content__inner {
       clear: both;
       display: block;
       float: left;
       margin-left: 0;
       width: 100%; } }
   @media only screen and (max-width: 767px) {
-    .site-content__body {
+    .site-content__inner {
       clear: both;
       display: block;
       float: left;
@@ -3321,6 +3242,81 @@ img.media__aside {
       width: 100%;
       padding-top: 1em; } }
 
+.site-content__body {
+  display: block;
+  float: left;
+  margin-left: 22.89562%;
+  margin-right: -100%;
+  width: 77.03704%; }
+  @media only screen and (max-width: 989px) {
+    .site-content__body {
+      display: block;
+      float: left;
+      margin-left: 34.20139%;
+      margin-right: -100%;
+      width: 65.79861%; } }
+  @media only screen and (max-width: 767px) {
+    .site-content__body {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+
+.site-content__main > *:last-child, .site-content__main > *:last-child > *:last-child, .site-content__main > *:last-child > *:last-child > *:last-child, .site-content__sidebar > *:last-child, .site-content__sidebar > *:last-child > *:last-child, .site-content__sidebar > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0; }
+
+.site-content__main {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 55.46605%; }
+  @media only screen and (max-width: 989px) {
+    .site-content__main {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 2em; } }
+  @media only screen and (max-width: 767px) {
+    .site-content__main {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+
+.site-content__sidebar {
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: block;
+  float: left;
+  margin-left: 66.80507%;
+  margin-right: -100%;
+  width: 33.19493%; }
+  @media only screen and (max-width: 989px) {
+    .site-content__sidebar {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .site-content__sidebar {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+
+/* 
+* Pattern name: Search form
+* Use: Inline search form used within the UCL masthead (used for global site search)
+* Note: N/A
+* Author: 
+-------------------------------------------------------------- */
 .search-form {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
   padding: 0;

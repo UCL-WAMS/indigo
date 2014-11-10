@@ -26,65 +26,6 @@
 	}
 }
 
-/* Main Content
--------------------------------------------------------------- */
-
-.content {
-	@include gs-span(dl, 2, 5);
-	@include gs-media(t, max) {
-		@include gs-span(t, 2, 3);
-	}
-
-	@include gs-media(m, max) {
-		@include gs-span(m, all);
-	}
-}
-
-.content--split {
-	overflow: hidden;
-	@include gs-media(t, min) {
-		section {
-			float: left;
-			margin-left: 2%;
-			margin-right: 2%;
-			width: 47%;
-			&:nth-child(odd) {
-				margin-right: 1%;
-			}
-			&:nth-child(even) {
-				margin-left: 1%;
-			}
-		}
-	}
-}
-
-.content__main, .content__sidebar {
-	@include guttering;
-}
-
-.content__main {
-	@include gs-span(dl, 2, 3, (2, 5));
-	@include gs-media(t, max) {
-		@include gs-span(t, all, (2, 3));
-		margin-bottom: 2em;
-	}
-
-	@include gs-media(m, max) {
-		@include gs-span(m, all);
-	}
-}
-
-.content__sidebar {
-	@include rem(font-size, $font-size-sm);
-	@include gs-span(dl, 5, 5, (2, 5));
-	@include gs-media(t, max) {
-		@include gs-span(t, all, (2, 3));
-	}
-
-	@include gs-media(m, max) {
-		@include gs-span(m, all);
-	}
-}
 
 /* Block columns
 -------------------------------------------------------------- */
@@ -146,10 +87,10 @@
 			display: none;
 		}
 	}
-	.site-content__body {
+	.site-content__inner {
 		padding-top: 1em;
 	}
-	.content {
+	.site-content__body {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
@@ -157,14 +98,14 @@
 }
 
 .layout-horizontal--nav-2col {
-	.content__main {
+	.site-content__main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
-	.content__sidebar {
+	.site-content__sidebar {
 		@include gs-span(dl, 5, 5, (1, 5));
 	}
 	@include gs-media(t, max) {
-		.content__main,.content__sidebar {
+		.site-content__main,.site-content__sidebar {
 			@include gs-span(t, all, (1, 3));
 			margin-bottom: 2em;
 		}
@@ -172,10 +113,10 @@
 }
 
 .layout-horizontal--nav-1col {
-	.content__main {
+	.site-content__main {
 		@include gs-span(dl, 1, 5, (1, 5));
 	}
-	.content__sidebar {
+	.site-content__sidebar {
 		display: none;
 	}
 }
@@ -189,20 +130,20 @@
 }
 
 .layout-vertical--nav-1col {
-	.content__main {
+	.site-content__main {
 		@include gs-span(dl, 2, 5, (2, 5));
 	}
 }
 
 .layout-vertical--nav-2col {
-	.content__main {
+	.site-content__main {
 		@include gs-span(dl, 1, 4, (1, 5));
 	}
-	.content__sidebar {
+	.site-content__sidebar {
 		@include gs-span(dl, 5, 5, (1, 5));
 	}
 	@include gs-media(t, max) {
-		.content__main,.content__sidebar {
+		.site-content__main,.site-content__sidebar {
 			@include gs-span(t, all, (1, 3));
 			margin-bottom: 2em;
 		}

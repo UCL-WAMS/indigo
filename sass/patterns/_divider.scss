@@ -1,7 +1,7 @@
 /* 
 * Pattern name: Divider
-* Use:
-* Note: N/A
+* Use: Displaying a bordered keyline either above or below an element
+* Note: Top and bottom modifiers alter margin
 * Author: 
 -------------------------------------------------------------- */
 
@@ -10,15 +10,15 @@
 }
 
 .divider--top {
-	margin-top: 21px;
-	padding-top: 21px;
+	margin-top: $baseline;
+	padding-top: $baseline;
 	border-top-width: 1px;
 	border-top-style: solid;
 }
 
 .divider--bottom {
-	margin-bottom: 21px;
-	padding-bottom: 21px;
+	margin-bottom: $baseline;
+	padding-bottom: $baseline;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 }

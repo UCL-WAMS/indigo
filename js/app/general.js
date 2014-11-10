@@ -61,7 +61,7 @@ define(["jquery","allsite"],function($,gen){
 		var mobileNavList = $('.nav--mobile ul');
 
 		function resetCols(){
-			$('.site-content__body,.sidebar').css({
+			$('.site-content__inner,.sidebar').css({
 				'height':'auto'
 				,'min-height':'0'}
 			);
@@ -72,19 +72,19 @@ define(["jquery","allsite"],function($,gen){
 			resetCols();
 
 			if($(window).width() >= 768){
-				var mainColHeight = $('.site-content__body').height();
+				var mainColHeight = $('.site-content__inner').height();
 				var verticalNavColHeight = $('.sidebar').height();
 				if(verticalNavColHeight > mainColHeight){
-					$('.site-content__body').css('min-height',verticalNavColHeight);
+					$('.site-content__inner').css('min-height',verticalNavColHeight);
 				}
 				else{
-					$('.site-content__body').css({
+					$('.site-content__inner').css({
 						'height':'auto'
 						,'min-height':'0'}
 					);
 				}
 			}else{
-				$('.site-content__body').css({
+				$('.site-content__inner').css({
 					'height':'auto'
 					,'min-height':'0'}
 				);

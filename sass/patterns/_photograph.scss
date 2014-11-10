@@ -1,7 +1,7 @@
 /* 
 * Pattern name: Photograph banner
-* Use:
-* Note: N/A
+* Use: Background photo/colour to be displayed behind UCL banner
+* Note: Modifier gives .photograph more space as well as making the optional photography description visible.
 * Author: 
 -------------------------------------------------------------- */
 
@@ -36,7 +36,7 @@
 	display: none;
 }
 
-.photograph--on {
+.photograph--show {
 	padding-bottom: 30%;
 	.photograph__description {
 		display: block;
