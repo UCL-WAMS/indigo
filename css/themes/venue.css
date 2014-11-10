@@ -2440,12 +2440,10 @@ article > footer a:hover {
 
 @media (max-width: 779px) {
   .collapse__header--inactive {
-    background: url(/images/open.png);
     background-repeat: no-repeat;
     background-position: right 50%;
     padding-right: 20px; }
     .collapse__header--inactive:hover, .collapse__header--inactive:active, .collapse__header--inactive:focus {
-      background: url(/images/open.png);
       background-repeat: no-repeat;
       background-position: right 50%; } }
 
