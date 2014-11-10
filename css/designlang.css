@@ -2147,6 +2147,8 @@ figure + figure, figure + p {
   right: 0;
   display: block;
   bottom: 0; }
+  .lt-ie9 .brand__link {
+    display: none; }
 
 .brand__heading {
   font-size: 14px;
@@ -2525,6 +2527,7 @@ article > footer a:hover {
       padding: 0.5em 0;
       display: block;
       clear: both;
+      font-size: 16px;
       font-size: 1.6rem; } }
 
 .header--mobile {
@@ -2674,6 +2677,8 @@ article > footer a:hover {
 @media (max-width: 779px) {
   .hero__body--background {
     padding: 0; } }
+.lt-ie9 .hero__body--background {
+  background-image: url(/images/hero-bg-ie.png); }
 
 .hero__title {
   margin-bottom: 0;
@@ -2759,6 +2764,7 @@ article > footer a:hover {
   vertical-align: top; }
 
 .input-group__input {
+  height: 38px;
   height: 3.8rem;
   vertical-align: top;
   padding-top: 0;
@@ -2970,9 +2976,7 @@ img.media__aside {
   @media (max-width: 989px) {
     .masthead__list {
       font-size: 14px;
-      font-size: 1.4rem; }
-      .lt-ie9 .masthead__list {
-        margin-top: 12px; } }
+      font-size: 1.4rem; } }
 
 .masthead__item {
   padding-right: 1em;
@@ -3320,8 +3324,8 @@ img.media__aside {
   padding: 0;
   box-sizing: border-box;
   background-color: #4693ea;
-  font-size: 1.2rem;
-  font-size: 1.2em; }
+  font-size: 12px;
+  font-size: 1.2rem; }
   @media only screen and (max-width: 767px) {
     .search-form__input--submit {
       left: 80%;

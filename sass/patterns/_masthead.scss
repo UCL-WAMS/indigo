@@ -63,9 +63,6 @@
 
 	@include respond-max($screen-lg) {
 		@include rem(font-size, $font-size-sm);
-		.lt-ie9 & {
-			margin-top: 12px;
-		}
 	}
 }
 

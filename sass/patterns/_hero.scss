@@ -99,6 +99,10 @@
 	@include respond-max($screen-md) {
 		padding: 0;
 	}
+
+	.lt-ie9 & {
+		background-image: url(#{$static-url}/images/hero-bg-ie.png);
+	}
 }
 
 .hero__title {

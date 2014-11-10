@@ -17,7 +17,7 @@
 }
 
 .input-group__input {
-	height: 3.8rem;
+	@include rem(height, 3.8);
 	vertical-align: top;
 	padding-top: 0;
 	padding-bottom: 0;

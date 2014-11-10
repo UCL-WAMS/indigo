@@ -45,8 +45,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	background-color: #4693ea;
-	font-size: 1.2rem;
-	font-size: 1.2em;
+	@include rem(font-size, 1.2);
 	@include gs-media(m, max) {
 		left: 80%;
 		width: 20%;

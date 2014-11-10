@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 				},
 				uglify: true,
 				tests: [
-					'svg', 'backgroundsize', 'fontface', 'touch', 'input'
+					'svg', 'backgroundsize', 'fontface', 'touch', 'input', 'csstransforms', 'csstransforms3d', 'rgba'
 				],
 				parseFiles: true,
 				matchCommunityTests: false
