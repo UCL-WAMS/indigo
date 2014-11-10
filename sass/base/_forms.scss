@@ -34,20 +34,21 @@ legend {
 }
 
 label {
-	@include inline-block;
 	vertical-align: middle;
 	max-width: 100%;
 	// Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
 	margin-bottom: .5em;
-	@include rem(font-size, $font-size-sm);
 	.lt-ie8 & {
 		vertical-align: auto;
 	}
+	@include inline-block;
+	@include rem(font-size, $font-size-sm);
 }
 
 input {
-	@include rem(font-size, $font-size-sm);
+
 	box-sizing: border-box;
+	@include rem(font-size, $font-size-sm);
 }
 
 input[type=submit] {
@@ -180,29 +181,29 @@ form em {
 -------------------------------------------------------------- */
 
 .form__group {
-	@include guttering;
 	margin-bottom: $baseline;
+	@include guttering;
 }
 
 .form__group--inline, .form__group--prepend { 
-	input {
-		@include gs-span(dc, 2, 4);
+	input {	
 		padding-left: 0;
 		padding-right: 0;
+		@include gs-span(dc, 2, 4);
 		@include gs-pad(dc, padin);
 	}
 }
 
 .form__group--inline {
 	label {
-		@include gs-span(dc, 1);
-		@include rem(font-size, $font-size-sm);
 		text-align: right;
 		line-height: 38px;
+		@include gs-span(dc, 1);
+		@include rem(font-size, $font-size-sm);
 	}
 	em {
-		@include gs-span(dc, 2, 4);
 		clear: left;
+		@include gs-span(dc, 2, 4);
 	}
 }
 
@@ -211,16 +212,16 @@ form em {
 		@include gs-span(dc, all);
 	}
 	span {
-		@include gs-span(dc, 1);
-		@include gs-pad(dc, pad);
 		margin-left: 1.51515%;
 		color: #848484;
-		@include rem(font-size, $font-size-sm);
 		text-align: right;
 		line-height: 26px;
 		margin-top: 5px;
 		display: block;
 		background-color: #eee;
+		@include gs-span(dc, 1);
+		@include gs-pad(dc, pad);
+		@include rem(font-size, $font-size-sm);
 	}
 }
 

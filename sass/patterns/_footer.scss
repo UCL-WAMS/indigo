@@ -25,18 +25,17 @@
 	@include list-unstyled;
 }
 
-
 .footer__item {
 	padding-bottom: 4px;
 	padding-top: 4px;
 	display: block;
-	@include rem(font-size, $font-size-sm);
 	margin-bottom: 0;
+	@include rem(font-size, $font-size-sm);
 }
 
 .footer__links {
-	@include rem(font-size, $font-size-sm);
 	margin-top: 0.5em;
+	@include rem(font-size, $font-size-sm);
 	@include respond-max($screen-lg) {
 		@include rem(font-size, $font-size-xs);
 	}

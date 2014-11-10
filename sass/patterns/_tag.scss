@@ -5,7 +5,6 @@
 -------------------------------------------------------------- */
 
 .tag {
-	@include rem(font-size, $font-size-xs);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -13,6 +12,7 @@
 	color: $white;
 	text-decoration: none;
 	background-color: #B5BD00;
+	@include rem(font-size, $font-size-xs);
 }
 
 .tag--right {

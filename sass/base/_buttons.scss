@@ -12,20 +12,21 @@
 	text-decoration: none;
 	color: $white;
 	padding: .75em 1.5em;
-	@include inline-block;
+	
 	position: relative;
 	border: 1px solid rgba($black, 0.21);
 	text-shadow: 0 1px 0 rgba($black, 0.15);
 	line-height: 1;
 	appearance: none;
+	&:active {
+		background-color: $active-button;
+	}
+	@include inline-block;
 	@include rem(font-size, $font-size-sm);
 	@include on-interaction {
 		background-color: $hover-button;
 		color: $white;
 		text-decoration: none;
-	}
-	&:active {
-		background-color: $active-button;
 	}
 
 	.lt-ie9 & {
@@ -39,7 +40,6 @@
 }
 
 .btn--gradient.disabled {
-	@include gradient($disabled-btn-grad1, $disabled-btn-grad2);
 	border-bottom: 1px solid rgba($black, 0.21);
 	color: #999;
 	text-shadow: none;
@@ -49,6 +49,7 @@
 	&:active {
 		@include gradient($disabled-act-btn-grad1, $disabled-act-btn-grad2);
 	}
+	@include gradient($disabled-btn-grad1, $disabled-btn-grad2);
 }
 
 button {

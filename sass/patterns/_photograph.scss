@@ -29,10 +29,10 @@
 	bottom: 5%;
 	right: 35px;
 	padding: 10px;
-	@include rem(font-size, $font-size-xs);
 	font-style: italic;
 	color: $white;
 	display: none;
+	@include rem(font-size, $font-size-xs);
 }
 
 .photograph--show {

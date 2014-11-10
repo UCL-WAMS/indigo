@@ -6,8 +6,6 @@
 
 
 .message {
-	@include gs-pad(dl, padinfull);
-	@include guttering;
 	background: none repeat scroll 0 0 #FFFFFF;
 	background-position: 10px center;
 	background-repeat: no-repeat;
@@ -22,6 +20,8 @@
 	padding-bottom: 10px;
 	padding-top: 10px;
 	margin-bottom: 1em;
+	@include gs-pad(dl, padinfull);
+	@include guttering;
 }
 
 .message--success {

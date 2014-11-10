@@ -6,22 +6,23 @@
 
 .masthead {
 	background-color: #444;
-	@include rem(font-size, $font-size-xs);
 	color: $white;
 	height: 45px;
-	img {
-		width: auto;
-	}
-	a {
-		color: $white;
-		text-decoration: none;
-	}
+	@include rem(font-size, $font-size-xs);
 	@include gs-media(m, max) {
 		height: auto;
 		border-bottom: 1px solid #ccc;
 		.wrapper {
 			background-color: #444;
 		}
+	}
+
+	img {
+		width: auto;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
 	}
 }
 
@@ -40,7 +41,6 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 	label {
 		margin-top: 9px;
 	}
@@ -59,7 +59,6 @@
 		float: none;
 		margin-bottom: 1em;
 	}
-
 	@include respond-max($screen-lg) {
 		@include rem(font-size, $font-size-sm);
 	}
@@ -71,12 +70,12 @@
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	.lt-ie9 & {
-		margin-top: 8px;
-		@include inline-block;
-	}
 	@include gs-media(m, max) {
 		display: block;
 		text-align: left;
+	}
+	.lt-ie9 & {
+		margin-top: 8px;
+		@include inline-block;
 	}
 }

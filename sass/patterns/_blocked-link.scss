@@ -8,8 +8,8 @@
 	padding: 5px;
 	color: $white;
 	text-decoration: none;
-	@include rem(font-size, $font-size-sm);
 	background-color: #B5BD00;
+	@include rem(font-size, $font-size-sm);
 	@include on-interaction {
 		color: $white;
 		background: #8f993e;

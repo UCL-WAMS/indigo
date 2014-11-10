@@ -8,11 +8,9 @@
 	@extend %list-inline;
 	margin-bottom: 1em;
 	margin-left: 0;
-
 	&:last-child {
 		margin-bottom: 0;
 	}
-
 }
 
 .pills__item {
@@ -51,6 +49,6 @@
 
 
 .pills__icon {
-	@include inline-block;
 	padding-left: 1em;
+	@include inline-block;
 }

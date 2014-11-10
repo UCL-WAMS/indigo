@@ -55,17 +55,15 @@
 	position: relative;
 	left: -35px;
 	background-color: $white;
-
+	@include gs-media(m, max) {
+		display: block;
+	}
 	&.no-svg {
 		background-image: url("#{$static-url}/images/ucl-logo-cropped-white.png");
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-color: $black;
 		background-size: 90%;
-	}
-	
-	@include gs-media(m, max) {
-		display: block;
 	}
 }
 

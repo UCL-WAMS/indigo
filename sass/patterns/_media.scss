@@ -12,7 +12,6 @@
 	float: left;
 	margin-right: 1em;
 	min-height: 1px; // http://css-tricks.com/make-sure-columns-dont-collapse-horizontally/
-
 	@include respond-min($screen-md) {
 		margin-right: 1.5em;
 	}
@@ -32,7 +31,6 @@ img.media__aside {
 	overflow: hidden;
 	max-width: 40em;
 	margin: 0;
-
 	@include respond-max($screen-md) {
 		@include rem(font-size, $font-size-sm);
 	}

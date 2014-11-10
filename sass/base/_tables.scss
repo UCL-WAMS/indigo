@@ -104,42 +104,35 @@ td, td img {
 		position: relative;
 		width: 100%;
 		border-top: 0;
-	}
-	.table-responsive thead {
-		display: block;
-		float: left;
-	}
-	.table-responsive tbody {
-		display: block;
-		width: auto;
-		position: relative;
-		overflow-x: auto;
-		white-space: nowrap;
-	}
-	.table-responsive thead tr {
-		display: block;
-	}
-	.table-responsive th {
-		display: block;
-	}
-	.table-responsive tbody tr {
-		@include inline-block;
-		vertical-align: top;
-	}
-	.table-responsive td {
-		display: block;
-		min-height: 1.25em;
-	}
-	/* sort out borders */
-	.table-responsive th {
-		border-bottom: 0;
-	}
-	.table-responsive td {
-		border-left: 0;
-		border-right: 0;
-		border-bottom: 0;
-	}
-	.table-responsive tbody tr {
-		border-right: 1px solid #eee;
+		thead {
+			display: block;
+			float: left;
+			tr {
+				display: block;
+			}
+		}
+		tbody {
+			display: block;
+			width: auto;
+			position: relative;
+			overflow-x: auto;
+			white-space: nowrap;
+			tr {
+				vertical-align: top;
+				border-right: 1px solid #eee;
+				@include inline-block;
+			}
+		}
+		th {
+			display: block;
+			border-bottom: 0;
+		}
+		td {
+			display: block;
+			min-height: 1.25em;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 0;
+		}
 	}
 }

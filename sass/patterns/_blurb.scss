@@ -29,9 +29,9 @@
 .blurb__body {
 	@include guttering;
 	.blurb--wide & {
-		@include gs-span(dc, 2, 4);
 		top: -4px;
 		position: relative;
+		@include gs-span(dc, 2, 4);
 		@include gs-media(m, max) {
 			@include gs-span(m, all);
 		}

@@ -8,8 +8,6 @@ html {
 }
 
 body {
-	font-family: $font-san-serif;
-	@include rem(font-size, $font-size-base);
 	color: #333333;
 	background-color: #d9d9d1;
 	overflow-x: hidden;
@@ -18,6 +16,8 @@ body {
 	-ms-hyphens: none;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: none;
+	font-family: $font-san-serif;
+	@include rem(font-size, $font-size-base);
 }
 
 /* Vertical rhythym
@@ -151,9 +151,9 @@ cite, .cite, em, dfn {
 }
 
 .mod {
-	@include rem(font-size, $font-size-xs);
 	color: #ccc;
 	margin-top: 2em;
+	@include rem(font-size, $font-size-xs);
 }
 
 ins {
@@ -206,9 +206,9 @@ ol, ul {
 	display: inline;
 	margin-left: 0;
 	> li {
-		@include inline-block;
 		vertical-align: middle;
 		padding-right: 5px;
+		@include inline-block;
 	}
 }
 

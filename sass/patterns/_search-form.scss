@@ -30,7 +30,6 @@
 	@include gs-media(m, max) {
 		width: 80%;
 	}
-
 	.lt-ie9 & {
 		height: 27px;
 		line-height: 27px;
@@ -52,11 +51,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	background-color: #4693ea;
+	&:hover {
+		background: darken(#4693ea, 5%);
+	}
 	@include gs-media(m, max) {
 		left: 80%;
 		width: 20%;
-	}
-	&:hover {
-		background: darken(#4693ea, 5%);
 	}
 }

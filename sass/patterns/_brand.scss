@@ -35,7 +35,6 @@
 }
 
 .brand__heading {
-	@include rem(font-size, $font-size-sm);
 	position: absolute;
 	left: 35px;
 	top: 25%;
@@ -43,6 +42,7 @@
 	text-transform: uppercase;
 	margin-bottom: 0;
 	font-weight: 400;
+	@include rem(font-size, $font-size-sm);
 	@include gs-media(m, max) {
 		position: relative;
 		left: 0;

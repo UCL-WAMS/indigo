@@ -24,17 +24,17 @@ figure + figure, figure + p {
 -------------------------------------------------------------- */
 
 .img-pull-left {
-	@include gs-span(dc, 1, 2);
-	@include gs-float(dc, left);
 	margin-bottom: 1em;
 	margin-top: 1em;
+	@include gs-span(dc, 1, 2);
+	@include gs-float(dc, left);
 }
 
 .img-pull-right {
-	@include gs-span(dc, 3, 4);
-	@include gs-float(dc, right);
 	margin-bottom: 1em;
 	margin-top: 1em;
+	@include gs-span(dc, 3, 4);
+	@include gs-float(dc, right);
 }
 
 .image-sm {

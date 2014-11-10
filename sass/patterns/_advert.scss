@@ -52,7 +52,7 @@
 .advert__overlay {
 	position: absolute;
 	display: block;
-	background: rgba(black, 0.25);
+	background-color: rgba(black, 0.25);
 	z-index: 9999;
 	top: 0;
 	right: 0;
@@ -66,8 +66,8 @@
 	color: white;
 	min-height: 5em;
 	text-shadow: 0 1px 1px rgba(black, 0.2);
-	background: $brightgreen;
-	background: rgba($brightgreen, 0.8);
+	background-color: $brightgreen;
+	background-color: rgba($brightgreen, 0.8);
 	a {
 		color: white;
 	}

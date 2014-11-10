@@ -5,10 +5,10 @@
 -------------------------------------------------------------- */
 
 .vcard {
-	@include inline-block;
-	@include list-unstyled;
 	margin-bottom: 1em;
 	width: 100%;
+	@include inline-block;
+	@include list-unstyled;
 }
 
 .vcard__item {

@@ -5,7 +5,6 @@
 -------------------------------------------------------------- */
 
 .hero {
-	@include alignment;
 	@extend .clearfix;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -15,6 +14,7 @@
 	position: relative;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+	@include alignment;
 	@include respond-max($screen-lg) { 
 		padding-top: 1.5em;
 		padding-bottom: 1.5em;
@@ -76,9 +76,9 @@
 }
 
 .hero__body {   
+	box-sizing: border-box;
 	@include gs-span(dl, 1, 3);
 	@include gs-span(t, 1, 2);
-	box-sizing: border-box;
 	@include respond-max($screen-xxl) {
 		width: 85%;
 	}
@@ -159,14 +159,14 @@
 .hero__dropdown__detail {
 	display: inline;
 	float: left;
-	@include rem(font-size, $font-size-sm);
 	padding: 6px 10px 6px 0;
+	@include rem(font-size, $font-size-sm);
 }
 	
 .hero__sidebar {
+	margin-bottom: 2em;
 	@include gs-span(t, 3);   
 	@include gs-span(dl, 5);   
-	margin-bottom: 2em;
 }
 
 .hero__sidebar--small {

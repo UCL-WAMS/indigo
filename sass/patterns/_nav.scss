@@ -23,9 +23,9 @@
 	display: none;
 	width: 100%;
 	background-color: $content-bg-color;
-	@include alignment;
 	padding-bottom: $baseline;
 	overflow: hidden;
+	@include alignment;
 	ul {
 		li {
 			display: block;

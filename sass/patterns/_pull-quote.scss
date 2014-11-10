@@ -22,9 +22,9 @@
 	padding-top: 1em;
 	border-color: rgba($black, 0.2);
 	float: left;
-	@include rem(font-size, $font-size-xs);
 	margin-top: 1em;
 	width: 100%;
+	@include rem(font-size, $font-size-xs);
 }
 
 .pull-quote--left, .pull-quote--right {

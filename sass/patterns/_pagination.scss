@@ -5,13 +5,13 @@
 -------------------------------------------------------------- */
 
 .pagination {
-	@include list-unstyled;
 	margin-bottom: .5em;
+	@include list-unstyled;
 	li {
 		text-align: center;
-		@include inline-block;
 		padding: 0.5em;
 		margin-right: .5em;
+		@include inline-block;
 		&:last-child {
 			margin-right: 0
 		}
@@ -23,7 +23,6 @@
 	font-size: 14px;
 	background: darken(#f6f5f5, 5%);
 	transition: all .5s;
-
 	a {
 		color: #555555;
 

@@ -26,18 +26,17 @@
 }
 
 .breadcrumb__list {
-	@include list-unstyled;
-	@include inline-block;
 	margin-bottom: 0;	
 	vertical-align: top;
+	@include list-unstyled;
+	@include inline-block;
 }	
 
 .breadcrumb__item {
 	margin: 0;
 	float: left;
-	@include rem(font-size, $font-size-sm);
 	text-transform: none;
-
+	@include rem(font-size, $font-size-sm);
 	&:after {
 		content: "/";
 		color: #aaaaaa;
