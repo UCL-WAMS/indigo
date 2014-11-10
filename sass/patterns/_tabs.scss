@@ -42,7 +42,7 @@
 
 .tabbed__link {
 	display: block;
-	@include font-size($font-size-sm);
+	@include rem(font-size, $font-size-sm);
 	font-weight: bold;
 	color: $white;
 	@include on-interaction {

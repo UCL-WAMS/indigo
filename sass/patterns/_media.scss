@@ -35,7 +35,7 @@ img.media__aside {
 	margin: 0;
 
 	@include respond-max($screen-md) {
-		@include font-size($font-size-sm);
+		@include rem(font-size, $font-size-sm);
 	}
 }
 

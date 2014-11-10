@@ -30,7 +30,7 @@
 	bottom: 5%;
 	right: 35px;
 	padding: 10px;
-	@include font-size($font-size-xs);
+	@include rem(font-size, $font-size-xs);
 	font-style: italic;
 	color: $white;
 	display: none;

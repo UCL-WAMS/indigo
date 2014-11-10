@@ -7,7 +7,7 @@
 		margin-bottom: 0.5em;
 		ul {
 			margin: 10px 5%;
-			@include font-size($font-size-sm);
+			@include rem(font-size, $font-size-sm);
 		}
 	}
 }

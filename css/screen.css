@@ -2980,7 +2980,6 @@ img.media__aside {
   text-align: center;
   vertical-align: middle; }
   .lt-ie9 .masthead__item {
-    display: block;
     margin-top: 8px; }
   @media only screen and (max-width: 767px) {
     .masthead__item {
@@ -3303,6 +3302,8 @@ img.media__aside {
   @media only screen and (max-width: 767px) {
     .search-form__input {
       width: 80%; } }
+  .lt-ie9 .search-form__input {
+    line-height: 30px; }
 
 .search-form__input--search {
   background: none repeat scroll 0 0 transparent;

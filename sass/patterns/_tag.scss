@@ -6,7 +6,7 @@
 -------------------------------------------------------------- */
 
 .tag {
-	@include font-size($font-size-xs);
+	@include rem(font-size, $font-size-xs);
 	position: absolute;
 	left: 0;
 	top: 0;

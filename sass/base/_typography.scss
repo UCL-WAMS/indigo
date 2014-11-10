@@ -11,7 +11,7 @@ html {
 
 body {
 	font-family: $font-san-serif;
-	@include font-size($font-size-base);
+	@include rem(font-size, $font-size-base);
 	color: #333333;
 	background-color: #d9d9d1;
 	overflow-x: hidden;
@@ -49,44 +49,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .as-h1, %as-h1 {
-	@include font-size($font-size-h1);
+	@include rem(font-size, $font-size-h1);
 	@include respond-max($screen-md) {
-		@include font-size($font-size-h2);
+		@include rem(font-size, $font-size-h2);
 	}
 }
 
 h2, .as-h2, %as-h2 {    
-	@include font-size($font-size-h2);
+	@include rem(font-size, $font-size-h2);
 	@include respond-max($screen-md) {
-		@include font-size($font-size-h3);
+		@include rem(font-size, $font-size-h3);
 	}
 }
 
 h3, .as-h3, %as-h3 { 
-	@include font-size($font-size-h3);
+	@include rem(font-size, $font-size-h3);
 	@include respond-max($screen-md) {
-		@include font-size($font-size-h4);
+		@include rem(font-size, $font-size-h4);
 	}
 }
 
 h4, .as-h4, %as-h4 {
-	@include font-size($font-size-h4);
+	@include rem(font-size, $font-size-h4);
 	text-transform: none;
 	letter-spacing: 0;
 	@include respond-max($screen-md) {
-		@include font-size($font-size-h5);
+		@include rem(font-size, $font-size-h5);
 	}
 }
 
 h5, .as-h5, %as-h5 {
-	@include font-size($font-size-h5);
+	@include rem(font-size, $font-size-h5);
 	font-style: normal;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 h6, .as-h6, %as-h6 {
-	@include font-size($font-size-h6);
+	@include rem(font-size, $font-size-h6);
 	color: #999;
 	margin: 1em 0 0;
 }
@@ -153,7 +153,7 @@ cite, .cite, em, dfn {
 }
 
 .mod {
-	@include font-size($font-size-xs);
+	@include rem(font-size, $font-size-xs);
 	color: #ccc;
 	margin-top: 2em;
 }

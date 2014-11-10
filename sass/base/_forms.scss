@@ -11,9 +11,9 @@ input,
 button,
 select,
 textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 // Normalize non-controls
@@ -21,13 +21,13 @@ textarea {
 // Restyle and baseline non-control form elements.
 
 fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-    // so we reset that to ensure it behaves more like a standard block element.
-    // See https://github.com/twbs/bootstrap/issues/12359.
-    min-width: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+	// so we reset that to ensure it behaves more like a standard block element.
+	// See https://github.com/twbs/bootstrap/issues/12359.
+	min-width: 0;
 }
 
 legend {
@@ -36,19 +36,19 @@ legend {
 }
 
 label {
-    @include inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-    margin-bottom: .5em;
-    @include font-size($font-size-sm);
-    .lt-ie8 & {
-        vertical-align: auto;
-    }
+	@include inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	// Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+	margin-bottom: .5em;
+	@include rem(font-size, $font-size-sm);
+	.lt-ie8 & {
+		vertical-align: auto;
+	}
 }
 
 input {
-	@include font-size($font-size-sm);
+	@include rem(font-size, $font-size-sm);
 	box-sizing: border-box;
 }
 
@@ -82,7 +82,7 @@ input[type=radio] {
 // https://github.com/twbs/bootstrap/issues/11586.
 
 input[type="search"], textarea {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -99,14 +99,14 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 
 // Set the height of file controls to match text inputs
 input[type="file"] {
-    display: block;
-    padding: 0;
+	display: block;
+	padding: 0;
 }
 
 // Make range inputs behave like textual form controls
 input[type="range"] {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 }
 
 label {
@@ -198,7 +198,7 @@ form em {
 .form__group--inline {
 	label {
 		@include gs-span(dc, 1);
-		@include font-size($font-size-sm);
+		@include rem(font-size, $font-size-sm);
 		text-align: right;
 		line-height: 38px;
 	}
@@ -217,7 +217,7 @@ form em {
 		@include gs-pad(dc, pad);
 		margin-left: 1.51515%;
 		color: #848484;
-		@include font-size($font-size-sm);
+		@include rem(font-size, $font-size-sm);
 		text-align: right;
 		line-height: 26px;
 		margin-top: 5px;

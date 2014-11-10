@@ -32,7 +32,7 @@
 }
 
 .brand__heading {
-	@include font-size($font-size-sm);
+	@include rem(font-size, $font-size-sm);
 	position: absolute;
 	left: 35px;
 	top: 25%;

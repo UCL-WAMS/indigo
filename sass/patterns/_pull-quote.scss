@@ -23,7 +23,7 @@
 	padding-top: 1em;
 	border-color: rgba($black, 0.2);
 	float: left;
-	@include font-size($font-size-xs);
+	@include rem(font-size, $font-size-xs);
 	margin-top: 1em;
 	width: 100%;
 }

@@ -27,15 +27,15 @@
 	li {
 		padding-bottom: 4px;
 		padding-top: 4px;
-		@include font-size($font-size-sm);
+		@include rem(font-size, $font-size-sm);
 		margin-bottom: 0;
 	}
 }
 
 .footer__links {
-	@include font-size($font-size-sm);
+	@include rem(font-size, $font-size-sm);
 	margin-top: 0.5em;
 	@include respond-max($screen-lg) {
-		@include font-size($font-size-xs);
+		@include rem(font-size, $font-size-xs);
 	}
 }

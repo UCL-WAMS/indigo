@@ -36,7 +36,7 @@
 .breadcrumb__item {
 	margin: 0;
 	float: left;
-	@include font-size($font-size-sm);
+	@include rem(font-size, $font-size-sm);
 	text-transform: none;
 
 	&:after {

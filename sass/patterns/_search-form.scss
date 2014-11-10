@@ -24,6 +24,10 @@
 	@include gs-media(m, max) {
 		width: 80%;
 	}
+
+	.lt-ie9 & {
+		line-height: 30px;
+	}
 }
 
 .search-form__input--search {
