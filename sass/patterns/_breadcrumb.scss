@@ -27,7 +27,7 @@
 }
 
 .breadcrumb__list {
-	@include unset-list;
+	@include list-unstyled;
 	@include inline-block;
 	margin-bottom: 0;	
 	vertical-align: top;

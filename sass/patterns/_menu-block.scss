@@ -7,7 +7,7 @@
 
 
 .menu-block {
-	@include unset-list;
+	@include list-unstyled;
 	padding: 0;
 	border: 1px solid lighten(#ccc, 7.5%);
 	@include respond-max($screen-lg) {
@@ -20,7 +20,7 @@
 }
 
 .menu-block__list {
-	@include unset-list;
+	@include list-unstyled;
 	margin-bottom: 0;
 	margin-top: 0;
 

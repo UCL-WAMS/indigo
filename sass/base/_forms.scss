@@ -234,7 +234,7 @@ form em {
 		font-weight: 500;
 	}
 	ul {
-		@include unset-list;
+		@include list-unstyled;
 	}
 }
 

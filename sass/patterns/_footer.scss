@@ -24,7 +24,7 @@
 }
 
 .footer__list {	
-	@include unset-list;
+	@include list-unstyled;
 }
 
 
