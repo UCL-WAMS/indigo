@@ -158,7 +158,7 @@
 /* 
 * Utility name: Helpers
 * Use: Commonly used dlasses (and silent classes) that can be used within CSS or within HTML
-* Note:
+* Note: See http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
 -------------------------------------------------------------- */
 /* Hide
 -------------------------------------------------------------- */
@@ -3298,9 +3298,7 @@ img.media__aside {
   margin: 7px 0 3px;
   padding: 0;
   box-sizing: border-box;
-  background-color: #4693ea;
-  font-size: 12px;
-  font-size: 1.2rem; }
+  background-color: #4693ea; }
   @media only screen and (max-width: 767px) {
     .search-form__input--submit {
       left: 80%;
