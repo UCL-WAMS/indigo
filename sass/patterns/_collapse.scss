@@ -43,12 +43,12 @@
 
 .collapse__header--inactive { 
 	@include respond-max($screen-md) {
-		background: url(#{$static-url}/images/open.png);
+		// background: url(#{$static-url}/images/open.png);
 		background-repeat: no-repeat;
 		background-position: right 50%;
 		padding-right: 20px;
 		@include on-interaction {
-			background: url(#{$static-url}/images/open.png);
+			// background: url(#{$static-url}/images/open.png);
 			background-repeat: no-repeat;
 			background-position: right 50%;
 		}

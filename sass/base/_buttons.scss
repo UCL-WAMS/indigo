@@ -29,6 +29,10 @@
 	&:active {
 		background-color: $active-button;
 	}
+
+	.lt-ie9 & {
+		border: 0;
+	}
 }
 
 .btn--small {

@@ -1148,6 +1148,8 @@ input.error {
     text-decoration: none; }
   .btn:active {
     background-color: #505050; }
+  .lt-ie9 .btn {
+    border: 0; }
 
 .btn--small {
   padding: 8px 20px 8px 20px;
@@ -2851,6 +2853,9 @@ img.media__aside {
   .menu-block__item:last-child {
     border-bottom: 0; }
 
+.menu-block__item--heading:hover, .menu-block__item--heading:active, .menu-block__item--heading:focus {
+  text-decoration: none; }
+
 .menu-block__link {
   padding-left: 1em;
   display: block;
@@ -3287,7 +3292,7 @@ img.media__aside {
   @media only screen and (max-width: 767px) {
     .search-form {
       left: 0;
-      width: 100%; } }
+      width: 80%; } }
 
 .search-form__input {
   margin-right: 0;
