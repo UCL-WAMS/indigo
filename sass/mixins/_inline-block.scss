@@ -1,8 +1,8 @@
 /* 
-* Name: Inline block
-* Use: Bullet proof inline block control
-* Notes: N/A
--------------------------------------------------------------- */
+* Mixin name: Inline block
+* Use: Bullet proof inline block browser support
+* Note: N/A
+-------------------------------------------------------------- */ 
 
 @mixin inline-block {
 	display: -moz-inline-stack;

@@ -1,4 +1,8 @@
-// Existing gradient mixin
+/* 
+* Mixin name: Gradient
+* Use: Shorthand gradient declarations with vendor prefixer/ie fallbacks
+* Note: N/A
+-------------------------------------------------------------- */
 
 @mixin gradient($from, $to) {
 	background: $to;
