@@ -6,7 +6,7 @@
 -------------------------------------------------------------- */
 
 .vcard {
-	display: inline-block;
+	@include inline-block;
 	margin-bottom: 1em;
 	width: 100%;
 }

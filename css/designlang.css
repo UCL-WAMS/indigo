@@ -843,7 +843,11 @@ ol, ul {
   display: inline;
   margin-left: 0; }
   .list-inline > li, .pills > li {
+    display: -moz-inline-stack;
     display: inline-block;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
     vertical-align: middle;
     padding-right: 5px; }
 
@@ -1135,7 +1139,11 @@ input.error {
   text-decoration: none;
   color: #ffffff;
   padding: .75em 1.5em;
+  display: -moz-inline-stack;
   display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.21);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -1492,7 +1500,11 @@ td, td img {
     display: block; }
 
   .table-responsive tbody tr {
+    display: -moz-inline-stack;
     display: inline-block;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
     vertical-align: top; }
 
   .table-responsive td {
@@ -2583,7 +2595,11 @@ article > footer a:hover {
       width: 50%; }
       .header__close img {
         vertical-align: middle;
+        display: -moz-inline-stack;
         display: inline-block;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
         width: 30px;
         position: relative;
         margin: -5px -3px 0 -8px; } }
@@ -2996,7 +3012,12 @@ img.media__aside {
   text-align: center;
   vertical-align: middle; }
   .lt-ie9 .masthead__item {
-    margin-top: 8px; }
+    margin-top: 8px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
   @media only screen and (max-width: 767px) {
     .masthead__item {
       display: block;
@@ -3162,7 +3183,11 @@ img.media__aside {
       margin-bottom: .5em; } }
 
 .pills__icon {
+  display: -moz-inline-stack;
   display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   padding-left: 1em; }
 
 /* 
@@ -3227,7 +3252,11 @@ img.media__aside {
       background-color: transparent !important; }
   .pagination li {
     text-align: center;
+    display: -moz-inline-stack;
     display: inline-block;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
     padding: 0.5em;
     margin-right: .5em; }
     .pagination li:last-child {
@@ -3319,7 +3348,8 @@ img.media__aside {
     .search-form__input {
       width: 80%; } }
   .lt-ie9 .search-form__input {
-    line-height: 30px; }
+    height: 27px;
+    line-height: 27px; }
 
 .search-form__input--search {
   background: none repeat scroll 0 0 transparent;
@@ -3420,7 +3450,11 @@ img.media__aside {
 * Author: 
 -------------------------------------------------------------- */
 .vcard {
+  display: -moz-inline-stack;
   display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   margin-bottom: 1em;
   width: 100%; }
 

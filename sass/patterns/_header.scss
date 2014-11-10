@@ -93,7 +93,7 @@
 		width: 50%;
 		img {
 			vertical-align: middle;
-			display: inline-block;
+			@include inline-block;
 			width: 30px;
 			position: relative;
 			margin: -5px -3px 0 -8px;

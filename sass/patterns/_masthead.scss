@@ -74,6 +74,7 @@
 	vertical-align: middle;
 	.lt-ie9 & {
 		margin-top: 8px;
+		@include inline-block;
 	}
 	@include gs-media(m, max) {
 		display: block;

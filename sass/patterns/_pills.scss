@@ -53,6 +53,6 @@
 
 
 .pills__icon {
-	display: inline-block;
+	@include inline-block;
 	padding-left: 1em;
 }

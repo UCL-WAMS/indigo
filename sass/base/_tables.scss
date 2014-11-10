@@ -125,7 +125,7 @@ td, td img {
 		display: block;
 	}
 	.table-responsive tbody tr {
-		display: inline-block;
+		@include inline-block;
 		vertical-align: top;
 	}
 	.table-responsive td {
