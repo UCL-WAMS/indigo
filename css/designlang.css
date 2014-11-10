@@ -1813,7 +1813,7 @@ figure + figure, figure + p {
 -------------------------------------------------------------- */
 /* 
 * Pattern name: Accordion
-* Use:
+* Use: Hide/reveal mechanism for concatenating similar/related content
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -1958,7 +1958,7 @@ figure + figure, figure + p {
 /* 
 * Pattern name: Blocked link
 * Use: Highlighting links with a background colour and padding
-* Note:
+* Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 .blocked-link {
@@ -2077,106 +2077,6 @@ figure + figure, figure + p {
   @media only screen and (max-width: 767px) {
     .brand__logo {
       display: none; } }
-
-/* 
-* Pattern name: Blog
-* Use:
-* Note: N/A
-* Author: 
--------------------------------------------------------------- */
-ol.commentlist {
-  list-style: none;
-  margin: 0; }
-
-ol.commentlist li {
-  list-style: none;
-  margin-left: 0; }
-
-ol.commentlist li.comment {
-  padding: 10px; }
-
-ol.commentlist li.comment div.vcard {
-  margin-bottom: 0; }
-
-ol.commentlist li.comment div.vcard cite.fn {
-  font-style: normal; }
-
-ol.commentlist li.comment div.vcard img.avatar {
-  width: auto;
-  float: left;
-  margin: 0 1em 1em 0; }
-
-ol.commentlist li.comment div.comment-meta {
-  font-size: 12px;
-  font-size: 1.2rem; }
-
-ol.commentlist li.comment div.comment-meta a {
-  color: #ccc; }
-
-ol.commentlist li.comment p {
-  clear: left; }
-
-ol.commentlist li.comment div.reply {
-  font-size: 11px; }
-
-ol.commentlist li.comment div.reply a {
-  font-weight: bold; }
-
-ol.commentlist li.comment ul.children {
-  list-style: none;
-  margin: 10px 0 0; }
-
-ol.commentlist li.comment ul.children li.depth-2 {
-  border-left: 5px solid #555;
-  margin: 0 0 10px 10px; }
-
-ol.commentlist li.comment ul.children li.depth-3 {
-  border-left: 5px solid #999;
-  margin: 0 0 10px 10px; }
-
-ol.commentlist li.comment ul.children li.depth-4 {
-  border-left: 5px solid #bbb;
-  margin: 0 0 10px 10px; }
-
-ol.commentlist li.even {
-  background: #fff; }
-
-ol.commentlist li.odd {
-  background: #f6f6f6; }
-
-ol.commentlist li.parent {
-  border-left: 5px solid #111; }
-
-.posted {
-  color: #8c8279;
-  font-size: 0.8em;
-  margin: -0.4em 0 1em; }
-
-article.post + article.post {
-  border-top: 1px dotted #8c8279;
-  padding-bottom: 30px;
-  margin-bottom: 1.5em; }
-
-article > footer {
-  padding: 0;
-  margin-top: 1em;
-  background: none; }
-
-article > footer a {
-  color: #136CB2;
-  font-weight: normal;
-  font-size: 0.8em; }
-
-article > footer a:hover {
-  color: #136CB2;
-  text-decoration: underline; }
-
-.site-content__sidebar .entry-title {
-  font-size: 18px;
-  font-weight: 700; }
-
-.author.vcard {
-  margin-bottom: 0; }
 
 /* 
 * Pattern name: Breadcrumbs
@@ -2302,6 +2202,57 @@ article > footer a:hover {
     .collapse__header--inactive:hover, .collapse__header--inactive:active, .collapse__header--inactive:focus {
       background-repeat: no-repeat;
       background-position: right 50%; } }
+
+/* 
+* Pattern name: Comment list
+* Use: Styling comments within list
+* Note: A lot of nasty nesting going on here - presumably classes are set by plugin (?)
+* Author: 
+-------------------------------------------------------------- */
+.commentlist {
+  list-style: none;
+  margin: 0; }
+
+.commentlist li {
+  list-style: none;
+  margin-left: 0; }
+  .commentlist li.odd {
+    background: #f6f6f6; }
+  .commentlist li.even {
+    background: #fff; }
+  .commentlist li.parent {
+    border-left: 5px solid #111; }
+  .commentlist li.comment {
+    padding: 10px; }
+    .commentlist li.comment .reply {
+      font-size: 11px; }
+    .commentlist li.comment .vcard {
+      margin-bottom: 0; }
+      .commentlist li.comment .vcard .fn {
+        font-style: normal; }
+    .commentlist li.comment .avatar {
+      width: auto;
+      float: left;
+      margin: 0 1em 1em 0; }
+    .commentlist li.comment .comment-meta {
+      font-size: 12px;
+      font-size: 1.2rem; }
+      .commentlist li.comment .comment-meta a {
+        color: #ccc; }
+      .commentlist li.comment .comment-meta p {
+        clear: left; }
+    .commentlist li.comment .children {
+      list-style: none;
+      margin: 10px 0 0; }
+      .commentlist li.comment .children .depth-2 {
+        border-left: 5px solid #555;
+        margin: 0 0 10px 10px; }
+      .commentlist li.comment .children .depth-3 {
+        border-left: 5px solid #999;
+        margin: 0 0 10px 10px; }
+      .commentlist li.comment .children .depth-4 {
+        border-left: 5px solid #bbb;
+        margin: 0 0 10px 10px; }
 
 /* 
 * Pattern name: Divider
@@ -2921,8 +2872,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Nav
-* Use: 
-* Note: 
+* Use: Styling lists used for navigation areas
+* Note: Modifiers define positioning of navigation
 * Author: 
 -------------------------------------------------------------- */
 .nav ul {
@@ -3194,8 +3145,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Site content
-* Use: Stylised blockquote with increased spacing and speech marks
-* Note: Modifiers allow for floating left/right within the grid
+* Use: Structuring and alignment for main content 
+* Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 .site-content {
@@ -3205,14 +3156,14 @@ img.media__aside {
 .site-content--split {
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
-    .site-content--split section {
+    .site-content--split .site-content__section {
       float: left;
       margin-left: 2%;
       margin-right: 2%;
       width: 47%; }
-      .site-content--split section:nth-child(odd) {
+      .site-content--split .site-content__section:nth-child(odd) {
         margin-right: 1%; }
-      .site-content--split section:nth-child(even) {
+      .site-content--split .site-content__section:nth-child(even) {
         margin-left: 1%; } }
 
 .site-content__inner {
@@ -3372,7 +3323,7 @@ img.media__aside {
 
 /* 
 * Pattern name: Tabs
-* Use:
+* Use: Related tabular content
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -3419,8 +3370,8 @@ img.media__aside {
 
 /* 
 * Pattern name: Tag
-* Use:
-* Note: N/A
+* Use: Small block of overlayed text over an image
+* Note: Modifiers adjust positioning of tag (default: left)
 * Author: 
 -------------------------------------------------------------- */
 .tag {
@@ -3434,6 +3385,10 @@ img.media__aside {
   text-decoration: none;
   background-color: #B5BD00; }
 
+.tag--right {
+  left: auto;
+  right: 0; }
+
 .tag__heading {
   color: white; }
   .tag__heading a, .tag__heading a:hover {
@@ -3441,7 +3396,7 @@ img.media__aside {
 
 /* 
 * Pattern name: Vcard
-* Use:
+* Use: Share contact information between devices
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
@@ -3451,16 +3406,23 @@ img.media__aside {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
   margin-bottom: 1em;
   width: 100%; }
+  .vcard li {
+    margin-left: 0;
+    list-style-type: none; }
+    .vcard li:before {
+      background-color: transparent !important; }
 
 .vcard__item {
   margin-bottom: 0.5em;
   display: block; }
-
-.vcard__item--fn {
-  font-weight: bold;
-  font-size: 0.9375em; }
+  .vcard__item.fn {
+    font-weight: bold;
+    font-size: 0.9375em; }
 
 /* 
 * Pattern name: Video

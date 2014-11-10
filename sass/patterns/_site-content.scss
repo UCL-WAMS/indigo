@@ -1,7 +1,7 @@
 /* 
 * Pattern name: Site content
-* Use: Stylised blockquote with increased spacing and speech marks
-* Note: Modifiers allow for floating left/right within the grid
+* Use: Structuring and alignment for main content 
+* Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 
@@ -13,7 +13,7 @@
 .site-content--split {
 	overflow: hidden;
 	@include gs-media(t, min) {
-		section {
+		.site-content__section {
 			float: left;
 			margin-left: 2%;
 			margin-right: 2%;

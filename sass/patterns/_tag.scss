@@ -1,7 +1,7 @@
 /* 
 * Pattern name: Tag
-* Use:
-* Note: N/A
+* Use: Small block of overlayed text over an image
+* Note: Modifiers adjust positioning of tag (default: left)
 * Author: 
 -------------------------------------------------------------- */
 
@@ -14,6 +14,11 @@
 	color: $white;
 	text-decoration: none;
 	background-color: #B5BD00;
+}
+
+.tag--right {
+	left: auto;
+	right: 0;
 }
 
 .tag__heading {

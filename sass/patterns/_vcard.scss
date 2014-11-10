@@ -1,12 +1,13 @@
 /* 
 * Pattern name: Vcard
-* Use:
+* Use: Share contact information between devices
 * Note: N/A
 * Author: 
 -------------------------------------------------------------- */
 
 .vcard {
 	@include inline-block;
+	@include list-unstyled;
 	margin-bottom: 1em;
 	width: 100%;
 }
@@ -14,9 +15,9 @@
 .vcard__item {
 	margin-bottom: 0.5em;
 	display: block;
+	&.fn {
+		font-weight: bold;
+		font-size: 0.9375em;
+	}
 }
 
-.vcard__item--fn {
-	font-weight: bold;
-	font-size: 0.9375em;
-}
