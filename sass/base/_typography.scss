@@ -74,7 +74,7 @@ h4, .as-h4, %as-h4 {
 	text-transform: none;
 	letter-spacing: 0;
 	@include respond-max($screen-md) {
-		@include rem(font-size, $font-size-h5);
+		@include rem(font-size, $font-size-base);
 	}
 }
 

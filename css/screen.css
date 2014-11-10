@@ -735,8 +735,8 @@ h4, .as-h4 {
   letter-spacing: 0; }
   @media (max-width: 779px) {
     h4, .as-h4 {
-      font-size: 14px;
-      font-size: 1.4rem; } }
+      font-size: 16px;
+      font-size: 1.6rem; } }
 
 h5, .as-h5 {
   font-size: 14px;
