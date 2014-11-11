@@ -1,0 +1,72 @@
+/* 
+* Base name: Images
+* Note: N/A
+-------------------------------------------------------------- */
+
+figcaption {
+	color: #666666;
+	font-size: 0.9em;
+}
+
+figcaption h4 {
+	margin-top: 0.2em;
+}
+
+figure img {
+	padding-top: 0.5em;
+}
+
+figure + figure, figure + p {
+	margin-top: 1em;
+}
+
+/* Floated Images
+-------------------------------------------------------------- */
+
+.img-pull-left {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	@include gs-span(dc, 1, 2);
+	@include gs-float(dc, left);
+}
+
+.img-pull-right {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	@include gs-span(dc, 3, 4);
+	@include gs-float(dc, right);
+}
+
+.image-sm {
+	max-width: $image-max-width-sm;
+}
+
+.image-md {
+	max-width: $image-max-width-md;
+}
+
+.image-lg {
+	max-width: $image-max-width-lg;
+}
+
+.image-xl {
+	max-width: $image-max-width-xl;
+}
+
+.image-xxl {
+	max-width: $image-max-width-xxl;
+}
+
+@include gs-media(m, max) {
+	.large-image,.xl-image,.xxl-image {
+		width: 100%;
+	}
+	.decorative {
+		display: none !important;
+	}
+	img.float-left,img.float-right {
+		&.large-image,&.xl-image,&.xxl-image {
+			width: 100%;
+		}
+	}
+}
