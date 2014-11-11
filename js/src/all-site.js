@@ -233,23 +233,48 @@ $(document).ready(function(){
 	$('.tabbed ul li:first').addClass('active');
 
 	$('.tabbed ul li a').click(function(){
-	$('.tabbed ul li').removeClass('active');
-	$(this).parent().addClass('active');
-	var currentTab = $(this).attr('href');
-	$('.tabbed div').hide();
-	$(currentTab).show();
-	return false;
-	});
-
-
-	var allPanels = $('.accordion > dd').hide();
-
- 	$('.accordion > dt > a').click(function() {
-		allPanels.slideUp();
-		$(this).parent().next().slideDown();
+		$('.tabbed ul li').removeClass('active');
+		$(this).parent().addClass('active');
+		var currentTab = $(this).attr('href');
+		$('.tabbed div').hide();
+		$(currentTab).show();
 		return false;
 	});
 
+	function removeCurrentClassFromAll(){
+		var allPanelsAnchor = $('.accordion a');
+		allPanelsAnchor.each(function(){
+			$(this).removeClass("currentAccordionAnchor");	
+		});
+	}
+	/* accordion - start
+	---------------------------------------------------------------------*/
+	var allPanels = $('.accordion > dd');
+	allPanels.slideUp();
+	//open accordions that have this set in their class
+	$('.accordion dt a').each(function(){
+		var tmpAccordionClass = $(this).attr("class");
+		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+			$(this).parent().next().slideDown();
+		}
+	});
+
+	//var allPanels = $('.accordion > dd').hide();
+
+ 	$('.accordion > dt > a').click(function() {
+		allPanels.slideUp();
+		var tmpAccordionClass = $(this).attr("class");
+		if(typeof tmpAccordionClass!=='undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+			removeCurrentClassFromAll();
+		}else{
+			removeCurrentClassFromAll();
+			$(this).parent().next().slideDown();
+			$(this).addClass("currentAccordionAnchor");
+		}
+		return false;
+	});
+	/* accordion - end
+	---------------------------------------------------------------------*/
 	$('#nav-mobile-menu, #nav-mobile-back').click(function (e) {
 		var body = $('body');
 		if (body.hasClass('mobile-open')) body.removeClass('mobile-open');

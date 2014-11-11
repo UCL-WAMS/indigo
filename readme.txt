@@ -9,7 +9,8 @@ The UCL Design Language repository contains:
 	•	Global images
 	•	Javascript
 	•	Respond js when using a CDN
-
+	•	Require js
+	•	Editing Files
 
 The following steps will describe how to use the existing design language foundation to create a new UCL website.
 
@@ -26,4 +27,7 @@ The following steps will describe how to use the existing design language founda
 6. If you require specific patterns, then you can locate the abstracted code in the html files in the github repository. This code is modular and will work wherever it is placed within the site. Customisation options for the patterns will be documented in Indigo.
 
 7. The site uses respond js to achieve responsiveness on old IE browsers. If you are using a CDN you will need to make sure all of your CSS assets and your respond-proxy.html live on the same domain as the CDN see https://github.com/scottjehl/Respond
-We have left a Grunt copy task and a location in the package.json so you can set test this locally by setting up a static server.
+
+8. You will need to set your staticBaseUrl relative to your local project for development. The staticBaseUrl we set is for projects that use the UCL cdn assests.
+
+9. Please see http://editorconfig.org/ for notes on the editorconfig. We have included this in the project. You will need to configure your IDE to use this file to have the correct settings for each file type.

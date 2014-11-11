@@ -3,11 +3,15 @@ define(["jquery","allsite"],function($,gen){
 	$(document).ready(function(){
 		/* Browser feature detection and fixes
 		-----------------------------------------------------------------*/
-		if(!Modernizr.svg) {//target browsers that don't support SVG
+		if(Modernizr.svg===false) {//target browsers that don't support SVG
 			//update all instances of SVG in img tag
 			var $svgImage = $('img[src*="svg"]');
-			$svgImage.attr('src', function() {
-				return $(this).attr('src').replace('.svg', '.png');
+			$svgImage.each(function(){
+				$(this).attr('src', function() {
+					var tempSrc = $(this).attr('src');
+					var newSrc = tempSrc.replace('.svg', '.png');
+					$(this).attr('src',newSrc);
+				});
 			});
 			//fix mobile header
 			var mobileHeaderObj = $('#header-mobile');
@@ -49,6 +53,58 @@ define(["jquery","allsite"],function($,gen){
 				});
 			}
 		});
+		/* layout hacks
+		-----------------------------------------------------------------*/
+		var bodyClass = $('body').attr("class");
+		var topNavList = $('.topnav ul');
+		var mobilenav = $('.mobilenav');
+		var mobilenavList = $('.mobilenav ul');
+
+		function resetCols(){
+			$('#main,#leftcol').css({
+				'height':'auto'
+				,'min-height':'0'}
+			);
+		}
+
+		function equalizeVerticalCol(){
+			//start off by resetting the columns
+			resetCols();
+
+			if($(window).width() >= 768){
+				var mainColHeight = $('#main').height();
+				var verticalNavColHeight = $('#leftcol').height();
+				if(verticalNavColHeight > mainColHeight){
+					$('#main').css('min-height',verticalNavColHeight);
+				}
+				else{
+					$('#main').css({
+						'height':'auto'
+						,'min-height':'0'}
+					);
+				}
+			}else{
+				$('#main').css({
+					'height':'auto'
+					,'min-height':'0'}
+				);
+			}
+		}
+		function buildMobileNav(){
+			if(topNavList.length > 0 && mobilenavList.length < 1){
+				mobilenav.append("<ul>" + topNavList.html() + "</ul>");
+			}
+			return;
+		}
+		buildMobileNav();
+
+		var verticalBodyClassPattern = /vertical-nav(.)*/i;
+		if(verticalBodyClassPattern.test(bodyClass)){
+			equalizeVerticalCol();
+			$(window).resize(function(){
+				equalizeVerticalCol();
+			});
+		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
 	})
