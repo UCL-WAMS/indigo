@@ -22,7 +22,9 @@
 <!-- end social meta -->
 <title>UCL Design Language</title>
 
-<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="//static.ucl.ac.uk/silva/UCLIndigoSkin/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="http://static.ucl.ac.uk/silva/UCLDefaultLayoutV4/css/screen/uclSearch.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 
 <!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
 <!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
@@ -60,7 +62,7 @@
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
 <script>
-	require(["app/general"]);//load the default stuff
+	require(["app/general","app/search","app/searchWithAutoComplete"]);//load the default stuff
 </script>
 
 </head>
@@ -76,7 +78,7 @@
 			<div class="wrapper clearfix">
 
 				<div id="global-search">
-					<form action="#" method="get">
+					<form action="#" method="get" id="global-form">
 						<!--
 						<div class="search-type">
 							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
@@ -86,7 +88,7 @@
 						</div>
 						-->
 						<div id="searchform">
-							<input type="search" placeholder="Search UCL websites" id="search" value="">
+							<input type="search" placeholder="Search UCL websites, people, and more" id="searchUcl" value="">
 						</div>
 
 						<input type="submit" name="sumbit" value="Go" class="btn search" />
