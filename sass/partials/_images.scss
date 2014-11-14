@@ -23,17 +23,19 @@ figure + figure, figure + p {
 /* Floated Images
 -------------------------------------------------------------- */
 
-figure.float-left {
-  @include gs-span(dc, 1, 2);
-  @include gs-float(dc, left);
-  margin-bottom: 1em;
+img, figure {
+  &.float-left {
+    @include gs-span(dc, 1, 2);
+    @include gs-float(dc, left);
+    margin-bottom: 1em;
+  }
+  &.float-right {
+    @include gs-span(dc, 3, 4);
+    @include gs-float(dc, right);
+    margin-bottom: 1em;
+  }
 }
 
-figure.float-right {
-  @include gs-span(dc, 3, 4);
-  @include gs-float(dc, right);
-  margin-bottom: 1em;
-}
 .small-image{
   max-width: $smallImageMaxWidth;
 }

@@ -381,7 +381,7 @@ figure + figure, figure + p {
 
 /* Floated Images
 -------------------------------------------------------------- */
-figure.float-left {
+img.float-left, figure.float-left {
   display: block;
   float: left;
   margin-left: 0%;
@@ -392,8 +392,7 @@ figure.float-left {
   margin-left: 0;
   margin-right: 3.0303%;
   margin-bottom: 1em; }
-
-figure.float-right {
+img.float-right, figure.float-right {
   display: block;
   float: left;
   margin-left: 51.4596%;
@@ -1111,9 +1110,6 @@ form > ul {
 input[type="checkbox"] + label, input[type="radio"] + label {
   display: inline;
   margin-left: 5px; }
-
-input[type="checkbox"] {
-  -webkit-appearance: checkbox; }
 
 fieldset > div:first-of-type {
   margin-top: 0; }
