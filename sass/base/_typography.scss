@@ -264,14 +264,11 @@ dd + dt {
 }
 
 .dl-inline {
-	lh {
-		float: left;
-	}
 	dt, dd {
 		float: left;
 		margin: 0 0.5em 0 0;
 	}
-	lh + dt, dd + dt, dd + dd {
+	dd + dt, dd + dd {
 		clear: left;
 	}
 	dd + dd {
