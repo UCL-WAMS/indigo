@@ -207,7 +207,7 @@ ol, ul {
 	margin-left: 0;
 	> li {
 		vertical-align: middle;
-		padding-right: 5px;
+		margin-right: 5px;
 		@include inline-block;
 	}
 }
