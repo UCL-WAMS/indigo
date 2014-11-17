@@ -20,7 +20,7 @@ figure + figure, figure + p {
 	margin-top: 1em;
 }
 
-/* Floated Images
+* Image options
 -------------------------------------------------------------- */
 
 .img-pull-left {
@@ -37,35 +37,41 @@ figure + figure, figure + p {
 	@include gs-float(dc, right);
 }
 
-.image-sm {
+.img-rounded {
+	border-radius: 50em;
+}
+
+.img-sm {
 	max-width: $image-max-width-sm;
 }
 
-.image-md {
+.img-md {
 	max-width: $image-max-width-md;
 }
 
-.image-lg {
+.img-lg {
 	max-width: $image-max-width-lg;
 }
 
-.image-xl {
+.img-xl {
 	max-width: $image-max-width-xl;
 }
 
-.image-xxl {
+.img-xxl {
 	max-width: $image-max-width-xxl;
 }
 
 @include gs-media(m, max) {
-	.large-image,.xl-image,.xxl-image {
+	.img-lg,.img-xl,.img-xxl {
 		width: 100%;
 	}
 	.decorative {
 		display: none !important;
 	}
-	img.float-left,img.float-right {
-		&.large-image,&.xl-image,&.xxl-image {
+	.img-pull-left, .img-pull-right {
+		&.large-image,
+		&.xl-image,
+		&.xxl-image {
 			width: 100%;
 		}
 	}
