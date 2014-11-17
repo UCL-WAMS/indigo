@@ -39,6 +39,16 @@
 	clear: both;
 }
 
+/* Floats
+-------------------------------------------------------------- */
+%pull-left, .pull-left {
+	float: left;
+}
+
+%pull-right, .pull-right {
+	float: right;
+}
+
 /* Add margin
 -------------------------------------------------------------- */
 
