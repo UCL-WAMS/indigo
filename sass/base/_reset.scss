@@ -103,26 +103,6 @@ input, select {
 	vertical-align: middle;
 }
 
-/* Clearfix -------------------------------- */
-/* More info: http://nicolasgallagher.com/micro-clearfix-hack/
-
-For modern browsers */
-
-.clearfix:before,
-.clearfix:after {
-	content: "";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-/* For IE 6/7 (trigger hasLayout) */
-.clearfix {
-	zoom: 1;
-}
-
 /* removes rounded corners and things on inputs for iOS */
 
 input {
