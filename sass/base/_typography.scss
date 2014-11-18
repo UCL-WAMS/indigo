@@ -110,8 +110,8 @@ blockquote {
 
 small,
 .small {
-	@include rem(font-size, $font-size-xs);
 	font-weight: 400;
+	@include rem(font-size, $font-size-xs);
 }
 
 strong,
@@ -196,6 +196,7 @@ ol, ul {
 	margin-left: 0;
 	> li {
 		margin-right: 10px;
+		vertical-align: middle;
 		@include inline-block;
 	}
 }

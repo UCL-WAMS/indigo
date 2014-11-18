@@ -708,9 +708,9 @@ blockquote {
 
 small,
 .small {
+  font-weight: 400;
   font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: 400; }
+  font-size: 1.2rem; }
 
 strong,
 .strong {
@@ -778,6 +778,7 @@ ol, ul {
   margin-left: 0; }
   .list-inline > li, .pills > li {
     margin-right: 10px;
+    vertical-align: middle;
     display: -moz-inline-stack;
     display: inline-block;
     *vertical-align: auto;
