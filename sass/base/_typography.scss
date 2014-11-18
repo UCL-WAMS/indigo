@@ -196,7 +196,6 @@ ol, ul {
 	margin-left: 0;
 	> li {
 		margin-right: 10px;
-		vertical-align: middle;
 		@include inline-block;
 	}
 }
