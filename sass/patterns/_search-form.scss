@@ -27,6 +27,7 @@
 	width: 85%;
 	box-sizing: border-box;
 	height: 30px;
+	text-align: center;
 	@include gs-media(m, max) {
 		width: 80%;
 	}
