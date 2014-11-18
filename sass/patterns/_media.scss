@@ -21,6 +21,10 @@
 	}
 }
 
+.media__aside--constrain {
+	max-width: 7em;
+}
+
 .media__aside img,
 img.media__aside {
 	width: auto !important;
@@ -29,7 +33,6 @@ img.media__aside {
 
 .media__body {
 	overflow: hidden;
-	max-width: 40em;
 	margin: 0;
 	@include respond-max($screen-md) {
 		@include rem(font-size, $font-size-sm);

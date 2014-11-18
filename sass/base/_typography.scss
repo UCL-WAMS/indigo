@@ -23,9 +23,8 @@ body {
 /* Vertical rhythym
 -------------------------------------------------------------- */
 
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video {
 	margin-bottom: 1.5em;
-	line-height: 1.5; 
 }
 
 /* Headings
@@ -90,28 +89,18 @@ h6, .as-h6, %as-h6 {
 }
 
 a {
-	color: #034da1;
+	color: $link-colour;
 	text-decoration: none;
 	@include on-interaction {
-		color: #034da1;
+		color: $link-colour;
 		text-decoration: underline;
 	}
-}
-
-.box h2 {
-	margin-top: 0;
-}
-
-.site-content__sidebar h1 {
-	font-size: 26px;
 }
 
 /* Quotes
 -------------------------------------------------------------- */
 
 blockquote {
-	margin: 1.5em;
-	color: #666;
 	font-style: italic;
 	overflow: hidden;
 }
@@ -121,7 +110,7 @@ blockquote {
 
 small,
 .small {
-	font-size: 0.9em;
+	@include rem(font-size, $font-size-xs);
 	font-weight: 400;
 }
 
@@ -206,8 +195,7 @@ ol, ul {
 	display: inline;
 	margin-left: 0;
 	> li {
-		vertical-align: middle;
-		padding-right: 5px;
+		margin-right: 10px;
 		@include inline-block;
 	}
 }
@@ -216,7 +204,7 @@ ol, ul {
 	li {
 		&:after {
 			content: "|";
-			margin-left: 2.5px;
+			margin-left: 10px;
 		}
 		&:last-child {
 			&:after {
@@ -224,6 +212,21 @@ ol, ul {
 				display: none;
 			}
 		}	
+	}
+}
+
+.list-divided {
+	li {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		@include rem(margin-bottom, 1.8);
+		@include rem(padding-bottom, 1.8);
+		border-bottom: 1px solid #cccccc;
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -258,14 +261,17 @@ dd + dt {
 }
 
 .dl-inline {
-	lh {
-		float: left;
+	@extend %clearfix;
+	dt {
+		min-width: 100px;
 	}
 	dt, dd {
 		float: left;
-		margin: 0 0.5em 0 0;
+		margin-top: 0;
+		@include rem(margin-right, .8);
+		@include rem(margin-bottom, .4);
 	}
-	lh + dt, dd + dt, dd + dd {
+	dd + dt, dd + dd {
 		clear: left;
 	}
 	dd + dd {

@@ -7,6 +7,7 @@
 @mixin alignment {
 	position: relative;
 	left: -35px;
-	padding: 0 35px;
+	padding-left: 35px;
+	padding-right: 35px;
 	width: 100%;
 }
