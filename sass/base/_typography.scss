@@ -142,6 +142,7 @@ cite, .cite, em, dfn {
 .mod {
 	color: #ccc;
 	margin-top: 2em;
+	clear: both;
 	@include rem(font-size, $font-size-xs);
 }
 
