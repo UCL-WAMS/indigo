@@ -89,7 +89,7 @@ h6, .as-h6, %as-h6 {
 }
 
 a {
-	color: #034da1;
+	color: $link-colour;
 	text-decoration: none;
 	@include on-interaction {
 		color: #034da1;
