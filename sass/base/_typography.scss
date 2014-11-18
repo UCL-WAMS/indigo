@@ -110,7 +110,7 @@ blockquote {
 
 small,
 .small {
-	font-size: 0.9em;
+	@include rem(font-size, $font-size-xs);
 	font-weight: 400;
 }
 
