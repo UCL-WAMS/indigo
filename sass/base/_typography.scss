@@ -220,8 +220,8 @@ ol, ul {
 	li {
 		margin-bottom: 1em;
 		padding-bottom: 1em;
-		@include rem(margin-bottom, 1.8);
-		@include rem(padding-bottom, 1.8);
+		@include rem(margin-bottom, 1.4);
+		@include rem(padding-bottom, 1.4);
 		border-bottom: 1px solid #cccccc;
 		&:last-child {
 			border-bottom: 0;
