@@ -732,7 +732,8 @@ cite, .cite, em, dfn {
 
 .mod {
   color: #ccc;
-  margin-top: 2em;
+  padding-top: 2em;
+  clear: both;
   font-size: 12px;
   font-size: 1.2rem; }
 
@@ -778,7 +779,6 @@ ol, ul {
   margin-left: 0; }
   .list-inline > li, .pills > li {
     margin-right: 10px;
-    vertical-align: middle;
     display: -moz-inline-stack;
     display: inline-block;
     *vertical-align: auto;
@@ -1086,6 +1086,7 @@ input.error {
   text-decoration: none;
   color: #ffffff;
   padding: .75em 1.5em;
+  text-align: left;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.21);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -2812,9 +2813,6 @@ img.media__aside {
         background-color: #444; } }
   .masthead img {
     width: auto; }
-  .masthead a {
-    color: #ffffff;
-    text-decoration: none; }
 
 .masthead__search {
   position: relative;
@@ -2869,6 +2867,13 @@ img.media__aside {
     *vertical-align: auto;
     zoom: 1;
     *display: inline; }
+
+.masthead__link {
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none; }
+  .masthead__link:hover, .masthead__link:active, .masthead__link:focus {
+    color: #ffffff; }
 
 /* 
 * Pattern name: Nav
@@ -3283,7 +3288,8 @@ img.media__aside {
   padding-left: 10px;
   width: 85%;
   box-sizing: border-box;
-  height: 30px; }
+  height: 30px;
+  text-align: center; }
   @media only screen and (max-width: 767px) {
     .search-form__input {
       width: 80%; } }
@@ -3305,7 +3311,7 @@ img.media__aside {
   padding: 0;
   box-sizing: border-box;
   background-color: #4693ea; }
-  .search-form__input--submit:hover {
+  .search-form__input--submit:hover, .search-form__input--submit:active, .search-form__input--submit:focus {
     background: #2f86e7; }
   @media only screen and (max-width: 767px) {
     .search-form__input--submit {
