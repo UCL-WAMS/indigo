@@ -27,7 +27,6 @@
 	width: 85%;
 	box-sizing: border-box;
 	height: 30px;
-	text-align: center;
 	@include gs-media(m, max) {
 		width: 80%;
 	}
@@ -44,6 +43,7 @@
 }
 
 .search-form__input--submit {
+	text-align: center;
 	position: absolute;
 	top: 0;
 	left: 92%;

@@ -550,8 +550,7 @@ audio {
     display: block;
     float: left;
     margin-left: 0;
-    width: 100%;
-    margin-bottom: 2em; } }
+    width: 100%; } }
 
 .layout-horizontal--nav-1col .site-content__main {
   display: block;
@@ -591,8 +590,7 @@ audio {
     display: block;
     float: left;
     margin-left: 0;
-    width: 100%;
-    margin-bottom: 2em; } }
+    width: 100%; } }
 
 .layout-vertical--nav-show-top-nav .nav--top {
   display: block; }
@@ -3288,8 +3286,7 @@ img.media__aside {
   padding-left: 10px;
   width: 85%;
   box-sizing: border-box;
-  height: 30px;
-  text-align: center; }
+  height: 30px; }
   @media only screen and (max-width: 767px) {
     .search-form__input {
       width: 80%; } }
@@ -3303,6 +3300,7 @@ img.media__aside {
   color: #666; }
 
 .search-form__input--submit {
+  text-align: center;
   position: absolute;
   top: 0;
   left: 92%;
