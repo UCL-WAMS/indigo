@@ -78,7 +78,7 @@
 			<div class="wrapper clearfix">
 
 				<div id="global-search">
-					<form action="https://funnelback-dev.ucl.ac.uk/s/search.html" method="get" id="global-form">
+					<form action="//search2.ucl.ac.uk/s/search.html" method="get" id="global-form">
 						<!--
 						<div class="search-type">
 							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
@@ -87,11 +87,10 @@
 							<label for="ucl-search" class="staff">Directory</label>
 						</div>
 						-->
-						<input type="search" placeholder="Search UCL websites, people, and more" id="searchUcl" name="query" value="">
 						<div id="searchform">
-							<input type="search" placeholder="Search UCL websites, people, and more" id="searchUcl" value="">
+							<input type="search" placeholder="Search UCL websites, people, and more" id="searchUcl" name="query" value="">
 						</div>
-
+						<input type="hidden" name="collection" value="website-meta">
 						<input type="submit" name="sumbit" value="Go" class="btn search" />
 					</form>
 
