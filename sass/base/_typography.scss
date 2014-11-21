@@ -140,8 +140,7 @@ cite, .cite, em, dfn {
 }
 
 .mod {
-	color: #ccc;
-	padding-top: 2em;
+	color: $lightgrey;
 	clear: both;
 	@include rem(font-size, $font-size-xs);
 }
