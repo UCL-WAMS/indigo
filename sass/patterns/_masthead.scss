@@ -70,6 +70,9 @@
 		display: block;
 		text-align: left;
 	}
+	@include respond-max($screen-lg) {
+		padding-right: .75em;
+	}
 	.lt-ie9 & {
 		margin-top: 8px;
 		@include inline-block;
