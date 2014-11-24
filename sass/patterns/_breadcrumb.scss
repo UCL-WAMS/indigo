@@ -19,6 +19,8 @@
 }
 
 .breadcrumb--nav {
+	margin-bottom: 0;
+	border-bottom: 0;
 	@include alignment;
 	.breadcrumb__list {
 		line-height: 4;

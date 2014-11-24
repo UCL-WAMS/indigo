@@ -43,6 +43,7 @@
 }
 
 .search-form__input--submit {
+	text-align: center;
 	position: absolute;
 	top: 0;
 	left: 92%;
@@ -51,7 +52,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	background-color: #4693ea;
-	&:hover {
+	@include on-interaction {
 		background: darken(#4693ea, 5%);
 	}
 	@include gs-media(m, max) {

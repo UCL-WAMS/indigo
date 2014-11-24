@@ -20,10 +20,6 @@
 	img {
 		width: auto;
 	}
-	a {
-		color: $white;
-		text-decoration: none;
-	}
 }
 
 .masthead__search {
@@ -74,8 +70,20 @@
 		display: block;
 		text-align: left;
 	}
+	@include respond-max($screen-lg) {
+		padding-right: .75em;
+	}
 	.lt-ie9 & {
 		margin-top: 8px;
 		@include inline-block;
+	}
+}
+
+.masthead__link {
+	font-weight: 400;
+	color: $white;
+	text-decoration: none;
+	@include on-interaction {
+		color: $white;
 	}
 }

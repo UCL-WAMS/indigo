@@ -23,7 +23,8 @@
 	display: none;
 	width: 100%;
 	background-color: $content-bg-color;
-	padding-bottom: $baseline;
+	padding-bottom: 1em;
+	padding-top: 1em;
 	overflow: hidden;
 	@include alignment;
 	ul {

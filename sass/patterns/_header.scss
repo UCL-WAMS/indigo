@@ -54,7 +54,8 @@
 	background-repeat: repeat-x;
 	position: relative;
 	left: -35px;
-	background-color: $white;
+	background-color: $primary-colour;
+	border-bottom: .5em solid $primary-colour;
 	@include gs-media(m, max) {
 		display: block;
 	}
@@ -66,7 +67,6 @@
 		background-size: 90%;
 	}
 }
-
 
 .header__open {
 	@include gs-media(m, max) {

@@ -12,7 +12,7 @@ body {
 	background-color: #d9d9d1;
 	overflow-x: hidden;
 	line-height: $line-height;
-	hyphens: auto;
+	hyphens: none;
 	-ms-hyphens: none;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: none;
@@ -23,9 +23,8 @@ body {
 /* Vertical rhythym
 -------------------------------------------------------------- */
 
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video {
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
 	margin-bottom: 1.5em;
-	line-height: 1.5; 
 }
 
 /* Headings
@@ -90,10 +89,10 @@ h6, .as-h6, %as-h6 {
 }
 
 a {
-	color: #034da1;
+	color: $link-colour;
 	text-decoration: none;
 	@include on-interaction {
-		color: #034da1;
+		color: $link-colour;
 		text-decoration: underline;
 	}
 }
@@ -102,8 +101,6 @@ a {
 -------------------------------------------------------------- */
 
 blockquote {
-	margin: 1.5em;
-	color: #666;
 	font-style: italic;
 	overflow: hidden;
 }
@@ -113,8 +110,8 @@ blockquote {
 
 small,
 .small {
-	font-size: 0.9em;
 	font-weight: 400;
+	@include rem(font-size, $font-size-xs);
 }
 
 strong,
@@ -143,8 +140,8 @@ cite, .cite, em, dfn {
 }
 
 .mod {
-	color: #ccc;
-	margin-top: 2em;
+	color: $lightgrey;
+	clear: both;
 	@include rem(font-size, $font-size-xs);
 }
 
@@ -198,8 +195,7 @@ ol, ul {
 	display: inline;
 	margin-left: 0;
 	> li {
-		vertical-align: middle;
-		margin-right: 5px;
+		margin-right: 10px;
 		@include inline-block;
 	}
 }
@@ -208,7 +204,7 @@ ol, ul {
 	li {
 		&:after {
 			content: "|";
-			margin-left: 2.5px;
+			margin-left: 10px;
 		}
 		&:last-child {
 			&:after {
@@ -221,8 +217,10 @@ ol, ul {
 
 .list-divided {
 	li {
-		margin-bottom: 1.5em;
-		padding-bottom: 1.5em;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		@include rem(margin-bottom, 1.4);
+		@include rem(padding-bottom, 1.4);
 		border-bottom: 1px solid #cccccc;
 		&:last-child {
 			border-bottom: 0;
@@ -231,7 +229,6 @@ ol, ul {
 		}
 	}
 }
-
 
 .tabbed > div ul li, .box ul li {
 	margin-left: 1em;
@@ -264,9 +261,15 @@ dd + dt {
 }
 
 .dl-inline {
+	@extend %clearfix;
+	dt {
+		min-width: 100px;
+	}
 	dt, dd {
 		float: left;
-		margin: 0 0.5em 0 0;
+		margin-top: 0;
+		@include rem(margin-right, .8);
+		@include rem(margin-bottom, .4);
 	}
 	dd + dt, dd + dd {
 		clear: left;
