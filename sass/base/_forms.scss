@@ -182,6 +182,7 @@ form em {
 
 .form__group {
 	margin-bottom: $baseline;
+	position: relative;
 	@include guttering;
 }
 
