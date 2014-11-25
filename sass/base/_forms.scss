@@ -66,13 +66,6 @@ input:disabled {
 	cursor: not-allowed;
 }
 
-input[type=checkbox],
-input[type=radio] {
-	vertical-align: baseline;
-	background: none;
-	border: none;
-}
-
 // Search inputs in iOS
 //
 // This overrides the extra rounded corners on search inputs in iOS so that our
