@@ -9,9 +9,6 @@
 	padding: 0;
 	border: 1px solid lighten(#ccc, 7.5%);
 	@include list-unstyled;
-	@include respond-max($screen-lg) {
-		margin-bottom: .5em;
-	}
 }
 
 .menu-block--no-keyline {

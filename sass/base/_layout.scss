@@ -39,7 +39,7 @@
 	}
 
 	@include gs-media(m, max) {
-		@include gs-span(m, 1);
+		@include gs-span(m, all);
 	}
 }
 
@@ -50,7 +50,7 @@
 	}
 
 	@include gs-media(m, max) {
-		@include gs-span(m, 2);
+		@include gs-span(m, all);
 	}
 }
 
@@ -61,8 +61,7 @@
 	}
 
 	@include gs-media(m, max) {
-		@include gs-span(m, 1);
-		clear: left;
+		@include gs-span(m, all);
 	}
 }
 
