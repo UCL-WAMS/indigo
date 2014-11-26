@@ -54,6 +54,7 @@
 .brand__logo {
 	display: block;
 	margin-bottom: 0;
+	width: 100%;
 	@include gs-media(m, max) {
 		display: none;
 	}
