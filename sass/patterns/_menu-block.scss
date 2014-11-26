@@ -20,7 +20,6 @@
 	margin-top: 0;
 	@include list-unstyled;
 	.is-active {
-		border-left: .4em solid #333;
 		font-weight: bold;
 	} 
 }
@@ -61,5 +60,8 @@
 		margin-bottom: -1px;
 		background-color: black;
 		color: white;
+	}
+	.is-active & {
+		border-left: .4em solid #333;
 	}
 }
