@@ -90,6 +90,24 @@
 	}
 }
 
+.col--1-4-lg-layout {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, 1, 4);
+	}
+}
+
+.col--1-5-lg-layout {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, all);
+	}
+}
+
+.col--2-lg-layout {
+	@include respond-min($screen-lg) {
+		@include gs-span(dl, 2);
+	}
+}
+
 .col--2-3-lg-layout {
 	@include respond-min($screen-lg) {
 		@include gs-span(dl, 2, 3);
@@ -135,12 +153,6 @@
 .col--5-lg-layout {
 	@include respond-min($screen-lg) {
 		@include gs-span(dl, 5);
-	}
-}
-
-.col--1-5-layout {
-	@include respond-min($screen-lg) {
-		@include gs-span(dl, all);
 	}
 }
 
