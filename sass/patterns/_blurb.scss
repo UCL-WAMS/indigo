@@ -27,6 +27,10 @@
 	}
 }
 
+.blurb__video {
+	margin-bottom: 1em;
+}
+
 .blurb__body {
 	@include guttering;
 	.blurb--wide & {
