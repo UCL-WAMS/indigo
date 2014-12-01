@@ -18,6 +18,7 @@
 
 .blurb__img {
 	margin-bottom: 0.5em;
+	width: 100%;
 	.blurb--wide & {
 		@include gs-span(dc, 1);
 		@include gs-media(m, max) {
