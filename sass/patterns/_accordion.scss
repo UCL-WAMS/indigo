@@ -28,6 +28,7 @@
 .accordion__description {
 	border-top: 0;
 	overflow: hidden;
+	@include guttering;
 	&:last-of-type {
 		position: relative;
 		top: -1px;
