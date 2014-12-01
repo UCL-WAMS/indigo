@@ -19,9 +19,6 @@
 	margin-bottom: 0;
 	margin-top: 0;
 	@include list-unstyled;
-	.is-active {
-		font-weight: bold;
-	} 
 }
 
 .menu-block__item {
