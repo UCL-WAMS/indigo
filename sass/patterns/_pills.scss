@@ -39,7 +39,7 @@
 		max-width: 20em;
 		margin-right: 0;
 	}
-	@include respond-max($screen-xs) {
+	@include respond-max($screen-sm) {
 		margin-bottom: .5em;
 	}
 }

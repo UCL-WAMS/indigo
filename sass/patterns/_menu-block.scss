@@ -19,10 +19,6 @@
 	margin-bottom: 0;
 	margin-top: 0;
 	@include list-unstyled;
-	.is-active {
-		border-left: .4em solid #333;
-		font-weight: bold;
-	} 
 }
 
 .menu-block__item {
@@ -61,5 +57,8 @@
 		margin-bottom: -1px;
 		background-color: black;
 		color: white;
+	}
+	.is-active & {
+		border-left: .4em solid #333;
 	}
 }

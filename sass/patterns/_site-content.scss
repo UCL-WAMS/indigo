@@ -39,7 +39,7 @@
 	}
 	@include gs-media(m, max) {
 		@include gs-span(m, all);
-		padding-top: 1em;
+		padding-top: $baseline;
 	}
 }
 

@@ -116,6 +116,7 @@ td, td img {
 			width: auto;
 			position: relative;
 			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
 			white-space: nowrap;
 			tr {
 				vertical-align: top;

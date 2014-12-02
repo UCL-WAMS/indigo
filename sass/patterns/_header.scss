@@ -78,6 +78,14 @@
 	}
 }
 
+.header__link {
+	position: absolute;
+	height: 100%;
+	right: 10%;
+	width: 30%;
+	top: 0;
+}
+
 .header__close {
 	display: none;
 	@include gs-media(m, max) {
