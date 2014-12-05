@@ -39,16 +39,15 @@ th, td {
 	display: table-cell;
 	text-align: left;
 	width: auto;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #e6e6e6;
 	border-top: none;
 	vertical-align: middle;
-	border-bottom: 1px solid #EEEEEE;
 	padding: 0.25em 1em 0.25em 0;
 }
 
 th {
-	border-right: 1px solid #ddd;
-	border-bottom-color: #ccc;
+	border-right: 1px solid #e6e6e6;
+	border-bottom-color: #e6e6e6;
 	color: #333333;
 	font-weight: 700;
 	background-color: #eee;
@@ -116,6 +115,7 @@ td, td img {
 			width: auto;
 			position: relative;
 			overflow-x: auto;
+			overflow-y: hidden;
 			-webkit-overflow-scrolling: touch;
 			white-space: nowrap;
 			tr {
