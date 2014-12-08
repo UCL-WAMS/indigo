@@ -378,7 +378,7 @@ figure + figure, figure + p {
 
 /* Floated Images
 -------------------------------------------------------------- */
-img.float-left {
+img.float-left, figure.float-left {
   display: block;
   float: left;
   margin-left: 0%;
@@ -389,8 +389,7 @@ img.float-left {
   margin-left: 0;
   margin-right: 3.0303%;
   margin-bottom: 1em; }
-
-img.float-right {
+img.float-right, figure.float-right {
   display: block;
   float: left;
   margin-left: 51.4596%;
@@ -843,7 +842,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-[class*=pullquote] q.quote {
+[class*=pullquote] p.quote {
   line-height: 1.5em;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", serif;

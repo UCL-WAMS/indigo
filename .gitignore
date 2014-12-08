@@ -36,6 +36,9 @@ tags
 # nodejs npm modules
 /node_modules
 
+# npm logs
+npm-debug.log
+
 #page speed test records
 /pagespeedTests
 
