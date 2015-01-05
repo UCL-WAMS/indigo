@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://www.ucl.ac.uk"/>
 <meta property="og:site_name" content="UCL"/>
 <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
-<meta property="og:type" content="website"/>
+<meta property="og:type" content="website"/> 
 <meta property="og:profile_id" content="uclofficial"/>
 <!-- end social meta -->
 <title>UCL Design Language</title>
@@ -62,7 +62,7 @@
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
 <script>
-	require(["app/general","app/search","app/searchWithAutoComplete"]);//load the default stuff
+	require(["app/general","app/search","app/searchWithAutoComplete"]);
 </script>
 
 </head>
@@ -79,14 +79,6 @@
 
 				<div id="global-search">
 					<form action="//search2.ucl.ac.uk/s/search.html" method="get" id="global-form">
-						<!--
-						<div class="search-type">
-							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
-							<label for="ucl-site" class="site">Site</label>
-							<input type="radio" id="ucl-search" name="operation" value="2">
-							<label for="ucl-search" class="staff">Directory</label>
-						</div>
-						-->
 						<div id="searchform">
 							<input type="search" placeholder="Search UCL websites, people, and more" id="searchUcl" name="query" value="">
 						</div>
@@ -218,24 +210,59 @@
 					<!-- start main slot where silva content gets rendered-->
 
 					<div class="content-main">
+						<h1>Video Listing - (JW Player)</h1>
+							<article id="video-1"></article><br />
+							<article id="video-2"></article><br />
+							<article id="video-3"></article><br />
+							<article id="video-4"></article>
+							<script>
+								(function(){
+									var videoListingArray = [
+										{
+											"containerId" : "video-1"
+											,"file" : "//mediasource-01.mediares.ucl.ac.uk/about-ucl/professor_elizabeth_paice_interview.m4v"
+											,"image" : "//a1247.phobos.apple.com/us/r30/Podcasts/1e/5e/50/tns.fgtpnxzx.jpg"
+										}
+										,{
+											"containerId" : "video-2"
+											,"file" : "//mediasource-01.mediares.ucl.ac.uk/spotlight/2008-05-27-10-01-31-UCL_Advances_Spotlight_on:_Financial_Computing-video.m4v"
+											,"image" : "//a27.phobos.apple.com/us/r30/Podcasts4/v4/fb/ed/21/fbed2139-1b47-530f-38e7-e0ce83bf93cf/mza_4336809340853322153.jpg"
+										}
+										,{
+											"containerId" : "video-3"
+											,"file" : "//mediasource-01.mediares.ucl.ac.uk/talks/Prof_Pete_Coffey_Stemming_vision_loss_with_stem_cells_seeing_is_believing-video.m4v"
+											,"image" : "//deimos3.apple.com/indigo//2f/24/f1/ea/2f24f1ea4357fe2a4f198bfe5dd8f8883d261024da086df36d977e3fc841e861-2103462512.gif"
+										}
+										,{
+											"containerId" : "video-4"
+											,"file" : "https://www.youtube.com/watch?v=FvSvJwQbRoo"
+											,"image" : "http://www.studentrights.org.uk/userfiles/images/UCL3.jpg"
+										}
+									] 
+									require(
+										[
+											"jquery"
+											,"jwplayer"
+										],
+										function ($,jwplayer) {
+											var i = 0;
+											$(document).ready(function(){
+												jwplayer.key="NmFq93RR/ioemxMEtxGgvNDNjp55xLjEW5XrEA==";
+												for(i in videoListingArray){
+													jwplayer(videoListingArray[i].containerId).setup({
+														file: videoListingArray[i].file
+														,image: videoListingArray[i].image
+														,width: '100%'
+														,flashplayer: '//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jwplayer.flash.swf'
+														,html5player: '//cdn.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jwplayer.html5.js'
 
-						<article>
-
-								<h1>Main page title</h1>
-
-								<p>This is the main content column.</p>
-
-								<h2>UCL banner</h2>
-
-								<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
-
-								<p>If you would instead like to use a photograph in the banner add the class '.photograph-on' to the '.photograph' div and assign your image to this class in the css</p>
-
-							</article>
-
-						<p class="mod">Page last modified on <span class="lastMod">06&nbsp;aug&nbsp;13&nbsp;08:09</span>
-						</p>
-
+													});
+												}
+											});
+										}
+									);
+								})()
+							</script>
 					</div>
 
 					<div class="content-sidebar">
