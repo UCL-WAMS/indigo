@@ -1,4 +1,4 @@
-# UCL Design Language
+# UCL Design Language - release 2
 
 The UCL Design Language repository contains:
 
@@ -31,3 +31,8 @@ The following steps will describe how to use the existing design language founda
 8. You will need to set your staticBaseUrl relative to your local project for development. The staticBaseUrl we set is for projects that use the UCL cdn assests.
 
 9. Please see http://editorconfig.org/ for notes on the editorconfig. We have included this in the project. You will need to configure your IDE to use this file to have the correct settings for each file type.
+
+
+Release 2 updates
+------------------
+We have updated the patterns and css so the class names and html follows the BEM methodology https://bem.info
