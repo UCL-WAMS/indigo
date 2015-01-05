@@ -2532,36 +2532,8 @@ figure + figure, figure + p {
     .hero--home .hero__body--background {
       padding: 1.5em; } }
 
-.hero__content {
-  width: 75%; }
-  @media (max-width: 1499) {
-    .hero__content {
-      width: 85%;
-      float: left;
-      margin: auto; } }
-  @media (max-width: 1179px) {
-    .hero__content {
-      width: 100%;
-      float: none; } }
-
 .hero__body {
-  box-sizing: border-box;
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 65.62502%;
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 65.79861%; }
-  @media (max-width: 1179px) {
-    .hero__body {
-      width: 85%; } }
-  @media (max-width: 989px) {
-    .hero__body {
-      width: 100%; } }
+  box-sizing: border-box; }
   .hero__body > *:last-child {
     margin-bottom: 0; }
 

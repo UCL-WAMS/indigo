@@ -60,29 +60,10 @@
 	}
 }
 
-.hero__content {
-	width: 75%;
-	@include respond-max(1500) { 
-		width: 85%;
-		float: left;
-		margin: auto;
-	}
-	@include respond-max($screen-xxl) {
-		width: 100%;
-		float: none;
-	}
-}
+.hero__content {}
 
 .hero__body {   
 	box-sizing: border-box;
-	@include gs-span(dl, 1, 3);
-	@include gs-span(t, 1, 2);
-	@include respond-max($screen-xxl) {
-		width: 85%;
-	}
-	@include respond-max($screen-lg) {
-		width: 100%;
-	}
 	> *:last-child {
 		margin-bottom: 0;
 	}
