@@ -12,19 +12,6 @@ module.exports = function(grunt) {
 				dest: '<%= pkg.jsDestDir %>/src/all-site.js'
 			}
 		},
-		connect: {
-			options: {
-				port: 9000,
-				livereload: 35729,
-				// change this to '0.0.0.0' to access the server from outside
-				hostname: 'localhost'
-			},
-			livereload: {
-				options: {
-					open: true,
-				}
-			}
-		},
 		uglify: {
 			dynamic_mappings: {
 				files: [{
@@ -83,16 +70,6 @@ module.exports = function(grunt) {
 			sass: {
 				files: ['<%= pkg.styleSrcDir %>/**/*.scss'],
 				tasks: ['sass:dist', 'autoprefixer', 'cssmin']
-			},
-			livereload: {
-				options: {
-					livereload: '<%= connect.options.livereload %>'
-				},
-				files: [
-					'*.html',
-					'<%= pkg.styleDestDir %>/**/*.css',
-					'<%= pkg.jsDestDir %>/**/*.js',
-				]
 			}
 		},
 });
