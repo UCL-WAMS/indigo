@@ -1,56 +1,57 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-/* Config */
-@import "partials/environment";
-
-/* Variables */
+/* Variables
+-------------------------------------------------------------- */
 @import "variables/variables";
 
-/* Vendor Dependencies */
-@import "partials/gridset";
+/* Mixins
+-------------------------------------------------------------- */
+@import "mixins/mixins";
 
-/* Mixins */
-@import "mixins/media-query";
-@import "mixins/gradient";
-@import "mixins/no-js";
-@import "mixins/modernizr";
+/* Helper classes
+-------------------------------------------------------------- */
+@import "utilities/helpers";
+@import "utilities/states";
 
-/* Authored Dependencies */
-@import "partials/reset";
-@import "partials/helpers";
+/* Base dependencies 
+-------------------------------------------------------------- */
+@import "base/reset";
+@import "base/layout";
+@import "base/typography";
+@import "base/forms";
+@import "base/buttons";
+@import "base/tables";
+@import "base/images";
+@import "base/grid";
 
-@import "partials/accordion";
-@import "partials/article";
-@import "partials/audio";
-@import "partials/box";
-@import "partials/code";
-@import "partials/divider";
-@import "partials/images";
-@import "partials/links";
-@import "partials/map";
-@import "partials/slides";
-@import "partials/social";
-@import "partials/tabs";
-@import "partials/tables";
-@import "partials/wrapper";
-@import "partials/vcard";
-@import "partials/video";
-
-@import "partials/elements";
-@import "partials/typography";
-
-/* Patterns */
-@import "partials/forms";
-@import "partials/blog";
-@import "partials/carousel";
-
-/* Sections */
-@import "partials/globalmasthead";
-@import "partials/layout";
-
-/* Search */
-
-@import "partials/search";
+/* Patterns
+-------------------------------------------------------------- */
+@import "patterns/accordion";
+@import "patterns/advert";
+@import "patterns/box";
+@import "patterns/blocked-link";
+@import "patterns/blurb";
+@import "patterns/brand";
+@import "patterns/breadcrumb";
+@import "patterns/code";
+@import "patterns/collapse";
+@import "patterns/commentlist";
+@import "patterns/divider";
+@import "patterns/footer";
+@import "patterns/flag";
+@import "patterns/header";
+@import "patterns/hero";
+@import "patterns/input-group";
+@import "patterns/media";
+@import "patterns/menu-block";
+@import "patterns/message";
+@import "patterns/masthead";
+@import "patterns/nav";
+@import "patterns/pull-quote";
+@import "patterns/pills";
+@import "patterns/photograph";
+@import "patterns/pagination";
+@import "patterns/site-content";
+@import "patterns/search-form";
+@import "patterns/tabs";
+@import "patterns/tag";
+@import "patterns/vcard";
+@import "patterns/video-wrap";

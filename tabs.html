@@ -1,89 +1,94 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-<meta charset=utf-8 />
-<meta name="author" content="UCL" />
-<meta name="description" content="UCL Homepage" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- social meta -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@uclnews">
-<meta name="twitter:title" content="UCL - London's Global University">
-<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
-<meta name="twitter:creator" content="@UCLWAMS">
-<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
-<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png"/>
-<meta property="og:title" content="UCL - London's Global University"/>
-<meta property="og:url" content="http://www.ucl.ac.uk"/>
-<meta property="og:site_name" content="UCL"/>
-<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
-<meta property="og:type" content="website"/> 
-<meta property="og:profile_id" content="uclofficial"/>
-<!-- end social meta -->
-<title>UCL Design Language</title>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
 
-<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="favicon-144.png">
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
-
-<script>
+	<script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
 	Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard
-		//if old browser load the shiv
-		,nope : [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
-			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+		nope: [
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
-		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
 	}
-	if(cuttingTheMustard){
+	if (cuttingTheMustard) {
 		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
-</script>
+	</script>
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
-<script>
-	require(["app/general"]);//load the default stuff
-</script>
-
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
+	<script>
+		require(["app/general"]); //load the default stuff
+	</script>
 </head>
 
-<body id="tabs-view" class="vertical-nav vertical-nav--2col">
+<body id="tabs-view" class="layout-vertical layout-vertical--nav-2col
+">
 	<div class="tabbed">
-	   <ul class="tabs clearfix">
-	     <li><a href="#tab-1">Tab one</a></li>
-	     <li><a href="#tab-2">Tab two</a></li>
-	     <li><a href="#tab-3">Tab three</a></li>
-	   </ul>
-	   <div id="tab-1">
-	     <h3>Tab 1</h3>
-	     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
-	   </div>
-	   <div id="tab-2">
-	     <h3>Tab 2</h3>
-	     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
-	   </div>
-	   <div id="tab-3">
-	     <h3>Tab 3</h3>
-	     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula content-mainbibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio.</p>
-	   </div>
-	 </div>
+		<ul class="tabbed__list clearfix">
+			<li class="tabbed__item"><a href="#tab-1" class="tabbed__link">Tab one</a>
+			</li>
+			<li class="tabbed__item"><a href="#tab-2" class="tabbed__link">Tab two</a>
+			</li>
+			<li class="tabbed__item"><a href="#tab-3" class="tabbed__link">Tab three</a>
+			</li>
+		</ul>
+		<div id="tab-1" class="tabbed__content">
+			<h3>Tab 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
+		</div>
+		<div id="tab-2" class="tabbed__content">
+			<h3>Tab 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
+		</div>
+		<div id="tab-3" class="tabbed__content">
+			<h3>Tab 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula content__mainbibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio.</p>
+		</div>
+	</div>
 </body>
+
 </html>

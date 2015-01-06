@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-<meta charset=utf-8 />
-<meta name="author" content="UCL" />
-<meta name="description" content="UCL Homepage" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- social meta -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@uclnews">
-<meta name="twitter:title" content="UCL - London's Global University">
-<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
-<meta name="twitter:creator" content="@UCLWAMS">
-<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
-<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png"/>
-<meta property="og:title" content="UCL - London's Global University"/>
-<meta property="og:url" content="http://www.ucl.ac.uk"/>
-<meta property="og:site_name" content="UCL"/>
-<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students."/>
-<meta property="og:type" content="website"/> 
-<meta property="og:profile_id" content="uclofficial"/>
-<!-- end social meta -->
-<title>UCL Design Language</title>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
 
-<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
-<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="favicon-144.png">
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
+	<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/modernizr-custom.js"></script>
 
-<script>
-	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+	<script>
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
-	Modernizr.load({
+		Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard
-		//if old browser load the shiv
-		,nope : [
-			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js'
-			,'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
-		]
-	});
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+			nope: [
+			'//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/respond.min.js'
+			]
+		});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min'
-		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+		pathToJquery: '//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
 	}
-	if(cuttingTheMustard){
+	if (cuttingTheMustard) {
 		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/jquery-2.1.1.min";
 	}
 </script>
@@ -60,53 +62,74 @@
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
 <script>
-	require(["app/general"]);//load the default stuff
+	require(["app/general"]); //load the default stuff
 </script>
 
 </head>
 
-<body id="footer-view" class="vertical-nav vertical-nav--2col">
-
-	<footer class="wrapper clearfix">
-
-			<article class="block-myucl">
-				<h2>Facilities</h2>
-				<ul>
-					<li><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
-					<li><a href="http://www.ucl.ac.uk/library/">Library</a></li>
-					<li><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
-					<li><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
-					<li><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
-				</ul>
-			</article>
-
-			<article class="block-finditfast1">
-				<h2>Locations</h2>
-				<ul>
-					<li><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
-					<li><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
-					<li><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
-				</ul>
-			</article>
-
-			<article class="block-finditfast2">
-				<h2>Connect with us</h2>
-				<ul>
-					<li><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
-					<li><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
-					<li><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
-					<li><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
-					<li><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
-				</ul>
-
-			</article>
-
-			<hr>
-
-			<p>University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
-
-			<p id="footer-links">Copyright © 2013 UCL <a href="#">Disclaimer</a> | <a href="#">Freedom of Information</a> | <a href="#">Accessibility</a> | <a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Contact Us</a></p>
-
-	</footer>
+<body id="footer-view" class="layout-vertical layout-vertical--nav-2col
+">
+    <footer class="footer wrapper"> 
+        <div class="footer__inner clearfix">
+            <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a>
+                    </li>
+                    <li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a>
+                    </li>
+                </ul>
+            </article>
+            <hr class="clear">
+            <p class="zero-bottom clearfix">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</p>
+            <ul class="footer__links list-inline footer__list list-unstyled list-inline--divided">
+                <li class="footer__item">Copyright © 2013 UCL</li>
+                <li class="footer__item"><a href="#">Disclaimer</a>
+                </li>
+                <li class="footer__item"><a href="#">Freedom of Information</a>
+                </li>
+                <li class="footer__item"><a href="#">Accessibility</a>
+                </li>
+                <li class="footer__item"><a href="#">Privacy</a>
+                </li>
+                <li class="footer__item"><a href="#">Cookies</a>
+                </li>
+                <li class="footer__item"><a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
