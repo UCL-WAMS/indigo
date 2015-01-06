@@ -74,6 +74,7 @@ grunt.config.init({
 			tasks: ['sass:dist','autoprefixer','cssmin']
 		}
 	},
+	/* we cannot determine here if any of our skins require any additional Modedrnizr capabilities so we will include all in our custom
 	modernizr: {
 		dist: {
 			"devFile" : "js/lib/modernizr.min.js",
@@ -99,7 +100,7 @@ grunt.config.init({
 			parseFiles: true,
 			matchCommunityTests: false
 		}
-	}
+	}*/
 });
 
 grunt.loadNpmTasks('grunt-autoprefixer');
@@ -110,7 +111,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks("grunt-modernizr");
+//grunt.loadNpmTasks("grunt-modernizr");
 
-grunt.registerTask('default', ['concat','uglify','sass','autoprefixer','modernizr','cssmin','watch']);
+grunt.registerTask('default', ['concat','uglify','sass','autoprefixer',/*'modernizr',*/'cssmin','watch']);
 };
