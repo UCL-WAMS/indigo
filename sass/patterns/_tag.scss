@@ -12,6 +12,7 @@
 	color: $white;
 	text-decoration: none;
 	background-color: #B5BD00;
+	z-index: $zindex-tag;
 	@include rem(font-size, $font-size-xs);
 }
 
