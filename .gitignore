@@ -18,6 +18,9 @@ public/css/admin/*.css
 # Windows
 Thumbs.db
 
+#Mac
+.DS_Store
+
 # Ignore this in Clock Harness projects because it is created by the build system.
 /Config/vhost.conf
 
