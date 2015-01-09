@@ -462,11 +462,11 @@ audio {
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
     .block--col-1 {
+      clear: both;
       display: block;
       float: left;
-      margin-left: 0%;
-      margin-right: -100%;
-      width: 46.79688%; } }
+      margin-left: 0;
+      width: 100%; } }
 
 .block--col-2 {
   display: block;
@@ -483,11 +483,11 @@ audio {
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
     .block--col-2 {
+      clear: both;
       display: block;
       float: left;
-      margin-left: 53.04688%;
-      margin-right: -100%;
-      width: 46.79688%; } }
+      margin-left: 0;
+      width: 100%; } }
 
 .block--col-3 {
   display: block;
@@ -504,12 +504,11 @@ audio {
       width: 31.59722%; } }
   @media only screen and (max-width: 767px) {
     .block--col-3 {
+      clear: both;
       display: block;
       float: left;
-      margin-left: 0%;
-      margin-right: -100%;
-      width: 46.79688%;
-      clear: left; } }
+      margin-left: 0;
+      width: 100%; } }
 
 /* Layout
 -------------------------------------------------------------- */
@@ -615,9 +614,9 @@ body {
   background-color: #d9d9d1;
   overflow-x: hidden;
   line-height: 1.7;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-          hyphens: auto;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
   -ms-hyphens: none;
   word-wrap: break-word;
   -webkit-text-size-adjust: none;
@@ -730,7 +729,6 @@ cite, .cite, em, dfn {
 
 .mod {
   color: #ccc;
-  padding-top: 2em;
   clear: both;
   font-size: 12px;
   font-size: 1.2rem; }
@@ -901,12 +899,6 @@ input, select {
 input:disabled {
   cursor: not-allowed; }
 
-input[type=checkbox],
-input[type=radio] {
-  vertical-align: baseline;
-  background: none;
-  border: none; }
-
 input[type="search"], textarea {
   -webkit-appearance: none; }
 
@@ -933,9 +925,6 @@ label {
   font-size: 0.9em;
   color: #494949;
   font-weight: 500; }
-
-label span {
-  color: #990000; }
 
 fieldset abbr[title="Required"] {
   border-bottom: 0 none;
@@ -990,7 +979,8 @@ form em {
 * Designed to help with the organization and spacing of vertical forms.
 -------------------------------------------------------------- */
 .form__group {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  position: relative; }
   .form__group > *:last-child, .form__group > *:last-child > *:last-child, .form__group > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
 
@@ -1089,7 +1079,7 @@ input.error {
   border: 1px solid rgba(0, 0, 0, 0.21);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
   line-height: 1;
-  appearance: none;
+  -webkit-appearance: none;
   display: -moz-inline-stack;
   display: inline-block;
   *vertical-align: auto;
@@ -1371,15 +1361,14 @@ th, td {
   display: table-cell;
   text-align: left;
   width: auto;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e6e6e6;
   border-top: none;
   vertical-align: middle;
-  border-bottom: 1px solid #EEEEEE;
   padding: 0.25em 1em 0.25em 0; }
 
 th {
-  border-right: 1px solid #ddd;
-  border-bottom-color: #ccc;
+  border-right: 1px solid #e6e6e6;
+  border-bottom-color: #e6e6e6;
   color: #333333;
   font-weight: 700;
   background-color: #eee; }
@@ -1435,6 +1424,8 @@ td, td img {
       width: auto;
       position: relative;
       overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
       white-space: nowrap; }
       .table-responsive tbody tr {
         vertical-align: top;
@@ -1637,6 +1628,30 @@ figure + figure, figure + p {
     width: 65.62502%; } }
 
 @media (min-width: 990px) {
+  .col--1-4-lg-layout {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 71.32997%; } }
+
+@media (min-width: 990px) {
+  .col--1-5-lg-layout {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+
+@media (min-width: 990px) {
+  .col--2-lg-layout {
+    display: block;
+    float: left;
+    margin-left: 22.89562%;
+    margin-right: -100%;
+    width: 8.41083%; } }
+
+@media (min-width: 990px) {
   .col--2-3-lg-layout {
     display: block;
     float: left;
@@ -1699,14 +1714,6 @@ figure + figure, figure + p {
     margin-left: 74.36027%;
     margin-right: -100%;
     width: 25.57239%; } }
-
-@media (min-width: 990px) {
-  .col--1-5-layout {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
 
 /* Desktop content grid (4 columns)
 -------------------------------------------------------------- */
@@ -1847,6 +1854,8 @@ figure + figure, figure + p {
 .accordion__description {
   border-top: 0;
   overflow: hidden; }
+  .accordion__description > *:last-child, .accordion__description > *:last-child > *:last-child, .accordion__description > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0; }
   .accordion__description:last-of-type {
     position: relative;
     top: -1px; }
@@ -1949,7 +1958,7 @@ figure + figure, figure + p {
   box-sizing: border-box;
   padding-left: 3.0303%;
   padding-right: 3.0303%; }
-  .box *:last-child {
+  .box > *:last-child, .box > *:last-child > *:last-child, .box > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
 
 .box--tagged {
@@ -2000,7 +2009,8 @@ figure + figure, figure + p {
   font-weight: 700; }
 
 .blurb__img {
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  width: 100%; }
   .blurb--wide .blurb__img {
     display: block;
     float: left;
@@ -2014,6 +2024,9 @@ figure + figure, figure + p {
         float: left;
         margin-left: 0;
         width: 100%; } }
+
+.blurb__video {
+  margin-bottom: 1em; }
 
 .blurb__body > *:last-child, .blurb__body > *:last-child > *:last-child, .blurb__body > *:last-child > *:last-child > *:last-child {
   margin-bottom: 0; }
@@ -2082,7 +2095,8 @@ figure + figure, figure + p {
 
 .brand__logo {
   display: block;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  width: 100%; }
   @media only screen and (max-width: 767px) {
     .brand__logo {
       display: none; } }
@@ -2423,11 +2437,20 @@ figure + figure, figure + p {
 
 @media only screen and (max-width: 767px) {
   .header__open {
-    width: 20px;
+    width: 25px;
     top: 35%;
     left: 35px;
     position: absolute;
     z-index: 100; } }
+.header__open > img {
+  margin-bottom: 0; }
+
+.header__link {
+  position: absolute;
+  height: 100%;
+  right: 10%;
+  width: 30%;
+  top: 0; }
 
 .header__close {
   display: none; }
@@ -2509,36 +2532,8 @@ figure + figure, figure + p {
     .hero--home .hero__body--background {
       padding: 1.5em; } }
 
-.hero__content {
-  width: 75%; }
-  @media (max-width: 1499) {
-    .hero__content {
-      width: 85%;
-      float: left;
-      margin: auto; } }
-  @media (max-width: 1179px) {
-    .hero__content {
-      width: 100%;
-      float: none; } }
-
 .hero__body {
-  box-sizing: border-box;
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 65.62502%;
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 65.79861%; }
-  @media (max-width: 1179px) {
-    .hero__body {
-      width: 85%; } }
-  @media (max-width: 989px) {
-    .hero__body {
-      width: 100%; } }
+  box-sizing: border-box; }
   .hero__body > *:last-child {
     margin-bottom: 0; }
 
@@ -2699,9 +2694,6 @@ img.media__aside {
     list-style-type: none; }
     .menu-block li:before {
       background-color: transparent !important; }
-  @media (max-width: 989px) {
-    .menu-block {
-      margin-bottom: .5em; } }
 
 .menu-block--no-keyline {
   border: 0; }
@@ -2717,9 +2709,6 @@ img.media__aside {
     list-style-type: none; }
     .menu-block__list li:before {
       background-color: transparent !important; }
-  .menu-block__list .is-active {
-    border-left: .4em solid #333;
-    font-weight: bold; }
 
 .menu-block__item {
   position: relative;
@@ -2753,6 +2742,8 @@ img.media__aside {
     margin-bottom: -1px;
     background-color: black;
     color: white; }
+  .is-active .menu-block__link {
+    border-left: .4em solid #333; }
 
 /* 
 * Pattern name: Menu Block
@@ -2858,6 +2849,9 @@ img.media__aside {
     .masthead__item {
       display: block;
       text-align: left; } }
+  @media (max-width: 989px) {
+    .masthead__item {
+      padding-right: .75em; } }
   .lt-ie9 .masthead__item {
     margin-top: 8px;
     display: -moz-inline-stack;
@@ -3031,7 +3025,7 @@ img.media__aside {
       text-overflow: ellipsis;
       max-width: 20em;
       margin-right: 0; } }
-  @media (max-width: 479px) {
+  @media (max-width: 619px) {
     .pills__item {
       margin-bottom: .5em; } }
 
@@ -3142,6 +3136,41 @@ img.media__aside {
       display: none !important; } }
 
 /* 
+* Pattern name: Slides
+* Use: For a carousel image slideshow
+* Note: N/A
+-------------------------------------------------------------- */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0; }
+
+.rslides__item {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0; }
+  .rslides__item:first-child {
+    position: relative;
+    display: block;
+    float: left; }
+  .rslides__item:before {
+    display: none; }
+
+.rslides__img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  margin-bottom: 0; }
+
+/* 
 * Pattern name: Site content
 * Use: Structuring and alignment for main content 
 * Note: N/A
@@ -3189,7 +3218,7 @@ img.media__aside {
       float: left;
       margin-left: 0;
       width: 100%;
-      padding-top: 1em; } }
+      padding-top: 1.5em; } }
 
 .site-content__body {
   display: block;
@@ -3227,8 +3256,7 @@ img.media__aside {
       display: block;
       float: left;
       margin-left: 0;
-      width: 100%;
-      margin-bottom: 2em; } }
+      width: 100%; } }
   @media only screen and (max-width: 767px) {
     .site-content__main {
       clear: both;
@@ -3375,6 +3403,7 @@ img.media__aside {
   color: #ffffff;
   text-decoration: none;
   background-color: #B5BD00;
+  z-index: 1;
   font-size: 12px;
   font-size: 1.2rem; }
 
