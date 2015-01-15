@@ -19,7 +19,7 @@
 	border-radius: 2em;
 	box-sizing: border-box;
 	font-size: 14px;
-	margin-bottom: 0;
+	margin-bottom: .5em;
 	margin-right: .5em;
 
 	.icon {
@@ -38,9 +38,6 @@
 		text-overflow: ellipsis;
 		max-width: 20em;
 		margin-right: 0;
-	}
-	@include respond-max($screen-sm) {
-		margin-bottom: .5em;
 	}
 }
 
