@@ -10,6 +10,7 @@ require.config({
 		,fastclick: 'fastclick'
 		,googleAnalyticsLib: 'googleAnalytics.min'
 		,owl: 'owl.carousel.min'
+		,jwplayer: 'jwplayer'
 	}
 	,shim:{
 		allsite: {
@@ -31,6 +32,9 @@ require.config({
 		},
 		owl: {
 			deps: ['jquery']
+		},
+		jwplayer: {
+			exports: 'jwplayer'
 		}
 	}
 });
