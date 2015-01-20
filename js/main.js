@@ -9,6 +9,7 @@ require.config({
 		,backbone: '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min'
 		,fastclick: 'fastclick'
 		,googleAnalyticsLib: 'googleAnalytics.min'
+		,owl: 'owl.carousel.min'
 	}
 	,shim:{
 		allsite: {
@@ -27,6 +28,9 @@ require.config({
 		},
 		googleAnalyticsLib: {
 			exports: 'ga'
+		},
+		owl: {
+			deps: ['jquery']
 		}
 	}
 });
