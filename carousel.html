@@ -24,10 +24,10 @@
 	<!-- end social meta -->
 	<title>UCL Design Language</title>
 
-	<link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-	<!--[if IE]><link href="css/ie.min.css" rel="stylesheet" /><![endif]-->
-	<!--[if lt IE 8]><link href="css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
 	<link rel="shortcut icon" href="images/favicon.ico" />
@@ -35,7 +35,7 @@
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-	<script src="js/lib/modernizr-custom.js"></script>
+	<script src="//static.ucl.ac.uk/js/lib/modernizr-custom.js"></script>
 
 	<script>
 		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
@@ -45,22 +45,22 @@
 		test : cuttingTheMustard
 		//if old browser load the shiv
 		,nope : [
-		'js/lib/html5shiv-printshiv.min.js'
-		,'js/lib/respond.min.js'
+		'//static.ucl.ac.uk/js/lib/html5shiv-printshiv.min.js'
+		,'//static.ucl.ac.uk/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: 'js/lib/jquery-1.9.1.min'
+		pathToJquery: '//static.ucl.ac.uk/js/lib/jquery-1.9.1.min'
 		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 	}
 	if(cuttingTheMustard){
-		globalSiteSpecificVars.pathToJquery = "js/lib/jquery-2.1.1.min";
+		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/js/lib/jquery-2.1.1.min";
 	}
 </script>
 
-<script src="js/lib/require.min.js"></script>
-<script src="js/main.js"></script>
+<script src="//static.ucl.ac.uk/js/lib/require.min.js"></script>
+<script src="//static.ucl.ac.uk/js/main.js"></script>
 <script>
 	require(["app/general","app/carousel"]);//load the default stuff
 </script>
