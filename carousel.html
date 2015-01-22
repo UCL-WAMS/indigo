@@ -24,18 +24,18 @@
 	<!-- end social meta -->
 	<title>UCL Design Language</title>
 
-	<link href="/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link href="css/ie.min.css" rel="stylesheet" /><![endif]-->
 	<!--[if lt IE 8]><link href="css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
-	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-	<script src="/js/lib/modernizr-custom.js"></script>
+	<script src="js/lib/modernizr-custom.js"></script>
 
 	<script>
 		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
@@ -45,22 +45,22 @@
 		test : cuttingTheMustard
 		//if old browser load the shiv
 		,nope : [
-		'/js/lib/html5shiv-printshiv.min.js'
-		,'/js/lib/respond.min.js'
+		'js/lib/html5shiv-printshiv.min.js'
+		,'js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '/js/lib/jquery-1.9.1.min'
+		pathToJquery: 'js/lib/jquery-1.9.1.min'
 		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 	}
 	if(cuttingTheMustard){
-		globalSiteSpecificVars.pathToJquery = "/js/lib/jquery-2.1.1.min";
+		globalSiteSpecificVars.pathToJquery = "js/lib/jquery-2.1.1.min";
 	}
 </script>
 
-<script src="/js/lib/require.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="js/lib/require.min.js"></script>
+<script src="js/main.js"></script>
 <script>
 	require(["app/general","app/carousel"]);//load the default stuff
 </script>
@@ -72,7 +72,7 @@
 	<article class="article">
 		<div class="owl-carousel">
 			<figure class="owl-carousel__item">
-				<img src="/images/carousel/carousel-aslash.jpg" />
+				<img src="images/carousel/carousel-aslash.jpg" />
 				<figcaption>
 				<h2 class="heading">
 					<a href="#" target="_self">Paths to justice</a>
@@ -81,7 +81,7 @@
 				</figcaption>
 			</figure>
 			<figure class="owl-carousel__item">
-				<img src="/images/carousel/carousel-aslms.jpg" />
+				<img src="images/carousel/carousel-aslms.jpg" />
 				<figcaption>
 					<h2 class="heading">
 						<a href="#" target="_self">NHS Stop Smoking Services</a>
@@ -90,7 +90,7 @@
 				</figcaption>
 			</figure>
 			<figure class="owl-carousel__item">
-				<img src="/images/carousel/carousel-beams.jpg" />
+				<img src="images/carousel/carousel-beams.jpg" />
 				<figcaption>
 					<h2 class="heading">
 						<a href="#" target="_self">Tropical storm warnings save lives</a>
@@ -99,7 +99,7 @@
 				</figcaption>
 			</figure>
 			<figure class="owl-carousel__item">
-				<img src="/images/carousel/carousel-ioe.jpg" />
+				<img src="images/carousel/carousel-ioe.jpg" />
 				<figcaption>
 					<h2 class="heading">
 						<a href="#" target="_self">A better start for children</a>
