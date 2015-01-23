@@ -1,0 +1,12 @@
+# EditorConfig is awesome httpEditorConfig.org
+root = true
+
+# all javascript files
+[*.js]
+indent_style = tab
+tab_width = 4
+
+# all scss files
+[*.scss]
+indent_style = tab
+tab_width = 4
