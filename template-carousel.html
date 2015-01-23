@@ -24,10 +24,10 @@
 	<!-- end social meta -->
 	<title>UCL Design Language</title>
 
-	<link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
-	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE]><link href="css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
 
 	<link rel="shortcut icon" href="//static.ucl.ac.uk/indigo/images/favicon.ico" />
@@ -60,9 +60,9 @@
 </script>
 
 <script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/lib/require.min.js"></script>
-<script src="//static.ucl.ac.uk/silva/UCLIndigoSkin/js/main.js"></script>
+<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
 <script>
-	require(["app/general"]);//load the default stuff
+	require(["app/general","app/carousel"]);//load the default stuff
 </script>
 
 </head>
@@ -215,13 +215,44 @@
 
 						<h1>Main page title</h1>
 
-						<p>This is the main content column.</p>
-
-						<h2>UCL banner</h2>
-
-						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
-
-						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
+						<div class="owl-carousel">
+							<figure class="owl-carousel__item">
+								<img src="//static.ucl.ac.uk/indigo/images/carousel/carousel-aslash.jpg" />
+								<figcaption>
+								<h2 class="heading">
+									<a href="#" target="_self">Paths to justice</a>
+								</h2>
+								<p class="p">Reshaping policy and practice on citizens' access to justice</p>
+								</figcaption>
+							</figure>
+							<figure class="owl-carousel__item">
+								<img src="//static.ucl.ac.uk/indigo/images/carousel/carousel-aslms.jpg" />
+								<figcaption>
+									<h2 class="heading">
+										<a href="#" target="_self">NHS Stop Smoking Services</a>
+									</h2>
+									<p class="p">Research enables the NHS to help 7,500 smokers quit</p>
+								</figcaption>
+							</figure>
+							<figure class="owl-carousel__item">
+								<img src="//static.ucl.ac.uk/indigo/images/carousel/carousel-beams.jpg" />
+								<figcaption>
+									<h2 class="heading">
+										<a href="#" target="_self">Tropical storm warnings save lives</a>
+									</h2>
+									<p class="p">Real-time warnings help agencies decide when to evacuate</p>
+								</figcaption>
+							</figure>
+							<figure class="owl-carousel__item">
+								<img src="//static.ucl.ac.uk/indigo/images/carousel/carousel-ioe.jpg" />
+								<figcaption>
+									<h2 class="heading">
+										<a href="#" target="_self">A better start for children</a>
+									</h2>
+									<p class="p"> Shaping policy on early education</p>
+								</figcaption>
+							</figure>
+						</div>
 
 					</article>
 
