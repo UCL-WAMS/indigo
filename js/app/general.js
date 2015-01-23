@@ -3,14 +3,18 @@ define(["jquery","allsite"],function($,gen){
 	$(document).ready(function(){
 		/* Browser feature detection and fixes
 		-----------------------------------------------------------------*/
-		if(!Modernizr.svg) {//target browsers that don't support SVG
+		if(Modernizr.svg===false) {//target browsers that don't support SVG
 			//update all instances of SVG in img tag
 			var $svgImage = $('img[src*="svg"]');
-			$svgImage.attr('src', function() {
-				return $(this).attr('src').replace('.svg', '.png');
+			$svgImage.each(function(){
+				$(this).attr('src', function() {
+					var tempSrc = $(this).attr('src');
+					var newSrc = tempSrc.replace('.svg', '.png');
+					$(this).attr('src',newSrc);
+				});
 			});
 			//fix mobile header
-			var mobileHeaderObj = $('#header-mobile');
+			var mobileHeaderObj = $('.header--mobile');
 			mobileHeaderObj.removeClass("default-header");
 			mobileHeaderObj.addClass("no-svg");
 		}
@@ -49,7 +53,60 @@ define(["jquery","allsite"],function($,gen){
 				});
 			}
 		});
+		/* layout hacks
+		-----------------------------------------------------------------*/
+		var bodyClass = $('body').attr("class");
+		var topNavList = $('.nav--top ul');
+		var mobileNav = $('.nav--mobile');
+		var mobileNavList = $('.nav--mobile ul');
+
+		function resetCols(){
+			$('.site-content__inner,.sidebar').css({
+				'height':'auto'
+				,'min-height':'0'}
+			);
+		}
+
+		function equalizeVerticalCol(){
+			//start off by resetting the columns
+			resetCols();
+
+			if($(window).width() >= 768){
+				var mainColHeight = $('.site-content__inner').height();
+				var verticalNavColHeight = $('.sidebar').height();
+				if(verticalNavColHeight > mainColHeight){
+					$('.site-content__inner').css('min-height',verticalNavColHeight);
+				}
+				else{
+					$('.site-content__inner').css({
+						'height':'auto'
+						,'min-height':'0'}
+					);
+				}
+			}else{
+				$('.site-content__inner').css({
+					'height':'auto'
+					,'min-height':'0'}
+				);
+			}
+		}
+
+		function buildmobileNav(){
+			if(topNavList.length > 0 && mobileNavList.length < 1){
+				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
+			}
+			return;
+		}
+		buildmobileNav();
+
+		var verticalBodyClassPattern = /layout-vertical(.)*/i;
+		if(verticalBodyClassPattern.test(bodyClass)){
+			equalizeVerticalCol();
+			$(window).resize(function(){
+				equalizeVerticalCol();
+			});
+		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
-	})
+	});
 });

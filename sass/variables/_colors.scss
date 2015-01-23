@@ -1,7 +1,8 @@
 /* UCL Colours
 -------------------------------------------------------------- */
 
-/* Standard
+
+/* Indigo colour palette
 -------------------------------------------------------------- */
 
 $darkgreen: rgba(85,80,37,1);
@@ -52,10 +53,39 @@ $lightblue-b: rgba(165,205,221,1);
 $stone-b: rgba(224,221,209,1);
 $darkbrown-b: rgba(95,68,54,1);
 
+
+/* Generic grayscale
+-------------------------------------------------------------- */
+$darkgrey: #444;
+$grey: #bbb;
+$lightgrey: #ccc;
+$black: #000000;
+$white: #ffffff;
+
+
 /* Colour by element
 -------------------------------------------------------------- */
-$activeButton: #505050;
-$hoverButton: #615957;
+$content-bg-color: $white;
+$nav-horizontal-color: #333333;
+$rule-color: #ccc;
+$cat-blue: #027d9e;
+$cat-blue-hover: #4ca4ba;
+$cat-arrow-blue: #3096af;
+$cat-arrow-blue-hover: #70b9c8;
+
+$alert-red: #d50133;
+$alert-red-bg: #f5c7d2;
+
+$info-blue: #2992af;
+$info-blue-bg: #d1eaee;
+
+$fix-green: #767e31;
+$fix-green-bg: #e2e5d2;
+
+$link-colour: #034da1;
+
+$active-button: #505050;
+$hover-button: #615957;
 $button-bg-col: #40403e;
 
 $disabled-btn-grad1: #eee;
@@ -64,3 +94,9 @@ $disabled-hvr-btn-grad1: #ededed;
 $disabled-hvr-btn-grad2: #eee;
 $disabled-act-btn-grad1: #e8e8e4;
 $disabled-act-btn-grad2: #cccccc;
+
+/* Project specific
+-------------------------------------------------------------- */
+$primary-colour: #ff5a5f;
+$secondary-colour: #007a87;
+$tertiary-colour: #333333;
