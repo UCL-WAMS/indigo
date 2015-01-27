@@ -2155,13 +2155,13 @@ figure + figure, figure + p {
 
 @media (max-width: 779px) {
   .collapse__header--active {
-    background: url(/images/close.png);
+    background: url(//cdn.ucl.ac.uk/indigo/images/close.png);
     background-repeat: no-repeat;
     background-position: right 50%;
     padding-right: 20px;
     border-bottom: none; }
     .collapse__header--active:hover, .collapse__header--active:active, .collapse__header--active:focus {
-      background: url(/images/close.png);
+      background: url(//cdn.ucl.ac.uk/indigo/images/close.png);
       background-repeat: no-repeat;
       background-position: right 50%; } }
 
@@ -2365,7 +2365,7 @@ figure + figure, figure + p {
   padding: 20% 35px 0;
   background-size: auto 100%;
   background-position: 106% bottom;
-  background-image: url("/images/ucl-logo.svg");
+  background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo.svg");
   background-repeat: repeat-x;
   position: relative;
   left: -35px;
@@ -2375,7 +2375,7 @@ figure + figure, figure + p {
     .header--mobile {
       display: block; } }
   .header--mobile.no-svg {
-    background-image: url("/images/ucl-logo-cropped-white.png");
+    background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo-cropped-white.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-color: #000000;
@@ -2491,7 +2491,7 @@ figure + figure, figure + p {
   .hero__body--background {
     padding: 0; } }
 .lt-ie9 .hero__body--background {
-  background-image: url(/images/hero-bg-ie.png); }
+  background-image: url(//cdn.ucl.ac.uk/indigo/images/hero-bg-ie.png); }
 
 .hero__title {
   margin-bottom: 0;
@@ -2717,12 +2717,12 @@ img.media__aside {
 
 .message--success {
   background-color: #F7FFF2;
-  background-image: url("/images/success.png");
+  background-image: url("//cdn.ucl.ac.uk/indigo/images/success.png");
   color: #7FB861;
   border: 1px solid #7FB861; }
 
 .message--warning {
-  background-image: url("/images/alert.png");
+  background-image: url("//cdn.ucl.ac.uk/indigo/images/alert.png");
   color: #DD6868;
   border: 1px solid #DD6868;
   font-weight: bold; }
