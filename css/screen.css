@@ -2254,8 +2254,11 @@ figure + figure, figure + p {
   padding: 40px 35px;
   margin-left: -35px;
   margin-right: -35px;
-  color: #bbb;
+  color: #fff;
   clear: left; }
+  .footer__inner h2 {
+    font-size: 1.6rem;
+    text-transform: none; }
   .footer__inner a {
     color: #eee; }
     .footer__inner a:hover, .footer__inner a:active, .footer__inner a:focus {
