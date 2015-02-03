@@ -43,25 +43,29 @@
 	@include gs-float(dc, right);
 }
 
-.pull-quote__start {
+.pull-quote__start, .pull-quote__end {
 	color: #c2c2ba;
-	float: left;
 	font-size: 400%;
-	height: 45px;
-	margin-bottom: -42px;
-	margin-top: 0;
-	padding-top: 22px;
-	padding-right: 10px;
 	font-style: normal;
+	line-height: 0;
+	top: 37.5px;
+	position: relative;
+	@include respond-max($screen-md) {
+		font-size: 350%;
+		top: 25px;
+	}
+}
+
+.pull-quote__start {
+	padding-right: 10px;
+	@include respond-max($screen-md) {
+		padding-right: 5px;
+	}
 }
 
 .pull-quote__end {
-	color: #c2c2ba;
-	float: right;
-	font-size: 400%;
-	height: 25px;
-	margin-top: 0;
-	padding-top: 60px;
 	padding-left: 10px;
-	font-style: normal;
+	@include respond-max($screen-md) {
+		padding-left: 5px;
+	}
 }
