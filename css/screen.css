@@ -3156,26 +3156,29 @@ img.media__aside {
   margin-right: 0;
   margin-left: 3.0303%; }
 
-.pull-quote__start {
+.pull-quote__start, .pull-quote__end {
   color: #c2c2ba;
-  float: left;
   font-size: 400%;
-  height: 45px;
-  margin-bottom: -42px;
-  margin-top: 0;
-  padding-top: 22px;
-  padding-right: 10px;
-  font-style: normal; }
+  font-style: normal;
+  line-height: 0;
+  top: 37.5px;
+  position: relative; }
+  @media (max-width: 779px) {
+    .pull-quote__start, .pull-quote__end {
+      font-size: 350%;
+      top: 25px; } }
+
+.pull-quote__start {
+  padding-right: 10px; }
+  @media (max-width: 779px) {
+    .pull-quote__start {
+      padding-right: 5px; } }
 
 .pull-quote__end {
-  color: #c2c2ba;
-  float: right;
-  font-size: 400%;
-  height: 25px;
-  margin-top: 0;
-  padding-top: 60px;
-  padding-left: 10px;
-  font-style: normal; }
+  padding-left: 10px; }
+  @media (max-width: 779px) {
+    .pull-quote__end {
+      padding-left: 5px; } }
 
 /* 
 * Pattern name: Pill
