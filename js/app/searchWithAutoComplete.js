@@ -1,6 +1,5 @@
 define([
 		"jquery"
-		//,"searchPack"
 		,"typeAheadBundle"
 		,"handleBars"
 	]
@@ -15,8 +14,6 @@ define([
 
 			// The all link trigger
 			function triggerSearch (tab) {
-			  	// $("input#fb-tab").val(tab)
-			   //$("#fb-global-form").submit()
 			   var baseUrlHtml = baseUrl + 'search.html?collection=website-meta'
 			   window.location.assign(baseUrlHtml + "&tab=" + tab + "&profile=_" + tab + "&query=" + $('input#searchIndigo').val().replace(/\s/g,"+"));
 			}
@@ -38,7 +35,7 @@ define([
 
 					var result__degree = "{{#if name}}<p class=\"result__title\"><a href=\"{{url}}\">{{name}}<span>{{qual}}</span></p>{{/if}}";
 
-					var result__directory = "<div class=\"AC-details\"><ul class=\"profile-details\">{{#if name}}<li class=\"fn\">{{name}}</li>{{/if}}{{#if external}}<li><span><i class=\"fa fa-phone\"></i>external: </span>{{external}}</li>{{/if}}{{#if email}}<li><i class=\"fa fa-envelope\"></i><a href=\"mailto:{{email}}\">{{email}}</a></li>{{/if}}</ul></div>{{#if image}}<img src=\"{{image}}\" alt=\"image of {{name}}\">{{/if}}";
+					var result__directory = "<div class=\"AC-details\"><ul class=\"profile-details\">{{#if name}}<li class=\"fn\">{{name}}</li>{{/if}}{{#if external}}<li class=\"tel tel--external\"><span>external: </span>{{external}}</li>{{/if}}{{#if email}}<li class=\"email\"><a href=\"mailto:{{email}}\">{{email}}</a></li>{{/if}}</ul></div>{{#if image}}<img src=\"{{image}}\" alt=\"image of {{name}}\">{{/if}}";
 
 					
 					var limit = 5;
@@ -113,8 +110,7 @@ define([
 					research.initialize();
 					degrees.initialize();
 
-					//$("#fb-global-form #searchIndigo").click(function(){alert('got here')});
-				  	$(".masthead__search form .search-form__input.search-form__input--search").typeahead({
+				  	$(".search-form__input.search-form__input--search").typeahead({
 						minLength : 2,
 						hint: false 
 					}
@@ -136,7 +132,6 @@ define([
 						,templates : {
 							empty : "<p class=\"no-results\">No Results</p>"
 							,header : "<h2>Degrees and Short Courses</h2>"
-							//,footer : "<a class=\"show-all\" onclick=\"triggerSearch(\'degrees\')\" href=\"#\">Show All</a>"
 							,footer : ""
 							,suggestion : Handlebars.compile(result__degree)
 						}
@@ -148,7 +143,6 @@ define([
 						,templates : {
 							empty : "<p class=\"no-results\">No Results</p>"
 							,header : "<h2>People</h2>"
-							//,footer : "<a class=\"show-all\" onclick=\"triggerSearch(\'directory\')\" href=\"#\">Show All</a>"
 							,footer : ""
 							,suggestion : Handlebars.compile(result__directory)
 						}
@@ -160,7 +154,6 @@ define([
 						,templates : {
 							empty : "<p class=\"no-results\">No Results</p>"
 							,header : "<h2>Research</h2>"
-							//,footer : "<a class=\"show-all\" onclick=\"triggerSearch(\'research\')\" href=\"#\">Show All</a>"
 							,footer : ""
 							,suggestion : Handlebars.compile(result__research)
 						}
@@ -176,18 +169,10 @@ define([
 						if(!datum.email){
 						// websites, fire ot websites tab
 						}
-						$("#query").val(datum.value);
-						$("input#fb-tab").val("websites");
-						$("#fb-global-form").submit();
+						//$(".search-form__input.search-form__input--search").val(datum.value);
 					});
 				}
 			};
 			typeAhead();
-
-			//close faceted navigation on mobile
-			/*$('.mobileCloseAside').click(function(){
-				$('.facets').toggleClass("show-facet");
-				$('.off-canvas').toggleClass('spin');
-			});*/
 		})
 });
