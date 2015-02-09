@@ -2225,6 +2225,28 @@ figure + figure, figure + p {
         margin: 0 0 10px 10px; }
 
 /* 
+* Pattern name: Tag
+* Use: Small block of overlayed text over an image
+* Note: Modifiers adjust positioning of tag (default: left)
+-------------------------------------------------------------- */
+.btn.cta {
+  background-color: #034da1;
+  text-align: center;
+  font-weight: bold;
+  border: none; }
+  .btn.cta:hover {
+    background-color: #002854; }
+
+.btn.cta {
+  width: 100%; }
+
+.btn.cta-half {
+  width: 50%; }
+
+.btn.cta-threequarters {
+  width: 75%; }
+
+/* 
 * Pattern name: Divider
 * Use: Displaying a bordered keyline either above or below an element
 * Note: Top and bottom modifiers alter margin

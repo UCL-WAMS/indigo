@@ -22,9 +22,9 @@
 	<meta property="og:type" content="website"/> 
 	<meta property="og:profile_id" content="uclofficial"/>
 	<!-- end social meta -->
-	<title>UCL Design Language</title>
+	<title>UCL Design Language - CTA Button</title>
 
-	<link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
 	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
@@ -42,7 +42,7 @@
 
 		Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard
+		test : cuttingTheMustard 
 		//if old browser load the shiv
 		,nope : [
 		'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js'
@@ -207,15 +207,41 @@
 
 					<article class="article">
 
-						<h1>Main page title</h1>
+						<h1>CTA Button</h1>
 
 						<p>This is the main content column.</p>
 
-						<h2>UCL banner</h2>
+						<h2>Subheader</h2>
 
 						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
 
 						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
+                        
+                        	<p class="clearfix"><a href="http://www.google.com" class="cta btn pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">
+
+   1 100% left View all news articles
+
+</a></p>
+                        
+                        <p class="clearfix"><a href="http://www.google.com" class="cta btn cta-half pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">
+
+   1 50% left View all news articles
+
+</a></p>
+
+                        
+                        <p class="clearfix"><a href="http://www.google.com" class="cta btn cta-half pull-right" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">
+
+   1 50% right View all news articles
+
+</a></p>
+                        
+                        <p class="clearfix"><a href="http://www.google.com" class="cta btn cta-threequarters pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">
+
+   1 75% left View all news articles
+
+</a></p>
+
 
 					</article>
 
