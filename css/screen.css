@@ -589,15 +589,15 @@ audio {
     margin-left: 0;
     width: 100%; } }
 
-.layout-vertical--nav-show-top-nav .nav--top {
+.layout-vertical--show-top-nav .nav--top {
   display: block; }
   @media only screen and (max-width: 767px) {
-    .layout-vertical--nav-show-top-nav .nav--top {
+    .layout-vertical--show-top-nav .nav--top {
       display: none; } }
-.layout-vertical--nav-show-top-nav .sidebar {
+.layout-vertical--show-top-nav .sidebar {
   margin-top: 5em; }
   @media only screen and (max-width: 767px) {
-    .layout-vertical--nav-show-top-nav .sidebar {
+    .layout-vertical--show-top-nav .sidebar {
       margin-top: 0; } }
 
 /* 
