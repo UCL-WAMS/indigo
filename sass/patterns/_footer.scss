@@ -11,8 +11,12 @@
 	padding: 40px 35px;
 	margin-left: -35px;
 	margin-right: -35px;
-	color: #bbb;
+	color: #fff;
 	clear: left;
+	h2{
+		font-size: 1.6rem;
+		text-transform: none;
+	}
 	a {
 		color: #eee;
 		@include on-interaction {

@@ -1,5 +1,5 @@
 /* Development/Production environments
 -------------------------------------------------------------- */
 
-$is-local: true;
-$static-url: if($is-local, "", "//cdn.ucl.ac.uk/silva/UCLIndigoSkin");
+$is-local: false;
+$static-url: if($is-local, "", "//cdn.ucl.ac.uk/indigo");

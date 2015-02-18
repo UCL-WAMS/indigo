@@ -11,6 +11,8 @@ require.config({
 		,googleAnalyticsLib: 'googleAnalytics.min'
 		,owl: 'owl.carousel.min'
 		,jwplayer: 'jwplayer'
+		,handleBars: 'handlebars.min'
+		,typeAheadBundle: 'typeahead.bundle.min'
 	}
 	,shim:{
 		allsite: {
@@ -35,6 +37,13 @@ require.config({
 		},
 		jwplayer: {
 			exports: 'jwplayer'
+		},
+		typeAheadBundle: {
+			deps: ['jquery']
+			,exports: 'Bloodhound'
+		},
+		handleBars : {
+			exports: 'Handlebars'
 		}
 	}
 });
