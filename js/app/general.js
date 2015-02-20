@@ -4,6 +4,7 @@ define(["jquery","allsite"],function($,gen){
 		/* Browser feature detection and fixes
 		-----------------------------------------------------------------*/
 		if(Modernizr.svg===false) {//target browsers that don't support SVG
+			
 			//update all instances of SVG in img tag
 			var $svgImage = $('img[src*="svg"]');
 			$svgImage.each(function(){
@@ -13,6 +14,13 @@ define(["jquery","allsite"],function($,gen){
 					$(this).attr('src',newSrc);
 				});
 			});
+
+			//lazy load fix for the above svg fix
+			$("img[data-src$='.svg']").each(function(){
+				var tmpDataSrc = $(this).attr("data-src");
+				$(this).attr("src",tmpDataSrc.replace(/([^\.]+)\.svg/i,'$1.png'));
+			})
+
 			//fix mobile header
 			var mobileHeaderObj = $('.header--mobile');
 			mobileHeaderObj.removeClass("default-header");
