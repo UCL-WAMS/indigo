@@ -8,6 +8,7 @@
 	background-color: $cta-blue; 
 	text-align:center;
 	font-weight:bold;
+	font-size:1.2em;
 	border:none;
 	&:hover {
 		background-color: $cta-navy;
@@ -25,3 +26,12 @@
 .btn.cta-threequarters {
 	width:75%;
 }
+
+.btn.cta-quarter {
+	width:25%; 
+}
+
+.btn.cta-sixth {
+	width:16%;
+}
+
