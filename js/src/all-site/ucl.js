@@ -55,7 +55,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-	if (document.documentElement.clientWidth < 767) {
+	if (Modernizr.mq('only screen and (max-width: 768px)')) {
 		//Add Inactive Class To All Accordion Headers
 		$('.collapse__header').addClass('collapse__header--inactive');
 
