@@ -10,6 +10,8 @@
 	font-weight:bold;
 	font-size:1.2em;
 	border:none;
+	border-radius: 0;
+	box-sizing: border-box;
 	&:hover {
 		background-color: $cta-navy;
 	}
@@ -18,20 +20,27 @@
 .btn.cta {
 	width:100%;
 }
-
+@mixin minBttnMobileWidth{
+	@include gs-media(m){
+		min-width: 330px;
+	}
+}
 .btn.cta-half {
 	width:50%;
+	@include minBttnMobileWidth;
 }
 
 .btn.cta-threequarters {
 	width:75%;
+	@include minBttnMobileWidth;
 }
 
 .btn.cta-quarter {
-	width:25%; 
+	width:25%;
+	@include minBttnMobileWidth;
 }
 
 .btn.cta-sixth {
 	width:16%;
+	@include minBttnMobileWidth;
 }
-
