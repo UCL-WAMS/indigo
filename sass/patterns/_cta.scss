@@ -35,6 +35,11 @@
 	@include minBttnMobileWidth;
 }
 
+.btn.cta-third {
+	width: 33%;
+	@include minBttnMobileWidth;
+}
+
 .btn.cta-quarter {
 	width:25%;
 	@include minBttnMobileWidth;

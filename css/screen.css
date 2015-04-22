@@ -2255,6 +2255,12 @@ figure + figure, figure + p {
     .btn.cta-threequarters {
       min-width: 330px; } }
 
+.btn.cta-third {
+  width: 33%; }
+  @media only screen and (max-width: 767px) {
+    .btn.cta-third {
+      min-width: 330px; } }
+
 .btn.cta-quarter {
   width: 25%; }
   @media only screen and (max-width: 767px) {
