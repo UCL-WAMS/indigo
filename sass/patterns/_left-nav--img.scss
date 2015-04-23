@@ -2,7 +2,7 @@
     display: none; // because of how the layouts are worked we have to hide it.
 }
 
-@media (min-width: 768px) {
+@include gs-media(m){
   .org-unit-logo {
     clear: both;
     display: block;
