@@ -2671,6 +2671,19 @@ figure + figure, figure + p {
           transform: translate(-50%);
   z-index: 5150; }
 
+.org-unit-logo {
+  display: none; }
+
+@media only screen and (min-width: 768px) {
+  .org-unit-logo {
+    clear: both;
+    display: block;
+    float: left;
+    margin-bottom: 1em;
+    width: 100%; }
+
+  .org-unit-logo img {
+    max-width: 320px; } }
 /* 
 * Pattern name: Media
 * Use: For a content block aligned to an image
