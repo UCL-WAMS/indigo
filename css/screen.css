@@ -2635,6 +2635,53 @@ figure + figure, figure + p {
   line-height: normal;
   vertical-align: top; }
 
+/* responsive images  */
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  /* fixing ie bug*/
+  box-sizing: border-box; }
+
+.lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0 1em;
+  background: black;
+  background: rgba(0, 0, 0, 0.45);
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.lightbox__item {
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2em;
+  float: left;
+  left: 50%;
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: relative;
+  top: 10%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 5150; }
+
+@media all and (min-width: 1em) and (max-width: 45em) {
+  body:after {
+    /* http://adactio.com/journal/5429/ */
+    content: 'mqsupport';
+    display: none; } }
+@media all and (min-width: 45em) {
+  body:after {
+    /* http://adactio.com/journal/5429/ */
+    content: 'widescreen';
+    display: none; } }
 /* 
 * Pattern name: Media
 * Use: For a content block aligned to an image
@@ -3781,46 +3828,194 @@ Notes:
 * Use: Related tabular content
 * Note: N/A
 -------------------------------------------------------------- */
-.tabbed__content {
-  border: 10px solid #444;
-  padding-top: 10px;
-  padding-bottom: 2em;
-  box-sizing: border-box;
-  padding-left: 3.0303%;
-  padding-right: 3.0303%; }
-  .tabbed__content > *:last-child, .tabbed__content > *:last-child > *:last-child, .tabbed__content > *:last-child > *:last-child > *:last-child {
-    margin-bottom: 0; }
+*, *:before, *:after {
+  box-sizing: border-box; }
 
-.tabbed__list {
-  margin-left: 0;
-  margin-bottom: 0; }
-
-.tabbed__item {
+.no-js .tabs__navigation ul {
+  border-bottom: 4px solid #8c8279;
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: inline;
-  float: left;
-  background-color: #444;
-  line-height: normal;
-  margin-bottom: 0;
-  padding: 10px 15px;
-  margin-right: 5px;
-  border-bottom: 5px solid #fff; }
-  .tabbed__item:before {
-    display: none; }
-  .tabbed__item.is-active {
-    border-bottom: 5px solid #444; }
-
-.tabbed__link {
+  margin: 0; }
+.no-js .tabs__navigation li {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 5px;
+  vertical-align: bottom; }
+.no-js .tabs__navigation a {
+  color: #034DA1;
   display: block;
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 14px;
-  font-size: 1.4rem; }
-  .tabbed__link:hover, .tabbed__link:active, .tabbed__link:focus {
-    text-decoration: none;
-    color: #ffffff; }
+  text-decoration: none; }
+  .no-js .tabs__navigation a.active {
+    position: relative;
+    text-decoration: underline;
+    z-index: 5150; }
+
+.no-js .tabs__group {
+  margin-top: 1em; }
+.no-js .tabs__item {
+  margin-bottom: 8px;
+  padding: 1rem;
+  border: 1px solid #8c8279;
+  border-top: 2px solid #8c8279; }
+
+.js .tabs__navigation {
+  margin-top: 1em; }
+  .js .tabs__navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .js .tabs__navigation li {
+    display: inline-block;
+    padding: 3pz 5px;
+    vertical-align: bottom; }
+
+.js .tabs__navigation li {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0;
+  vertical-align: bottom; }
+.js .tabs__navigation a {
+  border: 2px solid #8c8279;
+  border-bottom: 0;
+  color: #333;
+  display: block;
+  padding: 8px 6px;
+  text-decoration: none; }
+  .js .tabs__navigation a.active {
+    background-color: #f6f6f6;
+    display: block;
+    font-style: 15px;
+    position: relative;
+    z-index: 5150; }
+
+@media (max-width: 700px) {
+  .js .tabs__navigation ul {
+    border-bottom: 0;
+    overflow: hidden;
+    position: relative; }
+    .js .tabs__navigation ul:before {
+      background-color: #fff;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsAgMAAABj6rKSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEUAAAD///8AAAD////IZVEZAAAAAnRSTlMAAHaTzTgAAAABYktHRAH/Ai3eAAAACXBIWXMAAAsSAAALEgHS3X78AAAAG0lEQVQoz2NYhQAMtGAjg1AEoAkbGYz6iyw2AB4v6cHm3Lv8AAAAAElFTkSuQmCC");
+      content: '';
+      background-size: 100%;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 0;
+      top: 8px;
+      border: 3px solid white;
+      box-sizing: border-box;
+      right: 16px;
+      z-index: 2;
+      pointer-events: none; }
+    .js .tabs__navigation ul.open a {
+      position: relative;
+      display: block; }
+  .js .tabs__navigation li {
+    display: block; }
+  .js .tabs__navigation a {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .js .tabs__navigation a.active {
+      z-index: 1; } }
+
+@media (min-width: 701px) {
+  .js .tabs__navigation li {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; } }
+
+.js .tabs__group > .tabs__item {
+  display: none;
+  padding: 0 1rem;
+  border: 2px solid #8c8279;
+  border-top: 1px solid #8c8279; }
+.js .tabs__group > .active {
+  display: block; }
+
+.profile__img {
+  float: right;
+  width: 25%; }
+
+.profile__group {
+  font-size: 14px; }
+  .profile__group a {
+    font-size: 14px; }
+  @media (min-width: 700px) {
+    .profile__group {
+      width: 75%; } }
+  .profile__group address {
+    margin-bottom: 1em; }
+
+.group--job-role span {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 2em;
+  width: 75%; }
+  @media (min-width: 500px) {
+    .group--job-role span {
+      margin-bottom: .5em; } }
+  @media (min-width: 700px) {
+    .group--job-role span {
+      width: 100%; } }
+
+.group--contact .list {
+  list-style: none;
+  margin-bottom: 1em;
+  padding: 0; }
+  .group--contact .list .list__item span {
+    font-weight: 700; }
+  .group--contact .list .list__item p {
+    margin: 0 0 .5em; }
+
+address {
+  font-style: normal; }
+
+.tabs .profile__header h3 {
+  margin: 0; }
+.tabs .profile__header a {
+  margin-bottom: 1em; }
+
+.list--clean {
+  padding: 0;
+  list-style: none; }
+  .list--clean li {
+    font-size: 14px;
+    margin-bottom: 1em; }
+
+.list--striped {
+  list-style: none;
+  padding: 0; }
+  .list--striped li {
+    padding: 4px 8px; }
+    .list--striped li:nth-child(even) {
+      background-color: #dddddd; }
+  .list--striped a {
+    display: block;
+    color: #111;
+    text-decoration: none; }
+
+.group a {
+  color: #034DA1;
+  font-weight: 600; }
+  .group a:hover {
+    text-decoration: underline; }
+
+.group .to-top {
+  font-size: 10px;
+  text-align: right; }
+
+.tabs--IRIS a.active {
+  background-color: #f6f6f6;
+  padding-top: 6px;
+  top: 1px;
+  line-height: 23px;
+  z-index: 5150; }
+.tabs--IRIS .tabs__group {
+  background-color: #F7F7F4; }
 
 /* 
 * Pattern name: Tag
