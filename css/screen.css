@@ -2636,7 +2636,7 @@ figure + figure, figure + p {
   vertical-align: top; }
 
 /* responsive images  */
-img {
+.lightbox__item img {
   max-width: 100%;
   height: auto;
   width: auto;
