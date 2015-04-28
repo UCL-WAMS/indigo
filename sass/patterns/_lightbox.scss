@@ -1,6 +1,7 @@
 /* responsive images  */
 .lightbox__item img {   
     max-width: 100%;
+    max-height:500px;
     height: auto;
     width: auto; /* fixing ie bug*/
     -webkit-box-sizing: border-box;
@@ -8,7 +9,7 @@
     box-sizing: border-box;
 }
 .lightbox {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
@@ -32,7 +33,7 @@
   border-radius: 3px;
   box-sizing: border-box;
   position: relative;
-  top: 10%;
+  top: 0;
   transform: translate(-50%);
 
   z-index: 5150;
