@@ -24,17 +24,17 @@
 	<!-- end social meta -->
 	<title>UCL Design Language</title>
 
-	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="//cdn.ucl.ac.uk/indigo/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
 	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
 
-	<link rel="shortcut icon" href="//static.ucl.ac.uk/indigo/images/favicon.ico" />
+	<link rel="shortcut icon" href="//cdn.ucl.ac.uk/indigo/images/favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="favicon-144.png">
 
-	<script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
+	<script src="//cdn.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
 
 	<script>
 	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
@@ -45,50 +45,74 @@
 			//if old browser load the shiv
 			,
 		nope: [
-			'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+			'//cdn.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//cdn.ucl.ac.uk/indigo/js/lib/respond.min.js'
 		]
 	});
 	//set conditional assets for main.js
 	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+		pathToJquery: '//cdn.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
 		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
 	}
 	if (cuttingTheMustard) {
-		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+		globalSiteSpecificVars.pathToJquery = "//cdn.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
 	}
 	</script>
 
-	<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
-	<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
+	<script src="//cdn.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
+	<script src="//cdn.ucl.ac.uk/indigo/js/main.js"></script>
 	<script>
-		require(["app/general"]); //load the default stuff
+		require(["app/general","app/tabs"]); //load the default stuff
 	</script>
 </head>
 
-<body id="tabs-view" class="layout-vertical layout-vertical--nav-2col
-">
-	<div class="tabbed">
-		<ul class="tabbed__list clearfix">
-			<li class="tabbed__item"><a href="#tab-1" class="tabbed__link">Tab one</a>
-			</li>
-			<li class="tabbed__item"><a href="#tab-2" class="tabbed__link">Tab two</a>
-			</li>
-			<li class="tabbed__item"><a href="#tab-3" class="tabbed__link">Tab three</a>
-			</li>
-		</ul>
-		<div id="tab-1" class="tabbed__content">
-			<h3>Tab 1</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
-		</div>
-		<div id="tab-2" class="tabbed__content">
-			<h3>Tab 2</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec</p>
-		</div>
-		<div id="tab-3" class="tabbed__content">
-			<h3>Tab 3</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula content__mainbibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio.</p>
-		</div>
-	</div>
+<body id="tabs-view" class="layout-vertical layout-vertical--nav-2col">
+<div class="tabs">
+  <nav role="navigation" role="secondary" class="tabs__navigation">
+    <ul>
+      <li><a href="#tab-1">Profile</a></li>
+      <li><a class="active" href="#tab-2">Research</a></li>
+      <li><a href="#tab-3">Publications</a></li>
+      <li><a href="#tab-4">Biography</a></li>
+      <li><a href="#tab-5">Additional Info</a></li>
+    </ul>
+  </nav>
+  <div class="tabs__items">
+    <div class="tabs__item tab" id="tab-1">
+      <div class="tab__content">
+        <h2>Tab 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
+      </div>
+    </div>
+
+    <div class="tabs__item active tab" id="tab-2">
+      <div class="tab__content">
+        <h2>Tab 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
+      </div>
+    </div>
+
+    <div class="tabs__item tab" id="tab-3">
+      <div class="tab__content">
+        <h2>Tab 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
+      </div>
+    </div>
+
+    <div class="tabs__item tab" id="tab-4">
+      <div class="tab__content">
+        <h2>Tab 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
+      </div>
+    </div>
+    
+        <div class="tabs__item tab" id="tab-5">
+      <div class="tab__content">
+        <h2>Tab 5</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
+      </div>
+    </div>
+  </div> 
+</div>
 </body>
 
 </html>
