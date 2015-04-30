@@ -22,9 +22,13 @@
 	<meta property="og:type" content="website"/> 
 	<meta property="og:profile_id" content="uclofficial"/>
 	<!-- end social meta -->
-	<title>UCL Design Language - CTA Button</title>
+	<title>UCL Design Language</title>
 
-	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" media="screen, projection"
+              href="//cdn.ucl.ac.uk/silva/UCLDefaultLayoutV4/css/screen/uclSearch.min.css">
+
 
 	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
 	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
@@ -42,7 +46,7 @@
 
 		Modernizr.load({
 		//cutting the mustard as used by the BBC
-		test : cuttingTheMustard 
+		test : cuttingTheMustard
 		//if old browser load the shiv
 		,nope : [
 		'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js'
@@ -72,21 +76,19 @@
 
 	<header class="header header--desktop">
 
-		<a class="header__close" href="#"><img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" /> Close</a>
+		<a class="header__close" href="#"><img src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" /> Close</a>
 
 		<div class="masthead">
 
 			<div class="wrapper clearfix">
 
 				<div class="masthead__search">
-					<form action="//search2.ucl.ac.uk/s/search.html" method="get">
+					<form action="#" method="get">
 						<div class="search-form">
-							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+							<span class="tt-dropdown-menu" style="position: fixed; width: 90%; left: 5%; top: 48px; right: auto; z-index: 5050; border: 1px solid rgb(170, 170, 170); border-radius: 4px; box-shadow: rgba(51, 51, 51, 0.298039) 2px 2px 2px; display: table; background-color: rgb(255, 255, 255);"><div class="AC-result AC-result--websites"><h2>Websites</h2><ul class=""><li class="tt-suggestion"><p><a href="//search2.ucl.ac.uk/s/search.html?collection=website-meta&amp;query=framework&amp;profile=_website&amp;tab=websites">framework</a></p></li><li class="tt-suggestion"><p><a href="//search2.ucl.ac.uk/s/search.html?collection=website-meta&amp;query=france&amp;profile=_website&amp;tab=websites">france</a></p></li><li class="tt-suggestion"><p><a href="//search2.ucl.ac.uk/s/search.html?collection=website-meta&amp;query=frame&amp;profile=_website&amp;tab=websites">frame</a></p></li><li class="tt-suggestion"><p><a href="//search2.ucl.ac.uk/s/search.html?collection=website-meta&amp;query=francis&amp;profile=_website&amp;tab=websites">francis</a></p></li><li class="tt-suggestion"><p><a href="//search2.ucl.ac.uk/s/search.html?collection=website-meta&amp;query=fraction&amp;profile=_website&amp;tab=websites">fraction</a></p></li></ul></div><div class="AC-result AC-result--degrees"><h2>Degrees and Short Courses</h2><ul class=""><li class="tt-suggestion"><p class="result__title"><a href="http://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/drug-design-msc">Drug Design <span>MSc/PG Dip</span></a></p></li><li class="tt-suggestion"><p class="result__title"><a href="http://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/organic-chemistry-drug-discovery-mres">Organic Chemistry: Drug Discovery <span>MRes</span></a></p></li><li class="tt-suggestion"><p class="result__title"><a href="http://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/archives-records-management-ma">Archives and Records Management <span>MA/PG Dip/PG Cert</span></a></p></li><li class="tt-suggestion"><p class="result__title"><a href="http://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/french-francophone-studies-language-culture-history-ma">French and Francophone Studies: Language Culture and History <span>MA</span></a></p></li><li class="tt-suggestion"><p class="result__title"><a href="http://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/early-modern-studies-ma">Early Modern Studies <span>MA</span></a></p></li></ul></div><div class="AC-result AC-result--directory"><h2>People</h2><ul class=""><li class="tt-suggestion"><div class="AC-details"><ul class="profile-details"><li class="fn">Fran?ois de Blois</li><li><i class="fa fa-envelope"></i><a href="mailto:uclhfcd@ucl.ac.uk">uclhfcd@ucl.ac.uk</a></li></ul></div></li><li class="tt-suggestion"><div class="AC-details"><ul class="profile-details"><li class="fn">Fran P Fonagy</li><li><i class="fa fa-envelope"></i><a href="mailto:f.fonagy@ucl.ac.uk">f.fonagy@ucl.ac.uk</a></li></ul></div></li><li class="tt-suggestion"><div class="AC-details"><ul class="profile-details"><li class="fn">Richard Frackowiak</li><li><span><i class="fa fa-phone"></i>external: </span>020 7833 7458</li><li><i class="fa fa-envelope"></i><a href="mailto:r.frackowiak@ucl.ac.uk">r.frackowiak@ucl.ac.uk</a></li></ul></div><img src="https://iris.ucl.ac.uk/iris/extResource/image/01/RSJFR43" alt="image of Richard Frackowiak"></li><li class="tt-suggestion"><div class="AC-details"><ul class="profile-details"><li class="fn">Dan G Frampton</li><li><span><i class="fa fa-phone"></i>external: </span>020 3549 5547</li><li><i class="fa fa-envelope"></i><a href="mailto:d.frampton@ucl.ac.uk">d.frampton@ucl.ac.uk</a></li></ul></div></li><li class="tt-suggestion"><div class="AC-details"><ul class="profile-details"><li class="fn">Fran L Cole</li><li><i class="fa fa-envelope"></i><a href="mailto:f.cole@ucl.ac.uk">f.cole@ucl.ac.uk</a></li></ul></div></li></ul></div><div class="AC-result AC-result--research"><h2>Research</h2><ul class=""><li class="tt-suggestion"><p><a href="http://discovery.ucl.ac.uk/72835/">The Language of Neurology: Symptoms Signs and Basic Investigations</a></p></li><li class="tt-suggestion"><p><a href="http://discovery.ucl.ac.uk/1406078/">Characterizing aging in the human brainstem using quantitative multimodal MRI analysis</a></p></li><li class="tt-suggestion"><p><a href="http://discovery.ucl.ac.uk/66516/">THE FUNCTIONAL NATURE OF CEREBELLAR DIASCHISIS</a></p></li><li class="tt-suggestion"><p><a href="http://discovery.ucl.ac.uk/1424765/">The electromagnetic performance of the RD52 fiber calorimeter</a></p></li><li class="tt-suggestion"><p><a href="http://discovery.ucl.ac.uk/1413206/">Multiparametric brainstem segmentation using a modified multivariate mixture of Gaussians</a></p></li></ul></div></span>
 						</div>
-						<input type="hidden" name="collection" value="website-meta">
-		                <input type="hidden" name="profile" value="_website">
-		                <input type="hidden" name="tab" value="websites">
-		                <input type="submit" name="submit" value="Go" class="btn btn--primary search-form__input search-form__input--submit" />
+
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
 					</form>
 				</div>
 
@@ -111,9 +113,9 @@
 
 		<div class="photograph">
 			<div class="brand">
-				<p class="brand__heading">UCL Design Language</p>
+				<h2 class="brand__heading">UCL Design Language</h2>
 				<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
-                    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
+                    <img src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
 			</div>
 			<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
 		</div><!-- end .photograph -->
@@ -185,7 +187,7 @@
 
 		<header class="header header--mobile default-header">
 
-			<a class="header header__open" href="#"><img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/mob-nav.png" alt="Menu" /></a>
+			<a class="header header__open" href="#"><img src="//static.ucl.ac.uk/indigo/images/mob-nav.png" alt="Menu" /></a>
 
 		</header>
 
@@ -207,44 +209,16 @@
 
 					<article class="article">
 
-						<h1>CTA Button</h1>
+						<h1>Main page title</h1>
 
 						<p>This is the main content column.</p>
 
-						<h2>Subheader</h2>
+						<h2>UCL banner</h2>
 
 						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
 
 						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
-                        
-                    	<p class="clearfix">
-                    		<a href="http://www.google.com" class="cta btn pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 100% left View all news articles
-                    		</a>
-                    	</p>
-                        
-                        <p class="clearfix">
-                        	<a href="http://www.google.com" class="cta btn cta-half pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 50% left View all news articles
-                        	</a>
-                        </p>
 
-						<p class="clearfix">
-							<a href="http://www.google.com" class="cta btn cta-third pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 33%% left View all news articles
-							</a>
-						</p>
-
-                        <p class="clearfix">
-                        	<a href="http://www.google.com" class="cta btn cta-half pull-right" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 50% right View all news articles
-                        	</a>
-                        </p>
-                        
-                        <p class="clearfix">
-                        	<a href="http://www.google.com" class="cta btn cta-threequarters pull-left" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 75% left View all news articles
-                        	</a>
-                        </p>
-                        <p class="clearfix">
-                        	<a href="http://www.google.com" class="cta btn cta-third pull-right" onclick="_gaq.push(['_trackEvent','Click','External','http://www.google.com'])">1 33%% left View all news articles
-                        	</a>
-                        </p>
 					</article>
 
 					<p class="mod">Page last modified on <time datetime="2013-05-06 08:09">06 Aug 13 08:09</time>
@@ -292,7 +266,7 @@
 				</ul>
             </article>
             <article class="block block--col-3">
-                <h2 class="as-h5">Connect with us</h2>
+                <h2 class="as-h5">Locations</h2>
                 <ul class="footer__list list-unstyled">
 					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
 					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
