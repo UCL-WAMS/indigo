@@ -40,12 +40,12 @@ require.config({
 		,jquery: globalSiteSpecificVars.pathToJquery
 		,underscore: '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min'
 		,backbone: '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min'
-		,fastclick: assetLocation + 'fastclick'
-		,googleAnalyticsLib: assetLocation + 'googleAnalytics.min'
-		,owl: assetLocation + 'owl.carousel.min'
-		,jwplayer: assetLocation + 'jwplayer'
-		,handleBars: assetLocation + 'handlebars.min'
-		,typeAheadBundle: assetLocation + 'typeahead.bundle.min'
+		,fastclick: 'fastclick'
+		,googleAnalyticsLib: 'googleAnalytics.min'
+		,owl: 'owl.carousel.min'
+		,jwplayer: 'jwplayer'
+		,handleBars: 'handlebars.min'
+		,typeAheadBundle:  'typeahead.bundle.min'
 	}
 	,shim:{
 		allsite: {
