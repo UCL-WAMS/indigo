@@ -5,11 +5,6 @@
 -------------------------------------------------------------- */
 
 // house keeping
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 .no-js .tabs__navigation {
   ul {
     border-bottom: 4px solid #8c8279;
@@ -152,8 +147,4 @@
     display: block;
   }
 }
-
-
-
-
 

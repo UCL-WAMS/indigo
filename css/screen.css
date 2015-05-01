@@ -3887,9 +3887,6 @@ Notes:
 * Use: Related tabular content
 * Note: N/A
 -------------------------------------------------------------- */
-*, *:before, *:after {
-  box-sizing: border-box; }
-
 .no-js .tabs__navigation ul {
   border-bottom: 4px solid #8c8279;
   list-style: none;
