@@ -86,7 +86,7 @@
 }
 
 .js .tabs__navigation {
-    @media (max-width: 700px) {
+    @include gs-media(m) {
     ul {
       border-bottom: 0;
       overflow: hidden;
@@ -133,7 +133,7 @@
 }
 
 .js .tabs__navigation {
-  @media (min-width: 701px) {
+    @include gs-media(t,min) {
     li {
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
@@ -157,122 +157,3 @@
 
 
 
-// styling of Profile Tab
-
-.profile__img {
-  float: right;
-  width: 25%;
-}
-.profile__group {
-  font-size: 14px;
-  & a {
-    font-size: 14px;
-  }
-  @media (min-width:700px) {
-    width: 75%;
-  }
-  address {
-    margin-bottom: 1em;
-  }
-}
-.group--job-role {
-  span {
-    display: inline-block;
-    font-weight: 700;
-    margin-bottom: 2em;
-    width: 75%;
-    @media (min-width: 500px) {
-      margin-bottom: .5em;
-    }
-    @media (min-width:700px) {
-      width: 100%;
-    }
-  }
-}
-
-.group--contact {
-  .list {
-    list-style: none;
-    margin-bottom: 1em;
-    padding: 0;
-    .list__item {
-      span {
-        font-weight: 700;
-      }
-      p {
-        margin: 0 0 .5em;
-      }
-    }
-  }
-}
-
-address {
-  font-style: normal;
-}
-
-.tabs {
-  .profile__header {
-    h3 {
-      margin: 0;
-    }
-    a {
-      margin-bottom: 1em;
-    }
-  }
-}
-
-
-.list--clean {
-  padding: 0;
-  list-style: none;
-  li {
-    font-size: 14px;
-    margin-bottom: 1em;
-  }
-}
-
-.list--striped {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 4px 8px;
-    &:nth-child(even) {
-      background-color: darken(#f6f6f6, 10%);
-    }
-  }
-  a {
-    display: block;
-    color: #111;
-    text-decoration: none;
-  }
-}
-
-
-.group a {
-  color: #034DA1;
-  font-weight: 600;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
-.group .to-top {
-  font-size: 10px;
-  text-align: right;
-}
-
-.tabs--IRIS {
-  a {
-      &.active {
-        background-color: #f6f6f6;
-        padding-top: 6px;
-        top: 1px;
-        line-height: 23px;
-        z-index: 5150;
-      }
-    }
-  .tabs__group {
-    background-color: #F7F7F4;
-  }
-}

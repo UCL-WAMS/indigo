@@ -3889,7 +3889,7 @@ Notes:
     position: relative;
     z-index: 5150; }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 767px) {
   .js .tabs__navigation ul {
     border-bottom: 0;
     overflow: hidden;
@@ -3924,7 +3924,7 @@ Notes:
     .js .tabs__navigation a.active {
       z-index: 1; } }
 
-@media (min-width: 701px) {
+@media only screen and (min-width: 768px) {
   .js .tabs__navigation li {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px; } }
@@ -3936,87 +3936,6 @@ Notes:
   border-top: 1px solid #8c8279; }
 .js .tabs__group > .active {
   display: block; }
-
-.profile__img {
-  float: right;
-  width: 25%; }
-
-.profile__group {
-  font-size: 14px; }
-  .profile__group a {
-    font-size: 14px; }
-  @media (min-width: 700px) {
-    .profile__group {
-      width: 75%; } }
-  .profile__group address {
-    margin-bottom: 1em; }
-
-.group--job-role span {
-  display: inline-block;
-  font-weight: 700;
-  margin-bottom: 2em;
-  width: 75%; }
-  @media (min-width: 500px) {
-    .group--job-role span {
-      margin-bottom: .5em; } }
-  @media (min-width: 700px) {
-    .group--job-role span {
-      width: 100%; } }
-
-.group--contact .list {
-  list-style: none;
-  margin-bottom: 1em;
-  padding: 0; }
-  .group--contact .list .list__item span {
-    font-weight: 700; }
-  .group--contact .list .list__item p {
-    margin: 0 0 .5em; }
-
-address {
-  font-style: normal; }
-
-.tabs .profile__header h3 {
-  margin: 0; }
-.tabs .profile__header a {
-  margin-bottom: 1em; }
-
-.list--clean {
-  padding: 0;
-  list-style: none; }
-  .list--clean li {
-    font-size: 14px;
-    margin-bottom: 1em; }
-
-.list--striped {
-  list-style: none;
-  padding: 0; }
-  .list--striped li {
-    padding: 4px 8px; }
-    .list--striped li:nth-child(even) {
-      background-color: #dddddd; }
-  .list--striped a {
-    display: block;
-    color: #111;
-    text-decoration: none; }
-
-.group a {
-  color: #034DA1;
-  font-weight: 600; }
-  .group a:hover {
-    text-decoration: underline; }
-
-.group .to-top {
-  font-size: 10px;
-  text-align: right; }
-
-.tabs--IRIS a.active {
-  background-color: #f6f6f6;
-  padding-top: 6px;
-  top: 1px;
-  line-height: 23px;
-  z-index: 5150; }
-.tabs--IRIS .tabs__group {
-  background-color: #F7F7F4; }
 
 /* 
 * Pattern name: Tag
