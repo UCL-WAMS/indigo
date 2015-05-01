@@ -62,90 +62,13 @@
 	<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
 	<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
 	<script>
-	require(["app/general"]); //load the default stuff
+	require(["app/general", "app/lightbox"]); //load the default stuff
 	</script>
 
 </head>
-
-<body id="navigation-view" class="layout-vertical layout-vertical--nav-2col
-">
-
-	<header class="header header--desktop">
-
-		<a class="header__close" href="#">
-			<img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
-
-		<div class="masthead">
-
-			<div class="wrapper clearfix">
-
-				<div class="masthead__search">
-					<form action="#" method="get">
-						<!--
-							<div class="search-type">
-								<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
-								<label for="ucl-site" class="site">Site</label>
-								<input type="radio" id="ucl-search" name="operation" value="2">
-								<label for="ucl-search" class="staff">Directory</label>
-							</div>
-							-->
-						<div class="search-form">
-							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
-						</div>
-
-						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
-					</form>
-
-				</div>
-
-				<nav class="masthead__nav m-clear">
-					<ul class="masthead__list">
-						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
-						</li>
-						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
-						</li>
-						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
-						</li>
-						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-
-		</div>
-		<!-- end .masthead -->
-
-		<div class="wrapper">
-
-			<div class="photograph">
-				<div class="brand">
-					<p class="brand__heading">UCL Design Language</p>
-					<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
-                    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
-				</div>
-
-				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
-			</div>
-			<!-- end .photograph -->
-
-		</div>
-		<!-- end .wrapper -->
-
-	</header>
-	<!-- end .header -->
-
-	<div class="site-content wrapper">
-
-		<header class="header header--mobile">
-
-			<a class="header__open" href="#">
-				<img src="//static.ucl.ac.uk/indigo/images/ucl-menu.svg" alt="Menu" />
+	<body id="media-view" class="layout-vertical layout-vertical--nav-2col">
+			<a href="images/carousel/carousel-aslash.jpg" class="lightbox-img">
+				<img src="images/carousel/carousel-aslash.jpg" alt="" />
 			</a>
-
-		</header>
-
-	</div>
-
-</body>
-
+	</body>
 </html>
