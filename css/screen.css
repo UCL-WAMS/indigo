@@ -3558,10 +3558,12 @@ Notes:
   padding-bottom: 30%; }
   .photograph--show .photograph__description {
     display: block; }
-    @media only screen and (max-width: 767px) {
-      .photograph--show .photograph__description {
-        display: none; } }
 
+@media only screen and (max-width: 767px) {
+  .photograph--show {
+    display: none; }
+    .photograph--show .photograph__description {
+      display: none; } }
 /* 
 * Pattern name: Pagination
 * Use: For highlighting where a user is within a sequence of related pages
