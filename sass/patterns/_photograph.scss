@@ -39,7 +39,12 @@
 	padding-bottom: 30%;
 	.photograph__description {
 		display: block;
-		@include gs-media(m, max) {
+	}
+}
+@include gs-media(m) {
+	.photograph--show {
+		display: none;
+		.photograph__description{
 			display: none;
 		}
 	}
