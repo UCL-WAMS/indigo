@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+    <title>UCL Design Language</title>
+
+    <link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    <!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
+    <!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+
+
+    <link rel="shortcut icon" href="//static.ucl.ac.uk/indigo/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+
+    <script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
+
+    <script>
+        var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+        Modernizr.load({
+            //cutting the mustard as used by the BBC
+            test: cuttingTheMustard
+                //if old browser load the shiv
+                ,
+            nope: [
+                '//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+            ]
+        });
+        //set conditional assets for main.js
+        var globalSiteSpecificVars = {
+            pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+            googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+        }
+        if (cuttingTheMustard) {
+            globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+        }
+    </script>
+
+    <script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
+    <script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
+    <script>
+        require(["app/general"]); //load the default stuff
+    </script>
+
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+    <header class="header header--desktop">
+
+        <a class="header__close" href="#">
+            <img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+        <div class="masthead">
+
+            <div class="wrapper clearfix">
+
+                <div class="masthead__search">
+                    <form action="#" method="get">
+                        <!--
+						<div class="search-type">
+							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
+							<label for="ucl-site" class="site">Site</label>
+							<input type="radio" id="ucl-search" name="operation" value="2">
+							<label for="ucl-search" class="staff">Directory</label>
+						</div>
+						-->
+                        <div class="search-form">
+                            <input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+                        </div>
+
+                        <input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+                    </form>
+
+
+                </div>
+
+
+                <nav class="masthead__nav m-clear">
+    				<ul class="masthead__list">
+    					<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+    					</li>
+    					<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+    					</li>
+    					<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+    					</li>
+    					<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+    					</li>
+    				</ul>
+    			</nav>
+            </div>
+
+        </div>
+        <!-- end .masthead -->
+
+        <div class="wrapper">
+
+            <div class="photograph">
+                <div class="brand">
+                    <p class="brand__heading">UCL Design Language</p>
+                    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+                    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
+                </div>
+
+                <p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+            </div>
+            <!-- end .photograph -->
+
+            <div class="sidebar">
+
+
+                <h2 class="as-h5">Refine your results</h2>
+                <ul class="list-unstyled">
+                    <li>
+                        <input type="checkbox" id="checkbox_id1" />
+                        <label for="checkbox_id1">An option</label>
+                        <span>(45)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox_id2" />
+                        <label for="checkbox_id2">Another option</label>
+                        <span>(45)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox_id3" />
+                        <label for="checkbox_id3">One more option</label>
+                        <span>(45)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox_id4" />
+                        <label for="checkbox_id4">The final option</label>
+                        <span>(45)</span>
+                    </li>
+                </ul>
+       
+                <ul class="list-unstyled">
+                    <li class="">
+                        <a href="">Web<span>(5000)</span></a>
+                    </li>
+                    <li class="">
+                        <a href="">People<span>(300)</span></a>
+                    </li>
+                    <li class="">
+                        <a href="">Research<span>(1224)</span></a>
+                    </li>
+                    <li class="">
+                        <a href="">Courses<span>(44)</span></a>
+                    </li>
+                    <li class="">
+                        <a href="">Other<span>(4)</span></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- end .sidebar -->
+
+        </div>
+        <!-- end .wrapper -->
+
+    </header>
+    <!-- end .header -->
+
+    <div class="site-content wrapper">
+
+        <header class="header header--mobile default-header">
+
+<a class="header__open" href="#">
+				<img src="//static.ucl.ac.uk/indigo/images/ucl-menu.svg" alt="Menu" />
+			</a>
+
+        </header>
+
+        <div class="site-content__inner clearfix">
+
+            <div class="site-content__body">
+                <!-- start main slot where silva content gets rendered-->
+
+                <div class="site-content__main">
+                    <div id="fb-queryform">
+                        <form action="" method="GET" class="form">
+                            <div class="input-group">
+                                <div class="input-group__item">
+                                    <input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" name="query" id="query"  accesskey="q" type="text" class="form__control input-group__input ui-autocomplete-input" placeholder="Search">
+                                </div>
+                                <div class="input-group__item">
+                                    <input class="btn input-group__input input-group__input--btn" type="submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="search-results">
+                        <p id="fb-matching" class="fb-with-faceting">
+                            <span class="fb-result-count" id="fb-page-start">1</span>-
+                            <span class="fb-result-count" id="fb-page-end">10</span> of
+                            <span class="fb-result-count" id="fb-total-matching">6,958</span>
+                            results found for
+                            <strong class="results-query">president</strong>.
+                            <!--<span class="did-you-mean">El Presidenté</span>-->
+                            <span class="did-you-mean">Did you mean:
+							<a href="search.html?query=engineers&amp;collection=ucl-public-meta"><span class="funnelback-highlight">engineers</span>
+                            </a>?
+                            </span>
+                        </p>
+                        <!-- #fb-matching -->
+
+                        <!-- FEATURED PAGES (BEST BETS) -->
+                        <div class="box">
+                            <h4>
+							<a href="/search/click.cgi?&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2F&amp;auth=p83eE%2Fy2ou40PpXCCXCp2A&amp;type=FP&amp;profile=_default">
+								<strong>President</strong> and Provost</a>
+							</h4>
+                            <p>UCL President &Provost. UCL President & Provost Professor Michael Arthur is internationally renowned for his contribution to education and to medical research.</p>
+                            <p>
+                                <cite><a href="/search/click.cgi?&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2F&amp;auth=p83eE%2Fy2ou40PpXCCXCp2A&amp;type=FP&amp;profile=_default" title="President and Provost">http://www.ucl.ac.uk/provost/</a>
+								</cite>
+                            </p>
+                        </div>
+                        <!-- RESULTS -->
+
+
+                        <ol id="fb-results">
+
+                            <!-- EACH RESULT -->
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=1&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost&amp;auth=Qw26%2Fgkud7m%2Bq1nZjbk6Jg&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/provost">                                                UCL <strong>President</strong> &amp; Provost
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    UCL President &amp;Provost. UCL President &amp; Provost Professor Michael Arthur is internationally renowned for his contribution to education and to medical research. ... Read more news from UCL s President &amp;Provost..
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=1&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost&amp;auth=Qw26%2Fgkud7m%2Bq1nZjbk6Jg&amp;query=president&amp;profile=_default" title="UCL President &amp; Provost">www.ucl.ac.uk/provost</a>
+									</cite>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=4&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Flaws%2Fnews%2Findex.shtml&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Flaws%2Fnews%2Findex.shtml&amp;auth=Qf%2BryKheVhDWEpb9HT8nxQ&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/laws/news/index.shtml">                                                UCL Laws: News
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    The President of Cyprus delivers lecture at UCL Laws. The President of Cyprus, Nicos Anastasiades, delivered a lecture, The Evolution of Shipping Law, on Thursday 16 January. ... While visiting London on business, the Cypriot President made time to visit
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=4&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Flaws%2Fnews%2Findex.shtml&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Flaws%2Fnews%2Findex.shtml&amp;auth=Qf%2BryKheVhDWEpb9HT8nxQ&amp;query=president&amp;profile=_default" title="UCL Laws: News">www.ucl.ac.uk/laws/news/index.shtml</a>
+									</cite>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=5&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401&amp;auth=Oi54ufInPNV4LaJ6peYfzg&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/gee/gee-news-publication/20101401">                                                Prof Steve Jones elected <strong>President</strong> of the Association of Science…
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    GEE News Publication. Prof Steve Jones elected President of the Association of Science Education. ... But mathematical models predict that sexual selection is just as likely to make an ornament [.]. Prof Steve Jones elected President of the Association
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=5&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401&amp;auth=Oi54ufInPNV4LaJ6peYfzg&amp;query=president&amp;profile=_default" title="Prof Steve Jones elected President of the Association of Science Education">www.ucl.ac.uk/gee/gee-news-publication/20101401</a>
+									</cite>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=6&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2Fnews&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2Fnews&amp;auth=6EucS%2BrS2J6OFdMCd6XmGQ&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/provost/news">                                                News
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    UCL President &amp;Provost. ... UCL President &amp;Provost. News.
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=6&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2Fnews&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fprovost%2Fnews&amp;auth=6EucS%2BrS2J6OFdMCd6XmGQ&amp;query=president&amp;profile=_default" title="News">www.ucl.ac.uk/provost/news</a>
+									</cite>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=7&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401-2&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401-2&amp;auth=AIMbd6aIliyP0azyGY8GWA&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/gee/gee-news-publication/20101401-2">                                                Prof Steve Jones elected <strong>President</strong> of the Association of Science…
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    GEE News Publication. Prof Steve Jones elected President of the Association of Science Education. ... But mathematical models predict that sexual selection is just as likely to make an ornament [.]. Prof Steve Jones elected President of the Association
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=7&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401-2&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fgee%2Fgee-news-publication%2F20101401-2&amp;auth=AIMbd6aIliyP0azyGY8GWA&amp;query=president&amp;profile=_default" title="Prof Steve Jones elected President of the Association of Science Education">www.ucl.ac.uk/gee/gee-news-publication/20101401-2</a>
+									</cite>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4>
+									<a href="/search/click.cgi?rank=8&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fstaff%2F&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fstaff%2F&amp;auth=ZFzkP9ALYLhfjG5PQ%2FO4ZA&amp;query=president&amp;profile=_default" title="http://www.ucl.ac.uk/staff/">                                                UCL staff gateway
+									</a>
+								</h4>
+                                <!-- QUERY BIASED SUMMARY (WITH DATE)-->
+                                <p class="fb-summary">
+                                    Directories, teaching and research support, IT, Finance, HR and policies for UCL staff.
+                                </p>
+                                <!-- URL AND FILESIZE -->
+                                <p>
+                                    <cite><a href="/search/click.cgi?rank=8&amp;collection=ucl-public-meta&amp;url=http%3A%2F%2Fwww.ucl.ac.uk%2Fstaff%2F&amp;index_url=http%3A%2F%2Fwww.ucl.ac.uk%2Fstaff%2F&amp;auth=ZFzkP9ALYLhfjG5PQ%2FO4ZA&amp;query=president&amp;profile=_default" title="UCL staff gateway">www.ucl.ac.uk/staff/</a>
+									</cite>
+                                </p>
+                            </li>
+
+
+                        </ol>
+                        <!-- SEARCH: NAVIGATION -->
+                        <ol class="pagination">
+                            <li class="pagination__item pagination__item--current"><span class="fb-current-result-page">1</span></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=11">2</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=21">3</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=31">4</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=41">5</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=51">6</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=61">7</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=71">8</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=81">9</a></li>
+                            <li class="pagination__item pagination__item--active"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=91">10</a></li>
+                            <li class="pagination__next"><a href="search.html?query=president&amp;collection=ucl-public-meta&amp;sumbit=Go&amp;start_rank=11" rel="next" class="fb-next-result-page fb-page-nav">Next 10</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- end main slot where silva content gets rendered-->
+
+            </div>
+
+            <!--End last modified info-->
+        </div>
+
+
+    </div>
+    <!-- end .site-content -->
+
+    <footer class="footer wrapper"> 
+        <div class="footer__inner clearfix">
+            <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+            </article>
+            <hr class="clear">
+            <ul class="footer__list list-unstyled zero-bottom">
+                <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+            </ul>
+            <ul class="list-inline footer__list list-unstyled list-inline--divided">
+                <li class="text-muted small">Copyright © 2015 UCL</li>
+                <li class="text-muted small"><a href="#">Disclaimer</a>
+                </li>
+                <li class="text-muted small"><a href="#">Freedom of Information</a>
+                </li>
+                <li class="text-muted small"><a href="#">Accessibility</a>
+                </li>
+                <li class="text-muted small"><a href="#">Privacy</a>
+                </li>
+                <li class="text-muted small"><a href="#">Cookies</a>
+                </li>
+                <li class="text-muted small"><a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

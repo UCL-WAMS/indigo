@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
+
+	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+
+
+	<link rel="shortcut icon" href="//static.ucl.ac.uk/indigo/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
+
+	<script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
+
+	<script>
+	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+	Modernizr.load({
+		//cutting the mustard as used by the BBC
+		test: cuttingTheMustard
+			//if old browser load the shiv
+			,
+		nope: [
+			'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+		]
+	});
+	//set conditional assets for main.js
+	var globalSiteSpecificVars = {
+		pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+	}
+	if (cuttingTheMustard) {
+		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+	}
+	</script>
+
+	<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
+	<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
+	<script>
+	require(["app/general"]); //load the default stuff
+	</script>
+
+</head>
+
+<body id="advert-view" class="layout-vertical layout-vertical--nav-2col
+">
+	<article class="advert">
+		<div class="advert__img" style="background-image: url('http://lorempixel.com/400/200');">
+			<div class="advert__overlay">
+				<h3 class="advert__header-overlay">Advert</h3>
+			</div>
+		</div>
+		<div class="advert__content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cupiditate laudantium dolorum, voluptatum culpa tempora. Molestiae magnam, aspernatur alias fugiat! Labore, optio!</p>
+			<a href="" class="pill pill-button">Call to action</a>
+		</div>
+	</article>
+</body>
+
+</html>
