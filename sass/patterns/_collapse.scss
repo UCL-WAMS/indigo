@@ -20,9 +20,9 @@
 		border-top: 0;
 	}
 	/* ensure accordion nav is hidden and content is visible on desktop version */
-	@include respond-min($screen-md) {
+	/* @include respond-min($screen-md) {
 		display: block !important;
-	}
+	} */
 }
 
 .collapse__header--active {

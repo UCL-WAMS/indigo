@@ -2144,14 +2144,14 @@ figure + figure, figure + p {
     padding-bottom: 8px; } }
 
 .collapse__content {
-  /* ensure accordion nav is hidden and content is visible on desktop version */ }
+  /* ensure accordion nav is hidden and content is visible on desktop version */
+  /* @include respond-min($screen-md) {
+  	display: block !important;
+  } */ }
   @media (max-width: 766px) {
     .collapse__content {
       display: none;
       border-top: 0; } }
-  @media (min-width: 768px) {
-    .collapse__content {
-      display: block !important; } }
 
 @media (max-width: 767px) {
   .collapse__header--active {
@@ -3558,10 +3558,12 @@ Notes:
   padding-bottom: 30%; }
   .photograph--show .photograph__description {
     display: block; }
-    @media only screen and (max-width: 767px) {
-      .photograph--show .photograph__description {
-        display: none; } }
 
+@media only screen and (max-width: 767px) {
+  .photograph--show {
+    display: none; }
+    .photograph--show .photograph__description {
+      display: none; } }
 /* 
 * Pattern name: Pagination
 * Use: For highlighting where a user is within a sequence of related pages
