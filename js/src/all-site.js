@@ -386,5 +386,7 @@ $(document).ready(function() {
 				$(this).next().slideToggle().toggleClass('open-content');
 			}
 		});
+	}else{
+		$('.collapse__header').addClass('collapse__header--active');
 	}
 });
