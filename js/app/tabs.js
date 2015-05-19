@@ -23,8 +23,7 @@ require(['jquery'], function($) {
       },
 
       changeTab: function(hash) {
-        console.log(hash);
-        var anchor = $("[href=" + hash + "]");
+        var anchor = $('[href="' + hash + '"]');
         var div = $(hash);
 
         // activate correct anchor (visually)
