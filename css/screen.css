@@ -3871,9 +3871,10 @@ Notes:
 * Use: Related tabular content
 * Note: N/A
 -------------------------------------------------------------- */
+/* If boxsizing is needed then it must be scoped to tabs not affecting globally!
 *, *:before, *:after {
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+} */
 body {
   padding: 1rem;
   font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;

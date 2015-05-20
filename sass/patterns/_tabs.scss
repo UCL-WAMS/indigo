@@ -6,9 +6,10 @@
 
 // house keeping
 
+/* If boxsizing is needed then it must be scoped to tabs not affecting globally!
 *, *:before, *:after {
   box-sizing: border-box;
-}
+} */
 
 body {
   padding: 1rem;
