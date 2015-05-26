@@ -1,7 +1,7 @@
 /* Lightbox */
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
@@ -25,7 +25,10 @@
   border-radius: 3px;
   box-sizing: border-box;
   position: relative;
-  top: 10%;
+  top: 0;
   transform: translate(-50%);
   z-index: 5150;
+  img {
+  	max-height: 500px;
+  }
 }
