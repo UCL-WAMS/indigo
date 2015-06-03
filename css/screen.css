@@ -2137,11 +2137,13 @@ figure + figure, figure + p {
 * Use: Collapsing and revealing mechanism for long form content
 * Note: Only applicable for smaller viewports - triggered via JavaScript
 -------------------------------------------------------------- */
-@media (max-width: 766px) {
-  .collapse__header {
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px; } }
+.collapse__header {
+  clear: both; }
+  @media (max-width: 766px) {
+    .collapse__header {
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px; } }
 
 .collapse__content {
   /* ensure accordion nav is hidden and content is visible on desktop version */
