@@ -52,7 +52,7 @@ define(["jquery","allsite"],function($,gen){
 		Modernizr.load({
 			test : Modernizr.touch//target browsers that support touch events
 			//if old browser load the shiv
-			,yep : '/js/lib/fastclick.min.js'
+			,yep : '//cdn.ucl.ac.uk/indigo/js/lib/fastclick.min.js'
 			,complete: function(){
 				$(function() {
 					if(typeof FastClick !=='undefined'){
