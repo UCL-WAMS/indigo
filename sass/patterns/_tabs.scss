@@ -38,6 +38,9 @@
       text-decoration: underline;
       z-index: 5150;
     }
+    &:hover{
+      background-color: $hover-grey;
+    }
   }
 }
 
@@ -78,13 +81,16 @@
     border-bottom: 0;
     color: #333;
     display: block;
-    padding: 8px 6px;   
+    padding: 4px 6px;   
     text-decoration: none;
     &.active {
       font-weight: bold;
       font-style: 15px;
       position: relative;
       z-index: 5150;
+    }
+    &:hover{
+      background-color: $hover-grey;
     }
   }
 }
@@ -138,16 +144,15 @@
 
 .js .tabs__navigation {
   @media (min-width: 701px) {
-    li {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-    }
+    // li {
+    //   border-top-left-radius: 8px;
+    //   border-top-right-radius: 8px;
+    // }
     a {
       &.active {
         background-color: #fff;
-        padding-top: 6px;
         top: 1px;
-        line-height: 23px;
+        padding-top:5px;
         z-index: 5150;
       }
     }
@@ -164,5 +169,10 @@
   > .active {
     display: block;
   }
+}
+
+.tab__content
+{
+    padding-top: 10px;
 }
 
