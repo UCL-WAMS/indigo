@@ -2707,9 +2707,6 @@ figure + figure, figure + p {
 .static-img {
   display: block; }
 
-iframe {
-  max-width: 100%; }
-
 .map-container {
   width: 100%;
   margin: 0 auto;
