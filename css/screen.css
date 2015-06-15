@@ -14,6 +14,7 @@
 -------------------------------------------------------------- */
 /* Project specific
 -------------------------------------------------------------- */
+/*hover colour*/
 /* Image sizing
 -------------------------------------------------------------- */
 /* Z index values
@@ -2688,6 +2689,46 @@ figure + figure, figure + p {
 
   .org-unit-logo img {
     max-width: 320px; } }
+.map {
+  display: block;
+  width: 100%;
+  padding: 1em 0;
+  box-sizing: border-box; }
+
+.static-img {
+  height: auto;
+  max-width: 100%;
+  width: 100%; }
+
+.map-link {
+  display: block;
+  font: 0/0 a; }
+
+.static-img {
+  display: block; }
+
+.map-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 0;
+  padding-top: 38%;
+  position: relative;
+  display: none; }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+
+@media only screen and (min-width: 768px) {
+  .map-container {
+    display: block; }
+
+  .static-img {
+    display: none; } }
 /* 
 * Pattern name: Media
 * Use: For a content block aligned to an image
@@ -3902,6 +3943,8 @@ Notes:
     position: relative;
     text-decoration: underline;
     z-index: 5150; }
+  .no-js .tabs__navigation a:hover {
+    background-color: #f0f0f0; }
 
 .no-js .tabs__group {
   margin-top: 1em; }
@@ -3930,15 +3973,17 @@ Notes:
   border-bottom: 0;
   color: #333;
   display: block;
-  padding: 8px 6px;
+  padding: 4px 6px;
   text-decoration: none; }
   .js .tabs__navigation a.active {
     font-weight: bold;
     font-style: 15px;
     position: relative;
     z-index: 5150; }
+  .js .tabs__navigation a:hover {
+    background-color: #f0f0f0; }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 767px) {
   .js .tabs__navigation ul {
     border-bottom: 0;
     overflow: hidden;
@@ -3973,15 +4018,11 @@ Notes:
     .js .tabs__navigation a.active {
       z-index: 1; } }
 
-@media (min-width: 701px) {
-  .js .tabs__navigation li {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px; }
+@media only screen and (min-width: 768px) {
   .js .tabs__navigation a.active {
     background-color: #fff;
-    padding-top: 6px;
     top: 1px;
-    line-height: 23px;
+    padding-top: 5px;
     z-index: 5150; } }
 
 .js .tabs__group > .tabs__item {
@@ -3991,6 +4032,9 @@ Notes:
   border-top: 1px solid #8c8279; }
 .js .tabs__group > .active {
   display: block; }
+
+.tab__content {
+  padding-top: 10px; }
 
 /* 
 * Pattern name: Tag

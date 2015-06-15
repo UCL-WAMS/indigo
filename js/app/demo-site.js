@@ -17,14 +17,14 @@ define(["jquery"],function($){
 
 		//has to be duped from demo site to work with require
 		function resizeiframe(id, height){
-			$('#' + id).height(parseInt(height, 10) + 10 + 'px');
+			window.parent.$('#' + id).height(parseInt(height, 10) + 10 + 'px');
 		};
 
 		$(window).on('load',function(){
 			viewsource();
 
 			var body = $('body');
-			window.parent.resizeiframe('gitProxyIframe', body[0].scrollHeight);
+			resizeiframe('gitProxyIframe', body[0].scrollHeight);
 		});
 	//}
 });
