@@ -2692,7 +2692,7 @@ figure + figure, figure + p {
 .map {
   display: block;
   width: 100%;
-  padding: 1em 1em;
+  padding: 1em 0;
   box-sizing: border-box; }
 
 .static-img {

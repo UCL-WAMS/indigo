@@ -74,9 +74,8 @@
 			var mapConf = {
 				mapId: '1'
 				,imgSrc: 'http://maps.googleapis.com/maps/api/staticmap?center=UCL+London&zoom=15&scale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Clabel:1%7CUCL+London'
-				,label: 'ucl'
 				,embedSrc: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.381675019576!2d-0.13404!3d51.524559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2f69173579%3A0xd008c67faecc133e!2sUniversity+College+London!5e0!3m2!1sen!2suk!4v1425299272009" frameborder="0" style="border:0"></iframe>'
-			}
+			};
 			if(typeof globalSiteSpecificVars.maps!=='undefined' && globalSiteSpecificVars.maps.length > 0){
 				globalSiteSpecificVars.maps.push(mapConf);
 			}else{
@@ -86,7 +85,7 @@
 		require(["app/map"]);
 	</script>
 	<div class="map map--1">
-		<a href="https://www.google.co.uk/maps/place/University+College+London/@51.524559,-0.13404,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b2f69173579:0xd008c67faecc133e?hl=en" class="map-link map-link--1">View Map 1</a>
+		<a href="https://www.google.co.uk/maps/place/University+College+London/@51.524559,-0.13404,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b2f69173579:0xd008c67faecc133e?hl=en" class="map-link map-link--1">View Map</a>
 	</div>
 	
 </body>
