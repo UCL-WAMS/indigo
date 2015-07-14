@@ -6,11 +6,7 @@
 
 
 .message {
-	background: none repeat scroll 0 0 #FFFFFF;
-	background-position: 10px center;
-	background-repeat: no-repeat;
-    background-size: auto 80%;	
-    text-decoration: none;
+	text-decoration: none;
 	border: 1px solid #DDDDDD;
 	clear: left;
 	color: #666666;
@@ -27,14 +23,28 @@
 
 .message--success {
 	background-color: #F7FFF2;
-	background-image: url("#{$static-url}/images/success.png");
 	color: #7FB861;
 	border: 1px solid #7FB861;
 }
 
 .message--warning {
-	background-image: url("#{$static-url}/images/alert.png");
 	color: #DD6868;
 	border: 1px solid #DD6868;
 	font-weight: bold;
+}
+
+html.backgroundsize{
+	.message {
+		background: none repeat scroll 0 0 #FFFFFF;
+		background-position: 10px center;
+		background-repeat: no-repeat;
+		background-size: auto 80%;
+	}
+	.message--success {
+		background-image: url("#{$static-url}/images/success.png");
+	}
+
+	.message--warning {
+		background-image: url("#{$static-url}/images/alert.png");
+	}
 }

@@ -16,9 +16,35 @@
 	<script src="//static.ucl.ac.uk/indigo/js/lib/jquery-1.7.1.min.js"></script>
 	<script src="//static.ucl.ac.uk/indigo/js/src/all-site.js"></script>
 
-	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
-	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
-	<!--[if lte IE 8]><script src="//static.ucl.ac.uk/indigo/js/html5shiv-printshiv.js"></script><![endif]-->
+	<script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
+
+	<script>
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+		Modernizr.load({
+		//cutting the mustard as used by the BBC
+		test : cuttingTheMustard
+		//if old browser load the shiv
+		,nope : [
+		'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js'
+		,'//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+		]
+	});
+	//set conditional assets for main.js
+	var globalSiteSpecificVars = {
+		pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min'
+		,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+	}
+	if(cuttingTheMustard){
+		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+	}
+</script>
+
+<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
+<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
+<script>
+	require(["app/general","app/searchWithAutoComplete"]);//load the default stuff
+</script>
 
 </head>
 
