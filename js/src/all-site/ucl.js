@@ -32,15 +32,12 @@ $(document).ready(function() {
 		}
 	});
 
-	//var allPanels = $('.accordion > dd').hide();
 
 	$('.accordion__title a').click(function() {
 		allPanels.slideUp();
 		var tmpAccordionClass = $(this).attr("class");
-		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
-			removeCurrentClassFromAll();
-		} else {
-			removeCurrentClassFromAll();
+		removeCurrentClassFromAll();
+		if (typeof tmpAccordionClass === 'undefined' || tmpAccordionClass.indexOf('currentAccordionAnchor') === -1) {
 			$(this).parent().next().slideDown();
 			$(this).addClass("currentAccordionAnchor");
 		}
@@ -58,15 +55,7 @@ $(document).ready(function() {
 	if (Modernizr.mq('only screen and (max-width: 768px)')) {
 		//Add Inactive Class To All Accordion Headers
 		$('.collapse__header').addClass('collapse__header--inactive');
-
-		//Set The Accordion Content Width
-		//var contentwidth = $('.collapse__header').width();
-		//$('.collapse__content').css({'width' : contentwidth });
-
-		//Open The First Accordion Section When Page Loads
-		//		$('.collapse__header').first().toggleClass('collapse__header--active').toggleClass('collapse__header--inactive');
-		//		$('.collapse__content').first().slideDown().toggleClass('open-content');
-
+		
 		// The Accordion Effect
 		$('.collapse__header').click(function() {
 			if ($(this).is('.collapse__header--inactive')) {
