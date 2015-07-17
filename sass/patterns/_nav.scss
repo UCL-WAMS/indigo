@@ -43,6 +43,19 @@
 			}
 		}
 	}
+	&.nav--sticky-active{
+		position: fixed;
+		top: 0;
+		background-color: $primary-colour;
+		ul{
+			display: block;
+			max-width: $screen-xxxl;
+			margin: auto;
+		}
+		a{
+			color: $white;
+		}
+	}
 }
 
 .nav--mobile {
