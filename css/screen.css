@@ -2835,9 +2835,6 @@ img.media__aside {
 * Note: Modifiers alter border and text colours to indicate the current state
 -------------------------------------------------------------- */
 .message {
-  background: none repeat scroll 0 0 #FFFFFF;
-  background-position: 10px center;
-  background-repeat: no-repeat;
   text-decoration: none;
   border: 1px solid #DDDDDD;
   clear: left;
@@ -2857,15 +2854,23 @@ img.media__aside {
 
 .message--success {
   background-color: #F7FFF2;
-  background-image: url("//cdn.ucl.ac.uk/indigo/images/success.png");
   color: #7FB861;
   border: 1px solid #7FB861; }
 
 .message--warning {
-  background-image: url("//cdn.ucl.ac.uk/indigo/images/alert.png");
   color: #DD6868;
   border: 1px solid #DD6868;
   font-weight: bold; }
+
+html.backgroundsize .message {
+  background: none repeat scroll 0 0 #FFFFFF;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 80%; }
+html.backgroundsize .message--success {
+  background-image: url("//cdn.ucl.ac.uk/indigo/images/success.png"); }
+html.backgroundsize .message--warning {
+  background-image: url("//cdn.ucl.ac.uk/indigo/images/alert.png"); }
 
 /*
 Notes:
@@ -3193,6 +3198,16 @@ Notes:
       cursor: pointer; }
     .nav--top ul li:last-child {
       border-right: 0; }
+  .nav--top.nav--sticky-active {
+    position: fixed;
+    top: 0;
+    background-color: #ff5a5f; }
+    .nav--top.nav--sticky-active ul {
+      display: block;
+      max-width: 1400px;
+      margin: auto; }
+    .nav--top.nav--sticky-active a {
+      color: #ffffff; }
 
 .nav--mobile {
   display: none; }
@@ -4012,9 +4027,7 @@ Notes:
     background: white;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+    left: 0; }
     .js .tabs__navigation a.active {
       z-index: 1; } }
 
