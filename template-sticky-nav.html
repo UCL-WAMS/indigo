@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset=utf-8 />
+	<meta name="author" content="UCL" />
+	<meta name="description" content="UCL Homepage" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- social meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@uclnews">
+	<meta name="twitter:title" content="UCL - London's Global University">
+	<meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+	<meta name="twitter:creator" content="@UCLWAMS">
+	<meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+	<meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+	<meta property="og:title" content="UCL - London's Global University" />
+	<meta property="og:url" content="http://www.ucl.ac.uk" />
+	<meta property="og:site_name" content="UCL" />
+	<meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+	<meta property="og:type" content="website" />
+	<meta property="og:profile_id" content="uclofficial" />
+	<!-- end social meta -->
+	<title>UCL Design Language</title>
+
+	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
+	<!--[if lt IE 8]><link href="//static.ucl.ac.uk/indigo/css/ie-old.min.css" rel="stylesheet" /><![endif]-->
+
+
+	<link rel="shortcut icon" href="//static.ucl.ac.uk/indigo/images/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
+
+	<script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
+
+	<script>
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+		Modernizr.load({
+			//cutting the mustard as used by the BBC
+			test: cuttingTheMustard
+				//if old browser load the shiv
+				,
+			nope: [
+				'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+			]
+		});
+		//set conditional assets for main.js
+		var globalSiteSpecificVars = {
+			pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+			googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+		}
+		if (cuttingTheMustard) {
+			globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+		}
+	</script>
+
+	<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
+	<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
+	<script>
+		require(["app/general"]); //load the default stuff
+	</script>
+
+</head>
+
+<body id="index" class="layout-horizontal layout-horizontal--nav-2col">
+
+	<header class="header header--desktop">
+
+		<a class="header__close" href="#">
+			<img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+		<div class="masthead">
+
+			<div class="wrapper clearfix">
+
+				<div class="masthead__search">
+					<form action="#" method="get">
+						<!--
+						<div class="search-type">
+							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
+							<label for="ucl-site" class="site">Site</label>
+							<input type="radio" id="ucl-search" name="operation" value="2">
+							<label for="ucl-search" class="staff">Directory</label>
+						</div>
+						-->
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+
+
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+		<!-- end .masthead -->
+
+		<div class="wrapper">
+
+			<div class="photograph">
+					<div class="brand">
+						<p class="brand__heading">UCL Design Language</p>
+						<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+					<img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
+					</div>
+				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
+			</div>
+			<!-- end .photograph -->
+
+			<div class="sidebar">
+
+				<nav class="nav nav--mobile">
+					<ul>
+
+						<li><a href="index.html" class="home-link">Home</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+
+							<ul>
+								<li><a href="#">Lists can be nested</a>
+								</li>
+
+								<li><a href="#">Lists can be nested</a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+					</ul>
+				</nav>
+
+				<nav class="nav nav--left">
+
+					<ul>
+
+						<li><a href="index.html" class="home-link">Home</a>
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+
+							<ul>
+								<li><a href="#">Lists can be nested</a>
+								</li>
+
+								<li><a href="#">Lists can be nested</a>
+								</li>
+							</ul>
+
+						</li>
+
+						<li><a href="#">Main navigation items</a>
+						</li>
+
+					</ul>
+
+				</nav>
+
+			</div>
+			<!-- end .sidebar -->
+
+			<nav class="nav nav--top nav--sticky-init">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Main navigation items</a>
+					</li>
+					<li>
+						<a href="#">Main navigation items</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+		<!-- end .wrapper -->
+
+	</header>
+	<!-- end .header -->
+
+	<div class="site-content wrapper">
+
+		<header class="header header--mobile default-header">
+
+			<a class="header header__open" href="#">
+				<img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/mob-nav.png" alt="Menu" />
+			</a>
+
+		</header>
+
+		<div class="site-content__inner clearfix">
+
+			<div class="site-content__body">
+				<nav class="breadcrumb clearfix">
+					<ul class="breadcrumb__list">
+						<li class="breadcrumb__item"><a href="index.html">Home</a>
+						</li>
+						<li class="breadcrumb__item breadcrumb__item--current"><a href="news.html">News</a>
+						</li>
+					</ul>
+				</nav>
+				<!--End .breadcrumb-->
+
+				<!-- start main slot where silva content gets rendered-->
+
+				<div class="site-content__main">
+
+					<article class="article">
+
+						<h1>Main page title</h1>
+
+						<p>This is the main content column.</p>
+
+						<h2>UCL banner</h2>
+
+						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
+
+						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
+
+						<ul>
+							<li>
+								Here is a list
+							</li>
+							<li>
+								Here is a list
+							</li>
+						</ul>
+
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu tortor, posuere ut urna eget, iaculis consectetur erat. Integer dictum purus a pulvinar condimentum. Fusce dictum lacus eu molestie aliquet. Etiam elementum facilisis nisi eget scelerisque. Proin hendrerit elementum massa vitae placerat. Integer pretium sem metus, sed dictum justo ornare vitae. Duis dolor purus, hendrerit sit amet accumsan quis, ultricies ut nibh. Vivamus suscipit blandit lorem. Nam id dignissim ante, id convallis orci. Ut vitae convallis arcu.
+						</p>
+						<p>
+							Suspendisse interdum et leo in dignissim. Ut lacinia, ipsum id fermentum fermentum, magna urna ultricies ligula, quis congue metus ligula a erat. Donec ac sem auctor, fermentum turpis id, elementum velit. Proin quam justo, laoreet ac sem eu, efficitur vehicula lectus. Duis scelerisque ornare sollicitudin. Suspendisse vel orci hendrerit, posuere elit ac, bibendum tortor. Pellentesque quis metus quis orci lobortis fringilla. Donec non nisl non est sollicitudin ornare ultrices non lacus. Mauris quis efficitur odio. Morbi eget ante cursus, facilisis turpis commodo, fringilla velit. Sed fermentum nisi eu sagittis sagittis. Mauris dapibus tempor pulvinar. Donec et malesuada mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+						</p>
+						<p>
+							Sed luctus mattis suscipit. Nunc nisi libero, tempor sit amet augue sit amet, sagittis tempor quam. Etiam quis pellentesque neque, et auctor magna. Fusce ut dignissim augue. Morbi molestie ante ac lobortis ultrices. Aenean nec neque et lacus gravida suscipit ut condimentum leo. Sed a nisi magna. Fusce vitae tellus nunc.
+						</p>
+						<p>
+							Suspendisse et augue lorem. Duis facilisis commodo tristique. Etiam vel libero quis turpis lacinia viverra at in nibh. Quisque fringilla mauris vulputate lectus bibendum pulvinar. Aliquam porttitor velit purus, nec volutpat elit egestas at. Maecenas turpis ligula, euismod in lacus sed, egestas convallis nulla. Vestibulum fermentum non erat non porttitor. Nulla facilisi. Nunc at diam elementum, pharetra tortor at, imperdiet enim. Nullam accumsan massa in posuere ultricies. Praesent eget leo id purus vulputate convallis finibus vel elit. Nam placerat, est sit amet efficitur consectetur, nunc metus imperdiet dui, ut suscipit diam purus sed diam.
+						</p>
+						<p>
+							Nunc in dolor sed libero malesuada scelerisque. Quisque vestibulum nisl orci, ut sodales lorem dignissim nec. Ut pellentesque nunc quam, eu accumsan mauris aliquet in. Donec placerat auctor risus, id finibus nibh cursus cursus. Maecenas mattis mauris ac leo varius, ut dapibus sapien porta. Vivamus fringilla vestibulum ipsum, vitae rhoncus eros ultrices fermentum. Ut interdum quis neque eu maximus. Pellentesque mi justo, lacinia sit amet volutpat at, ornare id nisl. Donec commodo quam ut ipsum ultrices tempus. Cras et eros maximus felis faucibus fringilla. Donec in quam at nisi suscipit hendrerit quis sed elit. Sed dapibus augue ante. Cras leo nisi, consequat vel turpis tincidunt, vehicula luctus dui. Quisque diam orci, vulputate id auctor vel, lobortis vitae nunc.
+						</p>
+						<p>
+							Vivamus in risus quis tellus congue posuere. Duis quis urna consectetur, malesuada mi vitae, dapibus magna. Aenean sodales est ligula, sed tincidunt libero dapibus non. Cras eget volutpat risus. Nulla blandit ullamcorper mauris, et euismod nisi pharetra nec. Aliquam nec ante tincidunt purus mattis vehicula. Fusce iaculis dolor quis est pellentesque, at viverra quam accumsan. Quisque ullamcorper elit turpis, in bibendum nunc dignissim vitae. Aliquam vulputate, turpis ac volutpat dictum, augue lorem cursus sem, sit amet tincidunt odio augue vitae nisi. Nunc non volutpat mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis a tempor justo. Vestibulum tristique sapien libero, ac imperdiet est rhoncus ut.
+						</p>
+						<p>
+							Etiam consequat vehicula turpis in cursus. Fusce commodo blandit sagittis. Nulla vitae risus lectus. Mauris nec convallis dolor. Pellentesque lobortis tortor ac dignissim mattis. Aliquam fermentum fringilla arcu, in sollicitudin nibh tristique in. Pellentesque viverra scelerisque eros ac hendrerit. Fusce sollicitudin ullamcorper dui at condimentum. Nulla vel malesuada dui, vel imperdiet magna.
+						</p>
+						<p>
+							Cras pulvinar pharetra convallis. Morbi semper enim neque, tempor molestie est bibendum vel. Nullam vulputate faucibus ipsum sit amet finibus. Ut at nunc nisi. Morbi posuere, neque vitae congue scelerisque, nunc felis rutrum nunc, eu molestie odio nisl eu orci. Proin blandit egestas mattis. Vestibulum dictum mollis nisl, vel mattis massa ornare eu. Duis quis egestas felis. Suspendisse dignissim magna a sollicitudin pulvinar. Sed auctor lorem sed augue mollis, vel placerat magna scelerisque. Nulla facilisi. Pellentesque bibendum sagittis laoreet. Mauris vestibulum magna odio, a egestas nisi viverra sed. Vivamus vel sollicitudin orci. Integer at feugiat leo. Sed lacinia ultricies metus non cursus.
+						</p>
+						<p>
+							Donec semper congue faucibus. Donec pellentesque dolor ut volutpat venenatis. Proin nec sollicitudin neque. Proin lobortis vel ipsum sit amet vehicula. Ut convallis luctus leo et rutrum. Fusce tempor accumsan est. Morbi nulla justo, ultrices eget sagittis eget, facilisis quis purus. Morbi porta eros nisl, nec aliquam sapien dapibus vel.
+						</p>
+						<p>
+							Nam vehicula aliquam hendrerit. Nulla aliquet porta felis, eleifend auctor nisl egestas finibus. Nulla eu dignissim nunc, nec facilisis est. Vivamus iaculis malesuada venenatis. Duis sagittis dolor quis nulla placerat placerat. Quisque consequat aliquam molestie. Pellentesque luctus mollis ante, et maximus sem pulvinar sed. Nullam sed dapibus enim, a lobortis diam. Mauris eget magna elit. Sed placerat tellus eget quam congue sagittis. Nunc efficitur sit amet lacus non fermentum. Sed vel ipsum ullamcorper, ullamcorper tellus eu, suscipit nisi.
+						</p>
+
+					</article>
+
+					<p class="mod">Page last modified on
+						<time datetime="2013-05-06 08:09">06 Aug 13 08:09</time>
+					</p>
+
+				</div>
+
+				<div class="site-content__sidebar">
+
+					<h1>Sidebar</h1>
+
+					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+
+				</div>
+
+				<!-- end main slot where silva content gets rendered-->
+
+			</div>
+
+			<!--End last modified info-->
+		</div>
+
+
+	</div>
+	<!-- end .site-content -->
+
+	<footer class="footer wrapper"> 
+        <div class="footer__inner clearfix">
+            <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+            </article>
+            <hr class="clear">
+            <ul class="footer__list list-unstyled zero-bottom">
+                <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+            </ul>
+            <ul class="list-inline footer__list list-unstyled list-inline--divided">
+                <li class="text-muted small">Copyright © 2015 UCL</li>
+                <li class="text-muted small"><a href="#">Disclaimer</a>
+                </li>
+                <li class="text-muted small"><a href="#">Freedom of Information</a>
+                </li>
+                <li class="text-muted small"><a href="#">Accessibility</a>
+                </li>
+                <li class="text-muted small"><a href="#">Privacy</a>
+                </li>
+                <li class="text-muted small"><a href="#">Cookies</a>
+                </li>
+                <li class="text-muted small"><a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

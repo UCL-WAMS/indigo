@@ -3198,6 +3198,16 @@ Notes:
       cursor: pointer; }
     .nav--top ul li:last-child {
       border-right: 0; }
+  .nav--top.nav--sticky-active {
+    position: fixed;
+    top: 0;
+    background-color: #ff5a5f; }
+    .nav--top.nav--sticky-active ul {
+      display: block;
+      max-width: 1400px;
+      margin: auto; }
+    .nav--top.nav--sticky-active a {
+      color: #ffffff; }
 
 .nav--mobile {
   display: none; }
