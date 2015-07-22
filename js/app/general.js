@@ -61,6 +61,29 @@ define(["jquery","allsite"],function($,gen){
 				});
 			}
 		});
+		/* sticky nav
+		-----------------------------------------------------------------*/
+		var topNavObj = $("nav.nav--top");
+
+		if(topNavObj.hasClass("nav--sticky-init")){
+			var topNavFullHeight = parseInt(topNavObj.height()) + parseInt(topNavObj.css("padding-top")) + parseInt(topNavObj.css("padding-bottom"));
+			var topNavHeightFromTop = parseInt(topNavObj.offset().top);
+
+			function stickyNav(){
+				var currentPos = parseInt($(window).scrollTop());
+
+				if(currentPos > (topNavFullHeight + topNavHeightFromTop)){
+					topNavObj.addClass("nav--sticky-active");
+				}else{
+					topNavObj.removeClass("nav--sticky-active");
+				}
+			}
+
+			$(window).scroll(function(){
+				stickyNav();
+			})
+			stickyNav();
+		}
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
