@@ -137,7 +137,32 @@ define(["jquery","allsite"],function($,gen){
 				equalizeVerticalCol();
 			});
 		}
+		/* Detect IE compatability mode and show user alert
+		-----------------------------------------------------------------*/
+		var agentStr = navigator.userAgent;
+		var isCompatabilityMode = false;
+		var debug = false;//toggle this when in dev
+
+		if(agentStr.indexOf("Trident/5.0") > -1){
+			if (agentStr.indexOf("MSIE 7.0") > -1)
+				isCompatabilityMode = true;
+		}else if (agentStr.indexOf("Trident/4.0") > -1){
+			if (agentStr.indexOf("MSIE 7.0") > -1)
+				isCompatabilityMode = true;
+		}
+		if(isCompatabilityMode || debug){
+			var messageStr = "<p>This website will not display correctly in compatibilty mode.";
+			messageStr += " For more information please see <a href='http://www.ucl.ac.uk/indigo/design-foundation/indigo-constraints'>Indigo constraints</a></p>";
+			
+			$('body').prepend("<div class='announcement-bar'>" + messageStr + "</a><a href='#' class='announcement-bar--close'>x</span>");
+
+
+			$('.announcement-bar--close').click(function(){
+				$('.announcement-bar').remove();
+			})
+		}
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
+
 	});
 });
