@@ -1,0 +1,28 @@
+.announcement-bar{
+	background-color: $primary-colour;
+	p{
+		max-width: $screen-xxxl;
+		width: 90%;
+		margin: 0 auto;
+		color: #fff;
+		position: relative;
+	}
+	a{
+		color: #fff;
+		text-decoration: underline;
+	}
+	.announcement-bar--close{
+		@include announcementBar(10px);
+	}
+	@include gs-media(m){
+		p{
+			width: 70%;
+			margin: 0;
+			padding: 0.5em;
+		}
+		.announcement-bar--close{
+			@include announcementBar(20px);
+			top: 1em;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+@mixin announcementBar($font-size){
+	position: absolute;
+	padding: 0 $font-size*0.6;
+	top: 0.5em;
+	right: 5%;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	font-size: $font-size;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
