@@ -21,6 +21,8 @@
 -------------------------------------------------------------- */
 /* Module spacing
 -------------------------------------------------------------- */
+/* layout
+-------------------------------------------------------------- */
 /* Font stacks
 -------------------------------------------------------------- */
 /* Breakpoints
@@ -3241,11 +3243,17 @@ Notes:
   .nav--top.nav--sticky-active {
     position: fixed;
     top: 0;
-    background-color: #ff5a5f; }
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    left: 0; }
     .nav--top.nav--sticky-active ul {
       display: block;
+      background-color: #ff5a5f;
+      padding: 0.5em 35px;
       max-width: 1400px;
-      margin: auto; }
+      margin: auto;
+      overflow: hidden; }
     .nav--top.nav--sticky-active a {
       color: #ffffff; }
 

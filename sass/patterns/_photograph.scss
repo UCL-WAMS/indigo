@@ -10,8 +10,8 @@
 	background-size: cover;
 	width: 100%;
 	position: relative;
-	left: -35px;
-	padding: 0 35px;
+	left: -$site-content-padding;
+	padding: 0 $site-content-padding;
 	padding-bottom: 10.5%;
 	@include gs-media(m, max) {
 		width: 100%;
@@ -27,7 +27,7 @@
 	background-color: rgba($black, 0.7);
 	position: absolute;
 	bottom: 5%;
-	right: 35px;
+	right: $site-content-padding;
 	padding: 10px;
 	font-style: italic;
 	color: $white;
