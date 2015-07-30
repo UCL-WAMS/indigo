@@ -183,7 +183,7 @@ Notes:
 			&:before {
 				content: '';
 				position: absolute;
-				left: -35px;
+				left: -$site-content-padding;
 				width: 18px;
 				height: 12px;
 				top: 6px;
@@ -203,7 +203,7 @@ Notes:
 			&:before {
 				content: '';
 				position: absolute;
-				left: -35px;
+				left: -$site-content-padding;
 				width: 20px;
 				height: 18px;
 				top: 3px;

@@ -31,10 +31,10 @@
 }
 
 .hero--home {
-	padding-left: 35px;
-	padding-right: 35px;
-	margin-left: -35px;
-	margin-right: -35px;
+	padding-left: $site-content-padding;
+	padding-right: $site-content-padding;
+	margin-left: -$site-content-padding;
+	margin-right: -$site-content-padding;
 	padding-bottom: 10em;
 	border: 0;
 	background-image: url('/assets/images/hero-image-taught-desktop.jpg');

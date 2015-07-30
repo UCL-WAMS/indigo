@@ -21,6 +21,8 @@
 -------------------------------------------------------------- */
 /* Module spacing
 -------------------------------------------------------------- */
+/* layout
+-------------------------------------------------------------- */
 /* Font stacks
 -------------------------------------------------------------- */
 /* Breakpoints
@@ -1809,6 +1811,46 @@ figure + figure, figure + p {
     position: relative;
     top: -1px; }
 
+.announcement-bar {
+  background-color: #ff5a5f; }
+  .announcement-bar p {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    position: relative; }
+  .announcement-bar a {
+    color: #fff;
+    text-decoration: underline; }
+  .announcement-bar .announcement-bar--close {
+    position: absolute;
+    padding: 0 6px;
+    top: 0.5em;
+    right: 5%;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 10px;
+    text-decoration: none; }
+    .announcement-bar .announcement-bar--close:hover {
+      text-decoration: none; }
+  @media only screen and (max-width: 767px) {
+    .announcement-bar p {
+      width: 70%;
+      margin: 0;
+      padding: 0.5em; }
+    .announcement-bar .announcement-bar--close {
+      position: absolute;
+      padding: 0 12px;
+      top: 0.5em;
+      right: 5%;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      font-size: 20px;
+      text-decoration: none;
+      top: 1em; }
+      .announcement-bar .announcement-bar--close:hover {
+        text-decoration: none; } }
+
 /* 
 * Pattern name: Advert
 * Use: Supporting material or advertisement signpost
@@ -3201,11 +3243,17 @@ Notes:
   .nav--top.nav--sticky-active {
     position: fixed;
     top: 0;
-    background-color: #ff5a5f; }
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    left: 0; }
     .nav--top.nav--sticky-active ul {
       display: block;
+      background-color: #ff5a5f;
+      padding: 0.5em 35px;
       max-width: 1400px;
-      margin: auto; }
+      margin: auto;
+      overflow: hidden; }
     .nav--top.nav--sticky-active a {
       color: #ffffff; }
 

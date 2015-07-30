@@ -46,11 +46,17 @@
 	&.nav--sticky-active{
 		position: fixed;
 		top: 0;
-		background-color: $primary-colour;
+		width: 100%;
+		background: transparent;
+		padding: 0;
+		left: 0;
 		ul{
 			display: block;
+			background-color: $primary-colour;
+			padding: 0.5em $site-content-padding;
 			max-width: $screen-xxxl;
 			margin: auto;
+			overflow: hidden;
 		}
 		a{
 			color: $white;
