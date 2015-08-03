@@ -3265,6 +3265,90 @@ Notes:
       .nav--mobile ul:nth-child(n+2) {
         padding-left: 1em; } }
 
+/*
+- Multi-layer sliding navigation
+- Stu Robson
+- http://codepen.io/sturobson/pen/d01f0fc84172afc650d1dedcaa2ab118?editors=010
+-------------------------------------------------------------------------------*/
+.nav--subnav {
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .nav--subnav a {
+    text-decoration: none;
+    vertical-align: middle; }
+
+.subnav__list {
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .subnav__list ul {
+    right: 200%;
+    left: 100%;
+    box-sizing: border-box; }
+    .subnav__list ul li {
+      box-sizing: border-box; }
+  .subnav__list .nav--active {
+    left: 0;
+    right: 0; }
+    .subnav__list .nav--active > li > a {
+      visibility: visible; }
+  .subnav__list.nav--hidden > li > a {
+    visibility: hidden; }
+
+.subnav__item.parent > a:after {
+  content: " >";
+  position: absolute;
+  right: 0; }
+.subnav__item.back a {
+  border-bottom: 1px transparent solid; }
+  .subnav__item.back a:before {
+    content: "< ";
+    position: relative;
+    top: -2px; }
+.subnav__item.top-level a {
+  border-bottom: 1px transparent solid; }
+  .subnav__item.top-level a:before {
+    content: "< ";
+    position: relative;
+    top: -2px; }
+.subnav__item a {
+  display: block;
+  position: relative; }
+
+.nav--left.nav--subnav {
+  position: relative; }
+  .nav--left.nav--subnav ul li {
+    margin: 0 0 0.5em 0;
+    line-height: 1.7;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .nav--left.nav--subnav li ul {
+    margin: 0; }
+
+.nav--mobile {
+  margin-top: 1em; }
+  .nav--mobile .subnav__list {
+    padding: 0; }
+    @media only screen and (max-width: 767px) {
+      .nav--mobile .subnav__list ul:nth-child(n+2) {
+        padding-left: 0; } }
+  .nav--mobile.nav--subnav ul li a {
+    color: white; }
+  .nav--mobile .subnav__item.back a {
+    color: #ccc; }
+  .nav--mobile .subnav__item.top-level a {
+    color: #ccc; }
+  .nav--mobile .subnav__item a:hover {
+    color: #ccc; }
+
 /*** CAROUSEL ***/
 .owl-theme .owl-controls {
   margin-top: 10px;
