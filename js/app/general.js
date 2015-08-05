@@ -133,7 +133,6 @@ define(["jquery","allsite"],function($,gen){
 		}
 
 		function buildmobileNav(){
-			console.log(topNavList.length);
 			if(leftNavList.length > 0 && mobileNavList.length < 1){
 				mobileNav.append("<ul>" + leftNavList.html() + "</ul>");
 			}else if(topNavList.length > 0 && mobileNavList.length < 1){
