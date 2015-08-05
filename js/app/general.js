@@ -87,6 +87,7 @@ define(["jquery","allsite"],function($,gen){
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
+		var leftNavList = $('.nav--left ul');
 		var topNavList = $('.nav--top ul');
 		var mobileNav = $('.nav--mobile');
 		var mobileNavList = $('.nav--mobile ul');
@@ -132,7 +133,10 @@ define(["jquery","allsite"],function($,gen){
 		}
 
 		function buildmobileNav(){
-			if(topNavList.length > 0 && mobileNavList.length < 1){
+			console.log(topNavList.length);
+			if(leftNavList.length > 0 && mobileNavList.length < 1){
+				mobileNav.append("<ul>" + leftNavList.html() + "</ul>");
+			}else if(topNavList.length > 0 && mobileNavList.length < 1){
 				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
 			}
 			return;
