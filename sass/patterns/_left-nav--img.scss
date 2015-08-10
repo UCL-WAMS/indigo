@@ -4,14 +4,15 @@
 
 @include gs-media(t,min){
   .org-unit-logo {
-    clear: both;
+    //clear: both;//we are killing the float
     display: block;
-    float: left;
+    //float: left;//the nav doesn't float so this is needless
     margin-bottom: 1em;
     width: 100%;
   }
 
   .org-unit-logo img {
-    max-width: 320px;
+    //max-width: 320px;
+    width: 100%;
   }
 }

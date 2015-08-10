@@ -2723,14 +2723,12 @@ figure + figure, figure + p {
 
 @media only screen and (min-width: 768px) {
   .org-unit-logo {
-    clear: both;
     display: block;
-    float: left;
     margin-bottom: 1em;
     width: 100%; }
 
   .org-unit-logo img {
-    max-width: 320px; } }
+    width: 100%; } }
 .map {
   display: block;
   width: 100%;
