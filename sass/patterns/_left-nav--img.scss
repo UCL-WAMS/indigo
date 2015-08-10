@@ -1,18 +1,23 @@
+/*
+Author: Stu Robson
+
+Ammends: Aaron Bery
+ - remove floats and associated clears as nothing is floated in our left nav
+ - set width to 100% for image to fill the left column, remove redundent max width
+*/
+
 .org-unit-logo {
     display: none; // because of how the layouts are worked we have to hide it.
 }
 
 @include gs-media(t,min){
   .org-unit-logo {
-    //clear: both;//we are killing the float
     display: block;
-    //float: left;//the nav doesn't float so this is needless
     margin-bottom: 1em;
     width: 100%;
   }
 
   .org-unit-logo img {
-    //max-width: 320px;
     width: 100%;
   }
 }
