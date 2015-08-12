@@ -23,6 +23,8 @@
 -------------------------------------------------------------- */
 /* layout
 -------------------------------------------------------------- */
+/* lists
+-------------------------------------------------------------- */
 /* Font stacks
 -------------------------------------------------------------- */
 /* Breakpoints
@@ -817,11 +819,14 @@ ol li {
 
 /* Definition lists
 -------------------------------------------------------------- */
-dt {
-  font-weight: 700; }
+dl {
+  margin-top: 1em; }
 
-dd + dt {
-  margin-top: 10px; }
+dt {
+  font-weight: bold; }
+
+dd {
+  padding-left: 1.5em; }
 
 .dl-inline dt {
   min-width: 100px; }
@@ -2718,19 +2723,24 @@ figure + figure, figure + p {
   .lightbox__item img {
     max-height: 500px; }
 
+/*
+Author: Stu Robson
+
+Ammends: Aaron Bery
+ - remove floats and associated clears as nothing is floated in our left nav
+ - set width to 100% for image to fill the left column, remove redundent max width
+*/
 .org-unit-logo {
   display: none; }
 
 @media only screen and (min-width: 768px) {
   .org-unit-logo {
-    clear: both;
     display: block;
-    float: left;
     margin-bottom: 1em;
     width: 100%; }
 
   .org-unit-logo img {
-    max-width: 320px; } }
+    width: 100%; } }
 .map {
   display: block;
   width: 100%;
