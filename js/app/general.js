@@ -61,9 +61,33 @@ define(["jquery","allsite"],function($,gen){
 				});
 			}
 		});
+		/* sticky nav
+		-----------------------------------------------------------------*/
+		var topNavObj = $("nav.nav--top");
+
+		if(topNavObj.hasClass("nav--sticky-init")){
+			var topNavFullHeight = parseInt(topNavObj.height()) + parseInt(topNavObj.css("padding-top")) + parseInt(topNavObj.css("padding-bottom"));
+			var topNavHeightFromTop = parseInt(topNavObj.offset().top);
+
+			function stickyNav(){
+				var currentPos = parseInt($(window).scrollTop());
+
+				if(currentPos > (topNavFullHeight + topNavHeightFromTop)){
+					topNavObj.addClass("nav--sticky-active");
+				}else{
+					topNavObj.removeClass("nav--sticky-active");
+				}
+			}
+
+			$(window).scroll(function(){
+				stickyNav();
+			})
+			stickyNav();
+		}
 		/* layout hacks
 		-----------------------------------------------------------------*/
 		var bodyClass = $('body').attr("class");
+		var leftNavList = $('.nav--left ul');
 		var topNavList = $('.nav--top ul');
 		var mobileNav = $('.nav--mobile');
 		var mobileNavList = $('.nav--mobile ul');
@@ -91,16 +115,27 @@ define(["jquery","allsite"],function($,gen){
 						,'min-height':'0'}
 					);
 				}
+
+				//set sub nav to height of main content
+				$('.nav.nav--left.nav--subnav').height(
+					parseInt($('.site-content__inner').height()) + 'px'
+				);
 			}else{
 				$('.site-content__inner').css({
 					'height':'auto'
 					,'min-height':'0'}
 				);
+				//mobile sub nav
+				$('.nav.nav--mobile.nav--subnav').height(
+					parseInt($('nav.nav--mobile ul.subnav__list').height()) + 'px'
+				);
 			}
 		}
 
 		function buildmobileNav(){
-			if(topNavList.length > 0 && mobileNavList.length < 1){
+			if(leftNavList.length > 0 && mobileNavList.length < 1){
+				mobileNav.append("<ul>" + leftNavList.html() + "</ul>");
+			}else if(topNavList.length > 0 && mobileNavList.length < 1){
 				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
 			}
 			return;
@@ -114,7 +149,56 @@ define(["jquery","allsite"],function($,gen){
 				equalizeVerticalCol();
 			});
 		}
+		/* Detect IE compatability mode and show user alert
+		-----------------------------------------------------------------*/
+		var agentStr = navigator.userAgent;
+		var isCompatabilityMode = false;
+		var debug = false;//toggle this when in dev
+
+		if(agentStr.indexOf("Trident/5.0") > -1){
+			if (agentStr.indexOf("MSIE 7.0") > -1)
+				isCompatabilityMode = true;
+		}else if (agentStr.indexOf("Trident/4.0") > -1){
+			if (agentStr.indexOf("MSIE 7.0") > -1)
+				isCompatabilityMode = true;
+		}
+		if(isCompatabilityMode || debug){
+			var messageStr = "<p>This website will not display correctly in compatibilty mode.";
+			messageStr += " For more information please see <a href='http://www.ucl.ac.uk/indigo/design-foundation/indigo-constraints'>Indigo constraints</a></p>";
+			
+			$('body').prepend("<div class='announcement-bar'>" + messageStr + "</a><a href='#' class='announcement-bar--close'>x</span>");
+
+
+			$('.announcement-bar--close').click(function(){
+				$('.announcement-bar').remove();
+			})
+		}
+		/* Multi-layer sliding navigation
+		-----------------------------------------------------------------*/
+		$(".subnav__item a").on('click', function(){
+			var parentLevel = $(this).parents('ul').length -1;
+			var currentMenu = $(this).closest('ul');
+			var currentListItem = $(this).parent('li');
+			var parentMenu = $('.subnav__list--level-' + parentLevel);
+			var subMenu = $(this).next('ul');
+
+			if(currentListItem.hasClass('back')) {
+				// back button hit	
+				currentMenu.removeClass('nav--active');
+				parentMenu.removeClass('nav--hidden');
+			} 
+			else if(currentListItem.hasClass('back-1')) {
+				$('.subnav__list').removeClass('nav--active');
+				$('.subnav__list').removeClass('nav--hidden');
+			} 
+			else if (currentListItem.children('ul').length > 0) {
+				// menu item has children - expand the menu
+				subMenu.toggleClass('nav--active');
+				currentMenu.addClass('nav--hidden');
+			}
+		});
 		/* anything else that needs to appear on all pages
 		-----------------------------------------------------------------*/
+
 	});
 });

@@ -21,6 +21,10 @@
 -------------------------------------------------------------- */
 /* Module spacing
 -------------------------------------------------------------- */
+/* layout
+-------------------------------------------------------------- */
+/* lists
+-------------------------------------------------------------- */
 /* Font stacks
 -------------------------------------------------------------- */
 /* Breakpoints
@@ -815,11 +819,14 @@ ol li {
 
 /* Definition lists
 -------------------------------------------------------------- */
-dt {
-  font-weight: 700; }
+dl {
+  margin-top: 1em; }
 
-dd + dt {
-  margin-top: 10px; }
+dt {
+  font-weight: bold; }
+
+dd {
+  padding-left: 1.5em; }
 
 .dl-inline dt {
   min-width: 100px; }
@@ -1809,6 +1816,46 @@ figure + figure, figure + p {
     position: relative;
     top: -1px; }
 
+.announcement-bar {
+  background-color: #ff5a5f; }
+  .announcement-bar p {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    position: relative; }
+  .announcement-bar a {
+    color: #fff;
+    text-decoration: underline; }
+  .announcement-bar .announcement-bar--close {
+    position: absolute;
+    padding: 0 6px;
+    top: 0.5em;
+    right: 5%;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 10px;
+    text-decoration: none; }
+    .announcement-bar .announcement-bar--close:hover {
+      text-decoration: none; }
+  @media only screen and (max-width: 767px) {
+    .announcement-bar p {
+      width: 70%;
+      margin: 0;
+      padding: 0.5em; }
+    .announcement-bar .announcement-bar--close {
+      position: absolute;
+      padding: 0 12px;
+      top: 0.5em;
+      right: 5%;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      font-size: 20px;
+      text-decoration: none;
+      top: 1em; }
+      .announcement-bar .announcement-bar--close:hover {
+        text-decoration: none; } }
+
 /* 
 * Pattern name: Advert
 * Use: Supporting material or advertisement signpost
@@ -2676,19 +2723,24 @@ figure + figure, figure + p {
   .lightbox__item img {
     max-height: 500px; }
 
+/*
+Author: Stu Robson
+
+Ammends: Aaron Bery
+ - remove floats and associated clears as nothing is floated in our left nav
+ - set width to 100% for image to fill the left column, remove redundent max width
+*/
 .org-unit-logo {
   display: none; }
 
 @media only screen and (min-width: 768px) {
   .org-unit-logo {
-    clear: both;
     display: block;
-    float: left;
     margin-bottom: 1em;
     width: 100%; }
 
   .org-unit-logo img {
-    max-width: 320px; } }
+    width: 100%; } }
 .map {
   display: block;
   width: 100%;
@@ -3201,11 +3253,17 @@ Notes:
   .nav--top.nav--sticky-active {
     position: fixed;
     top: 0;
-    background-color: #ff5a5f; }
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    left: 0; }
     .nav--top.nav--sticky-active ul {
       display: block;
+      background-color: #ff5a5f;
+      padding: 0.5em 35px;
       max-width: 1400px;
-      margin: auto; }
+      margin: auto;
+      overflow: hidden; }
     .nav--top.nav--sticky-active a {
       color: #ffffff; }
 
@@ -3216,6 +3274,90 @@ Notes:
       display: block; }
       .nav--mobile ul:nth-child(n+2) {
         padding-left: 1em; } }
+
+/*
+- Multi-layer sliding navigation
+- Stu Robson
+- http://codepen.io/sturobson/pen/d01f0fc84172afc650d1dedcaa2ab118?editors=010
+-------------------------------------------------------------------------------*/
+.nav--subnav {
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .nav--subnav a {
+    text-decoration: none;
+    vertical-align: middle; }
+
+.subnav__list {
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .subnav__list ul {
+    right: 200%;
+    left: 100%;
+    box-sizing: border-box; }
+    .subnav__list ul li {
+      box-sizing: border-box; }
+  .subnav__list .nav--active {
+    left: 0;
+    right: 0; }
+    .subnav__list .nav--active > li > a {
+      visibility: visible; }
+  .subnav__list.nav--hidden > li > a {
+    visibility: hidden; }
+
+.subnav__item.parent > a:after {
+  content: " >";
+  position: absolute;
+  right: 0; }
+.subnav__item.back a {
+  border-bottom: 1px transparent solid; }
+  .subnav__item.back a:before {
+    content: "< ";
+    position: relative;
+    top: -2px; }
+.subnav__item.top-level a {
+  border-bottom: 1px transparent solid; }
+  .subnav__item.top-level a:before {
+    content: "< ";
+    position: relative;
+    top: -2px; }
+.subnav__item a {
+  display: block;
+  position: relative; }
+
+.nav--left.nav--subnav {
+  position: relative; }
+  .nav--left.nav--subnav ul li {
+    margin: 0 0 0.5em 0;
+    line-height: 1.7;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .nav--left.nav--subnav li ul {
+    margin: 0; }
+
+.nav--mobile {
+  margin-top: 1em; }
+  .nav--mobile .subnav__list {
+    padding: 0; }
+    @media only screen and (max-width: 767px) {
+      .nav--mobile .subnav__list ul:nth-child(n+2) {
+        padding-left: 0; } }
+  .nav--mobile.nav--subnav ul li a {
+    color: white; }
+  .nav--mobile .subnav__item.back a {
+    color: #ccc; }
+  .nav--mobile .subnav__item.top-level a {
+    color: #ccc; }
+  .nav--mobile .subnav__item a:hover {
+    color: #ccc; }
 
 /*** CAROUSEL ***/
 .owl-theme .owl-controls {

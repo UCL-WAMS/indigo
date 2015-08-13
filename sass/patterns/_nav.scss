@@ -46,11 +46,17 @@
 	&.nav--sticky-active{
 		position: fixed;
 		top: 0;
-		background-color: $primary-colour;
+		width: 100%;
+		background: transparent;
+		padding: 0;
+		left: 0;
 		ul{
 			display: block;
+			background-color: $primary-colour;
+			padding: 0.5em $site-content-padding;
 			max-width: $screen-xxxl;
 			margin: auto;
+			overflow: hidden;
 		}
 		a{
 			color: $white;
@@ -65,6 +71,149 @@
 		ul {
 			&:nth-child(n+2) {
 				padding-left: 1em;
+			}
+		}
+	}
+}
+
+
+/*
+- Multi-layer sliding navigation
+- Stu Robson
+- http://codepen.io/sturobson/pen/d01f0fc84172afc650d1dedcaa2ab118?editors=010
+-------------------------------------------------------------------------------*/
+.nav--subnav {
+	box-sizing: border-box;
+	background-color: transparent;
+	color: white;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	a{
+		text-decoration: none;
+		vertical-align: middle;
+
+	}
+}
+.subnav__list {
+	margin-top: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 1;
+	transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+	ul { 
+		right: 200%;
+		left: 100%;
+		box-sizing: border-box;
+		li{
+			box-sizing: border-box;
+		}
+	}
+	.nav--active {
+		left: 0;
+		right: 0;
+		> li {
+			> a {
+				//opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&.nav--hidden {
+		>li > a {
+			visibility: hidden;
+			//opacity: 0;
+		}	
+	}
+}
+
+.subnav__item {
+	&.parent > a {
+		&:after {
+			content: " >";
+			position: absolute;
+			right: 0;
+		}
+	}
+	&.back {
+		a {
+			border-bottom: 1px transparent solid;
+			&:before {
+				content: "< ";
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	&.top-level{
+		a {
+			border-bottom: 1px transparent solid;
+			&:before {
+				content: "< ";
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	a {
+		display: block;
+		position: relative;
+	}
+}
+.nav--left{
+	&.nav--subnav{
+		position: relative;
+		ul{
+			li{
+				margin: 0 0 0.5em 0;
+				line-height: $line-height;
+				@include rem('font-size',$font-size-base);
+			}
+		}
+		li{
+			ul{
+				margin: 0;
+			}
+		}
+	}
+}
+.nav--mobile{
+	margin-top: 1em;
+	.subnav__list{
+		padding: 0;
+		@include gs-media(m, max) {
+			ul {
+				&:nth-child(n+2) {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	&.nav--subnav{
+		ul{
+			li{
+				a{
+					color: white;
+				}
+			}
+		}	
+	}
+	.subnav__item{
+		&.back {
+			a {
+				color: $lightgrey;
+			}
+		}
+		&.top-level{
+			a {
+				color: $lightgrey;
+			}
+		}
+		a{
+			&:hover {
+				color: $lightgrey;
 			}
 		}
 	}

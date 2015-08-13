@@ -36,7 +36,7 @@
 
 .brand__heading {
 	position: absolute;
-	left: 35px;
+	left: $site-content-padding;
 	top: 25%;
 	color: $white;
 	text-transform: uppercase;

@@ -47,13 +47,13 @@
 .header--mobile {
 	display: none;
 	width: 100%;
-	padding: 20% 35px 0;
+	padding: 20% $site-content-padding 0;
 	background-size: auto 100%;
 	background-position: 106% bottom;
 	background-image: url("#{$static-url}/images/ucl-logo.svg");
 	background-repeat: repeat-x;
 	position: relative;
-	left: -35px;
+	left: -$site-content-padding;
 	background-color: $primary-colour;
 	border-bottom: .5em solid $primary-colour;
 	@include gs-media(m, max) {
@@ -72,7 +72,7 @@
 	@include gs-media(m, max) {
 		width: 25px;
 		top: 35%;
-		left: 35px;
+		left: $site-content-padding;
 		position: absolute;
 		z-index: $zindex-mobile-menu;
 	}
