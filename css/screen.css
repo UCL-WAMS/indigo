@@ -1815,8 +1815,6 @@ figure + figure, figure + p {
   .accordion__description:last-of-type {
     position: relative;
     top: -1px; }
-  .accordion__description dt {
-    background-color: transparent; }
 
 .announcement-bar {
   background-color: #ff5a5f; }
