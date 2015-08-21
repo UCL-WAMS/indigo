@@ -1789,7 +1789,7 @@ figure + figure, figure + p {
 
 /* Patterns
 -------------------------------------------------------------- */
-/* 
+/*
 * Pattern name: Accordion
 * Use: Hide/reveal mechanism for concatenating similar/related content
 * Note: N/A
@@ -1815,6 +1815,8 @@ figure + figure, figure + p {
   .accordion__description:last-of-type {
     position: relative;
     top: -1px; }
+  .accordion__description dt {
+    background-color: transparent; }
 
 .announcement-bar {
   background-color: #ff5a5f; }
