@@ -409,7 +409,8 @@ hr {
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+  clear: both; }
 
 input, select {
   vertical-align: middle; }
