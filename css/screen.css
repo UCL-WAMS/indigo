@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables
 -------------------------------------------------------------- */
 /* Variable imports
@@ -3604,81 +3605,95 @@ Notes:
 * Use: Stylised blockquote with increased spacing and speech marks
 * Note: Modifiers allow for floating left/right within the grid
 -------------------------------------------------------------- */
+blockquote {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 10px;
+  margin: 1rem;
+  padding: 10px;
+  padding: 1rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-style: italic; }
+  blockquote.pull-quote__wrap {
+    quotes: "“" "”" "‘" "’"; }
+    blockquote.pull-quote__wrap:before {
+      color: #bbb;
+      content: open-quote;
+      display: inline;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em; }
+    blockquote.pull-quote__wrap p {
+      display: inline; }
+  blockquote .pull-quote__start, blockquote .pull-quote__end {
+    display: none; }
+
+/*
 .pull-quote {
-  margin-top: 0;
-  margin-bottom: 2em; }
+	margin-top: 0;
+	margin-bottom: 2em;
+}
 
 .pull-quote__wrap {
-  line-height: 1.5em;
-  font-size: 20px;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.7); }
-
+	line-height: 1.5em;
+	font-size: 20px;
+	font-family: $font-serif;
+	font-style: italic;
+}
 .pull-quote__meta {
-  border-top: 1px dotted;
-  padding-top: 1em;
-  border-color: rgba(0, 0, 0, 0.2);
-  float: left;
-  margin-top: 1em;
-  width: 100%;
-  font-size: 12px;
-  font-size: 1.2rem; }
+	border-top: 1px dotted;
+	padding-top: 1em;
+	border-color: rgba($black, 0.2);
+	float: left;
+	margin-top: 1em;
+	width: 100%;
+	@include rem(font-size, $font-size-xs);
+}
 
-@media only screen and (max-width: 767px) {
-  .pull-quote--left, .pull-quote--right {
-    clear: both;
-    display: block;
-    float: left;
-    margin-left: 0;
-    width: 100%; } }
+.pull-quote--left, .pull-quote--right {
+	@include gs-media(m, max) {
+		@include gs-span(m, all);
+	}
+}
 
 .pull-quote--left {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 48.42929%;
-  clear: none;
-  float: left;
-  margin-left: 0;
-  margin-right: 3.0303%; }
+	@include gs-span(dc, 1, 2);
+	@include gs-float(dc, left);
+}
 
 .pull-quote--right {
-  display: block;
-  float: left;
-  margin-left: 51.4596%;
-  margin-right: -100%;
-  width: 48.42929%;
-  clear: none;
-  float: right;
-  margin-right: 0;
-  margin-left: 3.0303%; }
+	@include gs-span(dc, 3, 4);
+	@include gs-float(dc, right);
+}
 
 .pull-quote__start, .pull-quote__end {
-  color: #c2c2ba;
-  font-size: 400%;
-  font-style: normal;
-  line-height: 0;
-  top: 37.5px;
-  position: relative; }
-  @media (max-width: 767px) {
-    .pull-quote__start, .pull-quote__end {
-      font-size: 350%;
-      top: 25px; } }
+	color: #c2c2ba;
+	font-size: 400%;
+	font-style: normal;
+	line-height: 0;
+	top: 37.5px;
+	position: relative;
+	@include respond-max($screen-md) {
+		font-size: 350%;
+		top: 25px;
+	}
+}
 
 .pull-quote__start {
-  padding-right: 10px; }
-  @media (max-width: 767px) {
-    .pull-quote__start {
-      padding-right: 5px; } }
+	padding-right: 10px;
+	@include respond-max($screen-md) {
+		padding-right: 5px;
+	}
+}
 
 .pull-quote__end {
-  padding-left: 10px; }
-  @media (max-width: 767px) {
-    .pull-quote__end {
-      padding-left: 5px; } }
-
+	padding-left: 10px;
+	@include respond-max($screen-md) {
+		padding-left: 5px;
+	}
+}*/
 /* 
 * Pattern name: Pill
 * Use: For rounded inline label/tags
