@@ -3605,21 +3605,19 @@ Notes:
 * Use: Stylised blockquote with increased spacing and speech marks
 * Note: Modifiers allow for floating left/right within the grid
 -------------------------------------------------------------- */
-blockquote {
+blockquote, aside {
   color: rgba(0, 0, 0, 0.7);
-  margin: 10px;
-  margin: 1rem;
   padding: 10px;
   padding: 1rem;
-  font-size: 20px;
-  font-size: 2rem;
   line-height: 1.5em;
   font-style: italic; }
-  blockquote.pull-quote__wrap {
+  blockquote.pull-quote__wrap, aside.pull-quote__wrap {
+    margin: 10px;
+    margin: 1rem;
     margin-left: 0;
     margin-right: 0;
-    quotes: "“" "”" "‘" "’"; }
-    blockquote.pull-quote__wrap:before {
+    quotes: "“" "”"; }
+    blockquote.pull-quote__wrap:before, aside.pull-quote__wrap:before {
       color: #bbb;
       content: open-quote;
       display: inline;
@@ -3627,9 +3625,9 @@ blockquote {
       line-height: 0.1em;
       margin-right: 0.25em;
       vertical-align: -0.4em; }
-    blockquote.pull-quote__wrap p {
+    blockquote.pull-quote__wrap p, aside.pull-quote__wrap p {
       display: inline; }
-  blockquote .pull-quote__start, blockquote .pull-quote__end {
+  blockquote .pull-quote__start, blockquote .pull-quote__end, aside .pull-quote__start, aside .pull-quote__end {
     display: none; }
 
 /*

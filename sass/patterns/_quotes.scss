@@ -3,17 +3,18 @@
 * Use: Stylised blockquote with increased spacing and speech marks
 * Note: Modifiers allow for floating left/right within the grid
 -------------------------------------------------------------- */
-blockquote{
+
+blockquote,aside{
 	color: rgba($black, 0.7);
-    @include rem(margin,1);
     @include rem(padding,1);
-    @include rem(font-size,2);
+    //@include rem(font-size,2);
     line-height: 1.5em;
     font-style: italic;
     &.pull-quote__wrap{
+        @include rem(margin,1);
         margin-left: 0;
         margin-right: 0;
-        quotes: "\201C""\201D""\2018""\2019";
+        quotes: "\201C""\201D";
         &:before{
             color: $grey;
             content: open-quote;
@@ -31,6 +32,7 @@ blockquote{
         display: none;//this was used in the old version of pullquotes
     }
 }
+    
 /*
 .pull-quote {
 	margin-top: 0;
