@@ -11,6 +11,8 @@ blockquote{
     line-height: 1.5em;
     font-style: italic;
     &.pull-quote__wrap{
+        margin-left: 0;
+        margin-right: 0;
         quotes: "\201C""\201D""\2018""\2019";
         &:before{
             color: $grey;
