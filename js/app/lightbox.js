@@ -30,25 +30,22 @@ $(document).ready(function(){
 
 
 function lightboxInit() {
-
-  $('.let-there-be-light').click(function(e){
-    var positiontop= $(document).scrollTop();
-    if(Modernizr.mq && parseInt(size)>45)
-    {
-      e.preventDefault();
-      var $thisHref = $(this).attr('href');
-      buildLightBox($thisHref,positiontop);
-    }
-  });
+	$('.let-there-be-light').click(function(e){
+		if(Modernizr.mq && parseInt(size)>45) {
+			e.preventDefault();
+			var href = $(this).attr('href');
+			var text = $(this).attr('title') || '';
+			buildLightBox(href, text);
+		}
+	});
 }
 
-function buildLightBox(src, positiontop) {
+function buildLightBox(src, text) {
 	var height = $(document).height();
-		$('<div class="lightbox">').appendTo('body').height(height).html('<div class="lightbox__item"><img src="'+src+'" alt="" />');
-
+	$('<div class="lightbox">').appendTo('body').height(height).html('<div class="lightbox__item"><img src="'+src+'" alt="'+text+'" />');
 	$('body').on('click','.lightbox',function(e) {
-	$('.lightbox').remove();
-  });
+		$('.lightbox').remove();
+  	});
 }
 
 $(window).resize(function() {
