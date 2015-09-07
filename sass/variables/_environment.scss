@@ -2,4 +2,4 @@
 -------------------------------------------------------------- */
 
 $is-local: false;
-$static-url: if($is-local, "", "//cdn.ucl.ac.uk/indigo");
+$static-url: if($is-local, "/indigo", "//cdn.ucl.ac.uk/indigo");
