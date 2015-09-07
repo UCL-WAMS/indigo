@@ -4019,6 +4019,10 @@ blockquote, aside {
     background-position: -44px 0; }
   .social-buttons__link--google {
     background-position: -88px 0; }
+  .social-buttons__link--flickr {
+    background-position: -132px 0; }
+  .social-buttons__link--youtube {
+    background-position: -176px 0; }
 
 .social-buttons__link:hover {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
