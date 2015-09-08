@@ -106,15 +106,15 @@ define(["jquery","allsite"],function($,gen){
 			if($(window).width() >= 768){
 				var mainColHeight = $('.site-content__inner').height();
 				var verticalNavColHeight = $('.sidebar').height();
-				if(verticalNavColHeight > mainColHeight){
-					$('.site-content__inner').css('min-height',verticalNavColHeight);
+				//if(verticalNavColHeight > mainColHeight){
+				$('.site-content__inner').css('min-height',verticalNavColHeight);
 				}
-				else{
+				/*else{
 					$('.site-content__inner').css({
 						'height':'auto'
 						,'min-height':'0'}
 					);
-				}
+				}*/
 
 				//set sub nav to height of main content
 				$('.nav.nav--left.nav--subnav').height(
