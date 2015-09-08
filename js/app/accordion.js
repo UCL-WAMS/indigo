@@ -18,7 +18,6 @@ define(['jquery'],function($){
 		var tmpAccordionObj = $('.accordion.accordion--' + accordionObj.accordionId);
 
 		$(tmpAccordionObj).each(function(){
-
 			var allPanels = $(this).find('.accordion__description');
 			allPanels.slideUp();
 			//open accordions that have this set in their class

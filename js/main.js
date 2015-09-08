@@ -1,4 +1,4 @@
-getassetLocation = function(part){
+getassetLocation = function(){
 	var assetUrl = document.URL;
 	var domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)domain=([^&]+)(.*)$/ig,'$4');
 	var assetDomain = "//cdn.ucl.ac.uk/";
@@ -22,7 +22,6 @@ getassetLocation = function(part){
 }
 
 var fullAssetLocation = getassetLocation();
-var assetLocation = getassetLocation('domain');
 var urlArgs = "";
 
 require.config({
