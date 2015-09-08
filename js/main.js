@@ -2,7 +2,7 @@ getassetLocation = function(part){
 	var assetUrl = document.URL;
 	var domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)domain=([^&]+)(.*)$/ig,'$4');
 	var assetDomain = "//cdn.ucl.ac.uk/";
-	var libLocation = 'indigo/js/lib'
+	var libLocation = 'indigo/js/lib';
 	if(typeof domainParam!=='undefined'){
 
 		switch(domainParam){
@@ -11,20 +11,14 @@ getassetLocation = function(part){
 			break;
 			case "local":
 				assetDomain = "//static-local/";
-				libLocation = 'indigo/js/src';
-				ext = "";
 			break;
 			case "uat":
 				assetDomain = "//static-uat.ucl.ac.uk/";
 			break;
 		}
 	}
-	if(part==='domain'){
-		return assetDomain;
-	}else{
-		return assetDomain + libLocation;
-	}
-	
+	return assetDomain + libLocation;
+
 }
 
 var fullAssetLocation = getassetLocation();
