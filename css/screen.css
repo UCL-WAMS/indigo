@@ -1402,6 +1402,14 @@ td, td img {
       border-left: 0;
       border-right: 0;
       border-bottom: 0; } }
+/* Profile Tables
+-------------------------------------------------------------- */
+table.default-profile-table img {
+  width: 150px;
+  max-width: 150px; }
+table.default-profile-table a {
+  word-break: break-all; }
+
 /* 
 * Base name: Images
 * Note: N/A

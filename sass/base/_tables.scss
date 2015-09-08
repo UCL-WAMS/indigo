@@ -137,3 +137,16 @@ td, td img {
 		}
 	}
 }
+
+/* Profile Tables
+-------------------------------------------------------------- */
+
+table.default-profile-table {
+	img {
+		width:150px;
+		max-width:150px;
+	}
+	a {
+		word-break: break-all;
+	}
+}
