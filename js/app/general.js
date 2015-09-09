@@ -108,8 +108,8 @@ define(["jquery","allsite"],function($,gen){
 				var verticalNavColHeight = $('.sidebar').height();
 				//if(verticalNavColHeight > mainColHeight){
 				$('.site-content__inner').css('min-height',verticalNavColHeight);
-				}
-				/*else{
+				/*}
+                else{
 					$('.site-content__inner').css({
 						'height':'auto'
 						,'min-height':'0'}
