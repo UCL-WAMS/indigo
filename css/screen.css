@@ -721,6 +721,10 @@ strong,
 cite, .cite, em, dfn {
   font-style: italic; }
 
+p.lead {
+  font-size: 21px;
+  font-size: 2.1rem; }
+
 /* Inline styles
 -------------------------------------------------------------- */
 .text-muted {
