@@ -8,7 +8,7 @@ id so we can scope all methods to a single instance of an accordion.
 define(['jquery'],function($){
 	
 	function removeCurrentClassFromAll(accordionObj) {
-		var allPanelsAnchor = $(accordionObj).find('.accordion a');
+        var allPanelsAnchor = $(accordionObj).find('a.currentAccordionAnchor');
 		allPanelsAnchor.each(function() {
 			$(this).removeClass("currentAccordionAnchor");
 		});
@@ -23,15 +23,16 @@ define(['jquery'],function($){
 			//open accordions that have this set in their class
 			$(this).find('.accordion__title a').each(function() {
 				var tmpAccordionClass = $(this).attr("class");
-				if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
+                if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0){
 					$(this).parent().next().slideDown();
-				}
+                }
 			});
 
 			$(tmpAccordionObj).find('.accordion__title a').click(function() {
 				allPanels.slideUp();
 				var tmpAccordionClass = $(this).attr("class");
-				removeCurrentClassFromAll(tmpAccordionObj);
+		        var accordionObj = $(this).parent().parent();
+				removeCurrentClassFromAll(accordionObj);
 				if (typeof tmpAccordionClass === 'undefined' || tmpAccordionClass.indexOf('currentAccordionAnchor') === -1) {
 					$(this).parent().next().slideDown();
 					$(this).addClass("currentAccordionAnchor");
