@@ -174,5 +174,17 @@ define([
 				}
 			};
 			typeAhead();
+            
+            /* Disable the blank search that hammers the funnelback server
+             * --------------------------------------------------------------------------*/
+            function disableBlankSearch() {
+                $('.masthead__search form').submit(function(e){
+                    if($('.masthead__search input[type="search"]').val().length < 1) {
+                        e.preventDefault();
+                    }
+                });
+                return;
+            }  
+            disableBlankSearch(); 
 		})
 });
