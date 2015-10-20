@@ -133,7 +133,7 @@
 
 .layout-vertical--nav-2col {
 	.site-content__main {
-		@include gs-span(dl, 2, 3, (2, 5));
+		@include gs-span(dl, 2, 4, (2, 5));
 	}
 	.site-content__sidebar {
 		@include gs-span(dl, 5, 5, (2, 5));
