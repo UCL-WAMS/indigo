@@ -309,8 +309,8 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"320633c495",applicationID:"10052077",sa:1,agent:"js-agent.newrelic.com/nr-632.min.js"}
 
 // UCL JS
-$(document).ready(function() {
-
+jQuery(document).ready(function() {
+	var $ = jQuery;
 	$('.tabbed div').hide();
 	$('.tabbed div:first').show();
 	$('.tabbed ul li:first').addClass('is-active');
