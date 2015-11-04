@@ -1,6 +1,6 @@
 // UCL JS
-$(document).ready(function() {
-
+jQuery(document).ready(function() {
+	var $ = jQuery;
 	$('.tabbed div').hide();
 	$('.tabbed div:first').show();
 	$('.tabbed ul li:first').addClass('is-active');
