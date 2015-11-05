@@ -2445,19 +2445,9 @@ figure + figure, figure + p {
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
-    transition: all, .5s;
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%); }
-    .no-csstransforms .header--desktop {
-      left: -100%; }
+    left: -100%; }
     .mobile-open .header--desktop {
-      transition: all, .5s;
-      -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-              transform: translateX(0); }
-      .no-csstransforms .mobile-open .header--desktop {
-        left: 0; }
+      left: 0; }
     .header--desktop a {
       color: #ffffff;
       padding: 0.5em 0;
@@ -2486,7 +2476,7 @@ figure + figure, figure + p {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-color: #000000;
-    background-size: 90%; }
+    background-size: 30%; }
 
 @media only screen and (max-width: 767px) {
   .header__open {
