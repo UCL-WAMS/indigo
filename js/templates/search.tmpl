@@ -1,0 +1,20 @@
+<% _.each(data,function(l){ %>
+	<article class="blurb blurb--wide">
+		<% if(typeof l.metaData['listingImage'] !== 'undefined') { %>
+			<img alt="" src="<%= l.metaData['listingImage'] %>" class="blurb__img">
+		<% } %>
+		<div class="blurb__body">
+			<h3 class="blurb__title">
+				<a href="<%= l.metaData['liveUrl '] %>">
+					<%= l.title %>
+				</a>
+			</h3>
+			<% if(typeof l.metaData['datePretty'] !== 'undefined') { %>
+				<p class="pub-date">Publication date: <%= l.metaData['datePretty'] %></p>
+			<% } %>
+			<% if(typeof l.metaData['listingDescription'] !== 'undefined') { %>
+				<p><%= l.metaData['listingDescription'] %></p>
+			<% } %>
+		</div>
+	</article>
+<% }); %>

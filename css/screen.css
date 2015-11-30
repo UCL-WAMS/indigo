@@ -4081,6 +4081,161 @@ blockquote, aside {
       left: 80%;
       width: 20%; } }
 
+.search-page__listings article {
+  border-bottom: 1px solid #ff5a5f;
+  padding: 2.5em 0; }
+.search-page__listings.half-width-items article {
+  border-bottom: none; }
+.search-page__container section {
+  margin-left: 0; }
+.search-page__container .results-context {
+  color: #7c7c7c;
+  font-size: 30px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem; }
+.search-page__container .listing.half-width-items {
+  overflow: hidden; }
+  .search-page__container .listing.half-width-items article.content-item {
+    width: 100%; }
+.search-page__container .pub-date, .search-page__container .content-item__date {
+  color: #999;
+  margin-bottom: 1em; }
+@media only screen and (min-width: 768px) {
+  .search-page__sub-container--right-col {
+    display: block;
+    float: left;
+    margin-left: 34.20139%;
+    margin-right: -100%;
+    width: 65.79861%; } }
+@media only screen and (min-width: 990px) {
+  .search-page__sub-container--right-col {
+    display: block;
+    float: left;
+    margin-left: 22.91105%;
+    margin-right: -100%;
+    width: 77.08895%; } }
+.search-page__listings {
+  overflow: hidden; }
+  .search-page__listings article {
+    border-bottom: 1px solid #ff5a5f;
+    padding: 2.5em 0; }
+  .search-page__listings.half-width-items article {
+    border-bottom: none; }
+    .search-page__listings.half-width-items article.content-item:nth-child(odd) {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 48.48316%;
+      clear: left; }
+    .search-page__listings.half-width-items article.content-item:nth-child(even) {
+      display: block;
+      float: left;
+      margin-left: 51.51684%;
+      margin-right: -100%;
+      width: 48.48316%; }
+.search-page__filter-top {
+  background: #e2e0d6;
+  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
+  padding: 25px 30px;
+  position: relative; }
+  .search-page__filter-top input.btn--reset {
+    background-color: #d6d2c4;
+    border: 0;
+    bottom: 0;
+    color: #000000;
+    cursor: pointer;
+    padding: .5em 1em;
+    position: absolute;
+    right: 0;
+    text-shadow: none; }
+  .search-page__filter-top input {
+    background-color: #034da1; }
+  .search-page__filter-top--sort-form {
+    text-align: right; }
+    .search-page__filter-top--sort-form input {
+      background-color: #034da1; }
+    .search-page__filter-top--sort-form .form__group--inline label, .search-page__filter-top--sort-form .form__group--inline input, .search-page__filter-top--sort-form .form__group--inline select {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      width: auto;
+      margin: 0; }
+    .search-page__filter-top--sort-form .form__group--inline:last-child {
+      margin: 0 0 0 5px; }
+.search-page__facets {
+  background: #ff5a5f;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  padding: 1rem; }
+  .search-page__facets form {
+    width: 100%;
+    clear: both; }
+  .search-page__facets .form-group__keyword {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 71.37803%; }
+  .search-page__facets button, .search-page__facets submit {
+    display: block;
+    float: left;
+    margin-left: 74.41038%;
+    margin-right: -100%;
+    width: 25.58962%; }
+  @media only screen and (min-width: 768px) {
+    .search-page__facets {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 31.59722%; } }
+  @media only screen and (min-width: 990px) {
+    .search-page__facets {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 19.87871%;
+      margin-bottom: 0; } }
+.search-page__pagination {
+  padding-top: 2.5em;
+  margin-left: 0;
+  overflow: hidden; }
+  .search-page__pagination li {
+    border: 1px solid #ff5a5f;
+    padding: 5px;
+    padding: 0.5rem;
+    padding-left: 10px;
+    padding-left: 1rem;
+    padding-right: 10px;
+    padding-right: 1rem;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-left: 1rem;
+    border-radius: 5px;
+    float: left;
+    list-style-type: none; }
+    .search-page__pagination li a {
+      color: #ff5a5f;
+      font-size: 1.2; }
+    .search-page__pagination li:hover {
+      background: #ff8c8f;
+      border: 1px solid #ff8c8f; }
+      .search-page__pagination li:hover a {
+        color: #ffffff; }
+    .search-page__pagination li:first-child {
+      margin-left: 0; }
+    .search-page__pagination li.search-page__pagination--list-el--current {
+      background: #ff5a5f; }
+      .search-page__pagination li.search-page__pagination--list-el--current a {
+        color: #ffffff; }
+
 /* 
 * Pattern name: Tabs
 * Use: Related tabular content
