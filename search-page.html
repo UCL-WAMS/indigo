@@ -22,8 +22,9 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:profile_id" content="uclofficial" />
 	<!-- end social meta -->
-	<title>Template for Long vertical nav - UCL Design Language</title>
+	<title>UCL Design Language</title>
 
+	<link href="//cdn.ucl.ac.uk/skins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
@@ -67,8 +68,9 @@
 
 </head>
 
-<body id="index" class="layout-vertical layout-vertical--nav-2col
+<body id="index" class="layout-vertical layout-vertical--nav-1col
 ">
+
 	<header class="header header--desktop">
 
 		<a class="header__close" href="#">
@@ -80,22 +82,11 @@
 
 				<div class="masthead__search">
 					<form action="#" method="get">
-						<!--
-						<div class="search-type">
-							<input type="radio" id="ucl-site" name="operation" value="1" checked="checked">
-							<label for="ucl-site" class="site">Site</label>
-							<input type="radio" id="ucl-search" name="operation" value="2">
-							<label for="ucl-search" class="staff">Directory</label>
-						</div>
-						-->
 						<div class="search-form">
 							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
 						</div>
-
 						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
 					</form>
-
-
 				</div>
 
 
@@ -119,12 +110,11 @@
 		<div class="wrapper">
 
 			<div class="photograph">
-				<div class="brand">
-					<p class="brand__heading">UCL Design Language</p>
-					<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
-					<img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
-				</div>
-
+					<div class="brand">
+						<p class="brand__heading">UCL Design Language</p>
+						<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+					<img src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
+					</div>
 				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
 			</div>
 			<!-- end .photograph -->
@@ -175,54 +165,7 @@
 						<li><a href="#">Main navigation items</a>
 						</li>
 
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
 					</ul>
-
-
 				</nav>
 
 			</div>
@@ -252,8 +195,8 @@
 
 		<header class="header header--mobile default-header">
 
-			<a class="header header__open" href="#">
-				<img src="//cdn.ucl.ac.uk/img/blank.gif" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/mob-nav.png" alt="Menu" />
+<a class="header__open" href="#">
+				<img src="//static.ucl.ac.uk/indigo/images/ucl-menu.svg" alt="Menu" />
 			</a>
 
 		</header>
@@ -279,13 +222,62 @@
 
 						<h1>Main page title</h1>
 
-						<p>This is the main content column.</p>
+						<form action="#" class="search-page--sort-form form search-page__filter-top">
+							<fieldset class="form__group">
+								<legend>Filter</legend>
+								<p class="results-context">...</p>
+								<div class="search-page__dynamic-facets"></div>
+							</fieldset>
+							<div class="submit">
+								<input value="Reset" class="btn btn--reset" type="button">
+							</div>
+						</form>
 
-						<h2>UCL banner</h2>
+						<form action="#" class="search-page--sort-form form search-page__filter-top--sort-form">
+							<div class="form__group form__group--inline">
+							<label for="select-sort">Sort by</label>
+							<select class="form__control search-page--sort-form__options">
+								<option value="date">Latest</option>
+								<option value="adate">Date Ascending</option>
+								<option value="title">Title</option>
+								<option value="dtitle">Title Descending</option>
+								<option value="">Relevance</option>
+							</select>
+							<input value="Sort" class="btn" type="button">
+							</div>
+						</form>
 
-						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
+						<h2>Section title</h2>
 
-						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
+						<div class="search-page__container">
+
+							<!-- set collection id as an attribute -->
+							<section class="search-page__listing-results"
+							collectionid="impact">
+								<article>
+									<img src="//cdn.ucl.ac.uk/indigo/images/ajax-loader.gif" title="loading gif" />
+								</article>
+							</section>
+							<ul class="search-page__pagination"></ul>
+
+							<script>
+								globalSiteSpecificVars.searchTemplate = 'search';
+								globalSiteSpecificVars.listingEl = ".search-page__listing-results";
+								globalSiteSpecificVars.listingImageMapping = "T";
+								globalSiteSpecificVars.listingDescriptionMapping = "c";
+								globalSiteSpecificVars.sortSelector = "#select-sort";
+								globalSiteSpecificVars.facetEl = ".search-page__dynamic-facets";
+								globalSiteSpecificVars.facetTemplate = "facets";
+								require(['app/search-page']);
+							</script>
+							<noscript>
+								<a href="http://search2.ucl.ac.uk/s/search.html?query=!padrenullquery&amp;collection=impact"
+							title="See full listings for lifestudynews">
+									See full listings for lifestudynews
+								</a>
+							</noscript>
+
+						</div>
 
 					</article>
 
@@ -294,16 +286,6 @@
 					</p>
 
 				</div>
-
-				<div class="site-content__sidebar">
-
-					<h1>Sidebar</h1>
-
-					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
-
-				</div>
-
-				<!-- end main slot where silva content gets rendered-->
 
 			</div>
 

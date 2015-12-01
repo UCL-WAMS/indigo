@@ -1,0 +1,25 @@
+<% _.each(data,function(l){ %>
+    <article class="content-item">
+        <% if(typeof l.metaData['T'] !== 'undefined') { %>
+            <div class="content-item__thumbnail">
+                <img src="<%=l.metaData['T'] %>" title="<%=l.title %>" alt="Release Icon" class="content-item__image">
+            </div>
+        <% }else if(typeof l.metaData['listingImage'] !== 'undefined') { %>
+            <div class="content-item__thumbnail">
+                <img src="<%=l.metaData['listingImage'] %>" title="<%=l.title %>" alt="Release Icon" class="content-item__image">
+            </div>
+        <% } %>  
+        <div class="content-item__details">
+        	<% if(typeof l.metaData['datePretty'] !== 'undefined') { %>
+        		<small class="content-item__date">
+        			Published; <%=l.metaData['datePretty'] %>
+            	</small>
+            <% } %>
+            <a href="<%=l.liveUrl %>" title="<%=l.title %>" class="content-item__anchor">
+                <h3 class="content-item__title sub-heading">
+                    <%=l.title %>
+                </h3>
+            </a>
+        </div>
+    </article>
+<% }); %>

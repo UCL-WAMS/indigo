@@ -29,6 +29,7 @@ require.config({
 	paths: {
 		app: '../app'
 		,allsite: 'all-site.min'
+		,templates: '../templates'
 		//libaries
 		,jquery: globalSiteSpecificVars.pathToJquery
 		,underscore: '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min'

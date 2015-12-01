@@ -22,8 +22,9 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:profile_id" content="uclofficial" />
 	<!-- end social meta -->
-	<title>Template for Long vertical nav - UCL Design Language</title>
+	<title>UCL Design Language</title>
 
+	<link href="//cdn.ucl.ac.uk/skins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="//static.ucl.ac.uk/indigo/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!--[if IE]><link href="//static.ucl.ac.uk/indigo/css/ie.min.css" rel="stylesheet" /><![endif]-->
@@ -38,37 +39,37 @@
 	<script src="//static.ucl.ac.uk/indigo/js/lib/modernizr-custom.js"></script>
 
 	<script>
-	var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+		var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
 
-	Modernizr.load({
-		//cutting the mustard as used by the BBC
-		test: cuttingTheMustard
-			//if old browser load the shiv
-			,
-		nope: [
-			'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
-		]
-	});
-	//set conditional assets for main.js
-	var globalSiteSpecificVars = {
-		pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
-		googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
-	}
-	if (cuttingTheMustard) {
-		globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
-	}
+		Modernizr.load({
+			//cutting the mustard as used by the BBC
+			test: cuttingTheMustard
+				//if old browser load the shiv
+				,
+			nope: [
+				'//static.ucl.ac.uk/indigo/js/lib/html5shiv-printshiv.min.js', '//static.ucl.ac.uk/indigo/js/lib/respond.min.js'
+			]
+		});
+		//set conditional assets for main.js
+		var globalSiteSpecificVars = {
+			pathToJquery: '//static.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+			googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+		}
+		if (cuttingTheMustard) {
+			globalSiteSpecificVars.pathToJquery = "//static.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min";
+		}
 	</script>
 
 	<script src="//static.ucl.ac.uk/indigo/js/lib/require.min.js"></script>
 	<script src="//static.ucl.ac.uk/indigo/js/main.js"></script>
 	<script>
-	require(["app/general"]); //load the default stuff
+		require(["app/general"]); //load the default stuff
 	</script>
 
 </head>
 
-<body id="index" class="layout-vertical layout-vertical--nav-2col
-">
+<body id="index" class="layout-horizontal layout-horizontal--nav-1col">
+
 	<header class="header header--desktop">
 
 		<a class="header__close" href="#">
@@ -119,12 +120,11 @@
 		<div class="wrapper">
 
 			<div class="photograph">
-				<div class="brand">
-					<p class="brand__heading">UCL Design Language</p>
-					<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
-					<img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">
-				</div>
-
+					<div class="brand">
+						<p class="brand__heading">UCL Design Language</p>
+						<a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+					<img src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo">
+					</div>
 				<p class="photograph__description">A nascent retina, generated from a 3D embryonic stem cell culture</p>
 			</div>
 			<!-- end .photograph -->
@@ -155,6 +155,7 @@
 				</nav>
 
 				<nav class="nav nav--left">
+
 					<ul>
 
 						<li><a href="index.html" class="home-link">Home</a>
@@ -175,53 +176,7 @@
 						<li><a href="#">Main navigation items</a>
 						</li>
 
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
-						<li><a href="#">Main navigation items</a>
-						</li>
-
 					</ul>
-
 
 				</nav>
 
@@ -260,6 +215,7 @@
 
 		<div class="site-content__inner clearfix">
 
+
 			<div class="site-content__body">
 				<nav class="breadcrumb clearfix">
 					<ul class="breadcrumb__list">
@@ -277,29 +233,71 @@
 
 					<article class="article">
 
-						<h1>Main page title</h1>
+						<h1>Search Page</h1>
 
-						<p>This is the main content column.</p>
+						<div class="search-page__container">
 
-						<h2>UCL banner</h2>
+							<div class="search-page__facets">
+								<form class="form form__keyword-search labels-hidden" _lpchecked="1">
+									<h2>Refine your results:</h2>
+									<fieldset class="form__group form-group__keyword">
+										<input class="search-page__input form__control" type="text" id="text" placeholder="Keyword Search" data-notext="true">
+									</fieldset>
+									<button type="submit" class="search-page__submit submit">
+									<i class="fa fa-search"></i>
+									</button>
+								</form>    
+								<form class="search-page--sort-form form form__sort-by" novalidate="novalidate">
+									<fieldset class="form-group required " aria-required="true">
+										<label for="sort-by" class="filter-group__title">Sort By</label>
+										<div class="custom-select">
+											<span class="is-hidden">Please select</span>
+											<select id="sort-by" name="sort" class="search-page--sort-form__options">
+											<option selected="selected" disabled="disabled" value="">Please select</option>
+											<option value="">Relevance</option>
+											<option value="date">Date Descending</option>
+											<option value="adate">Date Ascending</option>
+											<option value="title">Title</option>
+											<option value="dtitle">Title Descending</option>
+											</select>
+										</div>
+									</fieldset>
+								</form>
+							</div>
 
-						<p>You can brand the UCL banner with your site colour by adding a 'background-color' to the '.photograph' class</p>
+							<div class="search-page__sub-container--right-col">
 
-						<p>If you would instead like to use a photograph in the banner add the class '.photograph--show' to the '.photograph' div and assign your image to this class in the css</p>
+								<p class="results-context">...</p>
+								<!-- set collection id as an attribute -->
+								<section class="search-page__listings half-width-items"
+								collectionid="impact">
+									<article>
+										<img src="//cdn.ucl.ac.uk/indigo/images/ajax-loader.gif" title="loading gif" />
+									</article>
+								</section>
+								<ul class="search-page__pagination"></ul>
+
+								<script>
+									globalSiteSpecificVars.searchTemplate = 'search-paired-listing';
+									globalSiteSpecificVars.listingImageMapping = "T";
+									globalSiteSpecificVars.listingEl = ".search-page__listings";
+									require(['app/search-page']);
+								</script>
+								<noscript>
+									<a href="http://search2.ucl.ac.uk/s/search.html?query=!padrenullquery&amp;collection=impact"
+								title="See full listings for lifestudynews">
+										See full listings for lifestudynews
+									</a>
+								</noscript>
+
+							</div>
+						</div>
 
 					</article>
 
 					<p class="mod">Page last modified on
 						<time datetime="2013-05-06 08:09">06 Aug 13 08:09</time>
 					</p>
-
-				</div>
-
-				<div class="site-content__sidebar">
-
-					<h1>Sidebar</h1>
-
-					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
 
 				</div>
 
