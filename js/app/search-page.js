@@ -1,7 +1,7 @@
 (function(){
     var listingTemplate = checkVarInGlobalSiteSpecific('searchTemplate',"genericSearchPage");
     var facetTemplate = checkVarInGlobalSiteSpecific('facetTemplate','nothing');
-    var defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//static-local/indigo/images/ucl-portico-650.jpg");
+    var defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//cdn.ucl.ac.uk/indigo/images/ucl-portico-650.jpg");
     var listingImageMetaMapping = checkVarInGlobalSiteSpecific('listingImageMapping','I');
     var listingElMapping = checkVarInGlobalSiteSpecific("listingEl",".search-page__listing-results");
     var listingDescriptionMapping = checkVarInGlobalSiteSpecific("listingDescriptionMapping",'summary');
