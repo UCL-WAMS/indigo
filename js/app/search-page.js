@@ -1,5 +1,6 @@
 (function(){
     var listingTemplate = checkVarInGlobalSiteSpecific('searchTemplate',"genericSearchPage");
+    var numRanks = checkVarInGlobalSiteSpecific('numRanks',10);
     var facetTemplate = checkVarInGlobalSiteSpecific('facetTemplate','nothing');
     var defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//cdn.ucl.ac.uk/indigo/images/ucl-portico-650.jpg");
     var listingImageMetaMapping = checkVarInGlobalSiteSpecific('listingImageMapping','I');
@@ -38,7 +39,7 @@
                     data: {}
                     ,queryStr: ''
                     ,url: '//' + funnelBackServer + '.ucl.ac.uk/s/search.json'
-                    ,numRanks: 10 
+                    ,numRanks: numRanks 
                     ,defaultSearchTerm: defaultSearchTerm
                     ,searchTerm: initialSearchTerm
                     ,totalMatching: 0
@@ -161,7 +162,6 @@
                 var i;
                 for(i in tmpData.response.resultPacket.results) {
                     var tmpResult = tmpData.response.resultPacket.results[i];
-                    if(this.model.get('dummy'))tmpResult.metaData.d = "2015-10-10";
                     if(typeof tmpResult.metaData.d !== 'undefined') {
                         tmpResult.metaData['datePretty'] = this.prettyDateConvertor(tmpResult.metaData.d);
                     }
