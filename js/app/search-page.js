@@ -1,24 +1,25 @@
 (function(){
-    var listingTemplate = checkVarInGlobalSiteSpecific('searchTemplate',"genericSearchPage");
-    var numRanks = checkVarInGlobalSiteSpecific('numRanks',10);
-    var facetTemplate = checkVarInGlobalSiteSpecific('facetTemplate','nothing');
-    var defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//cdn.ucl.ac.uk/indigo/images/ucl-portico-650.jpg");
-    var listingImageMetaMapping = checkVarInGlobalSiteSpecific('listingImageMapping','I');
-    var listingElMapping = checkVarInGlobalSiteSpecific("listingEl",".search-page__listing-results");
-    var listingDescriptionMapping = checkVarInGlobalSiteSpecific("listingDescriptionMapping",'summary');
-    var showResultCount = checkVarInGlobalSiteSpecific("showResultCount",true);
-    var facetEl = checkVarInGlobalSiteSpecific("facetEl",'');
+    var listingTemplate = checkVarInGlobalSiteSpecific('searchTemplate',"genericSearchPage")
+    ,numRanks = checkVarInGlobalSiteSpecific('numRanks',10)
+    ,facetTemplate = checkVarInGlobalSiteSpecific('facetTemplate','nothing')
+    ,defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//cdn.ucl.ac.uk/indigo/images/ucl-portico-650.jpg")
+    ,listingImageMetaMapping = checkVarInGlobalSiteSpecific('listingImageMapping','I')
+    ,listingElMapping = checkVarInGlobalSiteSpecific("listingEl",".search-page__listing-results")
+    ,listingDescriptionMapping = checkVarInGlobalSiteSpecific("listingDescriptionMapping",'summary')
+    ,showResultCount = checkVarInGlobalSiteSpecific("showResultCount",true)
+    ,facetEl = checkVarInGlobalSiteSpecific("facetEl",'')
+    ,gscope = checkVarInGlobalSiteSpecific("gscope",'');
 
     define(['jquery','backbone','underscore','text!templates/' + listingTemplate + '.tmpl','text!templates/' + facetTemplate + '.tmpl'],function($,B,_,ListingTemplate,FacetTemplate){
         
         var SearchModel = Backbone.Model.extend({
            defaults: function() {        
-                var assetUrl = document.URL;
-                var domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)fbenv=([^&]+)(.*)$/ig,'$4');
-                var searchQueryParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)search=([^&]+)(.*)$/ig,'$4');
-                var funnelBackServer = "search2";
-                var defaultSearchTerm = "!padrenullquery";
-                var initialSearchTerm = defaultSearchTerm;
+                var assetUrl = document.URL
+                ,domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)fbenv=([^&]+)(.*)$/ig,'$4')
+                ,searchQueryParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)search=([^&]+)(.*)$/ig,'$4')
+                ,funnelBackServer = "search2"
+                ,defaultSearchTerm = "!padrenullquery"
+                ,initialSearchTerm = defaultSearchTerm;
 
                 if(typeof domainParam!=='undefined') {
                     switch(domainParam) {
@@ -64,6 +65,7 @@
                     ,showResultCount: showResultCount
                     ,facetParamQryStr: ''
                     ,facetEl: facetEl
+                    ,gscope: gscope
                 }
             }
         });
@@ -73,6 +75,7 @@
             ,template: _.template(ListingTemplate)
             ,initialize: function() {
                 var self = this;
+
                 this.model = searchModel;
 
                 this.model.set({
@@ -103,7 +106,7 @@
 
                 $.ajax({
                     type:'GET'
-                    ,data: '&query=' + this.model.get("searchTerm") + '&collection=' + this.model.get("collection") +  '&num_ranks=' + this.model.get("numRanks") + '&start_rank=' + this.model.get("newCurrentStart") + "&sort=" + this.model.get("currentSort") + this.model.get("facetParamQryStr")
+                    ,data: '&query=' + this.model.get("searchTerm") + '&collection=' + this.model.get("collection") +  '&num_ranks=' + this.model.get("numRanks") + '&start_rank=' + this.model.get("newCurrentStart") + "&sort=" + this.model.get("currentSort") + this.model.get("facetParamQryStr") + this.getGscopeStr(this.model.get("gscope"))
                     ,jsonp: 'jsonp'
                     ,dataType: "jsonp"
                     ,url: this.model.get("url")
@@ -149,23 +152,25 @@
                 e.preventDefault();
             }
             ,prettyDateConvertor: function(dateStr) {
-                var d = new Date(dateStr);
-                var monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+                var d = new Date(dateStr)
+                ,monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"]
 
-                var str = d.getDay() + ' ' + monthNames[parseInt(d.getMonth())] + ', ' + d.getFullYear();
+                ,str = d.getDay() + ' ' + monthNames[parseInt(d.getMonth())] + ', ' + d.getFullYear();
                 
                 return str;
             }
             ,cleanseData: function(x) {
-                var tmpData = x;
-                var tmpResultArr = [];
-                var i;
+                var tmpData = x
+                ,tmpResultArr = []
+                ,i
+                ,tmpResult;
+
                 for(i in tmpData.response.resultPacket.results) {
-                    var tmpResult = tmpData.response.resultPacket.results[i];
+                    tmpResult = tmpData.response.resultPacket.results[i];
                     if(typeof tmpResult.metaData.d !== 'undefined') {
                         tmpResult.metaData['datePretty'] = this.prettyDateConvertor(tmpResult.metaData.d);
                     }
-                    tmpResult.metaData['listingDescription'] = tmpResult.metaData[this.model.get('listingDescriptionMapping')];
+                    tmpResult.metaData['listingDescription'] = (this.model.get('listingDescriptionMapping') === 'summary') ? tmpResult.metaData[this.model.get('listingDescriptionMapping')] : tmpResult.summary;
                     
                     /* set image */
                     if(typeof tmpResult.metaData[this.model.get('listingImageMapping')] !== 'undefined'){
@@ -186,12 +191,16 @@
                     'currentSort' : e.currentTarget.value
                 });
             }
+            ,getGscopeStr: function(g) {
+                return (g.length) ? "&gscope1=" + g : "";
+            }
             ,render: function() {
-                var pagination = new paginationView({model: this.model});
-                var verboseResult = new verboseResultView({model: this.model});
+                var pagination = new paginationView({model: this.model})
+                ,verboseResult = new verboseResultView({model: this.model})
+                ,facets;
 
                 if(this.model.get("facetEl").length > 0){
-                    var facets = new facetsView({model: this.model});
+                    facets = new facetsView({model: this.model});
                 }
 
                 $(this.model.get("listingEl")).html(this.template({
@@ -208,10 +217,10 @@
                 this.model.bind('change',this.render());
             }
             ,render: function() {
-                var searchTermStr = (this.model.get("searchTerm") === this.model.get("defaultSearchTerm")) ? 'Searching for everything' : this.model.get("searchTerm"); 
+                var searchTermStr = (this.model.get("searchTerm") === this.model.get("defaultSearchTerm")) ? 'Searching for everything' : this.model.get("searchTerm")
+                ,resultsStr = (parseInt(this.model.get("totalMatching"))===1) ? "result" : "results"
+                ,str = '';
 
-                var resultsStr = (parseInt(this.model.get("totalMatching"))===1) ? "result" : "results";
-                var str = '';
                 if(this.model.get("showResultCount")){
                     if(listingTemplate === 'search-paired-listing'){
                         str = '<em>"' +  searchTermStr + '</em>" returned ' +  this.model.get("totalMatching") + ' ' + resultsStr;
@@ -248,10 +257,46 @@
                     'facetParamQryStr', newFacetParam
                 );
             }
+            ,facetCleanser: function(x) {
+                var i
+                ,j
+                ,k
+                ,tmpFacet
+                ,tmpCat
+                ,checkedDomAttr;
+
+                for(i in x) {
+                    tmpFacet = x[i].categories;
+                    for(j in tmpFacet) {
+                        tmpCat = tmpFacet[j];
+                        for(k in tmpFacet[j].values) {
+                            checkedDomAttr = "";
+                            if(this.isFacetIsSelected(x[i].categories[j].queryStringParamName,tmpFacet[j].values[k].data))
+                                checkedDomAttr = "selected";
+                            //update facet data with is selected status
+                            x[i].categories[j].values[k].checkedDomAttr = checkedDomAttr;
+                        }
+                    }
+                }
+
+                return x;
+            }
+            ,isFacetIsSelected: function(catQueryStr,value) {
+                var i
+                ,selectedCats = this.model.get("data").question.selectedCategoryValues;
+
+                if(typeof selectedCats[catQueryStr] !=='undefined') {
+                    for(i in selectedCats[catQueryStr]) {
+                        if(selectedCats[catQueryStr][i] === value)
+                            return true;
+                    }
+                }
+
+                return false;
+            }
             ,render: function() {
                 $(this.model.get("facetEl")).html(this.template({
-                    data: this.model.get("data").response.facets
-
+                    data: this.facetCleanser(this.model.get("data").response.facets)
                 }));
             }
         });
@@ -260,15 +305,16 @@
             el: $('.search-page__pagination')
             ,initialize: function() {
                 var self = this;
+
                 self.model = searchModel;
                 self.model.bind('change',this.render());
                 self.model.on('change', function() {
                 });
             }
             ,buildPaginationStr: function(pos,isPrev,isNext) {
-                var str = '';
-                var currentPageClass = '';
-                var startRank = pos;
+                var str = ''
+                ,currentPageClass = ''
+                ,startRank = pos;
 
                 if(isPrev){
                     label = "Previous";
@@ -288,9 +334,9 @@
                 return str;
             }
             ,render: function() {
-                var resultsSummary = this.model.get("data").response.resultPacket.resultsSummary;
-                var i = 0;
-                var paginationStr = "";
+                var resultsSummary = this.model.get("data").response.resultPacket.resultsSummary
+                ,i = 0
+                ,paginationStr = "";
 
                 if (typeof this.model.get("prevStart") === 'number') {
                     paginationStr += this.buildPaginationStr(this.model.get("prevStart"),true,false);;
@@ -318,6 +364,7 @@
 
     function checkVarInGlobalSiteSpecific(varToCheck,defaultVal) {
         var x = defaultVal;
+
         if(typeof globalSiteSpecificVars[varToCheck] !== 'undefined') {
             x = globalSiteSpecificVars[varToCheck];
         }
