@@ -5,7 +5,7 @@
         <option value="">--</option>
             <% _.each(f.categories,function(cat){ %>
                 <% _.each(cat.values,function(val){ %>
-                    <option value="<%= val.queryStringParam %>"><%= val.label %></option>
+                    <option value="<%= val.queryStringParam %>" <%= val.checkedDomAttr %>><%= val.label %></option>
                 <% }); %>
             <% }); %>
         </select>
