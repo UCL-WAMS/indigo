@@ -170,7 +170,7 @@
                     if(typeof tmpResult.metaData.d !== 'undefined') {
                         tmpResult.metaData['datePretty'] = this.prettyDateConvertor(tmpResult.metaData.d);
                     }
-                    tmpResult.metaData['listingDescription'] = (this.model.get('listingDescriptionMapping') === 'summary') ? tmpResult.metaData[this.model.get('listingDescriptionMapping')] : tmpResult.summary;
+                    tmpResult.metaData['listingDescription'] = (this.model.get('listingDescriptionMapping') !== 'summary') ? tmpResult.metaData[this.model.get('listingDescriptionMapping')] : tmpResult.summary;
                     
                     /* set image */
                     if(typeof tmpResult.metaData[this.model.get('listingImageMapping')] !== 'undefined'){
@@ -225,7 +225,7 @@
                     if(listingTemplate === 'search-paired-listing'){
                         str = '<em>"' +  searchTermStr + '</em>" returned ' +  this.model.get("totalMatching") + ' ' + resultsStr;
                     }else{
-                        str = "Displaying <strong>1 to " + this.model.get("resultsCount") + "</strong> of <strong>" + this.model.get("totalMatching") + "</strong> results";
+                        str = (this.model.get("totalMatching") > 0) ? "Displaying <strong>1 to " + this.model.get("resultsCount") + "</strong> of <strong>" + this.model.get("totalMatching") + "</strong> results" : "Displaying <strong>0</strong> results";
                     }
                 }
                 $(this.el).html(str);
