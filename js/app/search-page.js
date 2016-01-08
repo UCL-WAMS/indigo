@@ -8,7 +8,8 @@
     ,listingDescriptionMapping = checkVarInGlobalSiteSpecific("listingDescriptionMapping",'summary')
     ,showResultCount = checkVarInGlobalSiteSpecific("showResultCount",true)
     ,facetEl = checkVarInGlobalSiteSpecific("facetEl",'')
-    ,gscope = checkVarInGlobalSiteSpecific("gscope",'');
+    ,gscope = checkVarInGlobalSiteSpecific("gscope",'')
+    ,sortOrder = checkVarInGlobalSiteSpecific("sortOrder",'');
 
     define(['jquery','backbone','underscore','text!templates/' + listingTemplate + '.tmpl','text!templates/' + facetTemplate + '.tmpl'],function($,B,_,ListingTemplate,FacetTemplate){
         
@@ -55,8 +56,8 @@
                     ,newCurrentStart: 0
                     ,listingEl: listingElMapping
                     ,searchInputSelector: 'input.search-page__input'
-                    ,defaultSort: ''
-                    ,currentSort: '' 
+                    ,defaultSort: sortOrder
+                    ,currentSort: sortOrder 
                     ,init: false
                     ,defaultImage: defaultImage
                     ,listingImageMapping: listingImageMetaMapping
@@ -257,6 +258,52 @@
                     'facetParamQryStr', newFacetParam
                 );
             }
+            ,firstCharToUc: function(x) {
+                var i
+                ,str = '';
+
+                for(i in x) {
+                    if(parseInt(i) === 0) {
+                        str += x[i].toUpperCase();
+                    } else {
+                        str += x[i];
+                    }
+                }
+
+                return str;
+            }
+            ,cleanLabel: function(label,constraint) {
+                var wordsArr
+                ,i
+                ,str = ''
+                ,space = ' '
+                ,isWordsLastItem = false
+                ,acroynmArr;
+
+                wordsArr = label.match(/\w+/g);
+
+                if(wordsArr === null)
+                    wordsArr = [];
+
+
+                for(i in wordsArr) {
+                    if((parseInt(i) + 1) === wordsArr.length){
+                        isWordsLastItem = true;
+                        space = '';
+                    }
+                    acroynmArr = wordsArr[i].match(/\(\w+\)/gi);
+
+                    if((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
+                        str += wordsArr[i].toUpperCase();
+                    } else if(wordsArr[i] === 'and') {
+                        str += wordsArr[i];
+                    } else {
+                        str += this.firstCharToUc(wordsArr[i]) ;
+                    }
+                    str += space;
+                }
+                return str;
+            }
             ,facetCleanser: function(x) {
                 var i
                 ,j
@@ -275,6 +322,7 @@
                                 checkedDomAttr = "selected";
                             //update facet data with is selected status
                             x[i].categories[j].values[k].checkedDomAttr = checkedDomAttr;
+                            x[i].categories[j].values[k].label = this.cleanLabel(x[i].categories[j].values[k].label,x[i].categories[j].values[k].constraint);
                         }
                     }
                 }
