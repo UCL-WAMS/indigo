@@ -2,6 +2,7 @@
     var listingTemplate = checkVarInGlobalSiteSpecific('searchTemplate',"genericSearchPage")
     ,numRanks = checkVarInGlobalSiteSpecific('numRanks',10)
     ,facetTemplate = checkVarInGlobalSiteSpecific('facetTemplate','nothing')
+    ,sortTemplate = checkVarInGlobalSiteSpecific('sortTemplate','sortDefault')
     ,defaultImage = checkVarInGlobalSiteSpecific('defaultImage',"//cdn.ucl.ac.uk/indigo/images/ucl-portico-650.jpg")
     ,listingImageMetaMapping = checkVarInGlobalSiteSpecific('listingImageMapping','I')
     ,listingElMapping = checkVarInGlobalSiteSpecific("listingEl",".search-page__listing-results")
@@ -11,7 +12,7 @@
     ,gscope = checkVarInGlobalSiteSpecific("gscope",'')
     ,sortOrder = checkVarInGlobalSiteSpecific("sortOrder",'');
 
-    define(['jquery','backbone','underscore','text!templates/' + listingTemplate + '.tmpl','text!templates/' + facetTemplate + '.tmpl'],function($,B,_,ListingTemplate,FacetTemplate){
+    define(['jquery','backbone','underscore','text!templates/' + listingTemplate + '.tmpl','text!templates/' + facetTemplate + '.tmpl','text!templates/' + sortTemplate + '.tmpl'],function($,B,_,ListingTemplate,FacetTemplate,SortTemplate){
         
         var SearchModel = Backbone.Model.extend({
            defaults: function() {        
@@ -66,6 +67,7 @@
                     ,showResultCount: showResultCount
                     ,facetParamQryStr: ''
                     ,facetEl: facetEl
+                    ,sortEl: '.search-page--sort-form__options'
                     ,gscope: gscope
                 }
             }
@@ -198,7 +200,8 @@
             ,render: function() {
                 var pagination = new paginationView({model: this.model})
                 ,verboseResult = new verboseResultView({model: this.model})
-                ,facets;
+                ,facets
+                ,sort = new sortView({model: this.model});
 
                 if(this.model.get("facetEl").length > 0){
                     facets = new facetsView({model: this.model});
@@ -232,7 +235,23 @@
                 $(this.el).html(str);
             }
         });
-        
+
+        var sortView = Backbone.View.extend({
+            el: $('body')
+            ,template: _.template(SortTemplate)
+            ,initialize: function() {
+                this.model = searchModel;
+                this.model.bind('change',this.render());
+            }
+            ,render: function() {
+                $(this.model.get("sortEl")).html(
+                    this.template({
+                        data: this.model.get("currentSort")
+                    })
+                );
+            }
+        });
+
         var facetsView = Backbone.View.extend({
             el: $('body')
             ,template: _.template(FacetTemplate)
@@ -244,10 +263,9 @@
                 'click .btn--reset': 'resetResults'
                 ,'change .facet-option': 'facetHandler'
             }
-
             ,resetResults: function() {
                 this.model.set({
-                    'currentSort' : this.model.get("searchTerm")
+                    'currentSort' : this.model.get("defaultSort")
                     ,'facetParamQryStr': ''
                 });
             }

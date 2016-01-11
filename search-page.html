@@ -240,14 +240,7 @@
 						<form action="#" class="search-page--sort-form form search-page__filter-top--sort-form">
 							<div class="form__group form__group--inline">
 							<label for="select-sort">Sort by</label>
-							<select class="form__control search-page--sort-form__options">
-								<option value="date">Latest</option>
-								<option value="adate">Date Ascending</option>
-								<option value="title">Title</option>
-								<option value="dtitle">Title Descending</option>
-								<option value="">Relevance</option>
-							</select>
-							<input value="Sort" class="btn" type="button">
+							<select class="form__control search-page--sort-form__options"></select>
 							</div>
 						</form>
 
@@ -272,6 +265,7 @@
 								globalSiteSpecificVars.sortSelector = "#select-sort";
 								globalSiteSpecificVars.facetEl = ".search-page__dynamic-facets";
 								globalSiteSpecificVars.facetTemplate = "facets";
+								globalSiteSpecificVars.sortTemplate = "sortDefault";
 								require(['app/search-page']);
 							</script>
 							<noscript>
