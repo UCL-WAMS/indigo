@@ -1,7 +1,9 @@
 <% _.each(data,function(l){ %>
 	<article class="blurb blurb--wide">
 		<% if(typeof l.metaData['listingImage'] !== 'undefined') { %>
-			<img alt="" src="<%= l.metaData['listingImage'] %>" class="blurb__img">
+			<a href="<%= l.liveUrl %>">
+				<img alt="" src="<%= l.metaData['listingImage'] %>" class="blurb__img">
+			</a>
 		<% } %>
 		<div class="blurb__body">
 			<h3 class="blurb__title">
