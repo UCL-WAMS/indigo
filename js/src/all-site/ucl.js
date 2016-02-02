@@ -1,6 +1,6 @@
 // UCL JS
-$(document).ready(function() {
-
+jQuery(document).ready(function() {
+	var $ = jQuery;
 	$('.tabbed div').hide();
 	$('.tabbed div:first').show();
 	$('.tabbed ul li:first').addClass('is-active');
@@ -20,29 +20,33 @@ $(document).ready(function() {
 			$(this).removeClass("currentAccordionAnchor");
 		});
 	}
-	/* accordion - start
-	---------------------------------------------------------------------*/
-	var allPanels = $('.accordion__description');
-	allPanels.slideUp();
-	//open accordions that have this set in their class
-	$('.accordion__title a').each(function() {
-		var tmpAccordionClass = $(this).attr("class");
-		if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
-			$(this).parent().next().slideDown();
-		}
-	});
-
-
-	$('.accordion__title a').click(function() {
+	/* Accordion - start
+	*
+	*new Indigo Code sources use the app/accordion to handle multiple instances this is here for backward compatability
+	*/
+	if(typeof globalSiteSpecificVars.useAccordionApp==='undefined'){
+		var allPanels = $('.accordion__description');
 		allPanels.slideUp();
-		var tmpAccordionClass = $(this).attr("class");
-		removeCurrentClassFromAll();
-		if (typeof tmpAccordionClass === 'undefined' || tmpAccordionClass.indexOf('currentAccordionAnchor') === -1) {
-			$(this).parent().next().slideDown();
-			$(this).addClass("currentAccordionAnchor");
-		}
-		return false;
-	});
+		//open accordions that have this set in their class
+		$('.accordion__title a').each(function() {
+			var tmpAccordionClass = $(this).attr("class");
+			if (typeof tmpAccordionClass !== 'undefined' && tmpAccordionClass.indexOf('currentAccordionAnchor') >= 0) {
+				$(this).parent().next().slideDown();
+			}
+		});
+
+
+		$('.accordion__title a').click(function() {
+			allPanels.slideUp();
+			var tmpAccordionClass = $(this).attr("class");
+			removeCurrentClassFromAll();
+			if (typeof tmpAccordionClass === 'undefined' || tmpAccordionClass.indexOf('currentAccordionAnchor') === -1) {
+				$(this).parent().next().slideDown();
+				$(this).addClass("currentAccordionAnchor");
+			}
+			return false;
+		});
+	}	
 	/* accordion - end
 	---------------------------------------------------------------------*/
 	$('.header__open, .header__close').click(function(e) {

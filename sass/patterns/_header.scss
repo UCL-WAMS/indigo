@@ -17,21 +17,9 @@
 		height: 100%;
 		overflow: auto;
 		overflow-x: hidden;
-		transition: all, .5s;
-		transform: translateX(-100%);
-
-		// Use top position if browser does not support transform (better transition performance)
-		.no-csstransforms & {
-		    left: -100%;
-		}
-
+		left: -100%;
 		.mobile-open & {
-			transition: all, .5s;
-			transform: translateX(0);
-
-			.no-csstransforms & {
-			    left: 0;
-			}
+			left: 0;
 		}
 
 		a {
@@ -64,10 +52,9 @@
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-color: $black;
-		background-size: 90%;
+		background-size: 30%;
 	}
 }
-
 .header__open {
 	@include gs-media(m, max) {
 		width: 25px;

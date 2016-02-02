@@ -123,6 +123,11 @@ cite, .cite, em, dfn {
 	font-style: italic;
 }
 
+p{
+    &.lead{
+        @include rem(font-size,$font-size-lead);
+    }
+}
 
 /* Inline styles
 -------------------------------------------------------------- */

@@ -1,8 +1,8 @@
-getassetLocation = function(part){
+getassetLocation = function(){
 	var assetUrl = document.URL;
 	var domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)domain=([^&]+)(.*)$/ig,'$4');
 	var assetDomain = "//cdn.ucl.ac.uk/";
-	var libLocation = 'indigo/js/lib'
+	var libLocation = 'indigo/js/lib';
 	if(typeof domainParam!=='undefined'){
 
 		switch(domainParam){
@@ -11,24 +11,17 @@ getassetLocation = function(part){
 			break;
 			case "local":
 				assetDomain = "//static-local/";
-				libLocation = 'indigo/js/src';
-				ext = "";
 			break;
 			case "uat":
 				assetDomain = "//static-uat.ucl.ac.uk/";
 			break;
 		}
 	}
-	if(part==='domain'){
-		return assetDomain;
-	}else{
-		return assetDomain + libLocation;
-	}
-	
+	return assetDomain + libLocation;
+
 }
 
 var fullAssetLocation = getassetLocation();
-var assetLocation = getassetLocation('domain');
 var urlArgs = "";
 
 require.config({
@@ -36,6 +29,7 @@ require.config({
 	paths: {
 		app: '../app'
 		,allsite: 'all-site.min'
+		,templates: '../templates'
 		//libaries
 		,jquery: globalSiteSpecificVars.pathToJquery
 		,underscore: '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min'

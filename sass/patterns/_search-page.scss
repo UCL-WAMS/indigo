@@ -1,0 +1,161 @@
+.search-page {
+    &__listings {
+        article {
+            border-bottom: 1px solid $primary-colour;
+            padding: 2.5em 0;
+        }
+        &.half-width-items {
+            article {
+                border-bottom: none;
+            }
+        }
+    }
+    &__container {
+        section {
+            margin-left: 0;
+        }
+        .results-context {
+            color: mix($darkgrey,$white,70%);
+            @include rem(font-size,3);
+            @include rem(margin-bottom,1);
+        }
+        .listing.half-width-items {
+            overflow: hidden;
+            article.content-item {
+                width: 100%;
+            }
+        }
+        .pub-date, .content-item__date {
+            color: #999;
+            margin-bottom: 1em;
+        }
+    }
+    &__sub-container {
+        &--right-col {
+            @include gs-media(t,min) {
+                @include gs-span(t,2,3,(1,3));
+            }
+            @include gs-media(dl,min) {
+                @include gs-span(dl,2,5,(1,5));
+            }
+        }
+    }
+    &__listings {
+        overflow: hidden;
+        article {
+            border-bottom: 1px solid $primary-colour;
+            padding: 2.5em 0;
+        }
+        &.half-width-items {
+            article {
+                border-bottom: none;
+                &.content-item {
+                    &:nth-child(odd) {
+                        @include gs-span(dc,1,2,(1,4));
+                        clear: left;
+                    }
+                    &:nth-child(even) {
+                        @include gs-span(dc,3,4,(1,4));
+                    }
+                }
+            }
+        }
+    }
+    &__filter-top {
+        background: mix($stone,$white,70%);
+        @include rem(margin-bottom,1.5);
+        padding: 25px 30px;
+        position: relative;
+        input.btn--reset {
+            background-color: $stone;
+            border: 0;
+            bottom: 0;
+            color: $black;
+            cursor: pointer;
+            padding: .5em 1em;
+            position: absolute;
+            right: 0;
+            text-shadow: none;
+        }
+        input {
+            background-color: $link-colour;
+        }
+        &--sort-form {
+            text-align: right;
+            input {
+                background-color: $link-colour;
+            }
+            .form__group--inline {
+                label, input, select {
+                    display: inline-block;
+                    float: none;
+                    vertical-align: top;
+                    width: auto;
+                    margin: 0;
+                }
+                &:last-child {
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+    }
+    &__facets {
+        background: $primary-colour;
+        box-sizing: border-box;
+        @include rem(margin-bottom,1);
+        @include rem(padding,1);
+        form {
+            width: 100%;
+            clear: both;
+        }
+        .form-group__keyword {
+            @include gs-span(dl,1,4,(1,5));
+        }
+        button,submit {
+            @include gs-span(dl,5,5,(1,5));
+        }
+        @include gs-media(t,min) {
+            @include gs-span(t,1,1,(1,3));
+        }
+        @include gs-media(dl,min) {
+            @include gs-span(dl,1,1,(1,5));
+            margin-bottom: 0;
+        }
+    }
+    &__pagination {
+        padding-top: 2.5em;
+        margin-left: 0;
+        overflow: hidden;
+        li {
+            border: 1px solid $primary-colour;
+            @include rem(padding,0.5);
+            @include rem(padding-left,1);
+            @include rem(padding-right,1);
+            @include rem(margin-bottom, 1);
+            @include rem(margin-left, 1);
+            border-radius: 5px;
+            float: left;
+            list-style-type: none;
+            a {
+                color: $primary-colour;
+                font-size: $font-size-xs;
+            }
+            &:hover {
+                background: mix($primary-colour,$white,70%);;
+                border: 1px solid mix($primary-colour,$white,70%);;
+                a {
+                    color: $white;
+                } 
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &.search-page__pagination--list-el--current {
+                background: $primary-colour;
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
