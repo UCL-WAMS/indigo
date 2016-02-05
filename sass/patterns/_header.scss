@@ -53,6 +53,14 @@
 		background-position: right bottom;
 		background-color: $black;
 		background-size: 30%;
+	
+	}
+	&--brand__link {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		right: 0;
+		top: 0; 
 	}
 }
 .header__open {
