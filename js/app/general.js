@@ -133,11 +133,15 @@ define(["jquery","allsite"],function($,gen){
 		}
 
 		function buildmobileNav(){
-			if(leftNavList.length > 0 && mobileNavList.length < 1){
-				mobileNav.append("<ul>" + leftNavList.html() + "</ul>");
-			}else if(topNavList.length > 0 && mobileNavList.length < 1){
-				mobileNav.append("<ul>" + topNavList.html() + "</ul>");
-			}
+		  var buildNav = (typeof globalSiteSpecificVars.buildMobileNav !=='undefined'  && globalSiteSpecificVars.buildMobileNav === false) ? false : true;
+
+      if(buildNav) {
+        if(leftNavList.length > 0 && mobileNavList.length < 1){
+          mobileNav.append("<ul>" + leftNavList.html() + "</ul>");
+        }else if(topNavList.length > 0 && mobileNavList.length < 1){
+          mobileNav.append("<ul>" + topNavList.html() + "</ul>");
+        }
+      }
 			return;
 		}
 		buildmobileNav();
