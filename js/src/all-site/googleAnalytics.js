@@ -18,9 +18,9 @@ var _gaq = _gaq || [];
       //set up site specif Google Analytics tracking
       for(gaIterator in globalSiteSpecificVars.googleAnalyticsIdsArray){
         gaCall(gaIterator,'pageView');
+        downloadEvents(gaIterator);
       }
-      downloadEvents();
-
+      
       var ga = document.createElement('script');
       ga.type = 'text/javascript';
       ga.async = true;
@@ -55,8 +55,7 @@ var _gaq = _gaq || [];
 
     return;
   }
-  function downloadEvents() {
-    var gaIterator = 0;
+  function downloadEvents(gaIterator) {
 
     $(document).ready(function(){
       $('a').each(function(e) {
@@ -75,9 +74,7 @@ var _gaq = _gaq || [];
           $(this).click(function(e) {
             var extLink = href.replace(/^https?\:\/\//i, '');
 
-            for(gaIterator in globalSiteSpecificVars.googleAnalyticsIdsArray){
-              gaCall(gaIterator,'externalLink',extLink);
-            }
+            gaCall(gaIterator,'externalLink',extLink);
 
             if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != '_blank') {
               setTimeout(function() { location.href = href; }, 200);
@@ -88,18 +85,14 @@ var _gaq = _gaq || [];
           $(this).click(function() {
             var mailLink = href.replace(/^mailto\:/i, '');
 
-            for(gaIterator in globalSiteSpecificVars.googleAnalyticsIdsArray){
-              gaCall(gaIterator,'email',mailLink);
-            }
+            gaCall(gaIterator,'email',mailLink);
           });
         } else if (href && href.match(filetypes)) {
           $(this).click(function() {
             var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined
               ,filePath = href;
 
-            for(gaIterator in globalSiteSpecificVars.googleAnalyticsIdsArray){
-              gaCall(gaIterator,'file','',extension,filePath);
-            }
+            gaCall(gaIterator,'file','',extension,filePath);
 
             if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != '_blank') {
               setTimeout(function() { location.href = href; }, 200);
