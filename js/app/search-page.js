@@ -164,7 +164,7 @@
                 d = new Date(dateStr)
                 ,monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"]
 
-                ,str = d.getDay() + ' ' + monthNames[parseInt(d.getMonth())] + ', ' + d.getFullYear();
+                ,str = d.getDate() + ' ' + monthNames[parseInt(d.getMonth())] + ', ' + d.getFullYear();
                 
                 return str;
             }
