@@ -68,53 +68,21 @@ module.exports = function(grunt) {
 				},
 			},
 			sass: {
-				files: ['<%= pkg.styleSrcDir %>/**/*.scss'],
-				tasks: ['sass:dist', 'autoprefixer', 'cssmin']
+				files: ['sass/**/*.scss'],
+				tasks: ['scsslint','sass:dist', 'autoprefixer', 'cssmin']
 			}
 		},
-		/*modernizr: {
-
-			dist: {
-				//"devFile" : "js/src/modernizr.js",
-				"devFile" : "test/modernizr.js",
-
-				//"outputFile" : "js/src/modernizr-custom.js",
-				"outputFile" : "test/modernizr-custom.js",
-
-				"extra" : {
-					"shiv" : true,
-					"printshiv" : true,
-					"load" : true,
-					"mq" : true,
-					"cssclasses" : true
-				},
-
-				// Based on default settings on http://modernizr.com/download/
-				"extensibility" : {
-					"addtest" : false,
-					"prefixed" : false,
-					"teststyles" : false,
-					"testprops" : false,
-					"testallprops" : false,
-					"hasevents" : false,
-					"prefixes" : false,
-					"domprefixes" : false,
-					"cssclassprefix": ""
-				},
-
-				// By default, source is uglified before saving
-				"uglify" : false,
-
-				// Define any tests you want to implicitly include.
-				"tests" : [],
-
-				"parseFiles" : false,
-
-				"matchCommunityTests" : false,
-
-				"customTests" : []
-			}
-		}*/
+		scsslint: {
+		  allFiles: [
+		    '<%= pkg.styleSrcDir %>/**/*.scss'
+		  ]
+		  ,options: {
+		    bundleExec: false 
+		    ,reporterOutput: 'scss-lint-report.xml'
+		    ,colorizeOutput: true
+		    ,maxBuffer: '<%= pkg.lintBuffer %>'
+		  }
+		}
 });
 
 grunt.loadNpmTasks('grunt-autoprefixer');
@@ -126,6 +94,18 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-modernizr');
+grunt.loadNpmTasks('grunt-scss-lint');
 
-grunt.registerTask('default', [/*'modernizr',*/'concat','uglify','sass','autoprefixer','cssmin','watch']);
+grunt.registerTask(
+  'default'
+  ,[
+    'concat'
+    ,'uglify'
+    ,'scsslint'
+    ,'sass'
+    ,'autoprefixer'
+    ,'cssmin'
+    ,'watch'
+  ]
+);
 };

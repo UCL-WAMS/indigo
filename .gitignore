@@ -6,6 +6,9 @@ public/css/admin/*.css
 
 .sass-cache/
 
+#SCSS lint report
+scss-lint-report.xml
+
 # Eclipse
 /.project
 /.settings
