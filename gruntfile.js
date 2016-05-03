@@ -81,6 +81,7 @@ module.exports = function(grunt) {
 		    ,reporterOutput: 'scss-lint-report.xml'
 		    ,colorizeOutput: true
 		    ,maxBuffer: '<%= pkg.lintBuffer %>'
+        ,force: true
 		  }
 		}
 });
