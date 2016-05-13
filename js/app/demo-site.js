@@ -14,6 +14,8 @@ define(["jquery"],function($){
 				}
 			).replace(/\t/g, '  ').replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>').replace(/&lt;!--PATTERN-JS(.|\n)*/,'');
 					body.addClass('viewsource').prepend( '<h2 class="label">Example</h2>').append( '<h2 class="label">HTML</h2><pre class="prettyprint">' + patternhtml + '</pre>' );
+
+			return body
 		};
 
 		//has to be duped from demo site to work with require
@@ -23,9 +25,9 @@ define(["jquery"],function($){
 		};
 
 		$(window).on('load',function(){
-			viewsource();
+			body = viewsource();
 
-			var body = $("#gitProxyIframe").contents().find("body");
+			//var body = $("#gitProxyIframe").contents().find("body");
 			resizeiframe('gitProxyIframe', body[0].scrollHeight);
 		});
 	//}
