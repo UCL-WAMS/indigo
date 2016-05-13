@@ -5,7 +5,7 @@ define(["jquery"],function($){
 	//if(document.URL.search(/(\?|&)file=template(.*)?/i) < 0){
 		function viewsource() {
 			//var body = $('body')
-			var body = $("iframe").contents().find("body"),
+			var body = $("#gitProxyIframe").contents().find("body"),
 			patternhtml = body.html().replace(/[<>]/g, 
 				function(m) { 
 					return {
@@ -25,7 +25,7 @@ define(["jquery"],function($){
 		$(window).on('load',function(){
 			viewsource();
 
-			var body = $("iframe").contents().find("body");
+			var body = $("#gitProxyIframe").contents().find("body");
 			resizeiframe('gitProxyIframe', body[0].scrollHeight);
 		});
 	//}
