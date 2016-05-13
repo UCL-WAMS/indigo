@@ -26,8 +26,6 @@ define(["jquery"],function($){
 
 		$(window).on('load',function(){
 			body = viewsource();
-
-			//var body = $("#gitProxyIframe").contents().find("body");
 			resizeiframe('gitProxyIframe', body[0].scrollHeight);
 		});
 	//}
