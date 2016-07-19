@@ -8,6 +8,8 @@
   "styleSrcDir": "sass",
   "styleDestDir": "css",
   "images": "images",
+  "sasslintConfig": ".sass-lint.yml",
+  "lintBuffer": "300000000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +26,7 @@
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-modernizr": "^0.6.0",
+    "grunt-scss-lint": "^0.3.8",
     "load-grunt-tasks": "^0.6.0"
   },
   "repository": {

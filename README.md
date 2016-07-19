@@ -36,3 +36,6 @@ The following steps will describe how to use the existing design language founda
 Release 2 updates
 ------------------
 We have updated the patterns and css so the class names and html follows the BEM methodology https://bem.info
+
+We have added SCSS linting. To install linting please run the ruby command 
+'gem install scss-lint' - More info https://github.com/ahmednuaman/grunt-scss-lint
