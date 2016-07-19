@@ -5,7 +5,7 @@
 
 
 .btn {
-	background-color: #666;
+	background-color: $hover-button;
 	color: $white;
 	text-align: center;
 	cursor: pointer;
@@ -18,17 +18,14 @@
 	text-shadow: 0 1px 0 rgba($black, 0.15);
 	line-height: 1;
 	-webkit-appearance: none;
+	&:hover {
+		background-color: #666;
+	}
 	&:active {
 		background-color: $active-button;
 	}
 	@include inline-block;
 	@include rem(font-size, $font-size-sm);
-	@include on-interaction {
-		background-color: $hover-button;
-		color: $white;
-		text-decoration: none;
-	}
-
 	.lt-ie9 & {
 		border: 0;
 	}
