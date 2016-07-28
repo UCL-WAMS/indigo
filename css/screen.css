@@ -2290,7 +2290,8 @@ figure + figure, figure + p {
   border-radius: 0;
   box-sizing: border-box; }
   .btn.cta:hover {
-    background-color: #002854; }
+    background-color: #002854;
+    color: white; }
 
 .btn.cta {
   width: 100%; }
