@@ -10,7 +10,15 @@ module.exports = function(grunt) {
 			basic: {
 				src: '<%= pkg.jsSrcDir %>/src/all-site/*.js',
 				dest: '<%= pkg.jsDestDir %>/src/all-site.js'
-			}
+			},
+			extras: {
+				src: [
+					'<%= pkg.jsSrcDir %>/src/all-site/gridset-overlay.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/lazyload.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/new-relic.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js'],
+				dest: '<%= pkg.jsDestDir %>/src/all-site-no-ga.js'
+			},
 		},
 		uglify: {
 			dynamic_mappings: {
