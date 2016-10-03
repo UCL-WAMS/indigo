@@ -3501,7 +3501,6 @@ Notes:
 
 .owl-carousel .owl-grab {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab; }

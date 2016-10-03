@@ -16,7 +16,8 @@ module.exports = function(grunt) {
 					'<%= pkg.jsSrcDir %>/src/all-site/gridset-overlay.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/lazyload.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/new-relic.js',
-					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js'],
+					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/twitter.js'],
 				dest: '<%= pkg.jsDestDir %>/src/all-site-no-ga.js'
 			},
 		},
@@ -110,7 +111,6 @@ grunt.registerTask(
   ,[
     'concat'
     ,'uglify'
-    ,'scsslint'
     ,'sass'
     ,'autoprefixer'
     ,'cssmin'
