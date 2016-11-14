@@ -313,16 +313,29 @@
                 for(i in wordsArr) {
                     if((parseInt(i) + 1) === wordsArr.length){
                         isWordsLastItem = true;
+						if (wordsArr[i].toUpperCase() ==='LAB') isWordsLastItem = false;
+						if (wordsArr[i].toUpperCase() ==='CENTRE') isWordsLastItem = false;
+						if (wordsArr[i].toUpperCase() ==='EDUCATION') isWordsLastItem = false;
+						if (wordsArr[i].toUpperCase() ==='WORK') isWordsLastItem = false;
+						if (wordsArr[i].toUpperCase() ==='LONDON') isWordsLastItem = false;
+
+
                         space = '';
                     }
-                    acroynmArr = wordsArr[i].match(/\(\w+\)/gi);
+                    acroynmArr = wordsArr[i].match(/\(\w+\)/gi);//Matches things in brackets I think
 
                     if((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
-                        str += wordsArr[i].toUpperCase();
+						if (wordsArr[i].toUpperCase() ==='TRAINING')
+							str += wordsArr[i] + ' (SENJIT)';
+						else
+							str += wordsArr[i].toUpperCase();
                     } else if(wordsArr[i] === 'and') {
                         str += wordsArr[i];
                     } else {
-                        str += this.firstCharToUc(wordsArr[i]) ;
+						if (wordsArr[i].toUpperCase() ==='STEM' && i==0)
+							str += 'STEM';
+						else
+                        	str += this.firstCharToUc(wordsArr[i]) ;
                     }
                     str += space;
                 }
