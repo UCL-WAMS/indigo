@@ -326,7 +326,7 @@
 
                     if((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
 						if (wordsArr[i].toUpperCase() ==='TRAINING')
-							str += wordsArr[i] + ' (SENJIT)';
+							str += this.firstCharToUc(wordsArr[i]) + ' (SENJIT)';
 						else
 							str += wordsArr[i].toUpperCase();
                     } else if(wordsArr[i] === 'and') {
