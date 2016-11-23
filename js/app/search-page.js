@@ -318,18 +318,21 @@
 						if (wordsArr[i].toUpperCase() ==='EDUCATION') isWordsLastItem = false;
 						if (wordsArr[i].toUpperCase() ==='WORK') isWordsLastItem = false;
 						if (wordsArr[i].toUpperCase() ==='LONDON') isWordsLastItem = false;
-
-
                         space = '';
                     }
+
+					if (wordsArr[i].toUpperCase() == 'UCL') wordsArr[i] = 'UCL';
+
                     acroynmArr = wordsArr[i].match(/\(\w+\)/gi);//Matches things in brackets I think
+
+					if (i==0 && wordsArr[i].toUpperCase() == 'SENJIT') continue;
 
                     if((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
 						if (wordsArr[i].toUpperCase() ==='TRAINING')
 							str += this.firstCharToUc(wordsArr[i]) + ' (SENJIT)';
 						else
 							str += wordsArr[i].toUpperCase();
-                    } else if(wordsArr[i] === 'and') {
+                    } else if(wordsArr[i] === 'and' || wordsArr[i] === 'for') {
                         str += wordsArr[i];
                     } else {
 						if (wordsArr[i].toUpperCase() ==='STEM' && i==0)
