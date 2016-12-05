@@ -44,6 +44,9 @@ var _gaq = _gaq || [];
 			case "donate":
 				_gaq.push(['_trackEvent', 'donate', 'Click', customLink + ' ' + document.URL]);
 				break;
+			case "give":
+				_gaq.push(['_trackEvent', 'give', 'Click', customLink + ' ' + document.URL]);
+				break;
 			case "externalLink":
 				_gaq.push(['_trackEvent', 'External', 'Click', customLink]);
 				break;
@@ -73,7 +76,11 @@ var _gaq = _gaq || [];
 					$(this).click(function() {
 						gaCall(gaIterator, 'donate', $(this).html() + ' ' + href);
 					});
-				}  else if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+				} else if (typeof classAttribute !== 'undefined' && classAttribute.indexOf('give-link') > -1) {
+					$(this).click(function() {
+						gaCall(gaIterator, 'give', $(this).html() + ' ' + href);
+					});
+				} else if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
 					$(this).click(function(e) {
 						var extLink = href.replace(/^https?\:\/\//i, '');
 
