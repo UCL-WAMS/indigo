@@ -20,6 +20,11 @@
 	img {
 		width: auto;
 	}
+	.give-link {
+	background-color: #f6be00; 
+	padding: 1.7em 1em;
+}
+
 }
 
 .masthead__search {
@@ -44,7 +49,7 @@
 
 .masthead__list {
 	float: left;
-	width: 55%;
+	width: 56%;
 	font-size: 16px;
 	display: block;
 	margin-left: 0;
@@ -86,4 +91,32 @@
 	@include on-interaction {
 		color: $white;
 	}
+}
+
+.masthead__link.give-link {
+	color: #000;
+}
+
+
+
+
+
+
+@media screen and (min-width:766px) and  (max-width: 1090px){
+
+.masthead   {
+	margin-left: -30px;
+	}
+.masthead_search {
+	width:40%;
+}
+
+.masthead a  {
+	font-size: 90%;
+}
+
+.masthead  .give-link {
+	padding: 15px 5px;
+}
+
 }
