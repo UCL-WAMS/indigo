@@ -3229,6 +3229,10 @@ Notes:
 
   .masthead .give-link {
     padding: 15px 5px; } }
+@media screen and (max-width: 767px) {
+  .masthead .give-link {
+    width: 20%;
+    padding: .5em 1em .5em 1em; } }
 /* 
 * Pattern name: Nav
 * Use: Styling lists used for navigation areas
