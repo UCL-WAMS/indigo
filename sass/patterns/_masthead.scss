@@ -120,3 +120,11 @@
 }
 
 }
+
+@media screen and (max-width: 767px)
+{
+.masthead .give-link {
+    width: 20%;
+    padding: .5em 1em .5em 1em;
+}
+}
