@@ -42,7 +42,7 @@ function lightboxInit() {
 
 function buildLightBox(src, text) {
 	var height = $(document).height();
-	$('<div class="lightbox">').appendTo('body').height(height).html('<div class="lightbox__item"><img src="'+src+'" alt="'+text+'" />');
+	$('<div class="lightbox">').appendTo('body').height(height).html('<div class="lightbox__item" title="'+text+'"><img src="'+src+'" alt="'+text+'" />');
 	$('body').on('click','.lightbox',function(e) {
 		$('.lightbox').remove();
   	});
