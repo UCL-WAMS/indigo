@@ -33,7 +33,7 @@ define([
 
 					var result__research = "<p><a href=\"{{url}}\">{{value}}</a></p>";
 
-					var result__degree = "{{#if name}}<p class=\"result__title\"><a href=\"{{url}}\">{{name}}<span>{{qual}}</span></p>{{/if}}";
+					var result__degree = "{{#if name}}<p class=\"result__title\"><a href=\"{{url}}\">{{name}}&nbsp;<span>{{qual}}</span></p>{{/if}}";
 
 					var result__directory = "<div class=\"AC-details\"><ul class=\"profile-details\">{{#if name}}<li class=\"fn\">{{name}}</li>{{/if}}{{#if external}}<li class=\"tel tel--external\"><span>external: </span>{{external}}</li>{{/if}}{{#if email}}<li class=\"email\"><a href=\"mailto:{{email}}\">{{email}}</a></li>{{/if}}</ul></div>{{#if image}}<img src=\"{{image}}\" alt=\"image of {{name}}\">{{/if}}";
 
