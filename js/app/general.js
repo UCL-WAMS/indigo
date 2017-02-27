@@ -103,7 +103,9 @@ define(["jquery","allsite"],function($){
 			resetCols();
 
 			if($(window).width() >= 768){
-				var verticalNavColHeight = $('.sidebar').height();
+				var pageNodeHeightBonus = 0;
+				if ($('body').hasClass('page-node')) pageNodeHeightBonus = 50;//new sites need a little more content height
+				var verticalNavColHeight = $('.sidebar').height() + pageNodeHeightBonus;
 				$('.site-content__inner').css('min-height',verticalNavColHeight);
 
 				//set sub nav to height of main content
