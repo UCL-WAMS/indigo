@@ -2290,7 +2290,8 @@ figure + figure, figure + p {
   border-radius: 0;
   box-sizing: border-box; }
   .btn.cta:hover {
-    background-color: #002854; }
+    background-color: #002854;
+    color: white; }
 
 .btn.cta {
   width: 100%; }
@@ -3145,6 +3146,9 @@ Notes:
         background-color: #444; } }
   .masthead img {
     width: auto; }
+  .masthead .give-link {
+    background-color: #f6be00;
+    padding: 1.7em 1em; }
 
 .masthead__search {
   position: relative;
@@ -3166,7 +3170,7 @@ Notes:
 
 .masthead__list {
   float: left;
-  width: 55%;
+  width: 56%;
   font-size: 16px;
   display: block;
   margin-left: 0; }
@@ -3210,6 +3214,25 @@ Notes:
   .masthead__link:hover, .masthead__link:active, .masthead__link:focus {
     color: #ffffff; }
 
+.masthead__link.give-link {
+  color: #000; }
+
+@media screen and (min-width: 766px) and (max-width: 1090px) {
+  .masthead {
+    margin-left: -30px; }
+
+  .masthead_search {
+    width: 40%; }
+
+  .masthead a {
+    font-size: 90%; }
+
+  .masthead .give-link {
+    padding: 15px 5px; } }
+@media screen and (max-width: 767px) {
+  .masthead .give-link {
+    width: 20%;
+    padding: .5em 1em .5em 1em; } }
 /* 
 * Pattern name: Nav
 * Use: Styling lists used for navigation areas
@@ -3500,7 +3523,6 @@ Notes:
 
 .owl-carousel .owl-grab {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab; }

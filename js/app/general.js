@@ -103,8 +103,9 @@ define(["jquery","allsite"],function($){
 			resetCols();
 
 			if($(window).width() >= 768){
-				var mainColHeight = $('.site-content__inner').height();
-				var verticalNavColHeight = $('.sidebar').height();
+				var pageNodeHeightBonus = 0;
+				if ($('body').hasClass('page-node')) pageNodeHeightBonus = 50;//new sites need a little more content height
+				var verticalNavColHeight = $('.sidebar').height() + pageNodeHeightBonus;
 				$('.site-content__inner').css('min-height',verticalNavColHeight);
 
 				//set sub nav to height of main content
@@ -116,7 +117,6 @@ define(["jquery","allsite"],function($){
 					'height':'auto',
 					'min-height':'0'}
 				);
-				//mobile sub nav
 				$('.nav.nav--mobile.nav--subnav').height(
 					parseInt($('nav.nav--mobile ul.subnav__list').height()) + 'px'
 				);
@@ -143,7 +143,18 @@ define(["jquery","allsite"],function($){
 			$(window).resize(function(){
 				equalizeVerticalCol();
 			});
+		} else {
+			//layout-vertical class sometimes missing in Drupal, so we'll test another way
+			if ($('body').hasClass('page-node') && $('.nav--left').is(":visible")) {
+				equalizeVerticalCol();
+				$(window).resize(function(){
+					equalizeVerticalCol();
+				});
+			}
 		}
+
+
+
 		/* Detect IE compatability mode and show user alert
 		 -----------------------------------------------------------------*/
 		var agentStr = navigator.userAgent;
