@@ -1,39 +1,5 @@
 @charset "UTF-8";
-/* Variables
--------------------------------------------------------------- */
-/* Variable imports
--------------------------------------------------------------- */
-/* UCL Colours
--------------------------------------------------------------- */
-/* Indigo colour palette
--------------------------------------------------------------- */
-/* Colour Variant - for gradients
--------------------------------------------------------------- */
-/* Generic grayscale
--------------------------------------------------------------- */
-/* Colour by element
--------------------------------------------------------------- */
-/* Project specific
--------------------------------------------------------------- */
 /*hover colour*/
-/* Image sizing
--------------------------------------------------------------- */
-/* Z index values
--------------------------------------------------------------- */
-/* Module spacing
--------------------------------------------------------------- */
-/* layout
--------------------------------------------------------------- */
-/* lists
--------------------------------------------------------------- */
-/* Font stacks
--------------------------------------------------------------- */
-/* Breakpoints
--------------------------------------------------------------- */
-/* Development/Production environments
--------------------------------------------------------------- */
-/* Mixins
--------------------------------------------------------------- */
 /*
 
     A simpler media query mixin
@@ -160,8 +126,6 @@
 * Mixin name: Inline block
 * Use: Bullet proof inline block browser support
 * Note: N/A
--------------------------------------------------------------- */
-/* Helper classes
 -------------------------------------------------------------- */
 /* 
 * Utility name: Helpers
@@ -324,8 +288,6 @@ time, .text-capitalize {
   text-decoration: line-through;
   cursor: not-allowed; }
 
-/* Base dependencies
--------------------------------------------------------------- */
 /* 
 * Base name: Reset
 * Note: N/A
@@ -378,12 +340,12 @@ a {
 
 ins {
   background-color: #ff9;
-  color: #000000;
+  color: #000;
   text-decoration: none; }
 
 mark {
   background-color: #ff9;
-  color: #000000;
+  color: #000;
   font-style: italic;
   font-weight: bold; }
 
@@ -736,14 +698,14 @@ p.lead {
   color: #b94a48; }
 
 .mod {
-  color: #ccc;
+  color: #b3b3b3;
   clear: both;
   font-size: 12px;
   font-size: 1.2rem; }
 
 ins {
   background-color: #F0F0F0;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   padding: 0 0.125em; }
 
@@ -1065,7 +1027,7 @@ form em {
       background-color: transparent !important; }
 
 input.error {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #DD6868; }
 
 .error {
@@ -1077,11 +1039,11 @@ input.error {
 -------------------------------------------------------------- */
 .btn {
   background-color: #615957;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   padding: .75em 1.5em;
   text-align: left;
   position: relative;
@@ -1118,14 +1080,14 @@ input.error {
     background: #eee;
     background: linear-gradient(#ededed 0%, #eee 100%); }
   .btn--gradient.disabled:active {
-    background: #cccccc;
-    background: linear-gradient(#e8e8e4 0%, #cccccc 100%); }
+    background: #ccc;
+    background: linear-gradient(#e8e8e4 0%, #ccc 100%); }
 
 button {
   background: #40403e;
   cursor: pointer;
   padding: 0.7rem;
-  color: #ffffff;
+  color: #fff;
   border: 0;
   border-radius: 0.4em; }
   button:hover, button :focus {
@@ -1194,8 +1156,8 @@ button {
   background: linear-gradient(#dbc0cf 0%, #c6b0bc 100%); }
 
 .btn--gradient.warmgrey {
-  background: #8c8279;
-  background: linear-gradient(#9c9188 0%, #8c8279 100%); }
+  background: #666666;
+  background: linear-gradient(#9c9188 0%, #666666 100%); }
 
 .btn--gradient.darkblue {
   background: #003d4c;
@@ -1266,7 +1228,7 @@ button {
   background: #c6b0bc; }
 
 .btn--gradient.warmgrey:active {
-  background: #8c8279; }
+  background: #666666; }
 
 .btn--gradient.darkblue:active {
   background: #003d4c; }
@@ -1789,8 +1751,6 @@ figure + figure, figure + p {
   .col--lg-last {
     margin-right: 0; } }
 
-/* Patterns
--------------------------------------------------------------- */
 /*
 * Pattern name: Accordion
 * Use: Hide/reveal mechanism for concatenating similar/related content
@@ -1806,7 +1766,7 @@ figure + figure, figure + p {
     font-weight: bold; }
 
 .accordion__title a {
-  color: #000000;
+  color: #000;
   display: block; }
 
 .accordion__description {
@@ -1981,13 +1941,13 @@ figure + figure, figure + p {
 -------------------------------------------------------------- */
 .blocked-link {
   padding: 5px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   background-color: #B5BD00;
   font-size: 14px;
   font-size: 1.4rem; }
   .blocked-link:hover, .blocked-link:active, .blocked-link:focus {
-    color: #ffffff;
+    color: #fff;
     background: #8f993e;
     text-decoration: none; }
 
@@ -2078,7 +2038,7 @@ figure + figure, figure + p {
   position: absolute;
   left: 35px;
   top: 25%;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: 400;
@@ -2154,7 +2114,7 @@ figure + figure, figure + p {
   .breadcrumb__item:after {
     content: "/";
     color: #aaaaaa;
-    margin: 0 0.75em;
+    margin: 0 .75em;
     position: relative;
     top: 1px; }
   .breadcrumb__item:last-child:after {
@@ -2165,6 +2125,75 @@ figure + figure, figure + p {
   text-decoration: none;
   cursor: default;
   color: #333333; }
+
+.caption-img {
+  position: relative; }
+  .caption-img.float-left, .caption-img.float-right {
+    margin: 0 1em 1em; }
+  .caption-img.float-left {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.42929%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 3.0303%; }
+  .caption-img.float-right {
+    display: block;
+    float: left;
+    margin-left: 51.4596%;
+    margin-right: -100%;
+    width: 48.42929%;
+    clear: none;
+    float: right;
+    margin-right: 0;
+    margin-left: 3.0303%; }
+  .caption-img__img {
+    margin-bottom: 0;
+    vertical-align: top; }
+  .caption-img__body {
+    background-color: #e6e6e6;
+    padding: 1em 0.5em 0.5em;
+    vertical-align: top; }
+  .caption-img .tag__heading--captioned-overlay {
+    display: none; }
+  .caption-img figure {
+    margin-bottom: 0; }
+  .caption-img figcaption p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #1a1a1a; }
+  .caption-img__title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 700; }
+  @media only screen and (min-width: 990px) {
+    .caption-img .tag.tag--hidden {
+      display: none; }
+    .caption-img .tag__heading--captioned-overlay {
+      display: block;
+      font-size: 16px;
+      font-size: 1.6rem;
+      padding-bottom: 10px;
+      padding-bottom: 1rem; }
+    .caption-img .tag__heading--captioned-overlay-border {
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      display: none; }
+    .caption-img--overlayed .caption-img__body {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80%;
+      box-sizing: border-box;
+      opacity: 0.9;
+      max-height: 70%;
+      overflow: auto; }
+      .caption-img--overlayed .caption-img__body p {
+        font-size: 14px;
+        font-size: 1.4rem; } }
 
 /* 
 * Base name: Code
@@ -2364,7 +2393,7 @@ figure + figure, figure + p {
   .footer__inner a {
     color: #eee; }
     .footer__inner a:hover, .footer__inner a:active, .footer__inner a:focus {
-      color: #ffffff; }
+      color: #fff; }
 
 .footer__list {
   margin-left: 0;
@@ -2447,7 +2476,7 @@ figure + figure, figure + p {
     .mobile-open .header--desktop {
       left: 0; }
     .header--desktop a {
-      color: #ffffff;
+      color: #fff;
       padding: 0.5em 0;
       display: block;
       clear: both;
@@ -2473,7 +2502,7 @@ figure + figure, figure + p {
     background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo-cropped-white.png");
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-color: #000000;
+    background-color: #000;
     background-size: 30%; }
   .header--mobile--brand__link {
     position: absolute;
@@ -3134,7 +3163,7 @@ Notes:
 -------------------------------------------------------------- */
 .masthead {
   background-color: #444;
-  color: #ffffff;
+  color: #fff;
   height: 45px;
   font-size: 12px;
   font-size: 1.2rem; }
@@ -3209,10 +3238,10 @@ Notes:
 
 .masthead__link {
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none; }
   .masthead__link:hover, .masthead__link:active, .masthead__link:focus {
-    color: #ffffff; }
+    color: #fff; }
 
 .masthead__link.give-link {
   color: #000; }
@@ -3251,7 +3280,7 @@ Notes:
 .nav--top {
   display: none;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   padding-bottom: 1em;
   padding-top: 1em;
   overflow: hidden;
@@ -3286,7 +3315,7 @@ Notes:
       margin: auto;
       overflow: hidden; }
     .nav--top.nav--sticky-active a {
-      color: #ffffff; }
+      color: #fff; }
 
 .nav--mobile {
   display: none; }
@@ -3374,11 +3403,11 @@ Notes:
   .nav--mobile.nav--subnav ul li a {
     color: white; }
   .nav--mobile .subnav__item.back a {
-    color: #ccc; }
+    color: #b3b3b3; }
   .nav--mobile .subnav__item.top-level a {
-    color: #ccc; }
+    color: #b3b3b3; }
   .nav--mobile .subnav__item a:hover {
-    color: #ccc; }
+    color: #b3b3b3; }
 
 /*** CAROUSEL ***/
 .owl-theme .owl-controls {
@@ -3636,7 +3665,7 @@ blockquote, aside {
     margin-right: 0;
     quotes: "“" "”"; }
     blockquote.pull-quote__wrap:before, aside.pull-quote__wrap:before {
-      color: #bbb;
+      color: gray;
       content: open-quote;
       display: inline;
       font-size: 4em;
@@ -3785,7 +3814,7 @@ blockquote, aside {
   right: 35px;
   padding: 10px;
   font-style: italic;
-  color: #ffffff;
+  color: #fff;
   display: none;
   font-size: 12px;
   font-size: 1.2rem; }
@@ -3912,7 +3941,7 @@ blockquote, aside {
         margin-left: 1%; } }
 
 .site-content__inner {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 2em 35px;
   left: -35px;
   position: relative;
@@ -4059,7 +4088,7 @@ blockquote, aside {
 .search-form {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAANlBMVEUAAAD///+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkiXNL4AAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAABtSURBVAjXTc9JFsQgCARQHEhi2xDq/pcNQxZh5Qd9lNQaEXXmSVXuvuF1z9ddsZmXgcsLZxym3WXTennlhdawyoyrvMvHO//bSAtGmqE+8KU2a/9pUIkI0Yh8Y4nsQ7ORebM8F+TjaPy+9m/RA8R7BAiqV590AAAAAElFTkSuQmCC) no-repeat scroll 95% center;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 7px;
   margin-bottom: 7px;
   position: absolute;
@@ -4115,7 +4144,7 @@ blockquote, aside {
 .search-page__container section {
   margin-left: 0; }
 .search-page__container .results-context {
-  color: #7c7c7c;
+  color: #afa8a1;
   font-size: 30px;
   font-size: 3rem;
   margin-bottom: 10px;
@@ -4171,7 +4200,7 @@ blockquote, aside {
     background-color: #d6d2c4;
     border: 0;
     bottom: 0;
-    color: #000000;
+    color: #000;
     cursor: pointer;
     padding: .5em 1em;
     position: absolute;
@@ -4254,13 +4283,13 @@ blockquote, aside {
       background: #ff8c8f;
       border: 1px solid #ff8c8f; }
       .search-page__pagination li:hover a {
-        color: #ffffff; }
+        color: #fff; }
     .search-page__pagination li:first-child {
       margin-left: 0; }
     .search-page__pagination li.search-page__pagination--list-el--current {
       background: #ff5a5f; }
       .search-page__pagination li.search-page__pagination--list-el--current a {
-        color: #ffffff; }
+        color: #fff; }
 
 /* 
 * Pattern name: Tabs
@@ -4395,7 +4424,7 @@ blockquote, aside {
   left: 0;
   top: 0;
   padding: 5px 15px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   background-color: #B5BD00;
   z-index: 1;

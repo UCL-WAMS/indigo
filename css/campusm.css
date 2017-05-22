@@ -1,43 +1,4 @@
-/*
-    This is for UCL's UCLGO! CampusM App
-    portions of the screen.scss have been removed
-    to keep this file as small as possible
-*/
-/* Variables
--------------------------------------------------------------- */
-/* Variable imports
--------------------------------------------------------------- */
-/* UCL Colours
--------------------------------------------------------------- */
-/* Indigo colour palette
--------------------------------------------------------------- */
-/* Colour Variant - for gradients
--------------------------------------------------------------- */
-/* Generic grayscale
--------------------------------------------------------------- */
-/* Colour by element
--------------------------------------------------------------- */
-/* Project specific
--------------------------------------------------------------- */
 /*hover colour*/
-/* Image sizing
--------------------------------------------------------------- */
-/* Z index values
--------------------------------------------------------------- */
-/* Module spacing
--------------------------------------------------------------- */
-/* layout
--------------------------------------------------------------- */
-/* lists
--------------------------------------------------------------- */
-/* Font stacks
--------------------------------------------------------------- */
-/* Breakpoints
--------------------------------------------------------------- */
-/* Development/Production environments
--------------------------------------------------------------- */
-/* Mixins
--------------------------------------------------------------- */
 /*
 
     A simpler media query mixin
@@ -164,8 +125,6 @@
 * Mixin name: Inline block
 * Use: Bullet proof inline block browser support
 * Note: N/A
--------------------------------------------------------------- */
-/* Helper classes
 -------------------------------------------------------------- */
 /* 
 * Utility name: Helpers
@@ -300,8 +259,6 @@ time, .text-capitalize {
 .no-respond {
   width: auto; }
 
-/* Base dependencies
--------------------------------------------------------------- */
 /* 
 * Base name: Reset
 * Note: N/A
@@ -354,12 +311,12 @@ a {
 
 ins {
   background-color: #ff9;
-  color: #000000;
+  color: #000;
   text-decoration: none; }
 
 mark {
   background-color: #ff9;
-  color: #000000;
+  color: #000;
   font-style: italic;
   font-weight: bold; }
 
@@ -529,14 +486,14 @@ p.lead {
   color: #b94a48; }
 
 .mod {
-  color: #ccc;
+  color: #b3b3b3;
   clear: both;
   font-size: 12px;
   font-size: 1.2rem; }
 
 ins {
   background-color: #F0F0F0;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   padding: 0 0.125em; }
 
