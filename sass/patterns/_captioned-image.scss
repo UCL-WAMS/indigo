@@ -1,0 +1,70 @@
+.caption-img {
+	position: relative;
+	&.float-left,&.float-right{
+		margin: 0 1em 1em;
+	}
+	&.float-left {
+		@include gs-span(dc, 1, 2);
+		@include gs-float(dc, left);
+	}
+	&.float-right {
+		@include gs-span(dc, 3, 4);
+		@include gs-float(dc, right);
+	}
+	&__img{
+		margin-bottom: 0;
+		vertical-align: top;
+	}
+	&__body{
+		background-color: $captioned-image-bg;
+		padding: 1em 0.5em 0.5em;
+		vertical-align: top;
+	}
+	.tag__heading--captioned-overlay{
+		display: none;
+	}
+	figure {
+		margin-bottom: 0;
+	}
+	figcaption {
+		p {
+			@include rem(font-size,1.6);
+			color: $offblack;
+		}
+	}
+	&__title{
+		@include rem(font-size,1.8);
+		font-weight: 700;
+	}
+	@include gs-media(dc,min){
+		.tag{
+			&.tag--hidden{
+                display: none;
+		    }
+        }
+		.tag__heading--captioned-overlay{
+			display: block;
+			@include rem(font-size,1.6);
+			@include rem(padding-bottom,1);
+		}
+		.tag__heading--captioned-overlay-border{
+			@include rem(margin-bottom,1);
+			display: none;//turn on in site specific style sheet
+		}
+		&--overlayed {
+			.caption-img__body{
+				position: absolute;
+				top: $blurb-caption-top;
+				left: $blurb-caption-left;
+				width: 100% - ($blurb-caption-left *2);
+				box-sizing: border-box;
+				opacity: $default-overlay-opacity;
+				max-height: 100% - ($blurb-caption-top + $blurb-caption-bottom);
+				overflow: auto;
+				p{
+					@include rem(font-size,1.4);
+				}
+			}
+		}
+	}
+}

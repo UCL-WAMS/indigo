@@ -1,22 +1,21 @@
-/*
-    This is for UCL's UCLGO! CampusM App
-    portions of the screen.scss have been removed
-    to keep this file as small as possible
-*/
-/* Variables
--------------------------------------------------------------- */
+//
+//    This is for UCL's UCLGO! CampusM App
+//   portions of the screen.scss have been removed
+//    to keep this file as small as possible
+// Variables
+//--------------------------------------------------------------
 @import "variables/variables";
 
-/* Mixins
--------------------------------------------------------------- */
+// Mixins
+//--------------------------------------------------------------
 @import "mixins/mixins";
 
-/* Helper classes
--------------------------------------------------------------- */
+// Helper classes
+//--------------------------------------------------------------
 @import "utilities/helpers";
 
-/* Base dependencies
--------------------------------------------------------------- */
+// Base dependencies
+//--------------------------------------------------------------
 @import "base/reset";
 @import "base/typography";
 @import "base/tables";
