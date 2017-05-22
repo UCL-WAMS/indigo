@@ -182,9 +182,9 @@ time {
 
 ol, ul {
 	margin-top: 0;
-	margin-left: $listMarginLeft;
+	margin-left: $list-margin-left;
 	ul {
-		margin-top: $listVerticalMargin;
+		margin-top: $list-vertical-margin;
 		margin-left: 1em;
 	}
 }
@@ -222,7 +222,7 @@ ol, ul {
 
 .list-divided {
 	li {
-		margin-bottom: $listVerticalMargin;
+		margin-bottom: $list-vertical-margin;
 		padding-bottom: 1em;
 		@include rem(margin-bottom, 1.4);
 		@include rem(padding-bottom, 1.4);
@@ -244,12 +244,12 @@ ol, ul {
 
 ol li {
 	list-style-type: decimal;
-	margin-bottom: $listVerticalMargin;
+	margin-bottom: $list-vertical-margin;
 	ol {
-		margin-top: $listVerticalMargin;
+		margin-top: $list-vertical-margin;
 	}
 	li {
-		margin-left: $listMarginLeft;
+		margin-left: $list-margin-left;
 	}
 
 }
@@ -257,13 +257,13 @@ ol li {
 /* Definition lists
 -------------------------------------------------------------- */
 dl{
-	margin-top: $listVerticalMargin;
+	margin-top: $list-vertical-margin;
 }
 dt {
 	font-weight: bold;
 }
 dd {
-	padding-left: $listMarginLeft;
+	padding-left: $list-margin-left;
 }
 
 .dl-inline {
