@@ -21,7 +21,6 @@ module.exports = function(grunt) {
 				src: [
 					'<%= pkg.jsSrcDir %>/src/all-site/gridset-overlay.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/lazyload.js',
-					'<%= pkg.jsSrcDir %>/src/all-site/new-relic.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/twitter.js'
 					],
