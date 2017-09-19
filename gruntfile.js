@@ -8,16 +8,22 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			basic: {
-				src: '<%= pkg.jsSrcDir %>/src/all-site/*.js',
+				src: [ 
+				    '<%= pkg.jsSrcDir %>/src/all-site/googleAnalytics.js',
+				    '<%= pkg.jsSrcDir %>/src/all-site/gridset-overlay.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/lazyload.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/twitter.js',
+					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js'
+					],
 				dest: '<%= pkg.jsDestDir %>/src/all-site.js'
 			},
 			extras: {
 				src: [
 					'<%= pkg.jsSrcDir %>/src/all-site/gridset-overlay.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/lazyload.js',
-					'<%= pkg.jsSrcDir %>/src/all-site/new-relic.js',
 					'<%= pkg.jsSrcDir %>/src/all-site/ucl.js',
-					'<%= pkg.jsSrcDir %>/src/all-site/twitter.js'],
+					'<%= pkg.jsSrcDir %>/src/all-site/twitter.js'
+					],
 				dest: '<%= pkg.jsDestDir %>/src/all-site-no-ga.js'
 			},
 		},
