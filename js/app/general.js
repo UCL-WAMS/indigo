@@ -203,4 +203,28 @@ define(["jquery","allsite"],function($){
 			}
 		});
 	});
+
+
+
+
+		/* OFFCANVAS MENU FOR DRUPAL FEEDS FACETS MENU
+		 -----------------------------------------------------------------*/
+  		(function() {
+			var facets = {
+			
+			navOpen: document.getElementById('facet-refine'),
+			nav: document.getElementById('ucl-feeds-funnelback-facets-form'),
+			navClose: document.getElementById ('facet-close'),
+
+      		doToggle: function(e) {
+        		e.preventDefault();
+        		this.navOpen.classList.toggle('expanded');
+        		this.nav.classList.toggle('expanded');
+   				}
+    		};
+
+   			facets.navOpen.addEventListener('click', function(e) {facets.doToggle(e);});
+   			facets.navClose.addEventListener('click', function(e) {facets.doToggle(e);});
+  		}());
+
 });
