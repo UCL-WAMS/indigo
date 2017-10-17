@@ -209,18 +209,19 @@ define(["jquery","allsite"],function($){
   		(function() {
 			var facets = {
 			
-			navToggle: document.querySelector('.feed__heading'),
+			navOpen: document.getElementById('facet-refine'),
 			nav: document.getElementById('ucl-feeds-funnelback-facets-form'),
+			navClose: document.getElementById ('facet-close'),
 
       		doToggle: function(e) {
         		e.preventDefault();
-        		this.navToggle.classList.toggle('expanded');
+        		this.navOpen.classList.toggle('expanded');
         		this.nav.classList.toggle('expanded');
    				}
     		};
 
-   			facets.navToggle.addEventListener('click', function(e) {facets.doToggle(e);});
-   			facets.nav.addEventListener('click', function(e) {facets.doToggle(e);});
+   			facets.navOpen.addEventListener('click', function(e) {facets.doToggle(e);});
+   			facets.navClose.addEventListener('click', function(e) {facets.doToggle(e);});
   		}());
 
 });
