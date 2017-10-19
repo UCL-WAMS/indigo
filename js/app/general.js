@@ -206,6 +206,9 @@ define(["jquery","allsite"],function($){
 
 		/* OFFCANVAS MENU FOR DRUPAL FEEDS FACETS MENU
 		 -----------------------------------------------------------------*/
+		 if(document.getElementById('facet-refine'))
+		 {
+		 		 
   		(function() {
 			var facets = {
 			
@@ -223,7 +226,5 @@ define(["jquery","allsite"],function($){
    			facets.navOpen.addEventListener('click', function(e) {facets.doToggle(e);});
    			facets.navClose.addEventListener('click', function(e) {facets.doToggle(e);});
   		}());
-
-
+  	}
 });
-
