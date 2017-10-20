@@ -1,0 +1,113 @@
+h3 {
+  margin: 0 0 0 0; }
+
+#blog-items h3 {
+  margin-top: 24px; }
+
+header #branding p {
+  font-weight: bold;
+  padding-top: 0; }
+
+/*** MIDDLE SPLIT ***/
+.middle-split {
+  /*background-color:pink;*/
+  margin-top: 30px; }
+
+.middle-split > section {
+  /* background-color:#f4f4f4;*/
+  border-top: 5px solid #83b3c5;
+  padding-top: 12px;
+  width: 48%; }
+
+.middle-split h1 {
+  font-size: 26px;
+  line-height: 1.125; }
+
+.middle-split > section:first-child {
+  margin-left: 0; }
+
+.middle-split > section ul {
+  margin-left: 0.8em; }
+
+.middle-split section:nth-child(even) {
+  margin-left: 3%;
+  margin-right: 0; }
+
+@media only screen and (max-width: 767px) {
+  .middle-split > section {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 15px; }
+
+  .middle-split section:nth-child(even) {
+    margin-left: 0; } }
+/*** END MIDDLE SPLIT ***/
+/*** SOCIAL ICONS ***/
+#right-column .no-respond {
+  margin-right: 10px;
+  margin-top: 20px; }
+
+/*** END SOCIAL ICONS ***/
+/*** NEWS INV ***/
+.newsLarge article {
+  border-bottom: 1px solid #ccc; }
+
+.news-title .news-rss-feed {
+  float: right; }
+
+.newsSmall [class*=blurb-wide] div {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  width: inherit;
+  top: 0px; }
+
+/*** END NEWS INV ***/
+/* JOEL STYLES */
+.blurb-wide span.thumb-image {
+  display: block;
+  width: 33%; }
+
+.inv_thumbnail {
+  margin-top: 1.4em;
+  margin-left: 0 !important; }
+
+.inv_thumbnail a img {
+  width: auto !important; }
+
+.box {
+  margin-bottom: 2em; }
+
+.silva-edit-cross {
+  display: block;
+  width: 10px; }
+
+/*tweaks for news archive*/
+ul.news-archive-list li {
+  display: inline-block;
+  list-style-type: none;
+  float: left;
+  width: auto;
+  margin: 0px 5px 0px 0px; }
+
+.n-e_archive_link {
+  margin-top: 2em; }
+
+ul.news-archive-list li:before {
+  background-color: transparent; }
+
+nav.news-archive {
+  margin-bottom: 10px; }
+
+.row {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1em; }
+
+.rss-feed {
+  float: right; }
+
+.newsLarge p strong {
+  font-weight: normal; }
