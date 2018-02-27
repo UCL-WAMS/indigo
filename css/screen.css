@@ -2376,13 +2376,12 @@ figure + figure, figure + p {
   border-bottom-style: solid; }
 
 /* 
-* Pattern name: Tag
-* Use: Small block of overlayed text over an image
-* Note: Modifiers adjust positioning of tag (default: left)
+* Pattern name: donate button
+* Use: Button with editable link
 -------------------------------------------------------------- */
 .btn.donate {
   background-color: #f6be00;
-  color: #333333;
+  color: #1a1a1a;
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;

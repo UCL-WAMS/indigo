@@ -1,12 +1,11 @@
 /* 
-* Pattern name: Tag
-* Use: Small block of overlayed text over an image
-* Note: Modifiers adjust positioning of tag (default: left)
+* Pattern name: donate button
+* Use: Button with editable link
 -------------------------------------------------------------- */
 
 .btn.donate {
 	background-color: $yellow; 
-	color: $ultradarkgrey;
+	color: $offblack;
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.2em;
@@ -25,7 +24,8 @@
 	width:100%;
 }
 @mixin minBttnMobileWidth{
-	@include gs-media(m){
+	@include gs-media(m)
+	{
 		min-width: 330px;
 	}
 }
