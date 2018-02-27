@@ -1,0 +1,55 @@
+/* 
+* Pattern name: Tag
+* Use: Small block of overlayed text over an image
+* Note: Modifiers adjust positioning of tag (default: left)
+-------------------------------------------------------------- */
+
+.btn.donate {
+	background-color: $yellow; 
+	color: $ultradarkgrey;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+		&:hover {
+		background-color: $donate-hover;		
+		}
+		a:hover {
+				text-decoration: underline;
+		}
+}
+
+.btn.donate {
+	width:100%;
+}
+@mixin minBttnMobileWidth{
+	@include gs-media(m){
+		min-width: 330px;
+	}
+}
+.btn.donate-half {
+	width:50%;
+	@include minBttnMobileWidth;
+}
+
+.btn.donate-threequarters {
+	width:75%;
+	@include minBttnMobileWidth;
+}
+
+.btn.donate-third {
+	width: 33%;
+	@include minBttnMobileWidth;
+}
+
+.btn.donate-quarter {
+	width:25%;
+	@include minBttnMobileWidth;
+}
+
+.btn.donate-sixth {
+	width:16%;
+	@include minBttnMobileWidth;
+}
