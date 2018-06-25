@@ -400,7 +400,7 @@
                 return false;
             }
             ,render: function() {
-                console.log(this.model.get("data").response.facets);
+              //  console.log(this.model.get("data").response.facets);
                 $(this.model.get("facetEl")).html(this.template({
                     data: this.facetCleanser(this.model.get("data").response.facets)
                 }));
