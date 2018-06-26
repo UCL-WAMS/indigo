@@ -13,7 +13,7 @@
     ,sortOrder = checkVarInGlobalSiteSpecific("sortOrder",'');
 
     define(['jquery','backbone','underscore','text!templates/' + listingTemplate + '.tmpl','text!templates/' + facetTemplate + '.tmpl','text!templates/' + sortTemplate + '.tmpl'],function($,B,_,ListingTemplate,FacetTemplate,SortTemplate){
-        console.log("local");
+        
         var SearchModel = Backbone.Model.extend({
            defaults: function() {        
                 var assetUrl = document.URL
@@ -176,22 +176,16 @@
 
                 for(i in tmpData.response.resultPacket.results) {
                     tmpResult = tmpData.response.resultPacket.results[i];
-                    console.log(tmpResult);
-
-                    //console.log(typeof tmpResult.metaData.d);
-                    if(typeof tmpResult.metaData !== 'undefined') {
-                        //console.log(typeof tmpResult.metaData);
-                        if (typeof tmpResult.metaData.d !== 'undefined') {
-                            tmpResult.metaData['datePretty'] = this.prettyDateConvertor(tmpResult.metaData.d);
-                        }
-                        tmpResult.metaData['listingDescription'] = (this.model.get('listingDescriptionMapping') !== 'summary') ? tmpResult.metaData[this.model.get('listingDescriptionMapping')] : tmpResult.summary;
-
-                        /* set image */
-                        if (typeof tmpResult.metaData[this.model.get('listingImageMapping')] !== 'undefined') {
-                            tmpResult.metaData['listingImage'] = tmpResult.metaData[this.model.get('listingImageMapping')];
-                        } else {
-                            tmpResult.metaData['listingImage'] = this.model.get('defaultImage');
-                        }
+                    if(typeof tmpResult.metaData.d !== 'undefined') {
+                        tmpResult.metaData['datePretty'] = this.prettyDateConvertor(tmpResult.metaData.d);
+                    }
+                    tmpResult.metaData['listingDescription'] = (this.model.get('listingDescriptionMapping') !== 'summary') ? tmpResult.metaData[this.model.get('listingDescriptionMapping')] : tmpResult.summary;
+                    
+                    /* set image */
+                    if(typeof tmpResult.metaData[this.model.get('listingImageMapping')] !== 'undefined'){
+                        tmpResult.metaData['listingImage'] = tmpResult.metaData[this.model.get('listingImageMapping')];
+                    }else{
+                        tmpResult.metaData['listingImage'] = this.model.get('defaultImage');
                     }
                     /* end set image */
 
@@ -309,21 +303,15 @@
                 ,space = ' '
                 ,isWordsLastItem = false
                 ,acroynmArr;
-                console.log(label);
 
                 wordsArr = label.match(/\w+/g);
-                console.log(wordsArr);
 
                 if(wordsArr === null)
                     wordsArr = [];
 
 
                 for(i in wordsArr) {
-                    console.log(i);
-                    console.log(parseInt(i));
-                    console.log(wordsArr.length);
                     if((parseInt(i) + 1) === wordsArr.length){
-
                         isWordsLastItem = true;
 						if (wordsArr[i].toUpperCase() ==='LAB') isWordsLastItem = false;
 						if (wordsArr[i].toUpperCase() ==='CENTRE') isWordsLastItem = false;
@@ -333,27 +321,24 @@
                         space = '';
                     }
 
-                    console.log(typeof wordsArr);
-                    if(typeof wordsArr !=='undefined') {
-                        if (wordsArr[i].toUpperCase() == 'UCL') wordsArr[i] = 'UCL';
+					if (wordsArr[i].toUpperCase() == 'UCL') wordsArr[i] = 'UCL';
 
-                        acroynmArr = wordsArr[i].match(/\(\w+\)/gi);//Matches things in brackets I think
+                    acroynmArr = wordsArr[i].match(/\(\w+\)/gi);//Matches things in brackets I think
 
-                        if (i == 0 && wordsArr[i].toUpperCase() == 'SENJIT') continue;
-                        //acroynmArr = null;
-                        if ((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
-                            if (wordsArr[i].toUpperCase() === 'TRAINING')
-                                str += this.firstCharToUc(wordsArr[i]) + ' (SENJIT)';
-                            else
-                                str += wordsArr[i].toUpperCase();
-                        } else if (wordsArr[i] === 'and' || wordsArr[i] === 'for') {
-                            str += wordsArr[i];
-                        } else {
-                            if (wordsArr[i].toUpperCase() === 'STEM' && i == 0)
-                                str += 'STEM';
-                            else
-                                str += this.firstCharToUc(wordsArr[i]);
-                        }
+					if (i==0 && wordsArr[i].toUpperCase() == 'SENJIT') continue;
+
+                    if((constraint === 'Centres' && isWordsLastItem) || (acroynmArr !== null && acroynmArr.length)) {
+						if (wordsArr[i].toUpperCase() ==='TRAINING')
+							str += this.firstCharToUc(wordsArr[i]) + ' (SENJIT)';
+						else
+							str += wordsArr[i].toUpperCase();
+                    } else if(wordsArr[i] === 'and' || wordsArr[i] === 'for') {
+                        str += wordsArr[i];
+                    } else {
+						if (wordsArr[i].toUpperCase() ==='STEM' && i==0)
+							str += 'STEM';
+						else
+                        	str += this.firstCharToUc(wordsArr[i]) ;
                     }
                     str += space;
                 }
@@ -369,7 +354,6 @@
 
                 for(i in x) {
                     tmpFacet = x[i].categories;
-                    //console.log(tmpFacet);
                     for(j in tmpFacet) {
                         tmpCat = tmpFacet[j];
                         for(k in tmpFacet[j].values) {
@@ -378,8 +362,7 @@
                                 checkedDomAttr = "selected";
                             //update facet data with is selected status
                             x[i].categories[j].values[k].checkedDomAttr = checkedDomAttr;
-                            //x[i].categories[j].values[k].label = this.cleanLabel(x[i].categories[j].values[k].label,x[i].categories[j].values[k].constraint);
-                            x[i].categories[j].values[k].label = x[i].categories[j].values[k].label,x[i].categories[j].values[k].constraint;
+                            x[i].categories[j].values[k].label = this.cleanLabel(x[i].categories[j].values[k].label,x[i].categories[j].values[k].constraint);
                         }
                     }
                 }
@@ -400,7 +383,6 @@
                 return false;
             }
             ,render: function() {
-                console.log(this.model.get("data").response.facets);
                 $(this.model.get("facetEl")).html(this.template({
                     data: this.facetCleanser(this.model.get("data").response.facets)
                 }));
