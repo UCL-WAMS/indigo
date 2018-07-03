@@ -45,7 +45,7 @@
         }
 
 */
-/* 
+/*
 * Mixin name: Gradient
 * Use: Shorthand gradient declarations with vendor prefixer/ie fallbacks
 * Note: N/A
@@ -86,48 +86,48 @@
       }
 
 */
-/* 
+/*
 * Mixin name: List
-* Use: 
+* Use:
 * 		1. Remove bullets and indentation from a list
 * Note: N/A
 -------------------------------------------------------------- */
 /* 1
 -------------------------------------------------------------- */
-/* 
+/*
 * Mixin name: On interaction
 * Use: Shorthand for most common interaction states
 * Note: N/A
 -------------------------------------------------------------- */
-/* 
+/*
 * Mixin name: Guttering
 * Use: Controlling the spacing at the bottom of a module
 * Note: See http://css-tricks.com/spacing-the-bottom-of-modules/
 -------------------------------------------------------------- */
-/* 
+/*
 * Name: SASS-IE
 * Use: Media query handling outside of Gridset
 * Notes: See http://jakearchibald.github.io/sass-ie/
 -------------------------------------------------------------- */
-/* 
+/*
 * Mixin name: Alignment
 * Use: Align content with horizontal padding
 * Note: N/A
 -------------------------------------------------------------- */
-/* 
+/*
 * Mixin name: Unit
-* Use: 
+* Use:
 * 		1. Set REM value with pixel value fallback
 * Note: N/A
 -------------------------------------------------------------- */
 /* 1
 -------------------------------------------------------------- */
-/* 
+/*
 * Mixin name: Inline block
 * Use: Bullet proof inline block browser support
 * Note: N/A
 -------------------------------------------------------------- */
-/* 
+/*
 * Utility name: Helpers
 * Use: Commonly used dlasses (and silent classes) that can be used within CSS or within HTML
 * Note: See http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
@@ -160,7 +160,7 @@
 .clear {
   clear: both; }
 
-/* Clearfix 
+/* Clearfix
 -------------------------------------------------------------- */
 .dl-inline, .clearfix, .hero, .media {
   zoom: 1; }
@@ -260,9 +260,9 @@ time, .text-capitalize {
 .no-respond {
   width: auto; }
 
-/* 
+/*
 * Utility name: States
-* Use: Classes to be used only in JS 
+* Use: Classes to be used only in JS
 * Note: It is a best practise to try to seperate classes used in JS and classes that style elements
 -------------------------------------------------------------- */
 .is-active {
@@ -288,7 +288,7 @@ time, .text-capitalize {
   text-decoration: line-through;
   cursor: not-allowed; }
 
-/* 
+/*
 * Base name: Reset
 * Note: N/A
 -------------------------------------------------------------- */
@@ -386,7 +386,7 @@ input {
 audio {
   width: 100%; }
 
-/* 
+/*
 * Base name: Layout
 * Note: N/A
 -------------------------------------------------------------- */
@@ -569,7 +569,7 @@ audio {
     .layout-vertical--show-top-nav .sidebar {
       margin-top: 0; } }
 
-/* 
+/*
 * Base name: Typography
 * Note: N/A
 -------------------------------------------------------------- */
@@ -820,7 +820,7 @@ pre {
 pre, code, tt {
   font: 1em "consolas", "andale mono", "lucida console", monospace; }
 
-/* 
+/*
 * Base name: Forms
 * Note: N/A
 -------------------------------------------------------------- */
@@ -923,10 +923,10 @@ form em {
 -------------------------------------------------------------- */
 /*
 * Common form controls
-* 
+*
 * Shared size and type resets for form controls. Apply `.form__control` to any
 * of the following form controls:
-* 
+*
 * select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"]
 * input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"]
 * input[type="url"], input[type="search"], input[type="tel"], input[type="color"]
@@ -945,7 +945,7 @@ form em {
     transition: border, .25s;
     border: 1px solid #666; }
 
-/* 
+/*
 * Form groups
 * Designed to help with the organization and spacing of vertical forms.
 -------------------------------------------------------------- */
@@ -1033,7 +1033,7 @@ input.error {
 .error {
   color: #c60f13; }
 
-/* 
+/*
 * Base name: Buttons
 * Note: N/A
 -------------------------------------------------------------- */
@@ -1248,7 +1248,7 @@ button {
 .btn--gradient.darkbrown:active {
   background: #4e3629; }
 
-/* 
+/*
 * Base name: Tables
 * Note: N/A
 -------------------------------------------------------------- */
@@ -1364,7 +1364,7 @@ td, td img {
       border-left: 0;
       border-right: 0;
       border-bottom: 0; } }
-/* 
+/*
 * Base name: Images
 * Note: N/A
 -------------------------------------------------------------- */
@@ -1437,7 +1437,7 @@ figure + figure, figure + p {
 
   .img-pull-left.large-image, .img-pull-left.xl-image, .img-pull-left.xxl-image, .img-pull-right.large-image, .img-pull-right.xl-image, .img-pull-right.xxl-image {
     width: 100%; } }
-/* 
+/*
 * Base name: Grid
 * Note: Applying Indigo grid to custom breakpoints. See - http://www.ucl.ac.uk/indigo/grid.php
 -------------------------------------------------------------- */
@@ -1818,7 +1818,7 @@ figure + figure, figure + p {
       .announcement-bar .announcement-bar--close:hover {
         text-decoration: none; } }
 
-/* 
+/*
 * Pattern name: Advert
 * Use: Supporting material or advertisement signpost
 * Note: N/A
@@ -1899,7 +1899,7 @@ figure + figure, figure + p {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
   z-index: 1; }
 
-/* 
+/*
 * Pattern name: Box
 * Use: Highlighted text area
 * Note: N/A
@@ -1934,7 +1934,7 @@ figure + figure, figure + p {
 .box--blank {
   border-top: none; }
 
-/* 
+/*
 * Pattern name: Blocked link
 * Use: Highlighting links with a background colour and padding
 * Note: N/A
@@ -1951,7 +1951,7 @@ figure + figure, figure + p {
     background: #8f993e;
     text-decoration: none; }
 
-/* 
+/*
 * Pattern name: Blurb
 * Use: Blocked media (image and text)
 * Note: N/A
@@ -2004,7 +2004,7 @@ figure + figure, figure + p {
       margin-left: 0;
       width: 100%; } }
 
-/* 
+/*
 * Pattern name: Brand
 * Use: The UCL banner area
 * Note: The UCL logo is made clickable via using an absolutely positioned link. (see .brand__link)
@@ -2059,7 +2059,7 @@ figure + figure, figure + p {
     .brand__logo {
       display: none; } }
 
-/* 
+/*
 * Pattern name: Breadcrumbs
 * Use: For highlighting where a user is within the site. Doubles up as a navigation
 * Note: On mobile the user will only ever see the last 3 items in the breadcrumb trail
@@ -2195,7 +2195,7 @@ figure + figure, figure + p {
         font-size: 14px;
         font-size: 1.4rem; } }
 
-/* 
+/*
 * Base name: Code
 * Use: Displaying markup and code
 * Note: N/A
@@ -2211,7 +2211,7 @@ figure + figure, figure + p {
     .code li .tab1 {
       padding-left: 4ex; }
 
-/* 
+/*
 * Pattern name: Collapse
 * Use: Collapsing and revealing mechanism for long form content
 * Note: Only applicable for smaller viewports - triggered via JavaScript
@@ -2255,7 +2255,7 @@ figure + figure, figure + p {
       background-repeat: no-repeat;
       background-position: right 50%; } }
 
-/* 
+/*
 * Pattern name: Comment list
 * Use: Styling comments within list
 * Note: A lot of nasty nesting going on here - presumably classes are set by plugin (?)
@@ -2305,7 +2305,7 @@ figure + figure, figure + p {
         border-left: 5px solid #bbb;
         margin: 0 0 10px 10px; }
 
-/* 
+/*
 * Pattern name: Tag
 * Use: Small block of overlayed text over an image
 * Note: Modifiers adjust positioning of tag (default: left)
@@ -2355,7 +2355,7 @@ figure + figure, figure + p {
     .btn.cta-sixth {
       min-width: 330px; } }
 
-/* 
+/*
 * Pattern name: Divider
 * Use: Displaying a bordered keyline either above or below an element
 * Note: Top and bottom modifiers alter margin
@@ -2375,7 +2375,7 @@ figure + figure, figure + p {
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
-/* 
+/*
 * Pattern name: Footer
 * Use: Handling links, credits and footnotes
 * Note: N/A
@@ -2422,7 +2422,7 @@ figure + figure, figure + p {
       font-size: 12px;
       font-size: 1.2rem; } }
 
-/* 
+/*
 * Pattern name: Flag
 * Use: Displaying content next to an image with the content vertically aligned to the middle of the image
 * Note: http://csswizardry.com/2013/05/the-flag-object/
@@ -2455,7 +2455,7 @@ figure + figure, figure + p {
   .flag__body > *:last-child, .flag__body > *:last-child > *:last-child, .flag__body > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0; }
 
-/* 
+/*
 * Pattern name: Header
 * Use: Wrapping masthead and branding areas
 * Note: Desktop and mobile headers are seperated due to how the UCL menu is moved off convas on mobile
@@ -2550,7 +2550,7 @@ figure + figure, figure + p {
         position: relative;
         margin: -5px -3px 0 -8px; } }
 
-/* 
+/*
 * Pattern name: Hero
 * Use: Intro copy overlaying a feature image
 * Note: N/A
@@ -2691,7 +2691,7 @@ figure + figure, figure + p {
     margin-left: 0;
     margin-right: 0; } }
 
-/* 
+/*
 * Pattern name: Input group
 * Use: Conjoin an input and a button form element
 * Note: N/A
@@ -2809,7 +2809,7 @@ Ammends: Aaron Bery
 
   .static-img {
     display: none; } }
-/* 
+/*
 * Pattern name: Media
 * Use: For a content block aligned to an image
 * Note: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
@@ -2844,7 +2844,7 @@ img.media__aside {
 .media__body--wide {
   max-width: 60em; }
 
-/* 
+/*
 * Pattern name: Menu Block
 * Use: Stacked navigation menu with basic styling
 * Note: N/A
@@ -2909,7 +2909,7 @@ img.media__aside {
   .is-active .menu-block__link {
     border-left: .4em solid #333; }
 
-/* 
+/*
 * Pattern name: Menu Block
 * Use: Success, notice and error boxes
 * Note: Modifiers alter border and text colours to indicate the current state
@@ -3156,7 +3156,7 @@ Notes:
     outline: 0;
     border: none; }
 
-/* 
+/*
 * Pattern name: Masthead
 * Use: Container of global navigation items and site search
 * Note: N/A
@@ -3262,7 +3262,7 @@ Notes:
   .masthead .give-link {
     width: 20%;
     padding: .5em 1em .5em 1em; } }
-/* 
+/*
 * Pattern name: Nav
 * Use: Styling lists used for navigation areas
 * Note: Modifiers define positioning of navigation
@@ -3647,7 +3647,7 @@ Notes:
   #main .owl-carousel__item figcaption h2 {
     font-size: 1.25em; } }
 /*** END CAROUSEL ***/
-/* 
+/*
 * Pattern name: Pull quote
 * Use: Stylised blockquote with increased spacing and speech marks
 * Note: Modifiers allow for floating left/right within the grid
@@ -3741,7 +3741,7 @@ blockquote, aside {
 		padding-left: 5px;
 	}
 }*/
-/* 
+/*
 * Pattern name: Pill
 * Use: For rounded inline label/tags
 * Note: Has scope for inline icons within a pill
@@ -3784,7 +3784,7 @@ blockquote, aside {
   zoom: 1;
   *display: inline; }
 
-/* 
+/*
 * Pattern name: Photograph banner
 * Use: Background photo/colour to be displayed behind UCL banner
 * Note: Modifier gives .photograph more space as well as making the optional photography description visible.
@@ -3829,7 +3829,7 @@ blockquote, aside {
     display: none; }
     .photograph--show .photograph__description {
       display: none; } }
-/* 
+/*
 * Pattern name: Pagination
 * Use: For highlighting where a user is within a sequence of related pages
 * Note: Modifiers indicate states (current = current page, active = clickable link, disabled = disabled link)
@@ -3883,7 +3883,7 @@ blockquote, aside {
     .pagination__item--disabled {
       display: none !important; } }
 
-/* 
+/*
 * Pattern name: Slides
 * Use: For a carousel image slideshow
 * Note: N/A
@@ -3918,9 +3918,9 @@ blockquote, aside {
   border: 0;
   margin-bottom: 0; }
 
-/* 
+/*
 * Pattern name: Site content
-* Use: Structuring and alignment for main content 
+* Use: Structuring and alignment for main content
 * Note: N/A
 -------------------------------------------------------------- */
 .site-content {
@@ -4080,7 +4080,7 @@ blockquote, aside {
   .social-buttons__link {
     background-image: url("//cdn.ucl.ac.uk/indigo/images/social-buttons/social-icons@2x.png");
     background-size: cover; } }
-/* 
+/*
 * Pattern name: Search form
 * Use: Inline search form used within the UCL masthead (used for global site search)
 * Note: N/A
@@ -4291,7 +4291,7 @@ blockquote, aside {
       .search-page__pagination li.search-page__pagination--list-el--current a {
         color: #fff; }
 
-/* 
+/*
 * Pattern name: Tabs
 * Use: Related tabular content
 * Note: N/A
@@ -4414,7 +4414,7 @@ blockquote, aside {
 .tab__content {
   padding-top: 10px; }
 
-/* 
+/*
 * Pattern name: Tag
 * Use: Small block of overlayed text over an image
 * Note: Modifiers adjust positioning of tag (default: left)
@@ -4440,7 +4440,7 @@ blockquote, aside {
   .tag__heading a, .tag__heading a:hover {
     color: white; }
 
-/* 
+/*
 * Pattern name: Vcard
 * Use: Share contact information between devices
 * Note: N/A
@@ -4469,7 +4469,7 @@ blockquote, aside {
     font-weight: bold;
     font-size: 0.9375em; }
 
-/* 
+/*
 * Pattern name: Video
 * Use: Repsonsive video that maintains aspect ratio on browser resize
 * Note: N/A
