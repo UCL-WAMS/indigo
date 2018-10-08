@@ -1762,12 +1762,11 @@ figure + figure, figure + p {
   margin-top: 0; }
   .accordion__title:last-of-type, .accordion__description:last-of-type {
     border-bottom: 1px solid #ccc; }
-  .accordion__title a, .accordion__description a {
-    font-weight: bold; }
 
 .accordion__title a {
   color: #000;
-  display: block; }
+  display: block;
+  font-weight: bold; }
 
 .accordion__description {
   border-top: 0;
