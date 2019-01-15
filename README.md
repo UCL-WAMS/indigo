@@ -39,3 +39,5 @@ We have updated the patterns and css so the class names and html follows the BEM
 
 We have added SCSS linting. To install linting please run the ruby command 
 'gem install scss-lint' - More info https://github.com/ahmednuaman/grunt-scss-lint
+
+MB was here 15/01/2019
