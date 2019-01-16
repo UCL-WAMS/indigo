@@ -618,7 +618,6 @@ body {
   overflow-x: hidden;
   line-height: 1.7;
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
           hyphens: auto;
   -ms-hyphens: none;
   word-wrap: break-word;

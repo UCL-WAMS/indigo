@@ -46,17 +46,14 @@
 		position: relative;
 		top: 1px; 
 	}
-
 	&:last-child:after {
 		content: " ";
 		margin: 0; 
 	}
-}
-
-.breadcrumb__item--current {
-	> a {
-		text-decoration: none;
-		cursor: default;
-		color: #333333;
+	a.active {
+		color: $ultradarkgrey;
 	}
 }
+
+
+		
