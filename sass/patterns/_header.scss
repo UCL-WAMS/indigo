@@ -36,24 +36,14 @@
 	display: none;
 	width: 100%;
 	padding: 20% $site-content-padding 0;
+	background-repeat: repeat-x;
 	background-size: auto 100%;
 	background-position: 106% bottom;
-	background-image: url("#{$static-url}/images/ucl-logo.svg");
-	background-repeat: repeat-x;
+	background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo.svg");
 	position: relative;
 	left: -$site-content-padding;
-	background-color: $primary-colour;
-	border-bottom: .5em solid $primary-colour;
 	@include gs-media(m, max) {
 		display: block;
-	}
-	&.no-svg {
-		background-image: url("#{$static-url}/images/ucl-logo-cropped-white.png");
-		background-repeat: no-repeat;
-		background-position: right bottom;
-		background-color: $black;
-		background-size: 30%;
-	
 	}
 	&--brand__link {
 		position: absolute;
@@ -94,6 +84,7 @@
 		padding: 0;
 		z-index: $zindex-mobile-menu-back;
 		width: 50%;
+		color:$white;
 		img {
 			vertical-align: middle;
 			@include inline-block;
