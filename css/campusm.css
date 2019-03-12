@@ -751,24 +751,24 @@ figure + figure, figure + p {
   float: left;
   margin-left: 0%;
   margin-right: -100%;
-  width: 48.42929%;
+  width: 48.429292929%;
   clear: none;
   float: left;
   margin-left: 0;
-  margin-right: 3.0303%; }
+  margin-right: 3.03030303%; }
 
 .img-pull-right {
   margin-bottom: 1em;
   margin-top: 1em;
   display: block;
   float: left;
-  margin-left: 51.4596%;
+  margin-left: 51.459595959%;
   margin-right: -100%;
-  width: 48.42929%;
+  width: 48.429292929%;
   clear: none;
   float: right;
   margin-right: 0;
-  margin-left: 3.0303%; }
+  margin-left: 3.03030303%; }
 
 .img-rounded {
   border-radius: 50em; }
