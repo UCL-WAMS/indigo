@@ -4,7 +4,7 @@
 * Note: Modifiers define positioning of navigation
 -------------------------------------------------------------- */
 
-//  LEFT NAV
+//  LEFT NAV child only
 
 
 .nav {
@@ -45,12 +45,10 @@
 		width: 100%;
 	}
 	.breadcrumb{
-		display:block;
+		display: block;
 	}
 }
 }
-
-
 
 // ----------------------------------
 
@@ -99,7 +97,6 @@
 		}
 	}
 }
-
 
 
 

@@ -1,5 +1,5 @@
 /* 
-* Pattern name: Breadcrumbs
+* Pattern name: Breadcrumbs 
 * Use: For highlighting where a user is within the site. Doubles up as a navigation
 * Note: On mobile the user will only ever see the last 3 items in the breadcrumb trail
 -------------------------------------------------------------- */
@@ -9,7 +9,7 @@
 	overflow: hidden;
 	margin-bottom: 0;
 	list-style: none;
-	border:0;
+	border: 0;
 	padding-bottom: 0;
 	background: white;
 	border-style: solid;
@@ -54,6 +54,8 @@
 		color: $ultradarkgrey;
 	}
 }
+
+
 
 
 		
