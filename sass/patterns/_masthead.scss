@@ -12,6 +12,9 @@
 	@include gs-media(m, max) {
 		height: auto;
 		border-bottom: 1px solid #ccc;
+		a {
+			color: $white;
+		}
 		.wrapper {
 			background-color: #444;
 		}
@@ -35,7 +38,7 @@
 	width: 42%;
 	@include gs-media(m, max) {
 		float: none;
-		width: 100%;
+		width: 90%; 
 		padding: 0;
 		margin-top: 3.5em;
 		height: 4em;
@@ -74,6 +77,7 @@
 	@include gs-media(m, max) {
 		display: block;
 		text-align: left;
+		margin-left: 5%;
 	}
 	@include respond-max($screen-lg) {
 		padding-right: .75em;
@@ -98,17 +102,13 @@
 }
 
 
-
-
-
-
 @media screen and (min-width:766px) and  (max-width: 1090px){
 
 .masthead   {
 	margin-left: -30px;
 	}
 .masthead_search {
-	width:40%;
+	width: 40%;
 }
 
 .masthead a  {
@@ -128,3 +128,5 @@
     padding: .5em 1em .5em 1em;
 }
 }
+
+

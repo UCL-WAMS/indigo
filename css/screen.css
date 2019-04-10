@@ -2059,7 +2059,7 @@ figure + figure, figure + p {
       display: none; } }
 
 /* 
-* Pattern name: Breadcrumbs
+* Pattern name: Breadcrumbs 
 * Use: For highlighting where a user is within the site. Doubles up as a navigation
 * Note: On mobile the user will only ever see the last 3 items in the breadcrumb trail
 -------------------------------------------------------------- */
@@ -2119,11 +2119,8 @@ figure + figure, figure + p {
   .breadcrumb__item:last-child:after {
     content: " ";
     margin: 0; }
-
-.breadcrumb__item--current > a {
-  text-decoration: none;
-  cursor: default;
-  color: #333333; }
+  .breadcrumb__item a.active {
+    color: #333333; }
 
 .caption-img {
   position: relative; }
@@ -2537,23 +2534,15 @@ figure + figure, figure + p {
   display: none;
   width: 100%;
   padding: 20% 35px 0;
+  background-repeat: repeat-x;
   background-size: auto 100%;
   background-position: 106% bottom;
   background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo.svg");
-  background-repeat: repeat-x;
   position: relative;
-  left: -35px;
-  background-color: #ff5a5f;
-  border-bottom: 0.5em solid #ff5a5f; }
+  left: -35px; }
   @media only screen and (max-width: 767px) {
     .header--mobile {
       display: block; } }
-  .header--mobile.no-svg {
-    background-image: url("//cdn.ucl.ac.uk/indigo/images/ucl-logo-cropped-white.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-color: #000;
-    background-size: 30%; }
   .header--mobile--brand__link {
     position: absolute;
     width: 50%;
@@ -2588,7 +2577,8 @@ figure + figure, figure + p {
       top: 5px;
       padding: 0;
       z-index: 100;
-      width: 50%; }
+      width: 50%;
+      color: #fff; }
       .header__close img {
         vertical-align: middle;
         display: -moz-inline-stack;
@@ -3221,6 +3211,8 @@ Notes:
     .masthead {
       height: auto;
       border-bottom: 1px solid #ccc; }
+      .masthead a {
+        color: #fff; }
       .masthead .wrapper {
         background-color: #444; } }
   .masthead img {
@@ -3238,7 +3230,7 @@ Notes:
   @media only screen and (max-width: 767px) {
     .masthead__search {
       float: none;
-      width: 100%;
+      width: 90%;
       padding: 0;
       margin-top: 3.5em;
       height: 4em;
@@ -3274,7 +3266,8 @@ Notes:
   @media only screen and (max-width: 767px) {
     .masthead__item {
       display: block;
-      text-align: left; } }
+      text-align: left;
+      margin-left: 5%; } }
   @media (max-width: 989px) {
     .masthead__item {
       padding-right: .75em; } }
@@ -3321,11 +3314,28 @@ Notes:
   margin-left: 0; }
 
 .nav--left li {
-  margin-bottom: 0.5em; }
+  padding: 0.5em; }
   .nav--left li ul {
     margin: 10px 5%;
     font-size: 14px;
     font-size: 1.4rem; }
+
+.nav--mobile {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .nav--mobile {
+      display: block; } }
+
+.nav--left ul, .nav--mobile ul {
+  margin-bottom: 0; }
+.nav--left a, .nav--mobile a {
+  padding-left: 5.5%; }
+
+@media only screen and (max-width: 767px) {
+  .mobile-open .wrapper {
+    width: 100%; }
+  .mobile-open .breadcrumb {
+    display: block; } }
 
 .nav--top {
   display: none;
@@ -3366,98 +3376,6 @@ Notes:
       overflow: hidden; }
     .nav--top.nav--sticky-active a {
       color: #fff; }
-
-.nav--mobile {
-  display: none; }
-  @media only screen and (max-width: 767px) {
-    .nav--mobile {
-      display: block; }
-      .nav--mobile ul:nth-child(n+2) {
-        padding-left: 1em; } }
-
-/*
-- Multi-layer sliding navigation
-- Stu Robson
-- http://codepen.io/sturobson/pen/d01f0fc84172afc650d1dedcaa2ab118?editors=010
--------------------------------------------------------------------------------*/
-.nav--subnav {
-  box-sizing: border-box;
-  background-color: transparent;
-  color: white;
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-  .nav--subnav a {
-    text-decoration: none;
-    vertical-align: middle; }
-
-.subnav__list {
-  margin-top: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background: transparent;
-  z-index: 1;
-  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .subnav__list ul {
-    right: 200%;
-    left: 100%;
-    box-sizing: border-box; }
-    .subnav__list ul li {
-      box-sizing: border-box; }
-  .subnav__list .nav--active {
-    left: 0;
-    right: 0; }
-    .subnav__list .nav--active > li > a {
-      visibility: visible; }
-  .subnav__list.nav--hidden > li > a {
-    visibility: hidden; }
-
-.subnav__item.parent > a:after {
-  content: " >";
-  position: absolute;
-  right: 0; }
-.subnav__item.back a {
-  border-bottom: 1px transparent solid; }
-  .subnav__item.back a:before {
-    content: "< ";
-    position: relative;
-    top: -2px; }
-.subnav__item.top-level a {
-  border-bottom: 1px transparent solid; }
-  .subnav__item.top-level a:before {
-    content: "< ";
-    position: relative;
-    top: -2px; }
-.subnav__item a {
-  display: block;
-  position: relative; }
-
-.nav--left.nav--subnav {
-  position: relative; }
-  .nav--left.nav--subnav ul li {
-    margin: 0 0 0.5em 0;
-    line-height: 1.7;
-    font-size: 16px;
-    font-size: 1.6rem; }
-  .nav--left.nav--subnav li ul {
-    margin: 0; }
-
-.nav--mobile {
-  margin-top: 1em; }
-  .nav--mobile .subnav__list {
-    padding: 0; }
-    @media only screen and (max-width: 767px) {
-      .nav--mobile .subnav__list ul:nth-child(n+2) {
-        padding-left: 0; } }
-  .nav--mobile.nav--subnav ul li a {
-    color: white; }
-  .nav--mobile .subnav__item.back a {
-    color: #b3b3b3; }
-  .nav--mobile .subnav__item.top-level a {
-    color: #b3b3b3; }
-  .nav--mobile .subnav__item a:hover {
-    color: #b3b3b3; }
 
 /*** CAROUSEL ***/
 .owl-theme .owl-controls {
