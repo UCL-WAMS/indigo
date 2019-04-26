@@ -2111,8 +2111,14 @@ figure + figure, figure + p {
   font-size: 14px;
   font-size: 1.4rem; }
   .breadcrumb__item:after {
-    content: "/";
-    color: #aaaaaa;
+    font-family: 'FontAwesome';
+    font-size: 1em;
+    content: "\f102";
+    display: inline-block;
+    color: #034da1;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     margin: 0 .75em;
     position: relative;
     top: 1px; }

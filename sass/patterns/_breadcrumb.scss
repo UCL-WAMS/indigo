@@ -40,22 +40,27 @@
 	text-transform: none;
 	@include rem(font-size, $font-size-sm);
 	&:after {
-		content: "/";
-		color: #aaaaaa;
-		margin: 0 .75em;
-		position: relative;
-		top: 1px; 
+	font-family: 'FontAwesome';
+	font-size: 1em;
+	content: "\f102";
+	display:inline-block;
+	color: #034da1;
+	transform: rotate(90deg);
+	margin: 0 .75em;
+	position: relative;
+	top: 1px; 
 	}
 	&:last-child:after {
 		content: " ";
 		margin: 0; 
 	}
+
 	a.active {
 		color: $ultradarkgrey;
 	}
 }
 
-
+// OVERIDES FOR MOBILE BREADCRUMBS IN DRUPAL PALETTES NAV PARTIAL
 
 
 		
