@@ -11,13 +11,17 @@ Modernizr.load({
 	]
 });
 // Get the path to Drupal JQuery for the site in question.
-var doubles = ["drupal","prospective-students","study"];
-var tmp = location.pathname.split("/");
-var pathvar = "/" + (doubles.indexOf(tmp[1]) > -1 && tmp[1].indexOf("drupal-") == -1?tmp[1] + "/" + tmp[2]:tmp[1]);
+if (typeof(Drupal.settings.basePath) != "undefined") {
+	var pathvar = Drupal.settings.basePath;
+} else {
+	var doubles = ["drupal","prospective-students","study"];
+	var tmp = location.pathname.split("/");
+	var pathvar = "/" + (doubles.indexOf(tmp[1]) > -1 && tmp[1].indexOf("drupal-") == -1?tmp[1] + "/" + tmp[2]:tmp[1]) + "/";
+}
 // Set conditional assets for main.js.
 var globalSiteSpecificVars = {
 //	pathToJquery: '//cdn.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
-	pathToJquery: "https://" + location.hostname + pathvar + "/misc/jquery.js?v=1.4.4",
+	pathToJquery: "https://" + location.hostname + pathvar + "misc/jquery.js?v=1.4.4",
 	googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 }
 /*if(cuttingTheMustard){
