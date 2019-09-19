@@ -12,9 +12,9 @@ Modernizr.load({
 });
 //set conditional assets for main.js
 var globalSiteSpecificVars = {
-	pathToJquery: '//cdn.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min'
-	,googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
+//	pathToJquery: '//cdn.ucl.ac.uk/indigo/js/lib/jquery-1.9.1.min',
+	googleAnalyticsIdsArray: []//specify array of site specific id's NOT UCL generic UA-943297-1
 }
-if(cuttingTheMustard){
+/*if(cuttingTheMustard){
 	globalSiteSpecificVars.pathToJquery = '//cdn.ucl.ac.uk/indigo/js/lib/jquery-2.1.1.min';
-}
+}*/
