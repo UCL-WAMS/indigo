@@ -577,7 +577,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #333333;
+  color: #000000;
   background-color: #d9d9d1;
   overflow-x: hidden;
   line-height: 1.7;
@@ -657,10 +657,10 @@ h6, .as-h6 {
   margin: 1em 0 0; }
 
 a {
-  color: #034da1;
+  color: #3366cc;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #034da1;
+    color: #3366cc;
     text-decoration: underline; }
 
 /* Quotes
