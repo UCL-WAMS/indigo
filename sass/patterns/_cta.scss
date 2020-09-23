@@ -17,7 +17,12 @@
 		color: white;
 	}
 }
-
+/* This is necessary to override the dark blue text colour of normal 
+ * <a /> tags on blur of cta elements which do not leave the page
+ * e.g. mailto CTAs. */
+a.btn.cta {
+	color: $white;
+}
 .btn.cta {
 	width:100%;
 }
