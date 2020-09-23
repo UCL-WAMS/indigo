@@ -1043,7 +1043,6 @@ input.error {
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
   padding: .75em 1.5em;
   text-align: left;
   position: relative;
@@ -2324,6 +2323,12 @@ figure + figure, figure + p {
     background-color: #002854;
     color: white; }
 
+/* This is necessary to override the dark blue text colour of normal 
+ * <a /> tags on blur of cta elements which do not leave the page
+ * e.g. mailto CTAs. */
+a.btn.cta {
+  color: #fff; }
+
 .btn.cta {
   width: 100%; }
 
@@ -3484,7 +3489,6 @@ Notes:
   cursor: pointer;
   cursor: hand;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
@@ -3508,7 +3512,6 @@ Notes:
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
@@ -3520,7 +3523,6 @@ Notes:
 
 .owl-carousel.owl-text-select-on .owl-item {
   -webkit-user-select: auto;
-     -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto; }
 
