@@ -5,7 +5,7 @@ of the accordion. We pass an array of array configs carrying a unique
 id so we can scope all methods to a single instance of an accordion.
 *
 */
-define(['jquery'],function($){
+define(['jqueryInternal'],function($){
 	
 	function removeCurrentClassFromAll(accordionObj) {
         var allPanelsAnchor = $(accordionObj).find('a.currentAccordionAnchor');

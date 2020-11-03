@@ -1,4 +1,4 @@
-define(["jquery","allsite"],function($){
+define(["jqueryInternal","allsite"],function($){
 
 	$(document).ready(function(){
 		/* Browser feature detection and fixes

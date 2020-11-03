@@ -1,4 +1,4 @@
-require(['jquery'], function($) {
+require(['jqueryInternal'], function($) {
   $( document ).ready(function() {
     $('ucl-widget').each(function() {
       var widget = $(this);

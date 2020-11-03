@@ -1,4 +1,4 @@
-define(["jquery","owl"],function($){
+define(["jqueryInternal","owl"],function($){
 	$(document).ready(function(){
 		if(typeof(globalSiteSpecificVars.carouselConfig)==="undefined"){
 			carouselConfig = {
