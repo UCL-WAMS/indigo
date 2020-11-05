@@ -1,6 +1,6 @@
 // Fit iframe JS
 
-define(["jquery"],function($){
+define(["jqueryInternal"],function($){
 
 	//if(document.URL.search(/(\?|&)file=template(.*)?/i) < 0){
 		function viewsource() {
