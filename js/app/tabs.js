@@ -1,4 +1,4 @@
-require(['jqueryInternal'], function($) {
+define(['jquery'], function($) {
     var Tabs = {
 
       init: function() {

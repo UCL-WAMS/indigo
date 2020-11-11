@@ -1,4 +1,4 @@
-define(["jqueryInternal"],function($){
+define(["jquery"],function($){
 
 /* IE support for this object */
 if (!window.getComputedStyle) {
