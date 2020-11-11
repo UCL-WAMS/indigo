@@ -1,4 +1,4 @@
-define(["jqueryInternal","owl"],function($){
+define(["jquery","owl"],function($){
 	$(document).ready(function(){
 		if(typeof(globalSiteSpecificVars.carouselConfig)==="undefined"){
 			carouselConfig = {
@@ -40,7 +40,12 @@ define(["jqueryInternal","owl"],function($){
 			carouselConfig = (globalSiteSpecificVars.carouselConfig);
 			
 		}
-		$('.owl-carousel').owlCarousel(carouselConfig);
+		if ($('.owl-carousel').is("div")) {
+			if (typeof $.fn.owlCarousel == "undefined") {
+				$.fn.owlCarousel = window.jQuery.fn.owlCarousel
+			}
+			$('.owl-carousel').owlCarousel(carouselConfig);
+		}
 	});
 });
 

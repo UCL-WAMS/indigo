@@ -1,5 +1,5 @@
 define([
-		"jqueryInternal"
+		"jquery"
 	]
 	,function($){
 	
