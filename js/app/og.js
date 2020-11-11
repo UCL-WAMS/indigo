@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+require(['jquery'], function($) {
   $( document ).ready(function() {
     $('ucl-widget').each(function() {
       var widget = $(this);

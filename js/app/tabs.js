@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+require(['jquery'], function($) {
     var Tabs = {
 
       init: function() {
