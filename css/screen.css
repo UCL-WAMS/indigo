@@ -820,6 +820,13 @@ pre {
 pre, code, tt {
   font: 1em "consolas", "andale mono", "lucida console", monospace; }
 
+/* FIX FOR TEXT WRAPPING INCONSISTENCIES IN CHROME MARCH 2021 */
+.site-content__main p,
+.site-content__main p a
+li,
+.site-content__main li a {
+  white-space: break-spaces; }
+
 /* 
 * Base name: Forms
 * Note: N/A

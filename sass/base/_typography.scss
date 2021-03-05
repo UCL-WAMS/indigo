@@ -300,3 +300,15 @@ pre {
 pre,code,tt {
 	font: 1em $font-code;
 }
+
+/* FIX FOR TEXT WRAPPING INCONSISTENCIES IN CHROME MARCH 2021 */
+
+.site-content__main {
+	p ,
+	p a
+	li,
+	li a {
+		white-space: break-spaces;
+		} 
+
+} 
