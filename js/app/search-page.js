@@ -19,7 +19,7 @@
                 var assetUrl = document.URL
                 ,domainParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)fbenv=([^&]+)(.*)$/ig,'$4')
                 ,searchQueryParam = assetUrl.replace(/^([^\?]*)\?(.*)(\&*)search=([^&]+)(.*)$/ig,'$4')
-                ,funnelBackServer = "search2"
+                ,funnelBackServer = "search"
                 ,defaultSearchTerm = "!padrenullquery"
                 ,initialSearchTerm = defaultSearchTerm;
 
